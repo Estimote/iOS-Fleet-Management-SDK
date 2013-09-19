@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AC294F8817E1CDFD005F54AF /* libEstimoteBLE.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC294F8717E1CDFD005F54AF /* libEstimoteBLE.a */; };
 		AC41476517CCBD0A001D6A09 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC41476417CCBD0A001D6A09 /* UIKit.framework */; };
 		AC41476717CCBD0A001D6A09 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC41476617CCBD0A001D6A09 /* Foundation.framework */; };
 		AC41476917CCBD0A001D6A09 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC41476817CCBD0A001D6A09 /* CoreGraphics.framework */; };
@@ -23,12 +22,10 @@
 		AC41479417CCE3F1001D6A09 /* beforeNotificationBig@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC41479217CCE3F1001D6A09 /* beforeNotificationBig@2x.png */; };
 		AC41479717CCE537001D6A09 /* beforeNotificationSmall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC41479617CCE537001D6A09 /* beforeNotificationSmall@2x.png */; };
 		AC41479A17CCE649001D6A09 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC41479817CCE642001D6A09 /* CoreBluetooth.framework */; };
+		ACFBF5D817EAFC0C00FE3519 /* libEstimoteBLE.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACFBF5D717EAFC0C00FE3519 /* libEstimoteBLE.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AC294F8517E1CDFD005F54AF /* BeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BeaconManager.h; path = ../../SDK/BeaconManager.h; sourceTree = "<group>"; };
-		AC294F8617E1CDFD005F54AF /* EstimoteBLE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EstimoteBLE.h; path = ../../SDK/EstimoteBLE.h; sourceTree = "<group>"; };
-		AC294F8717E1CDFD005F54AF /* libEstimoteBLE.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEstimoteBLE.a; path = ../../SDK/libEstimoteBLE.a; sourceTree = "<group>"; };
 		AC41476117CCBD0A001D6A09 /* EstimoteNotificationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EstimoteNotificationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC41476417CCBD0A001D6A09 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AC41476617CCBD0A001D6A09 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -49,6 +46,9 @@
 		AC41479217CCE3F1001D6A09 /* beforeNotificationBig@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beforeNotificationBig@2x.png"; sourceTree = "<group>"; };
 		AC41479617CCE537001D6A09 /* beforeNotificationSmall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beforeNotificationSmall@2x.png"; sourceTree = "<group>"; };
 		AC41479817CCE642001D6A09 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		ACFBF5D517EAFC0C00FE3519 /* BeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BeaconManager.h; path = ../../SDK/BeaconManager.h; sourceTree = "<group>"; };
+		ACFBF5D617EAFC0C00FE3519 /* EstimoteBLE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EstimoteBLE.h; path = ../../SDK/EstimoteBLE.h; sourceTree = "<group>"; };
+		ACFBF5D717EAFC0C00FE3519 /* libEstimoteBLE.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEstimoteBLE.a; path = ../../SDK/libEstimoteBLE.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,7 @@
 				AC41476517CCBD0A001D6A09 /* UIKit.framework in Frameworks */,
 				AC41476717CCBD0A001D6A09 /* Foundation.framework in Frameworks */,
 				AC41476917CCBD0A001D6A09 /* CoreGraphics.framework in Frameworks */,
-				AC294F8817E1CDFD005F54AF /* libEstimoteBLE.a in Frameworks */,
+				ACFBF5D817EAFC0C00FE3519 /* libEstimoteBLE.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,9 +70,9 @@
 		AC294F8917E1CE03005F54AF /* SDK */ = {
 			isa = PBXGroup;
 			children = (
-				AC294F8517E1CDFD005F54AF /* BeaconManager.h */,
-				AC294F8617E1CDFD005F54AF /* EstimoteBLE.h */,
-				AC294F8717E1CDFD005F54AF /* libEstimoteBLE.a */,
+				ACFBF5D517EAFC0C00FE3519 /* BeaconManager.h */,
+				ACFBF5D617EAFC0C00FE3519 /* EstimoteBLE.h */,
+				ACFBF5D717EAFC0C00FE3519 /* libEstimoteBLE.a */,
 			);
 			name = SDK;
 			sourceTree = "<group>";
@@ -297,8 +297,9 @@
 				INFOPLIST_FILE = "EstimoteNotificationDemo/EstimoteNotificationDemo-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../../../../../Library/Developer/Xcode/DerivedData/EstimoteBLE-fciknfmtjexyisdvrlnpfgdjgsck/Build/Products/Debug-iphoneos\"",
-					"\"$(SRCROOT)/../SDK\"",
+					"\\\"$(SRCROOT)/../../../../../../Library/Developer/Xcode/DerivedData/EstimoteBLE-fciknfmtjexyisdvrlnpfgdjgsck/Build/Products/Debug-iphoneos\\\"",
+					"\\\"$(SRCROOT)/../SDK\\\"",
+					"/Users/Gacek/Documents/Programowanie/iOS/Estimote/publicEstimoteSDK/iOS-SDK/SDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -313,8 +314,9 @@
 				INFOPLIST_FILE = "EstimoteNotificationDemo/EstimoteNotificationDemo-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../../../../../Library/Developer/Xcode/DerivedData/EstimoteBLE-fciknfmtjexyisdvrlnpfgdjgsck/Build/Products/Debug-iphoneos\"",
-					"\"$(SRCROOT)/../SDK\"",
+					"\\\"$(SRCROOT)/../../../../../../Library/Developer/Xcode/DerivedData/EstimoteBLE-fciknfmtjexyisdvrlnpfgdjgsck/Build/Products/Debug-iphoneos\\\"",
+					"\\\"$(SRCROOT)/../SDK\\\"",
+					"/Users/Gacek/Documents/Programowanie/iOS/Estimote/publicEstimoteSDK/iOS-SDK/SDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

@@ -67,12 +67,12 @@
 #pragma mark 
 #pragma mark - BeaconManager delegate methods
 
-- (void)managerDidConnectToBeacon
+- (void)managerDidConnectToBeaconWithID:(NSString *)beaconID
 {
     [_beaconManager startMonitoringZones];
 }
 
-- (void)managerDidDisconnectBeacon
+- (void)managerDidDisconnectBeaconWithID:(NSString *)beaconID
 {
     [_beaconManager startLookingForBeacons];
 }
@@ -80,7 +80,7 @@
 /*
  The beacon zones are simply determined by the RSSI which is already stabilised and processed by BeaconManager
  */
-- (void)enteredBeaconZone:(ZoneName)zone
+- (void)enteredZone:(ZoneName)zone forBeaconWithID:(NSString *)beaconID
 {
     if (zone == Immediate && _currentZone != Immediate) {
     

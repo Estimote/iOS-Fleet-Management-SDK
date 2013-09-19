@@ -114,21 +114,19 @@
 
 #pragma mark - BeaconManager delegate methods
 
-- (void)managerDidConnectToBeacon
+- (void)managerDidConnectToBeaconWithID:(NSString *)beaconID
 {
     [_beaconManager startUpdatingRSSI];
     _positionDot.alpha = 1.0;
 }
 
-- (void)managerDidDisconnectBeacon
+- (void)managerDidDisconnectBeaconWithID:(NSString *)beaconID
 {
     [_beaconManager startLookingForBeacons];
 }
 
-- (void)beaconDidUpdateRSSI:(int)RSSI
+- (void)didUpdateRSSI:(int)RSSI forBeaconWithID:(NSString *)beaconID
 {    
-    NSLog(@"RSSI: %d", RSSI);
-
     [_lastFiveRSSI replaceObjectAtIndex:_arrayInsertIndex withObject:[NSNumber numberWithInt:RSSI]];
     _arrayInsertIndex ++;
     

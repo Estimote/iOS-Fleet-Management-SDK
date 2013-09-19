@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AC294F7E17E1C820005F54AF /* libEstimoteBLE.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC294F7D17E1C820005F54AF /* libEstimoteBLE.a */; };
 		AC41472117CB783B001D6A09 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC41472017CB783B001D6A09 /* UIKit.framework */; };
 		AC41472317CB783B001D6A09 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC41472217CB783B001D6A09 /* Foundation.framework */; };
 		AC41472517CB783B001D6A09 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC41472417CB783B001D6A09 /* CoreGraphics.framework */; };
@@ -22,12 +21,10 @@
 		AC41475017CC9B52001D6A09 /* backgroundBig@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC41474E17CC9B52001D6A09 /* backgroundBig@2x.png */; };
 		AC41475117CC9B52001D6A09 /* backgroundSmall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC41474F17CC9B52001D6A09 /* backgroundSmall@2x.png */; };
 		AC41475717CCA48E001D6A09 /* dotImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AC41475617CCA48E001D6A09 /* dotImage@2x.png */; };
+		ACFBF5DC17EAFC2900FE3519 /* libEstimoteBLE.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACFBF5DB17EAFC2900FE3519 /* libEstimoteBLE.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AC294F7B17E1C820005F54AF /* BeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BeaconManager.h; path = ../../SDK/BeaconManager.h; sourceTree = "<group>"; };
-		AC294F7C17E1C820005F54AF /* EstimoteBLE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EstimoteBLE.h; path = ../../SDK/EstimoteBLE.h; sourceTree = "<group>"; };
-		AC294F7D17E1C820005F54AF /* libEstimoteBLE.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEstimoteBLE.a; path = ../../SDK/libEstimoteBLE.a; sourceTree = "<group>"; };
 		AC41471D17CB783B001D6A09 /* EstimoteDistanceDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EstimoteDistanceDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC41472017CB783B001D6A09 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AC41472217CB783B001D6A09 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -47,6 +44,9 @@
 		AC41474E17CC9B52001D6A09 /* backgroundBig@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backgroundBig@2x.png"; sourceTree = "<group>"; };
 		AC41474F17CC9B52001D6A09 /* backgroundSmall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backgroundSmall@2x.png"; sourceTree = "<group>"; };
 		AC41475617CCA48E001D6A09 /* dotImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dotImage@2x.png"; sourceTree = "<group>"; };
+		ACFBF5D917EAFC2900FE3519 /* BeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BeaconManager.h; path = ../../SDK/BeaconManager.h; sourceTree = "<group>"; };
+		ACFBF5DA17EAFC2900FE3519 /* EstimoteBLE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EstimoteBLE.h; path = ../../SDK/EstimoteBLE.h; sourceTree = "<group>"; };
+		ACFBF5DB17EAFC2900FE3519 /* libEstimoteBLE.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEstimoteBLE.a; path = ../../SDK/libEstimoteBLE.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +58,7 @@
 				AC41472117CB783B001D6A09 /* UIKit.framework in Frameworks */,
 				AC41472317CB783B001D6A09 /* Foundation.framework in Frameworks */,
 				AC41472517CB783B001D6A09 /* CoreGraphics.framework in Frameworks */,
-				AC294F7E17E1C820005F54AF /* libEstimoteBLE.a in Frameworks */,
+				ACFBF5DC17EAFC2900FE3519 /* libEstimoteBLE.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,9 +68,9 @@
 		AC294F7F17E1C826005F54AF /* SDK */ = {
 			isa = PBXGroup;
 			children = (
-				AC294F7B17E1C820005F54AF /* BeaconManager.h */,
-				AC294F7C17E1C820005F54AF /* EstimoteBLE.h */,
-				AC294F7D17E1C820005F54AF /* libEstimoteBLE.a */,
+				ACFBF5D917EAFC2900FE3519 /* BeaconManager.h */,
+				ACFBF5DA17EAFC2900FE3519 /* EstimoteBLE.h */,
+				ACFBF5DB17EAFC2900FE3519 /* libEstimoteBLE.a */,
 			);
 			name = SDK;
 			sourceTree = "<group>";
@@ -293,10 +293,11 @@
 				INFOPLIST_FILE = "EstimoteDistanceDemo/EstimoteDistanceDemo-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/EstimoteDistanceDemo\"",
-					"\"$(SRCROOT)/../../../../../../Library/Developer/Xcode/DerivedData/EstimoteBLE-fciknfmtjexyisdvrlnpfgdjgsck/Build/Products/Debug-iphoneos\"",
-					"\"$(SRCROOT)/../../publicEstimoteSDK/iOS-SDK/SDK\"",
-					"\"$(SRCROOT)/../SDK\"",
+					"\\\"$(SRCROOT)/EstimoteDistanceDemo\\\"",
+					"\\\"$(SRCROOT)/../../../../../../Library/Developer/Xcode/DerivedData/EstimoteBLE-fciknfmtjexyisdvrlnpfgdjgsck/Build/Products/Debug-iphoneos\\\"",
+					"\\\"$(SRCROOT)/../../publicEstimoteSDK/iOS-SDK/SDK\\\"",
+					"\\\"$(SRCROOT)/../SDK\\\"",
+					"/Users/Gacek/Documents/Programowanie/iOS/Estimote/publicEstimoteSDK/iOS-SDK/SDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -311,10 +312,11 @@
 				INFOPLIST_FILE = "EstimoteDistanceDemo/EstimoteDistanceDemo-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/EstimoteDistanceDemo\"",
-					"\"$(SRCROOT)/../../../../../../Library/Developer/Xcode/DerivedData/EstimoteBLE-fciknfmtjexyisdvrlnpfgdjgsck/Build/Products/Debug-iphoneos\"",
-					"\"$(SRCROOT)/../../publicEstimoteSDK/iOS-SDK/SDK\"",
-					"\"$(SRCROOT)/../SDK\"",
+					"\\\"$(SRCROOT)/EstimoteDistanceDemo\\\"",
+					"\\\"$(SRCROOT)/../../../../../../Library/Developer/Xcode/DerivedData/EstimoteBLE-fciknfmtjexyisdvrlnpfgdjgsck/Build/Products/Debug-iphoneos\\\"",
+					"\\\"$(SRCROOT)/../../publicEstimoteSDK/iOS-SDK/SDK\\\"",
+					"\\\"$(SRCROOT)/../SDK\\\"",
+					"/Users/Gacek/Documents/Programowanie/iOS/Estimote/publicEstimoteSDK/iOS-SDK/SDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

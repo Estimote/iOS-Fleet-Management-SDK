@@ -62,12 +62,12 @@
 #pragma mark
 #pragma mark - CoreBluetooth delegate methods
 
-- (void)managerDidConnectToBeacon
+- (void)managerDidConnectToBeaconWithID:(NSString *)beaconID
 {
     [_beaconManager startUpdatingRSSI];
 }
 
-- (void)beaconDidUpdateRSSI:(int)RSSI
+- (void)didUpdateRSSI:(int)RSSI forBeaconWithID:(NSString *)beaconID
 {
     /*
      Simmiliarly to the distance demo, we notify the user about leaving the range before 
@@ -89,7 +89,7 @@
     }
 }
 
-- (void)managerDidDisconnectBeacon
+- (void)managerDidDisconnectBeaconWithID:(NSString *)beaconID
 {
     NSLog(@"Did disconnect beacon");
     

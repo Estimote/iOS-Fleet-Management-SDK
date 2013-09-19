@@ -17,19 +17,19 @@ typedef NS_ENUM(NSInteger, ZoneName) {
 
 @protocol BeaconManagerDelegate
 @optional
-- (void)managerDidConnectToBeacon;
-- (void)managerDidDisconnectBeacon;
-- (void)beaconDidUpdateRSSI:(int)RSSI;
-- (void)enteredBeaconZone:(ZoneName)zone;
+- (void)managerDidConnectToBeaconWithID:(NSString *)beaconID;
+- (void)managerDidDisconnectBeaconWithID:(NSString *)beaconID;
+- (void)didUpdateRSSI:(int)RSSI forBeaconWithID:(NSString *)beaconID;
+- (void)enteredZone:(ZoneName)zone forBeaconWithID:(NSString *)beaconID;
 
 @end
 
 @interface BeaconManager : NSObject
 {
-    __unsafe_unretained id <BeaconManagerDelegate> _delegate;
+    __weak id <BeaconManagerDelegate> _delegate;
 }
 
-@property (assign, nonatomic) id <BeaconManagerDelegate> delegate;
+@property (weak, nonatomic) id <BeaconManagerDelegate> delegate;
 
 - (void)startLookingForBeacons;
 - (void)startUpdatingRSSI;
