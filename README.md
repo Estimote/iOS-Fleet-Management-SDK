@@ -1,7 +1,8 @@
-iOS-SDK
+iOS6-SDK
 =======
+This is a legacy version of Estimote SDK. Visit https://github.com/Estimote/iOS7-SDK to get the current version.
 
-Estimote SDK for iOS devices
+=======
 
 To use this version of SDK in your project you should follow these three simple steps:
 
