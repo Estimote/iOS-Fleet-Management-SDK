@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>00FAAC6C-A460-45DD-8921-CE10EA799FFE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>EstimoteSDK</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D1F38DE8-0CEA-45BE-AE2A-3472D826D2DE</key>
+		<string>https://github.com/Estimote/iOS7-SDK.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>EstimoteSDK.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D1F38DE8-0CEA-45BE-AE2A-3472D826D2DE</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Estimote/iOS7-SDK.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D1F38DE8-0CEA-45BE-AE2A-3472D826D2DE</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D1F38DE8-0CEA-45BE-AE2A-3472D826D2DE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iOS7-SDK</string>
+		</dict>
+	</array>
+</dict>
+</plist>
