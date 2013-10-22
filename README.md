@@ -4,6 +4,7 @@ EstimoteSDK for iOS 7
 Overview
 -------
 
+
 Estimote SDK is a wrapper around Apple's CoreLocation framework. It is dedicated for iOS 7 as it's based on newly introduced CoreLocation framework functionality called iBeacon. It consists of 3 classes: ESTBeaconManager, ESTBeaconRegion and ESTBeacon. Each of them is an equivalent of CoreLocation classes (CLLocationManager, CLBeaconRegion, CLBeacon) created in particular for Estimate Beacons Platform.
 
 ESTBeaconManager is a starting point of the library. It allows to get list of all estimate beacon devices (represented by ESTBeacon objects). It expose monitoring and ranging methods in the similar fashion then CLLocationManager. In addition to location functionality it allows to get list of beacons based CoreBluetooth framework. It is extremely important to have this option in case that device stop advertising in an iBeacon manner.
