@@ -1,19 +1,37 @@
-iOS-SDK
+EstimoteSDK for iOS 7
 =======
 
-Estimote SDK for iOS devices
+Overview
+-------
 
-To use this version of SDK in your project you should follow these three simple steps:
+Estimote SDK is a wrapper around Apple's CoreLocation framework. It is dedicated for iOS 7 as it's based on newly introduced CoreLocation framework functionality called iBeacon. It consists of 3 classes: ESTBeaconManager, ESTBeaconRegion and ESTBeacon. Each of them is an equivalent of CoreLocation classes (CLLocationManager, CLBeaconRegion, CLBeacon) created in particular for Estimate Beacons Platform.
 
-First, add files from the SDK folder to your project. Your files list should look somehow like this:
+ESTBeaconManager is a starting point of the library. It allows to get list of all estimate beacon devices (represented by ESTBeacon objects). It expose monitoring and ranging methods in the similar fashion then CLLocationManager. In addition to location functionality it allows to get list of beacons based CoreBluetooth framework. It is extremely important to have this option in case that device stop advertising in an iBeacon manner.
 
-![ScreenShot FileList](http://estimote.com/api/FilesListScreenShot.png)
+ESTBeaconRegion is a directly extending CLBeaconRegion class of CoreLocation framework. As Estimote Beacon Platform is using single ProximityUUID, this class helps create region object faster. You don't need to remember and play with ProximityUUID parameter.
 
-Then add the CoreBluetooth.framework to your project. 
-The Link With Binary Libraries section in Build Phases of your project should contain both CoreBluetooth.framework and libEstimoteBLE.a
+ESTBeacon represents single beacon device. Objects of this class are generated using ESTBeaconManager (There is no sense to create them manually). The most important difference (comparing to CLBeacon class) is two way communication with the beacon device. Keeping reference to original CLBeacon object it allows to connect with the device and interact with it. All available bluetooth characteristics (like signal power or major/minor value) can be read and changed to create customised behaviour. Firmware update option is available using this class as well. 
 
-![ScreenShot LinkWithBinaryLibraries](http://estimote.com/api/CoreBluetoothScreenShot.png)
 
-The last step is to import BeaconManager.h file into classes that in which it will be used.
+Installation
+-------
 
-![ScreenShot Import](http://estimote.com/api/ImportScreenShot.png)
+Follow steps described below to install EstimoteSDK library:
+
+1. Copy EstimoteSDK directory (containing libEstimoteSDK7.a and Headers) into your project directory.
+
+2. Open your project settings and go to Build Phase tab. In the Link library with binaries section click +. In the popup window click add another at the bottom and select libEstimoteSDK7.a library file. 
+
+  In addition EstimoteSDK requires following native iOS frameworks:
+  * CoreBluetooth.framework
+  * CoreLocation.framework
+  * SystemConfiguration.framework
+
+  When you add them your project settings should look like on the screenshot below.
+
+  ![ScreenShot LinkWithBinaryLibraries](http://estimote.com/api/BuildPhasesScreenshot.png)
+
+3. Go to Build Settings section of project settings and search for Header Search Paths. Add line containing "$(SRCROOT)/../EstimoteSDK/Headers".
+
+4. Congratulations! You are done.
+ 
