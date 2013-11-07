@@ -6,12 +6,13 @@ Pod::Spec.new do |s|
   s.author       = { "Estimote, Inc" => "contact@estimote.com" }
   s.platform     = :ios 
   s.source       = { :git => "https://github.com/Estimote/iOS-SDK.git", :tag => "v#{s.version}" }
-  s.source_files  = 'EstimoteSDK/**/*.{m,h}'
-  s.private_header_files =  'EstimoteSDK/Headers/*.h'
+  s.source_files =  'EstimoteSDK/Headers/*.h'
   s.preserve_paths = 'EstimoteSDK/libEstimoteSDK7.a'
   s.ios.deployment_target = '7.0'
   s.frameworks = 'UIKit', 'Foundation', 'SystemConfiguration', 'MobileCoreServices', 'CoreLocation'
   s.requires_arc = true
+  s.xcconfig  =  { 'LIBRARY_SEARCH_PATHS' => '"$(PODS_ROOT)/EstimoteSDK"',
+                   'HEADER_SEARCH_PATHS' => '"${PODS_ROOT}/Headers/EstimoteSDK"' }
   s.license      = {
     :type => 'Copyright',
     :text => <<-LICENSE
