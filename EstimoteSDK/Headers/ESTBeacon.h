@@ -12,6 +12,8 @@
 #import <CoreBluetooth/CoreBluetooth.h>
 #import "ESTBeaconDefinitions.h"
 
+@class ESTBeacon;
+
 ////////////////////////////////////////////////////////////////////
 // Estimote beacon delegate protocol
 
@@ -29,27 +31,31 @@
 /**
  * Delegate method that indicates error in beacon connection.
  *
+ * @param beacon reference to beacon object
  * @param error information about reason of error
  *
  * @return void
  */
-- (void)beaconConnectionDidFail:(NSError*)error;
+- (void)beaconConnectionDidFail:(ESTBeacon*)beacon withError:(NSError*)error;
 
 /**
  * Delegate method that indicates success in beacon connection.
  *
+ * @param beacon reference to beacon object
+ *
  * @return void
  */
-- (void)beaconConnectionDidSucceeded;
+- (void)beaconConnectionDidSucceeded:(ESTBeacon*)beacon;
 
 /**
  * Delegate method that beacon did disconnect with device.
  *
-  * @param error information about reason of error
+ * @param beacon reference to beacon object
+ * @param error information about reason of error
  *
  * @return void
  */
-- (void)beaconDidDisconnectWithError:(NSError*)error;
+- (void)beaconDidDisconnect:(ESTBeacon*)beacon withError:(NSError*)error;
 
 @end
 
