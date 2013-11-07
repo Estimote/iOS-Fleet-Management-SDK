@@ -6,7 +6,7 @@
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.2 (build 961)" />
+		<meta name="generator" content="appledoc 2.2 (build 963)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -43,11 +43,11 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/beaconConnectionDidFail:">&nbsp;&nbsp;&nbsp;&nbsp;- beaconConnectionDidFail:</option>
+	<option value="//api/name/beaconConnectionDidFail:withError:">&nbsp;&nbsp;&nbsp;&nbsp;- beaconConnectionDidFail:withError:</option>
 	
-	<option value="//api/name/beaconConnectionDidSucceeded">&nbsp;&nbsp;&nbsp;&nbsp;- beaconConnectionDidSucceeded</option>
+	<option value="//api/name/beaconConnectionDidSucceeded:">&nbsp;&nbsp;&nbsp;&nbsp;- beaconConnectionDidSucceeded:</option>
 	
-	<option value="//api/name/beaconDidDisconnectWithError:">&nbsp;&nbsp;&nbsp;&nbsp;- beaconDidDisconnectWithError:</option>
+	<option value="//api/name/beaconDidDisconnect:withError:">&nbsp;&nbsp;&nbsp;&nbsp;- beaconDidDisconnect:withError:</option>
 	
 	
 	
@@ -77,11 +77,11 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beaconConnectionDidFail:">beaconConnectionDidFail:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beaconConnectionDidFail:withError:">beaconConnectionDidFail:withError:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beaconConnectionDidSucceeded">beaconConnectionDidSucceeded</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beaconConnectionDidSucceeded:">beaconConnectionDidSucceeded:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beaconDidDisconnectWithError:">beaconDidDisconnectWithError:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beaconDidDisconnect:withError:">beaconDidDisconnect:withError:</a></span></li>
 	
 </ul></li>
 
@@ -138,19 +138,19 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/beaconConnectionDidFail:">&ndash;&nbsp;beaconConnectionDidFail:</a></code>
+		<code><a href="#//api/name/beaconConnectionDidFail:withError:">&ndash;&nbsp;beaconConnectionDidFail:withError:</a></code>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/beaconConnectionDidSucceeded">&ndash;&nbsp;beaconConnectionDidSucceeded</a></code>
+		<code><a href="#//api/name/beaconConnectionDidSucceeded:">&ndash;&nbsp;beaconConnectionDidSucceeded:</a></code>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/beaconDidDisconnectWithError:">&ndash;&nbsp;beaconDidDisconnectWithError:</a></code>
+		<code><a href="#//api/name/beaconDidDisconnect:withError:">&ndash;&nbsp;beaconDidDisconnect:withError:</a></code>
 	</span>
 	
 	
@@ -172,8 +172,8 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/beaconConnectionDidFail:" title="beaconConnectionDidFail:"></a>
-	<h3 class="subsubtitle method-title">beaconConnectionDidFail:</h3>
+	<a name="//api/name/beaconConnectionDidFail:withError:" title="beaconConnectionDidFail:withError:"></a>
+	<h3 class="subsubtitle method-title">beaconConnectionDidFail:withError:</h3>
 	
 	
 	
@@ -183,12 +183,17 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)beaconConnectionDidFail:(NSError *)<em>error</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)beaconConnectionDidFail:(ESTBeacon *)<em>beacon</em> withError:(NSError *)<em>error</em></code></div>
 
     
 	
 	<div class="method-subsection arguments-section parameters">
 		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>beacon</em></dt>
+			<dd><p>reference to beacon object</p></dd>
+		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>error</em></dt>
@@ -223,8 +228,8 @@
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/beaconConnectionDidSucceeded" title="beaconConnectionDidSucceeded"></a>
-	<h3 class="subsubtitle method-title">beaconConnectionDidSucceeded</h3>
+	<a name="//api/name/beaconConnectionDidSucceeded:" title="beaconConnectionDidSucceeded:"></a>
+	<h3 class="subsubtitle method-title">beaconConnectionDidSucceeded:</h3>
 	
 	
 	
@@ -234,9 +239,19 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)beaconConnectionDidSucceeded</code></div>
+	<div class="method-subsection method-declaration"><code>- (void)beaconConnectionDidSucceeded:(ESTBeacon *)<em>beacon</em></code></div>
 
     
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>beacon</em></dt>
+			<dd><p>reference to beacon object</p></dd>
+		</dl>
+		
+	</div>
 	
 	
 	
@@ -264,8 +279,8 @@
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/beaconDidDisconnectWithError:" title="beaconDidDisconnectWithError:"></a>
-	<h3 class="subsubtitle method-title">beaconDidDisconnectWithError:</h3>
+	<a name="//api/name/beaconDidDisconnect:withError:" title="beaconDidDisconnect:withError:"></a>
+	<h3 class="subsubtitle method-title">beaconDidDisconnect:withError:</h3>
 	
 	
 	
@@ -275,12 +290,17 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)beaconDidDisconnectWithError:(NSError *)<em>error</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)beaconDidDisconnect:(ESTBeacon *)<em>beacon</em> withError:(NSError *)<em>error</em></code></div>
 
     
 	
 	<div class="method-subsection arguments-section parameters">
 		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>beacon</em></dt>
+			<dd><p>reference to beacon object</p></dd>
+		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>error</em></dt>
@@ -329,9 +349,9 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 Estimote. All rights reserved. (Last updated: 2013-10-22)</span><br />
+						<p><span class="copyright">&copy; 2013 Estimote. All rights reserved. (Last updated: 2013-11-07)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 961)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						
 					</div>
 				</div>
