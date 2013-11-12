@@ -35,7 +35,7 @@
     // create sample region with major value defined
     ESTBeaconRegion* region = [[ESTBeaconRegion alloc] initRegionWithMajor:1 minor:1 identifier: @"EstimoteSampleRegion"];
     
-    // start looking for estimtoe beacons in region
+    // start looking for estimote beacons in region
     // when beacon ranged beaconManager:didEnterRegion:
     // and beaconManager:didExitRegion: invoked
     [self.beaconManager startMonitoringForRegion:region];
