@@ -39,7 +39,7 @@
     // create sample region object (you can additionaly pass major / minor values)
     ESTBeaconRegion* region = [[ESTBeaconRegion alloc] initRegionWithIdentifier:@"EstimoteSampleRegion"];
     
-    // start looking for estimtoe beacons in region
+    // start looking for estimote beacons in region
     // when beacon ranged beaconManager:didRangeBeacons:inRegion: invoked
     [self.beaconManager startRangingBeaconsInRegion:region];
     
@@ -88,7 +88,7 @@
     {
         if(!self.selectedBeacon)
         {
-            // initialy pick closest beacon
+            // initially pick closest beacon
             self.selectedBeacon = [beacons objectAtIndex:0];
         }
         else

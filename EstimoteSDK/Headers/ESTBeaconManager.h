@@ -106,7 +106,7 @@ monitoringDidFailForRegion:(ESTBeaconRegion *)region
              forRegion:(ESTBeaconRegion *)region;
 
 /**
- * Method triggered when device stars advertising 
+ * Method triggered when device starts advertising 
  * as iBeacon.
  *
  * @param manager estimote beacon manager
@@ -185,7 +185,7 @@ monitoringDidFailForRegion:(ESTBeaconRegion *)region
 /**
  * Start monitoring for particular region.
  * Functionality works in the background mode as well.
- * Every time you enter or leave region appropriet
+ * Every time you enter or leave region appropriate
  * delegate method inovked: beaconManager:didEnterRegtion:
  * and beaconManager:didExitRegion:
  *
@@ -246,7 +246,7 @@ monitoringDidFailForRegion:(ESTBeaconRegion *)region
 
 /**
  * Start beacon discovery process based on CoreBluetooth 
- * framework. Method is usefule for older beacons discovery 
+ * framework. Method is useful for older beacons discovery 
  * that are not advertising as iBeacons.
  *
  * @param region estimote beacon region
