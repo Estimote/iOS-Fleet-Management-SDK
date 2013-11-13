@@ -93,7 +93,7 @@ ESTBeacon class contains basic Apple CLBeacon object reference as well as some a
 
 @property (nonatomic, strong)   NSNumber*               power;
 @property (nonatomic, strong)   NSNumber*               frequency;
-@property (nonatomic, strong)   NSNumber*               baterryLevel;
+@property (nonatomic, strong)   NSNumber*               batteryLevel;
 
 @property (nonatomic, strong)   NSString*               hardwareVersion;
 @property (nonatomic, strong)   NSString*               firmwareVersion;

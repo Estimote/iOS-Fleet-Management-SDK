@@ -106,7 +106,7 @@ monitoringDidFailForRegion:(ESTBeaconRegion *)region
              forRegion:(ESTBeaconRegion *)region;
 
 /**
- * Method triggered when device starts advertising 
+ * Method triggered when device starts advertising
  * as iBeacon.
  *
  * @param manager estimote beacon manager
@@ -185,7 +185,7 @@ monitoringDidFailForRegion:(ESTBeaconRegion *)region
 /**
  * Start monitoring for particular region.
  * Functionality works in the background mode as well.
- * Every time you enter or leave region appropriate
+ * Every time you enter or leave region appropriet
  * delegate method inovked: beaconManager:didEnterRegtion:
  * and beaconManager:didExitRegion:
  *
