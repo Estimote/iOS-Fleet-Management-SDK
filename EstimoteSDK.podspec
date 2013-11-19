@@ -8,6 +8,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/Estimote/iOS-SDK.git", :tag => "v#{s.version}" }
   s.source_files =  'EstimoteSDK/Headers/*.h'
   s.preserve_paths = 'EstimoteSDK/libEstimoteSDK7.a'
+  s.vendored_libraries = 'EstimoteSDK/libEstimoteSDK7.a'
   s.ios.deployment_target = '7.0'
   s.frameworks = 'UIKit', 'Foundation', 'SystemConfiguration', 'MobileCoreServices', 'CoreLocation'
   s.requires_arc = true
