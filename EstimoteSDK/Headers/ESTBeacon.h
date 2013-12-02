@@ -1,8 +1,8 @@
 //
 //  ESTBeacon.h
-//  EstimoteSDK7
+//  EstimoteSDK
 //
-//  Version : 1.0.0
+//  Version : 1.1.0
 //  Created by Marcin Klimek on 9/19/13.
 //  Copyright (c) 2013 Estimote. All rights reserved.
 //
@@ -92,7 +92,7 @@ ESTBeacon class contains basic Apple CLBeacon object reference as well as some a
 // properties filled when read characteristic
 
 @property (nonatomic, strong)   NSNumber*               power;
-@property (nonatomic, strong)   NSNumber*               frequency;
+@property (nonatomic, strong)   NSNumber*               advInterval;
 @property (nonatomic, strong)   NSNumber*               batteryLevel;
 
 @property (nonatomic, strong)   NSString*               hardwareVersion;
@@ -110,7 +110,7 @@ ESTBeacon class contains basic Apple CLBeacon object reference as well as some a
 /**
  * Connect to particular beacon using bluetooth.
  * Connection is required to change values like
- * Major, Minor, Power and Frequency.
+ * Major, Minor, Power and Advertising interval.
  *
  * @return void
  */
@@ -131,7 +131,7 @@ ESTBeacon class contains basic Apple CLBeacon object reference as well as some a
  *
  * @return void
  */
-- (void)readBeaconMajorWithCompletion:(ESTUnsignedCompletionBlock)completion;
+- (void)readBeaconMajorWithCompletion:(ESTUnsignedShortCompletionBlock)completion;
 
 /**
  * Read minor of connected beacon (Previous connection
@@ -141,17 +141,17 @@ ESTBeacon class contains basic Apple CLBeacon object reference as well as some a
  *
  * @return void
  */
-- (void)readBeaconMinorWithCompletion:(ESTUnsignedCompletionBlock)completion;
+- (void)readBeaconMinorWithCompletion:(ESTUnsignedShortCompletionBlock)completion;
 
 /**
- * Read frequency of connected beacon (Previous connection
+ * Read advertising interval of connected beacon (Previous connection
  * required)
  *
- * @param completion block with frequency value as param
+ * @param completion block with advertising interval value as param
  *
  * @return void
  */
-- (void)readBeaconFrequencyWithCompletion:(ESTUnsignedCompletionBlock)completion;
+- (void)readBeaconAdvIntervalWithCompletion:(ESTUnsignedShortCompletionBlock)completion;
 
 
 /**
@@ -162,7 +162,7 @@ ESTBeacon class contains basic Apple CLBeacon object reference as well as some a
  *
  * @return float value of beacon power
  */
-- (void)readBeaconPowerWithCompletion:(ESTUnsignedCompletionBlock)completion;
+- (void)readBeaconPowerWithCompletion:(ESTPowerCompletionBlock)completion;
 
 /**
  * Read battery level of connected beacon (Previous connection
@@ -172,7 +172,7 @@ ESTBeacon class contains basic Apple CLBeacon object reference as well as some a
  *
  * @return void
  */
-- (void)readBeaconBatteryWithCompletion:(ESTUnsignedCompletionBlock)completion;
+- (void)readBeaconBatteryWithCompletion:(ESTUnsignedShortCompletionBlock)completion;
 
 /**
  * Read firmware version of connected beacon (Previous connection
@@ -203,7 +203,7 @@ ESTBeacon class contains basic Apple CLBeacon object reference as well as some a
  *
  * @return void
  */
-- (void)writeBeaconMajor:(short)major withCompletion:(ESTUnsignedCompletionBlock)completion;
+- (void)writeBeaconMajor:(unsigned short)major withCompletion:(ESTUnsignedShortCompletionBlock)completion;
 
 /**
  * Writes minor param to bluetooth connected beacon.
@@ -213,17 +213,17 @@ ESTBeacon class contains basic Apple CLBeacon object reference as well as some a
  *
  * @return void
  */
-- (void)writeBeaconMinor:(short)minor withCompletion:(ESTUnsignedCompletionBlock)completion;
+- (void)writeBeaconMinor:(unsigned short)minor withCompletion:(ESTUnsignedShortCompletionBlock)completion;
 
 /**
- * Writes frequency of bluetooth connected beacon.
+ * Writes advertising interval (in milisec) of connected beacon.
  *
- * @param frequency advertising beacon frequency
+ * @param advertising interval of beacon (50 - 2000 ms)
  * @param completion block handling operation completion
  *
  * @return void
  */
-- (void)writeBeaconFrequency:(short)frequency withCompletion:(ESTUnsignedCompletionBlock)completion;
+- (void)writeBeaconAdvInterval:(unsigned short)interval withCompletion:(ESTUnsignedShortCompletionBlock)completion;
 
 
 /**
@@ -234,8 +234,19 @@ ESTBeacon class contains basic Apple CLBeacon object reference as well as some a
  *
  * @return void
  */
-- (void)writeBeaconPower:(ESTBeaconPower)power withCompletion:(ESTUnsignedCompletionBlock)completion;
+- (void)writeBeaconPower:(ESTBeaconPower)power withCompletion:(ESTPowerCompletionBlock)completion;
 
+
+/**
+ * Verifies if new firmware version is available for download
+ * without any additional action. Internet connection
+ * is required to pass this process.
+ *
+ * @param completion Block handling operation completion
+ *
+ * @return void
+ */
+-(void)checkFirmwareUpdateWithCompletion:(ESTFirmwareUpdateCompletionBlock)completion;
 
 /**
  * Verifies if new firmware version is available for download

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F0CE79E184CB039000E8805 /* libEstimoteSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F0CE79D184CB039000E8805 /* libEstimoteSDK.a */; };
 		2FC6D47117F42242007D8573 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FC6D47017F42242007D8573 /* Foundation.framework */; };
 		2FC6D47317F42242007D8573 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FC6D47217F42242007D8573 /* CoreGraphics.framework */; };
 		2FC6D47517F42242007D8573 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FC6D47417F42242007D8573 /* UIKit.framework */; };
@@ -24,7 +25,6 @@
 		2FC6D4A817F424EC007D8573 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FC6D4A717F424EC007D8573 /* SystemConfiguration.framework */; };
 		2FC6D4AA17F42502007D8573 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FC6D4A917F42502007D8573 /* CoreBluetooth.framework */; };
 		2FC6D4AC17F42509007D8573 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FC6D4AB17F42509007D8573 /* CoreLocation.framework */; };
-		2FC6D4BC17F43139007D8573 /* libEstimoteSDK7.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FC6D4BB17F43139007D8573 /* libEstimoteSDK7.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F0CE79D184CB039000E8805 /* libEstimoteSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEstimoteSDK.a; path = ../EstimoteSDK/libEstimoteSDK.a; sourceTree = "<group>"; };
 		2FC6D46D17F42242007D8573 /* DinstanceDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DinstanceDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FC6D47017F42242007D8573 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2FC6D47217F42242007D8573 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -68,10 +69,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F0CE79E184CB039000E8805 /* libEstimoteSDK.a in Frameworks */,
 				2FC6D4AC17F42509007D8573 /* CoreLocation.framework in Frameworks */,
 				2FC6D4AA17F42502007D8573 /* CoreBluetooth.framework in Frameworks */,
 				2FC6D4A817F424EC007D8573 /* SystemConfiguration.framework in Frameworks */,
-				2FC6D4BC17F43139007D8573 /* libEstimoteSDK7.a in Frameworks */,
 				2FC6D47317F42242007D8573 /* CoreGraphics.framework in Frameworks */,
 				2FC6D47517F42242007D8573 /* UIKit.framework in Frameworks */,
 				2FC6D47117F42242007D8573 /* Foundation.framework in Frameworks */,
@@ -113,6 +114,7 @@
 		2FC6D46F17F42242007D8573 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2F0CE79D184CB039000E8805 /* libEstimoteSDK.a */,
 				2FC6D4BB17F43139007D8573 /* libEstimoteSDK7.a */,
 				2FC6D4AB17F42509007D8573 /* CoreLocation.framework */,
 				2FC6D4A917F42502007D8573 /* CoreBluetooth.framework */,
