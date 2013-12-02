@@ -19,9 +19,9 @@ Installation
 
 Follow steps described below to install EstimoteSDK library:
 
-1. Copy EstimoteSDK directory (containing libEstimoteSDK7.a and Headers) into your project directory.
+1. Copy EstimoteSDK directory (containing libEstimoteSDK.a and Headers) into your project directory.
 
-2. Open your project settings and go to Build Phase tab. In the Link library with binaries section click +. In the popup window click add another at the bottom and select libEstimoteSDK7.a library file. 
+2. Open your project settings and go to Build Phase tab. In the Link library with binaries section click +. In the popup window click add another at the bottom and select libEstimoteSDK.a library file. 
 
   In addition EstimoteSDK requires following native iOS frameworks:
   * CoreBluetooth.framework
