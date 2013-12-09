@@ -36,7 +36,7 @@ Follow steps described below to install EstimoteSDK library:
 
 4. Congratulations! You are done.
  
-Changlog
+Changelog
 -------
 
 To see what has changed in recent versions of Estimote SDK, see the [CHANGELOG](https://github.com/Estimote/iOS-SDK/blob/master/CHANGELOG.md).
