@@ -1,3 +1,14 @@
+## 1.2.0 (December 9, 2013)
+
+Features:
+
+  - ESTBeacon class cleaned (flat structure with iBeacon property removed)
+  - Library documentation updated
+
+Bugfixes:
+
+  - Corrected name of DistanceDemo project
+  
 ## 1.1.0 (December 2, 2013)
 
 Features:

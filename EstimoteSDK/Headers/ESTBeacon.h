@@ -2,7 +2,7 @@
 //  ESTBeacon.h
 //  EstimoteSDK
 //
-//  Version : 1.1.0
+//  Version : 1.2.0
 //  Created by Marcin Klimek on 9/19/13.
 //  Copyright (c) 2013 Estimote. All rights reserved.
 //
@@ -81,30 +81,140 @@ ESTBeacon class contains basic Apple CLBeacon object reference as well as some a
 // bluetooth beacon available when used with
 // startEstimoteBeaconsDiscoveryForRegion:
 
-@property (nonatomic, strong)   CBPeripheral*           peripheral;
+
+/// @name Publicly available properties
+
+/**
+ *  macAddress
+ *
+ *  Discussion:
+ *    Hardware MAC address of the beacon.
+ */
 @property (nonatomic, strong)   NSString*               macAddress;
-@property (nonatomic, strong)   NSNumber*               measuredPower;
+
+/**
+ *  proximityUUID
+ *
+ *    Proximity identifier associated with the beacon.
+ *
+ */
+@property (nonatomic, strong)   NSUUID*                 proximityUUID;
+
+/**
+ *  major
+ *
+ *    Most significant value associated with the region. If a major value wasn't specified, this will be nil.
+ *
+ */
 @property (nonatomic, strong)   NSNumber*               major;
+
+/**
+ *  minor
+ *
+ *    Least significant value associated with the region. If a minor value wasn't specified, this will be nil.
+ *
+ */
 @property (nonatomic, strong)   NSNumber*               minor;
-@property (nonatomic, strong)   NSNumber*               rssi;
+
+
+
+/**
+ *  rssi
+ *
+ *    Received signal strength in decibels of the specified beacon.
+ *    This value is an average of the RSSI samples collected since this beacon was last reported.
+ *
+ */
+@property (nonatomic)           NSInteger               rssi;
+
+/**
+ *  distance
+ *
+ *    Distance between phone and beacon calculated based on rssi and measured power.
+ *
+ */
+@property (nonatomic, strong)   NSNumber*               distance;
+
+/**
+ *  proximity
+ *
+ *    The value in this property gives a general sense of the relative distance to the beacon. Use it to quickly identify beacons that are nearer to the user rather than farther away.
+ */
+@property (nonatomic)           CLProximity             proximity;
+
+/**
+ *  measuredPower
+ *
+ *    rssi value measured from 1m. This value is used for device calibration.
+ */
+@property (nonatomic, strong)   NSNumber*               measuredPower;
+
+/**
+ *  hardwareVersion
+ *
+ *    Reference of the device peripheral object.
+ */
+@property (nonatomic, strong)   CBPeripheral*           peripheral;
 
 /////////////////////////////////////////////////////
 // properties filled when read characteristic
 
+/// @name Properties available after connection
+
+
+/**
+ *  firmwareUpdateInfo
+ *
+ *    Flag indicating connection status.
+ */
+@property (nonatomic, readonly)   BOOL                  isConnected;
+
+/**
+ *  power
+ *
+ *    Power of signal in dBm. Value available after connection with the beacon. It takes one of the values represented by ESTBeaconPower .
+ */
 @property (nonatomic, strong)   NSNumber*               power;
+
+/**
+ *  advInterval
+ *
+ *    Advertising interval of the beacon. Value change from 50ms to 2000ms. Value available after connection with the beacon
+ */
 @property (nonatomic, strong)   NSNumber*               advInterval;
+
+/**
+ *  batteryLevel
+ *
+ *    Battery strength in %. Battery level change from 100% - 0%. Value available after connection with the beacon
+ */
 @property (nonatomic, strong)   NSNumber*               batteryLevel;
 
+
+/**
+ *  hardwareVersion
+ *
+ *    Version of device hardware. Value available after connection with the beacon
+ */
 @property (nonatomic, strong)   NSString*               hardwareVersion;
+
+/**
+ *  firmwareVersion
+ *
+ *    Version of device firmware. Value available after connection with the beacon
+ */
 @property (nonatomic, strong)   NSString*               firmwareVersion;
 
-/////////////////////////////////////////////////////
-// core location properties
 
-@property (nonatomic, strong)   CLBeacon*               ibeacon;
+/**
+ *  firmwareUpdateInfo
+ *
+ *    Firmware update availability status. Value available after connection with the beacon and firmware version check.
+ */
+@property (readonly, nonatomic) ESTBeaconFirmwareUpdate firmwareUpdateInfo;
 
 
-@property (nonatomic, readonly)   BOOL                  isConnected;
+/// @name Connection handling methods
 
 
 /**
@@ -122,6 +232,9 @@ ESTBeacon class contains basic Apple CLBeacon object reference as well as some a
  * @return void
  */
 -(void)disconnectBeacon;
+
+
+/// @name Methods for reading beacon configuration
 
 /**
  * Read major of connected beacon (Previous connection
@@ -195,6 +308,8 @@ ESTBeacon class contains basic Apple CLBeacon object reference as well as some a
 - (void)readBeaconHardwareVersionWithCompletion:(ESTStringCompletionBlock)completion;
 
 
+/// @name Methods for writing beacon configuration
+
 /**
  * Writes major param to bluetooth connected beacon.
  *
@@ -236,6 +351,7 @@ ESTBeacon class contains basic Apple CLBeacon object reference as well as some a
  */
 - (void)writeBeaconPower:(ESTBeaconPower)power withCompletion:(ESTPowerCompletionBlock)completion;
 
+/// @name Firmware update handling methods
 
 /**
  * Verifies if new firmware version is available for download

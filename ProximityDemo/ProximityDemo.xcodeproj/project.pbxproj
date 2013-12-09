@@ -61,7 +61,6 @@
 		2FC6D4C217F43606007D8573 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		2FC6D4C417F4360A007D8573 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		2FC6D4C617F43610007D8573 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
-		2FC6D4C817F43617007D8573 /* libEstimoteSDK7.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEstimoteSDK7.a; path = ../EstimoteSDK/libEstimoteSDK7.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +114,6 @@
 			isa = PBXGroup;
 			children = (
 				2F0CE79F184CB0C2000E8805 /* libEstimoteSDK.a */,
-				2FC6D4C817F43617007D8573 /* libEstimoteSDK7.a */,
 				2FC6D4C617F43610007D8573 /* CoreBluetooth.framework */,
 				2FC6D4C417F4360A007D8573 /* CoreLocation.framework */,
 				2FC6D4C217F43606007D8573 /* SystemConfiguration.framework */,

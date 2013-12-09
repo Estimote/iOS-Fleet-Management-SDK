@@ -2,7 +2,7 @@
 //  ESTBeaconDefinitions.h
 //  EstimoteSDK
 //
-//  Version : 1.1.0
+//  Version : 1.2.0
 //  Created by Marcin Klimek on 9/26/13.
 //  Copyright (c) 2013 Estimote. All rights reserved.
 //
@@ -31,6 +31,13 @@ typedef enum : int
     ESTBeaconFirmwareStateBoot,
     ESTBeaconFirmwareStateApp
 } ESTBeaconFirmwareState;
+
+typedef enum : int
+{
+    ESTBeaconFirmwareUpdateNone,
+    ESTBeaconFirmwareUpdateAvailable,
+    ESTBeaconFirmwareUpdateNotAvailable
+} ESTBeaconFirmwareUpdate;
 
 typedef void(^ESTCompletionBlock)(NSError* error);
 typedef void(^ESTFirmwareUpdateCompletionBlock)(BOOL updateAvailable, ESTBeaconUpdateInfo* updateInfo, NSError* error);
