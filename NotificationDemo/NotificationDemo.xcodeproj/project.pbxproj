@@ -416,7 +416,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../EstimoteSDK",
-					"/Users/mklimek/Projects/estimote/ios_code/iOS-SDK/EstimoteSDK",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -440,7 +439,6 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../EstimoteSDK",
-					"/Users/mklimek/Projects/estimote/ios_code/iOS-SDK/EstimoteSDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
