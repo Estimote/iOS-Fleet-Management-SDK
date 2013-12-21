@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>3E0A347E-A1EC-4A22-B6B9-B027A5090F01</string>
+	<key>IDESourceControlProjectName</key>
+	<string>DistanceDemo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CEEAAF60-EA14-45E4-A821-B7DC64832193</key>
+		<string>https://github.com/RuiAAPeres/iOS-SDK</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>DistanceDemo/DistanceDemo.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CEEAAF60-EA14-45E4-A821-B7DC64832193</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/RuiAAPeres/iOS-SDK</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CEEAAF60-EA14-45E4-A821-B7DC64832193</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CEEAAF60-EA14-45E4-A821-B7DC64832193</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iOS-SDK</string>
+		</dict>
+	</array>
+</dict>
+</plist>

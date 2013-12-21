@@ -8,61 +8,56 @@
 
 /* Begin PBXBuildFile section */
 		2F0CE79E184CB039000E8805 /* libEstimoteSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F0CE79D184CB039000E8805 /* libEstimoteSDK.a */; };
-		2FB0EBC21855FAEE003B963B /* DistanceDemoTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2FB0EBBE1855FAEE003B963B /* DistanceDemoTests-Info.plist */; };
-		2FB0EBC41855FAEE003B963B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2FB0EBC01855FAEE003B963B /* InfoPlist.strings */; };
-		2FB0EBC61855FC1C003B963B /* DistanceDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB0EBBF1855FAEE003B963B /* DistanceDemoTests.m */; };
-		2FB0EBD41855FC5F003B963B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FB0EBC81855FC5F003B963B /* Main.storyboard */; };
-		2FB0EBD51855FC5F003B963B /* DistanceDemo-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2FB0EBCA1855FC5F003B963B /* DistanceDemo-Info.plist */; };
-		2FB0EBD61855FC5F003B963B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2FB0EBCC1855FC5F003B963B /* InfoPlist.strings */; };
-		2FB0EBD71855FC5F003B963B /* ESTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB0EBCF1855FC5F003B963B /* ESTAppDelegate.m */; };
-		2FB0EBD81855FC5F003B963B /* ESTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB0EBD11855FC5F003B963B /* ESTViewController.m */; };
-		2FB0EBD91855FC5F003B963B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FB0EBD21855FC5F003B963B /* Images.xcassets */; };
-		2FB0EBDA1855FC5F003B963B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FB0EBD31855FC5F003B963B /* main.m */; };
 		2FC6D47117F42242007D8573 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FC6D47017F42242007D8573 /* Foundation.framework */; };
 		2FC6D47317F42242007D8573 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FC6D47217F42242007D8573 /* CoreGraphics.framework */; };
 		2FC6D47517F42242007D8573 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FC6D47417F42242007D8573 /* UIKit.framework */; };
-		2FC6D49017F42243007D8573 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FC6D48F17F42243007D8573 /* XCTest.framework */; };
-		2FC6D49117F42243007D8573 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FC6D47017F42242007D8573 /* Foundation.framework */; };
-		2FC6D49217F42243007D8573 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FC6D47417F42242007D8573 /* UIKit.framework */; };
 		2FC6D4A817F424EC007D8573 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FC6D4A717F424EC007D8573 /* SystemConfiguration.framework */; };
 		2FC6D4AA17F42502007D8573 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FC6D4A917F42502007D8573 /* CoreBluetooth.framework */; };
 		2FC6D4AC17F42509007D8573 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FC6D4AB17F42509007D8573 /* CoreLocation.framework */; };
+		C705AB4218664BAB00755B1E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FC6D48F17F42243007D8573 /* XCTest.framework */; };
+		C705AB4318664BAB00755B1E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FC6D47017F42242007D8573 /* Foundation.framework */; };
+		C705AB4418664BAB00755B1E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FC6D47417F42242007D8573 /* UIKit.framework */; };
+		C705AB5B18664BE300755B1E /* ESTViewController_Testing.m in Sources */ = {isa = PBXBuildFile; fileRef = C705AB5818664BE300755B1E /* ESTViewController_Testing.m */; };
+		C743FFD0186646B10032704D /* ESTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C743FFC4186646B10032704D /* ESTAppDelegate.m */; };
+		C743FFD1186646B10032704D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C743FFC6186646B10032704D /* Images.xcassets */; };
+		C743FFD2186646B10032704D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C743FFC8186646B10032704D /* Main.storyboard */; };
+		C743FFD4186646B10032704D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C743FFCC186646B10032704D /* main.m */; };
+		C743FFD5186646B10032704D /* ESTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C743FFCF186646B10032704D /* ESTViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2FC6D49317F42243007D8573 /* PBXContainerItemProxy */ = {
+		C705AB4E18664BAB00755B1E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2FC6D46517F42242007D8573 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2FC6D46C17F42242007D8573;
-			remoteInfo = DinstanceDemo;
+			remoteInfo = DistanceDemo;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2F0CE79D184CB039000E8805 /* libEstimoteSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEstimoteSDK.a; path = ../EstimoteSDK/libEstimoteSDK.a; sourceTree = "<group>"; };
-		2FB0EBBE1855FAEE003B963B /* DistanceDemoTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DistanceDemoTests-Info.plist"; sourceTree = "<group>"; };
-		2FB0EBBF1855FAEE003B963B /* DistanceDemoTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistanceDemoTests.m; sourceTree = "<group>"; };
-		2FB0EBC11855FAEE003B963B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		2FB0EBC91855FC5F003B963B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2FB0EBCA1855FC5F003B963B /* DistanceDemo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DistanceDemo-Info.plist"; sourceTree = "<group>"; };
-		2FB0EBCB1855FC5F003B963B /* DistanceDemo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DistanceDemo-Prefix.pch"; sourceTree = "<group>"; };
-		2FB0EBCD1855FC5F003B963B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		2FB0EBCE1855FC5F003B963B /* ESTAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTAppDelegate.h; sourceTree = "<group>"; };
-		2FB0EBCF1855FC5F003B963B /* ESTAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTAppDelegate.m; sourceTree = "<group>"; };
-		2FB0EBD01855FC5F003B963B /* ESTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTViewController.h; sourceTree = "<group>"; };
-		2FB0EBD11855FC5F003B963B /* ESTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTViewController.m; sourceTree = "<group>"; };
-		2FB0EBD21855FC5F003B963B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		2FB0EBD31855FC5F003B963B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2FC6D46D17F42242007D8573 /* DistanceDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DistanceDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FC6D47017F42242007D8573 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2FC6D47217F42242007D8573 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		2FC6D47417F42242007D8573 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		2FC6D48E17F42243007D8573 /* DistanceDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DistanceDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FC6D48F17F42243007D8573 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		2FC6D4A717F424EC007D8573 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		2FC6D4A917F42502007D8573 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		2FC6D4AB17F42509007D8573 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C705AB4118664BAB00755B1E /* DistanceDemo Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DistanceDemo Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C705AB5418664BE300755B1E /* DistanceDemo Tests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DistanceDemo Tests-Info.plist"; sourceTree = "<group>"; };
+		C705AB5518664BE300755B1E /* DistanceDemo Tests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DistanceDemo Tests-Prefix.pch"; sourceTree = "<group>"; };
+		C705AB5818664BE300755B1E /* ESTViewController_Testing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTViewController_Testing.m; sourceTree = "<group>"; };
+		C743FFC3186646B10032704D /* ESTAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTAppDelegate.h; sourceTree = "<group>"; };
+		C743FFC4186646B10032704D /* ESTAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTAppDelegate.m; sourceTree = "<group>"; };
+		C743FFC6186646B10032704D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C743FFC8186646B10032704D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C743FFCA186646B10032704D /* DistanceDemo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DistanceDemo-Info.plist"; sourceTree = "<group>"; };
+		C743FFCB186646B10032704D /* DistanceDemo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DistanceDemo-Prefix.pch"; sourceTree = "<group>"; };
+		C743FFCC186646B10032704D /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C743FFCE186646B10032704D /* ESTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTViewController.h; sourceTree = "<group>"; };
+		C743FFCF186646B10032704D /* ESTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,67 +75,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2FC6D48B17F42243007D8573 /* Frameworks */ = {
+		C705AB3E18664BAB00755B1E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FC6D49017F42243007D8573 /* XCTest.framework in Frameworks */,
-				2FC6D49217F42243007D8573 /* UIKit.framework in Frameworks */,
-				2FC6D49117F42243007D8573 /* Foundation.framework in Frameworks */,
+				C705AB4218664BAB00755B1E /* XCTest.framework in Frameworks */,
+				C705AB4418664BAB00755B1E /* UIKit.framework in Frameworks */,
+				C705AB4318664BAB00755B1E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2FB0EBBD1855FAEE003B963B /* DistanceDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				2FB0EBC51855FAF9003B963B /* Supporting Files */,
-				2FB0EBBF1855FAEE003B963B /* DistanceDemoTests.m */,
-			);
-			path = DistanceDemoTests;
-			sourceTree = "<group>";
-		};
-		2FB0EBC51855FAF9003B963B /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				2FB0EBBE1855FAEE003B963B /* DistanceDemoTests-Info.plist */,
-				2FB0EBC01855FAEE003B963B /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		2FB0EBC71855FC5F003B963B /* DistanceDemo */ = {
 			isa = PBXGroup;
 			children = (
-				2FB0EBCE1855FC5F003B963B /* ESTAppDelegate.h */,
-				2FB0EBCF1855FC5F003B963B /* ESTAppDelegate.m */,
-				2FB0EBC81855FC5F003B963B /* Main.storyboard */,
-				2FB0EBD01855FC5F003B963B /* ESTViewController.h */,
-				2FB0EBD11855FC5F003B963B /* ESTViewController.m */,
-				2FB0EBD21855FC5F003B963B /* Images.xcassets */,
-				2FB0EBDB1855FC6A003B963B /* Supporting Files */,
+				C743FFC2186646B10032704D /* App Delegate */,
+				C743FFCD186646B10032704D /* ViewController */,
+				C743FFC5186646B10032704D /* Resources */,
+				C743FFC9186646B10032704D /* Supporting Files */,
 			);
 			path = DistanceDemo;
-			sourceTree = "<group>";
-		};
-		2FB0EBDB1855FC6A003B963B /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				2FB0EBCA1855FC5F003B963B /* DistanceDemo-Info.plist */,
-				2FB0EBCB1855FC5F003B963B /* DistanceDemo-Prefix.pch */,
-				2FB0EBCC1855FC5F003B963B /* InfoPlist.strings */,
-				2FB0EBD31855FC5F003B963B /* main.m */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		2FC6D46417F42242007D8573 = {
 			isa = PBXGroup;
 			children = (
 				2FB0EBC71855FC5F003B963B /* DistanceDemo */,
-				2FB0EBBD1855FAEE003B963B /* DistanceDemoTests */,
+				C705AB4518664BAB00755B1E /* DistanceDemo Tests */,
 				2FC6D46F17F42242007D8573 /* Frameworks */,
 				2FC6D46E17F42242007D8573 /* Products */,
 			);
@@ -150,7 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				2FC6D46D17F42242007D8573 /* DistanceDemo.app */,
-				2FC6D48E17F42243007D8573 /* DistanceDemoTests.xctest */,
+				C705AB4118664BAB00755B1E /* DistanceDemo Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -168,6 +131,77 @@
 				2FC6D48F17F42243007D8573 /* XCTest.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C705AB4518664BAB00755B1E /* DistanceDemo Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C705AB5318664BE300755B1E /* Supporting Files */,
+				C705AB5718664BE300755B1E /* ViewControllers */,
+			);
+			path = "DistanceDemo Tests";
+			sourceTree = "<group>";
+		};
+		C705AB5318664BE300755B1E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C705AB5418664BE300755B1E /* DistanceDemo Tests-Info.plist */,
+				C705AB5518664BE300755B1E /* DistanceDemo Tests-Prefix.pch */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C705AB5718664BE300755B1E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C705AB5818664BE300755B1E /* ESTViewController_Testing.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C743FFC2186646B10032704D /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				C743FFC3186646B10032704D /* ESTAppDelegate.h */,
+				C743FFC4186646B10032704D /* ESTAppDelegate.m */,
+			);
+			path = "App Delegate";
+			sourceTree = "<group>";
+		};
+		C743FFC5186646B10032704D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C743FFC6186646B10032704D /* Images.xcassets */,
+				C743FFC7186646B10032704D /* Storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C743FFC7186646B10032704D /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				C743FFC8186646B10032704D /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		C743FFC9186646B10032704D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C743FFCA186646B10032704D /* DistanceDemo-Info.plist */,
+				C743FFCB186646B10032704D /* DistanceDemo-Prefix.pch */,
+				C743FFCC186646B10032704D /* main.m */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C743FFCD186646B10032704D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C743FFCE186646B10032704D /* ESTViewController.h */,
+				C743FFCF186646B10032704D /* ESTViewController.m */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,22 +224,22 @@
 			productReference = 2FC6D46D17F42242007D8573 /* DistanceDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2FC6D48D17F42243007D8573 /* DistanceDemoTests */ = {
+		C705AB4018664BAB00755B1E /* DistanceDemo Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2FC6D4A217F42243007D8573 /* Build configuration list for PBXNativeTarget "DistanceDemoTests" */;
+			buildConfigurationList = C705AB5018664BAB00755B1E /* Build configuration list for PBXNativeTarget "DistanceDemo Tests" */;
 			buildPhases = (
-				2FC6D48A17F42243007D8573 /* Sources */,
-				2FC6D48B17F42243007D8573 /* Frameworks */,
-				2FC6D48C17F42243007D8573 /* Resources */,
+				C705AB3D18664BAB00755B1E /* Sources */,
+				C705AB3E18664BAB00755B1E /* Frameworks */,
+				C705AB3F18664BAB00755B1E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2FC6D49417F42243007D8573 /* PBXTargetDependency */,
+				C705AB4F18664BAB00755B1E /* PBXTargetDependency */,
 			);
-			name = DistanceDemoTests;
-			productName = DinstanceDemoTests;
-			productReference = 2FC6D48E17F42243007D8573 /* DistanceDemoTests.xctest */;
+			name = "DistanceDemo Tests";
+			productName = "DistanceDemo Tests";
+			productReference = C705AB4118664BAB00755B1E /* DistanceDemo Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -218,7 +252,7 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = Estimote;
 				TargetAttributes = {
-					2FC6D48D17F42243007D8573 = {
+					C705AB4018664BAB00755B1E = {
 						TestTargetID = 2FC6D46C17F42242007D8573;
 					};
 				};
@@ -237,7 +271,7 @@
 			projectRoot = "";
 			targets = (
 				2FC6D46C17F42242007D8573 /* DistanceDemo */,
-				2FC6D48D17F42243007D8573 /* DistanceDemoTests */,
+				C705AB4018664BAB00755B1E /* DistanceDemo Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -247,16 +281,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FB0EBD41855FC5F003B963B /* Main.storyboard in Resources */,
-				2FB0EBC21855FAEE003B963B /* DistanceDemoTests-Info.plist in Resources */,
-				2FB0EBD51855FC5F003B963B /* DistanceDemo-Info.plist in Resources */,
-				2FB0EBD91855FC5F003B963B /* Images.xcassets in Resources */,
-				2FB0EBC41855FAEE003B963B /* InfoPlist.strings in Resources */,
-				2FB0EBD61855FC5F003B963B /* InfoPlist.strings in Resources */,
+				C743FFD1186646B10032704D /* Images.xcassets in Resources */,
+				C743FFD2186646B10032704D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2FC6D48C17F42243007D8573 /* Resources */ = {
+		C705AB3F18664BAB00755B1E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -270,56 +300,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FB0EBD71855FC5F003B963B /* ESTAppDelegate.m in Sources */,
-				2FB0EBDA1855FC5F003B963B /* main.m in Sources */,
-				2FB0EBD81855FC5F003B963B /* ESTViewController.m in Sources */,
+				C743FFD4186646B10032704D /* main.m in Sources */,
+				C743FFD5186646B10032704D /* ESTViewController.m in Sources */,
+				C743FFD0186646B10032704D /* ESTAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2FC6D48A17F42243007D8573 /* Sources */ = {
+		C705AB3D18664BAB00755B1E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FB0EBC61855FC1C003B963B /* DistanceDemoTests.m in Sources */,
+				C705AB5B18664BE300755B1E /* ESTViewController_Testing.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2FC6D49417F42243007D8573 /* PBXTargetDependency */ = {
+		C705AB4F18664BAB00755B1E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2FC6D46C17F42242007D8573 /* DistanceDemo */;
-			targetProxy = 2FC6D49317F42243007D8573 /* PBXContainerItemProxy */;
+			targetProxy = C705AB4E18664BAB00755B1E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		2FB0EBC01855FAEE003B963B /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2FB0EBC11855FAEE003B963B /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		2FB0EBC81855FC5F003B963B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2FB0EBC91855FC5F003B963B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		2FB0EBCC1855FC5F003B963B /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2FB0EBCD1855FC5F003B963B /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		2FC6D49D17F42243007D8573 /* Debug */ = {
@@ -400,13 +403,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DistanceDemo/DistanceDemo-Prefix.pch";
+				GCC_PREFIX_HEADER = "DistanceDemo/Supporting Files/DistanceDemo-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../EstimoteSDK/Headers",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
-				INFOPLIST_FILE = "DistanceDemo/DistanceDemo-Info.plist";
+				INFOPLIST_FILE = "DistanceDemo/Supporting Files/DistanceDemo-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../EstimoteSDK/**",
@@ -424,13 +427,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DistanceDemo/DistanceDemo-Prefix.pch";
+				GCC_PREFIX_HEADER = "DistanceDemo/Supporting Files/DistanceDemo-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../EstimoteSDK/Headers",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
-				INFOPLIST_FILE = "DistanceDemo/DistanceDemo-Info.plist";
+				INFOPLIST_FILE = "DistanceDemo/Supporting Files/DistanceDemo-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../EstimoteSDK/**",
@@ -442,43 +445,55 @@
 			};
 			name = Release;
 		};
-		2FC6D4A317F42243007D8573 /* Debug */ = {
+		C705AB5118664BAB00755B1E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DinstanceDemo.app/DinstanceDemo";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DistanceDemo.app/DistanceDemo";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DinstanceDemo/DinstanceDemo-Prefix.pch";
+				GCC_PREFIX_HEADER = "DistanceDemo Tests/Supporting Files/DistanceDemo Tests-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "DinstanceDemoTests/DistanceDemoTests-Info.plist";
-				PRODUCT_NAME = DistanceDemoTests;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../EstimoteSDK/Headers",
+				);
+				INFOPLIST_FILE = "DistanceDemo Tests/Supporting Files/DistanceDemo Tests-Info.plist";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../EstimoteSDK/Headers";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
 		};
-		2FC6D4A417F42243007D8573 /* Release */ = {
+		C705AB5218664BAB00755B1E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DinstanceDemo.app/DinstanceDemo";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DistanceDemo.app/DistanceDemo";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "DinstanceDemo/DinstanceDemo-Prefix.pch";
-				INFOPLIST_FILE = "DinstanceDemoTests/DistanceDemoTests-Info.plist";
-				PRODUCT_NAME = DistanceDemoTests;
+				GCC_PREFIX_HEADER = "DistanceDemo Tests/Supporting Files/DistanceDemo Tests-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/../EstimoteSDK/Headers",
+				);
+				INFOPLIST_FILE = "DistanceDemo Tests/Supporting Files/DistanceDemo Tests-Info.plist";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../EstimoteSDK/Headers";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -505,14 +520,13 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2FC6D4A217F42243007D8573 /* Build configuration list for PBXNativeTarget "DistanceDemoTests" */ = {
+		C705AB5018664BAB00755B1E /* Build configuration list for PBXNativeTarget "DistanceDemo Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2FC6D4A317F42243007D8573 /* Debug */,
-				2FC6D4A417F42243007D8573 /* Release */,
+				C705AB5118664BAB00755B1E /* Debug */,
+				C705AB5218664BAB00755B1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
