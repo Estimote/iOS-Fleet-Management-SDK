@@ -25,13 +25,48 @@
 
 @implementation ESTViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
+#pragma mark - View Setup
 
-    /////////////////////////////////////////////////////////////
-    // setup Estimote beacon manager
+- (void)setupBackgroundImage
+{
+    CGRect          screenRect          = [[UIScreen mainScreen] bounds];
+    CGFloat         screenHeight        = screenRect.size.height;
+    UIImageView*    backgroundImage;
     
+    if (screenHeight > 480)
+    {
+        backgroundImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"backgroundBig"]];
+    }
+    else
+    {
+        backgroundImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"backgroundSmall"]];
+    }
+    
+    [self.view addSubview:backgroundImage];
+}
+
+- (void)setupDotImage
+{
+    self.positionDot = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"dotImage"]];
+    [self.positionDot setCenter:self.view.center];
+    [self.positionDot setAlpha:1.0f];
+    
+    [self.view addSubview:self.positionDot];
+    
+    self.dotMinPos = 150;
+    self.dotRange = self.view.bounds.size.height  - 220;
+}
+
+- (void)setupView
+{
+    [self setupBackgroundImage];
+    [self setupDotImage];
+}
+
+#pragma mark - Manager setup
+
+- (void)setupManager
+{
     // create manager instance
     self.beaconManager = [[ESTBeaconManager alloc] init];
     self.beaconManager.delegate = self;
@@ -42,43 +77,19 @@
     // start looking for estimote beacons in region
     // when beacon ranged beaconManager:didRangeBeacons:inRegion: invoked
     [self.beaconManager startRangingBeaconsInRegion:region];
-    
-    
-    /////////////////////////////////////////////////////////////
-    // setup Estimote beacon manager
-    
+}
+
+#pragma mark - ViewController Life Cycle
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+
+    [self setupManager];
     [self setupView];
 }
 
--(void)setupView
-{
-    /////////////////////////////////////////////////////////////
-    // setup background image
-    
-    CGRect          screenRect          = [[UIScreen mainScreen] bounds];
-    CGFloat         screenHeight        = screenRect.size.height;
-    UIImageView*    backgroundImage;
-    
-    if (screenHeight > 480)
-        backgroundImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"backgroundBig"]];
-    else
-        backgroundImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"backgroundSmall"]];
-    
-    [self.view addSubview:backgroundImage];
-    
-    /////////////////////////////////////////////////////////////
-    // setup dot image
-    
-    self.positionDot = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"dotImage"]];
-    [self.positionDot setCenter:self.view.center];
-    [self.positionDot setAlpha:1.];
-    
-    [self.view addSubview:self.positionDot];
-    
-    self.dotMinPos = 150;
-    self.dotRange = self.view.bounds.size.height  - 220;
-}
-
+#pragma mark - ESTBeaconManagerDelegate Implementation
 
 -(void)beaconManager:(ESTBeaconManager *)manager
      didRangeBeacons:(NSArray *)beacons
@@ -108,19 +119,10 @@
         // so it changes from -30 to -100 so we normalize
         float distFactor = ((float)self.selectedBeacon.rssi + 30) / -70;
         
-        
         // calculate and set new y position
         float newYPos = self.dotMinPos + distFactor * self.dotRange;
         self.positionDot.center = CGPointMake(self.view.bounds.size.width / 2, newYPos);
     }
 }
-
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 @end
