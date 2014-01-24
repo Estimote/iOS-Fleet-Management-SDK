@@ -4,7 +4,7 @@ EstimoteSDK for iOS 7
 Introduction
 -------
 
-Estimote SDK allows to play with Apple iBeacon technology, using Estimote hardware beacons as well as [Estimote Virtual Beacon iOS Application](https://itunes.apple.com/us/app/estimote-virtual-beacon/id686915066). To find out more about it read [API section on our website](http://estimote.com/api/index.html#), please. You can also check our [Community Portal](http://community.estimote.com) to get answers for most common questions related to our Hardware and Software.
+Estimote SDK allows to play with Apple iBeacon technology, using Estimote hardware beacons as well as [Estimote Virtual Beacon iOS Application](https://itunes.apple.com/us/app/estimote-virtual-beacon/id686915066). To find out more about it read [API section on our website](http://estimote.com/api/index.html#), please. You can review [SDK documentation](http://estimote.github.io/iOS-SDK/) and check our [Community Portal](http://community.estimote.com) to get answers for most common questions related to our Hardware and Software.
 
 Overview
 -------
