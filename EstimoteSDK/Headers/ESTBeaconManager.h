@@ -2,7 +2,7 @@
 //  ESTBeaconManager.h
 //  EstimoteSDK
 //
-//  Version : 1.2.0
+//  Version : 1.3.0
 //  Created by Marcin Klimek on 9/18/13.
 //  Copyright (c) 2013 Estimote. All rights reserved.
 //
@@ -11,6 +11,10 @@
 #import <CoreLocation/CoreLocation.h>
 #import "ESTBeaconRegion.h"
 #import "ESTBeacon.h"
+
+#define ESTIMOTE_PROXIMITY_UUID             [[NSUUID alloc] initWithUUIDString:@"B9407F30-F5F8-466E-AFF9-25556B57FE6D"]
+#define ESTIMOTE_MACBEACON_PROXIMITY_UUID   [[NSUUID alloc] initWithUUIDString:@"08D4A950-80F0-4D42-A14B-D53E063516E6"]
+#define ESTIMOTE_IOSBEACON_PROXIMITY_UUID   [[NSUUID alloc] initWithUUIDString:@"8492E75F-4FD6-469D-B132-043FE94921D8"]
 
 @class ESTBeaconManager;
 
@@ -231,16 +235,17 @@ monitoringDidFailForRegion:(ESTBeaconRegion *)region
 /**
  * Allows to turn device into virtual estimote beacon.
  *
+ * @param proximityUUID proximity UUID beacon value
  * @param major minor beacon value
  * @param minor major beacon value
  * @param identifier unique identifier for you region
  *
  * @return void
  */
--(void)startAdvertisingWithMajor:(ESTBeaconMajorValue)major
-                       withMinor:(ESTBeaconMinorValue)minor
-                  withIdentifier:(NSString*)identifier;
-
+-(void)startAdvertisingWithProximityUUID:(NSUUID *)proximityUUID
+                                   major:(CLBeaconMajorValue)major
+                                   minor:(CLBeaconMinorValue)minor
+                              identifier:(NSString*)identifier;
 
 /**
  * Stop beacon advertising

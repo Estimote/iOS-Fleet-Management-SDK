@@ -2,7 +2,7 @@
 //  ESTBeacon.h
 //  EstimoteSDK
 //
-//  Version : 1.2.0
+//  Version : 1.3.0
 //  Created by Marcin Klimek on 9/19/13.
 //  Copyright (c) 2013 Estimote. All rights reserved.
 //
@@ -237,6 +237,16 @@ ESTBeacon class contains basic Apple CLBeacon object reference as well as some a
 /// @name Methods for reading beacon configuration
 
 /**
+ * Read Proximity UUID of connected beacon (Previous connection
+ * required)
+ *
+ * @param completion block with major value as param
+ *
+ * @return void
+ */
+- (void)readBeaconProximityUUIDWithCompletion:(ESTStringCompletionBlock)completion;
+
+/**
  * Read major of connected beacon (Previous connection
  * required)
  *
@@ -309,6 +319,16 @@ ESTBeacon class contains basic Apple CLBeacon object reference as well as some a
 
 
 /// @name Methods for writing beacon configuration
+
+/**
+ * Writes Proximity UUID param to bluetooth connected beacon.
+ *
+ * @param pUUID new Proximity UUID value
+ * @param completion block handling operation completion
+ *
+ * @return void
+ */
+- (void)writeBeaconProximityUUID:(NSString*)pUUID withCompletion:(ESTStringCompletionBlock)completion;
 
 /**
  * Writes major param to bluetooth connected beacon.

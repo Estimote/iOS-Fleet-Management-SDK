@@ -32,7 +32,8 @@
     self.beaconManager.avoidUnknownStateBeacons = YES;
     
     // create sample region object (you can additionaly pass major / minor values)
-    ESTBeaconRegion* region = [[ESTBeaconRegion alloc] initRegionWithIdentifier:@"EstimoteSampleRegion"];
+    ESTBeaconRegion* region = [[ESTBeaconRegion alloc] initWithProximityUUID:ESTIMOTE_PROXIMITY_UUID
+                                                                  identifier:@"EstimoteSampleRegion"];
     
     // start looking for estimote beacons in region
     // when beacon ranged beaconManager:didRangeBeacons:inRegion: invoked

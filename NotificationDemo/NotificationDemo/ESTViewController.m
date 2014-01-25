@@ -33,7 +33,9 @@
     self.beaconManager.avoidUnknownStateBeacons = YES;
     
     // create sample region with major value defined
-    ESTBeaconRegion* region = [[ESTBeaconRegion alloc] initRegionWithMajor:1 minor:1 identifier: @"EstimoteSampleRegion"];
+    ESTBeaconRegion* region = [[ESTBeaconRegion alloc] initWithProximityUUID:ESTIMOTE_PROXIMITY_UUID
+                                                                       major:1 minor:1
+                                                                  identifier: @"EstimoteSampleRegion"];
     
     NSLog(@"TODO: Update the ESTBeaconRegion with your major / minor number and enable background app refresh in the Settings on your device for the NotificationDemo to work correctly.");
     

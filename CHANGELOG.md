@@ -1,3 +1,13 @@
+## 1.3.0 (January 25, 2014)
+
+Features:
+
+  - Unlocked Proximity UUID
+
+Bugfixes:
+
+  - Bug fixes
+
 ## 1.2.0 (December 9, 2013)
 
 Features:
