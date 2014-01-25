@@ -98,6 +98,8 @@
 	
 	<option value="//api/name/readBeaconPowerWithCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- readBeaconPowerWithCompletion:</option>
 	
+	<option value="//api/name/readBeaconProximityUUIDWithCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- readBeaconProximityUUIDWithCompletion:</option>
+	
 	<option value="//api/name/updateBeaconFirmwareWithProgress:andCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- updateBeaconFirmwareWithProgress:andCompletion:</option>
 	
 	<option value="//api/name/writeBeaconAdvInterval:withCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeBeaconAdvInterval:withCompletion:</option>
@@ -107,6 +109,8 @@
 	<option value="//api/name/writeBeaconMinor:withCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeBeaconMinor:withCompletion:</option>
 	
 	<option value="//api/name/writeBeaconPower:withCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeBeaconPower:withCompletion:</option>
+	
+	<option value="//api/name/writeBeaconProximityUUID:withCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeBeaconProximityUUID:withCompletion:</option>
 	
 	
 	
@@ -204,6 +208,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/readBeaconPowerWithCompletion:">readBeaconPowerWithCompletion:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/readBeaconProximityUUIDWithCompletion:">readBeaconProximityUUIDWithCompletion:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/updateBeaconFirmwareWithProgress:andCompletion:">updateBeaconFirmwareWithProgress:andCompletion:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeBeaconAdvInterval:withCompletion:">writeBeaconAdvInterval:withCompletion:</a></span></li>
@@ -213,6 +219,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeBeaconMinor:withCompletion:">writeBeaconMinor:withCompletion:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeBeaconPower:withCompletion:">writeBeaconPower:withCompletion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeBeaconProximityUUID:withCompletion:">writeBeaconProximityUUID:withCompletion:</a></span></li>
 	
 </ul></li>
 
@@ -403,6 +411,12 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
+		<code><a href="#//api/name/readBeaconProximityUUIDWithCompletion:">&ndash;&nbsp;readBeaconProximityUUIDWithCompletion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/readBeaconMajorWithCompletion:">&ndash;&nbsp;readBeaconMajorWithCompletion:</a></code>
 	</span>
 	
@@ -452,6 +466,12 @@
 
 						<ul class="task-list">
 							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/writeBeaconProximityUUID:withCompletion:">&ndash;&nbsp;writeBeaconProximityUUID:withCompletion:</a></code>
+	</span>
+	
+	
+</li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/writeBeaconMajor:withCompletion:">&ndash;&nbsp;writeBeaconMajor:withCompletion:</a></code>
 	</span>
@@ -1678,6 +1698,58 @@ required)</p>
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/readBeaconProximityUUIDWithCompletion:" title="readBeaconProximityUUIDWithCompletion:"></a>
+	<h3 class="subsubtitle method-title">readBeaconProximityUUIDWithCompletion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Read Proximity UUID of connected beacon (Previous connection
+required)</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)readBeaconProximityUUIDWithCompletion:(ESTStringCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>block with <a href="#//api/name/major">major</a> value as param</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>void</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/updateBeaconFirmwareWithProgress:andCompletion:" title="updateBeaconFirmwareWithProgress:andCompletion:"></a>
 	<h3 class="subsubtitle method-title">updateBeaconFirmwareWithProgress:andCompletion:</h3>
 	
@@ -1959,6 +2031,62 @@ is required to pass this process.</p>
 	
 </div>
 						
+						<div class="section-method">
+	<a name="//api/name/writeBeaconProximityUUID:withCompletion:" title="writeBeaconProximityUUID:withCompletion:"></a>
+	<h3 class="subsubtitle method-title">writeBeaconProximityUUID:withCompletion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Writes Proximity UUID param to bluetooth connected beacon.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)writeBeaconProximityUUID:(NSString *)<em>pUUID</em> withCompletion:(ESTStringCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>pUUID</em></dt>
+			<dd><p>new Proximity UUID value</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>block handling operation completion</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>void</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
+						
 					</div>
 					
 					
@@ -1974,7 +2102,7 @@ is required to pass this process.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 Estimote. All rights reserved. (Last updated: 2013-12-09)</span><br />
+						<p><span class="copyright">&copy; 2014 Estimote. All rights reserved. (Last updated: 2014-01-25)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						
