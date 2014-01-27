@@ -75,7 +75,7 @@ ESTBeacon class contains basic Apple CLBeacon object reference as well as some a
 @interface ESTBeacon : NSObject
 
 @property (nonatomic)           ESTBeaconFirmwareState  firmwareState;
-@property (nonatomic)           id <ESTBeaconDelegate>  delegate;
+@property (nonatomic, weak)     id <ESTBeaconDelegate>  delegate;
 
 /////////////////////////////////////////////////////
 // bluetooth beacon available when used with
@@ -321,7 +321,7 @@ ESTBeacon class contains basic Apple CLBeacon object reference as well as some a
 /// @name Methods for writing beacon configuration
 
 /**
- * Writes Proximity UUID param to bluetooth connected beacon.
+ * Writes Proximity UUID param to bluetooth connected beacon. Please  remember that If you change the UUID to your very own value anyone can read it, copy it and spoof your beacons. So if you are working on a mission critical application where security is an issue - be sure to implement it on your end. We are also working on a secure mode for our beacons and it will be included in one of the next firmware updates.
  *
  * @param pUUID new Proximity UUID value
  * @param completion block handling operation completion
@@ -364,7 +364,7 @@ ESTBeacon class contains basic Apple CLBeacon object reference as well as some a
 /**
  * Writes power of bluetooth connected beacon.
  *
- * @param power advertising beacon power
+ * @param power advertising beacon power (can take value from ESTBeaconPowerLevel1 / waak to ESTBeaconPowerLevel8 / strong)
  * @param completion block handling operation completion
  *
  * @return void
