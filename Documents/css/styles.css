@@ -34,13 +34,11 @@
 @import url("//hello.myfonts.net/count/2946ed");
 
   
-@font-face {font-family: 'SlateStd-Light';src: url('http://http://estimote.com/webfonts/2946ED_0_0.eot');src: url('http://http://estimote.com/webfonts/2946ED_0_0.eot?#iefix') format('embedded-opentype'),url('http://http://estimote.com/webfonts/2946ED_0_0.woff') format('woff'),url('http://http://estimote.com/webfonts/2946ED_0_0.ttf') format('truetype');}
+@font-face {font-family: 'SlateStd-Light';src: url('http://estimote.com/webfonts/2946ED_0_0.eot');src: url('http://estimote.com/webfonts/2946ED_0_0.eot?#iefix') format('embedded-opentype'),url('http://estimote.com/webfonts/2946ED_0_0.woff') format('woff'),url('http://estimote.com/webfonts/2946ED_0_0.ttf') format('truetype');}
  
+@font-face {font-family: 'SlateStd';src: url('http://estimote.com/webfonts/2946ED_1_0.eot');src: url('http://estimote.com/webfonts/2946ED_1_0.eot?#iefix') format('embedded-opentype'),url('http://estimote.com/webfonts/2946ED_1_0.woff') format('woff'),url('http://estimote.com/webfonts/2946ED_1_0.ttf') format('truetype');}
   
-@font-face {font-family: 'SlateStd';src: url('http://http://estimote.com/webfonts/2946ED_1_0.eot');src: url('http://http://estimote.com/webfonts/2946ED_1_0.eot?#iefix') format('embedded-opentype'),url('http://http://estimote.com/webfonts/2946ED_1_0.woff') format('woff'),url('http://http://estimote.com/webfonts/2946ED_1_0.ttf') format('truetype');}
- 
-  
-@font-face {font-family: 'BrandonText-Light';src: url('http://http://estimote.com/webfonts/2946ED_2_0.eot');src: url('http://http://estimote.com/webfonts/2946ED_2_0.eot?#iefix') format('embedded-opentype'),url('http://http://estimote.com/webfonts/2946ED_2_0.woff') format('woff'),url('http://http://estimote.com/webfonts/2946ED_2_0.ttf') format('truetype');}
+@font-face {font-family: 'BrandonText-Light';src: url('http://estimote.com/webfonts/2946ED_2_0.eot');src: url('http://estimote.com/webfonts/2946ED_2_0.eot?#iefix') format('embedded-opentype'),url('http://estimote.com/webfonts/2946ED_2_0.woff') format('woff'),url('http://estimote.com/webfonts/2946ED_2_0.ttf') format('truetype');}
  
 
 
