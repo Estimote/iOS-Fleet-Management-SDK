@@ -22,7 +22,13 @@ ESTBeacon represents single beacon device. Objects of this class are generated u
 Installation
 -------
 
-Follow steps described below to install EstimoteSDK library:
+The easiest way is to use CocoaPods. It takes care of all required frameworks and third party dependencies:
+
+```
+pod 'EstimoteSDK'
+```
+
+Alternatively, you can install manually. Follow steps described below:
 
 1. Copy EstimoteSDK directory (containing libEstimoteSDK.a and Headers) into your project directory.
 
