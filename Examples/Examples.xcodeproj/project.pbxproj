@@ -383,10 +383,7 @@
 					../EstimoteSDK/Headers,
 				);
 				INFOPLIST_FILE = "Examples/Examples-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					../EstimoteSDK,
-					"/Users/Gacek/Documents/Programowanie/iOS/Estimote/iOS-SDK/iOS-SDK/EstimoteSDK",
-				);
+				LIBRARY_SEARCH_PATHS = ../EstimoteSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -405,10 +402,7 @@
 					../EstimoteSDK/Headers,
 				);
 				INFOPLIST_FILE = "Examples/Examples-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					../EstimoteSDK,
-					"/Users/Gacek/Documents/Programowanie/iOS/Estimote/iOS-SDK/iOS-SDK/EstimoteSDK",
-				);
+				LIBRARY_SEARCH_PATHS = ../EstimoteSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
