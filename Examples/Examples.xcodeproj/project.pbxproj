@@ -204,6 +204,13 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = com.estimote;
 				TargetAttributes = {
+					AC39C3B918D72A6F00B38212 = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
 					AC39C3DA18D72A6F00B38212 = {
 						TestTargetID = AC39C3B918D72A6F00B38212;
 					};
