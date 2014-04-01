@@ -1,3 +1,23 @@
+## 2.0beta (March 31, 2014)
+
+Features:
+	
+	- Added temperature and accelerometer support
+	- Added motionUUID to ESTBeacon
+	- Support for EstimoteOS 2.0 firmware
+	
+Refactoring:
+	- ESTBeacon method name changes:
+		- connectToBeacon -> connect
+		- disconnectBeacon -> disconnect
+		- writeBeaconName:withCompletion: -> writeName:completion:
+		- writeBeaconProximityUUID:withCompletion: -> writeProximityUUID:completion:
+		- writeBeaconMajor:withCompletion: -> writeMajor:completion:
+		- writeBeaconMinor:withCompletion: -> writeMinor:completion
+		- writeBeaconAdvInterval:withCompletion: -> writeAdvInterval:completion:
+		- writeBeaconPower:withCompletion: -> writePower:completion:
+		- updateBeaconFirmwareWithProgress:andCompletion: -> updateFirmwareWithProgress:completion:
+
 ## 1.3.0 (January 25, 2014)
 
 Features:

@@ -12,7 +12,8 @@
 
 @interface ESTBeaconTableVC () <ESTBeaconManagerDelegate>
 
-@property (nonatomic, copy) void (^completionHandler)(ESTBeacon *);
+@property (nonatomic, copy)     void (^completion)(ESTBeacon *);
+@property (nonatomic, assign)   ESTScanType scanType;
 
 @property (nonatomic, strong) ESTBeaconManager *beaconManager;
 @property (nonatomic, strong) ESTBeaconRegion *region;
@@ -38,12 +39,13 @@
 
 @implementation ESTBeaconTableVC
 
-- (id)initWithCompletionHandler:(void (^)(ESTBeacon *))completionHandler
+- (id)initWithScanType:(ESTScanType)scanType completion:(void (^)(ESTBeacon *))completion
 {
     self = [super init];
     if (self)
     {
-        self.completionHandler = completionHandler;
+        self.scanType = scanType;
+        self.completion = [completion copy];
     }
     return self;
 }
@@ -53,11 +55,6 @@
     [super viewDidLoad];
     
     self.title = @"Select beacon";
-    
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]
-                                                                  initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
-                                                                  target:self
-                                                                  action:@selector(dismiss)];
     
     [self.tableView registerClass:[ESTTableViewCell class] forCellReuseIdentifier:@"CellIdentifier"];
 }
@@ -82,7 +79,14 @@
      * Starts looking for Estimote beacons.
      * All callbacks will be delivered to beaconManager delegate.
      */
-    [self.beaconManager startRangingBeaconsInRegion:self.region];
+    if (self.scanType == ESTScanTypeBeacon)
+    {
+        [self.beaconManager startRangingBeaconsInRegion:self.region];
+    }
+    else
+    {
+        [self.beaconManager startEstimoteBeaconsDiscoveryForRegion:self.region];
+    }
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -93,6 +97,7 @@
      *Stops ranging after exiting the view.
      */
     [self.beaconManager stopRangingBeaconsInRegion:self.region];
+    [self.beaconManager stopEstimoteBeaconDiscovery];
 }
 
 - (void)dismiss
@@ -103,6 +108,13 @@
 #pragma mark - ESTBeaconManager delegate
 
 - (void)beaconManager:(ESTBeaconManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(ESTBeaconRegion *)region
+{
+    self.beaconsArray = beacons;
+    
+    [self.tableView reloadData];
+}
+
+- (void)beaconManager:(ESTBeaconManager *)manager didDiscoverBeacons:(NSArray *)beacons inRegion:(ESTBeaconRegion *)region
 {
     self.beaconsArray = beacons;
     
@@ -121,6 +133,8 @@
     return [self.beaconsArray count];
 }
 
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     ESTTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellIdentifier" forIndexPath:indexPath];
@@ -130,10 +144,24 @@
      */
     ESTBeacon *beacon = [self.beaconsArray objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"Major: %@, Minor: %@", beacon.major, beacon.minor];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"Distance: %.2f", [beacon.distance floatValue]];
+    if (self.scanType == ESTScanTypeBeacon)
+    {
+        cell.textLabel.text = [NSString stringWithFormat:@"Major: %@, Minor: %@", beacon.major, beacon.minor];
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"Distance: %.2f", [beacon.distance floatValue]];
+    }
+    else
+    {
+        cell.textLabel.text = [NSString stringWithFormat:@"MacAddress: %@", beacon.macAddress];
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"RSSI: %d", beacon.rssi];
+    }
+    cell.imageView.image = [UIImage imageNamed:@"beacon"];
     
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	return 80;
 }
 
 #pragma mark - Table view delegate
@@ -142,10 +170,7 @@
 {
     ESTBeacon *selectedBeacon = [self.beaconsArray objectAtIndex:indexPath.row];
     
-    [self dismissViewControllerAnimated:YES completion:^{
-    
-        self.completionHandler(selectedBeacon);
-    }];
+    self.completion(selectedBeacon);
 }
 
 @end

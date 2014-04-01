@@ -44,6 +44,11 @@
 	
 	
 	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/recentlyUsedUUIDs">&nbsp;&nbsp;&nbsp;&nbsp;+ recentlyUsedUUIDs</option>
+	
+	
 	
 	
 	<option value="instance_methods">Instance Methods</option>
@@ -82,11 +87,7 @@
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_CoreLocation based iBeacon monitoring and ranging methods">CoreLocation based iBeacon monitoring and ranging methods</a></span></li>
-	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Turning device into iBeacon">Turning device into iBeacon</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_CoreBluetooth based utility methods">CoreBluetooth based utility methods</a></span></li>
 	
 </ul></li>
 
@@ -101,6 +102,12 @@
 </ul></li>
 
 
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/recentlyUsedUUIDs">recentlyUsedUUIDs</a></span></li>
+	
+</ul></li>
 
 
 
@@ -194,15 +201,7 @@
 	</span>
 	<span class="task-item-suffix">property</span>
 	
-</li>
-						</ul>
-						
-						
-						<a title="CoreLocation based iBeacon monitoring and ranging methods" name="task_CoreLocation based iBeacon monitoring and ranging methods"></a>
-						<h3 class="subsubtitle task-title">CoreLocation based iBeacon monitoring and ranging methods</h3>
-
-						<ul class="task-list">
-							<li>
+</li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/startRangingBeaconsInRegion:">&ndash;&nbsp;startRangingBeaconsInRegion:</a></code>
 	</span>
@@ -252,15 +251,7 @@
 	</span>
 	
 	
-</li>
-						</ul>
-						
-						
-						<a title="CoreBluetooth based utility methods" name="task_CoreBluetooth based utility methods"></a>
-						<h3 class="subsubtitle task-title">CoreBluetooth based utility methods</h3>
-
-						<ul class="task-list">
-							<li>
+</li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/startEstimoteBeaconsDiscoveryForRegion:">&ndash;&nbsp;startEstimoteBeaconsDiscoveryForRegion:</a></code>
 	</span>
@@ -269,6 +260,12 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/stopEstimoteBeaconDiscovery">&ndash;&nbsp;stopEstimoteBeaconDiscovery</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/recentlyUsedUUIDs">+&nbsp;recentlyUsedUUIDs</a></code>
 	</span>
 	
 	
@@ -324,6 +321,53 @@
 					</div>
 					
 					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/recentlyUsedUUIDs" title="recentlyUsedUUIDs"></a>
+	<h3 class="subsubtitle method-title">recentlyUsedUUIDs</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Get the array of UUIDs that were saved to beacons</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSArray *)recentlyUsedUUIDs</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>NSArray of UUID strings</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
 					
 					
 					
@@ -455,7 +499,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Start beacon discovery process based on CoreBluetooth
+		<p>Start single beacon discovery process based on CoreBluetooth
 framework. Method is useful for older beacons discovery
 that are not advertising as iBeacons.</p>
 	</div>		
@@ -471,7 +515,7 @@ that are not advertising as iBeacons.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>region</em></dt>
-			<dd><p>estimote beacon region</p></dd>
+			<dd><p>estimote beacon region (nil discovers all estimote beacons)</p></dd>
 		</dl>
 		
 	</div>
@@ -526,7 +570,7 @@ and beaconManager:didExitRegion:</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>region</em></dt>
-			<dd><p>estimote beacon region</p></dd>
+			<dd><p>estimote beacon region (nil starts monitoring all estimote beacons)</p></dd>
 		</dl>
 		
 	</div>
@@ -563,7 +607,7 @@ and beaconManager:didExitRegion:</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Range all Estimote beacons that are visible in range.
+		<p>Range Estimote beacon described with region object.
 Delegate method beaconManager:didRangeBeacons:inRegion:
 is used to retrieve found beacons. Returned NSArray contains
 <a href="../Classes/ESTBeacon.html">ESTBeacon</a> objects.</p>
@@ -580,7 +624,7 @@ is used to retrieve found beacons. Returned NSArray contains
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>region</em></dt>
-			<dd><p>estimote beacon region</p></dd>
+			<dd><p>estimote beacon region (nil starts ranging all estimote beacons)</p></dd>
 		</dl>
 		
 	</div>
@@ -714,7 +758,7 @@ Estimote beacon region.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>region</em></dt>
-			<dd><p>estimote beacon region</p></dd>
+			<dd><p>estimote beacon region (parameter can not be nil)</p></dd>
 		</dl>
 		
 	</div>
@@ -765,7 +809,7 @@ Estimote beacon region.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>region</em></dt>
-			<dd><p>estimote beacon region</p></dd>
+			<dd><p>estimote beacon region (parameter can not be nil)</p></dd>
 		</dl>
 		
 	</div>
@@ -810,7 +854,7 @@ Estimote beacon region.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 Estimote. All rights reserved. (Last updated: 2014-01-25)</span><br />
+						<p><span class="copyright">&copy; 2014 Estimote. All rights reserved. (Last updated: 2014-04-01)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						

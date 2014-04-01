@@ -36,6 +36,8 @@
 {
     [super viewDidLoad];
     
+    self.title = @"Proximity Demo";
+    
     /*
      * UI setup.
      */

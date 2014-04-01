@@ -2,19 +2,17 @@
 //  ESTBeaconManager.h
 //  EstimoteSDK
 //
-//  Version : 1.3.0
+//  Version: 2.0beta
 //  Created by Marcin Klimek on 9/18/13.
 //  Copyright (c) 2013 Estimote. All rights reserved.
 //
+
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 #import "ESTBeaconRegion.h"
 #import "ESTBeacon.h"
-
-#define ESTIMOTE_PROXIMITY_UUID             [[NSUUID alloc] initWithUUIDString:@"B9407F30-F5F8-466E-AFF9-25556B57FE6D"]
-#define ESTIMOTE_MACBEACON_PROXIMITY_UUID   [[NSUUID alloc] initWithUUIDString:@"08D4A950-80F0-4D42-A14B-D53E063516E6"]
-#define ESTIMOTE_IOSBEACON_PROXIMITY_UUID   [[NSUUID alloc] initWithUUIDString:@"8492E75F-4FD6-469D-B132-043FE94921D8"]
+#import "ESTBeaconDefinitions.h"
 
 @class ESTBeaconManager;
 
@@ -26,6 +24,18 @@
 @protocol ESTBeaconManagerDelegate <NSObject>
 
 @optional
+
+/**
+ * Delegate method invoked when ranging started.
+ *
+ * @param manager estimote beacon manager
+ * @param region estimote beacon region
+ *
+ * @return void
+ */
+
+- (void)beaconManager:(ESTBeaconManager *)manager
+didStartMonitoringForRegion:(CLRegion *)region;
 
 /**
  * Delegate method invoked during ranging.
@@ -148,6 +158,9 @@ monitoringDidFailForRegion:(ESTBeaconRegion *)region
 - (void)beaconManager:(ESTBeaconManager *)manager
     didFailDiscoveryInRegion:(ESTBeaconRegion *)region;
 
+
+
+
 @end
 
 
@@ -172,18 +185,17 @@ monitoringDidFailForRegion:(ESTBeaconRegion *)region
  */
 @property (nonatomic) BOOL avoidUnknownStateBeacons;
 
-@property (nonatomic, strong) ESTBeaconRegion*         virtualBeaconRegion;
-
 
 /// @name CoreLocation based iBeacon monitoring and ranging methods
+#pragma mark - CoreLocation based iBeacon monitoring and ranging methods
 
 /**
- * Range all Estimote beacons that are visible in range.
+ * Range Estimote beacon described with region object.
  * Delegate method beaconManager:didRangeBeacons:inRegion: 
  * is used to retrieve found beacons. Returned NSArray contains 
  * ESTBeacon objects.
  *
- * @param region estimote beacon region
+ * @param region estimote beacon region (nil starts ranging all estimote beacons)
  *
  * @return void
  */
@@ -196,7 +208,7 @@ monitoringDidFailForRegion:(ESTBeaconRegion *)region
  * delegate method inovked: beaconManager:didEnterRegtion:
  * and beaconManager:didExitRegion:
  *
- * @param region estimote beacon region
+ * @param region estimote beacon region (nil starts monitoring all estimote beacons)
  *
  * @return void
  */
@@ -205,7 +217,7 @@ monitoringDidFailForRegion:(ESTBeaconRegion *)region
 /**
  * Stops ranging Estimote beacons.
  *
- * @param region estimote beacon region
+ * @param region estimote beacon region (parameter can not be nil)
  *
  * @return void
  */
@@ -215,7 +227,7 @@ monitoringDidFailForRegion:(ESTBeaconRegion *)region
  * Unsubscribe application from iOS monitoring of
  * Estimote beacon region.
  *
- * @param region estimote beacon region
+ * @param region estimote beacon region (parameter can not be nil)
  *
  * @return void
  */
@@ -256,19 +268,18 @@ monitoringDidFailForRegion:(ESTBeaconRegion *)region
 
 
 /// @name CoreBluetooth based utility methods
-
+#pragma mark - CoreBluetooth based utility methods
 
 /**
- * Start beacon discovery process based on CoreBluetooth 
+ * Start single beacon discovery process based on CoreBluetooth
  * framework. Method is useful for older beacons discovery 
  * that are not advertising as iBeacons.
  *
- * @param region estimote beacon region
+ * @param region estimote beacon region (nil discovers all estimote beacons)
  *
  * @return void
  */
 -(void)startEstimoteBeaconsDiscoveryForRegion:(ESTBeaconRegion*)region;
-
 
 /**
  * Stops CoreBluetooth based beacon discovery process.
@@ -276,6 +287,14 @@ monitoringDidFailForRegion:(ESTBeaconRegion *)region
  * @return void
  */
 -(void)stopEstimoteBeaconDiscovery;
+
+/**
+ * Get the array of UUIDs that were saved to beacons
+ *
+ * @return NSArray of UUID strings
+ */
++(NSArray *)recentlyUsedUUIDs;
+
 
 @end
 
