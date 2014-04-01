@@ -416,8 +416,10 @@
 					../EstimoteSDK/Headers,
 				);
 				INFOPLIST_FILE = "Examples/Examples-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = ../EstimoteSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -435,8 +437,10 @@
 					../EstimoteSDK/Headers,
 				);
 				INFOPLIST_FILE = "Examples/Examples-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = ../EstimoteSDK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
