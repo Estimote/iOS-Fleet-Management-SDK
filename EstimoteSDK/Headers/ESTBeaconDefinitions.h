@@ -8,7 +8,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ESTBeaconUpdateInfo.h"
+#import "ESTBeaconFirmwareInfoVO.h"
 
 #define ESTIMOTE_PROXIMITY_UUID             [[NSUUID alloc] initWithUUIDString:@"B9407F30-F5F8-466E-AFF9-25556B57FE6D"]
 #define ESTIMOTE_MACBEACON_PROXIMITY_UUID   [[NSUUID alloc] initWithUUIDString:@"08D4A950-80F0-4D42-A14B-D53E063516E6"]
@@ -65,7 +65,9 @@ typedef enum : int
 {
     ESTBeaconColorMint = 1,
     ESTBeaconColorIce,
-    ESTBeaconColorBlueberry
+    ESTBeaconColorBlueberry,
+    ESTBeaconColorWhite,
+    ESTBeaconColorTransparent
 } ESTBeaconColor;
 
 typedef enum : int
@@ -80,13 +82,13 @@ typedef void(^ESTCompletionBlock)(NSError* error);
 typedef void(^ESTObjectCompletionBlock)(id result, NSError* error);
 typedef void(^ESTDataCompletionBlock)(NSData* result, NSError* error);
 typedef void(^ESTNumberCompletionBlock)(NSNumber* value, NSError* error);
-typedef void(^ESTFirmwareUpdateCompletionBlock)(BOOL updateAvailable, NSError* error);
 typedef void(^ESTUnsignedShortCompletionBlock)(unsigned short value, NSError* error);
 typedef void(^ESTPowerCompletionBlock)(ESTBeaconPower value, NSError* error);
 typedef void(^ESTBoolCompletionBlock)(BOOL value, NSError* error);
 typedef void(^ESTStringCompletionBlock)(NSString* value, NSError* error);
 typedef void(^ESTProgressBlock)(NSInteger value, NSString* description, NSError* error);
 typedef void(^ESTArrayCompletionBlock)(NSArray* value, NSError* error);
+typedef void(^ESTFirmwareInfoCompletionBlock)(ESTBeaconFirmwareInfoVO *result, NSError* error);
 
 
 ////////////////////////////////////////////////////////////////////

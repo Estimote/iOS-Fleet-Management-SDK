@@ -61,7 +61,7 @@
 
 @interface ESTBeacon : NSObject
 
-@property (readonly, nonatomic) ESTBeaconFirmwareState      firmwareState;
+@property (readonly, nonatomic) ESTBeaconFirmwareState   firmwareState;
 @property (nonatomic, weak)     id <ESTBeaconDelegate>   delegate;
 
 /////////////////////////////////////////////////////
@@ -395,7 +395,7 @@
  *
  * @return void
  */
--(void)checkFirmwareUpdateWithCompletion:(ESTBoolCompletionBlock)completion;
+-(void)checkFirmwareUpdateWithCompletion:(ESTFirmwareInfoCompletionBlock)completion;
 
 /**
  * Verifies if new firmware version is available for download
@@ -420,5 +420,6 @@
  * @return YES or NO
  */
 - (BOOL)isEqualToBeacon:(ESTBeacon *)beacon;
+
 
 @end

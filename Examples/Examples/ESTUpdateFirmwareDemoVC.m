@@ -53,14 +53,14 @@
     ESTUpdateFirmwareDemoVC __weak *selfReference = self;
     
     //You need to be connected to the Internet.
-    [self.beacon checkFirmwareUpdateWithCompletion:^(BOOL value, NSError *error) {
+    [self.beacon checkFirmwareUpdateWithCompletion:^(ESTBeaconFirmwareInfoVO *result, NSError *error) {
 
-        if (!error && value)
+        if (!error && result.isUpdateAvailable)
         {
             //Update is available
             [self updateBeaconFirmware];
         }
-        else if (!error && !value)
+        else if (!error && !result.isUpdateAvailable)
         {
             selfReference.updateProgressLabel.text = @"Up to date!";
             selfReference.updateProgressLabel.font = [UIFont boldSystemFontOfSize:50];

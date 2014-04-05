@@ -7,11 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ESTBeaconFirmwareInfoVO.h"
 
-@interface ESTBeaconFirmwareVO : NSObject
+@interface ESTBeaconFirmwareVO : ESTBeaconFirmwareInfoVO
 
-@property (nonatomic, strong) NSString* hardwareVersion;
-@property (nonatomic, strong) NSString* firmwareVersion;
 @property (nonatomic, strong) NSString* firmwareUrl;
 @property (nonatomic, strong) NSString* firmwareCleanerUrl;
 
