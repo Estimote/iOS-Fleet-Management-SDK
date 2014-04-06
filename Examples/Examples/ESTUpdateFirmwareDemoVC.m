@@ -13,7 +13,7 @@
 @property (nonatomic, strong) ESTBeacon *beacon;
 
 //UI properties
-@property (strong, nonatomic) IBOutlet UILabel *connectionStateLabel;
+@property (strong, nonatomic) IBOutlet UILabel *updateStateLabel;
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (strong, nonatomic) IBOutlet UILabel *updateProgressLabel;
 
@@ -80,6 +80,7 @@
 
     [self.beacon updateFirmwareWithProgress:^(NSInteger value, NSString *description, NSError *error) {
         
+        selfReference.updateStateLabel.text = description;
         selfReference.updateProgressLabel.text = [NSString stringWithFormat:@"%ld %%", (long)value];
 
     } completion:^(NSError *error) {
@@ -88,12 +89,14 @@
 
         if (!error)
         {
+            selfReference.updateStateLabel.text = @"";
             selfReference.updateProgressLabel.text = @"Updated!";
             selfReference.updateProgressLabel.font = [UIFont boldSystemFontOfSize:50];
         }
         else
         {
             NSLog(@"Update failed.");
+            selfReference.updateStateLabel.text = [error localizedDescription];
             selfReference.updateProgressLabel.text = @"Failed!";
             selfReference.updateProgressLabel.font = [UIFont boldSystemFontOfSize:50];
         }
@@ -103,7 +106,7 @@
 #pragma mark - ESTBeacon Delegate
 - (void)beaconConnectionDidSucceeded:(ESTBeacon *)beacon
 {
-    self.connectionStateLabel.text = @"Connected!";
+    self.updateStateLabel.text = @"Connected!";
     [self.activityIndicator stopAnimating];
     
     //After succesful connection we check if update for our beacon is available.

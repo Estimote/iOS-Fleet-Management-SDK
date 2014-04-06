@@ -69,7 +69,7 @@
         }
         else
         {
-            self.activityLabel.text = @"Temerature not available";
+            self.activityLabel.text = [NSString stringWithFormat:@"Error:%@", [error localizedDescription]];
             self.activityLabel.textColor = [UIColor redColor];
         }
     }];
