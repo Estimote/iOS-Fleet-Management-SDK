@@ -97,7 +97,7 @@
         }
         else
         {
-            self.activityLabel.text = @"Accelerometer not available";
+            self.activityLabel.text = [NSString stringWithFormat:@"Error:%@", [error localizedDescription]];
             self.activityLabel.textColor = [UIColor redColor];
         }
         

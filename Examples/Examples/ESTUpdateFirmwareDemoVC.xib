@@ -7,8 +7,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ESTUpdateFirmwareDemoVC">
             <connections>
                 <outlet property="activityIndicator" destination="VNa-o6-e3D" id="7YN-Ic-Ylm"/>
-                <outlet property="connectionStateLabel" destination="T1z-sQ-IbO" id="Uej-7S-5rC"/>
                 <outlet property="updateProgressLabel" destination="evQ-cE-I7u" id="QJd-EL-1AW"/>
+                <outlet property="updateStateLabel" destination="T1z-sQ-IbO" id="lFP-I9-ccM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
