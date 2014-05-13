@@ -13,7 +13,6 @@
 		A12D28DB18E9638100872A95 /* ESTUpdateFirmwareDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A12D28D918E9638100872A95 /* ESTUpdateFirmwareDemoVC.m */; };
 		A12D28DC18E9638100872A95 /* ESTUpdateFirmwareDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A12D28DA18E9638100872A95 /* ESTUpdateFirmwareDemoVC.xib */; };
 		A154DE5418E0373100734BD6 /* ESTTemperatureDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A154DE5318E0373100734BD6 /* ESTTemperatureDemoVC.m */; };
-		A154DE5618E0395F00734BD6 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A154DE5518E0395F00734BD6 /* AdSupport.framework */; };
 		A154DE5918E03CD500734BD6 /* ESTAccelerometerDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A154DE5818E03CD500734BD6 /* ESTAccelerometerDemoVC.m */; };
 		AC39C3BE18D72A6F00B38212 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC39C3BD18D72A6F00B38212 /* Foundation.framework */; };
 		AC39C3C018D72A6F00B38212 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC39C3BF18D72A6F00B38212 /* CoreGraphics.framework */; };
@@ -88,7 +87,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A154DE5618E0395F00734BD6 /* AdSupport.framework in Frameworks */,
 				AC39C3F818D7319500B38212 /* SystemConfiguration.framework in Frameworks */,
 				AC39C3F618D7316B00B38212 /* libEstimoteSDK.a in Frameworks */,
 				AC39C3C018D72A6F00B38212 /* CoreGraphics.framework in Frameworks */,
