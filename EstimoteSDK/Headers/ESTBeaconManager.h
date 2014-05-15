@@ -159,7 +159,7 @@ monitoringDidFailForRegion:(ESTBeaconRegion *)region
  A beacon manager object provides support for the following location-related activities:
  
  * Monitoring distinct regions of interest and generating location events when the user enters or leaves those regions (works in background mode).
- * Reporting the range to nearby beacons and ther distance for the device.
+ * Reporting the range to nearby beacons and their distance for the device.
  
  */
 
