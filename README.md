@@ -4,49 +4,49 @@ EstimoteSDK for iOS 7
 Introduction
 -------
 
-Estimote SDK allows to play with Apple iBeacon technology, using Estimote hardware beacons as well as [Estimote Virtual Beacon iOS Application](https://itunes.apple.com/us/app/estimote-virtual-beacon/id686915066). To find out more about it read [API section on our website](http://estimote.com/api/index.html#), please. You can review [SDK documentation](http://estimote.github.io/iOS-SDK/) and check our [Community Portal](http://community.estimote.com) to get answers for most common questions related to our Hardware and Software.
+Estimote SDK allows you to play with Apple's iBeacon technology using Estimote hardware beacons, as well as [Estimote Virtual Beacon iOS Application](https://itunes.apple.com/us/app/estimote-virtual-beacon/id686915066). To learn more read the [API section on our website](http://estimote.com/api/index.html#). You can review [SDK documentation](http://estimote.github.io/iOS-SDK/) and check our [Community Portal](http://community.estimote.com) to get answers for the most common questions related to our Hardware and Software.
 
 Overview
 -------
 
 
-Estimote SDK is a wrapper around Apple's CoreLocation framework. It is dedicated for iOS 7 as it's based on newly introduced CoreLocation framework functionality called iBeacon. It consists of 3 classes: ESTBeaconManager, ESTBeaconRegion and ESTBeacon. Each of them is an equivalent of CoreLocation classes (CLLocationManager, CLBeaconRegion, CLBeacon) created in particular for Estimate Beacons Platform.
+Estimote SDK is a wrapper around Apple's CoreLocation framework. The SDK requires iOS 7, as it is based on the recently introduced CoreLocation framework functionality called iBeacon. It consists of 3 classes: ESTBeaconManager, ESTBeaconRegion and ESTBeacon. Each Estimote SDK class has a corresponding CoreLocation class (CLLocationManager, CLBeaconRegion, CLBeacon) created specifically for the Estimate Beacons Platform.
 
-ESTBeaconManager is a starting point of the library. It allows to get list of all estimate beacon devices (represented by ESTBeacon objects). It expose monitoring and ranging methods in the similar fashion then CLLocationManager. In addition to location functionality it allows to get list of beacons based CoreBluetooth framework. It is extremely important to have this option in case that device stop advertising in an iBeacon manner.
+ESTBeaconManager is the starting point of the library. It allows you to get a list of all Estimote beacon devices (represented by ESTBeacon objects). It exposes monitoring and ranging methods in a similar fashion to CLLocationManager. In addition to location functionality, it allows you to get a list of beacons based on the CoreBluetooth framework. It is extremely important to have this option in case the device stops advertising in an iBeacon manner.
 
-ESTBeaconRegion is a directly extending CLBeaconRegion class of CoreLocation framework. As Estimote Beacon Platform is using single ProximityUUID, this class helps create region object faster. You don't need to remember and play with ProximityUUID parameter.
+ESTBeaconRegion directly extends the CLBeaconRegion class of the CoreLocation framework, as the Estimote Beacon Platform uses single ProximityUUID. This class helps create the region object faster. You don't need to manually manage the ProximityUUID parameter.
 
-ESTBeacon represents single beacon device. Objects of this class are generated using ESTBeaconManager (There is no sense to create them manually). The most important difference (comparing to CLBeacon class) is two way communication with the beacon device. Keeping reference to original CLBeacon object it allows to connect with the device and interact with it. All available bluetooth characteristics (like signal power or major/minor value) can be read and changed to create customised behaviour. Firmware update option is available using this class as well. 
+ESTBeacon represents a single beacon device. Objects of this class are generated using ESTBeaconManager (There is no sense in creating them manually). The most important difference, compared to CLBeacon class, is two way communication with the beacon device. Keeping reference to the original CLBeacon object allows you to connect with the device and interact with it. All available bluetooth characteristics, like signal power or major/minor value, can be read and changed to create a customized behavior. The firmware update option is available using this class as well.
 
 
 Installation
 -------
 
-The easiest way is to use CocoaPods. It takes care of all required frameworks and third party dependencies:
+The easiest way to intall is to use CocoaPods. It takes care of all required frameworks and third party dependencies:
 
 ```
 pod 'EstimoteSDK'
 ```
 
-Alternatively, you can install manually. Follow steps described below:
+Alternatively, you can install manually. Follow the steps described below:
 
-1. Copy EstimoteSDK directory (containing libEstimoteSDK.a and Headers) into your project directory.
+1. Copy the EstimoteSDK directory (containing libEstimoteSDK.a and Headers) into your project directory.
 
-2. Open your project settings and go to Build Phase tab. In the Link library with binaries section click +. In the popup window click add another at the bottom and select libEstimoteSDK.a library file. 
+2. Open your project settings and go to the "Build Phases" tab. In the Link library with binaries section click "+". In the popup window click "add another" at the bottom and select the libEstimoteSDK.a library file.
 
-  In addition EstimoteSDK requires following native iOS frameworks:
+  In addition the EstimoteSDK requires the following native iOS frameworks:
   * CoreBluetooth.framework
   * CoreLocation.framework
   * SystemConfiguration.framework
 
-  When you add them your project settings should look like on the screenshot below.
+  When you add them to your project settings, it should look like the screenshot below.
 
   ![ScreenShot LinkWithBinaryLibraries](http://estimote.com/api/BuildPhasesScreenshot.png)
 
-3. Go to Build Settings section of project settings and search for Header Search Paths. Add line containing "$(SRCROOT)/../EstimoteSDK/Headers".
+3. Go to the "Build Settings" section of project settings and search for "Header Search Paths". Add a line containing "$(SRCROOT)/../EstimoteSDK/Headers".
 
 4. Congratulations! You are done.
- 
+
 Changelog
 -------
 
