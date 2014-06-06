@@ -43,11 +43,13 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
+	<option value="//api/name/beacon:accelerometerStateChanged:">&nbsp;&nbsp;&nbsp;&nbsp;- beacon:accelerometerStateChanged:</option>
+	
+	<option value="//api/name/beacon:didDisconnectWithError:">&nbsp;&nbsp;&nbsp;&nbsp;- beacon:didDisconnectWithError:</option>
+	
 	<option value="//api/name/beaconConnectionDidFail:withError:">&nbsp;&nbsp;&nbsp;&nbsp;- beaconConnectionDidFail:withError:</option>
 	
 	<option value="//api/name/beaconConnectionDidSucceeded:">&nbsp;&nbsp;&nbsp;&nbsp;- beaconConnectionDidSucceeded:</option>
-	
-	<option value="//api/name/beaconDidDisconnect:withError:">&nbsp;&nbsp;&nbsp;&nbsp;- beaconDidDisconnect:withError:</option>
 	
 	
 	
@@ -77,11 +79,13 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beacon:accelerometerStateChanged:">beacon:accelerometerStateChanged:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beacon:didDisconnectWithError:">beacon:didDisconnectWithError:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beaconConnectionDidFail:withError:">beaconConnectionDidFail:withError:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beaconConnectionDidSucceeded:">beaconConnectionDidSucceeded:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beaconDidDisconnect:withError:">beaconDidDisconnect:withError:</a></span></li>
 	
 </ul></li>
 
@@ -120,7 +124,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>ESTBeaconDelegate defines beacon connection delegate mathods. Connection is asynchronous operation so you need to be prepared that eg. beaconDidDisconnectWith: method can be invoked without previous action.</p>
+						<p>The ESTBeaconDelegate protocol defines the delegate methods to respond for related events.</p>
 					</div>
 					
 					
@@ -150,7 +154,13 @@
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/beaconDidDisconnect:withError:">&ndash;&nbsp;beaconDidDisconnect:withError:</a></code>
+		<code><a href="#//api/name/beacon:didDisconnectWithError:">&ndash;&nbsp;beacon:didDisconnectWithError:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/beacon:accelerometerStateChanged:">&ndash;&nbsp;beacon:accelerometerStateChanged:</a></code>
 	</span>
 	
 	
@@ -170,6 +180,118 @@
 					<div class="section section-methods">
 						<a title="Instance Methods" name="instance_methods"></a>
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/beacon:accelerometerStateChanged:" title="beacon:accelerometerStateChanged:"></a>
+	<h3 class="subsubtitle method-title">beacon:accelerometerStateChanged:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Delegate method that beacon&rsquo;s accelerometer&rsquo;s state has changed.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)beacon:(ESTBeacon *)<em>beacon</em> accelerometerStateChanged:(BOOL)<em>state</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>beacon</em></dt>
+			<dd><p>reference to beacon object</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>state</em></dt>
+			<dd><p>TRUE if beacon is in motion, NO if beacon has stopped being in motion.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>void</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/beacon:didDisconnectWithError:" title="beacon:didDisconnectWithError:"></a>
+	<h3 class="subsubtitle method-title">beacon:didDisconnectWithError:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Delegate method that beacon did disconnect with device.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)beacon:(ESTBeacon *)<em>beacon</em> didDisconnectWithError:(NSError *)<em>error</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>beacon</em></dt>
+			<dd><p>reference to beacon object</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>error</em></dt>
+			<dd><p>information about reason of error</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>void</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
 						
 						<div class="section-method">
 	<a name="//api/name/beaconConnectionDidFail:withError:" title="beaconConnectionDidFail:withError:"></a>
@@ -278,62 +400,6 @@
 	
 </div>
 						
-						<div class="section-method">
-	<a name="//api/name/beaconDidDisconnect:withError:" title="beaconDidDisconnect:withError:"></a>
-	<h3 class="subsubtitle method-title">beaconDidDisconnect:withError:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Delegate method that beacon did disconnect with device.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)beaconDidDisconnect:(ESTBeacon *)<em>beacon</em> withError:(NSError *)<em>error</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>beacon</em></dt>
-			<dd><p>reference to beacon object</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>error</em></dt>
-			<dd><p>information about reason of error</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>void</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTBeacon.h</code><br />
-	</div>				
-	
-	
-</div>
-						
 					</div>
 					
 					
@@ -349,7 +415,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 Estimote. All rights reserved. (Last updated: 2014-01-25)</span><br />
+						<p><span class="copyright">&copy; 2014 Estimote. All rights reserved. (Last updated: 2014-06-06)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						

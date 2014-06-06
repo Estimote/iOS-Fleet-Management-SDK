@@ -8,14 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ESTViewController : UIViewController
+@interface ESTViewController : UITableViewController
 
-@property (nonatomic, strong) IBOutlet UIButton *proximityDemoButton;
-@property (nonatomic, strong) IBOutlet UIButton *distanceDemoButton;
-@property (nonatomic, strong) IBOutlet UIButton *notificationDemoButton;
-
-- (IBAction)showProximityDemo:(id)sender;
-- (IBAction)showDistanceDemo:(id)sender;
-- (IBAction)showNotificationDemo:(id)sender;
+@property (strong, nonatomic)  NSArray *beaconDemoList;
 
 @end

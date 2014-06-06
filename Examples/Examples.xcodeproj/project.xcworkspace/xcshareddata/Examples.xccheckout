@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>437391A9-1E1C-45D8-9D82-BA2A62CC0172</string>
+	<string>B7A47BD5-4A0E-4E6F-A33B-28444EC9CA5C</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Examples</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>3083C2EF-0526-4082-B6B7-52925BB6E1D3</key>
-		<string>ssh://github.com/Estimote/iOS-SDK.git</string>
+		<key>DF0DE6AB-0B0D-43B4-920F-FDD6E7DDA699</key>
+		<string>https://github.com/Estimote/iOS-SDK.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Examples/Examples.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>3083C2EF-0526-4082-B6B7-52925BB6E1D3</key>
+		<key>DF0DE6AB-0B0D-43B4-920F-FDD6E7DDA699</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/Estimote/iOS-SDK.git</string>
+	<string>https://github.com/Estimote/iOS-SDK.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>3083C2EF-0526-4082-B6B7-52925BB6E1D3</string>
+	<string>DF0DE6AB-0B0D-43B4-920F-FDD6E7DDA699</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>3083C2EF-0526-4082-B6B7-52925BB6E1D3</string>
+			<string>DF0DE6AB-0B0D-43B4-920F-FDD6E7DDA699</string>
 			<key>IDESourceControlWCCName</key>
 			<string>iOS-SDK</string>
 		</dict>

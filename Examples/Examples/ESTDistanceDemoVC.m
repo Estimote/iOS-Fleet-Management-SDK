@@ -21,6 +21,7 @@
 @property (nonatomic, strong) ESTBeaconManager  *beaconManager;
 @property (nonatomic, strong) ESTBeaconRegion   *beaconRegion;
 
+@property (nonatomic, strong) UIImageView       *backgroundImage;
 @property (nonatomic, strong) UIImageView       *positionDot;
 
 @end
@@ -40,10 +41,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = @"Distance Demo";
     
     /*
      * UI setup.
      */
+    
+    self.backgroundImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"distance_bkg"]];
+    self.backgroundImage.frame = [UIScreen mainScreen].bounds;
+    self.backgroundImage.contentMode = UIViewContentModeScaleToFill;
+    [self.view addSubview:self.backgroundImage];
+    
     self.view.backgroundColor = [UIColor whiteColor];
     
     UIImageView *beaconImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"beacon"]];
@@ -88,6 +96,8 @@
 
 - (void)updateDotPositionForDistance:(float)distance
 {
+    NSLog(@"distance: %f", distance);
+    
     float step = (self.view.frame.size.height - TOP_MARGIN) / MAX_DISTANCE;
     
     int newY = TOP_MARGIN + (distance * step);

@@ -39,9 +39,17 @@
 	
 	<option value="properties">Properties</option>
 	
+	<option value="//api/name/accelerometerEnabled">&nbsp;&nbsp;&nbsp;&nbsp;accelerometerEnabled</option>
+	
 	<option value="//api/name/advInterval">&nbsp;&nbsp;&nbsp;&nbsp;advInterval</option>
 	
 	<option value="//api/name/batteryLevel">&nbsp;&nbsp;&nbsp;&nbsp;batteryLevel</option>
+	
+	<option value="//api/name/batteryType">&nbsp;&nbsp;&nbsp;&nbsp;batteryType</option>
+	
+	<option value="//api/name/color">&nbsp;&nbsp;&nbsp;&nbsp;color</option>
+	
+	<option value="//api/name/connectionStatus">&nbsp;&nbsp;&nbsp;&nbsp;connectionStatus</option>
 	
 	<option value="//api/name/distance">&nbsp;&nbsp;&nbsp;&nbsp;distance</option>
 	
@@ -51,7 +59,11 @@
 	
 	<option value="//api/name/hardwareVersion">&nbsp;&nbsp;&nbsp;&nbsp;hardwareVersion</option>
 	
-	<option value="//api/name/isConnected">&nbsp;&nbsp;&nbsp;&nbsp;isConnected</option>
+	<option value="//api/name/isAccelerometerAvailable">&nbsp;&nbsp;&nbsp;&nbsp;isAccelerometerAvailable</option>
+	
+	<option value="//api/name/isAccelerometerEditAvailable">&nbsp;&nbsp;&nbsp;&nbsp;isAccelerometerEditAvailable</option>
+	
+	<option value="//api/name/isMoving">&nbsp;&nbsp;&nbsp;&nbsp;isMoving</option>
 	
 	<option value="//api/name/macAddress">&nbsp;&nbsp;&nbsp;&nbsp;macAddress</option>
 	
@@ -61,6 +73,10 @@
 	
 	<option value="//api/name/minor">&nbsp;&nbsp;&nbsp;&nbsp;minor</option>
 	
+	<option value="//api/name/motionProximityUUID">&nbsp;&nbsp;&nbsp;&nbsp;motionProximityUUID</option>
+	
+	<option value="//api/name/name">&nbsp;&nbsp;&nbsp;&nbsp;name</option>
+	
 	<option value="//api/name/peripheral">&nbsp;&nbsp;&nbsp;&nbsp;peripheral</option>
 	
 	<option value="//api/name/power">&nbsp;&nbsp;&nbsp;&nbsp;power</option>
@@ -68,6 +84,8 @@
 	<option value="//api/name/proximity">&nbsp;&nbsp;&nbsp;&nbsp;proximity</option>
 	
 	<option value="//api/name/proximityUUID">&nbsp;&nbsp;&nbsp;&nbsp;proximityUUID</option>
+	
+	<option value="//api/name/remainingLifetime">&nbsp;&nbsp;&nbsp;&nbsp;remainingLifetime</option>
 	
 	<option value="//api/name/rssi">&nbsp;&nbsp;&nbsp;&nbsp;rssi</option>
 	
@@ -78,39 +96,41 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
+	<option value="//api/name/calibrateTemperatureWithReferenceTemperature:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- calibrateTemperatureWithReferenceTemperature:completion:</option>
+	
 	<option value="//api/name/checkFirmwareUpdateWithCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- checkFirmwareUpdateWithCompletion:</option>
 	
-	<option value="//api/name/connectToBeacon">&nbsp;&nbsp;&nbsp;&nbsp;- connectToBeacon</option>
+	<option value="//api/name/connect">&nbsp;&nbsp;&nbsp;&nbsp;- connect</option>
 	
-	<option value="//api/name/disconnectBeacon">&nbsp;&nbsp;&nbsp;&nbsp;- disconnectBeacon</option>
+	<option value="//api/name/disconnect">&nbsp;&nbsp;&nbsp;&nbsp;- disconnect</option>
 	
-	<option value="//api/name/readBeaconAdvIntervalWithCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- readBeaconAdvIntervalWithCompletion:</option>
+	<option value="//api/name/enableAccelerometer:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- enableAccelerometer:completion:</option>
 	
-	<option value="//api/name/readBeaconBatteryWithCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- readBeaconBatteryWithCompletion:</option>
+	<option value="//api/name/isEqualToBeacon:">&nbsp;&nbsp;&nbsp;&nbsp;- isEqualToBeacon:</option>
 	
-	<option value="//api/name/readBeaconFirmwareVersionWithCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- readBeaconFirmwareVersionWithCompletion:</option>
+	<option value="//api/name/readAccelerometerCountWithCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- readAccelerometerCountWithCompletion:</option>
 	
-	<option value="//api/name/readBeaconHardwareVersionWithCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- readBeaconHardwareVersionWithCompletion:</option>
+	<option value="//api/name/readTemperatureWithCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- readTemperatureWithCompletion:</option>
 	
-	<option value="//api/name/readBeaconMajorWithCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- readBeaconMajorWithCompletion:</option>
+	<option value="//api/name/resetAccelerometerCountWithCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- resetAccelerometerCountWithCompletion:</option>
 	
-	<option value="//api/name/readBeaconMinorWithCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- readBeaconMinorWithCompletion:</option>
+	<option value="//api/name/resetToFactorySettingsWithCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- resetToFactorySettingsWithCompletion:</option>
 	
-	<option value="//api/name/readBeaconPowerWithCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- readBeaconPowerWithCompletion:</option>
+	<option value="//api/name/updateFirmwareWithProgress:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- updateFirmwareWithProgress:completion:</option>
 	
-	<option value="//api/name/readBeaconProximityUUIDWithCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- readBeaconProximityUUIDWithCompletion:</option>
+	<option value="//api/name/writeAdvInterval:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeAdvInterval:completion:</option>
 	
-	<option value="//api/name/updateBeaconFirmwareWithProgress:andCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- updateBeaconFirmwareWithProgress:andCompletion:</option>
+	<option value="//api/name/writeMajor:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeMajor:completion:</option>
 	
-	<option value="//api/name/writeBeaconAdvInterval:withCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeBeaconAdvInterval:withCompletion:</option>
+	<option value="//api/name/writeMinor:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeMinor:completion:</option>
 	
-	<option value="//api/name/writeBeaconMajor:withCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeBeaconMajor:withCompletion:</option>
+	<option value="//api/name/writeMotionProximityUUID:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeMotionProximityUUID:completion:</option>
 	
-	<option value="//api/name/writeBeaconMinor:withCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeBeaconMinor:withCompletion:</option>
+	<option value="//api/name/writeName:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeName:completion:</option>
 	
-	<option value="//api/name/writeBeaconPower:withCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeBeaconPower:withCompletion:</option>
+	<option value="//api/name/writePower:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- writePower:completion:</option>
 	
-	<option value="//api/name/writeBeaconProximityUUID:withCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeBeaconProximityUUID:withCompletion:</option>
+	<option value="//api/name/writeProximityUUID:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeProximityUUID:completion:</option>
 	
 	
 	
@@ -132,13 +152,19 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Properties available after connection">Properties available after connection</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Cloud related properties">Cloud related properties</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Sensor related properties">Sensor related properties</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Connection handling methods">Connection handling methods</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Methods for reading beacon configuration">Methods for reading beacon configuration</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Methods for sensors readings">Methods for sensors readings</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Methods for writing beacon configuration">Methods for writing beacon configuration</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Firmware update handling methods">Firmware update handling methods</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Methods for firmware update">Methods for firmware update</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_utility methods">utility methods</a></span></li>
 	
 </ul></li>
 
@@ -148,9 +174,17 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/accelerometerEnabled">accelerometerEnabled</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/advInterval">advInterval</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/batteryLevel">batteryLevel</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/batteryType">batteryType</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/color">color</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/connectionStatus">connectionStatus</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/distance">distance</a></span></li>
 	
@@ -160,7 +194,11 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/hardwareVersion">hardwareVersion</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isConnected">isConnected</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isAccelerometerAvailable">isAccelerometerAvailable</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isAccelerometerEditAvailable">isAccelerometerEditAvailable</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isMoving">isMoving</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/macAddress">macAddress</a></span></li>
 	
@@ -170,6 +208,10 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/minor">minor</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/motionProximityUUID">motionProximityUUID</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/name">name</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/peripheral">peripheral</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/power">power</a></span></li>
@@ -177,6 +219,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/proximity">proximity</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/proximityUUID">proximityUUID</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/remainingLifetime">remainingLifetime</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/rssi">rssi</a></span></li>
 	
@@ -188,39 +232,41 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/calibrateTemperatureWithReferenceTemperature:completion:">calibrateTemperatureWithReferenceTemperature:completion:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/checkFirmwareUpdateWithCompletion:">checkFirmwareUpdateWithCompletion:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/connectToBeacon">connectToBeacon</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/connect">connect</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/disconnectBeacon">disconnectBeacon</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/disconnect">disconnect</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/readBeaconAdvIntervalWithCompletion:">readBeaconAdvIntervalWithCompletion:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/enableAccelerometer:completion:">enableAccelerometer:completion:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/readBeaconBatteryWithCompletion:">readBeaconBatteryWithCompletion:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isEqualToBeacon:">isEqualToBeacon:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/readBeaconFirmwareVersionWithCompletion:">readBeaconFirmwareVersionWithCompletion:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/readAccelerometerCountWithCompletion:">readAccelerometerCountWithCompletion:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/readBeaconHardwareVersionWithCompletion:">readBeaconHardwareVersionWithCompletion:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/readTemperatureWithCompletion:">readTemperatureWithCompletion:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/readBeaconMajorWithCompletion:">readBeaconMajorWithCompletion:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/resetAccelerometerCountWithCompletion:">resetAccelerometerCountWithCompletion:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/readBeaconMinorWithCompletion:">readBeaconMinorWithCompletion:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/resetToFactorySettingsWithCompletion:">resetToFactorySettingsWithCompletion:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/readBeaconPowerWithCompletion:">readBeaconPowerWithCompletion:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/updateFirmwareWithProgress:completion:">updateFirmwareWithProgress:completion:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/readBeaconProximityUUIDWithCompletion:">readBeaconProximityUUIDWithCompletion:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeAdvInterval:completion:">writeAdvInterval:completion:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/updateBeaconFirmwareWithProgress:andCompletion:">updateBeaconFirmwareWithProgress:andCompletion:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeMajor:completion:">writeMajor:completion:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeBeaconAdvInterval:withCompletion:">writeBeaconAdvInterval:withCompletion:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeMinor:completion:">writeMinor:completion:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeBeaconMajor:withCompletion:">writeBeaconMajor:withCompletion:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeMotionProximityUUID:completion:">writeMotionProximityUUID:completion:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeBeaconMinor:withCompletion:">writeBeaconMinor:withCompletion:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeName:completion:">writeName:completion:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeBeaconPower:withCompletion:">writeBeaconPower:withCompletion:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writePower:completion:">writePower:completion:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeBeaconProximityUUID:withCompletion:">writeBeaconProximityUUID:withCompletion:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeProximityUUID:completion:">writeProximityUUID:completion:</a></span></li>
 	
 </ul></li>
 
@@ -259,9 +305,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>The ESTBeacon class represents a beacon that was encountered during region monitoring. You do not create instances of this class directly. The <a href="../Classes/ESTBeaconManager.html">ESTBeaconManager</a> object reports encountered beacons to its associated delegate object. You can use the information in a beacon object to identify which beacon was encountered.</p>
-
-<p>ESTBeacon class contains basic Apple CLBeacon object reference as well as some additional functionality. It allows to  connect with Estimote beacon to read / write its characteristics.</p>
+						<p>The ESTBeacon class defines the interface for handling and configuring single estimote beacon. Instance of this class represents beacon with its current parametrs. In addition it allows to <a href="#//api/name/connect">connect</a> and modify settings like ProximityUUID, Major, Minor or Power. You should not build instance of this object by your own - it is generated using <a href="../Classes/ESTBeaconManager.html">ESTBeaconManager</a> class object.</p>
 					</div>
 					
 					
@@ -286,6 +330,12 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/proximityUUID">&nbsp;&nbsp;proximityUUID</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/motionProximityUUID">&nbsp;&nbsp;motionProximityUUID</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -341,7 +391,7 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/isConnected">&nbsp;&nbsp;isConnected</a></code>
+		<code><a href="#//api/name/connectionStatus">&nbsp;&nbsp;connectionStatus</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -365,7 +415,25 @@
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/remainingLifetime">&nbsp;&nbsp;remainingLifetime</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/batteryType">&nbsp;&nbsp;batteryType</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/hardwareVersion">&nbsp;&nbsp;hardwareVersion</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isMoving">&nbsp;&nbsp;isMoving</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -385,19 +453,65 @@
 						</ul>
 						
 						
+						<a title="Cloud related properties" name="task_Cloud related properties"></a>
+						<h3 class="subsubtitle task-title">Cloud related properties</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/name">&nbsp;&nbsp;name</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/color">&nbsp;&nbsp;color</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Sensor related properties" name="task_Sensor related properties"></a>
+						<h3 class="subsubtitle task-title">Sensor related properties</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isAccelerometerAvailable">&nbsp;&nbsp;isAccelerometerAvailable</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isAccelerometerEditAvailable">&nbsp;&nbsp;isAccelerometerEditAvailable</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/accelerometerEnabled">&nbsp;&nbsp;accelerometerEnabled</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
 						<a title="Connection handling methods" name="task_Connection handling methods"></a>
 						<h3 class="subsubtitle task-title">Connection handling methods</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/connectToBeacon">&ndash;&nbsp;connectToBeacon</a></code>
+		<code><a href="#//api/name/connect">&ndash;&nbsp;connect</a></code>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/disconnectBeacon">&ndash;&nbsp;disconnectBeacon</a></code>
+		<code><a href="#//api/name/disconnect">&ndash;&nbsp;disconnect</a></code>
 	</span>
 	
 	
@@ -405,55 +519,31 @@
 						</ul>
 						
 						
-						<a title="Methods for reading beacon configuration" name="task_Methods for reading beacon configuration"></a>
-						<h3 class="subsubtitle task-title">Methods for reading beacon configuration</h3>
+						<a title="Methods for sensors readings" name="task_Methods for sensors readings"></a>
+						<h3 class="subsubtitle task-title">Methods for sensors readings</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/readBeaconProximityUUIDWithCompletion:">&ndash;&nbsp;readBeaconProximityUUIDWithCompletion:</a></code>
+		<code><a href="#//api/name/readTemperatureWithCompletion:">&ndash;&nbsp;readTemperatureWithCompletion:</a></code>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/readBeaconMajorWithCompletion:">&ndash;&nbsp;readBeaconMajorWithCompletion:</a></code>
+		<code><a href="#//api/name/calibrateTemperatureWithReferenceTemperature:completion:">&ndash;&nbsp;calibrateTemperatureWithReferenceTemperature:completion:</a></code>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/readBeaconMinorWithCompletion:">&ndash;&nbsp;readBeaconMinorWithCompletion:</a></code>
+		<code><a href="#//api/name/readAccelerometerCountWithCompletion:">&ndash;&nbsp;readAccelerometerCountWithCompletion:</a></code>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/readBeaconAdvIntervalWithCompletion:">&ndash;&nbsp;readBeaconAdvIntervalWithCompletion:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/readBeaconPowerWithCompletion:">&ndash;&nbsp;readBeaconPowerWithCompletion:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/readBeaconBatteryWithCompletion:">&ndash;&nbsp;readBeaconBatteryWithCompletion:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/readBeaconFirmwareVersionWithCompletion:">&ndash;&nbsp;readBeaconFirmwareVersionWithCompletion:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/readBeaconHardwareVersionWithCompletion:">&ndash;&nbsp;readBeaconHardwareVersionWithCompletion:</a></code>
+		<code><a href="#//api/name/resetAccelerometerCountWithCompletion:">&ndash;&nbsp;resetAccelerometerCountWithCompletion:</a></code>
 	</span>
 	
 	
@@ -467,31 +557,55 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/writeBeaconProximityUUID:withCompletion:">&ndash;&nbsp;writeBeaconProximityUUID:withCompletion:</a></code>
+		<code><a href="#//api/name/writeName:completion:">&ndash;&nbsp;writeName:completion:</a></code>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/writeBeaconMajor:withCompletion:">&ndash;&nbsp;writeBeaconMajor:withCompletion:</a></code>
+		<code><a href="#//api/name/writeProximityUUID:completion:">&ndash;&nbsp;writeProximityUUID:completion:</a></code>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/writeBeaconMinor:withCompletion:">&ndash;&nbsp;writeBeaconMinor:withCompletion:</a></code>
+		<code><a href="#//api/name/writeMotionProximityUUID:completion:">&ndash;&nbsp;writeMotionProximityUUID:completion:</a></code>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/writeBeaconAdvInterval:withCompletion:">&ndash;&nbsp;writeBeaconAdvInterval:withCompletion:</a></code>
+		<code><a href="#//api/name/writeMajor:completion:">&ndash;&nbsp;writeMajor:completion:</a></code>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/writeBeaconPower:withCompletion:">&ndash;&nbsp;writeBeaconPower:withCompletion:</a></code>
+		<code><a href="#//api/name/writeMinor:completion:">&ndash;&nbsp;writeMinor:completion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/writeAdvInterval:completion:">&ndash;&nbsp;writeAdvInterval:completion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/writePower:completion:">&ndash;&nbsp;writePower:completion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/resetToFactorySettingsWithCompletion:">&ndash;&nbsp;resetToFactorySettingsWithCompletion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/enableAccelerometer:completion:">&ndash;&nbsp;enableAccelerometer:completion:</a></code>
 	</span>
 	
 	
@@ -499,8 +613,8 @@
 						</ul>
 						
 						
-						<a title="Firmware update handling methods" name="task_Firmware update handling methods"></a>
-						<h3 class="subsubtitle task-title">Firmware update handling methods</h3>
+						<a title="Methods for firmware update" name="task_Methods for firmware update"></a>
+						<h3 class="subsubtitle task-title">Methods for firmware update</h3>
 
 						<ul class="task-list">
 							<li>
@@ -511,7 +625,21 @@
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/updateBeaconFirmwareWithProgress:andCompletion:">&ndash;&nbsp;updateBeaconFirmwareWithProgress:andCompletion:</a></code>
+		<code><a href="#//api/name/updateFirmwareWithProgress:completion:">&ndash;&nbsp;updateFirmwareWithProgress:completion:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="utility methods" name="task_utility methods"></a>
+						<h3 class="subsubtitle task-title">utility methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isEqualToBeacon:">&ndash;&nbsp;isEqualToBeacon:</a></code>
 	</span>
 	
 	
@@ -529,6 +657,61 @@
 						<h2 class="subtitle subtitle-methods">Properties</h2>
 						
 						<div class="section-method">
+	<a name="//api/name/accelerometerEnabled" title="accelerometerEnabled"></a>
+	<h3 class="subsubtitle method-title">accelerometerEnabled</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>accelerometerEnabled</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) BOOL accelerometerEnabled</code></div>
+
+    
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>Estimote OS A2.1</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Indicates is accelerometer enabled.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p>-(void)<a href="#//api/name/enableAccelerometer:completion:">- enableAccelerometer:completion:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/advInterval" title="advInterval"></a>
 	<h3 class="subsubtitle method-title">advInterval</h3>
 	
@@ -540,7 +723,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *advInterval</code></div>
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) NSNumber *advInterval</code></div>
 
     
 	
@@ -581,7 +764,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *batteryLevel</code></div>
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) NSNumber *batteryLevel</code></div>
 
     
 	
@@ -611,6 +794,129 @@
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/batteryType" title="batteryType"></a>
+	<h3 class="subsubtitle method-title">batteryType</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>batteryType</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) ESTBeaconBatteryType batteryType</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Beacon battery model</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/color" title="color"></a>
+	<h3 class="subsubtitle method-title">color</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>color</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) ESTBeaconColor color</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Color of the beacon. Filled with value after successful cloud request.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/connectionStatus" title="connectionStatus"></a>
+	<h3 class="subsubtitle method-title">connectionStatus</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>connectionStatus</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) ESTBeaconConnectionStatus connectionStatus</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Property indicating connection status.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/distance" title="distance"></a>
 	<h3 class="subsubtitle method-title">distance</h3>
 	
@@ -622,7 +928,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *distance</code></div>
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) NSNumber *distance</code></div>
 
     
 	
@@ -704,7 +1010,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSString *firmwareVersion</code></div>
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) NSString *firmwareVersion</code></div>
 
     
 	
@@ -745,7 +1051,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSString *hardwareVersion</code></div>
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) NSString *hardwareVersion</code></div>
 
     
 	
@@ -775,18 +1081,119 @@
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/isConnected" title="isConnected"></a>
-	<h3 class="subsubtitle method-title">isConnected</h3>
+	<a name="//api/name/isAccelerometerAvailable" title="isAccelerometerAvailable"></a>
+	<h3 class="subsubtitle method-title">isAccelerometerAvailable</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p><a href="#//api/name/firmwareUpdateInfo">firmwareUpdateInfo</a></p>
+		<p>isAccelerometerAvailable</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) BOOL isConnected</code></div>
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) BOOL isAccelerometerAvailable</code></div>
+
+    
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>Estimote OS A2.0</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Indicates if accelerometer available.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isAccelerometerEditAvailable" title="isAccelerometerEditAvailable"></a>
+	<h3 class="subsubtitle method-title">isAccelerometerEditAvailable</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>isAccelerometerEditAvailable</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) BOOL isAccelerometerEditAvailable</code></div>
+
+    
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>Estimote OS A2.1</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Indicates if accelerometer state change is available.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p>-(void)<a href="#//api/name/enableAccelerometer:completion:">- enableAccelerometer:completion:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isMoving" title="isMoving"></a>
+	<h3 class="subsubtitle method-title">isMoving</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>isMoving</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) BOOL isMoving</code></div>
 
     
 	
@@ -798,7 +1205,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>Flag indicating connection status.</p>
+		<p>Flag indicating accelerometer state</p>
 	</div>
 	
 	
@@ -827,7 +1234,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSString *macAddress</code></div>
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) NSString *macAddress</code></div>
 
     
 	
@@ -869,7 +1276,7 @@ Hardware MAC address of the beacon.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *major</code></div>
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) NSNumber *major</code></div>
 
     
 	
@@ -910,7 +1317,7 @@ Hardware MAC address of the beacon.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *measuredPower</code></div>
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) NSNumber *measuredPower</code></div>
 
     
 	
@@ -951,7 +1358,7 @@ Hardware MAC address of the beacon.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *minor</code></div>
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) NSNumber *minor</code></div>
 
     
 	
@@ -981,6 +1388,88 @@ Hardware MAC address of the beacon.</p>
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/motionProximityUUID" title="motionProximityUUID"></a>
+	<h3 class="subsubtitle method-title">motionProximityUUID</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>motionProximityUUID</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) NSUUID *motionProximityUUID</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Proximity identifier associated with the beacon.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/name" title="name"></a>
+	<h3 class="subsubtitle method-title">name</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>name</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) NSString *name</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Name of the beacon. Filled with value after successful cloud request.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/peripheral" title="peripheral"></a>
 	<h3 class="subsubtitle method-title">peripheral</h3>
 	
@@ -992,7 +1481,7 @@ Hardware MAC address of the beacon.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) CBPeripheral *peripheral</code></div>
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) CBPeripheral *peripheral</code></div>
 
     
 	
@@ -1033,7 +1522,7 @@ Hardware MAC address of the beacon.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *power</code></div>
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) NSNumber *power</code></div>
 
     
 	
@@ -1074,7 +1563,7 @@ Hardware MAC address of the beacon.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic) CLProximity proximity</code></div>
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) CLProximity proximity</code></div>
 
     
 	
@@ -1115,7 +1604,7 @@ Hardware MAC address of the beacon.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSUUID *proximityUUID</code></div>
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) NSUUID *proximityUUID</code></div>
 
     
 	
@@ -1145,6 +1634,47 @@ Hardware MAC address of the beacon.</p>
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/remainingLifetime" title="remainingLifetime"></a>
+	<h3 class="subsubtitle method-title">remainingLifetime</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>remainingLifetime</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) NSTimeInterval remainingLifetime</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Remaining lifetime in seconds, based on current battery level, advertising interval and broadcasting <a href="#//api/name/power">power</a> values</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/rssi" title="rssi"></a>
 	<h3 class="subsubtitle method-title">rssi</h3>
 	
@@ -1156,7 +1686,7 @@ Hardware MAC address of the beacon.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic) NSInteger rssi</code></div>
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) NSInteger rssi</code></div>
 
     
 	
@@ -1197,6 +1727,63 @@ This value is an average of the RSSI samples collected since this beacon was las
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
+	<a name="//api/name/calibrateTemperatureWithReferenceTemperature:completion:" title="calibrateTemperatureWithReferenceTemperature:completion:"></a>
+	<h3 class="subsubtitle method-title">calibrateTemperatureWithReferenceTemperature:completion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Calibrates temperature on the beacon. To perform you should pass current temperature
+that will be used as a reference.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)calibrateTemperatureWithReferenceTemperature:(NSNumber *)<em>temperature</em> completion:(ESTNumberCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>temperature</em></dt>
+			<dd><p>reference temperature</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>block handling operation completion</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>void</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/checkFirmwareUpdateWithCompletion:" title="checkFirmwareUpdateWithCompletion:"></a>
 	<h3 class="subsubtitle method-title">checkFirmwareUpdateWithCompletion:</h3>
 	
@@ -1210,7 +1797,7 @@ is required to pass this process.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)checkFirmwareUpdateWithCompletion:(ESTFirmwareUpdateCompletionBlock)<em>completion</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)checkFirmwareUpdateWithCompletion:(ESTFirmwareInfoCompletionBlock)<em>completion</em></code></div>
 
     
 	
@@ -1250,8 +1837,8 @@ is required to pass this process.</p>
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/connectToBeacon" title="connectToBeacon"></a>
-	<h3 class="subsubtitle method-title">connectToBeacon</h3>
+	<a name="//api/name/connect" title="connect"></a>
+	<h3 class="subsubtitle method-title">connect</h3>
 	
 	
 	
@@ -1263,7 +1850,7 @@ Major, Minor, Power and Advertising interval.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)connectToBeacon</code></div>
+	<div class="method-subsection method-declaration"><code>- (void)connect</code></div>
 
     
 	
@@ -1293,18 +1880,18 @@ Major, Minor, Power and Advertising interval.</p>
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/disconnectBeacon" title="disconnectBeacon"></a>
-	<h3 class="subsubtitle method-title">disconnectBeacon</h3>
+	<a name="//api/name/disconnect" title="disconnect"></a>
+	<h3 class="subsubtitle method-title">disconnect</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Disconnect device with particular beacon</p>
+		<p>Dis<a href="#//api/name/connect">connect</a> device with particular beacon</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)disconnectBeacon</code></div>
+	<div class="method-subsection method-declaration"><code>- (void)disconnect</code></div>
 
     
 	
@@ -1334,19 +1921,18 @@ Major, Minor, Power and Advertising interval.</p>
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/readBeaconAdvIntervalWithCompletion:" title="readBeaconAdvIntervalWithCompletion:"></a>
-	<h3 class="subsubtitle method-title">readBeaconAdvIntervalWithCompletion:</h3>
+	<a name="//api/name/enableAccelerometer:completion:" title="enableAccelerometer:completion:"></a>
+	<h3 class="subsubtitle method-title">enableAccelerometer:completion:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Read advertising interval of connected beacon (Previous connection
-required)</p>
+		<p>Turn on / off accelerometer in beacon.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)readBeaconAdvIntervalWithCompletion:(ESTUnsignedShortCompletionBlock)<em>completion</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)enableAccelerometer:(BOOL)<em>enable</em> completion:(ESTBoolCompletionBlock)<em>completion</em></code></div>
 
     
 	
@@ -1355,7 +1941,113 @@ required)</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>completion</em></dt>
-			<dd><p>block with advertising interval value as param</p></dd>
+			<dd><p>block handling operation completion</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>void</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>Estimote OS A2.1</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/isAccelerometerAvailable">@property isAccelerometerAvailable</a>, <a href="#//api/name/isAccelerometerEditAvailable">@property isAccelerometerEditAvailable</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isEqualToBeacon:" title="isEqualToBeacon:"></a>
+	<h3 class="subsubtitle method-title">isEqualToBeacon:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Allows comparison between two ESTBeacon objects</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)isEqualToBeacon:(ESTBeacon *)<em>beacon</em></code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>YES or NO</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/readAccelerometerCountWithCompletion:" title="readAccelerometerCountWithCompletion:"></a>
+	<h3 class="subsubtitle method-title">readAccelerometerCountWithCompletion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Reads number of individual accelerometer interactions since last reset.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)readAccelerometerCountWithCompletion:(ESTNumberCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>block handling operation completion</p></dd>
 		</dl>
 		
 	</div>
@@ -1386,19 +2078,18 @@ required)</p>
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/readBeaconBatteryWithCompletion:" title="readBeaconBatteryWithCompletion:"></a>
-	<h3 class="subsubtitle method-title">readBeaconBatteryWithCompletion:</h3>
+	<a name="//api/name/readTemperatureWithCompletion:" title="readTemperatureWithCompletion:"></a>
+	<h3 class="subsubtitle method-title">readTemperatureWithCompletion:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Read battery level of connected beacon (Previous connection
-required)</p>
+		<p>Reads temperature value in Celsius from the beacon.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)readBeaconBatteryWithCompletion:(ESTUnsignedShortCompletionBlock)<em>completion</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)readTemperatureWithCompletion:(ESTNumberCompletionBlock)<em>completion</em></code></div>
 
     
 	
@@ -1407,7 +2098,7 @@ required)</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>completion</em></dt>
-			<dd><p>block with battery level value as param</p></dd>
+			<dd><p>block handling operation completion</p></dd>
 		</dl>
 		
 	</div>
@@ -1438,19 +2129,18 @@ required)</p>
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/readBeaconFirmwareVersionWithCompletion:" title="readBeaconFirmwareVersionWithCompletion:"></a>
-	<h3 class="subsubtitle method-title">readBeaconFirmwareVersionWithCompletion:</h3>
+	<a name="//api/name/resetAccelerometerCountWithCompletion:" title="resetAccelerometerCountWithCompletion:"></a>
+	<h3 class="subsubtitle method-title">resetAccelerometerCountWithCompletion:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Read firmware version of connected beacon (Previous connection
-required)</p>
+		<p>Resets number of individual accelerometer interactions to 0.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)readBeaconFirmwareVersionWithCompletion:(ESTStringCompletionBlock)<em>completion</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)resetAccelerometerCountWithCompletion:(ESTUnsignedShortCompletionBlock)<em>completion</em></code></div>
 
     
 	
@@ -1459,7 +2149,7 @@ required)</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>completion</em></dt>
-			<dd><p>block with firmware version value as param</p></dd>
+			<dd><p>block handling operation completion</p></dd>
 		</dl>
 		
 	</div>
@@ -1490,19 +2180,19 @@ required)</p>
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/readBeaconHardwareVersionWithCompletion:" title="readBeaconHardwareVersionWithCompletion:"></a>
-	<h3 class="subsubtitle method-title">readBeaconHardwareVersionWithCompletion:</h3>
+	<a name="//api/name/resetToFactorySettingsWithCompletion:" title="resetToFactorySettingsWithCompletion:"></a>
+	<h3 class="subsubtitle method-title">resetToFactorySettingsWithCompletion:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Read hardware version of connected beacon (Previous connection
-required)</p>
+		<p>Resets beacon to factory settings. It changes Major, Minor, UUID,
+Power and Adv Inteval to original values.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)readBeaconHardwareVersionWithCompletion:(ESTStringCompletionBlock)<em>completion</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)resetToFactorySettingsWithCompletion:(ESTCompletionBlock)<em>completion</em></code></div>
 
     
 	
@@ -1511,7 +2201,7 @@ required)</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>completion</em></dt>
-			<dd><p>block with hardware version value as param</p></dd>
+			<dd><p>block handling operation completion</p></dd>
 		</dl>
 		
 	</div>
@@ -1542,216 +2232,8 @@ required)</p>
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/readBeaconMajorWithCompletion:" title="readBeaconMajorWithCompletion:"></a>
-	<h3 class="subsubtitle method-title">readBeaconMajorWithCompletion:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Read <a href="#//api/name/major">major</a> of connected beacon (Previous connection
-required)</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)readBeaconMajorWithCompletion:(ESTUnsignedShortCompletionBlock)<em>completion</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>completion</em></dt>
-			<dd><p>block with <a href="#//api/name/major">major</a> value as param</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>void</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTBeacon.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/readBeaconMinorWithCompletion:" title="readBeaconMinorWithCompletion:"></a>
-	<h3 class="subsubtitle method-title">readBeaconMinorWithCompletion:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Read <a href="#//api/name/minor">minor</a> of connected beacon (Previous connection
-required)</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)readBeaconMinorWithCompletion:(ESTUnsignedShortCompletionBlock)<em>completion</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>completion</em></dt>
-			<dd><p>block with <a href="#//api/name/minor">minor</a> value as param</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>void</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTBeacon.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/readBeaconPowerWithCompletion:" title="readBeaconPowerWithCompletion:"></a>
-	<h3 class="subsubtitle method-title">readBeaconPowerWithCompletion:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Read <a href="#//api/name/power">power</a> of connected beacon (Previous connection
-required)</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)readBeaconPowerWithCompletion:(ESTPowerCompletionBlock)<em>completion</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>completion</em></dt>
-			<dd><p>block with <a href="#//api/name/power">power</a> value as param</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>float value of beacon <a href="#//api/name/power">power</a></p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTBeacon.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/readBeaconProximityUUIDWithCompletion:" title="readBeaconProximityUUIDWithCompletion:"></a>
-	<h3 class="subsubtitle method-title">readBeaconProximityUUIDWithCompletion:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Read Proximity UUID of connected beacon (Previous connection
-required)</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)readBeaconProximityUUIDWithCompletion:(ESTStringCompletionBlock)<em>completion</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>completion</em></dt>
-			<dd><p>block with <a href="#//api/name/major">major</a> value as param</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>void</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTBeacon.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/updateBeaconFirmwareWithProgress:andCompletion:" title="updateBeaconFirmwareWithProgress:andCompletion:"></a>
-	<h3 class="subsubtitle method-title">updateBeaconFirmwareWithProgress:andCompletion:</h3>
+	<a name="//api/name/updateFirmwareWithProgress:completion:" title="updateFirmwareWithProgress:completion:"></a>
+	<h3 class="subsubtitle method-title">updateFirmwareWithProgress:completion:</h3>
 	
 	
 	
@@ -1763,7 +2245,7 @@ is required to pass this process.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)updateBeaconFirmwareWithProgress:(ESTStringCompletionBlock)<em>progress</em> andCompletion:(ESTCompletionBlock)<em>completion</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)updateFirmwareWithProgress:(ESTProgressBlock)<em>progress</em> completion:(ESTCompletionBlock)<em>completion</em></code></div>
 
     
 	
@@ -1808,8 +2290,8 @@ is required to pass this process.</p>
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/writeBeaconAdvInterval:withCompletion:" title="writeBeaconAdvInterval:withCompletion:"></a>
-	<h3 class="subsubtitle method-title">writeBeaconAdvInterval:withCompletion:</h3>
+	<a name="//api/name/writeAdvInterval:completion:" title="writeAdvInterval:completion:"></a>
+	<h3 class="subsubtitle method-title">writeAdvInterval:completion:</h3>
 	
 	
 	
@@ -1819,7 +2301,7 @@ is required to pass this process.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)writeBeaconAdvInterval:(unsigned short)<em>interval</em> withCompletion:(ESTUnsignedShortCompletionBlock)<em>completion</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)writeAdvInterval:(unsigned short)<em>interval</em> completion:(ESTUnsignedShortCompletionBlock)<em>completion</em></code></div>
 
     
 	
@@ -1864,8 +2346,8 @@ is required to pass this process.</p>
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/writeBeaconMajor:withCompletion:" title="writeBeaconMajor:withCompletion:"></a>
-	<h3 class="subsubtitle method-title">writeBeaconMajor:withCompletion:</h3>
+	<a name="//api/name/writeMajor:completion:" title="writeMajor:completion:"></a>
+	<h3 class="subsubtitle method-title">writeMajor:completion:</h3>
 	
 	
 	
@@ -1875,7 +2357,7 @@ is required to pass this process.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)writeBeaconMajor:(unsigned short)<em>major</em> withCompletion:(ESTUnsignedShortCompletionBlock)<em>completion</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)writeMajor:(unsigned short)<em>major</em> completion:(ESTUnsignedShortCompletionBlock)<em>completion</em></code></div>
 
     
 	
@@ -1920,8 +2402,8 @@ is required to pass this process.</p>
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/writeBeaconMinor:withCompletion:" title="writeBeaconMinor:withCompletion:"></a>
-	<h3 class="subsubtitle method-title">writeBeaconMinor:withCompletion:</h3>
+	<a name="//api/name/writeMinor:completion:" title="writeMinor:completion:"></a>
+	<h3 class="subsubtitle method-title">writeMinor:completion:</h3>
 	
 	
 	
@@ -1931,7 +2413,7 @@ is required to pass this process.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)writeBeaconMinor:(unsigned short)<em>minor</em> withCompletion:(ESTUnsignedShortCompletionBlock)<em>completion</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)writeMinor:(unsigned short)<em>minor</em> completion:(ESTUnsignedShortCompletionBlock)<em>completion</em></code></div>
 
     
 	
@@ -1976,8 +2458,121 @@ is required to pass this process.</p>
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/writeBeaconPower:withCompletion:" title="writeBeaconPower:withCompletion:"></a>
-	<h3 class="subsubtitle method-title">writeBeaconPower:withCompletion:</h3>
+	<a name="//api/name/writeMotionProximityUUID:completion:" title="writeMotionProximityUUID:completion:"></a>
+	<h3 class="subsubtitle method-title">writeMotionProximityUUID:completion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Writes Motion Proximity UUID param to bluetooth connected beacon.
+It is broadcasted by the beacons when it is in motion.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)writeMotionProximityUUID:(NSString *)<em>pUUID</em> completion:(ESTStringCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>pUUID</em></dt>
+			<dd><p>new Motion Proximity UUID value</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>block handling operation completion</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>void</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/writeName:completion:" title="writeName:completion:"></a>
+	<h3 class="subsubtitle method-title">writeName:completion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets Name to the bluetooth connected beacon.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)writeName:(NSString *)<em>name</em> completion:(ESTStringCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>new <a href="#//api/name/name">name</a> of the beacon</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>block handling operation completion</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>void</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/writePower:completion:" title="writePower:completion:"></a>
+	<h3 class="subsubtitle method-title">writePower:completion:</h3>
 	
 	
 	
@@ -1987,7 +2582,7 @@ is required to pass this process.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)writeBeaconPower:(ESTBeaconPower)<em>power</em> withCompletion:(ESTPowerCompletionBlock)<em>completion</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)writePower:(ESTBeaconPower)<em>power</em> completion:(ESTPowerCompletionBlock)<em>completion</em></code></div>
 
     
 	
@@ -2032,8 +2627,8 @@ is required to pass this process.</p>
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/writeBeaconProximityUUID:withCompletion:" title="writeBeaconProximityUUID:withCompletion:"></a>
-	<h3 class="subsubtitle method-title">writeBeaconProximityUUID:withCompletion:</h3>
+	<a name="//api/name/writeProximityUUID:completion:" title="writeProximityUUID:completion:"></a>
+	<h3 class="subsubtitle method-title">writeProximityUUID:completion:</h3>
 	
 	
 	
@@ -2043,7 +2638,7 @@ is required to pass this process.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)writeBeaconProximityUUID:(NSString *)<em>pUUID</em> withCompletion:(ESTStringCompletionBlock)<em>completion</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)writeProximityUUID:(NSString *)<em>pUUID</em> completion:(ESTStringCompletionBlock)<em>completion</em></code></div>
 
     
 	
@@ -2102,7 +2697,7 @@ is required to pass this process.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 Estimote. All rights reserved. (Last updated: 2014-01-25)</span><br />
+						<p><span class="copyright">&copy; 2014 Estimote. All rights reserved. (Last updated: 2014-06-06)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						
