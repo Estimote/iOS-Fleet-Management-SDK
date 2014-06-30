@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.homepage     = "http://estimote.com"
   s.author       = { "Estimote, Inc" => "contact@estimote.com" }
   s.platform     = :ios 
-  s.source       = { :git => "https://github.com/Estimote/iOS-SDK.git", :tag => "{s.version}" }
+  s.source       = { :git => "https://github.com/Estimote/iOS-SDK.git", :tag => "2.0.0" }
   s.source_files =  'EstimoteSDK/Headers/*.h'
   s.preserve_paths = 'EstimoteSDK/libEstimoteSDK.a'
   s.vendored_libraries = 'EstimoteSDK/libEstimoteSDK.a'
