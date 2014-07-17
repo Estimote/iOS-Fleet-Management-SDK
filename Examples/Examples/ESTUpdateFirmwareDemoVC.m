@@ -36,7 +36,7 @@
 {
     [super viewDidLoad];
     
-    //In order to read beacon accelerometer we need to connect to it.
+    //In order to update beacon firmware we need to connect to it.
     self.beacon.delegate = self;
     [self.beacon connect];
 }
