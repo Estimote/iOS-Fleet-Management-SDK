@@ -15,6 +15,7 @@
 @property (nonatomic, strong) NSNumber* major;
 @property (nonatomic, strong) NSNumber* minor;
 @property (nonatomic, strong) NSString* macAddress;
+@property (nonatomic, strong) NSNumber *batteryLifeExpectancy;
 
 @property (nonatomic, strong) NSString* name;
 @property (nonatomic) ESTBeaconColor color;

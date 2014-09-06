@@ -1,3 +1,18 @@
+## 2.1.0 (Semptember 4, 2014)
+
+Features:
+ - Support for battery power modes
+
+Improvements:
+ - Connection stability
+ - Accelerometer support improved
+ - Color caching improved
+ - Performance with high number of beacons
+
+Bugfixes:
+ - Crashing using GPS Monitoring with Estimote SDK
+
+
 ## 2.0.1 (July 15, 2014)
 
 Bugfixes:

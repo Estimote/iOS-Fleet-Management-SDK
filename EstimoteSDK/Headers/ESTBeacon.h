@@ -2,7 +2,7 @@
 //  ESTBeacon.h
 //  EstimoteSDK
 //
-//  Version: 2.0.0
+//  Version: 2.1.0
 //  Created by Marcin Klimek on 06/03/14.
 //  Copyright (c) 2014 Estimote. All rights reserved.
 
@@ -10,7 +10,6 @@
 #import <CoreLocation/CoreLocation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 #import "ESTBeaconDefinitions.h"
-
 
 #define CONNECTION_ERROR_UID_MISSING    400
 #define CONNECTION_ERROR_AUTHORIZATION  401
@@ -192,7 +191,7 @@
 /**
  *  advInterval
  *
- *    Advertising interval of the beacon. Value change from 50ms to 2000ms. Value available after connection with the beacon
+ *    Advertising interval of the beacon. Value change from 100ms to 2000ms. Value available after connection with the beacon
  */
 @property (readonly, nonatomic)   NSNumber*               advInterval;
 
@@ -295,9 +294,30 @@
  */
 @property (readonly, nonatomic)    BOOL accelerometerEnabled;
 
-#pragma mark - Connection handling methods
+/**
+ *  basicPowerMode
+ *
+ *    Indicates basic power mode status and availability.
+ *
+ *  @since Estimote OS A2.1
+ *  @sa ESTBeaconPowerSavingMode
+ *  @sa -(void)enableBasicPowerMode:completion
+ */
+@property (readonly, nonatomic)    ESTBeaconPowerSavingMode basicPowerMode;
+
+/**
+ *  smartPowerMode
+ *
+ *    Indicates smart power mode status and availability.
+ *
+ *  @since Estimote OS A2.1
+ *  @sa ESTBeaconPowerSavingMode
+ *  @sa -(void)enableSmartPowerMode:completion
+ */
+@property (readonly, nonatomic)    ESTBeaconPowerSavingMode smartPowerMode;
 
 /// @name Connection handling methods
+#pragma mark - Connection handling methods
 
 /**
  * Connect to particular beacon using bluetooth.
@@ -315,9 +335,8 @@
  */
 -(void)disconnect;
 
-#pragma mark - Methods for sensors readings
-
 /// @name Methods for sensors readings
+#pragma mark - Methods for sensors readings
 
 /**
  * Reads temperature value in Celsius from the beacon.
@@ -358,9 +377,8 @@
  */
 - (void)resetAccelerometerCountWithCompletion:(ESTUnsignedShortCompletionBlock)completion;
 
-#pragma mark - Methods for writing beacon configuration
-
 /// @name Methods for writing beacon configuration
+#pragma mark - Methods for writing beacon configuration
 
 /**
  * Sets Name to the bluetooth connected beacon.
@@ -414,9 +432,9 @@
 - (void)writeMinor:(unsigned short)minor completion:(ESTUnsignedShortCompletionBlock)completion;
 
 /**
- * Writes advertising interval (in milisec) of connected beacon.
+ * Writes advertising interval (in milliseconds) of connected beacon.
  *
- * @param advertising interval of beacon (50 - 2000 ms)
+ * @param advertising interval of beacon (100 - 2000 ms)
  * @param completion block handling operation completion
  *
  * @return void
@@ -435,7 +453,7 @@
 
 /**
  * Resets beacon to factory settings. It changes Major, Minor, UUID,
- * Power and Adv Inteval to original values.
+ * Power and Adv Interval to original values.
  *
  * @param completion block handling operation completion
  *
@@ -455,9 +473,28 @@
 - (void)enableAccelerometer:(BOOL)enable
                  completion:(ESTBoolCompletionBlock)completion;
 
-#pragma mark - Methods for firmware update
+/**
+ * Turn on / off basic power save mode in beacon.
+ *
+ * @param completion block handling operation completion
+ *
+ * @return void
+ */
+- (void)enableBasicPowerMode:(BOOL)enable
+                  completion:(ESTBoolCompletionBlock)completion;
+
+/**
+ * Turn on / off smart power save mode in beacon.
+ *
+ * @param completion block handling operation completion
+ *
+ * @return void
+ */
+- (void)enableSmartPowerMode:(BOOL)enable
+                  completion:(ESTBoolCompletionBlock)completion;
 
 /// @name Methods for firmware update
+#pragma mark - Methods for firmware update
 
 /**
  * Verifies if new firmware version is available for download
@@ -484,9 +521,8 @@
                        completion:(ESTCompletionBlock)completion;
 
 
-#pragma mark - Utility methods
-
 /// @name utility methods
+#pragma mark - utility methods
 
 /**
  * Allows comparison between two ESTBeacon objects

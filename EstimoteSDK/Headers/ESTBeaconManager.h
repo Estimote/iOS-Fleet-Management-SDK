@@ -2,7 +2,7 @@
 //  ESTBeaconManager.h
 //  EstimoteSDK
 //
-//  Version: 2.0.0
+//  Version: 2.1.0
 //  Created by Marcin Klimek on 9/18/13.
 //  Copyright (c) 2013 Estimote. All rights reserved.
 //
@@ -186,13 +186,22 @@ monitoringDidFailForRegion:(ESTBeaconRegion *)region
 @property (nonatomic) BOOL avoidUnknownStateBeacons;
 
 /**
- When ranging more then one region, beaconManager:didRangeBeacons:inRegion: always returns list of beacons for all ranged regions.
+ Stability improving property. Prevents update of beacons distance and zone property for defined number of ranging cycles when it goes to unknown state. 
+ */
+@property (nonatomic) NSInteger preventUnknownUpdateCount;
+
+/**
+ When ranging few different regions, beaconManager:didRangeBeacons:inRegion delegate method returns array of combined beacon sets for all regions.
  */
 @property (nonatomic) BOOL returnAllRangedBeaconsAtOnce;
 
 
-/// @name CoreLocation based iBeacon monitoring and ranging methods
+- (void)updateRangeLimit:(NSInteger)limit;
+
+
 #pragma mark - CoreLocation based iBeacon monitoring and ranging methods
+
+/// @name CoreLocation based iBeacon monitoring and ranging methods
 
 /**
  * Range Estimote beacon described with region object.
@@ -229,14 +238,6 @@ monitoringDidFailForRegion:(ESTBeaconRegion *)region
  * @return void
  */
 -(void)stopRangingBeaconsInRegion:(ESTBeaconRegion*)region;
-
-/**
- * Stops ranging Estimote beacons in all ranged regions.
- *
- *
- * @return void
- */
--(void)stopRangingBeaconsInAllRegions;
 
 /**
  * Unsubscribe application from iOS monitoring of
@@ -310,16 +311,29 @@ monitoringDidFailForRegion:(ESTBeaconRegion *)region
  */
 +(NSArray *)recentlyUsedUUIDs;
 
+/**
+ * Get the array of ESTBeaconVO object that was cached 
+ * after last Estimote Cloud fetch.
+ *
+ * @return NSArray of recently fetched beacons (ESTBeaconVO objects)
+ */
++(NSArray *)recentlyCachedBeacons;
 
 /// @name Estimote Cloud based methods
 #pragma mark - Estimote Cloud based methods
-
 /**
  * Setup App ID and App token that allows to access beacons information stored in Estimote Cloud.
  *
  * @return void
  */
 +(void)setupAppID:(NSString*)appID andAppToken:(NSString*)appToken;
+
+/**
+ * Check if AppID and appToken were set.
+ *
+ * @return BOOL determining if AppID and appToken were set
+ */
++(BOOL)isAuthorized;
 
 /**
  * Fetch beacons that are assign to your account.
