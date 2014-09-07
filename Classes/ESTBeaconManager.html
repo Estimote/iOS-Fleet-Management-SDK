@@ -41,12 +41,18 @@
 	
 	<option value="//api/name/avoidUnknownStateBeacons">&nbsp;&nbsp;&nbsp;&nbsp;avoidUnknownStateBeacons</option>
 	
+	<option value="//api/name/preventUnknownUpdateCount">&nbsp;&nbsp;&nbsp;&nbsp;preventUnknownUpdateCount</option>
+	
 	<option value="//api/name/returnAllRangedBeaconsAtOnce">&nbsp;&nbsp;&nbsp;&nbsp;returnAllRangedBeaconsAtOnce</option>
 	
 	
 	
 	
 	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/isAuthorized">&nbsp;&nbsp;&nbsp;&nbsp;+ isAuthorized</option>
+	
+	<option value="//api/name/recentlyCachedBeacons">&nbsp;&nbsp;&nbsp;&nbsp;+ recentlyCachedBeacons</option>
 	
 	<option value="//api/name/recentlyUsedUUIDs">&nbsp;&nbsp;&nbsp;&nbsp;+ recentlyUsedUUIDs</option>
 	
@@ -75,8 +81,6 @@
 	
 	<option value="//api/name/stopMonitoringForRegion:">&nbsp;&nbsp;&nbsp;&nbsp;- stopMonitoringForRegion:</option>
 	
-	<option value="//api/name/stopRangingBeaconsInAllRegions">&nbsp;&nbsp;&nbsp;&nbsp;- stopRangingBeaconsInAllRegions</option>
-	
 	<option value="//api/name/stopRangingBeaconsInRegion:">&nbsp;&nbsp;&nbsp;&nbsp;- stopRangingBeaconsInRegion:</option>
 	
 	
@@ -95,6 +99,8 @@
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Publicly available properties">Publicly available properties</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_CoreLocation based iBeacon monitoring and ranging methods">CoreLocation based iBeacon monitoring and ranging methods</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Turning device into iBeacon">Turning device into iBeacon</a></span></li>
@@ -102,6 +108,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_CoreBluetooth based utility methods">CoreBluetooth based utility methods</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Estimote Cloud based methods">Estimote Cloud based methods</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Beacon cache related methods">Beacon cache related methods</a></span></li>
 	
 </ul></li>
 
@@ -113,6 +121,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/avoidUnknownStateBeacons">avoidUnknownStateBeacons</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/preventUnknownUpdateCount">preventUnknownUpdateCount</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/returnAllRangedBeaconsAtOnce">returnAllRangedBeaconsAtOnce</a></span></li>
 	
 </ul></li>
@@ -120,6 +130,10 @@
 
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isAuthorized">isAuthorized</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/recentlyCachedBeacons">recentlyCachedBeacons</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/recentlyUsedUUIDs">recentlyUsedUUIDs</a></span></li>
 	
@@ -148,8 +162,6 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stopEstimoteBeaconDiscovery">stopEstimoteBeaconDiscovery</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stopMonitoringForRegion:">stopMonitoringForRegion:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stopRangingBeaconsInAllRegions">stopRangingBeaconsInAllRegions</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stopRangingBeaconsInRegion:">stopRangingBeaconsInRegion:</a></span></li>
 	
@@ -213,13 +225,19 @@
 						<h2 class="subtitle subtitle-tasks">Tasks</h2>
 						
 						
-						
-						<h3 class="subsubtitle task-title">Other Methods</h3>
+						<a title="Publicly available properties" name="task_Publicly available properties"></a>
+						<h3 class="subsubtitle task-title">Publicly available properties</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/avoidUnknownStateBeacons">&nbsp;&nbsp;avoidUnknownStateBeacons</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/preventUnknownUpdateCount">&nbsp;&nbsp;preventUnknownUpdateCount</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -252,12 +270,6 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/stopRangingBeaconsInRegion:">&ndash;&nbsp;stopRangingBeaconsInRegion:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/stopRangingBeaconsInAllRegions">&ndash;&nbsp;stopRangingBeaconsInAllRegions</a></code>
 	</span>
 	
 	
@@ -313,12 +325,6 @@
 	</span>
 	
 	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/recentlyUsedUUIDs">+&nbsp;recentlyUsedUUIDs</a></code>
-	</span>
-	
-	
 </li>
 						</ul>
 						
@@ -335,7 +341,33 @@
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/isAuthorized">+&nbsp;isAuthorized</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/fetchEstimoteBeaconsWithCompletion:">&ndash;&nbsp;fetchEstimoteBeaconsWithCompletion:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Beacon cache related methods" name="task_Beacon cache related methods"></a>
+						<h3 class="subsubtitle task-title">Beacon cache related methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/recentlyUsedUUIDs">+&nbsp;recentlyUsedUUIDs</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/recentlyCachedBeacons">+&nbsp;recentlyCachedBeacons</a></code>
 	</span>
 	
 	
@@ -389,13 +421,49 @@
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/preventUnknownUpdateCount" title="preventUnknownUpdateCount"></a>
+	<h3 class="subsubtitle method-title">preventUnknownUpdateCount</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Stability improving property. Prevents update of beacons distance and zone property for defined number of ranging cycles when it goes to unknown state.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic) NSInteger preventUnknownUpdateCount</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/returnAllRangedBeaconsAtOnce" title="returnAllRangedBeaconsAtOnce"></a>
 	<h3 class="subsubtitle method-title">returnAllRangedBeaconsAtOnce</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>When ranging more then one region, beaconManager:didRangeBeacons:inRegion: always returns list of beacons for all ranged regions.</p>
+		<p>When ranging few different regions, beaconManager:didRangeBeacons:inRegion delegate method returns array of combined beacon sets for all regions.</p>
 	</div>		
 	
     
@@ -431,6 +499,89 @@
 					<div class="section section-methods">
 						<a title="Class Methods" name="class_methods"></a>
 						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/isAuthorized" title="isAuthorized"></a>
+	<h3 class="subsubtitle method-title">isAuthorized</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Check if AppID and appToken were set.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (BOOL)isAuthorized</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>BOOL determining if AppID and appToken were set</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/recentlyCachedBeacons" title="recentlyCachedBeacons"></a>
+	<h3 class="subsubtitle method-title">recentlyCachedBeacons</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Get the array of ESTBeaconVO object that was cached
+after last Estimote Cloud fetch.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSArray *)recentlyCachedBeacons</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>NSArray of recently fetched beacons (ESTBeaconVO objects)</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconManager.h</code><br />
+	</div>				
+	
+	
+</div>
 						
 						<div class="section-method">
 	<a name="//api/name/recentlyUsedUUIDs" title="recentlyUsedUUIDs"></a>
@@ -988,47 +1139,6 @@ Estimote beacon region.</p>
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/stopRangingBeaconsInAllRegions" title="stopRangingBeaconsInAllRegions"></a>
-	<h3 class="subsubtitle method-title">stopRangingBeaconsInAllRegions</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Stops ranging Estimote beacons in all ranged regions.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)stopRangingBeaconsInAllRegions</code></div>
-
-    
-	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>void</p>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTBeaconManager.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
 	<a name="//api/name/stopRangingBeaconsInRegion:" title="stopRangingBeaconsInRegion:"></a>
 	<h3 class="subsubtitle method-title">stopRangingBeaconsInRegion:</h3>
 	
@@ -1094,7 +1204,7 @@ Estimote beacon region.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 Estimote. All rights reserved. (Last updated: 2014-06-06)</span><br />
+						<p><span class="copyright">&copy; 2014 Estimote. All rights reserved. (Last updated: 2014-09-07)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						
