@@ -207,7 +207,7 @@
  *
  *    Remaining lifetime in seconds, based on current battery level, advertising interval and broadcasting power values
  */
-@property (readonly, nonatomic)   NSTimeInterval          remainingLifetime;
+@property (readonly, nonatomic)   NSNumber                *remainingLifetime;
 
 /**
  *  batteryType
