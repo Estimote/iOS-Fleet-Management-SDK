@@ -53,7 +53,11 @@
 	
 	<option value="//api/name/connectionStatus">&nbsp;&nbsp;&nbsp;&nbsp;connectionStatus</option>
 	
+	<option value="//api/name/delegate">&nbsp;&nbsp;&nbsp;&nbsp;delegate</option>
+	
 	<option value="//api/name/distance">&nbsp;&nbsp;&nbsp;&nbsp;distance</option>
+	
+	<option value="//api/name/firmwareState">&nbsp;&nbsp;&nbsp;&nbsp;firmwareState</option>
 	
 	<option value="//api/name/firmwareUpdateInfo">&nbsp;&nbsp;&nbsp;&nbsp;firmwareUpdateInfo</option>
 	
@@ -106,6 +110,8 @@
 	
 	<option value="//api/name/connect">&nbsp;&nbsp;&nbsp;&nbsp;- connect</option>
 	
+	<option value="//api/name/connectWithAttempts:connectionTimeout:">&nbsp;&nbsp;&nbsp;&nbsp;- connectWithAttempts:connectionTimeout:</option>
+	
 	<option value="//api/name/disconnect">&nbsp;&nbsp;&nbsp;&nbsp;- disconnect</option>
 	
 	<option value="//api/name/enableAccelerometer:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- enableAccelerometer:completion:</option>
@@ -156,23 +162,25 @@
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Publicly available properties">Publicly available properties</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Accessing the Delegate">Accessing the Delegate</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Properties available after connection">Properties available after connection</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Properties Always Available">Properties Always Available</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Cloud related properties">Cloud related properties</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Properties Available After CoreLocation Based Scan">Properties Available After CoreLocation Based Scan</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Sensor related properties">Sensor related properties</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Properties Available After CoreBluetooth Based Scan">Properties Available After CoreBluetooth Based Scan</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Connection handling methods">Connection handling methods</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Properties Available After Connecting">Properties Available After Connecting</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Methods for sensors readings">Methods for sensors readings</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Connecting and Disconnecting">Connecting and Disconnecting</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Methods for writing beacon configuration">Methods for writing beacon configuration</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Interacting with Sensors (must be connected)">Interacting with Sensors (must be connected)</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Methods for firmware update">Methods for firmware update</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Modifying Configuration Settings (must be connected)">Modifying Configuration Settings (must be connected)</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_utility methods">utility methods</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Updating Firmware (must be connected)">Updating Firmware (must be connected)</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Comparing Beacons for Equality">Comparing Beacons for Equality</a></span></li>
 	
 </ul></li>
 
@@ -196,7 +204,11 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/connectionStatus">connectionStatus</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/delegate">delegate</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/distance">distance</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/firmwareState">firmwareState</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/firmwareUpdateInfo">firmwareUpdateInfo</a></span></li>
 	
@@ -249,6 +261,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/checkFirmwareUpdateWithCompletion:">checkFirmwareUpdateWithCompletion:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/connect">connect</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/connectWithAttempts:connectionTimeout:">connectWithAttempts:connectionTimeout:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/disconnect">disconnect</a></span></li>
 	
@@ -321,7 +335,19 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>The ESTBeacon class defines the interface for handling and configuring single estimote beacon. Instance of this class represents beacon with its current parametrs. In addition it allows to <a href="#//api/name/connect">connect</a> and modify settings like ProximityUUID, Major, Minor or Power. You should not build instance of this object by your own - it is generated using <a href="../Classes/ESTBeaconManager.html">ESTBeaconManager</a> class object.</p>
+						<p>The <code>ESTBeacon</code> class defines the interface for interacting with a single Estimote beacon. It enables you to retrieve properties of the beacon as well as alter its configuration settings. You do not create instances of this class directly. The <a href="../Classes/ESTBeaconManager.html"><code>ESTBeaconManager</code></a> object reports encountered beacons to its associated delegate object.</p>
+
+<p>The identity of a beacon is defined by its <a href="#//api/name/proximityUUID"><code>proximityUUID</code></a>, <a href="#//api/name/major"><code>major</code></a>, and <a href="#//api/name/minor"><code>minor</code></a> properties. The combination of the three is required to be globally unique among all the Estimote beacons - a constraint that is being validated by the Estimote Cloud at the time of modifying any of these properties.</p>
+
+<p>The ESTBeacon instance is being populated with a different set of properties depending on which <a href="../Classes/ESTBeaconManager.html"><code>ESTBeaconManager</code></a>&rsquo;s method was used to scan for and discover the beacon. There are two such methods currently:</p>
+
+<ul>
+<li><p><code>startRangingBeaconsInRegion:</code> - which is a CoreLocation based scan.</p></li>
+<li><p><code>startEstimoteBeaconsDiscoveryForRegion:</code> - which is a CoreBluetooth based scan.</p></li>
+</ul>
+
+
+<p>Additional properties become available once connected to the beacon. See connect for more details about connecting to the beacon. You will also need to assign a delegate to be notified about connection and disconnection events. The delegate needs to conform to the <a href="../Protocols/ESTBeaconDelegate.html"><code>ESTBeaconDelegate</code></a> protocol.</p>
 					</div>
 					
 					
@@ -333,29 +359,25 @@
 						<h2 class="subtitle subtitle-tasks">Tasks</h2>
 						
 						
-						<a title="Publicly available properties" name="task_Publicly available properties"></a>
-						<h3 class="subsubtitle task-title">Publicly available properties</h3>
+						<a title="Accessing the Delegate" name="task_Accessing the Delegate"></a>
+						<h3 class="subsubtitle task-title">Accessing the Delegate</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/macAddress">&nbsp;&nbsp;macAddress</a></code>
+		<code><a href="#//api/name/delegate">&nbsp;&nbsp;delegate</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/proximityUUID">&nbsp;&nbsp;proximityUUID</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/motionProximityUUID">&nbsp;&nbsp;motionProximityUUID</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
+</li>
+						</ul>
+						
+						
+						<a title="Properties Always Available" name="task_Properties Always Available"></a>
+						<h3 class="subsubtitle task-title">Properties Always Available</h3>
+
+						<ul class="task-list">
+							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/major">&nbsp;&nbsp;major</a></code>
 	</span>
@@ -369,7 +391,33 @@
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/color">&nbsp;&nbsp;color</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/rssi">&nbsp;&nbsp;rssi</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/connectionStatus">&nbsp;&nbsp;connectionStatus</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Properties Available After CoreLocation Based Scan" name="task_Properties Available After CoreLocation Based Scan"></a>
+						<h3 class="subsubtitle task-title">Properties Available After CoreLocation Based Scan</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/proximityUUID">&nbsp;&nbsp;proximityUUID</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -385,9 +433,29 @@
 	</span>
 	<span class="task-item-suffix">property</span>
 	
+</li>
+						</ul>
+						
+						
+						<a title="Properties Available After CoreBluetooth Based Scan" name="task_Properties Available After CoreBluetooth Based Scan"></a>
+						<h3 class="subsubtitle task-title">Properties Available After CoreBluetooth Based Scan</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/macAddress">&nbsp;&nbsp;macAddress</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/measuredPower">&nbsp;&nbsp;measuredPower</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/firmwareState">&nbsp;&nbsp;firmwareState</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -401,13 +469,19 @@
 						</ul>
 						
 						
-						<a title="Properties available after connection" name="task_Properties available after connection"></a>
-						<h3 class="subsubtitle task-title">Properties available after connection</h3>
+						<a title="Properties Available After Connecting" name="task_Properties Available After Connecting"></a>
+						<h3 class="subsubtitle task-title">Properties Available After Connecting</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/connectionStatus">&nbsp;&nbsp;connectionStatus</a></code>
+		<code><a href="#//api/name/name">&nbsp;&nbsp;name</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/motionProximityUUID">&nbsp;&nbsp;motionProximityUUID</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -449,12 +523,6 @@
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/isMoving">&nbsp;&nbsp;isMoving</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
 		<code><a href="#//api/name/firmwareVersion">&nbsp;&nbsp;firmwareVersion</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
@@ -465,35 +533,13 @@
 	</span>
 	<span class="task-item-suffix">property</span>
 	
-</li>
-						</ul>
-						
-						
-						<a title="Cloud related properties" name="task_Cloud related properties"></a>
-						<h3 class="subsubtitle task-title">Cloud related properties</h3>
-
-						<ul class="task-list">
-							<li>
+</li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/name">&nbsp;&nbsp;name</a></code>
+		<code><a href="#//api/name/isMoving">&nbsp;&nbsp;isMoving</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/color">&nbsp;&nbsp;color</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li>
-						</ul>
-						
-						
-						<a title="Sensor related properties" name="task_Sensor related properties"></a>
-						<h3 class="subsubtitle task-title">Sensor related properties</h3>
-
-						<ul class="task-list">
-							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/isAccelerometerAvailable">&nbsp;&nbsp;isAccelerometerAvailable</a></code>
 	</span>
@@ -527,13 +573,19 @@
 						</ul>
 						
 						
-						<a title="Connection handling methods" name="task_Connection handling methods"></a>
-						<h3 class="subsubtitle task-title">Connection handling methods</h3>
+						<a title="Connecting and Disconnecting" name="task_Connecting and Disconnecting"></a>
+						<h3 class="subsubtitle task-title">Connecting and Disconnecting</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/connect">&ndash;&nbsp;connect</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/connectWithAttempts:connectionTimeout:">&ndash;&nbsp;connectWithAttempts:connectionTimeout:</a></code>
 	</span>
 	
 	
@@ -547,8 +599,8 @@
 						</ul>
 						
 						
-						<a title="Methods for sensors readings" name="task_Methods for sensors readings"></a>
-						<h3 class="subsubtitle task-title">Methods for sensors readings</h3>
+						<a title="Interacting with Sensors (must be connected)" name="task_Interacting with Sensors (must be connected)"></a>
+						<h3 class="subsubtitle task-title">Interacting with Sensors (must be connected)</h3>
 
 						<ul class="task-list">
 							<li>
@@ -579,8 +631,8 @@
 						</ul>
 						
 						
-						<a title="Methods for writing beacon configuration" name="task_Methods for writing beacon configuration"></a>
-						<h3 class="subsubtitle task-title">Methods for writing beacon configuration</h3>
+						<a title="Modifying Configuration Settings (must be connected)" name="task_Modifying Configuration Settings (must be connected)"></a>
+						<h3 class="subsubtitle task-title">Modifying Configuration Settings (must be connected)</h3>
 
 						<ul class="task-list">
 							<li>
@@ -653,8 +705,8 @@
 						</ul>
 						
 						
-						<a title="Methods for firmware update" name="task_Methods for firmware update"></a>
-						<h3 class="subsubtitle task-title">Methods for firmware update</h3>
+						<a title="Updating Firmware (must be connected)" name="task_Updating Firmware (must be connected)"></a>
+						<h3 class="subsubtitle task-title">Updating Firmware (must be connected)</h3>
 
 						<ul class="task-list">
 							<li>
@@ -673,8 +725,8 @@
 						</ul>
 						
 						
-						<a title="utility methods" name="task_utility methods"></a>
-						<h3 class="subsubtitle task-title">utility methods</h3>
+						<a title="Comparing Beacons for Equality" name="task_Comparing Beacons for Equality"></a>
+						<h3 class="subsubtitle task-title">Comparing Beacons for Equality</h3>
 
 						<ul class="task-list">
 							<li>
@@ -703,7 +755,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Indicates is accelerometer enabled.</p>
+		<p>A flag indicating if accelerometer is enabled.</p>
 	</div>		
 	
     
@@ -731,7 +783,7 @@
 		<h4 class="method-subtitle">See Also</h4>
 		<ul>
 			
-			<li><code><p>-(void)<a href="#//api/name/enableAccelerometer:completion:">- enableAccelerometer:completion:</a></p></code></li>
+			<li><code><p><a href="#//api/name/enableAccelerometer:completion:">- enableAccelerometer:completion:</a></p></code></li>
 			
 		</ul>
 	</div>
@@ -753,7 +805,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Advertising interval of the beacon. Value change from 100ms to 2000ms. Value available after connection with the beacon</p>
+		<p>The advertising interval of the beacon in ms.</p>
 	</div>		
 	
     
@@ -772,6 +824,15 @@
 	
 	
 	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/writeAdvInterval:completion:">- writeAdvInterval:completion:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
 	
 	
 	<div class="method-subsection declared-in-section">
@@ -789,7 +850,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Indicates basic <a href="#//api/name/power">power</a> mode status and availability.</p>
+		<p>A flag indicating availability and status of the Basic Power Mode.</p>
 	</div>		
 	
     
@@ -839,7 +900,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Battery strength in %. Battery level change from 100% - 0%. Value available after connection with the beacon</p>
+		<p>The battery charge level for the beacon.</p>
 	</div>		
 	
     
@@ -853,6 +914,11 @@
 	
 	
 	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Battery level ranges from 0 (fully discharged) to 100 (fully charged).</p>
+	</div>
 	
 	
 	
@@ -875,7 +941,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Beacon battery model</p>
+		<p>The battery model.</p>
 	</div>		
 	
     
@@ -894,6 +960,15 @@
 	
 	
 	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Constants/ESTBeaconBatteryType.html">ESTBeaconBatteryType</a></p></code></li>
+			
+		</ul>
+	</div>
+	
 	
 	
 	<div class="method-subsection declared-in-section">
@@ -911,7 +986,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Color of the beacon. Filled with value after successful cloud request.</p>
+		<p>The color of the beacon.</p>
 	</div>		
 	
     
@@ -926,9 +1001,23 @@
 	
 	
 	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This value is stored and retrieved from the Estimote Cloud, which means it might be unavailable under certain circumestances - e.g. no Internet connectivity.</p>
+	</div>
 	
 	
 	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Constants/ESTBeaconColor.html">ESTBeaconColor</a></p></code></li>
+			
+		</ul>
+	</div>
 	
 	
 	
@@ -947,7 +1036,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Property indicating connection status.</p>
+		<p>The connection status between the user device and the beacon.</p>
 	</div>		
 	
     
@@ -966,6 +1055,60 @@
 	
 	
 	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Constants/ESTBeaconConnectionStatus.html">ESTBeaconConnectionStatus</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/delegate" title="delegate"></a>
+	<h3 class="subsubtitle method-title">delegate</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The delegate object to receive beacon related events.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;ESTBeaconDelegate&gt; delegate</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Protocols/ESTBeaconDelegate.html">ESTBeaconDelegate</a></p></code></li>
+			
+		</ul>
+	</div>
+	
 	
 	
 	<div class="method-subsection declared-in-section">
@@ -983,7 +1126,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Distance between phone and beacon calculated based on <a href="#//api/name/rssi">rssi</a> and measured <a href="#//api/name/power">power</a>.</p>
+		<p>An estimated distance from the beacon in meters.</p>
 	</div>		
 	
     
@@ -998,9 +1141,70 @@
 	
 	
 	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This value is only as accurate as the <a href="#//api/name/rssi"><code>rssi</code></a> readings, i.e. it is subject to the same external factors such as multipath propagation, diffraction, absorption and interference. In general, the greater the distance, the lesser the accuracy.</p>
+	</div>
 	
 	
 	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/firmwareState" title="firmwareState"></a>
+	<h3 class="subsubtitle method-title">firmwareState</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Flag indicating the state the beacon&rsquo;s firmware is in.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) ESTBeaconFirmwareState firmwareState</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This can be either:</p>
+
+<ul>
+<li><p><code>ESTBeaconFirmwareStateApp</code> - A fully functional state. This is the usual state the firmware is in.</p></li>
+<li><p><code>ESTBeaconFirmwareStateBoot</code> - A limited function state. This is a temporary state the firmware can find itself in during a firmware update. If the update didn&rsquo;t finish successfully, the firmware might remain in that state. Retry updating the firmware in order to regain full functionality. When in this state, the beacon can only be discovered using CoreBluetooth based scanning and cannot be discovered using CoreLocation based scanning.</p></li>
+</ul>
+
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Constants/ESTBeaconFirmwareState.html">ESTBeaconFirmwareState</a></p></code></li>
+			
+		</ul>
+	</div>
 	
 	
 	
@@ -1019,7 +1223,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Firmware update availability status. Value available after connection with the beacon and firmware version check.</p>
+		<p>A flag indicating if a firmware update is available.</p>
 	</div>		
 	
     
@@ -1034,9 +1238,23 @@
 	
 	
 	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="bug"><p><strong>Bug:</strong> This property has a <code>ESTBeaconFirmwareUpdateNone</code> value at all times. Use the <a href="#//api/name/checkFirmwareUpdateWithCompletion:"><code>checkFirmwareUpdateWithCompletion:</code></a> method instead.</p></div>
+	</div>
 	
 	
 	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Constants/ESTBeaconFirmwareUpdate.html">ESTBeaconFirmwareUpdate</a></p></code></li>
+			
+		</ul>
+	</div>
 	
 	
 	
@@ -1055,7 +1273,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Version of device firmware. Value available after connection with the beacon</p>
+		<p>The firmware version of the beacon.</p>
 	</div>		
 	
     
@@ -1074,6 +1292,17 @@
 	
 	
 	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/checkFirmwareUpdateWithCompletion:">- checkFirmwareUpdateWithCompletion:</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/updateFirmwareWithProgress:completion:">- updateFirmwareWithProgress:completion:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
 	
 	
 	<div class="method-subsection declared-in-section">
@@ -1091,7 +1320,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Version of device hardware. Value available after connection with the beacon</p>
+		<p>The hardware version of the beacon.</p>
 	</div>		
 	
     
@@ -1127,7 +1356,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Indicates if accelerometer available.</p>
+		<p>A flag indicating if the accelerometer is available.</p>
 	</div>		
 	
     
@@ -1168,7 +1397,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Indicates if accelerometer state change is available.</p>
+		<p>A flag indicating if accelerometer can be enabled and disabled.</p>
 	</div>		
 	
     
@@ -1196,7 +1425,7 @@
 		<h4 class="method-subtitle">See Also</h4>
 		<ul>
 			
-			<li><code><p>-(void)<a href="#//api/name/enableAccelerometer:completion:">- enableAccelerometer:completion:</a></p></code></li>
+			<li><code><p><a href="#//api/name/enableAccelerometer:completion:">- enableAccelerometer:completion:</a></p></code></li>
 			
 		</ul>
 	</div>
@@ -1218,7 +1447,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Flag indicating accelerometer state</p>
+		<p>A flag indicating if the beacon is in motion or not.</p>
 	</div>		
 	
     
@@ -1233,9 +1462,29 @@
 	
 	
 	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This value changes:</p>
+
+<ul>
+<li><p>from NO to YES immediately after a still beacon starts moving,</p></li>
+<li><p>from YES to NO after a beacon stops moving and remains still for 2 seconds.</p></li>
+</ul>
+
+	</div>
 	
 	
 	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Protocols/ESTBeaconDelegate.html#//api/name/beacon:accelerometerStateChanged:">[ESTBeaconDelegate beacon:accelerometerStateChanged:]</a></p></code></li>
+			
+		</ul>
+	</div>
 	
 	
 	
@@ -1254,7 +1503,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Hardware MAC address of the beacon.</p>
+		<p>The MAC address of the beacon.</p>
 	</div>		
 	
     
@@ -1290,7 +1539,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Most significant value associated with the region. If a major value wasn&rsquo;t specified, this will be nil.</p>
+		<p>The most significant value in the beacon.</p>
 	</div>		
 	
     
@@ -1309,6 +1558,15 @@
 	
 	
 	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/writeMajor:completion:">- writeMajor:completion:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
 	
 	
 	<div class="method-subsection declared-in-section">
@@ -1326,7 +1584,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>RSSI value measured from 1m. This value is used for device calibration.</p>
+		<p>Factory calibrated constant indicating the expected RSSI value at the distance of 1 meter from the beacon.</p>
 	</div>		
 	
     
@@ -1340,6 +1598,11 @@
 	
 	
 	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The value of this constant depends on the broadcasting power and is used to calculate the estimated distance from the beacon.</p>
+	</div>
 	
 	
 	
@@ -1362,7 +1625,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Least significant value associated with the region. If a minor value wasn&rsquo;t specified, this will be nil.</p>
+		<p>The least significant value in the beacon.</p>
 	</div>		
 	
     
@@ -1381,6 +1644,15 @@
 	
 	
 	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/writeMinor:completion:">- writeMinor:completion:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
 	
 	
 	<div class="method-subsection declared-in-section">
@@ -1398,7 +1670,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Proximity identifier associated with the beacon.</p>
+		<p>The proximity ID of the beacon when it&rsquo;s in motion.</p>
 	</div>		
 	
     
@@ -1411,11 +1683,36 @@
 	
 	
 	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>Estimote OS 2.0</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This default to the same value as the <a href="#//api/name/proximityUUID"><code>proximityUUID</code></a>. Setting it to a different value enables you to detect whether a beacon is in motion or not without a need to connect to the beacon. This can be achieved in two ways:</p>
+
+<ol>
+<li><p>When ranging beacons - if the beacon is in motion, the <code>proximityUUID</code> property will be equal to the <code>motionProximityUUID</code>. Note that the <code>motionProximityUUID</code> property is not available unless connected to the beacon, so you need to know its value in advance.</p></li>
+<li><p>When monitoring regions - you can have two separate regions, one with the regular <code>proximityUUID</code> and one with the <code>motionProximityUUID</code>. Enter and exit notifications will then correspond to the beacon starting and stopping to move.</p></li>
+</ol>
+
+	</div>
 	
 	
 	
 	
 	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/writeMotionProximityUUID:completion:">- writeMotionProximityUUID:completion:</a></p></code></li>
+			
+		</ul>
+	</div>
 	
 	
 	
@@ -1434,7 +1731,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Name of the beacon. Filled with value after successful cloud request.</p>
+		<p>The name of the beacon.</p>
 	</div>		
 	
     
@@ -1448,6 +1745,11 @@
 	
 	
 	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This value is stored and retrieved from the Estimote Cloud.</p>
+	</div>
 	
 	
 	
@@ -1470,7 +1772,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Reference of the device peripheral object.</p>
+		<p>The underlying Bluetooth peripheral device.</p>
 	</div>		
 	
     
@@ -1506,7 +1808,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Power of signal in dBm. Value available after connection with the beacon. It takes one of the values represented by <a href="../Constants/ESTBeaconPower.html">ESTBeaconPower</a> .</p>
+		<p>The power of the beacon&rsquo;s radio signal in dBm.</p>
 	</div>		
 	
     
@@ -1521,9 +1823,23 @@
 	
 	
 	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This is a <code>char</code> value, so the proper way to retrieve it is <code>[beacon.power charValue]</code>.</p>
+	</div>
 	
 	
 	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/writePower:completion:">- writePower:completion:</a></p></code></li>
+			
+		</ul>
+	</div>
 	
 	
 	
@@ -1542,7 +1858,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>The value in this property gives a general sense of the relative <a href="#//api/name/distance">distance</a> to the beacon. Use it to quickly identify beacons that are nearer to the user rather than farther away.</p>
+		<p>The relative proximity to the beacon.</p>
 	</div>		
 	
     
@@ -1556,6 +1872,11 @@
 	
 	
 	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The value in this property gives a general sense of the relative proximity to the beacon. Use it to quickly identify beacons that are nearer to the user rather than farther away.</p>
+	</div>
 	
 	
 	
@@ -1578,7 +1899,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Proximity identifier associated with the beacon.</p>
+		<p>The proximity ID of the beacon.</p>
 	</div>		
 	
     
@@ -1597,6 +1918,15 @@
 	
 	
 	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/writeProximityUUID:completion:">- writeProximityUUID:completion:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
 	
 	
 	<div class="method-subsection declared-in-section">
@@ -1614,7 +1944,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Remaining lifetime in seconds, based on current battery level, advertising interval and broadcasting <a href="#//api/name/power">power</a> values</p>
+		<p>Remaining lifetime in days, based on current battery level, advertising interval and broadcasting power values</p>
 	</div>		
 	
     
@@ -1650,8 +1980,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Received signal strength in decibels of the specified beacon.
-This value is an average of the RSSI samples collected since this beacon was last reported.</p>
+		<p>The received signal strength of the beacon, measured in decibels.</p>
 	</div>		
 	
     
@@ -1665,6 +1994,11 @@ This value is an average of the RSSI samples collected since this beacon was las
 	
 	
 	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This value is the average RSSI value of the samples received since the range of the beacon was last reported to your app.</p>
+	</div>
 	
 	
 	
@@ -1687,7 +2021,7 @@ This value is an average of the RSSI samples collected since this beacon was las
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Indicates smart <a href="#//api/name/power">power</a> mode status and availability.</p>
+		<p>A flag indicating availability and status of the Smart Power Mode.</p>
 	</div>		
 	
     
@@ -1747,8 +2081,7 @@ This value is an average of the RSSI samples collected since this beacon was las
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Calibrates temperature on the beacon. To perform you should pass current temperature
-that will be used as a reference.</p>
+		<p>Calibrates the beacon&rsquo;s thermometer sensor.</p>
 	</div>		
 	
     
@@ -1762,26 +2095,36 @@ that will be used as a reference.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>temperature</em></dt>
-			<dd><p>reference temperature</p></dd>
+			<dd><p>The reference temperature in Celsius degrees.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>completion</em></dt>
-			<dd><p>block handling operation completion</p></dd>
+			<dd><p>A block that is called when the calibration has been completed.</p>
+
+<p>The completion block receives the following parameters:</p>
+
+<ul>
+<li><p><code>NSNumber *value</code> - The current temperature in Celsius degrees, after the calibration.</p></li>
+<li><p><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</p></li>
+</ul>
+</dd>
 		</dl>
 		
 	</div>
 	
 	
 	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>void</p>
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Beacons are basically calibrated out of the box, but additional manual calibration is recommended in order to minimize measurement error. When the sensor is not calibrated, measurement error is ±4 ℃. After calibration it&rsquo;s ±2 ℃.</p>
+
+<p>To perform calibration you need to keep the beacon at room temperature for a couple of minutes. Use a separate thermometer to read the actual value (in Celsius degrees) and pass it to this method.</p>
 	</div>
-	
-	
-	
-	
 	
 	
 	
@@ -1804,9 +2147,7 @@ that will be used as a reference.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Verifies if new firmware version is available for download
-without any additional action. Internet connection
-is required to pass this process.</p>
+		<p>Checks if an updated firmware is available.</p>
 	</div>		
 	
     
@@ -1820,21 +2161,37 @@ is required to pass this process.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>completion</em></dt>
-			<dd><p>Block handling operation completion</p></dd>
+			<dd><p>A block that is called when the check has been completed.</p>
+
+<p>The completion block receives the following parameters:</p>
+
+<ul>
+<li><p><code>ESTBeaconFirmwareInfoVO value</code> - Indicates whether an update is available. If so, it also holds additional information about the update.</p></li>
+<li><p><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</p></li>
+</ul>
+</dd>
 		</dl>
 		
 	</div>
 	
 	
 	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>void</p>
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The result of the check is available as a <code>ESTBeaconFirmwareInfoVO</code> structure in the completion block and has the following properties:</p>
+
+<ul>
+<li><p><code>BOOL isUpdateAvailable</code> - YES if an update is available, NO if there&rsquo;s no update available. In the latter case, all the other properties of this structure will be <code>nil</code>.</p></li>
+<li><p><code>NSString *hardwareVersion</code> - The version of hardware this firmware update is dedicated for.</p></li>
+<li><p><code>NSString *firmwareVersion</code> - The version of the firmware available for update.</p></li>
+<li><p><code>NSString *changelog</code> - Changes introduced in the new version.</p></li>
+</ul>
+
 	</div>
-	
-	
-	
-	
 	
 	
 	
@@ -1857,9 +2214,7 @@ is required to pass this process.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Connect to particular beacon using bluetooth.
-Connection is required to change values like
-Major, Minor, Power and Advertising interval.</p>
+		<p>Connects to the beacon using default connection timeout (15 seconds) and number of attempts (4 times).</p>
 	</div>		
 	
     
@@ -1870,14 +2225,87 @@ Major, Minor, Power and Advertising interval.</p>
 	
 	
 	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>void</p>
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Being connected to the beacon allows you to (re)configure the beacon. Because of that, connecting to the beacon is only possible if you&rsquo;re its verified owner. This implies that before you&rsquo;re able to connect to the beacon, you need to:</p>
+
+<ul>
+<li><p>have the beacon assigned to your Estimote Cloud account,</p></li>
+<li><p>set up your Estimote Cloud credentials using the <a href="../Classes/ESTBeaconManager.html#//api/name/setupAppID:andAppToken:"><code>[ESTBeaconManager setupAppID:andAppToken:]</code></a> class method.</p></li>
+</ul>
+
+
+<p>Upon successful connection, delegate&rsquo;s <a href="../Protocols/ESTBeaconDelegate.html#//api/name/beaconConnectionDidSucceeded:"><code>[ESTBeaconDelegate beaconConnectionDidSucceeded:]</code></a> method is called. If connection fails, delegate&rsquo;s <a href="../Protocols/ESTBeaconDelegate.html#//api/name/beaconConnectionDidFail:withError:"><code>[ESTBeaconDelegate beaconConnectionDidFail:withError:]</code></a> method will be called instead.</p><div class="warning"><p><strong>Warning:</strong> Once connected, the beacon stops broadcasting and thus will no longer be picked up by ranging, monitoring and discovery until disconnected.</p></div>
 	</div>
 	
 	
 	
 	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/connectWithAttempts:connectionTimeout:">- connectWithAttempts:connectionTimeout:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/connectWithAttempts:connectionTimeout:" title="connectWithAttempts:connectionTimeout:"></a>
+	<h3 class="subsubtitle method-title">connectWithAttempts:connectionTimeout:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Connects to the beacon.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)connectWithAttempts:(NSInteger)<em>attempts</em> connectionTimeout:(NSInteger)<em>timeout</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>attempts</em></dt>
+			<dd><p>Number of connection attempts before giving up.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>timeout</em></dt>
+			<dd><p>Connection timeout in seconds.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This method allows you to overwrite the connection timeout and the number of attempts. Otherwise, it behaves exactly like <a href="#//api/name/connect"><code>connect</code></a>.</p>
+	</div>
 	
 	
 	
@@ -1900,7 +2328,7 @@ Major, Minor, Power and Advertising interval.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Dis<a href="#//api/name/connect">connect</a> device with particular beacon</p>
+		<p>Disconnects from the beacon.</p>
 	</div>		
 	
     
@@ -1911,14 +2339,14 @@ Major, Minor, Power and Advertising interval.</p>
 	
 	
 	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>void</p>
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Always remember to disconnect from the beacon when the connection is no longer required, as the beacon in the connected state stops broadcasting and thus is not being picked up by ranging, monitoring and discovery.</p>
 	</div>
-	
-	
-	
-	
 	
 	
 	
@@ -1941,7 +2369,7 @@ Major, Minor, Power and Advertising interval.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Turn on / off accelerometer in beacon.</p>
+		<p>Enables or disables the accelerometer.</p>
 	</div>		
 	
     
@@ -1954,18 +2382,26 @@ Major, Minor, Power and Advertising interval.</p>
 		<h4 class="method-subtitle parameter-title">Parameters</h4>
 		
 		<dl class="argument-def parameter-def">
+			<dt><em>enable</em></dt>
+			<dd><p>YES to enable, NO to disable the accelerometer.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
 			<dt><em>completion</em></dt>
-			<dd><p>block handling operation completion</p></dd>
+			<dd><p>A block that is called when the accelerometer has been enabled or disabled.</p>
+
+<p>The completion block receives the following parameters:</p>
+
+<ul>
+<li><p><code>BOOL value</code> - YES if the accelerometer has been enabled, NO if the accelerometer has been disabled.</p></li>
+<li><p><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</p></li>
+</ul>
+</dd>
 		</dl>
 		
 	</div>
 	
 	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>void</p>
-	</div>
 	
 	
 	
@@ -1984,7 +2420,9 @@ Major, Minor, Power and Advertising interval.</p>
 		<h4 class="method-subtitle">See Also</h4>
 		<ul>
 			
-			<li><code><p><a href="#//api/name/isAccelerometerAvailable">@property isAccelerometerAvailable</a>, <a href="#//api/name/isAccelerometerEditAvailable">@property isAccelerometerEditAvailable</a></p></code></li>
+			<li><code><p><a href="#//api/name/isAccelerometerAvailable">@property isAccelerometerAvailable</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/isAccelerometerEditAvailable">@property isAccelerometerEditAvailable</a></p></code></li>
 			
 		</ul>
 	</div>
@@ -2006,7 +2444,7 @@ Major, Minor, Power and Advertising interval.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Turn on / off basic <a href="#//api/name/power">power</a> save mode in beacon.</p>
+		<p>Enables or disables the <a href="#//api/name/basicPowerMode"><code>basicPowerMode</code></a>.</p>
 	</div>		
 	
     
@@ -2019,18 +2457,26 @@ Major, Minor, Power and Advertising interval.</p>
 		<h4 class="method-subtitle parameter-title">Parameters</h4>
 		
 		<dl class="argument-def parameter-def">
+			<dt><em>enable</em></dt>
+			<dd><p>YES to enable, NO to disable the Basic Power Mode.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
 			<dt><em>completion</em></dt>
-			<dd><p>block handling operation completion</p></dd>
+			<dd><p>A block that is called when the Basic Power Mode has been enabled or disabled.</p>
+
+<p>The completion block receives the following parameters:</p>
+
+<ul>
+<li><p><code>BOOL value</code> - YES if the Basic Power Mode has been enabled, NO if the Basic Power Mode has been disabled.</p></li>
+<li><p><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</p></li>
+</ul>
+</dd>
 		</dl>
 		
 	</div>
 	
 	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>void</p>
-	</div>
 	
 	
 	
@@ -2057,7 +2503,7 @@ Major, Minor, Power and Advertising interval.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Turn on / off smart <a href="#//api/name/power">power</a> save mode in beacon.</p>
+		<p>Enables or disables the <a href="#//api/name/smartPowerMode"><code>smartPowerMode</code></a>.</p>
 	</div>		
 	
     
@@ -2070,18 +2516,26 @@ Major, Minor, Power and Advertising interval.</p>
 		<h4 class="method-subtitle parameter-title">Parameters</h4>
 		
 		<dl class="argument-def parameter-def">
+			<dt><em>enable</em></dt>
+			<dd><p>YES to enable, NO to disable the Smart Power Mode.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
 			<dt><em>completion</em></dt>
-			<dd><p>block handling operation completion</p></dd>
+			<dd><p>A block that is called when the Smart Power Mode has been enabled or disabled.</p>
+
+<p>The completion block receives the following parameters:</p>
+
+<ul>
+<li><p><code>BOOL value</code> - YES if the Smart Power Mode has been enabled, NO if the Smart Power Mode has been disabled.</p></li>
+<li><p><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</p></li>
+</ul>
+</dd>
 		</dl>
 		
 	</div>
 	
 	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>void</p>
-	</div>
 	
 	
 	
@@ -2108,7 +2562,7 @@ Major, Minor, Power and Advertising interval.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Allows comparison between two ESTBeacon objects</p>
+		<p>Returns a Boolean value that indicates whether a given beacon is equal to the receiver.</p>
 	</div>		
 	
     
@@ -2119,14 +2573,16 @@ Major, Minor, Power and Advertising interval.</p>
 	
 	
 	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>YES or NO</p>
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The comparison is based on <a href="#//api/name/macAddress"><code>macAddress</code></a> if available. If not, the comparison is based on <a href="#//api/name/proximityUUID"><code>proximityUUID</code></a>, <a href="#//api/name/major"><code>major</code></a> and <a href="#//api/name/minor"><code>minor</code></a>.</p><div class="warning"><p><strong>Warning:</strong> You can only compare two <code>ESTBeacon</code> instances if both were discovered using a CoreLocation or a CoreBluetooth based scan. Trying to compare two <code>ESTBeacon</code> instances when one was discovered by a CoreLocation scan and the other one by a CoreBluetooth based scan will yield an undefined result.</p>
+
+<p>This is because an ESTBeacon discovered using a CoreLocation based scan has its <code>proximityUUID</code>, <code>major</code> and <code>minor</code> populated, but not the <code>macAddress</code>. A beacon discovered by a CoreBluetooth based scan will in turn have its <code>macAddress</code> populated, but not the <code>proximityUUID</code>.</p></div>
 	</div>
-	
-	
-	
-	
 	
 	
 	
@@ -2149,7 +2605,7 @@ Major, Minor, Power and Advertising interval.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Reads number of individual accelerometer interactions since last reset.</p>
+		<p>Retrieves the number of times the beacon has been in motion since the last <a href="#//api/name/resetAccelerometerCountWithCompletion:"><code>resetAccelerometerCountWithCompletion:</code></a>.</p>
 	</div>		
 	
     
@@ -2163,17 +2619,20 @@ Major, Minor, Power and Advertising interval.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>completion</em></dt>
-			<dd><p>block handling operation completion</p></dd>
+			<dd><p>A block that is called when the counter has been retrieved.</p>
+
+<p>The completion block receives the following parameters:</p>
+
+<ul>
+<li><p><code>NSNumber *value</code> - The value of the counter.</p></li>
+<li><p><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</p></li>
+</ul>
+</dd>
 		</dl>
 		
 	</div>
 	
 	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>void</p>
-	</div>
 	
 	
 	
@@ -2200,7 +2659,7 @@ Major, Minor, Power and Advertising interval.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Reads temperature value in Celsius from the beacon.</p>
+		<p>Retrieves the temperature of surrounding environment reported by the beacon.</p>
 	</div>		
 	
     
@@ -2214,25 +2673,37 @@ Major, Minor, Power and Advertising interval.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>completion</em></dt>
-			<dd><p>block handling operation completion</p></dd>
+			<dd><p>A block that is called when the temperature has been retrieved from the beacon.</p>
+
+<p>The completion block receives the following parameters:</p>
+
+<ul>
+<li><p><code>NSNumber *value</code> - The temperature in Celsius degrees.</p></li>
+<li><p><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</p></li>
+</ul>
+</dd>
 		</dl>
 		
 	</div>
 	
 	
 	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>void</p>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/calibrateTemperatureWithReferenceTemperature:completion:">- calibrateTemperatureWithReferenceTemperature:completion:</a></p></code></li>
+			
+		</ul>
 	</div>
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	
@@ -2251,7 +2722,7 @@ Major, Minor, Power and Advertising interval.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Resets number of individual accelerometer interactions to 0.</p>
+		<p>Resets the counter - number of times the beacon has been in motion since the last reset.</p>
 	</div>		
 	
     
@@ -2265,17 +2736,20 @@ Major, Minor, Power and Advertising interval.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>completion</em></dt>
-			<dd><p>block handling operation completion</p></dd>
+			<dd><p>A block that is called when the counter has been reset.</p>
+
+<p>The completion block receives the following parameters:</p>
+
+<ul>
+<li><p><code>NSNumber *value</code> - The new value of the counter.</p></li>
+<li><p><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</p></li>
+</ul>
+</dd>
 		</dl>
 		
 	</div>
 	
 	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>void</p>
-	</div>
 	
 	
 	
@@ -2302,8 +2776,7 @@ Major, Minor, Power and Advertising interval.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Resets beacon to factory settings. It changes Major, Minor, UUID,
-Power and Adv Interval to original values.</p>
+		<p>Resets the beacon&rsquo;s <a href="#//api/name/major"><code>major</code></a>, <a href="#//api/name/minor"><code>minor</code></a>, <a href="#//api/name/proximityUUID"><code>proximityUUID</code></a>, broadcasting <a href="#//api/name/power"><code>power</code></a> and <a href="#//api/name/advInterval"><code>advInterval</code></a> to factory settings.</p>
 	</div>		
 	
     
@@ -2317,21 +2790,28 @@ Power and Adv Interval to original values.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>completion</em></dt>
-			<dd><p>block handling operation completion</p></dd>
+			<dd><p>A block that is called when the settings have been reset.</p>
+
+<p>The completion block receives the following parameters:</p>
+
+<ul>
+<li><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</li>
+</ul>
+</dd>
 		</dl>
 		
 	</div>
 	
 	
 	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>void</p>
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="warning"><p><strong>Warning:</strong> This method does not reset the <a href="#//api/name/motionProximityUUID"><code>motionProximityUUID</code></a>. You can reset it yourself to the default value of <code>ESTIMOTE_PROXIMITY_UUID</code> using the <a href="#//api/name/writeMotionProximityUUID:completion:"><code>writeMotionProximityUUID:completion:</code></a> method.</p></div>
 	</div>
-	
-	
-	
-	
 	
 	
 	
@@ -2354,9 +2834,7 @@ Power and Adv Interval to original values.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Verifies if new firmware version is available for download
-and updates firmware of connected beacon. Internet connection
-is required to pass this process.</p>
+		<p>Updates the beacon&rsquo;s firmware.</p>
 	</div>		
 	
     
@@ -2370,22 +2848,33 @@ is required to pass this process.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>progress</em></dt>
-			<dd><p>Block handling operation progress</p></dd>
+			<dd><p>A block that is called throughout the update process to report on the progress.</p>
+
+<p>The progress block receives the following parameters:</p>
+
+<ul>
+<li><p><code>NSInteger value</code> - A percentage value (0-100) indicating the update progress.</p></li>
+<li><p><code>NSString *description</code> - A description of the current stage of the update.</p></li>
+<li><p><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</p></li>
+</ul>
+</dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>completion</em></dt>
-			<dd><p>Block handling operation completion</p></dd>
+			<dd><p>A block that is called when the update has been completed.</p>
+
+<p>The completion block receives the following parameters:</p>
+
+<ul>
+<li><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</li>
+</ul>
+</dd>
 		</dl>
 		
 	</div>
 	
 	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>void</p>
-	</div>
 	
 	
 	
@@ -2412,7 +2901,7 @@ is required to pass this process.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Writes advertising interval (in milliseconds) of connected beacon.</p>
+		<p>Sets the advertising interval, i.e. <a href="#//api/name/advInterval"><code>advInterval</code></a>.</p>
 	</div>		
 	
     
@@ -2425,23 +2914,26 @@ is required to pass this process.</p>
 		<h4 class="method-subtitle parameter-title">Parameters</h4>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>completion</em></dt>
-			<dd><p>block handling operation completion</p></dd>
+			<dt><em>interval</em></dt>
+			<dd><p>The new <code>advInterval</code> in miliseconds. The value must be in range from 100 to 2000.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>advertising</em></dt>
-			<dd><p>interval of beacon (100 - 2000 ms)</p></dd>
+			<dt><em>completion</em></dt>
+			<dd><p>A block that is called when the new <code>advInterval</code> has been set.</p>
+
+<p>The completion block receives the following parameters:</p>
+
+<ul>
+<li><p><code>unsigned short value</code> - The new <code>advInterval</code>.</p></li>
+<li><p><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</p></li>
+</ul>
+</dd>
 		</dl>
 		
 	</div>
 	
 	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>void</p>
-	</div>
 	
 	
 	
@@ -2468,7 +2960,7 @@ is required to pass this process.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Writes <a href="#//api/name/major">major</a> param to bluetooth connected beacon.</p>
+		<p>Sets the <a href="#//api/name/major"><code>major</code></a> value.</p>
 	</div>		
 	
     
@@ -2482,22 +2974,25 @@ is required to pass this process.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>major</em></dt>
-			<dd><p><a href="#//api/name/major">major</a> beacon value</p></dd>
+			<dd><p>The new <code>major</code> value.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>completion</em></dt>
-			<dd><p>block handling operation completion</p></dd>
+			<dd><p>A block that is called when the new <code>major</code> value has been set.</p>
+
+<p>The completion block receives the following parameters:</p>
+
+<ul>
+<li><p><code>unsigned short value</code> - The new <code>major</code> value.</p></li>
+<li><p><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</p></li>
+</ul>
+</dd>
 		</dl>
 		
 	</div>
 	
 	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>void</p>
-	</div>
 	
 	
 	
@@ -2524,7 +3019,7 @@ is required to pass this process.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Writes <a href="#//api/name/minor">minor</a> param to bluetooth connected beacon.</p>
+		<p>Sets the <a href="#//api/name/minor"><code>minor</code></a> value.</p>
 	</div>		
 	
     
@@ -2538,22 +3033,25 @@ is required to pass this process.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>minor</em></dt>
-			<dd><p><a href="#//api/name/minor">minor</a> beacon value</p></dd>
+			<dd><p>The new <code>minor</code> value.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>completion</em></dt>
-			<dd><p>block handling operation completion</p></dd>
+			<dd><p>A block that is called when the new <code>minor</code> value has been set.</p>
+
+<p>The completion block receives the following parameters:</p>
+
+<ul>
+<li><p><code>unsigned short value</code> - The new <code>minor</code> value.</p></li>
+<li><p><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</p></li>
+</ul>
+</dd>
 		</dl>
 		
 	</div>
 	
 	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>void</p>
-	</div>
 	
 	
 	
@@ -2580,8 +3078,7 @@ is required to pass this process.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Writes Motion Proximity UUID param to bluetooth connected beacon.
-It is broadcasted by the beacons when it is in motion.</p>
+		<p>Sets the <a href="#//api/name/motionProximityUUID"><code>motionProximityUUID</code></a>.</p>
 	</div>		
 	
     
@@ -2595,24 +3092,32 @@ It is broadcasted by the beacons when it is in motion.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>pUUID</em></dt>
-			<dd><p>new Motion Proximity UUID value</p></dd>
+			<dd><p>The new <code>motionProximityUUID</code>.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>completion</em></dt>
-			<dd><p>block handling operation completion</p></dd>
+			<dd><p>A block that is called when the new <code>motionProximityUUID</code> has been set.</p>
+
+<p>The completion block receives the following parameters:</p>
+
+<ul>
+<li><code>NSString *value</code> - The new <code>motionProximityUUID</code>.</li>
+<li><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</li>
+</ul>
+</dd>
 		</dl>
 		
 	</div>
 	
 	
 	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>void</p>
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>Estimote OS 2.0</p>
 	</div>
-	
-	
 	
 	
 	
@@ -2637,7 +3142,7 @@ It is broadcasted by the beacons when it is in motion.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Sets Name to the bluetooth connected beacon.</p>
+		<p>Sets the <a href="#//api/name/name"><code>name</code></a> of the beacon.</p>
 	</div>		
 	
     
@@ -2651,22 +3156,25 @@ It is broadcasted by the beacons when it is in motion.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>name</em></dt>
-			<dd><p>new <a href="#//api/name/name">name</a> of the beacon</p></dd>
+			<dd><p>The new name of the beacon.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>completion</em></dt>
-			<dd><p>block handling operation completion</p></dd>
+			<dd><p>A block that is called when the new name has been set.</p>
+
+<p>The completion block receives the following parameters:</p>
+
+<ul>
+<li><p><code>NSString *value</code> - The new name of the beacon.</p></li>
+<li><p><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</p></li>
+</ul>
+</dd>
 		</dl>
 		
 	</div>
 	
 	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>void</p>
-	</div>
 	
 	
 	
@@ -2693,7 +3201,7 @@ It is broadcasted by the beacons when it is in motion.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Writes <a href="#//api/name/power">power</a> of bluetooth connected beacon.</p>
+		<p>Sets the broadcasting <a href="#//api/name/power"><code>power</code></a>.</p>
 	</div>		
 	
     
@@ -2707,22 +3215,25 @@ It is broadcasted by the beacons when it is in motion.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>power</em></dt>
-			<dd><p>advertising beacon <a href="#//api/name/power">power</a></p></dd>
+			<dd><p>The new broadcasting <code>power</code>. Must be one of the <a href="../Constants/ESTBeaconPower.html">ESTBeaconPower</a> values.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>completion</em></dt>
-			<dd><p>block handling operation completion</p></dd>
+			<dd><p>A block that is called when the new broadcasting power has been set.</p>
+
+<p>The completion block receives the following parameters:</p>
+
+<ul>
+<li><code>ESTBeaconPower value</code> - The new broadcasting <code>power</code>.</li>
+<li><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</li>
+</ul>
+</dd>
 		</dl>
 		
 	</div>
 	
 	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>void</p>
-	</div>
 	
 	
 	
@@ -2749,7 +3260,7 @@ It is broadcasted by the beacons when it is in motion.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Writes Proximity UUID param to bluetooth connected beacon.</p>
+		<p>Sets the <a href="#//api/name/proximityUUID"><code>proximityUUID</code></a>.</p>
 	</div>		
 	
     
@@ -2763,26 +3274,34 @@ It is broadcasted by the beacons when it is in motion.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>pUUID</em></dt>
-			<dd><p>new Proximity UUID value</p></dd>
+			<dd><p>The new <code>proximityUUID</code>.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>completion</em></dt>
-			<dd><p>block handling operation completion</p></dd>
+			<dd><p>A block that is called when the new <code>proximityUUID</code> has been set.</p>
+
+<p>The completion block receives the following parameters:</p>
+
+<ul>
+<li><p><code>NSString *value</code> - The new <code>proximityUUID</code>.</p></li>
+<li><p><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</p></li>
+</ul>
+</dd>
 		</dl>
 		
 	</div>
 	
 	
 	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>void</p>
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="warning"><p><strong>Warning:</strong> If you change the <code>proximityUUID</code>, you might want to consider changing the <a href="#//api/name/motionProximityUUID"><code>motionProximityUUID</code></a> as well. If you don&rsquo;t, the beacon will broadcast two different <code>proximityUUIDs</code> depending on whether its in motion or not!@</p></div>
 	</div>
-	
-	
-	
-	
 	
 	
 	
@@ -2813,7 +3332,7 @@ It is broadcasted by the beacons when it is in motion.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 Estimote. All rights reserved. (Last updated: 2014-09-07)</span><br />
+						<p><span class="copyright">&copy; 2014 Estimote. All rights reserved. (Last updated: 2014-09-16)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						

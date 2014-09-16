@@ -2,7 +2,7 @@
 //  ESTBeaconManager.h
 //  EstimoteSDK
 //
-//  Version: 2.1.0
+//  Version: 2.1.1
 //  Created by Marcin Klimek on 9/18/13.
 //  Copyright (c) 2013 Estimote. All rights reserved.
 //
@@ -17,258 +17,350 @@
 @class ESTBeaconManager;
 
 /**
- 
- The ESTBeaconManagerDelegate protocol defines the delegate methods to respond for related events.
+ * The ESTBeaconManagerDelegate protocol defines the delegate methods used to receive beacon ranging, monitoring and discovery events from an ESTBeaconManager object.
  */
 
 @protocol ESTBeaconManagerDelegate <NSObject>
 
 @optional
 
+#pragma mark Monitoring Events
+///--------------------------------------------------------------------
+/// @name Monitoring Events
+///--------------------------------------------------------------------
+
 /**
- * Delegate method invoked when ranging started.
+ * Tells the delegate that a new region is being monitored.
  *
- * @param manager estimote beacon manager
- * @param region estimote beacon region
- *
- * @return void
+ * @param manager The beacon manager object reporting the event.
+ * @param region The region that is being monitored.
  */
 
-- (void)beaconManager:(ESTBeaconManager *)manager
-didStartMonitoringForRegion:(CLRegion *)region;
+-(void)beaconManager:(ESTBeaconManager *)manager
+didStartMonitoringForRegion:(ESTBeaconRegion *)region;
 
 /**
- * Delegate method invoked during ranging.
- * Allows to retrieve NSArray of all discoverd beacons
- * represented with ESTBeacon objects.
+ * Tells the delegate that a region monitoring error occurred.
  *
- * @param manager estimote beacon manager
- * @param beacons all beacons as ESTBeacon objects
- * @param region estimote beacon region
+ * @param manager The beacon manager object reporting the event.
+ * @param region The region for which the error occurred.
+ * @param error An error object describing why monitoring failed.
+ */
+-(void)beaconManager:(ESTBeaconManager *)manager
+monitoringDidFailForRegion:(ESTBeaconRegion *)region
+           withError:(NSError *)error;
+
+/**
+ * Tells the delegate that the user entered the specified region.
  *
- * @return void
+ * Because regions are a shared application resource, every active beacon and location manager object delivers this message to its associated delegate. It does not matter which beacon or location manager actually registered the specified region. And if multiple beacon and location managers share a delegate object, that delegate receives the message multiple times.
+ *
+ *The region object provided may not be the same one that was registered. As a result, you should never perform pointer-level comparisons to determine equality. Instead, use the region's identifier string to determine if your delegate should respond.
+ *
+ * @param manager The beacon manager object reporting the event.
+ * @param region The region that was entered.
+ */
+-(void)beaconManager:(ESTBeaconManager *)manager
+      didEnterRegion:(ESTBeaconRegion *)region;
+
+/**
+ * Tells the delegate that the user left the specified region.
+ *
+ * Because regions are a shared application resource, every active beacon and location manager object delivers this message to its associated delegate. It does not matter which beacon or location manager actually registered the specified region. And if multiple beacon and location managers share a delegate object, that delegate receives the message multiple times.
+ *
+ *The region object provided may not be the same one that was registered. As a result, you should never perform pointer-level comparisons to determine equality. Instead, use the region's identifier string to determine if your delegate should respond.
+ *
+ * @param manager The beacon manager object reporting the event.
+ * @param region The region that was exited.
+ */
+-(void)beaconManager:(ESTBeaconManager *)manager
+       didExitRegion:(ESTBeaconRegion *)region;
+
+/**
+ * Tells the delegate about the state of the specified region.
+ *
+ * The beacon manager calls this method whenever there is a boundary transition for a region. It calls this method in addition to calling the beaconManager:didEnterRegion: and beaconManager:didExitRegion: methods. The beacon manager also calls this method in response to a call to its [ESTBeaconManager requestStateForRegion:] method, which runs asynchronously.
+ *
+ * @param manager The beacon manager object reporting the event.
+ * @param state The state of the specified region: CLRegionStateUnknown, CLRegionStateInside or CLRegionStateOutside.
+ * @param region The region which state was determined.
+ */
+-(void)beaconManager:(ESTBeaconManager *)manager
+   didDetermineState:(CLRegionState)state
+           forRegion:(ESTBeaconRegion *)region;
+
+#pragma mark Ranging Events
+///--------------------------------------------------------------------
+/// @name Ranging Events
+///--------------------------------------------------------------------
+
+/**
+ * Tells the delegate that one or more beacons are in range.
+ *
+ * @param manager The beacon manager object reporting the event.
+ * @param beacons An array of ESTBeacon objects representing the beacons currently in range. You can use the information in these objects to determine the range of each beacon and its identifying information.
+ * @param region The region that was used to range the beacons.
  */
 - (void)beaconManager:(ESTBeaconManager *)manager
       didRangeBeacons:(NSArray *)beacons
              inRegion:(ESTBeaconRegion *)region;
 
 /**
- * Delegate method invoked wehen ranging fails
- * for particular region. Related NSError object passed.
+ * Tells the delegate that a region ranging error occurred.
  *
- * @param manager estimote beacon manager
- * @param region estimote beacon region
- * @param error object containing error info
- *
- * @return void
+ * @param manager The beacon manager object reporting the event.
+ * @param region The region for which the error occurred.
+ * @param error An error object describing why ranging failed.
  */
 -(void)beaconManager:(ESTBeaconManager *)manager
 rangingBeaconsDidFailForRegion:(ESTBeaconRegion *)region
            withError:(NSError *)error;
 
+#pragma mark CoreBluetooth Discovery Events
+///--------------------------------------------------------------------
+/// @name CoreBluetooth Discovery Events
+///--------------------------------------------------------------------
 
 /**
- * Delegate method invoked wehen monitoring fails
- * for particular region. Related NSError object passed.
+ * Tells the delegate that one or more beacons were discovered in the vicinity of the device.
  *
- * @param manager estimote beacon manager
- * @param region estimote beacon region
- * @param error object containing error info
- *
- * @return void
+ * @param manager The beacon manager object reporting the event.
+ * @param beacons An array of ESTBeacon objects representing the beacons discovered.
+ * @param region The region that was used to discover the beacons.
  */
 -(void)beaconManager:(ESTBeaconManager *)manager
-monitoringDidFailForRegion:(ESTBeaconRegion *)region
-           withError:(NSError *)error;
+  didDiscoverBeacons:(NSArray *)beacons
+            inRegion:(ESTBeaconRegion *)region;
+
 /**
- * Method triggered when iOS device enters estimote 
- * beacon region during monitoring.
+ * Tells the delegate that beacons discovery error occurred.
  *
- * @param manager estimote beacon manager
- * @param region estimote beacon region
- *
- * @return void
+ * @param manager The beacon manager object reporting the event.
+ * @param region An error object describing why discovery failed.
  */
 -(void)beaconManager:(ESTBeaconManager *)manager
-      didEnterRegion:(ESTBeaconRegion *)region;
+didFailDiscoveryInRegion:(ESTBeaconRegion *)region;
 
-
-/**
- * Method triggered when iOS device leaves estimote
- * beacon region during monitoring.
- *
- * @param manager estimote beacon manager
- * @param region estimote beacon region
- *
- * @return void
- */
--(void)beaconManager:(ESTBeaconManager *)manager
-       didExitRegion:(ESTBeaconRegion *)region;
+#pragma mark Advertising Events
+///--------------------------------------------------------------------
+/// @name Advertising Events
+///--------------------------------------------------------------------
 
 /**
- * Method triggered when estimote beacon region state
- * was determined using requestStateForRegion:
+ * Tells the delegate the the device started advertising as an iBeacon.
  *
- * @param manager estimote beacon manager
- * @param state estimote beacon region state
- * @param region estimote beacon region
- *
- * @return void
- */
--(void)beaconManager:(ESTBeaconManager *)manager
-     didDetermineState:(CLRegionState)state
-             forRegion:(ESTBeaconRegion *)region;
-
-/**
- * Method triggered when device starts advertising
- * as iBeacon.
- *
- * @param manager estimote beacon manager
- * @param error info about any error
- *
- * @return void
+ * @param manager The beacon manager object reporting the event.
+ * @param error If an error occurred, this error object describes the error. If the operation completed successfully, the value is nil.
  */
 -(void)beaconManagerDidStartAdvertising:(ESTBeaconManager *)manager
                                   error:(NSError *)error;
 
-/**
- * Delegate method invoked to handle discovered
- * ESTBeacon objects using CoreBluetooth framework
- * in particular region.
- *
- * @param manager estimote beacon manager
- * @param beacons all beacons as ESTBeacon objects
- * @param region estimote beacon region
- *
- * @return void
- */
-- (void)beaconManager:(ESTBeaconManager *)manager
-          didDiscoverBeacons:(NSArray *)beacons
-                    inRegion:(ESTBeaconRegion *)region;
+#pragma mark Authorization Change Events (new in iOS 8)
+///--------------------------------------------------------------------
+/// @name Authorization Change Events (new in iOS 8)
+///--------------------------------------------------------------------
 
 /**
- * Delegate method invoked when CoreBluetooth based
- * discovery process fails.
+ * Tells the delegate that the authorization status for the application changed.
  *
- * @param manager estimote beacon manager
- * @param region estimote beacon region
+ * This method is called whenever the application's ability to use location services changes. Changes can occur because the user allowed or denied the use of location services for your application or for the system as a whole.
  *
- * @return void
+ * If the authorization status is already known when you call the requestWhenInUseAuthorization or requestAlwaysAuthorization method, the beacon manager does not report the current authorization status to this method. The beacon manager only reports changes to the authorization status. For example, it calls this method when the status changes from kCLAuthorizationStatusNotDetermined to kCLAuthorizationStatusAuthorizedWhenInUse.
  */
 - (void)beaconManager:(ESTBeaconManager *)manager
-    didFailDiscoveryInRegion:(ESTBeaconRegion *)region;
-
-
-
+didChangeAuthorizationStatus:(CLAuthorizationStatus)status;
 
 @end
 
-
-
 /**
- 
- The ESTBeaconManager class defines the interface for handling and configuring the estimote beacons and get related events to your application. You use an instance of this class to establish the parameters that describes each beacon behavior. You can also use a beacon manager object to retrieve all beacons in range.
- 
- A beacon manager object provides support for the following location-related activities:
- 
- * Monitoring distinct regions of interest and generating location events when the user enters or leaves those regions (works in background mode).
- * Reporting the range to nearby beacons and ther distance for the device.
- 
+ * The ESTBeaconManager class defines the interface for discovering, ranging and monitoring beacons and beacon regions, as well as configuring the iOS device to act as an iBeacon.
  */
-
 @interface ESTBeaconManager : NSObject <CLLocationManagerDelegate>
 
+#pragma mark Beacon Manager Configuration
+///--------------------------------------------------------------------
+/// @name Beacon Manager Configuration
+///--------------------------------------------------------------------
+
+/**
+ * The delegate object to receive update events.
+ *
+ * @see ESTBeaconDelegate
+ */
 @property (nonatomic, weak) id <ESTBeaconManagerDelegate> delegate;
 
 /**
- Allows to avoid beacons with unknown state (proximity == 0), when ranging. Default value is NO.
+ * Sets App ID and App Token, enabling communication with the Estimote Cloud API.
+ *
+ * You can find your API App ID and API App Token in the Account Settings section of the Estimote Cloud.
+ *
+ * @param appID The API App ID.
+ * @param appToken The API App Token.
+ */
++(void)setupAppID:(NSString*)appID andAppToken:(NSString*)appToken;
+
+/**
+ * Checks if App ID and App Token were set.
+ */
++(BOOL)isAuthorized;
+
+/**
+ * When set to YES, ranging will skip all the beacons with proximity equal to CLProximityUnknown.
  */
 @property (nonatomic) BOOL avoidUnknownStateBeacons;
 
 /**
- Stability improving property. Prevents update of beacons distance and zone property for defined number of ranging cycles when it goes to unknown state. 
+ * When proximity of a ranged beacon is CLProximityUnknown, iOS reports certain properties such as rssi or distance as unknown too. This property enables you to retain last known attributes of the beacon for a certain amount of time after its proximity changes to CLProximityUnknown.
+ *
+ * The value of this property reflects the number of ranging events which reported the beacon in the CLProximityUnknown state required to reset its attributes. By default this is 1, which means a single ranging event is enough to reset the beacon's attributes - resulting in immediate refreshes of all the CLProximityUnknown beacons. If you set it to e.g. 3, then 3 consecutive ranging events reporting the beacon as CLProximityUnknown are required to drop its last known attributes.
+ *
+ * You can use this property to improve ranging stability when your beacons are often reported as CLProximityUnknown, e.g. due to high advertising intervals.
  */
 @property (nonatomic) NSInteger preventUnknownUpdateCount;
 
 /**
- When ranging few different regions, beaconManager:didRangeBeacons:inRegion delegate method returns array of combined beacon sets for all regions.
+ * When ranging multiple regions, setting this to YES will result in a single [ESTBeaconManagerDelegate beaconManager:didRangeBeacons:inRegion:] invocation reporting all the beacons ranged in all the regions for which ranging was started. In such case, the inRegion parameter will be nil, as ranging result does not represent a single region, but all the ranged regions instead.
  */
 @property (nonatomic) BOOL returnAllRangedBeaconsAtOnce;
 
-
-- (void)updateRangeLimit:(NSInteger)limit;
-
-
-#pragma mark - CoreLocation based iBeacon monitoring and ranging methods
-
-/// @name CoreLocation based iBeacon monitoring and ranging methods
-
 /**
- * Range Estimote beacon described with region object.
- * Delegate method beaconManager:didRangeBeacons:inRegion: 
- * is used to retrieve found beacons. Returned NSArray contains 
- * ESTBeacon objects.
- *
- * @param region estimote beacon region (nil starts ranging all estimote beacons)
- *
- * @return void
+ * Sets the limit (500 by default) of beacons to be delivered to the [ESTBeaconManagerDelegate beaconManager:didRangeBeacons:inRegion:] delegate method.
  */
--(void)startRangingBeaconsInRegion:(ESTBeaconRegion*)region;
+-(void)updateRangeLimit:(NSInteger)limit;
 
-
+#pragma mark CoreLocation Authorization (new in iOS 8)
+///--------------------------------------------------------------------
+/// @name CoreLocation Authorization (new in iOS 8)
+///--------------------------------------------------------------------
 
 /**
- * Start monitoring for particular region.
- * Functionality works in the background mode as well.
- * Every time you enter or leave region appropriet
- * delegate method inovked: beaconManager:didEnterRegtion:
- * and beaconManager:didExitRegion:
+ * Returns the app's authorization status for using location services.
  *
- * @param region estimote beacon region (nil starts monitoring all estimote beacons)
+ * For more details about the new location services authorization model please refer to the CoreLocation documentation.
  *
- * @return void
+ * @see +[CLLocationManager authorizationStatus]
+ *
+ * @return A value indicating whether the app is authorized to use location services.
+ */
++(CLAuthorizationStatus)authorizationStatus;
+
+/**
+ * Requests permission to use location services while the app is in the foreground.
+ *
+ * "When in use" authorization is sufficient to use beacon ranging (startRangingBeaconsInRegion:) and monitoring (startMonitoringForRegion:) in the foreground, but is not enough to use monitoring in the background and will not relaunch a terminated app upon a monitoring event.
+ *
+ * For more details about the new location services authorization model please refer to the CoreLocation documentation.
+ *
+ * @see -[CLLocationManager requestWhenInUseAuthorization]
+ */
+- (void)requestWhenInUseAuthorization;
+
+/**
+ * Requests permission to use location services whenever the app is running.
+ *
+ * "Always" authorization is required to use beacon monitoring (startMonitoringForRegion:) in the background and to relaunch a terminated app upon a monitoring event.
+ *
+ * For more details about the new location services authorization model please refer to the CoreLocation documentation.
+ *
+ * @see -[CLLocationManager requestWhenInUseAuthorization]
+ */
+- (void)requestAlwaysAuthorization;
+
+#pragma mark CoreLocation Based Scanning
+///--------------------------------------------------------------------
+/// @name CoreLocation Based Scanning
+///--------------------------------------------------------------------
+
+/**
+ * Starts monitoring the specified region.
+ *
+ * If an existing region with the same identifier is already being monitored by the application, the old region is replaced by the new one. The regions you add using this method are shared by all beacon and location manager objects in your application.
+ *
+ * Region events are delivered to the [ESTBeaconManagerDelegate beaconManager:didEnterRegion:] and [ESTBeaconManagerDelegate beaconManager:didExitRegion:] methods of your delegate. If there is an error, the beacon manager calls the [ESTBeaconManagerDelegate beaconManager:monitoringDidFailForRegion:withError:] method of your delegate instead.
+ *
+ * @param region The region object that defines the boundary to monitor. This parameter must not be nil.
+ *
+ * @see ESTBeaconRegion
+ * @see stopMonitoringForRegion:
  */
 -(void)startMonitoringForRegion:(ESTBeaconRegion*)region;
 
 /**
- * Stops ranging Estimote beacons.
+ * Stops monitoring the specified region.
  *
- * @param region estimote beacon region (parameter can not be nil)
+ * If the specified region object is not currently being monitored, this method has no effect.
  *
- * @return void
- */
--(void)stopRangingBeaconsInRegion:(ESTBeaconRegion*)region;
-
-/**
- * Unsubscribe application from iOS monitoring of
- * Estimote beacon region.
+ * @param region The region object currently being monitored. This parameter must not be nil. The object you specify need not be the exact same object that you registered but its beacon region attributes should be the same.
  *
- * @param region estimote beacon region (parameter can not be nil)
- *
- * @return void
+ * @see ESTBeaconRegion
+ * @see startMonitoringForRegion:
  */
 -(void)stopMonitoringForRegion:(ESTBeaconRegion *)region;
 
 /**
- * Allows to validate current state for particular region
+ * Starts the delivery of notifications for beacons in the specified region.
  *
- * @param region estimote beacon region
+ * Once registered, the beacon manager reports any encountered beacons to its delegate by calling the [ESTBeaconManagerDelegate beaconManager:didRangeBeacons:inRegion:] method. If there is an error registering the specified beacon region, the beacon manager calls its delegate's [ESTBeaconManagerDelegate beaconManager:rangingBeaconsDidFailForRegion:withError:] method and provides the appropriate error information.
  *
- * @return void
+ * @param region The region object that defines the identifying information for the targeted beacons. The number of beacons represented by this region object depends on which identifier values you use to initialize it. Beacons must match all of the identifiers you specify. This method copies the region information it needs from the object you provide. If nil, defaults to targeting all beacons with proximityUUID equal to ESTIMOTE_PROXIMITY_UUID.
+ *
+ * @see ESTBeaconRegion
+ * @see stopRangingBeaconsInRegion:
+ */
+-(void)startRangingBeaconsInRegion:(ESTBeaconRegion*)region;
+
+/**
+ * Stops the delivery of notifications for the specified beacon region.
+ *
+ * @param region The region that identifies the beacons. The object you specify need not be the exact same object that you registered but its beacon region attributes should be the same. If nil, defaults to targeting all beacons with proximityUUID equal to ESTIMOTE_PROXIMITY_UUID.
+ *
+ * @see ESTBeaconRegion
+ * @see startRangingBeaconsInRegion:
+ */
+-(void)stopRangingBeaconsInRegion:(ESTBeaconRegion*)region;
+
+/**
+ * Retrieves the state of a region.
+ *
+ * This method performs the request asynchronously and delivers the results to the beacon manager's delegate. You must implement the [ESTBeaconManagerDelegate beaconManager:didDetermineState:forRegion:] method in the delegate to receive the results.
+ *
+ * @param region The region whose state you want to know.
  */
 -(void)requestStateForRegion:(ESTBeaconRegion *)region;
 
-/// @name Turning device into iBeacon
+#pragma mark CoreBluetooth Based Scanning
+///--------------------------------------------------------------------
+/// @name CoreBluetooth Based Scanning
+///--------------------------------------------------------------------
 
 /**
- * Allows to turn device into virtual estimote beacon.
+ * Starts a CoreBluetooth scan in search for Estimote Beacons matching the beacon region provided.
  *
- * @param proximityUUID proximity UUID beacon value
- * @param major minor beacon value
- * @param minor major beacon value
- * @param identifier unique identifier for you region
+ * Only a single CoreBluetooth based beacon discovery can be active at the same time.
  *
- * @return void
+ * @warning The CoreBluetooth based discovery ignores the provided region's proximityUUID property, returning beacons matching the major and minor values regardless of their proximityUUID.
+ *
+ * @param region The region object that defines the identifying information for the targeted beacons.
+ */
+-(void)startEstimoteBeaconsDiscoveryForRegion:(ESTBeaconRegion*)region;
+
+/**
+ * Stops the CoreBluetooth based beacon discovery.
+ */
+-(void)stopEstimoteBeaconDiscovery;
+
+#pragma mark Advertising as iBeacon
+///--------------------------------------------------------------------
+/// @name Advertising as iBeacon
+///--------------------------------------------------------------------
+
+/**
+ * Start advertising the iOS device as a Bluetooth beacon.
+ *
+ * @param proximityUUID The proximityUUID to advertise.
+ * @param major The major to advertise.
+ * @param minor The minor to advertise.
+ * @param identifier The identifier of the region used to advertise.
  */
 -(void)startAdvertisingWithProximityUUID:(NSUUID *)proximityUUID
                                    major:(CLBeaconMajorValue)major
@@ -276,74 +368,67 @@ monitoringDidFailForRegion:(ESTBeaconRegion *)region
                               identifier:(NSString*)identifier;
 
 /**
- * Stop beacon advertising
- *
- * @return void
+ * Stop advertising the iOS device as a Bluetooh beacon.
  */
 -(void)stopAdvertising;
 
-
-/// @name CoreBluetooth based utility methods
-#pragma mark - CoreBluetooth based utility methods
+#pragma mark Utility
+///--------------------------------------------------------------------
+/// @name Utility
+///--------------------------------------------------------------------
 
 /**
- * Start single beacon discovery process based on CoreBluetooth
- * framework. Method is useful for older beacons discovery 
- * that are not advertising as iBeacons.
+ * Fetches a list of all the user's beacons from the Estimote Cloud.
  *
- * @param region estimote beacon region (nil discovers all estimote beacons)
+ * @param completion A block that is called when the list has been feteched from the Cloud.
  *
- * @return void
+ * The completion block receives the following parameters:
+ *
+ * - NSArray *listOfBeacons - An array of ESTBeaconVO objects.
+ *
+ * - NSError *error - If an error occurred, this error object describes the error. If the operation completed successfully, the value is nil.
+ *
+ * The ESTBeaconVO object is a value object with the following properties:
+ *
+ * - NSString *UUID
+ *
+ * - NSNumber *major
+ *
+ * - NSNumber *minor
+ *
+ * - NSString *macAddress
+ *
+ * - NSNumber *batteryLifeExpectancy
+ *
+ * - NSString *hardware
+ *
+ * - NSString *firmware
+ *
+ * - ESTBeaconPower power
+ *
+ * - NSInteger advInterval
+ *
+ * - NSString *name
+ *
+ * - ESTBeaconColor color
  */
--(void)startEstimoteBeaconsDiscoveryForRegion:(ESTBeaconRegion*)region;
+-(void)fetchEstimoteBeaconsWithCompletion:(ESTArrayCompletionBlock)completion;
 
 /**
- * Stops CoreBluetooth based beacon discovery process.
+ * A list of UUIDs that have been written to and read from beacons.
  *
- * @return void
- */
--(void)stopEstimoteBeaconDiscovery;
-
-/**
- * Get the array of UUIDs that were saved to beacons
- *
- * @return NSArray of UUID strings
+ * @return NSArray An array of NSString objects with UUID strings.
  */
 +(NSArray *)recentlyUsedUUIDs;
 
 /**
- * Get the array of ESTBeaconVO object that was cached 
- * after last Estimote Cloud fetch.
+ * A list of recently fetched ESTBeaconVO objects.
  *
- * @return NSArray of recently fetched beacons (ESTBeaconVO objects)
+ * This array is first populated when setupAppID:andAppToken: is called with correct credentials, and then refreshed each time fetchEstimoteBeaconsWithCompletion: is called.
+ *
+ * @return NSArray An array of ESTBeaconVO objects.
  */
 +(NSArray *)recentlyCachedBeacons;
-
-/// @name Estimote Cloud based methods
-#pragma mark - Estimote Cloud based methods
-/**
- * Setup App ID and App token that allows to access beacons information stored in Estimote Cloud.
- *
- * @return void
- */
-+(void)setupAppID:(NSString*)appID andAppToken:(NSString*)appToken;
-
-/**
- * Check if AppID and appToken were set.
- *
- * @return BOOL determining if AppID and appToken were set
- */
-+(BOOL)isAuthorized;
-
-/**
- * Fetch beacons that are assign to your account.
- * Method works only after successful authentication.
- *
- * @param completion block handling operation completion
- *
- * @return void
- */
--(void)fetchEstimoteBeaconsWithCompletion:(ESTArrayCompletionBlock)completion;
 
 @end
 

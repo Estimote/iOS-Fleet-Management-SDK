@@ -43,6 +43,8 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
+	<option value="//api/name/beaconManager:didChangeAuthorizationStatus:">&nbsp;&nbsp;&nbsp;&nbsp;- beaconManager:didChangeAuthorizationStatus:</option>
+	
 	<option value="//api/name/beaconManager:didDetermineState:forRegion:">&nbsp;&nbsp;&nbsp;&nbsp;- beaconManager:didDetermineState:forRegion:</option>
 	
 	<option value="//api/name/beaconManager:didDiscoverBeacons:inRegion:">&nbsp;&nbsp;&nbsp;&nbsp;- beaconManager:didDiscoverBeacons:inRegion:</option>
@@ -79,6 +81,16 @@
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Monitoring Events">Monitoring Events</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Ranging Events">Ranging Events</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_CoreBluetooth Discovery Events">CoreBluetooth Discovery Events</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Advertising Events">Advertising Events</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Authorization Change Events (new in iOS 8)">Authorization Change Events (new in iOS 8)</a></span></li>
+	
 </ul></li>
 
 
@@ -90,6 +102,8 @@
 
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beaconManager:didChangeAuthorizationStatus:">beaconManager:didChangeAuthorizationStatus:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beaconManager:didDetermineState:forRegion:">beaconManager:didDetermineState:forRegion:</a></span></li>
 	
@@ -148,7 +162,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>The ESTBeaconManagerDelegate protocol defines the delegate methods to respond for related events.</p>
+						<p>The <code>ESTBeaconManagerDelegate</code> protocol defines the delegate methods used to receive beacon ranging, monitoring and discovery events from an <a href="../Classes/ESTBeaconManager.html"><code>ESTBeaconManager</code></a> object.</p>
 					</div>
 					
 					
@@ -160,25 +174,13 @@
 						<h2 class="subtitle subtitle-tasks">Tasks</h2>
 						
 						
-						
-						
+						<a title="Monitoring Events" name="task_Monitoring Events"></a>
+						<h3 class="subsubtitle task-title">Monitoring Events</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/beaconManager:didStartMonitoringForRegion:">&ndash;&nbsp;beaconManager:didStartMonitoringForRegion:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/beaconManager:didRangeBeacons:inRegion:">&ndash;&nbsp;beaconManager:didRangeBeacons:inRegion:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/beaconManager:rangingBeaconsDidFailForRegion:withError:">&ndash;&nbsp;beaconManager:rangingBeaconsDidFailForRegion:withError:</a></code>
 	</span>
 	
 	
@@ -206,13 +208,35 @@
 	</span>
 	
 	
-</li><li>
+</li>
+						</ul>
+						
+						
+						<a title="Ranging Events" name="task_Ranging Events"></a>
+						<h3 class="subsubtitle task-title">Ranging Events</h3>
+
+						<ul class="task-list">
+							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/beaconManagerDidStartAdvertising:error:">&ndash;&nbsp;beaconManagerDidStartAdvertising:error:</a></code>
+		<code><a href="#//api/name/beaconManager:didRangeBeacons:inRegion:">&ndash;&nbsp;beaconManager:didRangeBeacons:inRegion:</a></code>
 	</span>
 	
 	
 </li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/beaconManager:rangingBeaconsDidFailForRegion:withError:">&ndash;&nbsp;beaconManager:rangingBeaconsDidFailForRegion:withError:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="CoreBluetooth Discovery Events" name="task_CoreBluetooth Discovery Events"></a>
+						<h3 class="subsubtitle task-title">CoreBluetooth Discovery Events</h3>
+
+						<ul class="task-list">
+							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/beaconManager:didDiscoverBeacons:inRegion:">&ndash;&nbsp;beaconManager:didDiscoverBeacons:inRegion:</a></code>
 	</span>
@@ -221,6 +245,34 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/beaconManager:didFailDiscoveryInRegion:">&ndash;&nbsp;beaconManager:didFailDiscoveryInRegion:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Advertising Events" name="task_Advertising Events"></a>
+						<h3 class="subsubtitle task-title">Advertising Events</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/beaconManagerDidStartAdvertising:error:">&ndash;&nbsp;beaconManagerDidStartAdvertising:error:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Authorization Change Events (new in iOS 8)" name="task_Authorization Change Events (new in iOS 8)"></a>
+						<h3 class="subsubtitle task-title">Authorization Change Events (new in iOS 8)</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/beaconManager:didChangeAuthorizationStatus:">&ndash;&nbsp;beaconManager:didChangeAuthorizationStatus:</a></code>
 	</span>
 	
 	
@@ -242,14 +294,56 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
+	<a name="//api/name/beaconManager:didChangeAuthorizationStatus:" title="beaconManager:didChangeAuthorizationStatus:"></a>
+	<h3 class="subsubtitle method-title">beaconManager:didChangeAuthorizationStatus:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Tells the delegate that the authorization status for the application changed.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)beaconManager:(ESTBeaconManager *)<em>manager</em> didChangeAuthorizationStatus:(CLAuthorizationStatus)<em>status</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This method is called whenever the application&rsquo;s ability to use location services changes. Changes can occur because the user allowed or denied the use of location services for your application or for the system as a whole.</p>
+
+<p>If the authorization status is already known when you call the <code>requestWhenInUseAuthorization</code> or <code>requestAlwaysAuthorization</code> method, the beacon manager does not report the current authorization status to this method. The beacon manager only reports changes to the authorization status. For example, it calls this method when the status changes from <code>kCLAuthorizationStatusNotDetermined</code> to <code>kCLAuthorizationStatusAuthorizedWhenInUse</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/beaconManager:didDetermineState:forRegion:" title="beaconManager:didDetermineState:forRegion:"></a>
 	<h3 class="subsubtitle method-title">beaconManager:didDetermineState:forRegion:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Method triggered when estimote beacon region state
-was determined using requestStateForRegion:</p>
+		<p>Tells the delegate about the state of the specified region.</p>
 	</div>		
 	
     
@@ -263,31 +357,31 @@ was determined using requestStateForRegion:</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>manager</em></dt>
-			<dd><p>estimote beacon manager</p></dd>
+			<dd><p>The beacon manager object reporting the event.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>state</em></dt>
-			<dd><p>estimote beacon region state</p></dd>
+			<dd><p>The state of the specified region: <code>CLRegionStateUnknown</code>, <code>CLRegionStateInside</code> or <code>CLRegionStateOutside</code>.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>region</em></dt>
-			<dd><p>estimote beacon region</p></dd>
+			<dd><p>The region which state was determined.</p></dd>
 		</dl>
 		
 	</div>
 	
 	
 	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>void</p>
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The beacon manager calls this method whenever there is a boundary transition for a region. It calls this method in addition to calling the <a href="#//api/name/beaconManager:didEnterRegion:"><code>beaconManager:didEnterRegion:</code></a> and <a href="#//api/name/beaconManager:didExitRegion:"><code>beaconManager:didExitRegion:</code></a> methods. The beacon manager also calls this method in response to a call to its <a href="../Classes/ESTBeaconManager.html#//api/name/requestStateForRegion:"><code>[ESTBeaconManager requestStateForRegion:]</code></a> method, which runs asynchronously.</p>
 	</div>
-	
-	
-	
-	
 	
 	
 	
@@ -310,9 +404,7 @@ was determined using requestStateForRegion:</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Delegate method invoked to handle discovered
-<a href="../Classes/ESTBeacon.html">ESTBeacon</a> objects using CoreBluetooth framework
-in particular region.</p>
+		<p>Tells the delegate that one or more beacons were discovered in the vicinity of the device.</p>
 	</div>		
 	
     
@@ -326,27 +418,22 @@ in particular region.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>manager</em></dt>
-			<dd><p>estimote beacon manager</p></dd>
+			<dd><p>The beacon manager object reporting the event.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>beacons</em></dt>
-			<dd><p>all beacons as <a href="../Classes/ESTBeacon.html">ESTBeacon</a> objects</p></dd>
+			<dd><p>An array of <a href="../Classes/ESTBeacon.html"><code>ESTBeacon</code></a> objects representing the beacons discovered.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>region</em></dt>
-			<dd><p>estimote beacon region</p></dd>
+			<dd><p>The region that was used to discover the beacons.</p></dd>
 		</dl>
 		
 	</div>
 	
 	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>void</p>
-	</div>
 	
 	
 	
@@ -373,8 +460,7 @@ in particular region.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Method triggered when iOS device enters estimote
-beacon region during monitoring.</p>
+		<p>Tells the delegate that the user entered the specified region.</p>
 	</div>		
 	
     
@@ -388,26 +474,28 @@ beacon region during monitoring.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>manager</em></dt>
-			<dd><p>estimote beacon manager</p></dd>
+			<dd><p>The beacon manager object reporting the event.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>region</em></dt>
-			<dd><p>estimote beacon region</p></dd>
+			<dd><p>The region that was entered.</p></dd>
 		</dl>
 		
 	</div>
 	
 	
 	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>void</p>
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Because regions are a shared application resource, every active beacon and location manager object delivers this message to its associated delegate. It does not matter which beacon or location manager actually registered the specified region. And if multiple beacon and location managers share a delegate object, that delegate receives the message multiple times.</p>
+
+<p>The region object provided may not be the same one that was registered. As a result, you should never perform pointer-level comparisons to determine equality. Instead, use the region&rsquo;s identifier string to determine if your delegate should respond.</p>
 	</div>
-	
-	
-	
-	
 	
 	
 	
@@ -430,8 +518,7 @@ beacon region during monitoring.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Method triggered when iOS device leaves estimote
-beacon region during monitoring.</p>
+		<p>Tells the delegate that the user left the specified region.</p>
 	</div>		
 	
     
@@ -445,26 +532,28 @@ beacon region during monitoring.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>manager</em></dt>
-			<dd><p>estimote beacon manager</p></dd>
+			<dd><p>The beacon manager object reporting the event.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>region</em></dt>
-			<dd><p>estimote beacon region</p></dd>
+			<dd><p>The region that was exited.</p></dd>
 		</dl>
 		
 	</div>
 	
 	
 	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>void</p>
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Because regions are a shared application resource, every active beacon and location manager object delivers this message to its associated delegate. It does not matter which beacon or location manager actually registered the specified region. And if multiple beacon and location managers share a delegate object, that delegate receives the message multiple times.</p>
+
+<p>The region object provided may not be the same one that was registered. As a result, you should never perform pointer-level comparisons to determine equality. Instead, use the region&rsquo;s identifier string to determine if your delegate should respond.</p>
 	</div>
-	
-	
-	
-	
 	
 	
 	
@@ -487,8 +576,7 @@ beacon region during monitoring.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Delegate method invoked when CoreBluetooth based
-discovery process fails.</p>
+		<p>Tells the delegate that beacons discovery error occurred.</p>
 	</div>		
 	
     
@@ -502,22 +590,17 @@ discovery process fails.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>manager</em></dt>
-			<dd><p>estimote beacon manager</p></dd>
+			<dd><p>The beacon manager object reporting the event.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>region</em></dt>
-			<dd><p>estimote beacon region</p></dd>
+			<dd><p>An error object describing why discovery failed.</p></dd>
 		</dl>
 		
 	</div>
 	
 	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>void</p>
-	</div>
 	
 	
 	
@@ -544,9 +627,7 @@ discovery process fails.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Delegate method invoked during ranging.
-Allows to retrieve NSArray of all discoverd beacons
-represented with <a href="../Classes/ESTBeacon.html">ESTBeacon</a> objects.</p>
+		<p>Tells the delegate that one or more beacons are in range.</p>
 	</div>		
 	
     
@@ -560,27 +641,22 @@ represented with <a href="../Classes/ESTBeacon.html">ESTBeacon</a> objects.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>manager</em></dt>
-			<dd><p>estimote beacon manager</p></dd>
+			<dd><p>The beacon manager object reporting the event.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>beacons</em></dt>
-			<dd><p>all beacons as <a href="../Classes/ESTBeacon.html">ESTBeacon</a> objects</p></dd>
+			<dd><p>An array of <a href="../Classes/ESTBeacon.html"><code>ESTBeacon</code></a> objects representing the beacons currently in range. You can use the information in these objects to determine the range of each beacon and its identifying information.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>region</em></dt>
-			<dd><p>estimote beacon region</p></dd>
+			<dd><p>The region that was used to range the beacons.</p></dd>
 		</dl>
 		
 	</div>
 	
 	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>void</p>
-	</div>
 	
 	
 	
@@ -607,12 +683,12 @@ represented with <a href="../Classes/ESTBeacon.html">ESTBeacon</a> objects.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Delegate method invoked when ranging started.</p>
+		<p>Tells the delegate that a new region is being monitored.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)beaconManager:(ESTBeaconManager *)<em>manager</em> didStartMonitoringForRegion:(CLRegion *)<em>region</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)beaconManager:(ESTBeaconManager *)<em>manager</em> didStartMonitoringForRegion:(ESTBeaconRegion *)<em>region</em></code></div>
 
     
 	
@@ -621,22 +697,17 @@ represented with <a href="../Classes/ESTBeacon.html">ESTBeacon</a> objects.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>manager</em></dt>
-			<dd><p>estimote beacon manager</p></dd>
+			<dd><p>The beacon manager object reporting the event.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>region</em></dt>
-			<dd><p>estimote beacon region</p></dd>
+			<dd><p>The region that is being monitored.</p></dd>
 		</dl>
 		
 	</div>
 	
 	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>void</p>
-	</div>
 	
 	
 	
@@ -663,8 +734,7 @@ represented with <a href="../Classes/ESTBeacon.html">ESTBeacon</a> objects.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Delegate method invoked wehen monitoring fails
-for particular region. Related NSError object passed.</p>
+		<p>Tells the delegate that a region monitoring error occurred.</p>
 	</div>		
 	
     
@@ -678,27 +748,22 @@ for particular region. Related NSError object passed.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>manager</em></dt>
-			<dd><p>estimote beacon manager</p></dd>
+			<dd><p>The beacon manager object reporting the event.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>region</em></dt>
-			<dd><p>estimote beacon region</p></dd>
+			<dd><p>The region for which the error occurred.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>error</em></dt>
-			<dd><p>object containing error info</p></dd>
+			<dd><p>An error object describing why monitoring failed.</p></dd>
 		</dl>
 		
 	</div>
 	
 	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>void</p>
-	</div>
 	
 	
 	
@@ -725,8 +790,7 @@ for particular region. Related NSError object passed.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Delegate method invoked wehen ranging fails
-for particular region. Related NSError object passed.</p>
+		<p>Tells the delegate that a region ranging error occurred.</p>
 	</div>		
 	
     
@@ -740,27 +804,22 @@ for particular region. Related NSError object passed.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>manager</em></dt>
-			<dd><p>estimote beacon manager</p></dd>
+			<dd><p>The beacon manager object reporting the event.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>region</em></dt>
-			<dd><p>estimote beacon region</p></dd>
+			<dd><p>The region for which the error occurred.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>error</em></dt>
-			<dd><p>object containing error info</p></dd>
+			<dd><p>An error object describing why ranging failed.</p></dd>
 		</dl>
 		
 	</div>
 	
 	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>void</p>
-	</div>
 	
 	
 	
@@ -787,8 +846,7 @@ for particular region. Related NSError object passed.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Method triggered when device starts advertising
-as iBeacon.</p>
+		<p>Tells the delegate the the device started advertising as an iBeacon.</p>
 	</div>		
 	
     
@@ -802,22 +860,17 @@ as iBeacon.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>manager</em></dt>
-			<dd><p>estimote beacon manager</p></dd>
+			<dd><p>The beacon manager object reporting the event.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>error</em></dt>
-			<dd><p>info about any error</p></dd>
+			<dd><p>If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</p></dd>
 		</dl>
 		
 	</div>
 	
 	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>void</p>
-	</div>
 	
 	
 	
@@ -852,7 +905,7 @@ as iBeacon.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 Estimote. All rights reserved. (Last updated: 2014-09-07)</span><br />
+						<p><span class="copyright">&copy; 2014 Estimote. All rights reserved. (Last updated: 2014-09-16)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						

@@ -2,7 +2,7 @@
 //  ESTBeaconDefinitions.h
 //  EstimoteSDK
 //
-//  Version: 2.1.0
+//  Version: 2.1.1
 //  Created by Marcin Klimek on 9/26/13.
 //  Copyright (c) 2013 Estimote. All rights reserved.
 //
@@ -44,19 +44,6 @@ typedef NS_ENUM(int, ESTBeaconFirmwareState)
 {
     ESTBeaconFirmwareStateBoot,
     ESTBeaconFirmwareStateApp
-};
-
-typedef NS_ENUM(int, ESTEvent)
-{
-    ESTEventEnterRegion,
-    ESTEventExitRegion
-};
-
-typedef NS_ENUM(int, ESTProximity)
-{
-    ESTProximityImmediate,
-    ESTProximityNear,
-    ESTProximityFar
 };
 
 typedef NS_ENUM(int, ESTBeaconColor)

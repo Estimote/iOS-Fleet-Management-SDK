@@ -41,6 +41,8 @@
 	
 	<option value="//api/name/avoidUnknownStateBeacons">&nbsp;&nbsp;&nbsp;&nbsp;avoidUnknownStateBeacons</option>
 	
+	<option value="//api/name/delegate">&nbsp;&nbsp;&nbsp;&nbsp;delegate</option>
+	
 	<option value="//api/name/preventUnknownUpdateCount">&nbsp;&nbsp;&nbsp;&nbsp;preventUnknownUpdateCount</option>
 	
 	<option value="//api/name/returnAllRangedBeaconsAtOnce">&nbsp;&nbsp;&nbsp;&nbsp;returnAllRangedBeaconsAtOnce</option>
@@ -49,6 +51,8 @@
 	
 	
 	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/authorizationStatus">&nbsp;&nbsp;&nbsp;&nbsp;+ authorizationStatus</option>
 	
 	<option value="//api/name/isAuthorized">&nbsp;&nbsp;&nbsp;&nbsp;+ isAuthorized</option>
 	
@@ -65,7 +69,11 @@
 	
 	<option value="//api/name/fetchEstimoteBeaconsWithCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- fetchEstimoteBeaconsWithCompletion:</option>
 	
+	<option value="//api/name/requestAlwaysAuthorization">&nbsp;&nbsp;&nbsp;&nbsp;- requestAlwaysAuthorization</option>
+	
 	<option value="//api/name/requestStateForRegion:">&nbsp;&nbsp;&nbsp;&nbsp;- requestStateForRegion:</option>
+	
+	<option value="//api/name/requestWhenInUseAuthorization">&nbsp;&nbsp;&nbsp;&nbsp;- requestWhenInUseAuthorization</option>
 	
 	<option value="//api/name/startAdvertisingWithProximityUUID:major:minor:identifier:">&nbsp;&nbsp;&nbsp;&nbsp;- startAdvertisingWithProximityUUID:major:minor:identifier:</option>
 	
@@ -83,6 +91,8 @@
 	
 	<option value="//api/name/stopRangingBeaconsInRegion:">&nbsp;&nbsp;&nbsp;&nbsp;- stopRangingBeaconsInRegion:</option>
 	
+	<option value="//api/name/updateRangeLimit:">&nbsp;&nbsp;&nbsp;&nbsp;- updateRangeLimit:</option>
+	
 	
 	
 </select>
@@ -99,17 +109,17 @@
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Publicly available properties">Publicly available properties</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Beacon Manager Configuration">Beacon Manager Configuration</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_CoreLocation based iBeacon monitoring and ranging methods">CoreLocation based iBeacon monitoring and ranging methods</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_CoreLocation Authorization (new in iOS 8)">CoreLocation Authorization (new in iOS 8)</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Turning device into iBeacon">Turning device into iBeacon</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_CoreLocation Based Scanning">CoreLocation Based Scanning</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_CoreBluetooth based utility methods">CoreBluetooth based utility methods</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_CoreBluetooth Based Scanning">CoreBluetooth Based Scanning</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Estimote Cloud based methods">Estimote Cloud based methods</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Advertising as iBeacon">Advertising as iBeacon</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Beacon cache related methods">Beacon cache related methods</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Utility">Utility</a></span></li>
 	
 </ul></li>
 
@@ -121,6 +131,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/avoidUnknownStateBeacons">avoidUnknownStateBeacons</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/delegate">delegate</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/preventUnknownUpdateCount">preventUnknownUpdateCount</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/returnAllRangedBeaconsAtOnce">returnAllRangedBeaconsAtOnce</a></span></li>
@@ -130,6 +142,8 @@
 
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/authorizationStatus">authorizationStatus</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isAuthorized">isAuthorized</a></span></li>
 	
@@ -147,7 +161,11 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fetchEstimoteBeaconsWithCompletion:">fetchEstimoteBeaconsWithCompletion:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestAlwaysAuthorization">requestAlwaysAuthorization</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestStateForRegion:">requestStateForRegion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/requestWhenInUseAuthorization">requestWhenInUseAuthorization</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/startAdvertisingWithProximityUUID:major:minor:identifier:">startAdvertisingWithProximityUUID:major:minor:identifier:</a></span></li>
 	
@@ -164,6 +182,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stopMonitoringForRegion:">stopMonitoringForRegion:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stopRangingBeaconsInRegion:">stopRangingBeaconsInRegion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/updateRangeLimit:">updateRangeLimit:</a></span></li>
 	
 </ul></li>
 
@@ -205,15 +225,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>The ESTBeaconManager class defines the interface for handling and configuring the estimote beacons and get related events to your application. You use an instance of this class to establish the parameters that describes each beacon behavior. You can also use a beacon manager object to retrieve all beacons in range.</p>
-
-<p>A beacon manager object provides support for the following location-related activities:</p>
-
-<ul>
-<li>Monitoring distinct regions of interest and generating location events when the user enters or leaves those regions (works in background mode).</li>
-<li>Reporting the range to nearby beacons and ther distance for the device.</li>
-</ul>
-
+						<p>The <code>ESTBeaconManager</code> class defines the interface for discovering, ranging and monitoring beacons and beacon regions, as well as configuring the iOS device to act as an iBeacon.</p>
 					</div>
 					
 					
@@ -225,11 +237,29 @@
 						<h2 class="subtitle subtitle-tasks">Tasks</h2>
 						
 						
-						<a title="Publicly available properties" name="task_Publicly available properties"></a>
-						<h3 class="subsubtitle task-title">Publicly available properties</h3>
+						<a title="Beacon Manager Configuration" name="task_Beacon Manager Configuration"></a>
+						<h3 class="subsubtitle task-title">Beacon Manager Configuration</h3>
 
 						<ul class="task-list">
 							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/delegate">&nbsp;&nbsp;delegate</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setupAppID:andAppToken:">+&nbsp;setupAppID:andAppToken:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isAuthorized">+&nbsp;isAuthorized</a></code>
+	</span>
+	
+	
+</li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/avoidUnknownStateBeacons">&nbsp;&nbsp;avoidUnknownStateBeacons</a></code>
 	</span>
@@ -247,21 +277,47 @@
 	</span>
 	<span class="task-item-suffix">property</span>
 	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/updateRangeLimit:">&ndash;&nbsp;updateRangeLimit:</a></code>
+	</span>
+	
+	
 </li>
 						</ul>
 						
 						
-						<a title="CoreLocation based iBeacon monitoring and ranging methods" name="task_CoreLocation based iBeacon monitoring and ranging methods"></a>
-						<h3 class="subsubtitle task-title">CoreLocation based iBeacon monitoring and ranging methods</h3>
+						<a title="CoreLocation Authorization (new in iOS 8)" name="task_CoreLocation Authorization (new in iOS 8)"></a>
+						<h3 class="subsubtitle task-title">CoreLocation Authorization (new in iOS 8)</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/startRangingBeaconsInRegion:">&ndash;&nbsp;startRangingBeaconsInRegion:</a></code>
+		<code><a href="#//api/name/authorizationStatus">+&nbsp;authorizationStatus</a></code>
 	</span>
 	
 	
 </li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/requestWhenInUseAuthorization">&ndash;&nbsp;requestWhenInUseAuthorization</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/requestAlwaysAuthorization">&ndash;&nbsp;requestAlwaysAuthorization</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="CoreLocation Based Scanning" name="task_CoreLocation Based Scanning"></a>
+						<h3 class="subsubtitle task-title">CoreLocation Based Scanning</h3>
+
+						<ul class="task-list">
+							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/startMonitoringForRegion:">&ndash;&nbsp;startMonitoringForRegion:</a></code>
 	</span>
@@ -269,13 +325,19 @@
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/stopRangingBeaconsInRegion:">&ndash;&nbsp;stopRangingBeaconsInRegion:</a></code>
+		<code><a href="#//api/name/stopMonitoringForRegion:">&ndash;&nbsp;stopMonitoringForRegion:</a></code>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/stopMonitoringForRegion:">&ndash;&nbsp;stopMonitoringForRegion:</a></code>
+		<code><a href="#//api/name/startRangingBeaconsInRegion:">&ndash;&nbsp;startRangingBeaconsInRegion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stopRangingBeaconsInRegion:">&ndash;&nbsp;stopRangingBeaconsInRegion:</a></code>
 	</span>
 	
 	
@@ -289,28 +351,8 @@
 						</ul>
 						
 						
-						<a title="Turning device into iBeacon" name="task_Turning device into iBeacon"></a>
-						<h3 class="subsubtitle task-title">Turning device into iBeacon</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/startAdvertisingWithProximityUUID:major:minor:identifier:">&ndash;&nbsp;startAdvertisingWithProximityUUID:major:minor:identifier:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/stopAdvertising">&ndash;&nbsp;stopAdvertising</a></code>
-	</span>
-	
-	
-</li>
-						</ul>
-						
-						
-						<a title="CoreBluetooth based utility methods" name="task_CoreBluetooth based utility methods"></a>
-						<h3 class="subsubtitle task-title">CoreBluetooth based utility methods</h3>
+						<a title="CoreBluetooth Based Scanning" name="task_CoreBluetooth Based Scanning"></a>
+						<h3 class="subsubtitle task-title">CoreBluetooth Based Scanning</h3>
 
 						<ul class="task-list">
 							<li>
@@ -329,25 +371,19 @@
 						</ul>
 						
 						
-						<a title="Estimote Cloud based methods" name="task_Estimote Cloud based methods"></a>
-						<h3 class="subsubtitle task-title">Estimote Cloud based methods</h3>
+						<a title="Advertising as iBeacon" name="task_Advertising as iBeacon"></a>
+						<h3 class="subsubtitle task-title">Advertising as iBeacon</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/setupAppID:andAppToken:">+&nbsp;setupAppID:andAppToken:</a></code>
+		<code><a href="#//api/name/startAdvertisingWithProximityUUID:major:minor:identifier:">&ndash;&nbsp;startAdvertisingWithProximityUUID:major:minor:identifier:</a></code>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/isAuthorized">+&nbsp;isAuthorized</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/fetchEstimoteBeaconsWithCompletion:">&ndash;&nbsp;fetchEstimoteBeaconsWithCompletion:</a></code>
+		<code><a href="#//api/name/stopAdvertising">&ndash;&nbsp;stopAdvertising</a></code>
 	</span>
 	
 	
@@ -355,11 +391,17 @@
 						</ul>
 						
 						
-						<a title="Beacon cache related methods" name="task_Beacon cache related methods"></a>
-						<h3 class="subsubtitle task-title">Beacon cache related methods</h3>
+						<a title="Utility" name="task_Utility"></a>
+						<h3 class="subsubtitle task-title">Utility</h3>
 
 						<ul class="task-list">
 							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/fetchEstimoteBeaconsWithCompletion:">&ndash;&nbsp;fetchEstimoteBeaconsWithCompletion:</a></code>
+	</span>
+	
+	
+</li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/recentlyUsedUUIDs">+&nbsp;recentlyUsedUUIDs</a></code>
 	</span>
@@ -391,7 +433,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Allows to avoid beacons with unknown state (proximity == 0), when ranging. Default value is NO.</p>
+		<p>When set to YES, ranging will skip all the beacons with <code>proximity</code> equal to <code>CLProximityUnknown</code>.</p>
 	</div>		
 	
     
@@ -421,13 +463,58 @@
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/delegate" title="delegate"></a>
+	<h3 class="subsubtitle method-title">delegate</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The delegate object to receive update events.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;ESTBeaconManagerDelegate&gt; delegate</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Protocols/ESTBeaconDelegate.html">ESTBeaconDelegate</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/preventUnknownUpdateCount" title="preventUnknownUpdateCount"></a>
 	<h3 class="subsubtitle method-title">preventUnknownUpdateCount</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Stability improving property. Prevents update of beacons distance and zone property for defined number of ranging cycles when it goes to unknown state.</p>
+		<p>When <code>proximity</code> of a ranged beacon is <code>CLProximityUnknown</code>, iOS reports certain properties such as <code>rssi</code> or <code>distance</code> as unknown too. This property enables you to retain last known attributes of the beacon for a certain amount of time after its proximity changes to <code>CLProximityUnknown</code>.</p>
 	</div>		
 	
     
@@ -441,6 +528,13 @@
 	
 	
 	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The value of this property reflects the number of ranging events which reported the beacon in the <code>CLProximityUnknown</code> state required to reset its attributes. By default this is 1, which means a single ranging event is enough to reset the beacon&rsquo;s attributes - resulting in immediate refreshes of all the <code>CLProximityUnknown</code> beacons. If you set it to e.g. 3, then 3 consecutive ranging events reporting the beacon as <code>CLProximityUnknown</code> are required to drop its last known attributes.</p>
+
+<p>You can use this property to improve ranging stability when your beacons are often reported as <code>CLProximityUnknown</code>, e.g. due to high advertising intervals.</p>
+	</div>
 	
 	
 	
@@ -463,7 +557,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>When ranging few different regions, beaconManager:didRangeBeacons:inRegion delegate method returns array of combined beacon sets for all regions.</p>
+		<p>When ranging multiple regions, setting this to YES will result in a single <a href="../Protocols/ESTBeaconManagerDelegate.html#//api/name/beaconManager:didRangeBeacons:inRegion:"><code>[ESTBeaconManagerDelegate beaconManager:didRangeBeacons:inRegion:]</code></a> invocation reporting all the beacons ranged in all the regions for which ranging was started. In such case, the <code>inRegion</code> parameter will be <code>nil</code>, as ranging result does not represent a single region, but all the ranged regions instead.</p>
 	</div>		
 	
     
@@ -501,13 +595,68 @@
 						<h2 class="subtitle subtitle-methods">Class Methods</h2>
 						
 						<div class="section-method">
+	<a name="//api/name/authorizationStatus" title="authorizationStatus"></a>
+	<h3 class="subsubtitle method-title">authorizationStatus</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the app&rsquo;s authorization status for using location services.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (CLAuthorizationStatus)authorizationStatus</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>A value indicating whether the app is authorized to use location services.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>For more details about the new location services authorization model please refer to the CoreLocation documentation.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p>[CLLocationManager authorizationStatus]</p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/isAuthorized" title="isAuthorized"></a>
 	<h3 class="subsubtitle method-title">isAuthorized</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Check if AppID and appToken were set.</p>
+		<p>Checks if App ID and App Token were set.</p>
 	</div>		
 	
     
@@ -517,11 +666,6 @@
     
 	
 	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>BOOL determining if AppID and appToken were set</p>
-	</div>
 	
 	
 	
@@ -548,8 +692,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Get the array of ESTBeaconVO object that was cached
-after last Estimote Cloud fetch.</p>
+		<p>A list of recently fetched <code>ESTBeaconVO</code> objects.</p>
 	</div>		
 	
     
@@ -562,12 +705,17 @@ after last Estimote Cloud fetch.</p>
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>NSArray of recently fetched beacons (ESTBeaconVO objects)</p>
+		<p>NSArray An array of <code>ESTBeaconVO</code> objects.</p>
 	</div>
 	
 	
 	
 	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This array is first populated when <a href="#//api/name/setupAppID:andAppToken:"><code>setupAppID:andAppToken:</code></a> is called with correct credentials, and then refreshed each time <a href="#//api/name/fetchEstimoteBeaconsWithCompletion:"><code>fetchEstimoteBeaconsWithCompletion:</code></a> is called.</p>
+	</div>
 	
 	
 	
@@ -590,7 +738,7 @@ after last Estimote Cloud fetch.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Get the array of UUIDs that were saved to beacons</p>
+		<p>A list of UUIDs that have been written to and read from beacons.</p>
 	</div>		
 	
     
@@ -603,7 +751,7 @@ after last Estimote Cloud fetch.</p>
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>NSArray of UUID strings</p>
+		<p>NSArray An array of <code>NSString</code> objects with UUID strings.</p>
 	</div>
 	
 	
@@ -631,7 +779,7 @@ after last Estimote Cloud fetch.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Setup App ID and App token that allows to access beacons information stored in Estimote Cloud.</p>
+		<p>Sets App ID and App Token, enabling communication with the Estimote Cloud API.</p>
 	</div>		
 	
     
@@ -640,16 +788,31 @@ after last Estimote Cloud fetch.</p>
 
     
 	
-	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>void</p>
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>appID</em></dt>
+			<dd><p>The API App ID.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>appToken</em></dt>
+			<dd><p>The API App Token.</p></dd>
+		</dl>
+		
 	</div>
 	
 	
 	
 	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>You can find your API App ID and API App Token in the Account Settings section of the Estimote Cloud.</p>
+	</div>
 	
 	
 	
@@ -680,8 +843,7 @@ after last Estimote Cloud fetch.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Fetch beacons that are assign to your account.
-Method works only after successful authentication.</p>
+		<p>Fetches a list of all the user&rsquo;s beacons from the Estimote Cloud.</p>
 	</div>		
 	
     
@@ -695,25 +857,97 @@ Method works only after successful authentication.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>completion</em></dt>
-			<dd><p>block handling operation completion</p></dd>
+			<dd><p>A block that is called when the list has been feteched from the Cloud.</p>
+
+<p>The completion block receives the following parameters:</p>
+
+<ul>
+<li><p><code>NSArray *listOfBeacons</code> - An array of <code>ESTBeaconVO</code> objects.</p></li>
+<li><p><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</p></li>
+</ul>
+
+
+<p>The <code>ESTBeaconVO</code> object is a value object with the following properties:</p>
+
+<ul>
+<li><p><code>NSString *UUID</code></p></li>
+<li><p><code>NSNumber *major</code></p></li>
+<li><p><code>NSNumber *minor</code></p></li>
+<li><p><code>NSString *macAddress</code></p></li>
+<li><p><code>NSNumber *batteryLifeExpectancy</code></p></li>
+<li><p><code>NSString *hardware</code></p></li>
+<li><p><code>NSString *firmware</code></p></li>
+<li><p><code>ESTBeaconPower power</code></p></li>
+<li><p><code>NSInteger advInterval</code></p></li>
+<li><p><code>NSString *name</code></p></li>
+<li><p><code>ESTBeaconColor color</code></p></li>
+</ul>
+</dd>
 		</dl>
 		
 	</div>
 	
 	
 	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>void</p>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/requestAlwaysAuthorization" title="requestAlwaysAuthorization"></a>
+	<h3 class="subsubtitle method-title">requestAlwaysAuthorization</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Requests permission to use location services whenever the app is running.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)requestAlwaysAuthorization</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>&ldquo;Always&rdquo; authorization is required to use beacon monitoring (<a href="#//api/name/startMonitoringForRegion:"><code>startMonitoringForRegion:</code></a>) in the background and to relaunch a terminated app upon a monitoring event.</p>
+
+<p>For more details about the new location services authorization model please refer to the CoreLocation documentation.</p>
 	</div>
 	
 	
 	
 	
 	
-	
-	
-	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p>[CLLocationManager requestWhenInUseAuthorization]</p></code></li>
+			
+		</ul>
+	</div>
 	
 	
 	
@@ -732,7 +966,7 @@ Method works only after successful authentication.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Allows to validate current state for particular region</p>
+		<p>Retrieves the state of a region.</p>
 	</div>		
 	
     
@@ -746,16 +980,20 @@ Method works only after successful authentication.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>region</em></dt>
-			<dd><p>estimote beacon region</p></dd>
+			<dd><p>The region whose state you want to know.</p></dd>
 		</dl>
 		
 	</div>
 	
 	
 	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>void</p>
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This method performs the request asynchronously and delivers the results to the beacon manager&rsquo;s <a href="#//api/name/delegate"><code>delegate</code></a>. You must implement the <a href="../Protocols/ESTBeaconManagerDelegate.html#//api/name/beaconManager:didDetermineState:forRegion:"><code>[ESTBeaconManagerDelegate beaconManager:didDetermineState:forRegion:]</code></a> method in the <code>delegate</code> to receive the results.</p>
 	</div>
 	
 	
@@ -764,7 +1002,55 @@ Method works only after successful authentication.</p>
 	
 	
 	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconManager.h</code><br />
+	</div>				
 	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/requestWhenInUseAuthorization" title="requestWhenInUseAuthorization"></a>
+	<h3 class="subsubtitle method-title">requestWhenInUseAuthorization</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Requests permission to use location services while the app is in the foreground.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)requestWhenInUseAuthorization</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>&ldquo;When in use&rdquo; authorization is sufficient to use beacon ranging (<a href="#//api/name/startRangingBeaconsInRegion:"><code>startRangingBeaconsInRegion:</code></a>) and monitoring (<a href="#//api/name/startMonitoringForRegion:"><code>startMonitoringForRegion:</code></a>) in the foreground, but is not enough to use monitoring in the background and will not relaunch a terminated app upon a monitoring event.</p>
+
+<p>For more details about the new location services authorization model please refer to the CoreLocation documentation.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p>[CLLocationManager requestWhenInUseAuthorization]</p></code></li>
+			
+		</ul>
+	</div>
 	
 	
 	
@@ -783,7 +1069,7 @@ Method works only after successful authentication.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Allows to turn device into virtual estimote beacon.</p>
+		<p>Start advertising the iOS device as a Bluetooth beacon.</p>
 	</div>		
 	
     
@@ -797,32 +1083,27 @@ Method works only after successful authentication.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>proximityUUID</em></dt>
-			<dd><p>proximity UUID beacon value</p></dd>
+			<dd><p>The <code>proximityUUID</code> to advertise.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>major</em></dt>
-			<dd><p>minor beacon value</p></dd>
+			<dd><p>The <code>major</code> to advertise.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>minor</em></dt>
-			<dd><p>major beacon value</p></dd>
+			<dd><p>The <code>minor</code> to advertise.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>identifier</em></dt>
-			<dd><p>unique identifier for you region</p></dd>
+			<dd><p>The identifier of the region used to advertise.</p></dd>
 		</dl>
 		
 	</div>
 	
 	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>void</p>
-	</div>
 	
 	
 	
@@ -849,9 +1130,7 @@ Method works only after successful authentication.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Start single beacon discovery process based on CoreBluetooth
-framework. Method is useful for older beacons discovery
-that are not advertising as iBeacons.</p>
+		<p>Starts a CoreBluetooth scan in search for Estimote Beacons matching the beacon region provided.</p>
 	</div>		
 	
     
@@ -865,21 +1144,21 @@ that are not advertising as iBeacons.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>region</em></dt>
-			<dd><p>estimote beacon region (nil discovers all estimote beacons)</p></dd>
+			<dd><p>The region object that defines the identifying information for the targeted beacons.</p></dd>
 		</dl>
 		
 	</div>
 	
 	
 	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>void</p>
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Only a single CoreBluetooth based beacon discovery can be active at the same time.</p><div class="warning"><p><strong>Warning:</strong> The CoreBluetooth based discovery ignores the provided region&rsquo;s <code>proximityUUID</code> property, returning beacons matching the <code>major</code> and <code>minor</code> values regardless of their <code>proximityUUID</code>.</p></div>
 	</div>
-	
-	
-	
-	
 	
 	
 	
@@ -902,11 +1181,7 @@ that are not advertising as iBeacons.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Start monitoring for particular region.
-Functionality works in the background mode as well.
-Every time you enter or leave region appropriet
-delegate method inovked: beaconManager:didEnterRegtion:
-and beaconManager:didExitRegion:</p>
+		<p>Starts monitoring the specified region.</p>
 	</div>		
 	
     
@@ -920,25 +1195,38 @@ and beaconManager:didExitRegion:</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>region</em></dt>
-			<dd><p>estimote beacon region (nil starts monitoring all estimote beacons)</p></dd>
+			<dd><p>The region object that defines the boundary to monitor. This parameter must not be <code>nil.</code></p></dd>
 		</dl>
 		
 	</div>
 	
 	
 	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>void</p>
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>If an existing region with the same identifier is already being monitored by the application, the old region is replaced by the new one. The regions you add using this method are shared by all beacon and location manager objects in your application.</p>
+
+<p>Region events are delivered to the <a href="../Protocols/ESTBeaconManagerDelegate.html#//api/name/beaconManager:didEnterRegion:"><code>[ESTBeaconManagerDelegate beaconManager:didEnterRegion:]</code></a> and <a href="../Protocols/ESTBeaconManagerDelegate.html#//api/name/beaconManager:didExitRegion:"><code>[ESTBeaconManagerDelegate beaconManager:didExitRegion:]</code></a> methods of your <a href="#//api/name/delegate"><code>delegate</code></a>. If there is an error, the beacon manager calls the <a href="../Protocols/ESTBeaconManagerDelegate.html#//api/name/beaconManager:monitoringDidFailForRegion:withError:"><code>[ESTBeaconManagerDelegate beaconManager:monitoringDidFailForRegion:withError:]</code></a> method of your <code>delegate</code> instead.</p>
 	</div>
 	
 	
 	
 	
 	
-	
-	
-	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Classes/ESTBeaconRegion.html">ESTBeaconRegion</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/stopMonitoringForRegion:">- stopMonitoringForRegion:</a></p></code></li>
+			
+		</ul>
+	</div>
 	
 	
 	
@@ -957,10 +1245,7 @@ and beaconManager:didExitRegion:</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Range Estimote beacon described with region object.
-Delegate method beaconManager:didRangeBeacons:inRegion:
-is used to retrieve found beacons. Returned NSArray contains
-<a href="../Classes/ESTBeacon.html">ESTBeacon</a> objects.</p>
+		<p>Starts the delivery of notifications for beacons in the specified region.</p>
 	</div>		
 	
     
@@ -974,25 +1259,36 @@ is used to retrieve found beacons. Returned NSArray contains
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>region</em></dt>
-			<dd><p>estimote beacon region (nil starts ranging all estimote beacons)</p></dd>
+			<dd><p>The region object that defines the identifying information for the targeted beacons. The number of beacons represented by this region object depends on which identifier values you use to initialize it. Beacons must match all of the identifiers you specify. This method copies the region information it needs from the object you provide. If <code>nil</code>, defaults to targeting all beacons with <code>proximityUUID</code> equal to <code>ESTIMOTE_PROXIMITY_UUID</code>.</p></dd>
 		</dl>
 		
 	</div>
 	
 	
 	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>void</p>
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Once registered, the beacon manager reports any encountered beacons to its delegate by calling the <a href="../Protocols/ESTBeaconManagerDelegate.html#//api/name/beaconManager:didRangeBeacons:inRegion:"><code>[ESTBeaconManagerDelegate beaconManager:didRangeBeacons:inRegion:]</code></a> method. If there is an error registering the specified beacon region, the beacon manager calls its delegate&rsquo;s <a href="../Protocols/ESTBeaconManagerDelegate.html#//api/name/beaconManager:rangingBeaconsDidFailForRegion:withError:"><code>[ESTBeaconManagerDelegate beaconManager:rangingBeaconsDidFailForRegion:withError:]</code></a> method and provides the appropriate error information.</p>
 	</div>
 	
 	
 	
 	
 	
-	
-	
-	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Classes/ESTBeaconRegion.html">ESTBeaconRegion</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/stopRangingBeaconsInRegion:">- stopRangingBeaconsInRegion:</a></p></code></li>
+			
+		</ul>
+	</div>
 	
 	
 	
@@ -1011,7 +1307,7 @@ is used to retrieve found beacons. Returned NSArray contains
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Stop beacon advertising</p>
+		<p>Stop advertising the iOS device as a Bluetooh beacon.</p>
 	</div>		
 	
     
@@ -1021,11 +1317,6 @@ is used to retrieve found beacons. Returned NSArray contains
     
 	
 	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>void</p>
-	</div>
 	
 	
 	
@@ -1052,7 +1343,7 @@ is used to retrieve found beacons. Returned NSArray contains
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Stops CoreBluetooth based beacon discovery process.</p>
+		<p>Stops the CoreBluetooth based beacon discovery.</p>
 	</div>		
 	
     
@@ -1062,11 +1353,6 @@ is used to retrieve found beacons. Returned NSArray contains
     
 	
 	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>void</p>
-	</div>
 	
 	
 	
@@ -1093,8 +1379,7 @@ is used to retrieve found beacons. Returned NSArray contains
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Unsubscribe application from iOS monitoring of
-Estimote beacon region.</p>
+		<p>Stops monitoring the specified region.</p>
 	</div>		
 	
     
@@ -1108,25 +1393,36 @@ Estimote beacon region.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>region</em></dt>
-			<dd><p>estimote beacon region (parameter can not be nil)</p></dd>
+			<dd><p>The region object currently being monitored. This parameter must not be <code>nil</code>. The object you specify need not be the exact same object that you registered but its beacon region attributes should be the same.</p></dd>
 		</dl>
 		
 	</div>
 	
 	
 	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>void</p>
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>If the specified region object is not currently being monitored, this method has no effect.</p>
 	</div>
 	
 	
 	
 	
 	
-	
-	
-	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Classes/ESTBeaconRegion.html">ESTBeaconRegion</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/startMonitoringForRegion:">- startMonitoringForRegion:</a></p></code></li>
+			
+		</ul>
+	</div>
 	
 	
 	
@@ -1145,7 +1441,7 @@ Estimote beacon region.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Stops ranging Estimote beacons.</p>
+		<p>Stops the delivery of notifications for the specified beacon region.</p>
 	</div>		
 	
     
@@ -1159,17 +1455,59 @@ Estimote beacon region.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>region</em></dt>
-			<dd><p>estimote beacon region (parameter can not be nil)</p></dd>
+			<dd><p>The region that identifies the beacons. The object you specify need not be the exact same object that you registered but its beacon region attributes should be the same. If <code>nil</code>, defaults to targeting all beacons with <code>proximityUUID</code> equal to <code>ESTIMOTE_PROXIMITY_UUID</code>.</p></dd>
 		</dl>
 		
 	</div>
 	
 	
 	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>void</p>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Classes/ESTBeaconRegion.html">ESTBeaconRegion</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/startRangingBeaconsInRegion:">- startRangingBeaconsInRegion:</a></p></code></li>
+			
+		</ul>
 	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/updateRangeLimit:" title="updateRangeLimit:"></a>
+	<h3 class="subsubtitle method-title">updateRangeLimit:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the limit (500 by default) of beacons to be delivered to the <a href="../Protocols/ESTBeaconManagerDelegate.html#//api/name/beaconManager:didRangeBeacons:inRegion:"><code>[ESTBeaconManagerDelegate beaconManager:didRangeBeacons:inRegion:]</code></a> delegate method.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)updateRangeLimit:(NSInteger)<em>limit</em></code></div>
+
+    
+	
+	
 	
 	
 	
@@ -1204,7 +1542,7 @@ Estimote beacon region.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 Estimote. All rights reserved. (Last updated: 2014-09-07)</span><br />
+						<p><span class="copyright">&copy; 2014 Estimote. All rights reserved. (Last updated: 2014-09-16)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						

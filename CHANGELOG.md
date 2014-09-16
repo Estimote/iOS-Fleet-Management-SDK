@@ -1,3 +1,12 @@
+## 2.1.1 (Semptember 16, 2014)
+
+Features:
+ - Support for iOS 8 Authorization changes
+
+Improvements:
+ - Documentation updated
+ - Option to define connection timeout and number of attempts
+
 ## 2.1.0 (Semptember 4, 2014)
 
 Features:
