@@ -1,4 +1,4 @@
-EstimoteSDK for iOS 7
+EstimoteSDK for iOS
 =======
 
 Introduction
@@ -10,13 +10,13 @@ Overview
 -------
 
 
-Estimote SDK is a wrapper around Apple's CoreLocation framework. The SDK requires iOS 7, as it is based on the recently introduced CoreLocation framework functionality called iBeacon. It consists of 3 classes: ESTBeaconManager, ESTBeaconRegion and ESTBeacon. Each Estimote SDK class has a corresponding CoreLocation class (CLLocationManager, CLBeaconRegion, CLBeacon) created specifically for the Estimate Beacons Platform.
+Estimote SDK is a wrapper around Apple's CoreLocation framework. The SDK requires iOS 7+, as it is based on the CoreLocation's support for iBeacon first introduced in iOS 7. The featureset of this Estimote SDK is wrapped mostly in 3 classes: ESTBeaconManager, ESTBeaconRegion and ESTBeacon. Each class corresponds to a similar CoreLocation class (CLLocationManager, CLBeaconRegion, CLBeacon), but also introduces functionalities specific for the Estimate Beacons Platform.
 
 ESTBeaconManager is the starting point of the library. It allows you to get a list of all Estimote beacon devices (represented by ESTBeacon objects). It exposes monitoring and ranging methods in a similar fashion to CLLocationManager. In addition to location functionality, it allows you to get a list of beacons based on the CoreBluetooth framework. It is extremely important to have this possibility in case the device stops advertising in an iBeacon manner.
 
-ESTBeaconRegion directly extends the CLBeaconRegion class of the CoreLocation framework, as the Estimote Beacon Platform uses single ProximityUUID. This class helps with creating the region object faster. You don't need to manually manage the ProximityUUID parameter.
+ESTBeaconRegion directly extends the CLBeaconRegion class of the CoreLocation framework.
 
-ESTBeacon represents a single beacon device. Objects of this class are generated using ESTBeaconManager (There is no point in creating them manually). The most important difference, compared to CLBeacon class, is two way communication with the beacon device. Keeping reference to the original CLBeacon object allows you to connect with the device and interact with it. All available bluetooth characteristics, like signal power or major/minor value, can be read and changed to create a customized behavior. The firmware update option is available using this class as well.
+ESTBeacon represents a single Estimote Beacon device. Objects of this class are created by the ESTBeaconManager. The most important difference, compared to CLBeacon class, is the two way communication with the beacon device. Keeping reference to the original CLBeacon object allows you to connect with the device and interact with it. All available Bluetooth characteristics, like signal power or major/minor value, can be read and changed to create a customized behavior. The firmware update option is available using this class as well.
 
 
 Installation

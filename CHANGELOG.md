@@ -1,99 +1,103 @@
 ## 2.1.1 (Semptember 16, 2014)
 
 Features:
- - Support for iOS 8 Authorization changes
+
+ - Added support for the new CoreLocation authorization model introduced in iOS 8
+ 
+   You can read more about it in our [Estimote SDK and iOS 8 Location Services](https://community.estimote.com/hc/en-us/articles/203393036-Estimote-SDK-and-iOS-8-Location-Services) guide.
 
 Improvements:
- - Documentation updated
- - Option to define connection timeout and number of attempts
+
+ - Updated the [EstimoteSDK Reference](http://estimote.github.io/iOS-SDK/index.html) documentation
+ - Added `connectWithAttempts:connectionTimeout:` method to `ESTBeacon` to allow overriding default connection parameters
 
 ## 2.1.0 (Semptember 4, 2014)
 
 Features:
- - Support for battery power modes
+
+ - Added support for battery power modes
 
 Improvements:
+
  - Connection stability
- - Accelerometer support improved
- - Color caching improved
+ - Accelerometer support
+ - Caching the beacon color information
  - Performance with high number of beacons
 
 Bugfixes:
- - Crashing using GPS Monitoring with Estimote SDK
 
+ - Fixed crashes when using CoreLocation's non-beacon monitoring (i.e. `CLCiruclarRegion`) and Estimote SDK in a single app
 
 ## 2.0.1 (July 15, 2014)
 
 Bugfixes:
 
- - Hanging on beacons ranging (100% CPU usage) issue solved.
-
+ - Fixed 100% CPU usage when ranging beacons
 
 ## 2.0.0 (June 6, 2014)
 
 Features:
+
+ - Added integration with the Estimote Cloud
+ - Added support for temperature and accelerometer sensors
+ - Added `motionProximityUUID` to `ESTBeacon`
+ - Added support for firmware: Estimote OS 2.0 and up
+ 
+Improvements:
+
+ - Better connection status handling
+ - Improved Examples app
 	
-	- Estimote Cloud Integration implemented
-	- Added temperature and accelerometer support
-	- Added motionUUID to ESTBeacon
-	- Support for firmware EstimoteOS 2.0 and up
-	- Connection status handeld better
-	- Improved examples app
-	
-Refactoring:
-	- ESTBeacon method name changes:
-		- connectToBeacon -> connect
-		- disconnectBeacon -> disconnect
-		- writeBeaconName:withCompletion: -> writeName:completion:
-		- writeBeaconProximityUUID:withCompletion: -> writeProximityUUID:completion:
-		- writeBeaconMajor:withCompletion: -> writeMajor:completion:
-		- writeBeaconMinor:withCompletion: -> writeMinor:completion
-		- writeBeaconAdvInterval:withCompletion: -> writeAdvInterval:completion:
-		- writeBeaconPower:withCompletion: -> writePower:completion:
-		- updateBeaconFirmwareWithProgress:andCompletion: -> updateFirmwareWithProgress:completion:
+New `ESTBeacon` API:
+
+ - The following methods have new names:
+
+   - `connectToBeacon` is now `connect`
+   - `disconnectBeacon` is now `disconnect`
+   - `writeBeaconName:withCompletion:` is now `writeName:completion:`
+   - `writeBeaconProximityUUID:withCompletion:` is now `writeProximityUUID:completion:`
+   - `writeBeaconMajor:withCompletion:` is now `writeMajor:completion:`
+   - `writeBeaconMinor:withCompletion:` is now `writeMinor:completion`
+   - `writeBeaconAdvInterval:withCompletion:` is now `writeAdvInterval:completion:`
+   - `writeBeaconPower:withCompletion:` is now `writePower:completion:`
+   - `updateBeaconFirmwareWithProgress:andCompletion:` is now `updateFirmwareWithProgress:completion:`
 
 ## 1.3.0 (January 25, 2014)
 
 Features:
 
-  - Unlocked Proximity UUID
-
-Bugfixes:
-
-  - Bug fixes
+  - `proximityUUID` can now be changed
 
 ## 1.2.0 (December 9, 2013)
 
-Features:
+Improvements:
 
-  - ESTBeacon class cleaned (flat structure with iBeacon property removed)
-  - Library documentation updated
+  - `ESTBeacon` class cleanup (flat structure with iBeacon property removed)
+  - Updated the EstimoteSDK Reference documentation
 
 Bugfixes:
 
-  - Corrected name of DistanceDemo project
+  - Corrected the name of the DistanceDemo project
   
 ## 1.1.0 (December 2, 2013)
 
 Features:
 
-  - Frequency change to Advertising Interval (Naming convention - check DOC)
-  - Checking for firmware update, with update details info
-  - Changlog for tags added
-  - library name changed from libEstimoteSDK7.a to libEstimoteSDK.a
+  - Renamed the `frequency` property to `advInterval`
+  - Added support for checking for available firmware updates
+  - Renamed the library from *libEstimoteSDK7.a* to *libEstimoteSDK.a*
 
 Bugfixes:
 
-  - Variable type for Major, Minor, Power, Adv. Interval change to unsigned short
-  - startEstimoteBeaconsDiscoveryForRegion: corrected beacon array refresh
-
+  - Changed the type of `major`, `minor`, `power` and `advInterval` properties to unsigned short
+  - Fixed an issue with the `(NSArray *)beacons` parameter of `beaconManager:didDiscoverBeacons:inRegion`
 
 ## 1.0.0 (November 7, 2013)
 
 Features:
 
-  - Ranging and monitoring Estimote beacons
-  - Beacon connection support 
-  - Read/Write of Major, Minor, Power and Frequency (Battery, Firmware and Hardware version - readonly)
-  - Beacon Firmware update support
-  
+  - Ranging and monitoring of Estimote beacons
+  - Added support for connecting to Estimote beacons, which enables access to following properties:
+    - major, minor, power and frequency - read and write
+    - battery, firmware version and hardware version - readonly
+  - Added support for updating firmware
