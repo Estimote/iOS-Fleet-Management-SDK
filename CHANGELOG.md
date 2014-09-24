@@ -1,4 +1,4 @@
-## 2.1.1 (September 16, 2014)
+## 2.1.1 (Semptember 16, 2014)
 
 Features:
 
@@ -8,10 +8,7 @@ Features:
 
 Improvements:
 
- - Updated the [EstimoteSDK Reference](http://estimote.github.io/iOS-SDK/index.html) documentation
- - Added `connectWithAttempts:connectionTimeout:` method to `ESTBeacon` to allow overriding default connection parameters
-
-## 2.1.0 (September 4, 2014)
+## 2.1.0 (Semptember 4, 2014)
 
 Features:
 

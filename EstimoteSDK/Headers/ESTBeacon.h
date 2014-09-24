@@ -2,7 +2,7 @@
 //  ESTBeacon.h
 //  EstimoteSDK
 //
-//  Version: 2.1.1
+//  Version: 2.1.2
 //  Created by Marcin Klimek on 06/03/14.
 //  Copyright (c) 2014 Estimote. All rights reserved.
 
@@ -10,6 +10,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 #import "ESTBeaconDefinitions.h"
+#import "ESTBeaconVO.h"
 
 #define CONNECTION_ERROR_UID_MISSING    400
 #define CONNECTION_ERROR_AUTHORIZATION  401
@@ -672,5 +673,12 @@
  *  This is because an ESTBeacon discovered using a CoreLocation based scan has its proximityUUID, major and minor populated, but not the macAddress. A beacon discovered by a CoreBluetooth based scan will in turn have its macAddress populated, but not the proximityUUID.
  */
 - (BOOL)isEqualToBeacon:(ESTBeacon *)beacon;
+
+#pragma mark Utility
+
+/**
+ * Returns ESTBeaconVO object from ESTBeacon, so it would be easier to compare beacons with already fetched from the cloud.
+ */
+-(ESTBeaconVO*)valueObject;
 
 @end

@@ -91,11 +91,51 @@
      */
     if (self.scanType == ESTScanTypeBeacon)
     {
-        [self.beaconManager startRangingBeaconsInRegion:self.region];
+        [self startRangingBeacons];
     }
     else
     {
         [self.beaconManager startEstimoteBeaconsDiscoveryForRegion:self.region];
+    }
+}
+
+- (void)beaconManager:(ESTBeaconManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
+{
+    if (self.scanType == ESTScanTypeBeacon)
+    {
+        [self startRangingBeacons];
+    }
+}
+
+-(void)startRangingBeacons
+{
+    if ([ESTBeaconManager authorizationStatus] == kCLAuthorizationStatusNotDetermined)
+    {
+        [self.beaconManager requestAlwaysAuthorization];
+    }
+    else if([ESTBeaconManager authorizationStatus] == kCLAuthorizationStatusAuthorized)
+    {
+        [self.beaconManager startRangingBeaconsInRegion:self.region];
+    }
+    else if([ESTBeaconManager authorizationStatus] == kCLAuthorizationStatusDenied)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Location Access Denied"
+                                                        message:@"You have denied access to location services. Change this in app settings."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles: nil];
+        
+        [alert show];
+    }
+    else if([ESTBeaconManager authorizationStatus] == kCLAuthorizationStatusRestricted)
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Location Not Available"
+                                                        message:@"You have no access to location services."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles: nil];
+        
+        [alert show];
     }
 }
 
@@ -163,6 +203,11 @@
     {
         cell.textLabel.text = [NSString stringWithFormat:@"MacAddress: %@", beacon.macAddress];
         cell.detailTextLabel.text = [NSString stringWithFormat:@"RSSI: %d", beacon.rssi];
+        
+        if([beacon.major unsignedShortValue] == 24216 && beacon.macAddress == nil)
+        {
+            NSLog(@"MAc: %@, %i", beacon.macAddress, [beacon.major unsignedShortValue]);
+        }
     }
     cell.imageView.image = [UIImage imageNamed:@"beacon"];
     
