@@ -1,3 +1,8 @@
+## 2.1.3 (September 24, 2014)
+
+Improvements:
+- Corrected Cocoapods support
+
 ## 2.1.2 (September 24, 2014)
 
 Improvements:
