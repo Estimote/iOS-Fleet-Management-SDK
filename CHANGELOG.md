@@ -1,4 +1,11 @@
-## 2.1.1 (Semptember 16, 2014)
+## 2.1.2 (September 24, 2014)
+
+Improvements:
+- Support for iOS 8 Authorization in Examples app
+- Fixed problem with first time connection crashing
+- Stability improvements
+
+## 2.1.1 (September 16, 2014)
 
 Features:
 
@@ -8,7 +15,7 @@ Features:
 
 Improvements:
 
-## 2.1.0 (Semptember 4, 2014)
+## 2.1.0 (September 4, 2014)
 
 Features:
 
