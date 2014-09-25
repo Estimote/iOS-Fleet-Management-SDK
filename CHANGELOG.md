@@ -1,3 +1,8 @@
+## 2.1.4 (September 25, 2014)
+
+Bugfixes:
+- Missing armv7s architecture added to the library
+
 ## 2.1.3 (September 24, 2014)
 
 Improvements:
