@@ -1,3 +1,8 @@
+## 2.1.5 (September 26, 2014)
+
+Bugfixes:
+- Corrected Firmware download bug
+
 ## 2.1.4 (September 25, 2014)
 
 Bugfixes:
