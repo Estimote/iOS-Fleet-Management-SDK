@@ -76,16 +76,6 @@
                                                       identifier:@"EstimoteSampleRegion"];
 
     /*
-     * Request permission to use Location Services. (new in iOS 8)
-     * We ask for "always" authorization so that the Notification Demo can benefit as well.
-     * Also requires NSLocationAlwaysUsageDescription in Info.plist file.
-     *
-     * For more details about the new Location Services authorization model refer to:
-     * https://community.estimote.com/hc/en-us/articles/203393036-Estimote-SDK-and-iOS-8-Location-Services
-     */
-    [self.beaconManager requestAlwaysAuthorization];
-    
-    /*
      * Starts looking for Estimote beacons.
      * All callbacks will be delivered to beaconManager delegate.
      */
@@ -111,6 +101,14 @@
 {
     if ([ESTBeaconManager authorizationStatus] == kCLAuthorizationStatusNotDetermined)
     {
+        /*
+         * Request permission to use Location Services. (new in iOS 8)
+         * We ask for "always" authorization so that the Notification Demo can benefit as well.
+         * Also requires NSLocationAlwaysUsageDescription in Info.plist file.
+         *
+         * For more details about the new Location Services authorization model refer to:
+         * https://community.estimote.com/hc/en-us/articles/203393036-Estimote-SDK-and-iOS-8-Location-Services
+         */
         [self.beaconManager requestAlwaysAuthorization];
     }
     else if([ESTBeaconManager authorizationStatus] == kCLAuthorizationStatusAuthorized)
