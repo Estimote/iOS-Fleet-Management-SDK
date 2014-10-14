@@ -46,6 +46,14 @@
     self.mainView.frame = frame;
 
     /*
+     * Persmission to show Local Notification.
+     */
+    UIApplication *application = [UIApplication sharedApplication];
+    if ([application respondsToSelector:@selector(registerUserNotificationSettings:)]) {
+        [application registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeBadge|UIUserNotificationTypeSound categories:nil]];
+    }
+
+    /*
      * BeaconManager setup.
      */
     self.beaconManager = [[ESTBeaconManager alloc] init];
