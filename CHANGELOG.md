@@ -1,3 +1,11 @@
+## 2.2.0 (November 19, 2014)
+
+Features:
+- Secure UUID rotation added to prevent from hijacking beacons
+- Bulk update
+- Estimote Analytics
+- 8x faster firmware update
+
 ## 2.1.5 (September 26, 2014)
 
 Bugfixes:

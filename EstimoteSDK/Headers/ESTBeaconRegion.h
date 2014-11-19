@@ -2,7 +2,7 @@
 //  ESTBeaconRegion.h
 //  EstimoteSDK
 //
-//  Version: 2.1.5
+//  Version: 2.2.0
 //  Created by Marcin Klimek on 9/21/13.
 //  Copyright (c) 2013 Estimote. All rights reserved.
 //
@@ -13,7 +13,7 @@
 /**
  * An ESTBeaconRegion object defines a single beacon or a group of beacons that can be used with ESTBeaconManager to range, monitor and discover beacons.
  *
- * There are three ways to define a region:
+ * There are three ways to define a region based on Apple implementation:
  *
  * 1. By providing proximityUUID, major and minor - i.e. initWithProximityUUID:major:minor:identifier: - this defines a region consisting of a single beacon that matches all three of these properties.
  *
@@ -24,8 +24,84 @@
  * For more details, consult Apple's CLBeaconRegion documentation:
  *
  * https://developer.apple.com/library/ios/documentation/CoreLocation/Reference/CLBeaconRegion_class/Reference/Reference.html
+ *
+ * ### Estimote secure UUID rotation
+ *
+ * In addition to basic CLBeaconRegion functionality support for Estimote Secure UUID rotation feature was added. Estimote Secure UUID rotation allows to secure beacon from spoofing by randomizing its proximity UUID, major and minor values over time. Feature can be turned on starting from beacon firmware in version A2.2.0 by invoking enableEstimoteSecureUUID:completion: method of ESTBeacon object (Connection to the beacon is required). Security is transparent from developer perspective. You should still range/monitor for original proximity UUID, major and minor values of the beacons. the only difference is secured region property that should be set to YES using following methods:
+ *
+ * 1. initWithProximityUUID:major:minor:identifier:secured:
+ *
+ * 2. initWithProximityUUID:major:identifier:secured:
+ *
+ * 3. initWithProximityUUID:identifier:secured:
+ *
  */
 
 @interface ESTBeaconRegion : CLBeaconRegion
+
+@property (nonatomic, assign, readonly, getter=isSecured) BOOL secured;
+
+/**
+ * A flag indicating availability and status of the Basic Power Mode.
+ *
+ * @since Estimote OS A2.1
+ *
+ * @see ESTBeaconPowerSavingMode
+ * @see enableBasicPowerMode:completion
+ */
+
+/**
+ *  Initialize a beacon region identified by an proximityUUID. 
+ *  Apple CLBeaconRegion based method with Estimote Secure UUID rotation support added.
+ *
+ *  @since Estimote OS A2.2
+ *
+ *  @param proximityUUID Beacon region proximity UUID
+ *  @param identifier    Beacon region identifier
+ *  @param secured       Estimote Secure UUID rotation flag as BOOL value
+ *
+ *  @return Created region object
+ */
+- (instancetype)initWithProximityUUID:(NSUUID *)proximityUUID
+                           identifier:(NSString *)identifier
+                              secured:(BOOL)secured;
+
+/**
+ *  Initialize a beacon region identified by an proximityUUID and major values.
+ *  Apple CLBeaconRegion based method with Estimote Secure UUID rotation support added.
+ *
+ *  @since Estimote OS A2.2
+ *
+ *  @param proximityUUID Beacon region proximity UUID
+ *  @param major         Beacon region major
+ *  @param identifier    Beacon identifier
+ *  @param secured       Estimote Secure UUID rotation flag as BOOL value
+ *
+ *  @return Created region object
+ */
+- (instancetype)initWithProximityUUID:(NSUUID *)proximityUUID
+                                major:(CLBeaconMajorValue)major
+                           identifier:(NSString *)identifier
+                              secured:(BOOL)secured;
+
+/**
+ *  Initialize a beacon region identified by an proximityUUID, major and minor values.
+ *  Apple CLBeaconRegion based method with Estimote Secure UUID rotation support added.
+ *
+ *  @since Estimote OS A2.2
+ *
+ *  @param proximityUUID Beacon region proximity UUID
+ *  @param major         Beacon region major
+ *  @param minor         Beacon region minor
+ *  @param identifier    Beacon identifier
+ *  @param secured       Estimote Secure UUID rotation flag as BOOL value
+ *
+ *  @return Created region object
+ */
+- (instancetype)initWithProximityUUID:(NSUUID *)proximityUUID
+                                major:(CLBeaconMajorValue)major
+                                minor:(CLBeaconMinorValue)minor
+                           identifier:(NSString *)identifier
+                              secured:(BOOL)secured;
 
 @end

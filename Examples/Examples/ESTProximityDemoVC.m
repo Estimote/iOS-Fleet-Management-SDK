@@ -66,7 +66,9 @@
     self.beaconRegion = [[ESTBeaconRegion alloc] initWithProximityUUID:self.beacon.proximityUUID
                                                                  major:[self.beacon.major unsignedIntValue]
                                                                  minor:[self.beacon.minor unsignedIntValue]
-                                                            identifier:@"RegionIdentifier"];
+                                                            identifier:@"RegionIdentifier"
+                                                               secured:self.beacon.isSecured];
+    
     [self.beaconManager startRangingBeaconsInRegion:self.beaconRegion];
 }
 

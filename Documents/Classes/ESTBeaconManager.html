@@ -54,6 +54,10 @@
 	
 	<option value="//api/name/authorizationStatus">&nbsp;&nbsp;&nbsp;&nbsp;+ authorizationStatus</option>
 	
+	<option value="//api/name/enableAnalytics:">&nbsp;&nbsp;&nbsp;&nbsp;+ enableAnalytics:</option>
+	
+	<option value="//api/name/isAnalyticsEnabled">&nbsp;&nbsp;&nbsp;&nbsp;+ isAnalyticsEnabled</option>
+	
 	<option value="//api/name/isAuthorized">&nbsp;&nbsp;&nbsp;&nbsp;+ isAuthorized</option>
 	
 	<option value="//api/name/recentlyCachedBeacons">&nbsp;&nbsp;&nbsp;&nbsp;+ recentlyCachedBeacons</option>
@@ -61,6 +65,8 @@
 	<option value="//api/name/recentlyUsedUUIDs">&nbsp;&nbsp;&nbsp;&nbsp;+ recentlyUsedUUIDs</option>
 	
 	<option value="//api/name/setupAppID:andAppToken:">&nbsp;&nbsp;&nbsp;&nbsp;+ setupAppID:andAppToken:</option>
+	
+	<option value="//api/name/shouldUseRotation">&nbsp;&nbsp;&nbsp;&nbsp;+ shouldUseRotation</option>
 	
 	
 	
@@ -145,6 +151,10 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/authorizationStatus">authorizationStatus</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/enableAnalytics:">enableAnalytics:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isAnalyticsEnabled">isAnalyticsEnabled</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isAuthorized">isAuthorized</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/recentlyCachedBeacons">recentlyCachedBeacons</a></span></li>
@@ -152,6 +162,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/recentlyUsedUUIDs">recentlyUsedUUIDs</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setupAppID:andAppToken:">setupAppID:andAppToken:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shouldUseRotation">shouldUseRotation</a></span></li>
 	
 </ul></li>
 
@@ -250,6 +262,18 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/setupAppID:andAppToken:">+&nbsp;setupAppID:andAppToken:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/enableAnalytics:">+&nbsp;enableAnalytics:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isAnalyticsEnabled">+&nbsp;isAnalyticsEnabled</a></code>
 	</span>
 	
 	
@@ -410,6 +434,12 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/recentlyCachedBeacons">+&nbsp;recentlyCachedBeacons</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/shouldUseRotation">+&nbsp;shouldUseRotation</a></code>
 	</span>
 	
 	
@@ -650,6 +680,94 @@
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/enableAnalytics:" title="enableAnalytics:"></a>
+	<h3 class="subsubtitle method-title">enableAnalytics:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Enables analytics requests on Enter/Exit monitoring events. Analytics data
+is collected in the Estimote Cloud.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (void)enableAnalytics:(BOOL)<em>enable</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>enable</em></dt>
+			<dd><p>flag indicating if analytics should be enabled</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isAnalyticsEnabled" title="isAnalyticsEnabled"></a>
+	<h3 class="subsubtitle method-title">isAnalyticsEnabled</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Indicates current state of analytics.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (BOOL)isAnalyticsEnabled</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>flag that indicates if analytics is enabled</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/isAuthorized" title="isAuthorized"></a>
 	<h3 class="subsubtitle method-title">isAuthorized</h3>
 	
@@ -813,6 +931,42 @@
 		<h4 class="method-subtitle">Discussion</h4>
 		<p>You can find your API App ID and API App Token in the Account Settings section of the Estimote Cloud.</p>
 	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/shouldUseRotation" title="shouldUseRotation"></a>
+	<h3 class="subsubtitle method-title">shouldUseRotation</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Method for checking if security for ranging and monitoring should be enabled.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (BOOL)shouldUseRotation</code></div>
+
+    
+	
+	
+	
+	
+	
+	
 	
 	
 	
@@ -1542,7 +1696,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 Estimote. All rights reserved. (Last updated: 2014-09-16)</span><br />
+						<p><span class="copyright">&copy; 2014 Estimote. All rights reserved. (Last updated: 2014-11-19)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						

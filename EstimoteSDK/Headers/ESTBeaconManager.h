@@ -2,7 +2,7 @@
 //  ESTBeaconManager.h
 //  EstimoteSDK
 //
-//  Version: 2.1.5
+//  Version: 2.2.0
 //  Created by Marcin Klimek on 9/18/13.
 //  Copyright (c) 2013 Estimote. All rights reserved.
 //
@@ -105,6 +105,7 @@ monitoringDidFailForRegion:(ESTBeaconRegion *)region
       didRangeBeacons:(NSArray *)beacons
              inRegion:(ESTBeaconRegion *)region;
 
+
 /**
  * Tells the delegate that a region ranging error occurred.
  *
@@ -198,6 +199,21 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status;
  * @param appToken The API App Token.
  */
 +(void)setupAppID:(NSString*)appID andAppToken:(NSString*)appToken;
+
+/**
+ *  Enables analytics requests on Enter/Exit monitoring events. Analytics data
+ *  is collected in the Estimote Cloud.
+ *
+ *  @param enable flag indicating if analytics should be enabled
+ */
++(void)enableAnalytics:(BOOL)enable;
+
+/**
+ *  Indicates current state of analytics.
+ *
+ *  @return flag that indicates if analytics is enabled
+ */
++(BOOL)isAnalyticsEnabled;
 
 /**
  * Checks if App ID and App Token were set.
@@ -429,6 +445,11 @@ didChangeAuthorizationStatus:(CLAuthorizationStatus)status;
  * @return NSArray An array of ESTBeaconVO objects.
  */
 +(NSArray *)recentlyCachedBeacons;
+
+/**
+ * Method for checking if security for ranging and monitoring should be enabled.
+ */
++ (BOOL)shouldUseRotation;
 
 @end
 

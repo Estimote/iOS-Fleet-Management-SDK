@@ -2,7 +2,7 @@
 //  ESTBeaconDefinitions.h
 //  EstimoteSDK
 //
-//  Version: 2.1.5
+//  Version: 2.2.0
 //  Created by Marcin Klimek on 9/26/13.
 //  Copyright (c) 2013 Estimote. All rights reserved.
 //
@@ -75,7 +75,21 @@ typedef NS_ENUM(int, ESTBeaconPowerSavingMode)
     ESTBeaconPowerSavingModeUnknown,
     ESTBeaconPowerSavingModeOn,
     ESTBeaconPowerSavingModeOff,
-    ESTBeaconPowerSavingModeNotAvailable,
+    ESTBeaconPowerSavingModeNotAvailable
+};
+
+typedef NS_ENUM(int, ESTBeaconEstimoteSecureUUID)
+{
+    ESTBeaconEstimoteSecureUUIDUnknown,
+    ESTBeaconEstimoteSecureUUIDOn,
+    ESTBeaconEstimoteSecureUUIDOff,
+    ESTBeaconEstimoteSecureUUIDNotAvailable
+};
+
+typedef NS_ENUM(int, ESTBeaconCharInfoType)
+{
+    ESTBeaconCharInfoTypeWriteRead,
+    ESTBeaconCharInfoTypeWriteOnly
 };
 
 typedef void(^ESTCompletionBlock)(NSError* error);

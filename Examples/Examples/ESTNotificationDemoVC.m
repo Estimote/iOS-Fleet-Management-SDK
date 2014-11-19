@@ -56,13 +56,16 @@
     /*
      * BeaconManager setup.
      */
+    
     self.beaconManager = [[ESTBeaconManager alloc] init];
     self.beaconManager.delegate = self;
     
     self.beaconRegion = [[ESTBeaconRegion alloc] initWithProximityUUID:self.beacon.proximityUUID
                                                                  major:[self.beacon.major unsignedIntValue]
                                                                  minor:[self.beacon.minor unsignedIntValue]
-                                                            identifier:@"RegionIdentifier"];
+                                                            identifier:@"RegionIdentifier"
+                                                               secured:self.beacon.isSecured];
+
     self.beaconRegion.notifyOnEntry = self.enterRegionSwitch.isOn;
     self.beaconRegion.notifyOnExit = self.exitRegionSwitch.isOn;
     
@@ -70,6 +73,17 @@
 }
 
 #pragma mark - ESTBeaconManager delegate
+
+- (void)beaconManager:(ESTBeaconManager *)manager monitoringDidFailForRegion:(ESTBeaconRegion *)region withError:(NSError *)error
+{
+    UIAlertView* errorView = [[UIAlertView alloc] initWithTitle:@"Monitoring error"
+                                                        message:error.localizedDescription
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+    
+    [errorView show];
+}
 
 - (void)beaconManager:(ESTBeaconManager *)manager didEnterRegion:(ESTBeaconRegion *)region
 {

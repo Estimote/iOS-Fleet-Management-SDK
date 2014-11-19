@@ -15,7 +15,6 @@
 #import "ESTTemperatureDemoVC.h"
 #import "ESTAccelerometerDemoVC.h"
 #import "ESTUpdateFirmwareDemoVC.h"
-#import "ESTCloudAuthVC.h"
 
 @interface ESTDemoTableViewCell : UITableViewCell
 
@@ -49,23 +48,10 @@
     self.tableView.sectionHeaderHeight = 20;
     [self.tableView registerClass:[ESTDemoTableViewCell class] forCellReuseIdentifier:@"DemoCellIdentifier"];
     
-    UIBarButtonItem *authButton = [[UIBarButtonItem alloc] initWithTitle:@"Authorize"
-                                                                   style:UIBarButtonItemStylePlain
-                                                                  target:self
-                                                                  action:@selector(authorizeBtnTapped:)];
-    self.navigationItem.rightBarButtonItem = authButton;
-    
     self.beaconDemoList = @[ @[@"Distance Demo", @"Proximity Demo",@"Notification Demo"],
                              @[@"Temperature Demo", @"Accelerometer Demo"],
                              @[@"Update Firmware Demo", @"My beacons in Cloud Demo"]];
 }
-
--(void)authorizeBtnTapped:(UIButton *)button
-{
-    ESTCloudAuthVC *cloudVC = [ESTCloudAuthVC new];
-    [self.navigationController pushViewController:cloudVC animated:YES];
-}
-
 
 #pragma mark - Table view data source
 

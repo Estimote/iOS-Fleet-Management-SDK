@@ -20,8 +20,11 @@
 @property (nonatomic, strong) NSString *firmware;
 @property (nonatomic, assign) ESTBeaconPower power;
 @property (nonatomic, assign) NSInteger advInterval;
+@property (nonatomic, assign) BOOL isSecured;
 
 @property (nonatomic, strong) NSString* name;
 @property (nonatomic) ESTBeaconColor color;
+
+- (instancetype)initWithData:(NSDictionary *)data;
 
 @end

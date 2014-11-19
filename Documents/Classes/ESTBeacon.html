@@ -57,6 +57,8 @@
 	
 	<option value="//api/name/distance">&nbsp;&nbsp;&nbsp;&nbsp;distance</option>
 	
+	<option value="//api/name/estimoteSecureUUID">&nbsp;&nbsp;&nbsp;&nbsp;estimoteSecureUUID</option>
+	
 	<option value="//api/name/firmwareState">&nbsp;&nbsp;&nbsp;&nbsp;firmwareState</option>
 	
 	<option value="//api/name/firmwareUpdateInfo">&nbsp;&nbsp;&nbsp;&nbsp;firmwareUpdateInfo</option>
@@ -70,6 +72,8 @@
 	<option value="//api/name/isAccelerometerEditAvailable">&nbsp;&nbsp;&nbsp;&nbsp;isAccelerometerEditAvailable</option>
 	
 	<option value="//api/name/isMoving">&nbsp;&nbsp;&nbsp;&nbsp;isMoving</option>
+	
+	<option value="//api/name/isSecured">&nbsp;&nbsp;&nbsp;&nbsp;isSecured</option>
 	
 	<option value="//api/name/macAddress">&nbsp;&nbsp;&nbsp;&nbsp;macAddress</option>
 	
@@ -118,6 +122,8 @@
 	
 	<option value="//api/name/enableBasicPowerMode:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- enableBasicPowerMode:completion:</option>
 	
+	<option value="//api/name/enableEstimoteSecureUUID:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- enableEstimoteSecureUUID:completion:</option>
+	
 	<option value="//api/name/enableSmartPowerMode:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- enableSmartPowerMode:completion:</option>
 	
 	<option value="//api/name/isEqualToBeacon:">&nbsp;&nbsp;&nbsp;&nbsp;- isEqualToBeacon:</option>
@@ -131,6 +137,8 @@
 	<option value="//api/name/resetToFactorySettingsWithCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- resetToFactorySettingsWithCompletion:</option>
 	
 	<option value="//api/name/updateFirmwareWithProgress:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- updateFirmwareWithProgress:completion:</option>
+	
+	<option value="//api/name/valueObject">&nbsp;&nbsp;&nbsp;&nbsp;- valueObject</option>
 	
 	<option value="//api/name/writeAdvInterval:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeAdvInterval:completion:</option>
 	
@@ -208,6 +216,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/distance">distance</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/estimoteSecureUUID">estimoteSecureUUID</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/firmwareState">firmwareState</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/firmwareUpdateInfo">firmwareUpdateInfo</a></span></li>
@@ -221,6 +231,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isAccelerometerEditAvailable">isAccelerometerEditAvailable</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isMoving">isMoving</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isSecured">isSecured</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/macAddress">macAddress</a></span></li>
 	
@@ -270,6 +282,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/enableBasicPowerMode:completion:">enableBasicPowerMode:completion:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/enableEstimoteSecureUUID:completion:">enableEstimoteSecureUUID:completion:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/enableSmartPowerMode:completion:">enableSmartPowerMode:completion:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isEqualToBeacon:">isEqualToBeacon:</a></span></li>
@@ -283,6 +297,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/resetToFactorySettingsWithCompletion:">resetToFactorySettingsWithCompletion:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/updateFirmwareWithProgress:completion:">updateFirmwareWithProgress:completion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/valueObject">valueObject</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeAdvInterval:completion:">writeAdvInterval:completion:</a></span></li>
 	
@@ -323,6 +339,9 @@
 						<tr>
 	<td class="specification-title">Inherits from</td>
 	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value">NSCoding<br />NSCopying</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
 	<td class="specification-value">ESTBeacon.h<br />ESTBeacon.m</td>
@@ -541,6 +560,12 @@
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/isSecured">&nbsp;&nbsp;isSecured</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/isAccelerometerAvailable">&nbsp;&nbsp;isAccelerometerAvailable</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
@@ -566,6 +591,12 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/smartPowerMode">&nbsp;&nbsp;smartPowerMode</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/estimoteSecureUUID">&nbsp;&nbsp;estimoteSecureUUID</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -701,6 +732,12 @@
 	</span>
 	
 	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/enableEstimoteSecureUUID:completion:">&ndash;&nbsp;enableEstimoteSecureUUID:completion:</a></code>
+	</span>
+	
+	
 </li>
 						</ul>
 						
@@ -732,6 +769,12 @@
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/isEqualToBeacon:">&ndash;&nbsp;isEqualToBeacon:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/valueObject">&ndash;&nbsp;valueObject</a></code>
 	</span>
 	
 	
@@ -1161,6 +1204,56 @@
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/estimoteSecureUUID" title="estimoteSecureUUID"></a>
+	<h3 class="subsubtitle method-title">estimoteSecureUUID</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>A flag indicating status of Estimote Secure UUID.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) ESTBeaconEstimoteSecureUUID estimoteSecureUUID</code></div>
+
+    
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>Estimote OS 2.2</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Constants/ESTBeaconEstimoteSecureUUID.html">ESTBeaconEstimoteSecureUUID</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/firmwareState" title="firmwareState"></a>
 	<h3 class="subsubtitle method-title">firmwareState</h3>
 	
@@ -1497,6 +1590,47 @@
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/isSecured" title="isSecured"></a>
+	<h3 class="subsubtitle method-title">isSecured</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>A flag indicating if the beacon has UUID rotation turned on.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) BOOL isSecured</code></div>
+
+    
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>Estimote OS A2.2</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/macAddress" title="macAddress"></a>
 	<h3 class="subsubtitle method-title">macAddress</h3>
 	
@@ -1698,7 +1832,7 @@
 <li><p>When ranging beacons - if the beacon is in motion, the <code>proximityUUID</code> property will be equal to the <code>motionProximityUUID</code>. Note that the <code>motionProximityUUID</code> property is not available unless connected to the beacon, so you need to know its value in advance.</p></li>
 <li><p>When monitoring regions - you can have two separate regions, one with the regular <code>proximityUUID</code> and one with the <code>motionProximityUUID</code>. Enter and exit notifications will then correspond to the beacon starting and stopping to move.</p></li>
 </ol>
-
+<div class="warning"><p><strong>Warning:</strong> This feature is disabled by default. The option to enable it will be made available in an upcoming update to the SDK.</p></div>
 	</div>
 	
 	
@@ -2497,6 +2631,57 @@
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/enableEstimoteSecureUUID:completion:" title="enableEstimoteSecureUUID:completion:"></a>
+	<h3 class="subsubtitle method-title">enableEstimoteSecureUUID:completion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Enables Estimote Secure UUID.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)enableEstimoteSecureUUID:(BOOL)<em>enable</em> completion:(ESTBoolCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>enable</em></dt>
+			<dd><p>Yes to enable, No to disable Estimote Secure UUID.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>Block with operation result.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/enableSmartPowerMode:completion:" title="enableSmartPowerMode:completion:"></a>
 	<h3 class="subsubtitle method-title">enableSmartPowerMode:completion:</h3>
 	
@@ -2895,6 +3080,42 @@
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/valueObject" title="valueObject"></a>
+	<h3 class="subsubtitle method-title">valueObject</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns <code>ESTBeaconVO</code> object from <code>ESTBeacon</code>, so it would be easier to compare beacons with already fetched from the cloud.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (ESTBeaconVO *)valueObject</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/writeAdvInterval:completion:" title="writeAdvInterval:completion:"></a>
 	<h3 class="subsubtitle method-title">writeAdvInterval:completion:</h3>
 	
@@ -3121,6 +3342,11 @@
 	
 	
 	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="warning"><p><strong>Warning:</strong> The <a href="#//api/name/motionProximityUUID"><code>motionProximityUUID</code></a> feature is disabled by default. The option to enable it will be made available in an upcoming update to the SDK.</p></div>
+	</div>
+	
 	
 	
 	
@@ -3332,7 +3558,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 Estimote. All rights reserved. (Last updated: 2014-09-16)</span><br />
+						<p><span class="copyright">&copy; 2014 Estimote. All rights reserved. (Last updated: 2014-11-19)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						

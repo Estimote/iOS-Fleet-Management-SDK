@@ -65,6 +65,7 @@
     
     self.beaconManager = [[ESTBeaconManager alloc] init];
     self.beaconManager.delegate = self;
+    self.beaconManager.returnAllRangedBeaconsAtOnce = YES;
     
     /* 
      * Creates sample region object (you can additionaly pass major / minor values).
@@ -162,6 +163,28 @@
 
 #pragma mark - ESTBeaconManager delegate
 
+- (void)beaconManager:(ESTBeaconManager *)manager rangingBeaconsDidFailForRegion:(ESTBeaconRegion *)region withError:(NSError *)error
+{
+    UIAlertView* errorView = [[UIAlertView alloc] initWithTitle:@"Ranging error"
+                                                        message:error.localizedDescription
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+    
+    [errorView show];
+}
+
+- (void)beaconManager:(ESTBeaconManager *)manager monitoringDidFailForRegion:(ESTBeaconRegion *)region withError:(NSError *)error
+{
+    UIAlertView* errorView = [[UIAlertView alloc] initWithTitle:@"Monitoring error"
+                                                        message:error.localizedDescription
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+    
+    [errorView show];
+}
+
 - (void)beaconManager:(ESTBeaconManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(ESTBeaconRegion *)region
 {
     self.beaconsArray = beacons;
@@ -206,15 +229,11 @@
     }
     else
     {
-        cell.textLabel.text = [NSString stringWithFormat:@"MacAddress: %@", beacon.macAddress];
+        cell.textLabel.text = [NSString stringWithFormat:@"Mac Address: %@", beacon.macAddress];
         cell.detailTextLabel.text = [NSString stringWithFormat:@"RSSI: %d", beacon.rssi];
-        
-        if([beacon.major unsignedShortValue] == 24216 && beacon.macAddress == nil)
-        {
-            NSLog(@"MAc: %@, %i", beacon.macAddress, [beacon.major unsignedShortValue]);
-        }
     }
-    cell.imageView.image = [UIImage imageNamed:@"beacon"];
+    
+    cell.imageView.image = beacon.isSecured ? [UIImage imageNamed:@"beacon_secure"] : [UIImage imageNamed:@"beacon"];
     
     return cell;
 }

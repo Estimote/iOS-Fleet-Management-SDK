@@ -2,7 +2,7 @@
 //  ESTBeacon.h
 //  EstimoteSDK
 //
-//  Version: 2.1.5
+//  Version: 2.2.0
 //  Created by Marcin Klimek on 06/03/14.
 //  Copyright (c) 2014 Estimote. All rights reserved.
 
@@ -76,7 +76,7 @@
  * Additional properties become available once connected to the beacon. See connect for more details about connecting to the beacon. You will also need to assign a delegate to be notified about connection and disconnection events. The delegate needs to conform to the ESTBeaconDelegate protocol.
  */
 
-@interface ESTBeacon : NSObject
+@interface ESTBeacon : NSObject <NSCopying, NSCoding>
 
 #pragma mark Accessing the Delegate
 ///--------------------------------------------------------------------
@@ -214,6 +214,8 @@
  *
  * 2. When monitoring regions - you can have two separate regions, one with the regular proximityUUID and one with the motionProximityUUID. Enter and exit notifications will then correspond to the beacon starting and stopping to move.
  *
+ * @warning This feature is disabled by default. The option to enable it will be made available in an upcoming update to the SDK.
+ *
  * @since Estimote OS 2.0
  *
  * @see writeMotionProximityUUID:completion:
@@ -291,6 +293,13 @@
 @property (readonly, nonatomic)   BOOL                    isMoving;
 
 /**
+ * A flag indicating if the beacon has UUID rotation turned on.
+ *
+ * @since Estimote OS A2.2
+ */
+@property (readonly, nonatomic)   BOOL                    isSecured;
+
+/**
  * A flag indicating if the accelerometer is available.
  *
  * @since Estimote OS A2.0
@@ -334,6 +343,16 @@
  * @see enableSmartPowerMode:completion
  */
 @property (readonly, nonatomic)   ESTBeaconPowerSavingMode smartPowerMode;
+
+/**
+ *  A flag indicating status of Estimote Secure UUID.
+ *
+ *  @since Estimote OS 2.2
+ *  @see ESTBeaconEstimoteSecureUUID
+ *  @see enableEstimoteSecureUUID:completion
+ */
+
+@property (readonly, nonatomic) ESTBeaconEstimoteSecureUUID estimoteSecureUUID;
 
 #pragma mark Connecting and Disconnecting
 ///--------------------------------------------------------------------
@@ -486,6 +505,8 @@
  * - NSString *value - The new motionProximityUUID.
  * - NSError *error - If an error occurred, this error object describes the error. If the operation completed successfully, the value is nil.
  *
+ * @warning The motionProximityUUID feature is disabled by default. The option to enable it will be made available in an upcoming update to the SDK.
+ *
  * @since Estimote OS 2.0
  */
 - (void)writeMotionProximityUUID:(NSString*)pUUID completion:(ESTStringCompletionBlock)completion;
@@ -607,6 +628,16 @@
  */
 - (void)enableSmartPowerMode:(BOOL)enable
                   completion:(ESTBoolCompletionBlock)completion;
+
+/**
+ *  Enables Estimote Secure UUID.
+ *
+ *  @param enable     Yes to enable, No to disable Estimote Secure UUID.
+ *  @param completion Block with operation result.
+ */
+
+- (void)enableEstimoteSecureUUID:(BOOL)enable
+                      completion:(ESTBoolCompletionBlock)completion;
 
 #pragma mark Updating Firmware
 ///--------------------------------------------------------------------
