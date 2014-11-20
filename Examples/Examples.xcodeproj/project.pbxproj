@@ -12,6 +12,8 @@
 		951C167D18E475B6001B3C8E /* ESTNotificationDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 951C167C18E475B6001B3C8E /* ESTNotificationDemoVC.xib */; };
 		95A43D771940CDDB004D81E3 /* ESTCloudBeaconTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A43D761940CDDB004D81E3 /* ESTCloudBeaconTableVC.m */; };
 		95C7C3501941BAA300D9BF17 /* ESTCloudBeaconTableVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95C7C34F1941BAA300D9BF17 /* ESTCloudBeaconTableVC.xib */; };
+		95E943641A1D55C4000A7CCF /* ESTBulkUpdaterDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 95E943621A1D55C4000A7CCF /* ESTBulkUpdaterDemoVC.m */; };
+		95E943651A1D55C4000A7CCF /* ESTBulkUpdaterDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95E943631A1D55C4000A7CCF /* ESTBulkUpdaterDemoVC.xib */; };
 		A12D28DB18E9638100872A95 /* ESTUpdateFirmwareDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A12D28D918E9638100872A95 /* ESTUpdateFirmwareDemoVC.m */; };
 		A12D28DC18E9638100872A95 /* ESTUpdateFirmwareDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A12D28DA18E9638100872A95 /* ESTUpdateFirmwareDemoVC.xib */; };
 		A154DE5418E0373100734BD6 /* ESTTemperatureDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A154DE5318E0373100734BD6 /* ESTTemperatureDemoVC.m */; };
@@ -39,6 +41,9 @@
 		95A43D751940CDDB004D81E3 /* ESTCloudBeaconTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTCloudBeaconTableVC.h; sourceTree = "<group>"; };
 		95A43D761940CDDB004D81E3 /* ESTCloudBeaconTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTCloudBeaconTableVC.m; sourceTree = "<group>"; };
 		95C7C34F1941BAA300D9BF17 /* ESTCloudBeaconTableVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESTCloudBeaconTableVC.xib; sourceTree = "<group>"; };
+		95E943611A1D55C4000A7CCF /* ESTBulkUpdaterDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBulkUpdaterDemoVC.h; sourceTree = "<group>"; };
+		95E943621A1D55C4000A7CCF /* ESTBulkUpdaterDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTBulkUpdaterDemoVC.m; sourceTree = "<group>"; };
+		95E943631A1D55C4000A7CCF /* ESTBulkUpdaterDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESTBulkUpdaterDemoVC.xib; sourceTree = "<group>"; };
 		A12D28D818E9638100872A95 /* ESTUpdateFirmwareDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTUpdateFirmwareDemoVC.h; sourceTree = "<group>"; };
 		A12D28D918E9638100872A95 /* ESTUpdateFirmwareDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTUpdateFirmwareDemoVC.m; sourceTree = "<group>"; };
 		A12D28DA18E9638100872A95 /* ESTUpdateFirmwareDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESTUpdateFirmwareDemoVC.xib; sourceTree = "<group>"; };
@@ -148,6 +153,9 @@
 				A12D28D818E9638100872A95 /* ESTUpdateFirmwareDemoVC.h */,
 				A12D28D918E9638100872A95 /* ESTUpdateFirmwareDemoVC.m */,
 				A12D28DA18E9638100872A95 /* ESTUpdateFirmwareDemoVC.xib */,
+				95E943611A1D55C4000A7CCF /* ESTBulkUpdaterDemoVC.h */,
+				95E943621A1D55C4000A7CCF /* ESTBulkUpdaterDemoVC.m */,
+				95E943631A1D55C4000A7CCF /* ESTBulkUpdaterDemoVC.xib */,
 				AC39C3D518D72A6F00B38212 /* Images.xcassets */,
 				AC39C3C418D72A6F00B38212 /* Supporting Files */,
 			);
@@ -233,6 +241,7 @@
 				A12D28DC18E9638100872A95 /* ESTUpdateFirmwareDemoVC.xib in Resources */,
 				AC39C3D618D72A6F00B38212 /* Images.xcassets in Resources */,
 				AC39C3C818D72A6F00B38212 /* InfoPlist.strings in Resources */,
+				95E943651A1D55C4000A7CCF /* ESTBulkUpdaterDemoVC.xib in Resources */,
 				951C167918E45EA5001B3C8E /* ESTTemperatureDemoVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,6 +263,7 @@
 				AC39C40118D8564100B38212 /* ESTNotificationDemoVC.m in Sources */,
 				A154DE5918E03CD500734BD6 /* ESTAccelerometerDemoVC.m in Sources */,
 				A12D28DB18E9638100872A95 /* ESTUpdateFirmwareDemoVC.m in Sources */,
+				95E943641A1D55C4000A7CCF /* ESTBulkUpdaterDemoVC.m in Sources */,
 				AC39C3CE18D72A6F00B38212 /* ESTAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -2,7 +2,7 @@
 //  ESTBeaconRegion.h
 //  EstimoteSDK
 //
-//  Version: 2.2.0
+//  Version: 2.2.1
 //  Created by Marcin Klimek on 9/21/13.
 //  Copyright (c) 2013 Estimote. All rights reserved.
 //
@@ -27,7 +27,7 @@
  *
  * ### Estimote secure UUID rotation
  *
- * In addition to basic CLBeaconRegion functionality support for Estimote Secure UUID rotation feature was added. Estimote Secure UUID rotation allows to secure beacon from spoofing by randomizing its proximity UUID, major and minor values over time. Feature can be turned on starting from beacon firmware in version A2.2.0 by invoking enableEstimoteSecureUUID:completion: method of ESTBeacon object (Connection to the beacon is required). Security is transparent from developer perspective. You should still range/monitor for original proximity UUID, major and minor values of the beacons. the only difference is secured region property that should be set to YES using following methods:
+ * In addition to basic CLBeaconRegion functionality support for Estimote Secure UUID rotation feature was added. Estimote Secure UUID rotation allows to secure beacon from hijacking by randomizing its proximity UUID, major and minor values over time. Feature can be turned on starting from beacon firmware in version A2.2.0 by invoking enableEstimoteSecureUUID:completion: method of ESTBeacon object (Connection to the beacon is required). Security is transparent from developer perspective. You should still range/monitor for original proximity UUID, major and minor values of the beacons. the only difference is secured region property that should be set to YES using following methods:
  *
  * 1. initWithProximityUUID:major:minor:identifier:secured:
  *

@@ -1,3 +1,9 @@
+## 2.2.1 (November 20, 2014)
+
+Improvements:
+- Bulk updater refactored
+- Bulk updater demo added
+
 ## 2.2.0 (November 19, 2014)
 
 Features:
