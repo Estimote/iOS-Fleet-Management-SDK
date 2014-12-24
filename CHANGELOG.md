@@ -1,3 +1,16 @@
+## 2.3.0 (December 24, 2014)
+
+Features:
+- Estimote Nearables support added
+- Trigger engine
+
+Improvements:
+- Beacon discovery allows to define time interval
+- Estimote Cloud Authorization and Analytics methods moved to ESTConfig class
+
+Bugfixes:
+- Beacons color requests number optimised
+
 ## 2.2.1 (November 20, 2014)
 
 Improvements:

@@ -8,9 +8,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ESTBeaconFirmwareInfoVO.h"
+#import "ESTFirmwareInfoVO.h"
 
-@interface ESTBeaconFirmwareVO : ESTBeaconFirmwareInfoVO
+@interface ESTBeaconFirmwareVO : ESTFirmwareInfoVO
 
 @property (nonatomic, strong) NSString* firmwareUrl;
 @property (nonatomic, strong) NSString* firmwareCleanerUrl;

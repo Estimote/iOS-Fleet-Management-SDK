@@ -24,4 +24,22 @@
  */
 @property (nonatomic, strong) NSNumber *power;
 
+/**
+ *  Flag for switching state of basic power mode.
+ *  Recommended use: [NSNumber numberWithInt:ESTBeaconPowerSavingMode].
+ */
+@property (nonatomic, strong) NSNumber *basicPowerMode;
+
+/**
+ *  Flag for switching state of smart power mode.
+ *  Recommended use: [NSNumber numberWithInt:ESTBeaconPowerSavingMode].
+ */
+@property (nonatomic, strong) NSNumber *smartPowerMode;
+
+/**
+ *  Flag for switching state of Estimote Secure UUID.
+ *  Recommended use: [NSNumber numberWithInt:ESTBeaconPowerSavingMode].
+ */
+@property (nonatomic, strong) NSNumber *estimoteSecureUUID;
+
 @end
