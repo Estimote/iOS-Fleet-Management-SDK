@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>ESTBeaconUpdateConfig Class Reference</title>
+		<title>ESTDateRule Class Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">ESTBeaconUpdateConfig Class Reference</h1>
+				<h1 class="hideInXcode">ESTDateRule Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -25,6 +25,8 @@
 				<li id="jumpto_button" role="navigation">
 					<select id="jumpTo">
 	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
 	
 	
 	
@@ -35,21 +37,22 @@
 	
 	
 	
-	<option value="properties">Properties</option>
 	
-	<option value="//api/name/advInterval">&nbsp;&nbsp;&nbsp;&nbsp;advInterval</option>
 	
-	<option value="//api/name/basicPowerMode">&nbsp;&nbsp;&nbsp;&nbsp;basicPowerMode</option>
+	<option value="class_methods">Class Methods</option>
 	
-	<option value="//api/name/estimoteSecureUUID">&nbsp;&nbsp;&nbsp;&nbsp;estimoteSecureUUID</option>
+	<option value="//api/name/hourBetween:and:">&nbsp;&nbsp;&nbsp;&nbsp;+ hourBetween:and:</option>
 	
-	<option value="//api/name/power">&nbsp;&nbsp;&nbsp;&nbsp;power</option>
+	<option value="//api/name/hourEarlierThan:">&nbsp;&nbsp;&nbsp;&nbsp;+ hourEarlierThan:</option>
 	
-	<option value="//api/name/smartPowerMode">&nbsp;&nbsp;&nbsp;&nbsp;smartPowerMode</option>
+	<option value="//api/name/hourLaterThan:">&nbsp;&nbsp;&nbsp;&nbsp;+ hourLaterThan:</option>
 	
 	
 	
 	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/update">&nbsp;&nbsp;&nbsp;&nbsp;- update</option>
 	
 	
 	
@@ -60,6 +63,8 @@
 		<nav id="tocContainer" class="isShowingTOC">
 			<ul id="toc" role="tree">
 				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
 
 
 
@@ -71,30 +76,32 @@
 
 
 
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/advInterval">advInterval</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/hourBetween:and:">hourBetween:and:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/basicPowerMode">basicPowerMode</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/hourEarlierThan:">hourEarlierThan:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/estimoteSecureUUID">estimoteSecureUUID</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/power">power</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/smartPowerMode">smartPowerMode</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/hourLaterThan:">hourLaterThan:</a></span></li>
 	
 </ul></li>
 
 
 
-
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/update">update</a></span></li>
+	
+</ul></li>
 
 
 			</ul>
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="ESTBeaconUpdateConfig Class Reference" name="top"></a>
+				<a title="ESTDateRule Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -103,7 +110,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">ESTBeaconUpdateConfig Class Reference</h1>
+						<h1 class="title title-header">ESTDateRule Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -111,18 +118,23 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Inherits from</td>
-	<td class="specification-value">NSObject</td>
-</tr><tr>
-	<td class="specification-title">Conforms to</td>
-	<td class="specification-value">NSCoding<br />NSCopying</td>
+	<td class="specification-value"><a href="../Classes/ESTRule.html">ESTRule</a> : NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">ESTBeaconUpdateConfig.h<br />ESTBeaconUpdateConfig.m</td>
+	<td class="specification-value">ESTDateRule.h<br />ESTDateRule.m</td>
 </tr>
 						</tbody></table></div>
 					
                     
                     
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>The <code>ESTDateRule</code> class defines single rule related to time during the day.</p>
+					</div>
+					
+					
 					
 					
 					
@@ -132,38 +144,40 @@
 						
 						
 						
-						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
 
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/advInterval">&nbsp;&nbsp;advInterval</a></code>
+		<code><a href="#//api/name/hourLaterThan:">+&nbsp;hourLaterThan:</a></code>
 	</span>
-	<span class="task-item-suffix">property</span>
+	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/power">&nbsp;&nbsp;power</a></code>
+		<code><a href="#//api/name/hourEarlierThan:">+&nbsp;hourEarlierThan:</a></code>
 	</span>
-	<span class="task-item-suffix">property</span>
+	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/basicPowerMode">&nbsp;&nbsp;basicPowerMode</a></code>
+		<code><a href="#//api/name/hourBetween:and:">+&nbsp;hourBetween:and:</a></code>
 	</span>
-	<span class="task-item-suffix">property</span>
 	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/smartPowerMode">&nbsp;&nbsp;smartPowerMode</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
 	
-</li><li>
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/estimoteSecureUUID">&nbsp;&nbsp;estimoteSecureUUID</a></code>
+		<code><a href="#//api/name/update">&ndash;&nbsp;update</a></code>
 	</span>
-	<span class="task-item-suffix">property</span>
+	
 	
 </li>
 						</ul>
@@ -174,27 +188,49 @@
 					
 					
 					
+					
+					
 					<div class="section section-methods">
-						<a title="Properties" name="properties"></a>
-						<h2 class="subtitle subtitle-methods">Properties</h2>
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/advInterval" title="advInterval"></a>
-	<h3 class="subsubtitle method-title">advInterval</h3>
+	<a name="//api/name/hourBetween:and:" title="hourBetween:and:"></a>
+	<h3 class="subsubtitle method-title">hourBetween:and:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>To what advertising interval beacon should be changed.</p>
+		<p>Initialization method creating rule when targeted hour is between hours.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *advInterval</code></div>
+	<div class="method-subsection method-declaration"><code>+ (instancetype)hourBetween:(int)<em>firstHour</em> and:(int)<em>secondHour</em></code></div>
 
     
 	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>firstHour</em></dt>
+			<dd><p>hour after which rule should be fulfilled</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>secondHour</em></dt>
+			<dd><p>hour before which rule should be fulfilled</p></dd>
+		</dl>
+		
+	</div>
 	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>create rule object</p>
+	</div>
 	
 	
 	
@@ -208,30 +244,44 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTBeaconUpdateConfig.h</code><br />
+		<code class="declared-in-ref">ESTDateRule.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/basicPowerMode" title="basicPowerMode"></a>
-	<h3 class="subsubtitle method-title">basicPowerMode</h3>
+	<a name="//api/name/hourEarlierThan:" title="hourEarlierThan:"></a>
+	<h3 class="subsubtitle method-title">hourEarlierThan:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Flag for switching state of basic power mode.
-Recommended use: [NSNumber numberWithInt:ESTBeaconPowerSavingMode].</p>
+		<p>Initialization method creating rule when targeted hour is earlier then.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *basicPowerMode</code></div>
+	<div class="method-subsection method-declaration"><code>+ (instancetype)hourEarlierThan:(int)<em>hour</em></code></div>
 
     
 	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>hour</em></dt>
+			<dd><p>hour before which rule should be fulfilled</p></dd>
+		</dl>
+		
+	</div>
 	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>create rule object</p>
+	</div>
 	
 	
 	
@@ -245,30 +295,44 @@ Recommended use: [NSNumber numberWithInt:ESTBeaconPowerSavingMode].</p>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTBeaconUpdateConfig.h</code><br />
+		<code class="declared-in-ref">ESTDateRule.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/estimoteSecureUUID" title="estimoteSecureUUID"></a>
-	<h3 class="subsubtitle method-title">estimoteSecureUUID</h3>
+	<a name="//api/name/hourLaterThan:" title="hourLaterThan:"></a>
+	<h3 class="subsubtitle method-title">hourLaterThan:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Flag for switching state of Estimote Secure UUID.
-Recommended use: [NSNumber numberWithInt:ESTBeaconPowerSavingMode].</p>
+		<p>Initialization method creating rule when targeted hour is later then.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *estimoteSecureUUID</code></div>
+	<div class="method-subsection method-declaration"><code>+ (instancetype)hourLaterThan:(int)<em>hour</em></code></div>
 
     
 	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>hour</em></dt>
+			<dd><p>hour after which rule should be fulfilled</p></dd>
+		</dl>
+		
+	</div>
 	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>create rule object</p>
+	</div>
 	
 	
 	
@@ -282,80 +346,7 @@ Recommended use: [NSNumber numberWithInt:ESTBeaconPowerSavingMode].</p>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTBeaconUpdateConfig.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/power" title="power"></a>
-	<h3 class="subsubtitle method-title">power</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>To what broadcasting power beacon should be changed.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *power</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTBeaconUpdateConfig.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/smartPowerMode" title="smartPowerMode"></a>
-	<h3 class="subsubtitle method-title">smartPowerMode</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Flag for switching state of smart power mode.
-Recommended use: [NSNumber numberWithInt:ESTBeaconPowerSavingMode].</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *smartPowerMode</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTBeaconUpdateConfig.h</code><br />
+		<code class="declared-in-ref">ESTDateRule.h</code><br />
 	</div>				
 	
 	
@@ -365,7 +356,53 @@ Recommended use: [NSNumber numberWithInt:ESTBeaconPowerSavingMode].</p>
 					
 					
 					
-					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/update" title="update"></a>
+	<h3 class="subsubtitle method-title">update</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Method that is invoked by trigger manager object to update state of the rule.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)update</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>When creating custom rule, this method should be implemented to update state property of this class,
+based on developer defined conditions.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTRule.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
 					
 					
                     

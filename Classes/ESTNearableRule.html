@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>ESTBeaconUpdateConfig Class Reference</title>
+		<title>ESTNearableRule Class Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">ESTBeaconUpdateConfig Class Reference</h1>
+				<h1 class="hideInXcode">ESTNearableRule Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -25,6 +25,8 @@
 				<li id="jumpto_button" role="navigation">
 					<select id="jumpTo">
 	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
 	
 	
 	
@@ -37,19 +39,22 @@
 	
 	<option value="properties">Properties</option>
 	
-	<option value="//api/name/advInterval">&nbsp;&nbsp;&nbsp;&nbsp;advInterval</option>
+	<option value="//api/name/nearableIdentifier">&nbsp;&nbsp;&nbsp;&nbsp;nearableIdentifier</option>
 	
-	<option value="//api/name/basicPowerMode">&nbsp;&nbsp;&nbsp;&nbsp;basicPowerMode</option>
-	
-	<option value="//api/name/estimoteSecureUUID">&nbsp;&nbsp;&nbsp;&nbsp;estimoteSecureUUID</option>
-	
-	<option value="//api/name/power">&nbsp;&nbsp;&nbsp;&nbsp;power</option>
-	
-	<option value="//api/name/smartPowerMode">&nbsp;&nbsp;&nbsp;&nbsp;smartPowerMode</option>
+	<option value="//api/name/nearableType">&nbsp;&nbsp;&nbsp;&nbsp;nearableType</option>
 	
 	
 	
 	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/initWithNearableIdentifier:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithNearableIdentifier:</option>
+	
+	<option value="//api/name/initWithNearableType:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithNearableType:</option>
+	
+	<option value="//api/name/updateWithNearable:">&nbsp;&nbsp;&nbsp;&nbsp;- updateWithNearable:</option>
 	
 	
 	
@@ -60,6 +65,8 @@
 		<nav id="tocContainer" class="isShowingTOC">
 			<ul id="toc" role="tree">
 				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
 
 
 
@@ -73,15 +80,9 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/advInterval">advInterval</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/nearableIdentifier">nearableIdentifier</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/basicPowerMode">basicPowerMode</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/estimoteSecureUUID">estimoteSecureUUID</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/power">power</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/smartPowerMode">smartPowerMode</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/nearableType">nearableType</a></span></li>
 	
 </ul></li>
 
@@ -89,12 +90,22 @@
 
 
 
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithNearableIdentifier:">initWithNearableIdentifier:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithNearableType:">initWithNearableType:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/updateWithNearable:">updateWithNearable:</a></span></li>
+	
+</ul></li>
+
 
 			</ul>
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="ESTBeaconUpdateConfig Class Reference" name="top"></a>
+				<a title="ESTNearableRule Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -103,7 +114,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">ESTBeaconUpdateConfig Class Reference</h1>
+						<h1 class="title title-header">ESTNearableRule Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -111,18 +122,24 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Inherits from</td>
-	<td class="specification-value">NSObject</td>
-</tr><tr>
-	<td class="specification-title">Conforms to</td>
-	<td class="specification-value">NSCoding<br />NSCopying</td>
+	<td class="specification-value"><a href="../Classes/ESTRule.html">ESTRule</a> : NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">ESTBeaconUpdateConfig.h<br />ESTBeaconUpdateConfig.m</td>
+	<td class="specification-value">ESTNearableRule.h<br />ESTNearableRule.m</td>
 </tr>
 						</tbody></table></div>
 					
                     
                     
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>The <code>ESTNearableRule</code> is abstract class defining base methods for all Estimote nearable related rules. It should not be used itself as it is not
+defining any conditions.</p>
+					</div>
+					
+					
 					
 					
 					
@@ -137,33 +154,33 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/advInterval">&nbsp;&nbsp;advInterval</a></code>
+		<code><a href="#//api/name/nearableIdentifier">&nbsp;&nbsp;nearableIdentifier</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/power">&nbsp;&nbsp;power</a></code>
+		<code><a href="#//api/name/nearableType">&nbsp;&nbsp;nearableType</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/basicPowerMode">&nbsp;&nbsp;basicPowerMode</a></code>
+		<code><a href="#//api/name/initWithNearableIdentifier:">&ndash;&nbsp;initWithNearableIdentifier:</a></code>
 	</span>
-	<span class="task-item-suffix">property</span>
+	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/smartPowerMode">&nbsp;&nbsp;smartPowerMode</a></code>
+		<code><a href="#//api/name/initWithNearableType:">&ndash;&nbsp;initWithNearableType:</a></code>
 	</span>
-	<span class="task-item-suffix">property</span>
+	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/estimoteSecureUUID">&nbsp;&nbsp;estimoteSecureUUID</a></code>
+		<code><a href="#//api/name/updateWithNearable:">&ndash;&nbsp;updateWithNearable:</a></code>
 	</span>
-	<span class="task-item-suffix">property</span>
+	
 	
 </li>
 						</ul>
@@ -179,18 +196,18 @@
 						<h2 class="subtitle subtitle-methods">Properties</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/advInterval" title="advInterval"></a>
-	<h3 class="subsubtitle method-title">advInterval</h3>
+	<a name="//api/name/nearableIdentifier" title="nearableIdentifier"></a>
+	<h3 class="subsubtitle method-title">nearableIdentifier</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>To what advertising interval beacon should be changed.</p>
+		<p>Identifier of nearable that is going to be associated with this rule.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *advInterval</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSString *nearableIdentifier</code></div>
 
     
 	
@@ -208,26 +225,25 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTBeaconUpdateConfig.h</code><br />
+		<code class="declared-in-ref">ESTNearableRule.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/basicPowerMode" title="basicPowerMode"></a>
-	<h3 class="subsubtitle method-title">basicPowerMode</h3>
+	<a name="//api/name/nearableType" title="nearableType"></a>
+	<h3 class="subsubtitle method-title">nearableType</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Flag for switching state of basic power mode.
-Recommended use: [NSNumber numberWithInt:ESTBeaconPowerSavingMode].</p>
+		<p>Type of nearable that is going to be associated with this rule.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *basicPowerMode</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) ESTNearableType nearableType</code></div>
 
     
 	
@@ -245,117 +261,7 @@ Recommended use: [NSNumber numberWithInt:ESTBeaconPowerSavingMode].</p>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTBeaconUpdateConfig.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/estimoteSecureUUID" title="estimoteSecureUUID"></a>
-	<h3 class="subsubtitle method-title">estimoteSecureUUID</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Flag for switching state of Estimote Secure UUID.
-Recommended use: [NSNumber numberWithInt:ESTBeaconPowerSavingMode].</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *estimoteSecureUUID</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTBeaconUpdateConfig.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/power" title="power"></a>
-	<h3 class="subsubtitle method-title">power</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>To what broadcasting power beacon should be changed.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *power</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTBeaconUpdateConfig.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/smartPowerMode" title="smartPowerMode"></a>
-	<h3 class="subsubtitle method-title">smartPowerMode</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Flag for switching state of smart power mode.
-Recommended use: [NSNumber numberWithInt:ESTBeaconPowerSavingMode].</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *smartPowerMode</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTBeaconUpdateConfig.h</code><br />
+		<code class="declared-in-ref">ESTNearableRule.h</code><br />
 	</div>				
 	
 	
@@ -366,6 +272,166 @@ Recommended use: [NSNumber numberWithInt:ESTBeaconPowerSavingMode].</p>
 					
 					
 					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithNearableIdentifier:" title="initWithNearableIdentifier:"></a>
+	<h3 class="subsubtitle method-title">initWithNearableIdentifier:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initialization method creating rule based on specific Estimote nearable identifier.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithNearableIdentifier:(NSString *)<em>identifier</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>identifier</em></dt>
+			<dd><p>Estimote nearable identifier</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>created rule object</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTNearableRule.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithNearableType:" title="initWithNearableType:"></a>
+	<h3 class="subsubtitle method-title">initWithNearableType:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initialization method creating rule based on specific Estimote nearable type.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithNearableType:(ESTNearableType)<em>type</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>type</em></dt>
+			<dd><p>Estimote nearable type</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>created rule object</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTNearableRule.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/updateWithNearable:" title="updateWithNearable:"></a>
+	<h3 class="subsubtitle method-title">updateWithNearable:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Method that is invoked by trigger manager object to update state of the rule.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)updateWithNearable:(ESTNearable *)<em>nearable</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>nearable</em></dt>
+			<dd><p>Estimote nearable object with most recent settings</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>When creating custom nearable related rule, this method should be implemented to update state property of this class,
+based on passed nearable object. For not nearable related rules <code>update</code> method of <a href="../Classes/ESTRule.html"><code>ESTRule</code></a> should be used instead.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTNearableRule.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
 					
 					
                     

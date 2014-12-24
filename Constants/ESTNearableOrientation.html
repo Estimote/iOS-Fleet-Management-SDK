@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>ESTBeaconConnectionStatus Constants Reference</title>
+		<title>ESTNearableOrientation Constants Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">ESTBeaconConnectionStatus Constants Reference</h1>
+				<h1 class="hideInXcode">ESTNearableOrientation Constants Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -45,7 +45,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="ESTBeaconConnectionStatus Constants Reference" name="top"></a>
+				<a title="ESTNearableOrientation Constants Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -54,7 +54,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">ESTBeaconConnectionStatus Constants Reference</h1>
+						<h1 class="title title-header">ESTNearableOrientation Constants Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -62,7 +62,7 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">ESTBeaconDefinitions.h</td>
+	<td class="specification-value">ESTNearable.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -74,19 +74,33 @@
 					
                     
                     
-                    <h3 class="subsubtitle method-title">ESTBeaconConnectionStatus</h3>
+                    <h3 class="subsubtitle method-title">ESTNearableOrientation</h3>
                     
+					
+					<div class="section section-overview">
+                        <p>Physical orientation of the device in 3D space.</p>
+					</div>
+					
+					
                     <div class="section">
                         <!-- display enum values -->
                         
                         <h4 class="method-subtitle">Definition</h4>
-                        <code>typedef NS_ENUM(int, ESTBeaconConnectionStatus ) {<br/>
+                        <code>typedef NS_ENUM(NSInteger, ESTNearableOrientation ) {<br/>
                             
-                            &nbsp;&nbsp; <a href="">ESTBeaconConnectionStatusConnecting</a>,<br/>
+                            &nbsp;&nbsp; <a href="">ESTNearableOrientationUnknown</a> = 0,<br/>
                             
-                            &nbsp;&nbsp; <a href="">ESTBeaconConnectionStatusConnected</a>,<br/>
+                            &nbsp;&nbsp; <a href="">ESTNearableOrientationHorizontal</a>,<br/>
                             
-                            &nbsp;&nbsp; <a href="">ESTBeaconConnectionStatusDisconnected</a>,<br/>
+                            &nbsp;&nbsp; <a href="">ESTNearableOrientationHorizontalUpsideDown</a>,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">ESTNearableOrientationVertical</a>,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">ESTNearableOrientationVerticalUpsideDown</a>,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">ESTNearableOrientationLeftSide</a>,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">ESTNearableOrientationRightSide</a>,<br/>
                             
                             };</code>
                     
@@ -96,32 +110,121 @@
                         <h4 class="method-subtitle">Constants</h4>
                         <dl class="termdef">
                             
-                            <dt><a name="" title="ESTBeaconConnectionStatusConnecting"></a><code>ESTBeaconConnectionStatusConnecting</code></dt>
+                            <dt><a name="" title="ESTNearableOrientationUnknown"></a><code>ESTNearableOrientationUnknown</code></dt>
 <dd>
+
+
+<p>Physical orientation of the device in 3D space.</p>
+
+    
+
+    
 
     
 	<p>
-		Declared In <code class="declared-in-ref">ESTBeaconDefinitions.h</code>.
+		Declared In <code class="declared-in-ref">ESTNearable.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="ESTBeaconConnectionStatusConnected"></a><code>ESTBeaconConnectionStatusConnected</code></dt>
+                            <dt><a name="" title="ESTNearableOrientationHorizontal"></a><code>ESTNearableOrientationHorizontal</code></dt>
 <dd>
+
+
+<p>Physical orientation of the device in 3D space.</p>
+
+    
+
+    
 
     
 	<p>
-		Declared In <code class="declared-in-ref">ESTBeaconDefinitions.h</code>.
+		Declared In <code class="declared-in-ref">ESTNearable.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="ESTBeaconConnectionStatusDisconnected"></a><code>ESTBeaconConnectionStatusDisconnected</code></dt>
+                            <dt><a name="" title="ESTNearableOrientationHorizontalUpsideDown"></a><code>ESTNearableOrientationHorizontalUpsideDown</code></dt>
 <dd>
+
+
+<p>Physical orientation of the device in 3D space.</p>
+
+    
+
+    
 
     
 	<p>
-		Declared In <code class="declared-in-ref">ESTBeaconDefinitions.h</code>.
+		Declared In <code class="declared-in-ref">ESTNearable.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ESTNearableOrientationVertical"></a><code>ESTNearableOrientationVertical</code></dt>
+<dd>
+
+
+<p>Physical orientation of the device in 3D space.</p>
+
+    
+
+    
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">ESTNearable.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ESTNearableOrientationVerticalUpsideDown"></a><code>ESTNearableOrientationVerticalUpsideDown</code></dt>
+<dd>
+
+
+<p>Physical orientation of the device in 3D space.</p>
+
+    
+
+    
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">ESTNearable.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ESTNearableOrientationLeftSide"></a><code>ESTNearableOrientationLeftSide</code></dt>
+<dd>
+
+
+<p>Physical orientation of the device in 3D space.</p>
+
+    
+
+    
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">ESTNearable.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ESTNearableOrientationRightSide"></a><code>ESTNearableOrientationRightSide</code></dt>
+<dd>
+
+
+<p>Physical orientation of the device in 3D space.</p>
+
+    
+
+    
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">ESTNearable.h</code>.
 	</p>
 	
 </dd>
@@ -129,6 +232,17 @@
                         </dl>
                     </div>
                     
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    <div class="method-subsection declared-in-section">
+                        <h4 class="method-subtitle">Declared In</h4>
+                        <code class="declared-in-ref">ESTNearable.h</code><br />
+                    </div>				
                     
                     
                     
@@ -142,7 +256,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 Estimote. All rights reserved. (Last updated: 2014-11-20)</span><br />
+						<p><span class="copyright">&copy; 2014 Estimote. All rights reserved. (Last updated: 2014-12-24)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						

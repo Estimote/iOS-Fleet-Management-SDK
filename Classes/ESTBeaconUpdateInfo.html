@@ -39,8 +39,6 @@
 	
 	<option value="properties">Properties</option>
 	
-	<option value="//api/name/UUID">&nbsp;&nbsp;&nbsp;&nbsp;UUID</option>
-	
 	<option value="//api/name/beacon">&nbsp;&nbsp;&nbsp;&nbsp;beacon</option>
 	
 	<option value="//api/name/config">&nbsp;&nbsp;&nbsp;&nbsp;config</option>
@@ -48,12 +46,6 @@
 	<option value="//api/name/delegate">&nbsp;&nbsp;&nbsp;&nbsp;delegate</option>
 	
 	<option value="//api/name/error">&nbsp;&nbsp;&nbsp;&nbsp;error</option>
-	
-	<option value="//api/name/macAddress">&nbsp;&nbsp;&nbsp;&nbsp;macAddress</option>
-	
-	<option value="//api/name/major">&nbsp;&nbsp;&nbsp;&nbsp;major</option>
-	
-	<option value="//api/name/minor">&nbsp;&nbsp;&nbsp;&nbsp;minor</option>
 	
 	<option value="//api/name/peripheralID">&nbsp;&nbsp;&nbsp;&nbsp;peripheralID</option>
 	
@@ -71,6 +63,8 @@
 	<option value="//api/name/findPeripheral">&nbsp;&nbsp;&nbsp;&nbsp;- findPeripheral</option>
 	
 	<option value="//api/name/initWithBeacon:config:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithBeacon:config:</option>
+	
+	<option value="//api/name/initWithBeacon:config:delegate:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithBeacon:config:delegate:</option>
 	
 	<option value="//api/name/updateWithConfig:">&nbsp;&nbsp;&nbsp;&nbsp;- updateWithConfig:</option>
 	
@@ -98,8 +92,6 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/UUID">UUID</a></span></li>
-	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beacon">beacon</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/config">config</a></span></li>
@@ -107,12 +99,6 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/delegate">delegate</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/error">error</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/macAddress">macAddress</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/major">major</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/minor">minor</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/peripheralID">peripheralID</a></span></li>
 	
@@ -131,6 +117,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/findPeripheral">findPeripheral</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithBeacon:config:">initWithBeacon:config:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithBeacon:config:delegate:">initWithBeacon:config:delegate:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/updateWithConfig:">updateWithConfig:</a></span></li>
 	
@@ -198,30 +186,6 @@
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/UUID">&nbsp;&nbsp;UUID</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/major">&nbsp;&nbsp;major</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/minor">&nbsp;&nbsp;minor</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/macAddress">&nbsp;&nbsp;macAddress</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
-	
-</li><li>
-	<span class="tooltip">
 		<code><a href="#//api/name/peripheralID">&nbsp;&nbsp;peripheralID</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
@@ -258,6 +222,12 @@
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/initWithBeacon:config:delegate:">&ndash;&nbsp;initWithBeacon:config:delegate:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/findPeripheral">&ndash;&nbsp;findPeripheral</a></code>
 	</span>
 	
@@ -286,42 +256,6 @@
 					<div class="section section-methods">
 						<a title="Properties" name="properties"></a>
 						<h2 class="subtitle subtitle-methods">Properties</h2>
-						
-						<div class="section-method">
-	<a name="//api/name/UUID" title="UUID"></a>
-	<h3 class="subsubtitle method-title">UUID</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Proximity UUID of the beacon device that should be updated.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSUUID *UUID</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTBeaconUpdateInfo.h</code><br />
-	</div>				
-	
-	
-</div>
 						
 						<div class="section-method">
 	<a name="//api/name/beacon" title="beacon"></a>
@@ -444,114 +378,6 @@
     
 
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSError *error</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTBeaconUpdateInfo.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/macAddress" title="macAddress"></a>
-	<h3 class="subsubtitle method-title">macAddress</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Mac address of the beacon device.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSString *macAddress</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTBeaconUpdateInfo.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/major" title="major"></a>
-	<h3 class="subsubtitle method-title">major</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Major of the beacon device that should be updated.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *major</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTBeaconUpdateInfo.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/minor" title="minor"></a>
-	<h3 class="subsubtitle method-title">minor</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Minor of the beacon device that should be updated.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *minor</code></div>
 
     
 	
@@ -756,12 +582,75 @@ config file containing description how update should be performed.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>beacon</em></dt>
-			<dd><p>beacon object</p></dd>
+			<dd><p>Beacon object.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>config</em></dt>
-			<dd><p>config description for update</p></dd>
+			<dd><p>Config description for update.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>initialized instance of this class</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconUpdateInfo.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithBeacon:config:delegate:" title="initWithBeacon:config:delegate:"></a>
+	<h3 class="subsubtitle method-title">initWithBeacon:config:delegate:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initialize object with beacon that is going to be updated and proper
+config file containing description how update should be performed
+with delegate object.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithBeacon:(ESTBeacon *)<em>beacon</em> config:(ESTBeaconUpdateConfig *)<em>config</em> delegate:(id&lt;ESBeaconUpdateInfoDelegate&gt;)<em>delegate</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>beacon</em></dt>
+			<dd><p>Beacon object.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>config</em></dt>
+			<dd><p>Config description for update.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>delegate</em></dt>
+			<dd><p>Delegate to receive events.</p></dd>
 		</dl>
 		
 	</div>
@@ -853,7 +742,7 @@ Power and Adv interval values.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 Estimote. All rights reserved. (Last updated: 2014-11-20)</span><br />
+						<p><span class="copyright">&copy; 2014 Estimote. All rights reserved. (Last updated: 2014-12-24)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						

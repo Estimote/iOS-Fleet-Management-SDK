@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>ESBulkUpdaterStatus Constants Reference</title>
+		<title>ESTNearableFirmwareState Constants Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">ESBulkUpdaterStatus Constants Reference</h1>
+				<h1 class="hideInXcode">ESTNearableFirmwareState Constants Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -45,7 +45,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="ESBulkUpdaterStatus Constants Reference" name="top"></a>
+				<a title="ESTNearableFirmwareState Constants Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -54,7 +54,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">ESBulkUpdaterStatus Constants Reference</h1>
+						<h1 class="title title-header">ESTNearableFirmwareState Constants Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -62,7 +62,7 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">ESTBulkUpdater.h</td>
+	<td class="specification-value">ESTNearable.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -74,19 +74,23 @@
 					
                     
                     
-                    <h3 class="subsubtitle method-title">ESBulkUpdaterStatus</h3>
+                    <h3 class="subsubtitle method-title">ESTNearableFirmwareState</h3>
                     
+					
+					<div class="section section-overview">
+                        <p>Type of firmware running on the device.</p>
+					</div>
+					
+					
                     <div class="section">
                         <!-- display enum values -->
                         
                         <h4 class="method-subtitle">Definition</h4>
-                        <code>typedef NS_ENUM(NSInteger, ESBulkUpdaterStatus ) {<br/>
+                        <code>typedef NS_ENUM(NSInteger, ESTNearableFirmwareState ) {<br/>
                             
-                            &nbsp;&nbsp; <a href="">ESBulkUpdaterStatusIdle</a>,<br/>
+                            &nbsp;&nbsp; <a href="">ESTNearableFirmwareStateBoot</a> = 0,<br/>
                             
-                            &nbsp;&nbsp; <a href="">ESBulkUpdaterStatusUpdating</a>,<br/>
-                            
-                            &nbsp;&nbsp; <a href="">ESBulkUpdaterStatusCompleted</a>,<br/>
+                            &nbsp;&nbsp; <a href="">ESTNearableFirmwareStateApp</a>,<br/>
                             
                             };</code>
                     
@@ -96,32 +100,36 @@
                         <h4 class="method-subtitle">Constants</h4>
                         <dl class="termdef">
                             
-                            <dt><a name="" title="ESBulkUpdaterStatusIdle"></a><code>ESBulkUpdaterStatusIdle</code></dt>
+                            <dt><a name="" title="ESTNearableFirmwareStateBoot"></a><code>ESTNearableFirmwareStateBoot</code></dt>
 <dd>
+
+
+<p>Type of firmware running on the device.</p>
+
+    
+
+    
 
     
 	<p>
-		Declared In <code class="declared-in-ref">ESTBulkUpdater.h</code>.
+		Declared In <code class="declared-in-ref">ESTNearable.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="ESBulkUpdaterStatusUpdating"></a><code>ESBulkUpdaterStatusUpdating</code></dt>
+                            <dt><a name="" title="ESTNearableFirmwareStateApp"></a><code>ESTNearableFirmwareStateApp</code></dt>
 <dd>
+
+
+<p>Type of firmware running on the device.</p>
+
+    
+
+    
 
     
 	<p>
-		Declared In <code class="declared-in-ref">ESTBulkUpdater.h</code>.
-	</p>
-	
-</dd>
-                            
-                            <dt><a name="" title="ESBulkUpdaterStatusCompleted"></a><code>ESBulkUpdaterStatusCompleted</code></dt>
-<dd>
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">ESTBulkUpdater.h</code>.
+		Declared In <code class="declared-in-ref">ESTNearable.h</code>.
 	</p>
 	
 </dd>
@@ -129,6 +137,17 @@
                         </dl>
                     </div>
                     
+                    
+                    
+                    
+
+                    
+                    
+                    
+                    <div class="method-subsection declared-in-section">
+                        <h4 class="method-subtitle">Declared In</h4>
+                        <code class="declared-in-ref">ESTNearable.h</code><br />
+                    </div>				
                     
                     
                     

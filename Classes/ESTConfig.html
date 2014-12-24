@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>ESTBeaconUpdateConfig Class Reference</title>
+		<title>ESTConfig Class Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">ESTBeaconUpdateConfig Class Reference</h1>
+				<h1 class="hideInXcode">ESTConfig Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -35,19 +35,17 @@
 	
 	
 	
-	<option value="properties">Properties</option>
-	
-	<option value="//api/name/advInterval">&nbsp;&nbsp;&nbsp;&nbsp;advInterval</option>
-	
-	<option value="//api/name/basicPowerMode">&nbsp;&nbsp;&nbsp;&nbsp;basicPowerMode</option>
-	
-	<option value="//api/name/estimoteSecureUUID">&nbsp;&nbsp;&nbsp;&nbsp;estimoteSecureUUID</option>
-	
-	<option value="//api/name/power">&nbsp;&nbsp;&nbsp;&nbsp;power</option>
-	
-	<option value="//api/name/smartPowerMode">&nbsp;&nbsp;&nbsp;&nbsp;smartPowerMode</option>
 	
 	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/enableAnalytics:">&nbsp;&nbsp;&nbsp;&nbsp;+ enableAnalytics:</option>
+	
+	<option value="//api/name/isAnalyticsEnabled">&nbsp;&nbsp;&nbsp;&nbsp;+ isAnalyticsEnabled</option>
+	
+	<option value="//api/name/isAuthorized">&nbsp;&nbsp;&nbsp;&nbsp;+ isAuthorized</option>
+	
+	<option value="//api/name/setupAppID:andAppToken:">&nbsp;&nbsp;&nbsp;&nbsp;+ setupAppID:andAppToken:</option>
 	
 	
 	
@@ -71,21 +69,19 @@
 
 
 
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/advInterval">advInterval</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/enableAnalytics:">enableAnalytics:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/basicPowerMode">basicPowerMode</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isAnalyticsEnabled">isAnalyticsEnabled</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/estimoteSecureUUID">estimoteSecureUUID</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isAuthorized">isAuthorized</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/power">power</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/smartPowerMode">smartPowerMode</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setupAppID:andAppToken:">setupAppID:andAppToken:</a></span></li>
 	
 </ul></li>
-
-
 
 
 
@@ -94,7 +90,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="ESTBeaconUpdateConfig Class Reference" name="top"></a>
+				<a title="ESTConfig Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -103,7 +99,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">ESTBeaconUpdateConfig Class Reference</h1>
+						<h1 class="title title-header">ESTConfig Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -113,11 +109,8 @@
 	<td class="specification-title">Inherits from</td>
 	<td class="specification-value">NSObject</td>
 </tr><tr>
-	<td class="specification-title">Conforms to</td>
-	<td class="specification-value">NSCoding<br />NSCopying</td>
-</tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">ESTBeaconUpdateConfig.h<br />ESTBeaconUpdateConfig.m</td>
+	<td class="specification-value">ESTConfig.h<br />ESTConfig.m</td>
 </tr>
 						</tbody></table></div>
 					
@@ -137,33 +130,27 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/advInterval">&nbsp;&nbsp;advInterval</a></code>
+		<code><a href="#//api/name/setupAppID:andAppToken:">+&nbsp;setupAppID:andAppToken:</a></code>
 	</span>
-	<span class="task-item-suffix">property</span>
+	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/power">&nbsp;&nbsp;power</a></code>
+		<code><a href="#//api/name/isAuthorized">+&nbsp;isAuthorized</a></code>
 	</span>
-	<span class="task-item-suffix">property</span>
+	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/basicPowerMode">&nbsp;&nbsp;basicPowerMode</a></code>
+		<code><a href="#//api/name/enableAnalytics:">+&nbsp;enableAnalytics:</a></code>
 	</span>
-	<span class="task-item-suffix">property</span>
+	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/smartPowerMode">&nbsp;&nbsp;smartPowerMode</a></code>
+		<code><a href="#//api/name/isAnalyticsEnabled">+&nbsp;isAnalyticsEnabled</a></code>
 	</span>
-	<span class="task-item-suffix">property</span>
 	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/estimoteSecureUUID">&nbsp;&nbsp;estimoteSecureUUID</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
 	
 </li>
 						</ul>
@@ -174,25 +161,38 @@
 					
 					
 					
+					
+					
 					<div class="section section-methods">
-						<a title="Properties" name="properties"></a>
-						<h2 class="subtitle subtitle-methods">Properties</h2>
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/advInterval" title="advInterval"></a>
-	<h3 class="subsubtitle method-title">advInterval</h3>
+	<a name="//api/name/enableAnalytics:" title="enableAnalytics:"></a>
+	<h3 class="subsubtitle method-title">enableAnalytics:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>To what advertising interval beacon should be changed.</p>
+		<p>Enables analytics requests on Enter/Exit monitoring events. Analytics data
+is collected in the Estimote Cloud.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *advInterval</code></div>
+	<div class="method-subsection method-declaration"><code>+ (void)enableAnalytics:(BOOL)<em>enable</em></code></div>
 
     
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>enable</em></dt>
+			<dd><p>flag indicating if analytics should be enabled</p></dd>
+		</dl>
+		
+	</div>
 	
 	
 	
@@ -208,30 +208,34 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTBeaconUpdateConfig.h</code><br />
+		<code class="declared-in-ref">ESTConfig.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/basicPowerMode" title="basicPowerMode"></a>
-	<h3 class="subsubtitle method-title">basicPowerMode</h3>
+	<a name="//api/name/isAnalyticsEnabled" title="isAnalyticsEnabled"></a>
+	<h3 class="subsubtitle method-title">isAnalyticsEnabled</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Flag for switching state of basic power mode.
-Recommended use: [NSNumber numberWithInt:ESTBeaconPowerSavingMode].</p>
+		<p>Indicates current state of analytics.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *basicPowerMode</code></div>
+	<div class="method-subsection method-declaration"><code>+ (BOOL)isAnalyticsEnabled</code></div>
 
     
 	
 	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>flag that indicates if analytics is enabled</p>
+	</div>
 	
 	
 	
@@ -245,26 +249,25 @@ Recommended use: [NSNumber numberWithInt:ESTBeaconPowerSavingMode].</p>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTBeaconUpdateConfig.h</code><br />
+		<code class="declared-in-ref">ESTConfig.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/estimoteSecureUUID" title="estimoteSecureUUID"></a>
-	<h3 class="subsubtitle method-title">estimoteSecureUUID</h3>
+	<a name="//api/name/isAuthorized" title="isAuthorized"></a>
+	<h3 class="subsubtitle method-title">isAuthorized</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Flag for switching state of Estimote Secure UUID.
-Recommended use: [NSNumber numberWithInt:ESTBeaconPowerSavingMode].</p>
+		<p>Checks if App ID and App Token were set.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *estimoteSecureUUID</code></div>
+	<div class="method-subsection method-declaration"><code>+ (BOOL)isAuthorized</code></div>
 
     
 	
@@ -282,33 +285,53 @@ Recommended use: [NSNumber numberWithInt:ESTBeaconPowerSavingMode].</p>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTBeaconUpdateConfig.h</code><br />
+		<code class="declared-in-ref">ESTConfig.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/power" title="power"></a>
-	<h3 class="subsubtitle method-title">power</h3>
+	<a name="//api/name/setupAppID:andAppToken:" title="setupAppID:andAppToken:"></a>
+	<h3 class="subsubtitle method-title">setupAppID:andAppToken:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>To what broadcasting power beacon should be changed.</p>
+		<p>Sets App ID and App Token, enabling communication with the Estimote Cloud API.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *power</code></div>
+	<div class="method-subsection method-declaration"><code>+ (void)setupAppID:(NSString *)<em>appID</em> andAppToken:(NSString *)<em>appToken</em></code></div>
 
     
 	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>appID</em></dt>
+			<dd><p>The API App ID.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>appToken</em></dt>
+			<dd><p>The API App Token.</p></dd>
+		</dl>
+		
+	</div>
 	
 	
 	
 	
 	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>You can find your API App ID and API App Token in the Account Settings section of the Estimote Cloud.</p>
+	</div>
 	
 	
 	
@@ -318,52 +341,13 @@ Recommended use: [NSNumber numberWithInt:ESTBeaconPowerSavingMode].</p>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTBeaconUpdateConfig.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/smartPowerMode" title="smartPowerMode"></a>
-	<h3 class="subsubtitle method-title">smartPowerMode</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Flag for switching state of smart power mode.
-Recommended use: [NSNumber numberWithInt:ESTBeaconPowerSavingMode].</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *smartPowerMode</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTBeaconUpdateConfig.h</code><br />
+		<code class="declared-in-ref">ESTConfig.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 					</div>
-					
-					
 					
 					
 					
