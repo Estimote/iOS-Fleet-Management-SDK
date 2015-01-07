@@ -1,0 +1,469 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AC358F981A5D30EE0076481D /* libEstimoteSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC358F971A5D30EE0076481D /* libEstimoteSDK.a */; };
+		AC6CD7C31A5A880400B5AC2F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6CD7C21A5A880400B5AC2F /* main.m */; };
+		AC6CD7C61A5A880400B5AC2F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6CD7C51A5A880400B5AC2F /* AppDelegate.m */; };
+		AC6CD7C91A5A880400B5AC2F /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6CD7C81A5A880400B5AC2F /* MasterViewController.m */; };
+		AC6CD7CC1A5A880400B5AC2F /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6CD7CB1A5A880400B5AC2F /* DetailViewController.m */; };
+		AC6CD7CF1A5A880400B5AC2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC6CD7CD1A5A880400B5AC2F /* Main.storyboard */; };
+		AC6CD7D11A5A880400B5AC2F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC6CD7D01A5A880400B5AC2F /* Images.xcassets */; };
+		AC6CD7D41A5A880400B5AC2F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC6CD7D21A5A880400B5AC2F /* LaunchScreen.xib */; };
+		AC6CD7E01A5A880400B5AC2F /* AccelerometerExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC6CD7DF1A5A880400B5AC2F /* AccelerometerExampleTests.m */; };
+		AC6CD7EA1A5A911500B5AC2F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6CD7E91A5A911500B5AC2F /* SystemConfiguration.framework */; };
+		AC6CD7EC1A5A911900B5AC2F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6CD7EB1A5A911900B5AC2F /* CoreLocation.framework */; };
+		AC6CD7EE1A5A911D00B5AC2F /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6CD7ED1A5A911D00B5AC2F /* CoreBluetooth.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AC6CD7DA1A5A880400B5AC2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC6CD7B51A5A880300B5AC2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC6CD7BC1A5A880400B5AC2F;
+			remoteInfo = AccelerometerExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AC358F971A5D30EE0076481D /* libEstimoteSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEstimoteSDK.a; path = ../../../EstimoteSDK/libEstimoteSDK.a; sourceTree = "<group>"; };
+		AC6CD7BD1A5A880400B5AC2F /* AccelerometerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccelerometerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC6CD7C11A5A880400B5AC2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC6CD7C21A5A880400B5AC2F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AC6CD7C41A5A880400B5AC2F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AC6CD7C51A5A880400B5AC2F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AC6CD7C71A5A880400B5AC2F /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		AC6CD7C81A5A880400B5AC2F /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		AC6CD7CA1A5A880400B5AC2F /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		AC6CD7CB1A5A880400B5AC2F /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		AC6CD7CE1A5A880400B5AC2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AC6CD7D01A5A880400B5AC2F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AC6CD7D31A5A880400B5AC2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		AC6CD7D91A5A880400B5AC2F /* AccelerometerExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AccelerometerExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC6CD7DE1A5A880400B5AC2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC6CD7DF1A5A880400B5AC2F /* AccelerometerExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccelerometerExampleTests.m; sourceTree = "<group>"; };
+		AC6CD7E91A5A911500B5AC2F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		AC6CD7EB1A5A911900B5AC2F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AC6CD7ED1A5A911D00B5AC2F /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC6CD7BA1A5A880400B5AC2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC358F981A5D30EE0076481D /* libEstimoteSDK.a in Frameworks */,
+				AC6CD7EE1A5A911D00B5AC2F /* CoreBluetooth.framework in Frameworks */,
+				AC6CD7EC1A5A911900B5AC2F /* CoreLocation.framework in Frameworks */,
+				AC6CD7EA1A5A911500B5AC2F /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC6CD7D61A5A880400B5AC2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AC6CD7B41A5A880300B5AC2F = {
+			isa = PBXGroup;
+			children = (
+				AC358F971A5D30EE0076481D /* libEstimoteSDK.a */,
+				AC6CD7ED1A5A911D00B5AC2F /* CoreBluetooth.framework */,
+				AC6CD7EB1A5A911900B5AC2F /* CoreLocation.framework */,
+				AC6CD7E91A5A911500B5AC2F /* SystemConfiguration.framework */,
+				AC6CD7BF1A5A880400B5AC2F /* AccelerometerExample */,
+				AC6CD7DC1A5A880400B5AC2F /* AccelerometerExampleTests */,
+				AC6CD7BE1A5A880400B5AC2F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AC6CD7BE1A5A880400B5AC2F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC6CD7BD1A5A880400B5AC2F /* AccelerometerExample.app */,
+				AC6CD7D91A5A880400B5AC2F /* AccelerometerExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC6CD7BF1A5A880400B5AC2F /* AccelerometerExample */ = {
+			isa = PBXGroup;
+			children = (
+				AC6CD7C41A5A880400B5AC2F /* AppDelegate.h */,
+				AC6CD7C51A5A880400B5AC2F /* AppDelegate.m */,
+				AC6CD7C71A5A880400B5AC2F /* MasterViewController.h */,
+				AC6CD7C81A5A880400B5AC2F /* MasterViewController.m */,
+				AC6CD7CA1A5A880400B5AC2F /* DetailViewController.h */,
+				AC6CD7CB1A5A880400B5AC2F /* DetailViewController.m */,
+				AC6CD7CD1A5A880400B5AC2F /* Main.storyboard */,
+				AC6CD7D01A5A880400B5AC2F /* Images.xcassets */,
+				AC6CD7D21A5A880400B5AC2F /* LaunchScreen.xib */,
+				AC6CD7C01A5A880400B5AC2F /* Supporting Files */,
+			);
+			path = AccelerometerExample;
+			sourceTree = "<group>";
+		};
+		AC6CD7C01A5A880400B5AC2F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AC6CD7C11A5A880400B5AC2F /* Info.plist */,
+				AC6CD7C21A5A880400B5AC2F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AC6CD7DC1A5A880400B5AC2F /* AccelerometerExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				AC6CD7DF1A5A880400B5AC2F /* AccelerometerExampleTests.m */,
+				AC6CD7DD1A5A880400B5AC2F /* Supporting Files */,
+			);
+			path = AccelerometerExampleTests;
+			sourceTree = "<group>";
+		};
+		AC6CD7DD1A5A880400B5AC2F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AC6CD7DE1A5A880400B5AC2F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AC6CD7BC1A5A880400B5AC2F /* AccelerometerExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC6CD7E31A5A880400B5AC2F /* Build configuration list for PBXNativeTarget "AccelerometerExample" */;
+			buildPhases = (
+				AC6CD7B91A5A880400B5AC2F /* Sources */,
+				AC6CD7BA1A5A880400B5AC2F /* Frameworks */,
+				AC6CD7BB1A5A880400B5AC2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AccelerometerExample;
+			productName = AccelerometerExample;
+			productReference = AC6CD7BD1A5A880400B5AC2F /* AccelerometerExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AC6CD7D81A5A880400B5AC2F /* AccelerometerExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC6CD7E61A5A880400B5AC2F /* Build configuration list for PBXNativeTarget "AccelerometerExampleTests" */;
+			buildPhases = (
+				AC6CD7D51A5A880400B5AC2F /* Sources */,
+				AC6CD7D61A5A880400B5AC2F /* Frameworks */,
+				AC6CD7D71A5A880400B5AC2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC6CD7DB1A5A880400B5AC2F /* PBXTargetDependency */,
+			);
+			name = AccelerometerExampleTests;
+			productName = AccelerometerExampleTests;
+			productReference = AC6CD7D91A5A880400B5AC2F /* AccelerometerExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC6CD7B51A5A880300B5AC2F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Estimote Inc.";
+				TargetAttributes = {
+					AC6CD7BC1A5A880400B5AC2F = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					AC6CD7D81A5A880400B5AC2F = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = AC6CD7BC1A5A880400B5AC2F;
+					};
+				};
+			};
+			buildConfigurationList = AC6CD7B81A5A880300B5AC2F /* Build configuration list for PBXProject "AccelerometerExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AC6CD7B41A5A880300B5AC2F;
+			productRefGroup = AC6CD7BE1A5A880400B5AC2F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC6CD7BC1A5A880400B5AC2F /* AccelerometerExample */,
+				AC6CD7D81A5A880400B5AC2F /* AccelerometerExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AC6CD7BB1A5A880400B5AC2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC6CD7CF1A5A880400B5AC2F /* Main.storyboard in Resources */,
+				AC6CD7D41A5A880400B5AC2F /* LaunchScreen.xib in Resources */,
+				AC6CD7D11A5A880400B5AC2F /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC6CD7D71A5A880400B5AC2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC6CD7B91A5A880400B5AC2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC6CD7C61A5A880400B5AC2F /* AppDelegate.m in Sources */,
+				AC6CD7C91A5A880400B5AC2F /* MasterViewController.m in Sources */,
+				AC6CD7C31A5A880400B5AC2F /* main.m in Sources */,
+				AC6CD7CC1A5A880400B5AC2F /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC6CD7D51A5A880400B5AC2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC6CD7E01A5A880400B5AC2F /* AccelerometerExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AC6CD7DB1A5A880400B5AC2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC6CD7BC1A5A880400B5AC2F /* AccelerometerExample */;
+			targetProxy = AC6CD7DA1A5A880400B5AC2F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AC6CD7CD1A5A880400B5AC2F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC6CD7CE1A5A880400B5AC2F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AC6CD7D21A5A880400B5AC2F /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC6CD7D31A5A880400B5AC2F /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AC6CD7E11A5A880400B5AC2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AC6CD7E21A5A880400B5AC2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AC6CD7E41A5A880400B5AC2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../../../EstimoteSDK/Headers,
+				);
+				INFOPLIST_FILE = AccelerometerExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					../../../EstimoteSDK,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AC6CD7E51A5A880400B5AC2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../../../EstimoteSDK/Headers,
+				);
+				INFOPLIST_FILE = AccelerometerExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					../../../EstimoteSDK,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		AC6CD7E71A5A880400B5AC2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = AccelerometerExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AccelerometerExample.app/AccelerometerExample";
+			};
+			name = Debug;
+		};
+		AC6CD7E81A5A880400B5AC2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = AccelerometerExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AccelerometerExample.app/AccelerometerExample";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC6CD7B81A5A880300B5AC2F /* Build configuration list for PBXProject "AccelerometerExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC6CD7E11A5A880400B5AC2F /* Debug */,
+				AC6CD7E21A5A880400B5AC2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC6CD7E31A5A880400B5AC2F /* Build configuration list for PBXNativeTarget "AccelerometerExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC6CD7E41A5A880400B5AC2F /* Debug */,
+				AC6CD7E51A5A880400B5AC2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC6CD7E61A5A880400B5AC2F /* Build configuration list for PBXNativeTarget "AccelerometerExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC6CD7E71A5A880400B5AC2F /* Debug */,
+				AC6CD7E81A5A880400B5AC2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AC6CD7B51A5A880300B5AC2F /* Project object */;
+}

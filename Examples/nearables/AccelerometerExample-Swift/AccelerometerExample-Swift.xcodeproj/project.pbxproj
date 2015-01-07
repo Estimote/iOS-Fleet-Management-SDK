@@ -1,0 +1,464 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AC358F9A1A5D32280076481D /* libEstimoteSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC358F991A5D32280076481D /* libEstimoteSDK.a */; };
+		AC6CD8191A5AC88600B5AC2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6CD8181A5AC88600B5AC2F /* AppDelegate.swift */; };
+		AC6CD81B1A5AC88600B5AC2F /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6CD81A1A5AC88600B5AC2F /* MasterViewController.swift */; };
+		AC6CD81D1A5AC88600B5AC2F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6CD81C1A5AC88600B5AC2F /* DetailViewController.swift */; };
+		AC6CD8201A5AC88600B5AC2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC6CD81E1A5AC88600B5AC2F /* Main.storyboard */; };
+		AC6CD8221A5AC88600B5AC2F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC6CD8211A5AC88600B5AC2F /* Images.xcassets */; };
+		AC6CD8251A5AC88600B5AC2F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC6CD8231A5AC88600B5AC2F /* LaunchScreen.xib */; };
+		AC6CD8311A5AC88600B5AC2F /* AccelerometerExample_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6CD8301A5AC88600B5AC2F /* AccelerometerExample_SwiftTests.swift */; };
+		AC6CD83B1A5ACA2900B5AC2F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6CD83A1A5ACA2900B5AC2F /* SystemConfiguration.framework */; };
+		AC6CD83D1A5ACA2E00B5AC2F /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6CD83C1A5ACA2E00B5AC2F /* CoreBluetooth.framework */; };
+		AC6CD83F1A5ACA3200B5AC2F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC6CD83E1A5ACA3200B5AC2F /* CoreLocation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AC6CD82B1A5AC88600B5AC2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC6CD80B1A5AC88500B5AC2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC6CD8121A5AC88500B5AC2F;
+			remoteInfo = "AccelerometerExample-Swift";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AC358F991A5D32280076481D /* libEstimoteSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEstimoteSDK.a; path = ../../../EstimoteSDK/libEstimoteSDK.a; sourceTree = "<group>"; };
+		AC6CD8131A5AC88600B5AC2F /* AccelerometerExample-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AccelerometerExample-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC6CD8171A5AC88600B5AC2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC6CD8181A5AC88600B5AC2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AC6CD81A1A5AC88600B5AC2F /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		AC6CD81C1A5AC88600B5AC2F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		AC6CD81F1A5AC88600B5AC2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AC6CD8211A5AC88600B5AC2F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AC6CD8241A5AC88600B5AC2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		AC6CD82A1A5AC88600B5AC2F /* AccelerometerExample-SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AccelerometerExample-SwiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC6CD82F1A5AC88600B5AC2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC6CD8301A5AC88600B5AC2F /* AccelerometerExample_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerometerExample_SwiftTests.swift; sourceTree = "<group>"; };
+		AC6CD83A1A5ACA2900B5AC2F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		AC6CD83C1A5ACA2E00B5AC2F /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		AC6CD83E1A5ACA3200B5AC2F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AC6CD85B1A5ACB2800B5AC2F /* AccelerometerExample-Swift-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AccelerometerExample-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC6CD8101A5AC88500B5AC2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC358F9A1A5D32280076481D /* libEstimoteSDK.a in Frameworks */,
+				AC6CD83F1A5ACA3200B5AC2F /* CoreLocation.framework in Frameworks */,
+				AC6CD83D1A5ACA2E00B5AC2F /* CoreBluetooth.framework in Frameworks */,
+				AC6CD83B1A5ACA2900B5AC2F /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC6CD8271A5AC88600B5AC2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AC6CD80A1A5AC88500B5AC2F = {
+			isa = PBXGroup;
+			children = (
+				AC358F991A5D32280076481D /* libEstimoteSDK.a */,
+				AC6CD83E1A5ACA3200B5AC2F /* CoreLocation.framework */,
+				AC6CD83C1A5ACA2E00B5AC2F /* CoreBluetooth.framework */,
+				AC6CD83A1A5ACA2900B5AC2F /* SystemConfiguration.framework */,
+				AC6CD8151A5AC88600B5AC2F /* AccelerometerExample-Swift */,
+				AC6CD82D1A5AC88600B5AC2F /* AccelerometerExample-SwiftTests */,
+				AC6CD8141A5AC88600B5AC2F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AC6CD8141A5AC88600B5AC2F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC6CD8131A5AC88600B5AC2F /* AccelerometerExample-Swift.app */,
+				AC6CD82A1A5AC88600B5AC2F /* AccelerometerExample-SwiftTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC6CD8151A5AC88600B5AC2F /* AccelerometerExample-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				AC6CD8181A5AC88600B5AC2F /* AppDelegate.swift */,
+				AC6CD81A1A5AC88600B5AC2F /* MasterViewController.swift */,
+				AC6CD81C1A5AC88600B5AC2F /* DetailViewController.swift */,
+				AC6CD85B1A5ACB2800B5AC2F /* AccelerometerExample-Swift-Bridging-Header.h */,
+				AC6CD81E1A5AC88600B5AC2F /* Main.storyboard */,
+				AC6CD8211A5AC88600B5AC2F /* Images.xcassets */,
+				AC6CD8231A5AC88600B5AC2F /* LaunchScreen.xib */,
+				AC6CD8161A5AC88600B5AC2F /* Supporting Files */,
+			);
+			path = "AccelerometerExample-Swift";
+			sourceTree = "<group>";
+		};
+		AC6CD8161A5AC88600B5AC2F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AC6CD8171A5AC88600B5AC2F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AC6CD82D1A5AC88600B5AC2F /* AccelerometerExample-SwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				AC6CD8301A5AC88600B5AC2F /* AccelerometerExample_SwiftTests.swift */,
+				AC6CD82E1A5AC88600B5AC2F /* Supporting Files */,
+			);
+			path = "AccelerometerExample-SwiftTests";
+			sourceTree = "<group>";
+		};
+		AC6CD82E1A5AC88600B5AC2F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AC6CD82F1A5AC88600B5AC2F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AC6CD8121A5AC88500B5AC2F /* AccelerometerExample-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC6CD8341A5AC88600B5AC2F /* Build configuration list for PBXNativeTarget "AccelerometerExample-Swift" */;
+			buildPhases = (
+				AC6CD80F1A5AC88500B5AC2F /* Sources */,
+				AC6CD8101A5AC88500B5AC2F /* Frameworks */,
+				AC6CD8111A5AC88500B5AC2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AccelerometerExample-Swift";
+			productName = "AccelerometerExample-Swift";
+			productReference = AC6CD8131A5AC88600B5AC2F /* AccelerometerExample-Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AC6CD8291A5AC88600B5AC2F /* AccelerometerExample-SwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC6CD8371A5AC88600B5AC2F /* Build configuration list for PBXNativeTarget "AccelerometerExample-SwiftTests" */;
+			buildPhases = (
+				AC6CD8261A5AC88600B5AC2F /* Sources */,
+				AC6CD8271A5AC88600B5AC2F /* Frameworks */,
+				AC6CD8281A5AC88600B5AC2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC6CD82C1A5AC88600B5AC2F /* PBXTargetDependency */,
+			);
+			name = "AccelerometerExample-SwiftTests";
+			productName = "AccelerometerExample-SwiftTests";
+			productReference = AC6CD82A1A5AC88600B5AC2F /* AccelerometerExample-SwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC6CD80B1A5AC88500B5AC2F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Estimote Inc.";
+				TargetAttributes = {
+					AC6CD8121A5AC88500B5AC2F = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					AC6CD8291A5AC88600B5AC2F = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = AC6CD8121A5AC88500B5AC2F;
+					};
+				};
+			};
+			buildConfigurationList = AC6CD80E1A5AC88500B5AC2F /* Build configuration list for PBXProject "AccelerometerExample-Swift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AC6CD80A1A5AC88500B5AC2F;
+			productRefGroup = AC6CD8141A5AC88600B5AC2F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC6CD8121A5AC88500B5AC2F /* AccelerometerExample-Swift */,
+				AC6CD8291A5AC88600B5AC2F /* AccelerometerExample-SwiftTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AC6CD8111A5AC88500B5AC2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC6CD8201A5AC88600B5AC2F /* Main.storyboard in Resources */,
+				AC6CD8251A5AC88600B5AC2F /* LaunchScreen.xib in Resources */,
+				AC6CD8221A5AC88600B5AC2F /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC6CD8281A5AC88600B5AC2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC6CD80F1A5AC88500B5AC2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC6CD81D1A5AC88600B5AC2F /* DetailViewController.swift in Sources */,
+				AC6CD81B1A5AC88600B5AC2F /* MasterViewController.swift in Sources */,
+				AC6CD8191A5AC88600B5AC2F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC6CD8261A5AC88600B5AC2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC6CD8311A5AC88600B5AC2F /* AccelerometerExample_SwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AC6CD82C1A5AC88600B5AC2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC6CD8121A5AC88500B5AC2F /* AccelerometerExample-Swift */;
+			targetProxy = AC6CD82B1A5AC88600B5AC2F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AC6CD81E1A5AC88600B5AC2F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC6CD81F1A5AC88600B5AC2F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AC6CD8231A5AC88600B5AC2F /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC6CD8241A5AC88600B5AC2F /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AC6CD8321A5AC88600B5AC2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AC6CD8331A5AC88600B5AC2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AC6CD8351A5AC88600B5AC2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../../../EstimoteSDK/Headers,
+				);
+				INFOPLIST_FILE = "AccelerometerExample-Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					../../../EstimoteSDK,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AccelerometerExample-Swift/AccelerometerExample-Swift-Bridging-Header.h";
+			};
+			name = Debug;
+		};
+		AC6CD8361A5AC88600B5AC2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../../../EstimoteSDK/Headers,
+				);
+				INFOPLIST_FILE = "AccelerometerExample-Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					../../../EstimoteSDK,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AccelerometerExample-Swift/AccelerometerExample-Swift-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		AC6CD8381A5AC88600B5AC2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "AccelerometerExample-SwiftTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AccelerometerExample-Swift.app/AccelerometerExample-Swift";
+			};
+			name = Debug;
+		};
+		AC6CD8391A5AC88600B5AC2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "AccelerometerExample-SwiftTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AccelerometerExample-Swift.app/AccelerometerExample-Swift";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC6CD80E1A5AC88500B5AC2F /* Build configuration list for PBXProject "AccelerometerExample-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC6CD8321A5AC88600B5AC2F /* Debug */,
+				AC6CD8331A5AC88600B5AC2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC6CD8341A5AC88600B5AC2F /* Build configuration list for PBXNativeTarget "AccelerometerExample-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC6CD8351A5AC88600B5AC2F /* Debug */,
+				AC6CD8361A5AC88600B5AC2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC6CD8371A5AC88600B5AC2F /* Build configuration list for PBXNativeTarget "AccelerometerExample-SwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC6CD8381A5AC88600B5AC2F /* Debug */,
+				AC6CD8391A5AC88600B5AC2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AC6CD80B1A5AC88500B5AC2F /* Project object */;
+}

@@ -372,8 +372,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/marcinklimek/Projects/estimote/ios_code/iOS-Nearable-Examples/EstimoteSDK",
-					"/Users/marcinklimek/Projects/estimote/ios_code/iOS-SDK/EstimoteSDK",
+					../../../EstimoteSDK,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -392,8 +391,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/marcinklimek/Projects/estimote/ios_code/iOS-Nearable-Examples/EstimoteSDK",
-					"/Users/marcinklimek/Projects/estimote/ios_code/iOS-SDK/EstimoteSDK",
+					../../../EstimoteSDK,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

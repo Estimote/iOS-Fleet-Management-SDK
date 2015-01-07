@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  TemperatureExample-Swift
+//  AccelerometerExample-Swift
 //
-//  Created by Grzegorz Krukiewicz-Gacek on 24.12.2014.
-//  Copyright (c) 2014 Estimote Inc. All rights reserved.
+//  Created by Grzegorz Krukiewicz-Gacek on 05.01.2015.
+//  Copyright (c) 2015 Estimote Inc. All rights reserved.
 //
 
 import UIKit
@@ -15,11 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+
         UINavigationBar.appearance().barTintColor = UIColor(red: 0.490, green: 0.631, blue: 0.549, alpha: 1.000)
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor(),
             NSFontAttributeName:UIFont.systemFontOfSize(18)];
-        
         return true
     }
 

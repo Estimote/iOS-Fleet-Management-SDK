@@ -1,9 +1,9 @@
 //
 //  AppDelegate.m
-//  TemperatureExample
+//  AccelerometerExample
 //
-//  Created by Grzegorz Krukiewicz-Gacek on 24.12.2014.
-//  Copyright (c) 2014 Estimote Inc. All rights reserved.
+//  Created by Grzegorz Krukiewicz-Gacek on 05.01.2015.
+//  Copyright (c) 2015 Estimote Inc. All rights reserved.
 //
 
 #import "AppDelegate.h"

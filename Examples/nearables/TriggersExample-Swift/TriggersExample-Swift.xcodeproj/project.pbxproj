@@ -428,8 +428,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/Gacek/Documents/Programowanie/iOS/Estimote/NearableExamples/EstimoteSDK,
-					"/Users/marcinklimek/Projects/estimote/ios_code/iOS-SDK/EstimoteSDK",
+					../../../EstimoteSDK,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TriggersExample-Swift/TriggersExample-Swift-Bridging-Header.h";
@@ -449,8 +448,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/Gacek/Documents/Programowanie/iOS/Estimote/NearableExamples/EstimoteSDK,
-					"/Users/marcinklimek/Projects/estimote/ios_code/iOS-SDK/EstimoteSDK",
+					../../../EstimoteSDK,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TriggersExample-Swift/TriggersExample-Swift-Bridging-Header.h";
