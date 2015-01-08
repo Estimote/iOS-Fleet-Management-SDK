@@ -244,6 +244,11 @@
 				TargetAttributes = {
 					AC72C5491A49AD9A00C72132 = {
 						CreatedOnToolsVersion = 6.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					AC72C55E1A49AD9A00C72132 = {
 						CreatedOnToolsVersion = 6.1;
