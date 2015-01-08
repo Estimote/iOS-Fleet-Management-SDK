@@ -2,7 +2,7 @@
 //  ESTBeaconDefinitions.h
 //  EstimoteSDK
 //
-//  Version: 2.3.0
+//  Version: 2.3.1
 //  Created by Marcin Klimek on 9/26/13.
 //  Copyright (c) 2013 Estimote. All rights reserved.
 //
