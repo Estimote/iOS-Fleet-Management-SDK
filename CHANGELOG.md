@@ -1,3 +1,14 @@
+## 2.3.1 (January 8, 2015)
+
+Improvements:
+- Swift Ranging example added
+- Custom Triggers example added
+- Accelerometer example added
+
+Bugfixes:
+- Trigger manager double monitoring crash solved
+- Compilation issue with undefined symbol solved 
+
 ## 2.3.0 (December 24, 2014)
 
 Features:
