@@ -40,7 +40,7 @@
 {
     [super viewDidLoad];
     
-    self.title = @"Ranged nearables";
+    self.title = @"Ranged Estimote Nearables";
     
     self.tableView = [[UITableView alloc] initWithFrame:self.view.frame];
     self.tableView.delegate = self;
@@ -49,6 +49,12 @@
     
     [self.view addSubview:self.tableView];
     
+    /*
+    * Initialize nearables manager and start ranging
+    * devices around with any possible type. When nearables are ranged
+    * propper delegate method is invoke. Delegate method updates
+    * nearables array and reload table view.
+    */
     self.nearableManager = [ESTNearableManager new];
     self.nearableManager.delegate = self;
     [self.nearableManager startRangingForType:ESTNearableTypeAll];
@@ -60,12 +66,14 @@
       didRangeNearables:(NSArray *)nearables
                withType:(ESTNearableType)type
 {
+    /*
+     * Update local nearables array and reload table view
+     */
     self.nearablesArray = nearables;
-    
     [self.tableView reloadData];
 }
 
-#pragma mark - Table view data source
+#pragma mark - UITableView delegate and data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -77,8 +85,6 @@
     return [self.nearablesArray count];
 }
 
-
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     ESTTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CellIdentifier" forIndexPath:indexPath];
@@ -89,7 +95,7 @@
     ESTNearable *nearable = [self.nearablesArray objectAtIndex:indexPath.row];
     
     cell.textLabel.text = [NSString stringWithFormat:@"Identifier: %@", nearable.identifier];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"Type: %tu / RSSI: %zd", nearable.type, nearable.rssi];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Type: %@ / RSSI: %zd", [nearable nameForType:nearable.type], nearable.rssi];
     
     cell.imageView.image = [[UIImage alloc] init];
     cell.imageView.contentMode = UIViewContentModeScaleAspectFill;
@@ -106,6 +112,8 @@
 {
     return 80;
 }
+
+#pragma mark - Utility methods
 
 - (UIImage *)imageForNearableType:(ESTNearableType)type
 {
@@ -139,10 +147,9 @@
             return [UIImage imageNamed:@"sticker_dog"];
             break;
         default:
+            return [UIImage imageNamed:@"sticker_grey"];
             break;
     }
-    
-    return [UIImage imageNamed:@"sticker_grey"];
 }
 
 @end
