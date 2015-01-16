@@ -10,6 +10,10 @@
 		951C167918E45EA5001B3C8E /* ESTTemperatureDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 951C167818E45EA5001B3C8E /* ESTTemperatureDemoVC.xib */; };
 		951C167B18E45EB3001B3C8E /* ESTAccelerometerDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 951C167A18E45EB3001B3C8E /* ESTAccelerometerDemoVC.xib */; };
 		951C167D18E475B6001B3C8E /* ESTNotificationDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 951C167C18E475B6001B3C8E /* ESTNotificationDemoVC.xib */; };
+		9543319D1A6818B60079B873 /* ESTMotionUUIDDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 9543319B1A6818B60079B873 /* ESTMotionUUIDDemoVC.m */; };
+		9543319E1A6818B60079B873 /* ESTMotionUUIDDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9543319C1A6818B60079B873 /* ESTMotionUUIDDemoVC.xib */; };
+		954331A21A6871570079B873 /* ESTMotionUUIDSettingsDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 954331A01A6871570079B873 /* ESTMotionUUIDSettingsDemoVC.m */; };
+		954331A31A6871570079B873 /* ESTMotionUUIDSettingsDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 954331A11A6871570079B873 /* ESTMotionUUIDSettingsDemoVC.xib */; };
 		95A43D771940CDDB004D81E3 /* ESTCloudBeaconTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A43D761940CDDB004D81E3 /* ESTCloudBeaconTableVC.m */; };
 		95B1A64E1A4AC8BA00102220 /* libEstimoteSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95B1A64D1A4AC8BA00102220 /* libEstimoteSDK.a */; };
 		95C7C3501941BAA300D9BF17 /* ESTCloudBeaconTableVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95C7C34F1941BAA300D9BF17 /* ESTCloudBeaconTableVC.xib */; };
@@ -38,6 +42,12 @@
 		951C167818E45EA5001B3C8E /* ESTTemperatureDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESTTemperatureDemoVC.xib; sourceTree = "<group>"; };
 		951C167A18E45EB3001B3C8E /* ESTAccelerometerDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESTAccelerometerDemoVC.xib; sourceTree = "<group>"; };
 		951C167C18E475B6001B3C8E /* ESTNotificationDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESTNotificationDemoVC.xib; sourceTree = "<group>"; };
+		9543319A1A6818B60079B873 /* ESTMotionUUIDDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTMotionUUIDDemoVC.h; sourceTree = "<group>"; };
+		9543319B1A6818B60079B873 /* ESTMotionUUIDDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTMotionUUIDDemoVC.m; sourceTree = "<group>"; };
+		9543319C1A6818B60079B873 /* ESTMotionUUIDDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESTMotionUUIDDemoVC.xib; sourceTree = "<group>"; };
+		9543319F1A6871570079B873 /* ESTMotionUUIDSettingsDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTMotionUUIDSettingsDemoVC.h; sourceTree = "<group>"; };
+		954331A01A6871570079B873 /* ESTMotionUUIDSettingsDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTMotionUUIDSettingsDemoVC.m; sourceTree = "<group>"; };
+		954331A11A6871570079B873 /* ESTMotionUUIDSettingsDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESTMotionUUIDSettingsDemoVC.xib; sourceTree = "<group>"; };
 		95A43D751940CDDB004D81E3 /* ESTCloudBeaconTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTCloudBeaconTableVC.h; sourceTree = "<group>"; };
 		95A43D761940CDDB004D81E3 /* ESTCloudBeaconTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTCloudBeaconTableVC.m; sourceTree = "<group>"; };
 		95B1A64D1A4AC8BA00102220 /* libEstimoteSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEstimoteSDK.a; path = ../../EstimoteSDK/libEstimoteSDK.a; sourceTree = "<group>"; };
@@ -152,6 +162,12 @@
 				A154DE5718E03CD500734BD6 /* ESTAccelerometerDemoVC.h */,
 				A154DE5818E03CD500734BD6 /* ESTAccelerometerDemoVC.m */,
 				951C167A18E45EB3001B3C8E /* ESTAccelerometerDemoVC.xib */,
+				9543319A1A6818B60079B873 /* ESTMotionUUIDDemoVC.h */,
+				9543319B1A6818B60079B873 /* ESTMotionUUIDDemoVC.m */,
+				9543319C1A6818B60079B873 /* ESTMotionUUIDDemoVC.xib */,
+				9543319F1A6871570079B873 /* ESTMotionUUIDSettingsDemoVC.h */,
+				954331A01A6871570079B873 /* ESTMotionUUIDSettingsDemoVC.m */,
+				954331A11A6871570079B873 /* ESTMotionUUIDSettingsDemoVC.xib */,
 				A12D28D818E9638100872A95 /* ESTUpdateFirmwareDemoVC.h */,
 				A12D28D918E9638100872A95 /* ESTUpdateFirmwareDemoVC.m */,
 				A12D28DA18E9638100872A95 /* ESTUpdateFirmwareDemoVC.xib */,
@@ -241,6 +257,8 @@
 				95C7C3501941BAA300D9BF17 /* ESTCloudBeaconTableVC.xib in Resources */,
 				951C167D18E475B6001B3C8E /* ESTNotificationDemoVC.xib in Resources */,
 				A12D28DC18E9638100872A95 /* ESTUpdateFirmwareDemoVC.xib in Resources */,
+				954331A31A6871570079B873 /* ESTMotionUUIDSettingsDemoVC.xib in Resources */,
+				9543319E1A6818B60079B873 /* ESTMotionUUIDDemoVC.xib in Resources */,
 				AC39C3D618D72A6F00B38212 /* Images.xcassets in Resources */,
 				AC39C3C818D72A6F00B38212 /* InfoPlist.strings in Resources */,
 				95E943651A1D55C4000A7CCF /* ESTBulkUpdaterDemoVC.xib in Resources */,
@@ -259,6 +277,8 @@
 				A154DE5418E0373100734BD6 /* ESTTemperatureDemoVC.m in Sources */,
 				AC39C3D418D72A6F00B38212 /* ESTViewController.m in Sources */,
 				AC39C3FB18D7346C00B38212 /* ESTProximityDemoVC.m in Sources */,
+				954331A21A6871570079B873 /* ESTMotionUUIDSettingsDemoVC.m in Sources */,
+				9543319D1A6818B60079B873 /* ESTMotionUUIDDemoVC.m in Sources */,
 				95A43D771940CDDB004D81E3 /* ESTCloudBeaconTableVC.m in Sources */,
 				AC39C3FE18D73DCB00B38212 /* ESTDistanceDemoVC.m in Sources */,
 				AC39C3F418D72BA700B38212 /* ESTBeaconTableVC.m in Sources */,

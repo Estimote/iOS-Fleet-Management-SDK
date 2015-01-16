@@ -16,6 +16,7 @@
 #import "ESTAccelerometerDemoVC.h"
 #import "ESTUpdateFirmwareDemoVC.h"
 #import "ESTBulkUpdaterDemoVC.h"
+#import "ESTMotionUUIDDemoVC.h"
 
 @interface ESTDemoTableViewCell : UITableViewCell
 
@@ -50,7 +51,7 @@
     [self.tableView registerClass:[ESTDemoTableViewCell class] forCellReuseIdentifier:@"DemoCellIdentifier"];
     
     self.beaconDemoList = @[ @[@"Distance Demo", @"Proximity Demo",@"Notification Demo"],
-                             @[@"Temperature Demo", @"Accelerometer Demo"],
+                             @[@"Temperature Demo", @"Accelerometer Demo", @"Motion UUID Demo"],
                              @[@"Update Firmware Demo", @"My beacons in Cloud Demo", @"Bulk update of beacons"]];
 }
 
@@ -161,6 +162,17 @@
                     ESTAccelerometerDemoVC *proximityDemoVC = [[ESTAccelerometerDemoVC alloc] initWithBeacon:beacon];
                     [self.navigationController pushViewController:proximityDemoVC animated:YES];
                 }];
+                
+                break;
+            }
+            case 2:
+            {
+                demoViewController = [[ESTBeaconTableVC alloc] initWithScanType:ESTScanTypeBeacon
+                                                                     completion:^(ESTBeacon *beacon) {
+                                                                         
+                                                                         ESTMotionUUIDDemoVC *proximityDemoVC = [[ESTMotionUUIDDemoVC alloc] initWithBeacon:beacon];
+                                                                         [self.navigationController pushViewController:proximityDemoVC animated:YES];
+                                                                     }];
                 
                 break;
             }

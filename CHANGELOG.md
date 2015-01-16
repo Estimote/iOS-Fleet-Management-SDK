@@ -1,3 +1,12 @@
+## 2.3.2 (January 16, 2015)
+
+Improvements:
+- Motion UUID support (please note that secured beacons are not supported yet).
+- Corrected handling of unknown nearable type name
+
+Bugfixes:
+- Fixed bug that caused crash after starting monitoring for the same sticker type more than once.
+
 ## 2.3.1 (January 8, 2015)
 
 Improvements:

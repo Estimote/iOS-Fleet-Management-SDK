@@ -2,7 +2,7 @@
 //  ESTBeaconRegion.h
 //  EstimoteSDK
 //
-//  Version: 2.3.1
+//  Version: 2.3.2
 //  Copyright (c) 2013 Estimote. All rights reserved.
 //
 
@@ -38,7 +38,8 @@
 
 @interface ESTBeaconRegion : CLBeaconRegion
 
-@property (nonatomic, assign, readonly, getter=isSecured) BOOL secured;
+@property (nonatomic, assign) BOOL isSecured;
+@property (nonatomic, assign) BOOL inMotion;
 
 /**
  * A flag indicating availability and status of the Basic Power Mode.

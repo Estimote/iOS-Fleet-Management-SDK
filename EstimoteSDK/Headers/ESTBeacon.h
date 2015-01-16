@@ -2,7 +2,7 @@
 //  ESTBeacon.h
 //  EstimoteSDK
 //
-//  Version: 2.3.1
+//  Version: 2.3.2
 //  Copyright (c) 2014 Estimote. All rights reserved.
 
 #import <Foundation/Foundation.h>
@@ -324,6 +324,15 @@
 @property (readonly, nonatomic) BOOL accelerometerEnabled;
 
 /**
+ * A flag indicating if motion UUID is enabled.
+ *
+ * @since Estimote OS A2.1
+ *
+ * @see enableMotionUUID:completion:
+ */
+@property (readonly, nonatomic) BOOL motionUUIDEnabled;
+
+/**
  * A flag indicating availability and status of the Basic Power Mode.
  *
  * @since Estimote OS A2.1
@@ -494,23 +503,6 @@
 - (void)writeProximityUUID:(NSString *)pUUID completion:(ESTStringCompletionBlock)completion;
 
 /**
- * Sets the motionProximityUUID.
- *
- * @param pUUID The new motionProximityUUID.
- * @param completion A block that is called when the new motionProximityUUID has been set.
- *
- * The completion block receives the following parameters:
- *
- * - NSString *value - The new motionProximityUUID.
- * - NSError *error - If an error occurred, this error object describes the error. If the operation completed successfully, the value is nil.
- *
- * @warning The motionProximityUUID feature is disabled by default. The option to enable it will be made available in an upcoming update to the SDK.
- *
- * @since Estimote OS 2.0
- */
-- (void)writeMotionProximityUUID:(NSString *)pUUID completion:(ESTStringCompletionBlock)completion;
-
-/**
  * Sets the major value.
  *
  * @param major The new major value.
@@ -597,6 +589,28 @@
  */
 - (void)enableAccelerometer:(BOOL)enable
                  completion:(ESTBoolCompletionBlock)completion;
+
+
+/**
+ * Enables or disables the motion UUID.
+ *
+ * @param enable YES to enable, NO to disable the motion UUID.
+ * @param completion A block that is called when the motion UUID has been enabled or disabled.
+ *
+ * The completion block receives the following parameters:
+ *
+ * - BOOL value - YES if the motion UUID has been enabled, NO if the motion UUID has been disabled.
+ *
+ * - NSError *error - If an error occurred, this error object describes the error. If the operation completed successfully, the value is nil.
+ *
+ * @since Estimote OS A2.1
+ *
+ * @see isAccelerometerAvailable
+ * @see isAccelerometerEditAvailable
+ */
+
+- (void)enableMotionUUID:(BOOL)enable
+              completion:(ESTBoolCompletionBlock)completion;
 
 /**
  * Enables or disables the basicPowerMode.
