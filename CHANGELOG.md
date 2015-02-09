@@ -1,3 +1,16 @@
+## 2.4.0 (February 9, 2015)
+
+Improvements:
+- Ranged nearables list sorting (RSSI = 127 moved to the end of the list)
+- Color added to nearable objects
+- Option to fetch all nearables from the cloud for authorized users (ESTNearableManager)
+- Example of changing beacons settings added
+
+Bugfixes:
+- Firmware and Hardware version formatting of nearables corrected 
+- Nearables monitoring fixed (constant monitoring issue)
+
+
 ## 2.3.2 (January 16, 2015)
 
 Improvements:

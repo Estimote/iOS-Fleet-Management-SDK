@@ -26,7 +26,7 @@
     
     [self.nearableManager startRangingForIdentifier:self.nearable.identifier];
     
-    self.typeLabel.text = [self.nearable nameForType:self.nearable.type];
+    self.typeLabel.text = [ESTNearableDefinitions nameForType:self.nearable.type];
 }
 
 #pragma mark - ESTNearableManager delegate

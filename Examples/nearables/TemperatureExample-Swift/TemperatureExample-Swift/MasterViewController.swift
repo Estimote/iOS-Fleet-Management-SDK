@@ -47,7 +47,7 @@ class MasterViewController: UITableViewController, ESTNearableManagerDelegate {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
 
         let nearable = nearables[indexPath.row] as ESTNearable
-        cell.textLabel!.text = nearable.nameForType(nearable.type)
+        cell.textLabel!.text = ESTNearableDefinitions.nameForType(nearable.type)
         cell.detailTextLabel!.text = nearable.identifier
         return cell
     }

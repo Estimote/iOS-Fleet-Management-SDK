@@ -24,7 +24,7 @@ class DetailViewController: UIViewController, ESTNearableManagerDelegate {
         nearableManager.delegate = self
         nearableManager .startRangingForIdentifier(nearable.identifier)
         
-        typeLabel.text = nearable.nameForType(nearable.type)
+        typeLabel.text = ESTNearableDefinitions.nameForType(nearable.type)
     }
     
     //MARK: - ESTNearableManager delegate

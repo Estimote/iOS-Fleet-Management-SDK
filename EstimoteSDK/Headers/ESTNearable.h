@@ -2,64 +2,12 @@
 //  ESTNearable.h
 //  EstimoteSDK
 //
-//  Version: 2.3.2
+//  Version: 2.4.0
 //  Copyright (c) 2013 Estimote. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-
-/**
- *  Type of the device marked on enclosure.
- */
-typedef NS_ENUM(NSInteger, ESTNearableType)
-{
-    ESTNearableTypeUnknown = 0,
-    ESTNearableTypeDog,
-    ESTNearableTypeCar,
-    ESTNearableTypeFridge,
-    ESTNearableTypeBag,
-    ESTNearableTypeBike,
-    ESTNearableTypeChair,
-    ESTNearableTypeBed,
-    ESTNearableTypeDoor,
-    ESTNearableTypeShoe,
-    ESTNearableTypeGeneric,
-    ESTNearableTypeAll
-};
-
-/**
- *  Physical orientation of the device in 3D space.
- */
-typedef NS_ENUM(NSInteger, ESTNearableOrientation)
-{
-    ESTNearableOrientationUnknown = 0,
-    ESTNearableOrientationHorizontal,
-    ESTNearableOrientationHorizontalUpsideDown,
-    ESTNearableOrientationVertical,
-    ESTNearableOrientationVerticalUpsideDown,
-    ESTNearableOrientationLeftSide,
-    ESTNearableOrientationRightSide
-};
-
-/**
- *  Proximity zone related to distance from the device.
- */
-typedef NS_ENUM(NSInteger, ESTNearableZone)
-{
-    ESTNearableZoneUnknown = 0,
-    ESTNearableZoneImmediate,
-    ESTNearableZoneNear,
-    ESTNearableZoneFar
-};
-
-/**
- *  Type of firmware running on the device.
- */
-typedef NS_ENUM(NSInteger, ESTNearableFirmwareState)
-{
-    ESTNearableFirmwareStateBoot = 0,
-    ESTNearableFirmwareStateApp
-};
+#import "ESTNearableDefinitions.h"
 
 /**
  * The ESTNearable class defines the interface for interacting with a single Estimote nearable. It enables you to retrieve properties of the nearable. You do not create instances of this class directly. The ESTNearableManager object reports encountered beacons to its associated delegate object.
@@ -70,14 +18,24 @@ typedef NS_ENUM(NSInteger, ESTNearableFirmwareState)
 @interface ESTNearable : NSObject <NSCopying>
 
 /**
+ *  Unique device identifier.
+ */
+@property (nonatomic, strong, readonly) NSString *identifier;
+
+/**
+ *  Zone indicating distance from the device.
+ */
+@property (nonatomic, assign, readonly) ESTNearableZone zone;
+
+/**
  *  Type of the nearable device.
  */
 @property (nonatomic, assign, readonly) ESTNearableType type;
 
 /**
- *  Unique device identifier.
+ *  Color of the nearable device.
  */
-@property (nonatomic, strong, readonly) NSString *identifier;
+@property (nonatomic, assign, readonly) ESTNearableColor color;
 
 /**
  *  Revision of nearable hardware.
@@ -95,19 +53,14 @@ typedef NS_ENUM(NSInteger, ESTNearableFirmwareState)
 @property (nonatomic, assign, readonly) NSInteger rssi;
 
 /**
- *  Zone indicating distance from the device.
- */
-@property (nonatomic, assign, readonly) ESTNearableZone zone;
-
-/**
  *  Battery voltage when nearable is in idle state defined in Volts.
  */
-@property (nonatomic, assign, readonly) double idleBatteryVoltage;
+@property (nonatomic, strong, readonly) NSNumber *idleBatteryVoltage;
 
 /**
  *  Battery voltage when nearable is under stress (sending packet) defined in Volts.
  */
-@property (nonatomic, assign, readonly) double stressBatteryVoltage;
+@property (nonatomic, strong, readonly) NSNumber *stressBatteryVoltage;
 
 /**
  *  Time since last change of motion state (isMoving value change) returned in seconds.
@@ -152,25 +105,11 @@ typedef NS_ENUM(NSInteger, ESTNearableFirmwareState)
 /**
  * The power of the nearable's radio signal in dBm.
  */
-@property (nonatomic, assign, readonly) NSInteger txPower;
-
-/**
- * Bluetooth channel used to transfer packet.
- */
-@property (nonatomic, assign, readonly) NSInteger channel;
+@property (nonatomic, strong, readonly) NSNumber *power;
 
 /**
  * Indicates if nearable is in Boot or App state.
  */
 @property (nonatomic, assign, readonly) ESTNearableFirmwareState firmwareState;
-
-/**
- *  Returns NSString representation of nearable type.
- *
- *  @param type type of nearable
- *
- *  @return name of type
- */
-- (NSString *)nameForType:(ESTNearableType)type;
 
 @end

@@ -22,7 +22,7 @@
     /**
      *  Setup title of the screen based on nearable type.
      */
-    self.title = [NSString stringWithFormat:@"Nearable: %@", [self.nearable nameForType:self.nearable.type]];
+    self.title = [NSString stringWithFormat:@"Nearable: %@", [ESTNearableDefinitions nameForType:self.nearable.type]];
     
     /**
      *  Create Estimote Nearable Manager and start looking for

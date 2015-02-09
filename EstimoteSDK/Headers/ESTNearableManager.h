@@ -2,7 +2,7 @@
 //  ESTNearablesManager.h
 //  EstimoteSDK
 //
-//  Version: 2.3.2
+//  Version: 2.4.0
 //  Copyright (c) 2013 Estimote. All rights reserved.
 //
 #import <Foundation/Foundation.h>
@@ -216,5 +216,19 @@
  * @see stopRangingForType:
  */
 - (void)stopRanging;
+
+/**
+ * Fetches a list of all the user's nearables from the Estimote Cloud.
+ *
+ * @param completion A block that is called when the list has been feteched from the Cloud.
+ *
+ * The completion block receives the following parameters:
+ *
+ * - NSArray *listOfNearables - An array of ESTNearable objects.
+ *
+ * - NSError *error - If an error occurred, this error object describes the error. If the operation completed successfully, the value is nil.
+ *
+ */
+- (void)fetchEstimoteNearablesWithCompletion:(ESTArrayCompletionBlock)completion;
 
 @end

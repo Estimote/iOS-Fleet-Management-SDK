@@ -2,7 +2,7 @@
 //  ESTBeaconRegion.h
 //  EstimoteSDK
 //
-//  Version: 2.3.2
+//  Version: 2.4.0
 //  Copyright (c) 2013 Estimote. All rights reserved.
 //
 
@@ -38,7 +38,16 @@
 
 @interface ESTBeaconRegion : CLBeaconRegion
 
+/**
+ *  Indicates if region is related to the beacon with Estimote Secure UUID rotation
+ *  feature enabled.
+ */
 @property (nonatomic, assign) BOOL isSecured;
+
+/**
+ *  Indicates if region should be related to the Estimote beacon in motion or not.
+ *  Motion UUID should be enabled on the Estimote beacon on to work with this flag.
+ */
 @property (nonatomic, assign) BOOL inMotion;
 
 /**

@@ -95,7 +95,7 @@
     ESTNearable *nearable = [self.nearablesArray objectAtIndex:indexPath.row];
     
     cell.textLabel.text = [NSString stringWithFormat:@"Identifier: %@", nearable.identifier];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"Type: %@ / RSSI: %zd", [nearable nameForType:nearable.type], nearable.rssi];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Type: %@ / RSSI: %zd", [ESTNearableDefinitions nameForType:nearable.type], nearable.rssi];
     
     cell.imageView.image = [[UIImage alloc] init];
     cell.imageView.contentMode = UIViewContentModeScaleAspectFill;

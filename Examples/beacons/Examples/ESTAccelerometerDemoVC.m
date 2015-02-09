@@ -8,6 +8,7 @@
 
 #import "ESTAccelerometerDemoVC.h"
 #import <AudioToolbox/AudioToolbox.h>
+#import "ESTMotionUUIDSettingsDemoVC.h"
 
 @interface ESTAccelerometerDemoVC ()
 
@@ -135,8 +136,6 @@
         [self readAccelerometerCount];
     }
 }
-
-
 
 
 @end

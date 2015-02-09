@@ -17,6 +17,7 @@
 #import "ESTUpdateFirmwareDemoVC.h"
 #import "ESTBulkUpdaterDemoVC.h"
 #import "ESTMotionUUIDDemoVC.h"
+#import "ESTBeaconDetailsDemoVC.h"
 
 @interface ESTDemoTableViewCell : UITableViewCell
 
@@ -52,7 +53,7 @@
     
     self.beaconDemoList = @[ @[@"Distance Demo", @"Proximity Demo",@"Notification Demo"],
                              @[@"Temperature Demo", @"Accelerometer Demo", @"Motion UUID Demo"],
-                             @[@"Update Firmware Demo", @"My beacons in Cloud Demo", @"Bulk update of beacons"]];
+                             @[@"Beacon Settings Demo", @"Update Firmware Demo", @"My beacons in Cloud Demo", @"Bulk update of beacons"]];
 }
 
 #pragma mark - Table view data source
@@ -188,19 +189,29 @@
             {
                 demoViewController = [[ESTBeaconTableVC alloc] initWithScanType:ESTScanTypeBluetooth
                                                                      completion:^(ESTBeacon *beacon) {
+                                                                         
+                                                                         ESTBeaconDetailsDemoVC *beaconDetailsVC = [[ESTBeaconDetailsDemoVC alloc] initWithBeacon:beacon];
+                                                                         [self.navigationController pushViewController:beaconDetailsVC animated:YES];
+                                                                     }];
+                break;
+            }
+            case 1:
+            {
+                demoViewController = [[ESTBeaconTableVC alloc] initWithScanType:ESTScanTypeBluetooth
+                                                                     completion:^(ESTBeacon *beacon) {
 
                     ESTUpdateFirmwareDemoVC *updateFirmwareVC = [[ESTUpdateFirmwareDemoVC alloc] initWithBeacon:beacon];
                     [self.navigationController pushViewController:updateFirmwareVC animated:YES];
                 }];
                 break;
             }
-            case 1:
+            case 2:
             {
                 demoViewController = [ESTCloudBeaconTableVC new];
                 
                 break;
             }
-            case 2:
+            case 3:
             {
                 demoViewController = [[ESTBeaconTableVC alloc] initWithScanType:ESTScanTypeBeacon
                                                                      completion:^(ESTBeacon *beacon) {

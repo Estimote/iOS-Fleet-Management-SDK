@@ -59,7 +59,7 @@
     
     ESTNearable *nearable = self.nearables[indexPath.row];
     
-    cell.textLabel.text         = [nearable nameForType:nearable.type];
+    cell.textLabel.text         = [ESTNearableDefinitions nameForType:nearable.type];
     cell.detailTextLabel.text   = nearable.identifier;
     return cell;
 }
