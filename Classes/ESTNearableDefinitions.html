@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>ESTBeaconBatteryType Constants Reference</title>
+		<title>ESTNearableDefinitions Class Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">ESTBeaconBatteryType Constants Reference</h1>
+				<h1 class="hideInXcode">ESTNearableDefinitions Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -25,6 +25,23 @@
 				<li id="jumpto_button" role="navigation">
 					<select id="jumpTo">
 	<option value="top">Jump To&#133;</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/nameForColor:">&nbsp;&nbsp;&nbsp;&nbsp;+ nameForColor:</option>
+	
+	<option value="//api/name/nameForType:">&nbsp;&nbsp;&nbsp;&nbsp;+ nameForType:</option>
 	
 	
 	
@@ -40,12 +57,32 @@
 
 
 
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/nameForColor:">nameForColor:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/nameForType:">nameForType:</a></span></li>
+	
+</ul></li>
+
+
+
 
 			</ul>
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="ESTBeaconBatteryType Constants Reference" name="top"></a>
+				<a title="ESTNearableDefinitions Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -54,15 +91,18 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">ESTBeaconBatteryType Constants Reference</h1>
+						<h1 class="title title-header">ESTNearableDefinitions Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">ESTDefinitions</td>
+</tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">ESTBeaconDefinitions.h</td>
+	<td class="specification-value">ESTNearableDefinitions.h<br />ESTNearableDefinitions.m</td>
 </tr>
 						</tbody></table></div>
 					
@@ -71,65 +111,149 @@
 					
 					
 					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/nameForType:">+&nbsp;nameForType:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/nameForColor:">+&nbsp;nameForColor:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
 					
-                    
-                    
-                    <h3 class="subsubtitle method-title">ESTBeaconBatteryType</h3>
-                    
-                    <div class="section">
-                        <!-- display enum values -->
-                        
-                        <h4 class="method-subtitle">Definition</h4>
-                        <code>typedef NS_ENUM(int, ESTBeaconBatteryType ) {<br/>
-                            
-                            &nbsp;&nbsp; <a href="">ESTBeaconBatteryTypeUnknown</a> = 0,<br/>
-                            
-                            &nbsp;&nbsp; <a href="">ESTBeaconBatteryTypeCR2450</a>,<br/>
-                            
-                            &nbsp;&nbsp; <a href="">ESTBeaconBatteryTypeCR2477</a>,<br/>
-                            
-                            };</code>
-                    
-                    </div>
-                    
-                    <div class="section section-methods">
-                        <h4 class="method-subtitle">Constants</h4>
-                        <dl class="termdef">
-                            
-                            <dt><a name="" title="ESTBeaconBatteryTypeUnknown"></a><code>ESTBeaconBatteryTypeUnknown</code></dt>
-<dd>
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/nameForColor:" title="nameForColor:"></a>
+	<h3 class="subsubtitle method-title">nameForColor:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns NSString representation of nearable color.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSString *)nameForColor:(ESTNearableColor)<em>color</em></code></div>
 
     
-	<p>
-		Declared In <code class="declared-in-ref">ESTBeaconDefinitions.h</code>.
-	</p>
 	
-</dd>
-                            
-                            <dt><a name="" title="ESTBeaconBatteryTypeCR2450"></a><code>ESTBeaconBatteryTypeCR2450</code></dt>
-<dd>
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>color</em></dt>
+			<dd><p>color of nearable</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>name of color</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTNearableDefinitions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/nameForType:" title="nameForType:"></a>
+	<h3 class="subsubtitle method-title">nameForType:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns NSString representation of nearable type.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSString *)nameForType:(ESTNearableType)<em>type</em></code></div>
 
     
-	<p>
-		Declared In <code class="declared-in-ref">ESTBeaconDefinitions.h</code>.
-	</p>
 	
-</dd>
-                            
-                            <dt><a name="" title="ESTBeaconBatteryTypeCR2477"></a><code>ESTBeaconBatteryTypeCR2477</code></dt>
-<dd>
-
-    
-	<p>
-		Declared In <code class="declared-in-ref">ESTBeaconDefinitions.h</code>.
-	</p>
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>type</em></dt>
+			<dd><p>type of nearable</p></dd>
+		</dl>
+		
+	</div>
 	
-</dd>
-                            
-                        </dl>
-                    </div>
-                    
-                    
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>name of type</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTNearableDefinitions.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					
                     
                     
 				</div>

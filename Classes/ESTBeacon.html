@@ -85,6 +85,8 @@
 	
 	<option value="//api/name/motionProximityUUID">&nbsp;&nbsp;&nbsp;&nbsp;motionProximityUUID</option>
 	
+	<option value="//api/name/motionUUIDEnabled">&nbsp;&nbsp;&nbsp;&nbsp;motionUUIDEnabled</option>
+	
 	<option value="//api/name/name">&nbsp;&nbsp;&nbsp;&nbsp;name</option>
 	
 	<option value="//api/name/peripheral">&nbsp;&nbsp;&nbsp;&nbsp;peripheral</option>
@@ -124,6 +126,8 @@
 	
 	<option value="//api/name/enableEstimoteSecureUUID:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- enableEstimoteSecureUUID:completion:</option>
 	
+	<option value="//api/name/enableMotionUUID:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- enableMotionUUID:completion:</option>
+	
 	<option value="//api/name/enableSmartPowerMode:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- enableSmartPowerMode:completion:</option>
 	
 	<option value="//api/name/isEqualToBeacon:">&nbsp;&nbsp;&nbsp;&nbsp;- isEqualToBeacon:</option>
@@ -145,8 +149,6 @@
 	<option value="//api/name/writeMajor:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeMajor:completion:</option>
 	
 	<option value="//api/name/writeMinor:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeMinor:completion:</option>
-	
-	<option value="//api/name/writeMotionProximityUUID:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeMotionProximityUUID:completion:</option>
 	
 	<option value="//api/name/writeName:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeName:completion:</option>
 	
@@ -244,6 +246,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/motionProximityUUID">motionProximityUUID</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/motionUUIDEnabled">motionUUIDEnabled</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/name">name</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/peripheral">peripheral</a></span></li>
@@ -284,6 +288,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/enableEstimoteSecureUUID:completion:">enableEstimoteSecureUUID:completion:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/enableMotionUUID:completion:">enableMotionUUID:completion:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/enableSmartPowerMode:completion:">enableSmartPowerMode:completion:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isEqualToBeacon:">isEqualToBeacon:</a></span></li>
@@ -305,8 +311,6 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeMajor:completion:">writeMajor:completion:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeMinor:completion:">writeMinor:completion:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeMotionProximityUUID:completion:">writeMotionProximityUUID:completion:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeName:completion:">writeName:completion:</a></span></li>
 	
@@ -584,6 +588,12 @@
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/motionUUIDEnabled">&nbsp;&nbsp;motionUUIDEnabled</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/basicPowerMode">&nbsp;&nbsp;basicPowerMode</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
@@ -680,12 +690,6 @@
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/writeMotionProximityUUID:completion:">&ndash;&nbsp;writeMotionProximityUUID:completion:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
 		<code><a href="#//api/name/writeMajor:completion:">&ndash;&nbsp;writeMajor:completion:</a></code>
 	</span>
 	
@@ -717,6 +721,12 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/enableAccelerometer:completion:">&ndash;&nbsp;enableAccelerometer:completion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/enableMotionUUID:completion:">&ndash;&nbsp;enableMotionUUID:completion:</a></code>
 	</span>
 	
 	
@@ -1821,11 +1831,52 @@
 	
 	
 	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/motionUUIDEnabled" title="motionUUIDEnabled"></a>
+	<h3 class="subsubtitle method-title">motionUUIDEnabled</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>A flag indicating if motion UUID is enabled.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) BOOL motionUUIDEnabled</code></div>
+
+    
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>Estimote OS A2.1</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
 	<div class="method-subsection see-also-section">
 		<h4 class="method-subtitle">See Also</h4>
 		<ul>
 			
-			<li><code><p><a href="#//api/name/writeMotionProximityUUID:completion:">- writeMotionProximityUUID:completion:</a></p></code></li>
+			<li><code><p><a href="#//api/name/enableMotionUUID:completion:">- enableMotionUUID:completion:</a></p></code></li>
 			
 		</ul>
 	</div>
@@ -2664,6 +2715,81 @@
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/enableMotionUUID:completion:" title="enableMotionUUID:completion:"></a>
+	<h3 class="subsubtitle method-title">enableMotionUUID:completion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Enables or disables the motion UUID.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)enableMotionUUID:(BOOL)<em>enable</em> completion:(ESTBoolCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>enable</em></dt>
+			<dd><p>YES to enable, NO to disable the motion UUID.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>A block that is called when the motion UUID has been enabled or disabled.</p>
+
+<p>The completion block receives the following parameters:</p>
+
+<ul>
+<li><p><code>BOOL value</code> - YES if the motion UUID has been enabled, NO if the motion UUID has been disabled.</p></li>
+<li><p><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</p></li>
+</ul>
+</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>Estimote OS A2.1</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/isAccelerometerAvailable">@property isAccelerometerAvailable</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/isAccelerometerEditAvailable">@property isAccelerometerEditAvailable</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/enableSmartPowerMode:completion:" title="enableSmartPowerMode:completion:"></a>
 	<h3 class="subsubtitle method-title">enableSmartPowerMode:completion:</h3>
 	
@@ -2977,7 +3103,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<div class="warning"><p><strong>Warning:</strong> This method does not reset the <a href="#//api/name/motionProximityUUID"><code>motionProximityUUID</code></a>. You can reset it yourself to the default value of <code>ESTIMOTE_PROXIMITY_UUID</code> using the <a href="#//api/name/writeMotionProximityUUID:completion:"><code>writeMotionProximityUUID:completion:</code></a> method.</p></div>
+		<div class="warning"><p><strong>Warning:</strong> This method does not reset the <a href="#//api/name/motionProximityUUID"><code>motionProximityUUID</code></a>. You can reset it yourself to the default value of <code>ESTIMOTE_PROXIMITY_UUID</code> using the <code>&lt;writeMotionProximityUUID:completion:&gt;</code> method.</p></div>
 	</div>
 	
 	
@@ -3275,75 +3401,6 @@
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/writeMotionProximityUUID:completion:" title="writeMotionProximityUUID:completion:"></a>
-	<h3 class="subsubtitle method-title">writeMotionProximityUUID:completion:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Sets the <a href="#//api/name/motionProximityUUID"><code>motionProximityUUID</code></a>.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)writeMotionProximityUUID:(NSString *)<em>pUUID</em> completion:(ESTStringCompletionBlock)<em>completion</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>pUUID</em></dt>
-			<dd><p>The new <code>motionProximityUUID</code>.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>completion</em></dt>
-			<dd><p>A block that is called when the new <code>motionProximityUUID</code> has been set.</p>
-
-<p>The completion block receives the following parameters:</p>
-
-<ul>
-<li><code>NSString *value</code> - The new <code>motionProximityUUID</code>.</li>
-<li><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</li>
-</ul>
-</dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	
-	
-	<div class="method-subsection availability">
-		<h4 class="method-subtitle parameter-title">Availability</h4>
-		<p>Estimote OS 2.0</p>
-	</div>
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<div class="warning"><p><strong>Warning:</strong> The <a href="#//api/name/motionProximityUUID"><code>motionProximityUUID</code></a> feature is disabled by default. The option to enable it will be made available in an upcoming update to the SDK.</p></div>
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTBeacon.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
 	<a name="//api/name/writeName:completion:" title="writeName:completion:"></a>
 	<h3 class="subsubtitle method-title">writeName:completion:</h3>
 	
@@ -3540,7 +3597,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2014 Estimote. All rights reserved. (Last updated: 2014-12-24)</span><br />
+						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-02-09)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						
