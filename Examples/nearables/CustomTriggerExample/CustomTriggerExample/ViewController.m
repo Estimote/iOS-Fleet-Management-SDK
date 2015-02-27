@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "WeatherRule.h"
-#import "ESTTriggerManager.h"
+#import <EstimoteSDK/EstimoteSDK.h>
 
 #define COLD_OUTSIDE_TRIGGER_ID @"coldOutsideTriggerId"
 #define HOT_OUTSIDE_TRIGGER_ID  @"hotOutsideTriggerId"

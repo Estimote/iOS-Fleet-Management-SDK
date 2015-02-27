@@ -5,9 +5,11 @@
 //
 
 #import "ESTBeaconDetailsDemoVC.h"
-#import <ESTBeaconManager.h>
 
-@interface ESTBeaconDetailsDemoVC () <ESTBeaconDelegate, UITextFieldDelegate>
+
+@interface ESTBeaconDetailsDemoVC () <UITextFieldDelegate, ESTBeaconConnectionDelegate>
+
+@property (nonatomic, strong) ESTBeaconConnection *beaconConnection;
 
 /*
  * UI elements
@@ -41,22 +43,19 @@
 
 @property (nonatomic, strong) IBOutlet UIButton* resetBtn;
 
-/*
- * Class elements
- */
-
-@property (nonatomic, strong) ESTBeacon* beaconData;
-
 @end
 
 @implementation ESTBeaconDetailsDemoVC
 
-- (id)initWithBeacon:(ESTBeacon*)beacon
+- (id)initWithMacAddress:(NSString *)macAddress
 {
     self = [super init];
     if (self)
     {
-        self.beaconData = beacon;
+        //In order to update beacon firmware we need to connect to it.
+        self.beaconConnection = [[ESTBeaconConnection alloc] initWithMacAddress:macAddress
+                                                                        delegate:self
+                                                                startImmediately:NO];
     }
     return self;
 }
@@ -80,9 +79,9 @@
     self.mainScrollView.contentOffset = CGPointMake(0, 10);
     
     //In order to read beacon accelerometer we need to connect to it.
-    self.beaconData.delegate = self;
-    [self.beaconData connect];
     [self.activityIndicator startAnimating];
+    
+    [self.beaconConnection startConnection];
 }
 
 
@@ -100,18 +99,10 @@
      * Disconnect beacon when leaving screen
      */
     
-    if (self.beaconData.connectionStatus == ESTConnectionStatusConnected)
+    if (self.beaconConnection.connectionStatus == ESTConnectionStatusConnected)
     {
-        [self.beaconData disconnect];
+        [self.beaconConnection cancelConnection];
     }
-}
-
-- (void)setData:(ESTBeacon*)data
-{
-    self.beaconData = data;
-    self.beaconData.delegate = self;
-    
-    [self updateDataLabels];
 }
 
 - (void)updateDataLabels
@@ -119,9 +110,9 @@
     self.resetBtn.enabled = YES;
     self.resetBtn.alpha = 1;
     
-    if (self.beaconData.proximityUUID)
+    if (self.beaconConnection.proximityUUID)
     {
-        self.UUIDTextFiled.text = [NSString stringWithFormat:@"%@", [self.beaconData.proximityUUID UUIDString]];
+        self.UUIDTextFiled.text = [NSString stringWithFormat:@"%@", [self.beaconConnection.proximityUUID UUIDString]];
         self.UUIDTextFiled.enabled = YES;
     }
     else
@@ -130,18 +121,18 @@
         self.UUIDTextFiled.enabled = NO;
     }
     
-    if (self.beaconData.motionProximityUUID)
+    if (self.beaconConnection.motionProximityUUID)
     {
-        self.motinoUUIDTextFiled.text = [NSString stringWithFormat:@"%@", [self.beaconData.motionProximityUUID UUIDString]];
+        self.motinoUUIDTextFiled.text = [NSString stringWithFormat:@"%@", [self.beaconConnection.motionProximityUUID UUIDString]];
     }
     else
     {
         self.motinoUUIDTextFiled.text = @"--";
     }
     
-    if (self.beaconData.major)
+    if (self.beaconConnection.major)
     {
-        self.majorTextFiled.text = [NSString stringWithFormat:@"%i", [self.beaconData.major unsignedShortValue]];
+        self.majorTextFiled.text = [NSString stringWithFormat:@"%i", [self.beaconConnection.major unsignedShortValue]];
         self.majorTextFiled.enabled = YES;
     }
     else
@@ -150,9 +141,9 @@
         self.majorTextFiled.enabled = NO;
     }
     
-    if (self.beaconData.minor)
+    if (self.beaconConnection.minor)
     {
-        self.minorTextFiled.text = [NSString stringWithFormat:@"%i", [self.beaconData.minor unsignedShortValue]];
+        self.minorTextFiled.text = [NSString stringWithFormat:@"%i", [self.beaconConnection.minor unsignedShortValue]];
         self.minorTextFiled.enabled = YES;
     }
     else
@@ -161,18 +152,18 @@
         self.minorTextFiled.enabled = NO;
     }
     
-    if (self.beaconData.advInterval)
+    if (self.beaconConnection.advInterval)
     {
-        self.advertisingTextField.text = [NSString stringWithFormat:@"%d", [self.beaconData.advInterval unsignedShortValue]];
+        self.advertisingTextField.text = [NSString stringWithFormat:@"%d", [self.beaconConnection.advInterval unsignedShortValue]];
     }
     else
     {
         self.advertisingTextField.text = @"--";
     }
     
-    if (self.beaconData.power)
+    if (self.beaconConnection.power)
     {
-        self.powerTextField.text = [NSString stringWithFormat:@"%i", [self.beaconData.power shortValue]];
+        self.powerTextField.text = [NSString stringWithFormat:@"%i", [self.beaconConnection.power shortValue]];
         self.powerTextField.enabled = YES;
     }
     else
@@ -180,137 +171,50 @@
         self.powerTextField.text = @"--";
     }
     
-    if (self.beaconData.batteryLevel)
+    if (self.beaconConnection.batteryLevel)
     {
-        self.batteryLevel.text = [NSString stringWithFormat:@"%i%%", [self.beaconData.batteryLevel unsignedCharValue]];
+        self.batteryLevel.text = [NSString stringWithFormat:@"%i%%", [self.beaconConnection.batteryLevel unsignedCharValue]];
     }
     else
     {
         self.batteryLevel.text = @"--";
     }
     
-    if (self.beaconData.firmwareVersion)
+    if (self.beaconConnection.firmwareVersion)
     {
-        self.softwareVersion.text = self.beaconData.firmwareVersion;
+        self.softwareVersion.text = self.beaconConnection.firmwareVersion;
     }
     else
     {
         self.softwareVersion.text = @"--";
     }
     
-    if (self.beaconData.hardwareVersion)
+    if (self.beaconConnection.hardwareVersion)
     {
-        self.hardwareVersion.text = self.beaconData.hardwareVersion;
+        self.hardwareVersion.text = self.beaconConnection.hardwareVersion;
     }
     else
     {
         self.hardwareVersion.text = @"--";
     }
     
-    if (self.beaconData.macAddress)
+    if (self.beaconConnection.macAddress)
     {
-        self.mac.text = [NSString stringWithFormat:@"%@", self.beaconData.macAddress];
+        self.mac.text = [NSString stringWithFormat:@"%@", self.beaconConnection.macAddress];
     }
     else
     {
         self.mac.text = @"--";
     }
-    
-    if (self.beaconData.basicPowerMode == ESTBeaconPowerSavingModeOn)
-    {
-        self.basicPowerModeSwitch.enabled = YES;
-        self.basicPowerModeSwitch.on = YES;
-    }
-    else if (self.beaconData.basicPowerMode == ESTBeaconPowerSavingModeOff)
-    {
-        self.basicPowerModeSwitch.enabled = YES;
-        self.basicPowerModeSwitch.on = NO;
-    }
-    
-    if (self.beaconData.smartPowerMode == ESTBeaconPowerSavingModeOn)
-    {
-        self.smartPowerModeSwitch.enabled = YES;
-        self.smartPowerModeSwitch.on = YES;
-    }
-    else if (self.beaconData.smartPowerMode == ESTBeaconPowerSavingModeOff)
-    {
-        self.smartPowerModeSwitch.enabled = YES;
-        self.smartPowerModeSwitch.on = NO;
-    }
-    
-    if (self.beaconData.estimoteSecureUUID == ESTBeaconEstimoteSecureUUIDOn)
-    {
-        self.secureUUIDSwitch.enabled = YES;
-        self.secureUUIDSwitch.on = YES;
-    }
-    else if (self.beaconData.estimoteSecureUUID == ESTBeaconEstimoteSecureUUIDOff)
-    {
-        self.secureUUIDSwitch.enabled = YES;
-        self.secureUUIDSwitch.on = NO;
-    }
-
 }
 
 ////////////////////////////////////////////////////////
 # pragma mark - UI Button handling
 
-- (IBAction)switchBasicPowerModeState:(UISwitch*)sender
-{
-    self.basicPowerModeSwitch.enabled = NO;
-    self.smartPowerModeSwitch.enabled = NO;
-    
-    __weak typeof(self) selfRef = self;
-    
-    [self.beaconData enableBasicPowerMode:sender.isOn completion:^(BOOL value, NSError *error) {
-        selfRef.basicPowerModeSwitch.enabled = YES;
-        selfRef.smartPowerModeSwitch.enabled = YES;
-        if (error)
-        {
-            selfRef.basicPowerModeSwitch.on = !selfRef.basicPowerModeSwitch.isOn;
-        }
-    }];
-}
-
-- (IBAction)switchSmartPowerModeState:(UISwitch *)sender
-{
-    self.basicPowerModeSwitch.enabled = NO;
-    self.smartPowerModeSwitch.enabled = NO;
-    
-    __weak typeof(self) selfRef = self;
-    [self.beaconData enableSmartPowerMode:sender.isOn completion:^(BOOL value, NSError *error) {
-        selfRef.basicPowerModeSwitch.enabled = YES;
-        selfRef.smartPowerModeSwitch.enabled = YES;
-        if (error)
-        {
-            selfRef.smartPowerModeSwitch.on = !selfRef.smartPowerModeSwitch.isOn;
-        }
-    }];
-}
-
-- (IBAction)switchSecureUUIDState:(UISwitch *)sender
-{
-    self.basicPowerModeSwitch.enabled = NO;
-    self.smartPowerModeSwitch.enabled = NO;
-    self.secureUUIDSwitch.enabled = NO;
-    
-    __weak typeof(self) selfRef = self;
-    
-    [self.beaconData enableEstimoteSecureUUID:sender.isOn completion:^(BOOL value, NSError *error) {
-        selfRef.basicPowerModeSwitch.enabled = YES;
-        selfRef.smartPowerModeSwitch.enabled = YES;
-        selfRef.secureUUIDSwitch.enabled = YES;
-        
-        if (error)
-        {
-            selfRef.secureUUIDSwitch.on = !selfRef.secureUUIDSwitch.isOn;
-        }
-        
-    }];
-}
-
 - (IBAction)resetBtnTapped:(id)sender
 {
-    [self.beaconData resetToFactorySettingsWithCompletion:^(NSError *error)
+    __weak typeof(self) selfRef = self;
+    [self.beaconConnection resetToFactorySettingsWithCompletion:^(NSError *error)
     {
         NSString *message = @"Beacon was successfuly reseted.";
         
@@ -326,24 +230,14 @@
                                               otherButtonTitles:nil];
         
         [alert show];
+        
+        [selfRef updateDataLabels];
     }];
 }
 
 #pragma mark - ESTBeacon connection handling
 
-- (void)beaconAuthorizationDidFail:(ESTBeacon *)beacon withError:(NSError *)error
-{
-    [self beacon:beacon didDisconnectWithError:nil];
-    
-    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Authorization Failed"
-                                                    message:error.localizedDescription
-                                                   delegate:nil
-                                          cancelButtonTitle:@"OK"
-                                          otherButtonTitles: nil];
-    [alert show];
-}
-
-- (void)beaconConnectionDidSucceeded:(ESTBeacon *)beacon
+- (void)beaconConnectionDidSucceeded:(ESTBeaconConnection *)connection
 {
     [self.activityIndicator stopAnimating];
     self.activityIndicator.alpha = 0.;
@@ -353,7 +247,7 @@
     [self updateDataLabels];
 }
 
-- (void)beaconConnectionDidFail:(ESTBeacon*)beacon withError:(NSError *)error
+- (void)beaconConnection:(ESTBeaconConnection *)connection didFailWithError:(NSError *)error
 {
     NSLog(@"Something went wrong. Beacon connection Did Fail. Error: %@", error);
     
@@ -364,7 +258,7 @@
     self.activityLabel.textColor = [UIColor redColor];
 }
 
-- (void)beacon:(ESTBeacon*)beacon didDisconnectWithError:(NSError*)error
+- (void)beaconConnection:(ESTBeaconConnection *)connection didDisconnectWithError:(NSError *)error
 {
     [self updateDataLabels];
 }
@@ -377,7 +271,7 @@
     {
         unsigned short newMajor = (unsigned short)[self.majorTextFiled.text intValue];
         
-        [self.beaconData writeMajor:newMajor completion:^(unsigned short major, NSError *error)
+        [self.beaconConnection writeMajor:newMajor completion:^(unsigned short major, NSError *error)
         {
             if (error)
             {
@@ -391,7 +285,7 @@
     {
         unsigned short newMinor = (unsigned short)[self.minorTextFiled.text intValue];
         
-        [self.beaconData writeMinor:newMinor completion:^(unsigned short minor, NSError *error)
+        [self.beaconConnection writeMinor:newMinor completion:^(unsigned short minor, NSError *error)
         {
             if (error)
             {
@@ -403,7 +297,7 @@
     }
     else if (textField == self.UUIDTextFiled)
     {
-        [self.beaconData writeProximityUUID:textField.text completion:^(NSString *value, NSError *error)
+        [self.beaconConnection writeProximityUUID:textField.text completion:^(NSString *value, NSError *error)
         {
             if (error)
             {
@@ -415,7 +309,7 @@
     }
     else if (textField == self.advertisingTextField)
     {
-        [self.beaconData writeAdvInterval:[textField.text integerValue] completion:^(unsigned short value, NSError *error)
+        [self.beaconConnection writeAdvInterval:[textField.text integerValue] completion:^(unsigned short value, NSError *error)
         {
             if (error)
             {
@@ -427,14 +321,14 @@
     }
     else if (textField == self.powerTextField)
     {
-        [self.beaconData writePower:[textField.text integerValue] completion:^(ESTBeaconPower power, NSError *error)
+        [self.beaconConnection writePower:[textField.text integerValue] completion:^(ESTBeaconPower power, NSError *error)
         {
             if (error)
             {
                 NSLog(@"Error Power write: %@", error.localizedDescription);
             }
             
-            self.powerTextField.text = [NSString stringWithFormat:@"%tx", [self.beaconData.power integerValue]];
+            self.powerTextField.text = [NSString stringWithFormat:@"%tx", power];
         }];
     }
 }

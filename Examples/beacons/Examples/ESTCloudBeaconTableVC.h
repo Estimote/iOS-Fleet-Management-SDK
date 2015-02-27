@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ESTBeacon.h"
+#import <EstimoteSDK/EstimoteSDK.h>
 
 /*
  * Lists all Estimote beacons in range and returns selected beacon.

@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "ESTTriggerManager.h"
+#import <EstimoteSDK/EstimoteSDK.h>
 
 #define FORGOT_BAG_TRIGGER_ID @"forgotBagTriggerId"
 

@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ESTBeacon.h"
+#import <CoreLocation/CoreLocation.h>
 
 @interface ESTDistanceDemoVC : UIViewController
 
-- (id)initWithBeacon:(ESTBeacon *)beacon;
+- (id)initWithBeacon:(CLBeacon *)beacon;
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import <ESTNearableManager.h>
+#import <EstimoteSDK/EstimoteSDK.h>
 #import "MonitoringDetailsViewController.h"
 
 @interface ESTTableViewCell : UITableViewCell

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <EstimoteSDK/EstimoteSDK.h>
 
 @interface ESTViewController : UITableViewController
 

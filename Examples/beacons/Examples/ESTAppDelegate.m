@@ -8,8 +8,7 @@
 
 #import "ESTAppDelegate.h"
 #import "ESTViewController.h"
-#import <ESTBeaconManager.h>
-#import <ESTConfig.h>
+#import <EstimoteSDK/EstimoteSDK.h>
 
 @implementation ESTAppDelegate
 
@@ -21,7 +20,7 @@
     // in Account Settings tab.
     
     NSLog(@"ESTAppDelegate: APP ID and APP TOKEN are required to connect to your beacons and make Estimote API calls.");
-    [ESTConfig setupAppID:nil andAppToken:nil];
+    [ESTConfig setupAppID:@"marcinestimote" andAppToken:@"41fc1b715385d05660378320bce3c3c0"];
     
     // Estimote Analytics allows you to log activity related to monitoring mechanism.
     // At the current stage it is possible to log all enter/exit events when monitoring

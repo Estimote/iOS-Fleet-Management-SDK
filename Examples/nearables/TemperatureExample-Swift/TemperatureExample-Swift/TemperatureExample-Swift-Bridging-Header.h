@@ -9,6 +9,6 @@
 #ifndef TemperatureExample_Swift_TemperatureExample_Swift_Bridging_Header_h
 #define TemperatureExample_Swift_TemperatureExample_Swift_Bridging_Header_h
 
-#import "ESTNearableManager.h"
+#import <EstimoteSDK/EstimoteSDK.h>
 
 #endif

@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ESTBeacon.h"
+#import <EstimoteSDK/EstimoteSDK.h>
 
 @interface ESTNotificationDemoVC : UIViewController
 
-- (id)initWithBeacon:(ESTBeacon *)beacon;
+- (id)initWithBeacon:(CLBeacon *)beacon;
 
 @end

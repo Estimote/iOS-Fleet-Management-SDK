@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <EstimoteSDK/EstimoteSDK.h>
 
 @interface ESTAppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -14,3 +15,6 @@
 @property (strong, nonatomic) UINavigationController *mainNavigation;
 
 @end
+
+
+

@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ESTBeacon.h"
+#import <EstimoteSDK/EstimoteSDK.h>
 
 @interface ESTUpdateFirmwareDemoVC : UIViewController
 
-- (id)initWithBeacon:(ESTBeacon*)beacon;
+- (id)initWithMacAddress:(NSString *)macAddress;
 
 @end

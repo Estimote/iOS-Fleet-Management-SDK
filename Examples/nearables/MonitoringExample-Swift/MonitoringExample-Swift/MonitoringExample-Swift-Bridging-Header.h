@@ -9,6 +9,6 @@
 #ifndef MonitoringExample_Swift_MonitoringExample_Swift_Bridging_Header_h
 #define MonitoringExample_Swift_MonitoringExample_Swift_Bridging_Header_h
 
-#import "ESTNearableManager.h"
+#import <EstimoteSDK/EstimoteSDK.h>
 
 #endif

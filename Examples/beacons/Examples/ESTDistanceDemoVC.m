@@ -7,7 +7,7 @@
 //
 
 #import "ESTDistanceDemoVC.h"
-#import "ESTBeaconManager.h"
+#import <EstimoteSDK/ESTBeaconManager.h>
 
 /*
  * Maximum distance (in meters) from beacon for which, the dot will be visible on screen.
@@ -17,9 +17,9 @@
 
 @interface ESTDistanceDemoVC () <ESTBeaconManagerDelegate>
 
-@property (nonatomic, strong) ESTBeacon         *beacon;
+@property (nonatomic, strong) CLBeacon         *beacon;
 @property (nonatomic, strong) ESTBeaconManager  *beaconManager;
-@property (nonatomic, strong) ESTBeaconRegion   *beaconRegion;
+@property (nonatomic, strong) CLBeaconRegion   *beaconRegion;
 
 @property (nonatomic, strong) UIImageView       *backgroundImage;
 @property (nonatomic, strong) UIImageView       *positionDot;
@@ -28,7 +28,7 @@
 
 @implementation ESTDistanceDemoVC
 
-- (id)initWithBeacon:(ESTBeacon *)beacon
+- (id)initWithBeacon:(CLBeacon *)beacon
 {
     self = [super init];
     if (self)
@@ -69,11 +69,10 @@
     self.beaconManager = [[ESTBeaconManager alloc] init];
     self.beaconManager.delegate = self;
     
-    self.beaconRegion = [[ESTBeaconRegion alloc] initWithProximityUUID:self.beacon.proximityUUID
+    self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:self.beacon.proximityUUID
                                                                  major:[self.beacon.major unsignedIntValue]
                                                                  minor:[self.beacon.minor unsignedIntValue]
-                                                            identifier:@"RegionIdentifier"
-                                                               secured:self.beacon.isSecured];
+                                                            identifier:@"RegionIdentifier"];
     
     [self.beaconManager startRangingBeaconsInRegion:self.beaconRegion];
 }
@@ -87,11 +86,11 @@
 
 #pragma mark - ESTBeaconManager delegate
 
-- (void)beaconManager:(ESTBeaconManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(ESTBeaconRegion *)region
+- (void)beaconManager:(ESTBeaconManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region
 {
-    ESTBeacon *firstBeacon = [beacons firstObject];
+    CLBeacon *firstBeacon = [beacons firstObject];
     
-    [self updateDotPositionForDistance:[firstBeacon.distance floatValue]];
+    [self updateDotPositionForDistance:firstBeacon.accuracy];
 }
 
 #pragma mark -
