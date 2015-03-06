@@ -32,6 +32,7 @@
 @property (nonatomic, strong) IBOutlet UISwitch *smartPowerModeSwitch;
 
 @property (nonatomic, strong) IBOutlet UISwitch *secureUUIDSwitch;
+@property (nonatomic, strong) IBOutlet UISegmentedControl *conditionalBroadcastingSegment;
 
 @property (nonatomic, strong) IBOutlet UITextView *mac;
 @property (nonatomic, strong) IBOutlet UILabel *batteryLevel;
@@ -206,6 +207,56 @@
     {
         self.mac.text = @"--";
     }
+    
+    if (self.beaconConnection.basicPowerMode == ESTBeaconPowerSavingModeOn)
+    {
+        self.basicPowerModeSwitch.enabled = YES;
+        self.basicPowerModeSwitch.on = YES;
+    }
+    else if (self.beaconConnection.basicPowerMode == ESTBeaconPowerSavingModeOff)
+    {
+        self.basicPowerModeSwitch.enabled = YES;
+        self.basicPowerModeSwitch.on = NO;
+    }
+    
+    if (self.beaconConnection.smartPowerMode == ESTBeaconPowerSavingModeOn)
+    {
+        self.smartPowerModeSwitch.enabled = YES;
+        self.smartPowerModeSwitch.on = YES;
+    }
+    else if (self.beaconConnection.smartPowerMode == ESTBeaconPowerSavingModeOff)
+    {
+        self.smartPowerModeSwitch.enabled = YES;
+        self.smartPowerModeSwitch.on = NO;
+    }
+    
+    if (self.beaconConnection.estimoteSecureUUID == ESTBeaconEstimoteSecureUUIDOn)
+    {
+        self.secureUUIDSwitch.enabled = YES;
+        self.secureUUIDSwitch.on = YES;
+    }
+    else if (self.beaconConnection.estimoteSecureUUID == ESTBeaconEstimoteSecureUUIDOff)
+    {
+        self.secureUUIDSwitch.enabled = YES;
+        self.secureUUIDSwitch.on = NO;
+    }
+    
+    self.conditionalBroadcastingSegment.enabled = YES;
+    switch (self.beaconConnection.conditionalBroadcasting)
+    {
+        case ESTConditionalBroadcastingTypeOff:
+            self.conditionalBroadcastingSegment.selectedSegmentIndex = 0;
+            break;
+        case ESTConditionalBroadcastingTypeMotionOnly:
+            self.conditionalBroadcastingSegment.selectedSegmentIndex = 1;
+            break;
+        case ESTConditionalBroadcastingTypeFlipToStop:
+            self.conditionalBroadcastingSegment.selectedSegmentIndex = 2;
+            break;
+        default:
+            self.conditionalBroadcastingSegment.selectedSegmentIndex = UISegmentedControlNoSegment;
+            self.conditionalBroadcastingSegment.enabled = NO;
+    }
 }
 
 ////////////////////////////////////////////////////////
@@ -233,6 +284,102 @@
         
         [selfRef updateDataLabels];
     }];
+}
+
+- (IBAction)switchBasicPowerModeState:(UISwitch*)sender
+{
+    self.basicPowerModeSwitch.enabled = NO;
+    self.smartPowerModeSwitch.enabled = NO;
+    
+    __weak typeof(self) selfRef = self;
+    [self.beaconConnection writeBasicPowerModeEnabled:sender.isOn
+                                           completion:^(BOOL value, NSError *error) {
+                                               
+        selfRef.basicPowerModeSwitch.enabled = YES;
+        selfRef.smartPowerModeSwitch.enabled = YES;
+        if (error)
+        {
+            selfRef.basicPowerModeSwitch.on = !selfRef.basicPowerModeSwitch.isOn;
+        }
+    }];
+}
+
+- (IBAction)switchSmartPowerModeState:(UISwitch *)sender
+{
+    self.basicPowerModeSwitch.enabled = NO;
+    self.smartPowerModeSwitch.enabled = NO;
+    
+    __weak typeof(self) selfRef = self;
+    [self.beaconConnection writeSmartPowerModeEnabled:sender.isOn
+                                           completion:^(BOOL value, NSError *error) {
+                                               
+        selfRef.basicPowerModeSwitch.enabled = YES;
+        selfRef.smartPowerModeSwitch.enabled = YES;
+        if (error)
+        {
+            selfRef.smartPowerModeSwitch.on = !selfRef.smartPowerModeSwitch.isOn;
+        }
+    }];
+}
+
+- (IBAction)switchSecureUUIDState:(UISwitch *)sender
+{
+    self.basicPowerModeSwitch.enabled = NO;
+    self.smartPowerModeSwitch.enabled = NO;
+    self.secureUUIDSwitch.enabled = NO;
+    
+    __weak typeof(self) selfRef = self;
+    
+    [self.beaconConnection writeEstimoteSecureUUIDEnabled:sender.isOn
+                                               completion:^(BOOL value, NSError *error) {
+                                                   
+        selfRef.basicPowerModeSwitch.enabled = YES;
+        selfRef.smartPowerModeSwitch.enabled = YES;
+        selfRef.secureUUIDSwitch.enabled = YES;
+        
+        if (error)
+        {
+            selfRef.secureUUIDSwitch.on = !selfRef.secureUUIDSwitch.isOn;
+        }
+        
+    }];
+}
+
+- (IBAction)changeConditionalBroadcastingType:(UISegmentedControl *)sender
+{
+    self.conditionalBroadcastingSegment.enabled = NO;
+    
+    ESTConditionalBroadcastingType conditionalBroadcastingType;
+    
+    switch ([sender selectedSegmentIndex])
+    {
+        case 0:
+            conditionalBroadcastingType = ESTConditionalBroadcastingTypeOff;
+            break;
+        case 1:
+            conditionalBroadcastingType = ESTConditionalBroadcastingTypeMotionOnly;
+            break;
+        case 2:
+            conditionalBroadcastingType = ESTConditionalBroadcastingTypeFlipToStop;
+            break;
+        default:
+            conditionalBroadcastingType = ESTConditionalBroadcastingTypeUnknown;
+    }
+    
+    if (conditionalBroadcastingType)
+    {
+        __weak typeof(self) selfRef = self;
+        [self.beaconConnection writeConditionalBroadcastingType:conditionalBroadcastingType
+                                                     completion:^(BOOL value, NSError *error)
+         {
+             selfRef.conditionalBroadcastingSegment.enabled = YES;
+             
+             if (error)
+             {
+                 selfRef.conditionalBroadcastingSegment.selectedSegmentIndex = UISegmentedControlNoSegment;
+             }
+         }];
+    }
 }
 
 #pragma mark - ESTBeacon connection handling

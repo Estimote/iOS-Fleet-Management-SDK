@@ -167,8 +167,6 @@
 
 - (void)beaconManager:(ESTBeaconManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region
 {
-    NSLog(@"beacons %tu", beacons.count);
-    
     self.beaconsArray = beacons;
     
     [self.tableView reloadData];

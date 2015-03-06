@@ -20,7 +20,7 @@
     // in Account Settings tab.
     
     NSLog(@"ESTAppDelegate: APP ID and APP TOKEN are required to connect to your beacons and make Estimote API calls.");
-    [ESTConfig setupAppID:@"marcinestimote" andAppToken:@"41fc1b715385d05660378320bce3c3c0"];
+    [ESTConfig setupAppID:nil andAppToken:nil];
     
     // Estimote Analytics allows you to log activity related to monitoring mechanism.
     // At the current stage it is possible to log all enter/exit events when monitoring
@@ -28,6 +28,8 @@
     
     NSLog(@"ESTAppDelegate: Analytics are turned OFF by defaults. You can enable them changing flag");
     [ESTConfig enableAnalytics:NO];
+    
+    
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     

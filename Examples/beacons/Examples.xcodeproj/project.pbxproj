@@ -10,9 +10,17 @@
 		951C167D18E475B6001B3C8E /* ESTNotificationDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 951C167C18E475B6001B3C8E /* ESTNotificationDemoVC.xib */; };
 		952CEA5C1A88B9CF003A99A6 /* ESTBeaconDetailsDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 952CEA5A1A88B9CF003A99A6 /* ESTBeaconDetailsDemoVC.m */; };
 		952CEA5D1A88B9CF003A99A6 /* ESTBeaconDetailsDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 952CEA5B1A88B9CF003A99A6 /* ESTBeaconDetailsDemoVC.xib */; };
+		956C575F1AA8AAC900B468D4 /* ESTAccelerometerDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 956C57541AA8AAC900B468D4 /* ESTAccelerometerDemoVC.m */; };
+		956C57601AA8AAC900B468D4 /* ESTAccelerometerDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 956C57551AA8AAC900B468D4 /* ESTAccelerometerDemoVC.xib */; };
+		956C57611AA8AAC900B468D4 /* ESTMotionUUIDDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 956C57571AA8AAC900B468D4 /* ESTMotionUUIDDemoVC.m */; };
+		956C57621AA8AAC900B468D4 /* ESTMotionUUIDDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 956C57581AA8AAC900B468D4 /* ESTMotionUUIDDemoVC.xib */; };
+		956C57631AA8AAC900B468D4 /* ESTMotionUUIDSettingsDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 956C575A1AA8AAC900B468D4 /* ESTMotionUUIDSettingsDemoVC.m */; };
+		956C57641AA8AAC900B468D4 /* ESTMotionUUIDSettingsDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 956C575B1AA8AAC900B468D4 /* ESTMotionUUIDSettingsDemoVC.xib */; };
+		956C57651AA8AAC900B468D4 /* ESTTemperatureDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 956C575D1AA8AAC900B468D4 /* ESTTemperatureDemoVC.m */; };
+		956C57661AA8AAC900B468D4 /* ESTTemperatureDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 956C575E1AA8AAC900B468D4 /* ESTTemperatureDemoVC.xib */; };
 		95A43D771940CDDB004D81E3 /* ESTCloudBeaconTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A43D761940CDDB004D81E3 /* ESTCloudBeaconTableVC.m */; };
+		95B084531AA9229D007EA98D /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95D588B51AA70CFB0093D178 /* EstimoteSDK.framework */; };
 		95C7C3501941BAA300D9BF17 /* ESTCloudBeaconTableVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95C7C34F1941BAA300D9BF17 /* ESTCloudBeaconTableVC.xib */; };
-		95F2A99E1A9DDB7C00BC697D /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95F2A99D1A9DDB7C00BC697D /* EstimoteSDK.framework */; };
 		A12D28DB18E9638100872A95 /* ESTUpdateFirmwareDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A12D28D918E9638100872A95 /* ESTUpdateFirmwareDemoVC.m */; };
 		A12D28DC18E9638100872A95 /* ESTUpdateFirmwareDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A12D28DA18E9638100872A95 /* ESTUpdateFirmwareDemoVC.xib */; };
 		AC39C3BE18D72A6F00B38212 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC39C3BD18D72A6F00B38212 /* Foundation.framework */; };
@@ -35,11 +43,22 @@
 		952CEA591A88B9CF003A99A6 /* ESTBeaconDetailsDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconDetailsDemoVC.h; sourceTree = "<group>"; };
 		952CEA5A1A88B9CF003A99A6 /* ESTBeaconDetailsDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTBeaconDetailsDemoVC.m; sourceTree = "<group>"; };
 		952CEA5B1A88B9CF003A99A6 /* ESTBeaconDetailsDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESTBeaconDetailsDemoVC.xib; sourceTree = "<group>"; };
+		956C57531AA8AAC900B468D4 /* ESTAccelerometerDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTAccelerometerDemoVC.h; sourceTree = "<group>"; };
+		956C57541AA8AAC900B468D4 /* ESTAccelerometerDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTAccelerometerDemoVC.m; sourceTree = "<group>"; };
+		956C57551AA8AAC900B468D4 /* ESTAccelerometerDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESTAccelerometerDemoVC.xib; sourceTree = "<group>"; };
+		956C57561AA8AAC900B468D4 /* ESTMotionUUIDDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTMotionUUIDDemoVC.h; sourceTree = "<group>"; };
+		956C57571AA8AAC900B468D4 /* ESTMotionUUIDDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTMotionUUIDDemoVC.m; sourceTree = "<group>"; };
+		956C57581AA8AAC900B468D4 /* ESTMotionUUIDDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESTMotionUUIDDemoVC.xib; sourceTree = "<group>"; };
+		956C57591AA8AAC900B468D4 /* ESTMotionUUIDSettingsDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTMotionUUIDSettingsDemoVC.h; sourceTree = "<group>"; };
+		956C575A1AA8AAC900B468D4 /* ESTMotionUUIDSettingsDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTMotionUUIDSettingsDemoVC.m; sourceTree = "<group>"; };
+		956C575B1AA8AAC900B468D4 /* ESTMotionUUIDSettingsDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESTMotionUUIDSettingsDemoVC.xib; sourceTree = "<group>"; };
+		956C575C1AA8AAC900B468D4 /* ESTTemperatureDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTTemperatureDemoVC.h; sourceTree = "<group>"; };
+		956C575D1AA8AAC900B468D4 /* ESTTemperatureDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTTemperatureDemoVC.m; sourceTree = "<group>"; };
+		956C575E1AA8AAC900B468D4 /* ESTTemperatureDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESTTemperatureDemoVC.xib; sourceTree = "<group>"; };
 		95A43D751940CDDB004D81E3 /* ESTCloudBeaconTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTCloudBeaconTableVC.h; sourceTree = "<group>"; };
 		95A43D761940CDDB004D81E3 /* ESTCloudBeaconTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTCloudBeaconTableVC.m; sourceTree = "<group>"; };
-		95B1A64D1A4AC8BA00102220 /* libEstimoteSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEstimoteSDK.a; path = ../../EstimoteSDK/libEstimoteSDK.a; sourceTree = "<group>"; };
 		95C7C34F1941BAA300D9BF17 /* ESTCloudBeaconTableVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESTCloudBeaconTableVC.xib; sourceTree = "<group>"; };
-		95F2A99D1A9DDB7C00BC697D /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EstimoteSDK.framework; path = ../../EstimoteSDK/EstimoteSDK.framework; sourceTree = "<group>"; };
+		95D588B51AA70CFB0093D178 /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EstimoteSDK.framework; path = ../../EstimoteSDK/EstimoteSDK.framework; sourceTree = "<group>"; };
 		A12D28D818E9638100872A95 /* ESTUpdateFirmwareDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTUpdateFirmwareDemoVC.h; sourceTree = "<group>"; };
 		A12D28D918E9638100872A95 /* ESTUpdateFirmwareDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTUpdateFirmwareDemoVC.m; sourceTree = "<group>"; };
 		A12D28DA18E9638100872A95 /* ESTUpdateFirmwareDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESTUpdateFirmwareDemoVC.xib; sourceTree = "<group>"; };
@@ -60,7 +79,6 @@
 		AC39C3DC18D72A6F00B38212 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		AC39C3F218D72BA700B38212 /* ESTBeaconTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconTableVC.h; sourceTree = "<group>"; };
 		AC39C3F318D72BA700B38212 /* ESTBeaconTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTBeaconTableVC.m; sourceTree = "<group>"; };
-		AC39C3F518D7316A00B38212 /* libEstimoteSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEstimoteSDK.a; path = ../EstimoteSDK/libEstimoteSDK.a; sourceTree = "<group>"; };
 		AC39C3F718D7319500B38212 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		AC39C3F918D7346C00B38212 /* ESTProximityDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTProximityDemoVC.h; sourceTree = "<group>"; };
 		AC39C3FA18D7346C00B38212 /* ESTProximityDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTProximityDemoVC.m; sourceTree = "<group>"; };
@@ -75,7 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95F2A99E1A9DDB7C00BC697D /* EstimoteSDK.framework in Frameworks */,
+				95B084531AA9229D007EA98D /* EstimoteSDK.framework in Frameworks */,
 				AC39C3F818D7319500B38212 /* SystemConfiguration.framework in Frameworks */,
 				AC39C3C018D72A6F00B38212 /* CoreGraphics.framework in Frameworks */,
 				AC39C3C218D72A6F00B38212 /* UIKit.framework in Frameworks */,
@@ -106,11 +124,9 @@
 		AC39C3BC18D72A6F00B38212 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				95F2A99D1A9DDB7C00BC697D /* EstimoteSDK.framework */,
-				95B1A64D1A4AC8BA00102220 /* libEstimoteSDK.a */,
+				95D588B51AA70CFB0093D178 /* EstimoteSDK.framework */,
 				A154DE5518E0395F00734BD6 /* AdSupport.framework */,
 				AC39C3F718D7319500B38212 /* SystemConfiguration.framework */,
-				AC39C3F518D7316A00B38212 /* libEstimoteSDK.a */,
 				AC39C3BD18D72A6F00B38212 /* Foundation.framework */,
 				AC39C3BF18D72A6F00B38212 /* CoreGraphics.framework */,
 				AC39C3C118D72A6F00B38212 /* UIKit.framework */,
@@ -144,6 +160,18 @@
 				A12D28D818E9638100872A95 /* ESTUpdateFirmwareDemoVC.h */,
 				A12D28D918E9638100872A95 /* ESTUpdateFirmwareDemoVC.m */,
 				A12D28DA18E9638100872A95 /* ESTUpdateFirmwareDemoVC.xib */,
+				956C57531AA8AAC900B468D4 /* ESTAccelerometerDemoVC.h */,
+				956C57541AA8AAC900B468D4 /* ESTAccelerometerDemoVC.m */,
+				956C57551AA8AAC900B468D4 /* ESTAccelerometerDemoVC.xib */,
+				956C57561AA8AAC900B468D4 /* ESTMotionUUIDDemoVC.h */,
+				956C57571AA8AAC900B468D4 /* ESTMotionUUIDDemoVC.m */,
+				956C57581AA8AAC900B468D4 /* ESTMotionUUIDDemoVC.xib */,
+				956C57591AA8AAC900B468D4 /* ESTMotionUUIDSettingsDemoVC.h */,
+				956C575A1AA8AAC900B468D4 /* ESTMotionUUIDSettingsDemoVC.m */,
+				956C575B1AA8AAC900B468D4 /* ESTMotionUUIDSettingsDemoVC.xib */,
+				956C575C1AA8AAC900B468D4 /* ESTTemperatureDemoVC.h */,
+				956C575D1AA8AAC900B468D4 /* ESTTemperatureDemoVC.m */,
+				956C575E1AA8AAC900B468D4 /* ESTTemperatureDemoVC.xib */,
 				AC39C3D518D72A6F00B38212 /* Images.xcassets */,
 				AC39C3C418D72A6F00B38212 /* Supporting Files */,
 			);
@@ -226,9 +254,13 @@
 				95C7C3501941BAA300D9BF17 /* ESTCloudBeaconTableVC.xib in Resources */,
 				952CEA5D1A88B9CF003A99A6 /* ESTBeaconDetailsDemoVC.xib in Resources */,
 				951C167D18E475B6001B3C8E /* ESTNotificationDemoVC.xib in Resources */,
+				956C57641AA8AAC900B468D4 /* ESTMotionUUIDSettingsDemoVC.xib in Resources */,
 				A12D28DC18E9638100872A95 /* ESTUpdateFirmwareDemoVC.xib in Resources */,
+				956C57661AA8AAC900B468D4 /* ESTTemperatureDemoVC.xib in Resources */,
+				956C57601AA8AAC900B468D4 /* ESTAccelerometerDemoVC.xib in Resources */,
 				AC39C3D618D72A6F00B38212 /* Images.xcassets in Resources */,
 				AC39C3C818D72A6F00B38212 /* InfoPlist.strings in Resources */,
+				956C57621AA8AAC900B468D4 /* ESTMotionUUIDDemoVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,16 +271,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				956C57631AA8AAC900B468D4 /* ESTMotionUUIDSettingsDemoVC.m in Sources */,
+				956C575F1AA8AAC900B468D4 /* ESTAccelerometerDemoVC.m in Sources */,
 				AC39C3CA18D72A6F00B38212 /* main.m in Sources */,
 				AC39C3D418D72A6F00B38212 /* ESTViewController.m in Sources */,
 				AC39C3FB18D7346C00B38212 /* ESTProximityDemoVC.m in Sources */,
 				95A43D771940CDDB004D81E3 /* ESTCloudBeaconTableVC.m in Sources */,
 				AC39C3FE18D73DCB00B38212 /* ESTDistanceDemoVC.m in Sources */,
 				AC39C3F418D72BA700B38212 /* ESTBeaconTableVC.m in Sources */,
+				956C57611AA8AAC900B468D4 /* ESTMotionUUIDDemoVC.m in Sources */,
 				AC39C40118D8564100B38212 /* ESTNotificationDemoVC.m in Sources */,
 				A12D28DB18E9638100872A95 /* ESTUpdateFirmwareDemoVC.m in Sources */,
 				952CEA5C1A88B9CF003A99A6 /* ESTBeaconDetailsDemoVC.m in Sources */,
 				AC39C3CE18D72A6F00B38212 /* ESTAppDelegate.m in Sources */,
+				956C57651AA8AAC900B468D4 /* ESTTemperatureDemoVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,19 +379,21 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					../../EstimoteSDK/,
+					"/Users/marcinklimek/Projects/estimote/ios_code/iOS-SDK/EstimoteSDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Examples/Examples-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					../../EstimoteSDK/Headers,
 				);
 				INFOPLIST_FILE = "Examples/Examples-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b90fa7e9-409b-4296-9e59-f4508ac7c093";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -368,19 +406,21 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					../../EstimoteSDK/,
+					"/Users/marcinklimek/Projects/estimote/ios_code/iOS-SDK/EstimoteSDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Examples/Examples-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					../../EstimoteSDK/Headers,
 				);
 				INFOPLIST_FILE = "Examples/Examples-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b90fa7e9-409b-4296-9e59-f4508ac7c093";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

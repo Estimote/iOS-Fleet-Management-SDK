@@ -9,7 +9,9 @@
 #import <CoreLocation/CoreLocation.h>
 #import "ESTBeaconDefinitions.h"
 
-NSString *InventoryErrorDomain = @"com.estimote.sdk.connection";
+@class ESTBeaconConnection;
+
+static NSString *connectionErrorDomain = @"com.estimote.sdk.connection";
 
 enum
 {
@@ -49,14 +51,23 @@ enum
 - (void)beaconConnection:(ESTBeaconConnection *)connection didDisconnectWithError:(NSError *)error;
 
 
+/**
+ * Tells the delegate that a beacon's `<[ESTBeacon isMoving]>` value has changed.
+ *
+ * @param beacon The beacon object reporting the event.
+ * @param state The new `isMoving` value.
+ */
+- (void)beaconConnection:(ESTBeaconConnection *)beaconConnection motionStateChanged:(BOOL)state;
+
 @end
+
 
 @interface ESTBeaconConnection : NSObject
 
 /**
  *  Delegate object receiving callbacks.
  */
-@property (nonatomic, assign) id<ESTBeaconConnectionDelegate> delegate;
+@property (nonatomic, weak) id<ESTBeaconConnectionDelegate> delegate;
 
 /**
  * Identifier of the device that you aim to connect. 
@@ -296,9 +307,38 @@ enum
  */
 @property (readonly, nonatomic) ESTBeaconPowerSavingMode smartPowerMode;
 
+/**
+ *  A flag indicating status of Estimote Secure UUID.
+ *
+ *  @since Estimote OS 2.2
+ *  @see ESTBeaconEstimoteSecureUUID
+ *  @see enableEstimoteSecureUUID:completion
+ */
+@property (readonly, nonatomic) ESTBeaconEstimoteSecureUUID estimoteSecureUUID;
 
+/**
+ * A flag indicating if motion UUID is enabled.
+ *
+ * @since Estimote OS A2.1
+ *
+ * @see enableMotionUUID:completion:
+ */
+@property (readonly, nonatomic) BOOL motionUUIDEnabled;
 
 #pragma mark - Sensors handling
+
+/**
+ * A flag indicating if the beacon is in motion or not.
+ *
+ * This value changes:
+ *
+ * - from NO to YES immediately after a still beacon starts moving,
+ *
+ * - from YES to NO after a beacon stops moving and remains still for 2 seconds.
+ *
+ * @see [ESTBeaconDelegate beacon:accelerometerStateChanged:]
+ */
+@property (readonly, nonatomic) BOOL inMotion;
 
 /**
  * The ambient temperature of the beacon (in Celsius).
@@ -324,7 +364,53 @@ enum
  */
 @property (readonly, nonatomic) BOOL motionDetectionEnabled;
 
-#pragma mark - Writing methods
+#pragma mark - Reading methods for sensors
+///--------------------------------------------------------------------
+/// @name Interacting with Sensors (must be connected)
+///--------------------------------------------------------------------
+
+/**
+ * Retrieves the temperature of surrounding environment reported by the beacon.
+ *
+ * @param completion A block that is called when the temperature has been retrieved from the beacon.
+ *
+ * The completion block receives the following parameters:
+ *
+ * - `NSNumber *value` - The temperature in Celsius degrees.
+ *
+ * - `NSError *error` - If an error occurred, this error object describes the error. If the operation completed successfully, the value is `nil`.
+ *
+ * @see calibrateTemperatureWithReferenceTemperature:completion:
+ */
+- (void)readTemperatureWithCompletion:(ESTNumberCompletionBlock)completion;
+
+/**
+ * Retrieves the number of times the beacon has been in motion since the last `<resetAccelerometerCountWithCompletion:>`.
+ *
+ * @param completion A block that is called when the counter has been retrieved.
+ *
+ * The completion block receives the following parameters:
+ *
+ * - `NSNumber *value` - The value of the counter.
+ *
+ * - `NSError *error` - If an error occurred, this error object describes the error. If the operation completed successfully, the value is `nil`.
+ */
+- (void)readAccelerometerCountWithCompletion:(ESTNumberCompletionBlock)completion;
+
+/**
+ * Resets the counter - number of times the beacon has been in motion since the last reset.
+ *
+ * @param completion A block that is called when the counter has been reset.
+ *
+ * The completion block receives the following parameters:
+ *
+ * - `NSNumber *value` - The new value of the counter.
+ *
+ * - `NSError *error` - If an error occurred, this error object describes the error. If the operation completed successfully, the value is `nil`.
+ */
+- (void)resetAccelerometerCountWithCompletion:(ESTUnsignedShortCompletionBlock)completion;
+
+#pragma mark - Writing methods for iBeacon settings
 
 /**
  * Sets the `<name>` of the beacon.
@@ -411,7 +497,130 @@ enum
  */
 - (void)writePower:(ESTBeaconPower)power completion:(ESTPowerCompletionBlock)completion;
 
-#pragma mark - Reset to factory
+#pragma mark - Writing methods for power management
+
+/**
+ * Enables or disables the `<basicPowerMode>`.
+ *
+ * @param enable YES to enable, NO to disable the Basic Power Mode.
+ * @param completion A block that is called when the Basic Power Mode has been enabled or disabled.
+ *
+ * The completion block receives the following parameters:
+ *
+ * - `BOOL value` - YES if the Basic Power Mode has been enabled, NO if the Basic Power Mode has been disabled.
+ *
+ * - `NSError *error` - If an error occurred, this error object describes the error. If the operation completed successfully, the value is `nil`.
+ */
+- (void)writeBasicPowerModeEnabled:(BOOL)enable
+                        completion:(ESTBoolCompletionBlock)completion;
+
+/**
+ * Enables or disables the `<smartPowerMode>`.
+ *
+ * @param enable YES to enable, NO to disable the Smart Power Mode.
+ * @param completion A block that is called when the Smart Power Mode has been enabled or disabled.
+ *
+ * The completion block receives the following parameters:
+ *
+ * - `BOOL value` - YES if the Smart Power Mode has been enabled, NO if the Smart Power Mode has been disabled.
+ *
+ * - `NSError *error` - If an error occurred, this error object describes the error. If the operation completed successfully, the value is `nil`.
+ */
+- (void)writeSmartPowerModeEnabled:(BOOL)enable
+                        completion:(ESTBoolCompletionBlock)completion;
+
+/**
+ *  Changes the conditional broadcasting type. You also have to set Motion Detection Flag in order to use this feature.
+ *  Possible options are:
+ *  - ESTConditionalBroadcastingTypeOff - the default mode, beacon is broadcasting all the time
+ *  - ESTConditionalBroadcastingTypeMotionOnly – beacon only advertises when it's in motion.
+ *    Note that UUID used in advertising packet depends on Motion UUID Flag state.
+ *  - ESTConditionalBroadcastingTypeFlipToSleep – beacon does not advertise when it's stationary and facing gecko pad up.
+ *    If the beacon is moving or oriented differently it acts normally.
+ *
+ *  @since Estimote OS A3.0.0
+ *
+ *  @param conditionalBroadcasting Conditional broadcasting mode to be set in the beacon.
+ *  @param completion A block that is called when the belly mode has been enabled or disabled.
+ *
+ *  @see enableAccelerometer:completion:
+ */
+- (void)writeConditionalBroadcastingType:(ESTConditionalBroadcastingType)conditionalBroadcastingType
+                              completion:(ESTBoolCompletionBlock)completion;
+
+#pragma mark - Writing methods for security features
+
+/**
+ *  Enables Estimote Secure UUID.
+ *
+ *  @param enable     Yes to enable, No to disable Estimote Secure UUID.
+ *  @param completion Block with operation result.
+ */
+- (void)writeEstimoteSecureUUIDEnabled:(BOOL)enable
+                            completion:(ESTBoolCompletionBlock)completion;
+
+#pragma mark - Writing methods for sensors
+
+/**
+ * Enables or disables the accelerometer allowing to detect if beacon is in motion.
+ *
+ * @param enable YES to enable, NO to disable the accelerometer.
+ * @param completion A block that is called when the accelerometer has been enabled or disabled.
+ *
+ * The completion block receives the following parameters:
+ *
+ * - `BOOL value` - YES if the accelerometer has been enabled, NO if the accelerometer has been disabled.
+ *
+ * - `NSError *error` - If an error occurred, this error object describes the error. If the operation completed successfully, the value is `nil`.
+ *
+ * @since Estimote OS A2.1
+ *
+ * @see isAccelerometerAvailable
+ * @see isAccelerometerEditAvailable
+ */
+- (void)writeMotionDetectionEnabled:(BOOL)enable
+                         completion:(ESTBoolCompletionBlock)completion;
+
+/**
+ * Enables or disables the motion UUID.
+ *
+ * @param enable YES to enable, NO to disable the motion UUID.
+ * @param completion A block that is called when the motion UUID has been enabled or disabled.
+ *
+ * The completion block receives the following parameters:
+ *
+ * - `BOOL value` - YES if the motion UUID has been enabled, NO if the motion UUID has been disabled.
+ *
+ * - `NSError *error` - If an error occurred, this error object describes the error. If the operation completed successfully, the value is `nil`.
+ *
+ * @since Estimote OS A2.1
+ *
+ * @see isAccelerometerAvailable
+ * @see isAccelerometerEditAvailable
+ */
+- (void)writeMotionUUIDEnabled:(BOOL)enable
+                    completion:(ESTBoolCompletionBlock)completion;
+
+/**
+ * Calibrates the beacon's thermometer sensor.
+ *
+ * Beacons are basically calibrated out of the box, but additional manual calibration is recommended in order to minimize measurement error. When the sensor is not calibrated, measurement error is ±4 ℃. After calibration it's ±2 ℃.
+ *
+ * To perform calibration you need to keep the beacon at room temperature for a couple of minutes. Use a separate thermometer to read the actual value (in Celsius degrees) and pass it to this method.
+ *
+ * @param temperature The reference temperature in Celsius degrees.
+ * @param completion A block that is called when the calibration has been completed.
+ *
+ * The completion block receives the following parameters:
+ *
+ * - `NSNumber *value` - The current temperature in Celsius degrees, after the calibration.
+ *
+ * - `NSError *error` - If an error occurred, this error object describes the error. If the operation completed successfully, the value is `nil`.
+ */
+- (void)writeCalibratedTemperature:(NSNumber *)temperature
+                        completion:(ESTNumberCompletionBlock)completion;
+
+#pragma mark - Reset to factory settings
 
 /**
  * Resets the beacon's `<major>`, `<minor>`, `<proximityUUID>`, broadcasting `<power>` and `<advInterval>` to factory settings.

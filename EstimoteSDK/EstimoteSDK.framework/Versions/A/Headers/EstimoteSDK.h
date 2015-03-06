@@ -10,10 +10,10 @@
 #import <CoreBluetooth/CoreBluetooth.h>
 
 #import "ESTConfig.h"
-#import "ESTCloud.h"
 #import "ESTTriggerManager.h"
 #import "ESTBeaconManager.h"
 #import "ESTSecureBeaconManager.h"
+#import "ESTSimulatedBeaconManager.h"
 #import "ESTBeaconConnection.h"
 #import "ESTBluetoothBeacon.h"
 #import "ESTBeaconDefinitions.h"
@@ -22,6 +22,10 @@
 
 #import "ESTNearable.h"
 #import "ESTNearableManager.h"
+#import "ESTSimulatedNearableManager.h"
 #import "ESTNearableDefinitions.h"
 
 #import "ESTCloud.h"
+#import "ESTBeaconVO.h"
+
+#import "ESTNotificationTransporter.h"
