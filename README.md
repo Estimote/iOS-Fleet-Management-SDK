@@ -1,4 +1,3 @@
-
 # Estimote SDK for iOS 3.0.0 BETA
 
 ## IMPORTANT RELEASE NOTE!
@@ -15,6 +14,19 @@ There are two main motivations behind this feature - firstly, it makes it much e
 **Please note that Estimote beacon firmware 3.0.1 is not backward compatible! This means you won't be able to perform connection using 2.4.0 Estimote SDK and 2.12 AppStore app to updated devices.**
 
 We've also started [discusion about Estimote SDK 3.0.0](https://forums.estimote.com/t/sdk-3-0-beta-discussion/78) using our recently announced Estimote Forums. Feel free to participate and give us your feedback!
+
+## Table of Contents
+
+<!-- START doctoc -->
+- [Introduction](#introduction)
+- [Installation](#installation)
+- [Examples](#examples)
+- [Technical overview](#technical-overview)
+  - [Client](#client)
+    - [Trigger engine](#trigger-engine)
+  - [Utility](#utility)
+- [Changelog](#changelog)
+<!-- END doctoc -->
 
 ## Introduction
 
