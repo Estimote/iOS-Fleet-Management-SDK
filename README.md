@@ -18,6 +18,7 @@ We've also started [discusion about Estimote SDK 3.0.0](https://forums.estimote.
 ## Table of Contents
 
 <!-- START doctoc -->
+
 - [Introduction](#introduction)
 - [Installation](#installation)
 - [Examples](#examples)
@@ -26,6 +27,7 @@ We've also started [discusion about Estimote SDK 3.0.0](https://forums.estimote.
     - [Trigger engine](#trigger-engine)
   - [Utility](#utility)
 - [Changelog](#changelog)
+
 <!-- END doctoc -->
 
 ## Introduction
