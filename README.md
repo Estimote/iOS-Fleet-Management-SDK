@@ -1,5 +1,5 @@
 
-# Estimote SDK 3.0.0 Beta for Apple iOS Platform
+# Estimote SDK for iOS 3.0.0 BETA
 
 ## IMPORTANT RELEASE NOTE!
 
