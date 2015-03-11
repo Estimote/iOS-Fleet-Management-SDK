@@ -102,7 +102,9 @@ Please read https://developer.apple.com/library/ios/documentation/General/Concep
                             
                             &nbsp;&nbsp; <a href="">ESTNotificationDidNearableEnterRegion</a>,<br/>
                             
-                            &nbsp;&nbsp; <a href="">ESTNotificationDidNearabeExitRegion</a>,<br/>
+                            &nbsp;&nbsp; <a href="">ESTNotificationDidNearableExitRegion</a>,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">ESTNotificationDidRangeNearables</a>,<br/>
                             
                             };</code>
                     
@@ -217,7 +219,28 @@ Please read https://developer.apple.com/library/ios/documentation/General/Concep
 	
 </dd>
                             
-                            <dt><a name="" title="ESTNotificationDidNearabeExitRegion"></a><code>ESTNotificationDidNearabeExitRegion</code></dt>
+                            <dt><a name="" title="ESTNotificationDidNearableExitRegion"></a><code>ESTNotificationDidNearableExitRegion</code></dt>
+<dd>
+
+
+<p>ESTNotificationTransporter is a class that allows you to easily exchange data between host app and extension.
+After each successful save ESTNotification is sent so the extension or host app can read data.
+Before implementing this class remember to setup App Groups in your project.
+Please read https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/ExtensionScenarios.html
+(Sharing Data with Your Containing App section) if you have any problems with that.</p>
+
+    
+
+    
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">ESTNotificationTransporter.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ESTNotificationDidRangeNearables"></a><code>ESTNotificationDidRangeNearables</code></dt>
 <dd>
 
 

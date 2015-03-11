@@ -143,7 +143,7 @@
 
 #pragma mark - ESTBeaconManager delegate
 
-- (void)beaconManager:(ESTBeaconManager *)manager rangingBeaconsDidFailForRegion:(CLBeaconRegion *)region withError:(NSError *)error
+- (void)beaconManager:(id)manager rangingBeaconsDidFailForRegion:(CLBeaconRegion *)region withError:(NSError *)error
 {
     UIAlertView* errorView = [[UIAlertView alloc] initWithTitle:@"Ranging error"
                                                         message:error.localizedDescription
@@ -154,7 +154,7 @@
     [errorView show];
 }
 
-- (void)beaconManager:(ESTBeaconManager *)manager monitoringDidFailForRegion:(CLBeaconRegion *)region withError:(NSError *)error
+- (void)beaconManager:(id)manager monitoringDidFailForRegion:(CLBeaconRegion *)region withError:(NSError *)error
 {
     UIAlertView* errorView = [[UIAlertView alloc] initWithTitle:@"Monitoring error"
                                                         message:error.localizedDescription
@@ -165,7 +165,7 @@
     [errorView show];
 }
 
-- (void)beaconManager:(ESTBeaconManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region
+- (void)beaconManager:(id)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region
 {
     self.beaconsArray = beacons;
     

@@ -100,7 +100,7 @@
 
 #pragma mark - ESTBeaconDelegate
 
-- (void)beaconManager:(ESTBeaconManager *)manager
+- (void)beaconManager:(id)manager
       didRangeBeacons:(NSArray *)beacons
              inRegion:(CLBeaconRegion *)region
 {

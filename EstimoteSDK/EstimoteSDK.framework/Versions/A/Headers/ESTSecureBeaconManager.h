@@ -7,7 +7,7 @@
 //
 
 #import <CoreLocation/CoreLocation.h>
-#import "ESTSecureBeaconManagerDelegate.h"
+#import "ESTBeaconManagerDelegate.h"
 
 @interface ESTSecureBeaconManager : NSObject
 
@@ -16,7 +16,7 @@
  *
  * @see ESTBeaconDelegate
  */
-@property (nonatomic, weak) id <ESTSecureBeaconManagerDelegate> delegate;
+@property (nonatomic, weak) id <ESTBeaconManagerDelegate> delegate;
 
 
 #pragma mark CoreLocation Authorization (new in iOS 8)

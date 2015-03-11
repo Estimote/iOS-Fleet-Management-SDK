@@ -72,7 +72,7 @@
 
 #pragma mark - ESTBeaconManager delegate
 
-- (void)beaconManager:(ESTBeaconManager *)manager monitoringDidFailForRegion:(CLBeaconRegion *)region withError:(NSError *)error
+- (void)beaconManager:(id)manager monitoringDidFailForRegion:(CLBeaconRegion *)region withError:(NSError *)error
 {
     UIAlertView* errorView = [[UIAlertView alloc] initWithTitle:@"Monitoring error"
                                                         message:error.localizedDescription
@@ -83,7 +83,7 @@
     [errorView show];
 }
 
-- (void)beaconManager:(ESTBeaconManager *)manager didEnterRegion:(CLBeaconRegion *)region
+- (void)beaconManager:(id)manager didEnterRegion:(CLBeaconRegion *)region
 {
     UILocalNotification *notification = [UILocalNotification new];
     notification.alertBody = @"Enter region notification";
@@ -91,7 +91,7 @@
     [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
 }
 
-- (void)beaconManager:(ESTBeaconManager *)manager didExitRegion:(CLBeaconRegion *)region
+- (void)beaconManager:(id)manager didExitRegion:(CLBeaconRegion *)region
 {
     UILocalNotification *notification = [UILocalNotification new];
     notification.alertBody = @"Exit region notification";

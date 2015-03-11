@@ -30,7 +30,7 @@
  *
  * If the authorization status is already known when you call the `requestWhenInUseAuthorization` or `requestAlwaysAuthorization` method, the beacon manager does not report the current authorization status to this method. The beacon manager only reports changes to the authorization status. For example, it calls this method when the status changes from `kCLAuthorizationStatusNotDetermined` to `kCLAuthorizationStatusAuthorizedWhenInUse`.
  */
-- (void)beaconManager:(ESTBeaconManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status;
+- (void)beaconManager:(id)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status;
 
 /**
  * Tells the delegate that a new region is being monitored.
@@ -39,7 +39,7 @@
  * @param region The region that is being monitored.
  */
 
-- (void)beaconManager:(ESTBeaconManager *)manager
+- (void)beaconManager:(id)manager
 didStartMonitoringForRegion:(CLBeaconRegion *)region;
 
 /**
@@ -49,7 +49,7 @@ didStartMonitoringForRegion:(CLBeaconRegion *)region;
  * @param region The region for which the error occurred.
  * @param error An error object describing why monitoring failed.
  */
-- (void)beaconManager:(ESTBeaconManager *)manager
+- (void)beaconManager:(id)manager
 monitoringDidFailForRegion:(CLBeaconRegion *)region
             withError:(NSError *)error;
 
@@ -63,7 +63,7 @@ monitoringDidFailForRegion:(CLBeaconRegion *)region
  * @param manager The beacon manager object reporting the event.
  * @param region The region that was entered.
  */
-- (void)beaconManager:(ESTBeaconManager *)manager
+- (void)beaconManager:(id)manager
        didEnterRegion:(CLBeaconRegion *)region;
 
 /**
@@ -76,7 +76,7 @@ monitoringDidFailForRegion:(CLBeaconRegion *)region
  * @param manager The beacon manager object reporting the event.
  * @param region The region that was exited.
  */
-- (void)beaconManager:(ESTBeaconManager *)manager
+- (void)beaconManager:(id)manager
         didExitRegion:(CLBeaconRegion *)region;
 
 /**
@@ -88,7 +88,7 @@ monitoringDidFailForRegion:(CLBeaconRegion *)region
  * @param state The state of the specified region: `CLRegionStateUnknown`, `CLRegionStateInside` or `CLRegionStateOutside`.
  * @param region The region which state was determined.
  */
-- (void)beaconManager:(ESTBeaconManager *)manager
+- (void)beaconManager:(id)manager
     didDetermineState:(CLRegionState)state
             forRegion:(CLBeaconRegion *)region;
 
@@ -104,7 +104,7 @@ monitoringDidFailForRegion:(CLBeaconRegion *)region
  * @param beacons An array of `<ESTBeacon>` objects representing the beacons currently in range. You can use the information in these objects to determine the range of each beacon and its identifying information.
  * @param region The region that was used to range the beacons.
  */
-- (void)beaconManager:(ESTBeaconManager *)manager
+- (void)beaconManager:(id)manager
       didRangeBeacons:(NSArray *)beacons
              inRegion:(CLBeaconRegion *)region;
 
@@ -116,7 +116,7 @@ monitoringDidFailForRegion:(CLBeaconRegion *)region
  * @param region The region for which the error occurred.
  * @param error An error object describing why ranging failed.
  */
-- (void)beaconManager:(ESTBeaconManager *)manager
+- (void)beaconManager:(id)manager
 rangingBeaconsDidFailForRegion:(CLBeaconRegion *)region
             withError:(NSError *)error;
 
@@ -132,7 +132,7 @@ rangingBeaconsDidFailForRegion:(CLBeaconRegion *)region
  * @param beacons An array of `<ESTBeacon>` objects representing the beacons discovered.
  * @param region The region that was used to discover the beacons.
  */
-- (void)beaconManager:(ESTBeaconManager *)manager
+- (void)beaconManager:(id)manager
    didDiscoverBeacons:(NSArray *)beacons
              inRegion:(CLBeaconRegion *)region;
 
@@ -142,7 +142,7 @@ rangingBeaconsDidFailForRegion:(CLBeaconRegion *)region
  * @param manager The beacon manager object reporting the event.
  * @param region An error object describing why discovery failed.
  */
-- (void)beaconManager:(ESTBeaconManager *)manager
+- (void)beaconManager:(id)manager
 didFailDiscoveryInRegion:(CLBeaconRegion *)region;
 
 #pragma mark Advertising Events
@@ -156,7 +156,7 @@ didFailDiscoveryInRegion:(CLBeaconRegion *)region;
  * @param manager The beacon manager object reporting the event.
  * @param error If an error occurred, this error object describes the error. If the operation completed successfully, the value is `nil`.
  */
-- (void)beaconManagerDidStartAdvertising:(ESTBeaconManager *)manager
+- (void)beaconManagerDidStartAdvertising:(id)manager
                                    error:(NSError *)error;
 
 

@@ -86,7 +86,7 @@
 
 #pragma mark - ESTBeaconManager delegate
 
-- (void)beaconManager:(ESTBeaconManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region
+- (void)beaconManager:(id)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region
 {
     CLBeacon *firstBeacon = [beacons firstObject];
     

@@ -23,7 +23,8 @@ typedef NS_ENUM(NSInteger, ESTNotification)
     ESTNotificationDidBeaconEnterRegion,
     ESTNotificationDidBeaconExitRegion,
     ESTNotificationDidNearableEnterRegion,
-    ESTNotificationDidNearabeExitRegion
+    ESTNotificationDidNearableExitRegion,
+    ESTNotificationDidRangeNearables
 };
 
 #define BEACON_REGION_KEY @"beaconRegionKey"
@@ -91,6 +92,24 @@ typedef NS_ENUM(NSInteger, ESTNotification)
 *  @return ESTNearable object.
 */
 - (ESTNearable *)readNearable;
+
+/**
+*  didRangeNearables provides mechanism for exchanging ranged Nearables data
+*  between host app and extension.
+*
+*  @param nearables Ranged nearables array.
+*
+*  @return YES if saving operation was successful, otherwise NO.
+*/
+- (BOOL)didRangeNearables:(NSArray *)nearables;
+
+/**
+*  readRangedNearables allows you to read Nearables previously saved
+*  by didRangeNearables method.
+*
+*  @return Array of Nearables ranged by host app
+*/
+- (NSArray *)readRangedNearables;
 
 /**
  *  Notify Extension about didEnterRegion event for CLBeaconRegion object.

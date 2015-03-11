@@ -46,6 +46,8 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
+	<option value="//api/name/didRangeNearables:">&nbsp;&nbsp;&nbsp;&nbsp;- didRangeNearables:</option>
+	
 	<option value="//api/name/notifyDidEnterIdentifierRegion:">&nbsp;&nbsp;&nbsp;&nbsp;- notifyDidEnterIdentifierRegion:</option>
 	
 	<option value="//api/name/notifyDidEnterRegion:">&nbsp;&nbsp;&nbsp;&nbsp;- notifyDidEnterRegion:</option>
@@ -59,6 +61,8 @@
 	<option value="//api/name/readNearable">&nbsp;&nbsp;&nbsp;&nbsp;- readNearable</option>
 	
 	<option value="//api/name/readNearableZoneDescription">&nbsp;&nbsp;&nbsp;&nbsp;- readNearableZoneDescription</option>
+	
+	<option value="//api/name/readRangedNearables">&nbsp;&nbsp;&nbsp;&nbsp;- readRangedNearables</option>
 	
 	<option value="//api/name/saveNearable:">&nbsp;&nbsp;&nbsp;&nbsp;- saveNearable:</option>
 	
@@ -96,6 +100,8 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/didRangeNearables:">didRangeNearables:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/notifyDidEnterIdentifierRegion:">notifyDidEnterIdentifierRegion:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/notifyDidEnterRegion:">notifyDidEnterRegion:</a></span></li>
@@ -109,6 +115,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/readNearable">readNearable</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/readNearableZoneDescription">readNearableZoneDescription</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/readRangedNearables">readRangedNearables</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/saveNearable:">saveNearable:</a></span></li>
 	
@@ -186,6 +194,18 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/readNearable">&ndash;&nbsp;readNearable</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/didRangeNearables:">&ndash;&nbsp;didRangeNearables:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/readRangedNearables">&ndash;&nbsp;readRangedNearables</a></code>
 	</span>
 	
 	
@@ -287,6 +307,58 @@ host app and extension.</p>
 					<div class="section section-methods">
 						<a title="Instance Methods" name="instance_methods"></a>
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/didRangeNearables:" title="didRangeNearables:"></a>
+	<h3 class="subsubtitle method-title">didRangeNearables:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>didRangeNearables provides mechanism for exchanging ranged Nearables data
+between host app and extension.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)didRangeNearables:(NSArray *)<em>nearables</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>nearables</em></dt>
+			<dd><p>Ranged nearables array.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>YES if saving operation was successful, otherwise NO.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTNotificationTransporter.h</code><br />
+	</div>				
+	
+	
+</div>
 						
 						<div class="section-method">
 	<a name="//api/name/notifyDidEnterIdentifierRegion:" title="notifyDidEnterIdentifierRegion:"></a>
@@ -623,6 +695,48 @@ Data is read from Shared Group Container, specified as currentAppGroupIdentifier
 			
 		</ul>
 	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTNotificationTransporter.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/readRangedNearables" title="readRangedNearables"></a>
+	<h3 class="subsubtitle method-title">readRangedNearables</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>readRangedNearables allows you to read Nearables previously saved
+by didRangeNearables method.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSArray *)readRangedNearables</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Array of Nearables ranged by host app</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
