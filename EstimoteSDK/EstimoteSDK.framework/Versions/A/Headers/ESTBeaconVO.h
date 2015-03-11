@@ -28,7 +28,7 @@
 @property (nonatomic, strong) NSNumber *batteryLevel;
 
 @property (nonatomic, strong) NSNumber *motionDetection;
-@property (nonatomic, assign) ESTConditionalBroadcastingType conditionalBroadcasting;
+@property (nonatomic, assign) ESTBeaconConditionalBroadcasting conditionalBroadcasting;
 
 @property (nonatomic, assign) BOOL isSecured;
 @property (nonatomic) ESTColor color;

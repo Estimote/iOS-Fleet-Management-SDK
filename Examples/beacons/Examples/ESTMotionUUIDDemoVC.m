@@ -39,7 +39,7 @@
 {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    self.title = @"Accelerometer Demo";
+    self.title = @"Motion UUID Demo";
     
     self.beaconManager = [ESTBeaconManager new];
     self.beaconManager.delegate = self;

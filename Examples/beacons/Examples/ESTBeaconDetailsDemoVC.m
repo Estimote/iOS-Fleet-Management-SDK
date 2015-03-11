@@ -76,7 +76,7 @@
                                        [UIScreen mainScreen].bounds.size.width,
                                        [UIScreen mainScreen].bounds.size.height);
     
-    self.mainScrollView.contentSize = CGSizeMake(320, 700);
+    self.mainScrollView.contentSize = CGSizeMake(320, 800);
     self.mainScrollView.contentOffset = CGPointMake(0, 10);
     
     //In order to read beacon accelerometer we need to connect to it.
@@ -230,27 +230,27 @@
         self.smartPowerModeSwitch.on = NO;
     }
     
-    if (self.beaconConnection.estimoteSecureUUID == ESTBeaconEstimoteSecureUUIDOn)
+    if (self.beaconConnection.estimoteSecureUUIDState == ESTBeaconEstimoteSecureUUIDOn)
     {
         self.secureUUIDSwitch.enabled = YES;
         self.secureUUIDSwitch.on = YES;
     }
-    else if (self.beaconConnection.estimoteSecureUUID == ESTBeaconEstimoteSecureUUIDOff)
+    else if (self.beaconConnection.estimoteSecureUUIDState == ESTBeaconEstimoteSecureUUIDOff)
     {
         self.secureUUIDSwitch.enabled = YES;
         self.secureUUIDSwitch.on = NO;
     }
     
     self.conditionalBroadcastingSegment.enabled = YES;
-    switch (self.beaconConnection.conditionalBroadcasting)
+    switch (self.beaconConnection.conditionalBroadcastingState)
     {
-        case ESTConditionalBroadcastingTypeOff:
+        case ESTBeaconConditionalBroadcastingOff:
             self.conditionalBroadcastingSegment.selectedSegmentIndex = 0;
             break;
-        case ESTConditionalBroadcastingTypeMotionOnly:
+        case ESTBeaconConditionalBroadcastingMotionOnly:
             self.conditionalBroadcastingSegment.selectedSegmentIndex = 1;
             break;
-        case ESTConditionalBroadcastingTypeFlipToStop:
+        case ESTBeaconConditionalBroadcastingFlipToStop:
             self.conditionalBroadcastingSegment.selectedSegmentIndex = 2;
             break;
         default:
@@ -349,28 +349,28 @@
 {
     self.conditionalBroadcastingSegment.enabled = NO;
     
-    ESTConditionalBroadcastingType conditionalBroadcastingType;
+    ESTBeaconConditionalBroadcasting conditionalBroadcasting;
     
     switch ([sender selectedSegmentIndex])
     {
         case 0:
-            conditionalBroadcastingType = ESTConditionalBroadcastingTypeOff;
+            conditionalBroadcasting = ESTBeaconConditionalBroadcastingOff;
             break;
         case 1:
-            conditionalBroadcastingType = ESTConditionalBroadcastingTypeMotionOnly;
+            conditionalBroadcasting = ESTBeaconConditionalBroadcastingMotionOnly;
             break;
         case 2:
-            conditionalBroadcastingType = ESTConditionalBroadcastingTypeFlipToStop;
+            conditionalBroadcasting = ESTBeaconConditionalBroadcastingFlipToStop;
             break;
         default:
-            conditionalBroadcastingType = ESTConditionalBroadcastingTypeUnknown;
+            conditionalBroadcasting = ESTBeaconConditionalBroadcastingUnknown;
     }
     
-    if (conditionalBroadcastingType)
+    if (conditionalBroadcasting)
     {
         __weak typeof(self) selfRef = self;
-        [self.beaconConnection writeConditionalBroadcastingType:conditionalBroadcastingType
-                                                     completion:^(BOOL value, NSError *error)
+        [self.beaconConnection writeConditionalBroadcastingType:conditionalBroadcasting
+                                                 completion:^(BOOL value, NSError *error)
          {
              selfRef.conditionalBroadcastingSegment.enabled = YES;
              

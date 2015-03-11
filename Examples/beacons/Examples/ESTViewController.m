@@ -15,7 +15,7 @@
 #import "ESTUpdateFirmwareDemoVC.h"
 #import "ESTBeaconDetailsDemoVC.h"
 #import "ESTTemperatureDemoVC.h"
-#import "ESTAccelerometerDemoVC.h"
+#import "ESTMotionDetectionDemoVC.h"
 #import "ESTMotionUUIDDemoVC.h"
 
 @interface ESTDemoTableViewCell : UITableViewCell
@@ -159,7 +159,7 @@
                 demoViewController = [[ESTBeaconTableVC alloc] initWithScanType:ESTScanTypeBeacon
                                                                      completion:^(CLBeacon *beacon) {
                                                                          
-                                                                         ESTAccelerometerDemoVC *proximityDemoVC = [[ESTAccelerometerDemoVC alloc] initWithBeacon:beacon];
+                                                                         ESTMotionDetectionDemoVC *proximityDemoVC = [[ESTMotionDetectionDemoVC alloc] initWithBeacon:beacon];
                                                                          [self.navigationController pushViewController:proximityDemoVC animated:YES];
                                                                      }];
                 

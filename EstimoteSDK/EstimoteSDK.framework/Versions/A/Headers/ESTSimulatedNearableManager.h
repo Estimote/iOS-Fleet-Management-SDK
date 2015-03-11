@@ -13,29 +13,18 @@
 @interface ESTSimulatedNearableManager : ESTNearableManager <ESTNearableManagerDelegate>
 
 /**
-* Simulated ESTNearable object. Same object will be returned by
-* nearableManager:didRangeNearable method.
-*/
-@property (nonatomic, readonly) ESTNearable *nearable;
-
-/**
 * Array with simulated ESTNearable objects.
-* Returned by nearableManager:didRangeNearables:withType method.
 */
-@property (nonatomic, readonly) NSArray *nearables;
+@property (nonatomic, strong, readonly) NSMutableArray *nearables;
 
 /**
-*  Use this initializer if you want to simulate only one nearable.
+*  Initializer with delegate.
 *
 *  @param delegate       Set delegate for ESTNearableManagerDelegate updates.
-*  @param identifier     Identifier you want to set for your nearable object.
-*  @param zone           Zone you want to set for your nearable object.
 *
 *  @return Instance of this object.
 */
-- (instancetype)initWithDelegate:(id<ESTNearableManagerDelegate>)delegate
-                      identifier:(NSString *)identifier
-                            zone:(ESTNearableZone)zone;
+- (instancetype)initWithDelegate:(id<ESTNearableManagerDelegate>)delegate;
 
 /**
 *  Use this initializer if you want to specify nearables in JSON.
@@ -53,12 +42,41 @@
 - (instancetype)initWithDelegate:(id<ESTNearableManagerDelegate>)delegate
                      pathForJSON:(NSString *)path;
 
+- (ESTNearable *)generateRandomNearableAndAddToSimulator:(BOOL)add;
+
+#pragma mark - Adding Nearables
+
+/**
+* Add single nearable by specifying params. ESTNearable object
+* will be inserted into nearables array.
+*
+* @param identifier Identifier for ESTNearable object.
+* @param type       Nearable type
+* @param zone       Nearable zone
+*/
+- (void)addNearableToSimulation:(NSString *)identifier
+                       withType:(ESTNearableType)type
+                           zone:(ESTNearableZone)zone
+                           rssi:(NSInteger)rssi;
+
+/**
+*  If you used initWithDelegate: initializer to create this class
+*  and later you want to range nearables with type, use this method
+*  to set array of nearables.
+*
+* @param path   Path for json file with description of nearables you want to simulate.
+*/
+- (void)addNearablesToSimulationWithPath:(NSString *)path;
+
+#pragma mark - Simulations
+
 /**
  *  Set desired zone for your simulated ESTNearableObject.
  *
- *  @param zone ESTNearableZone to set.
+ *  @param zone     ESTNearableZone to set.
+ *  @param nearable ESTNearable object you want to change.
  */
-- (void)simulateZoneForNearable:(ESTNearableZone)zone;
+- (void)simulateZone:(ESTNearableZone)zone forNearable:(NSString *)identifier;
 
 /**
  *  Simulate enter region event for your nearable.

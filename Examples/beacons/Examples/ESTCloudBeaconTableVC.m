@@ -11,7 +11,7 @@
 
 @interface ESTCloudBeaconTableVC () <UITextFieldDelegate>
 
-@property (nonatomic, strong) ESTCloud *cloudAPI;
+@property (nonatomic, strong) ESTCloudManager *cloudAPI;
 @property (nonatomic, strong) NSArray *beaconsArray;
 
 @property (nonatomic, strong) IBOutlet UITableView *beaconsTable;
@@ -41,7 +41,7 @@
 {
     [super viewDidLoad];
     
-    self.cloudAPI = [[ESTCloud alloc] init];
+    self.cloudAPI = [[ESTCloudManager alloc] init];
     self.title = @"Cloud Beacons";
     
     self.beaconsTable.delegate = self;

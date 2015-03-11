@@ -39,7 +39,7 @@
 {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    self.title = @"Accelerometer Settings";
+    self.title = @"Motion Detection Settings";
     
     /**
      *  In order to adjust beacon accelerometer and motion UUID settings
@@ -69,12 +69,17 @@
     self.activityIndicator.alpha = 0.;
     self.activityLabel.text = @"Connected!";
     
-    self.accelerometerSwitch.enabled = YES;
-    self.motionUUIDSwitch.enabled = YES;
+    if (self.beaconConnection.motionDetectionState != ESTBeaconMotionDetectionUnsupported)
+    {
+        self.accelerometerSwitch.enabled = YES;
+        [self.accelerometerSwitch setOn: self.beaconConnection.motionDetectionState == ESTBeaconMotionDetectionOn];
+    }
     
-    [self.accelerometerSwitch setOn: self.beaconConnection.motionDetectionEnabled];
-//    [self.motionUUIDSwitch setOn: self.beaconConnection.motionUUIDEnabled];
-    
+    if (self.beaconConnection.motionUUIDState != ESTBeaconMotionUUIDUnsupported)
+    {
+        self.motionUUIDSwitch.enabled = YES;
+        [self.motionUUIDSwitch setOn: self.beaconConnection.motionUUIDState == ESTBeaconMotionUUIDOn];
+    }
 }
 
 - (void)beaconConnection:(ESTBeaconConnection *)connection didFailWithError:(NSError *)error

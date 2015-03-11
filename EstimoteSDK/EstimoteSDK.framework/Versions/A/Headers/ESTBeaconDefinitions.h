@@ -19,14 +19,6 @@
 ////////////////////////////////////////////////////////////////////
 // Type and class definitions
 
-typedef NS_ENUM(NSInteger, ESTConditionalBroadcastingType)
-{
-    ESTConditionalBroadcastingTypeUnknown,
-    ESTConditionalBroadcastingTypeOff,
-    ESTConditionalBroadcastingTypeMotionOnly,
-    ESTConditionalBroadcastingTypeFlipToStop,
-};
-
 typedef NS_ENUM(char, ESTBeaconPower)
 {
     ESTBeaconPowerLevel1 = -30,
@@ -47,29 +39,68 @@ typedef NS_ENUM(int, ESTBeaconBatteryType)
 };
 
 
-typedef NS_ENUM(int, ESTBeaconFirmwareState)
+typedef NS_ENUM(NSInteger, ESTBeaconFirmwareState)
 {
     ESTBeaconFirmwareStateBoot,
     ESTBeaconFirmwareStateApp
 };
 
-typedef NS_ENUM(int, ESTBeaconPowerSavingMode)
+typedef NS_ENUM(NSInteger, ESTBeaconPowerSavingMode)
 {
     ESTBeaconPowerSavingModeUnknown,
+    ESTBeaconPowerSavingModeUnsupported,
     ESTBeaconPowerSavingModeOn,
-    ESTBeaconPowerSavingModeOff,
-    ESTBeaconPowerSavingModeNotAvailable
+    ESTBeaconPowerSavingModeOff
 };
 
-typedef NS_ENUM(int, ESTBeaconEstimoteSecureUUID)
+typedef NS_ENUM(NSInteger, ESTBeaconEstimoteSecureUUID)
 {
     ESTBeaconEstimoteSecureUUIDUnknown,
+    ESTBeaconEstimoteSecureUUIDUnsupported,
     ESTBeaconEstimoteSecureUUIDOn,
-    ESTBeaconEstimoteSecureUUIDOff,
-    ESTBeaconEstimoteSecureUUIDNotAvailable
+    ESTBeaconEstimoteSecureUUIDOff
 };
 
-typedef NS_ENUM(int, ESTBeaconCharInfoType)
+typedef NS_ENUM(NSInteger, ESTBeaconMotionUUID)
+{
+    ESTBeaconMotionUUIDUnknown,
+    ESTBeaconMotionUUIDUnsupported,
+    ESTBeaconMotionUUIDOn,
+    ESTBeaconMotionUUIDOff
+};
+typedef NS_ENUM(NSInteger, ESTBeaconMotionState)
+{
+    ESTBeaconMotionStateUnknown,
+    ESTBeaconMotionStateUnsupported,
+    ESTBeaconMotionStateMoving,
+    ESTBeaconMotionStateNotMoving
+};
+
+typedef NS_ENUM(NSInteger, ESTBeaconTemperatureState)
+{
+    ESTBeaconTemperatureUnknown,
+    ESTBeaconTemperatureUnsupported,
+    ESTBeaconTemperatureSupported
+};
+
+typedef NS_ENUM(NSInteger, ESTBeaconMotionDetection)
+{
+    ESTBeaconMotionDetectionUnknown,
+    ESTBeaconMotionDetectionUnsupported,
+    ESTBeaconMotionDetectionOn,
+    ESTBeaconMotionDetectionOff
+};
+
+typedef NS_ENUM(NSInteger, ESTBeaconConditionalBroadcasting)
+{
+    ESTBeaconConditionalBroadcastingUnknown,
+    ESTBeaconConditionalBroadcastingUnsupported,
+    ESTBeaconConditionalBroadcastingOff,
+    ESTBeaconConditionalBroadcastingMotionOnly,
+    ESTBeaconConditionalBroadcastingFlipToStop,
+};
+
+typedef NS_ENUM(NSInteger, ESTBeaconCharInfoType)
 {
     ESTBeaconCharInfoTypeWriteRead,
     ESTBeaconCharInfoTypeWriteOnly

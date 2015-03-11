@@ -28,7 +28,7 @@ typedef NS_ENUM(int, ESTFirmwareUpdate)
 {
     ESTFirmwareUpdateNone,
     ESTFirmwareUpdateAvailable,
-    ESTFirmwareUpdateNotAvailable
+    ESTFirmwareUpdateUnsupported
 };
 
 typedef NS_ENUM(int, ESTConnectionStatus)

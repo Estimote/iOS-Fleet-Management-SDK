@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
+#import <CoreBluetooth/CoreBluetooth.h>
 #import "ESTBeaconDefinitions.h"
 
 @class ESTBeaconConnection;
@@ -166,6 +167,16 @@ enum
  */
 - (void)startConnection;
 
+
+/**
+ *  Initiates connection procedure with additional params
+ *
+ *  @param attempts number of connection attempts
+ *  @param timeout  timeout of single connection
+ */
+- (void)startConnectionWithAttempts:(NSInteger)attempts
+                  connectionTimeout:(NSInteger)timeout;
+
 /**
  *  Cancels connection procedure
  */
@@ -194,6 +205,11 @@ enum
  * @see ESTColor
  */
 @property (readonly, nonatomic) ESTColor color;
+
+/**
+ *  The underlying Bluetooth peripheral device.
+ */
+@property (readonly, nonatomic) CBPeripheral *peripheral;
 
 #pragma mark - iBeacon settings
 
@@ -303,7 +319,7 @@ enum
  * @since Estimote OS A2.1
  *
  * @see ESTBeaconPowerSavingMode
- * @see enableSmartPowerMode:completion
+ * @see writeSmartPowerModeEnabled:completion
  */
 @property (readonly, nonatomic) ESTBeaconPowerSavingMode smartPowerMode;
 
@@ -312,18 +328,18 @@ enum
  *
  *  @since Estimote OS 2.2
  *  @see ESTBeaconEstimoteSecureUUID
- *  @see enableEstimoteSecureUUID:completion
+ *  @see writeEstimoteSecureUUIDEnabled:completion
  */
-@property (readonly, nonatomic) ESTBeaconEstimoteSecureUUID estimoteSecureUUID;
+@property (readonly, nonatomic) ESTBeaconEstimoteSecureUUID estimoteSecureUUIDState;
 
 /**
  * A flag indicating if motion UUID is enabled.
  *
  * @since Estimote OS A2.1
  *
- * @see enableMotionUUID:completion:
+ * @see writeMotionUUIDEnabled:completion:
  */
-@property (readonly, nonatomic) BOOL motionUUIDEnabled;
+@property (readonly, nonatomic) ESTBeaconMotionUUID motionUUIDState;
 
 #pragma mark - Sensors handling
 
@@ -338,31 +354,30 @@ enum
  *
  * @see [ESTBeaconDelegate beacon:accelerometerStateChanged:]
  */
-@property (readonly, nonatomic) BOOL inMotion;
+@property (readonly, nonatomic) ESTBeaconMotionState motionState;
 
 /**
- * The ambient temperature of the beacon (in Celsius).
- *
+ *  State of temeperature sensor.
  */
-@property (readonly, nonatomic) NSNumber *temperature;
+@property (readonly, nonatomic) ESTBeaconTemperatureState temperatureState;
 
 /**
  * A flag indicating which type of broadcasting is enabled
  *
  * @since Estimote OS A3.0.0
  *
- * @see setConditionalBroadcastingType:completion:
+ * @see writeConditionalBroadcastingType:completion:
  */
-@property (readonly, nonatomic) ESTConditionalBroadcastingType conditionalBroadcasting;
+@property (readonly, nonatomic) ESTBeaconConditionalBroadcasting conditionalBroadcastingState;
 
 /**
  * A flag indicating if accelerometer is enabled.
  *
  * @since Estimote OS A2.1
  *
- * @see enableAccelerometer:completion:
+ * @see writeMotionDetectionEnabled:completion:
  */
-@property (readonly, nonatomic) BOOL motionDetectionEnabled;
+@property (readonly, nonatomic) ESTBeaconMotionDetection motionDetectionState;
 
 #pragma mark - Reading methods for sensors
 ///--------------------------------------------------------------------
@@ -380,7 +395,7 @@ enum
  *
  * - `NSError *error` - If an error occurred, this error object describes the error. If the operation completed successfully, the value is `nil`.
  *
- * @see calibrateTemperatureWithReferenceTemperature:completion:
+ * @see writeCalibratedTemperature:completion:
  */
 - (void)readTemperatureWithCompletion:(ESTNumberCompletionBlock)completion;
 
@@ -532,10 +547,10 @@ enum
 /**
  *  Changes the conditional broadcasting type. You also have to set Motion Detection Flag in order to use this feature.
  *  Possible options are:
- *  - ESTConditionalBroadcastingTypeOff - the default mode, beacon is broadcasting all the time
- *  - ESTConditionalBroadcastingTypeMotionOnly – beacon only advertises when it's in motion.
+ *  - ESTBeaconConditionalBroadcastingOff - the default mode, beacon is broadcasting all the time
+ *  - ESTBeaconConditionalBroadcastingMotionOnly – beacon only advertises when it's in motion.
  *    Note that UUID used in advertising packet depends on Motion UUID Flag state.
- *  - ESTConditionalBroadcastingTypeFlipToSleep – beacon does not advertise when it's stationary and facing gecko pad up.
+ *  - ESTBeaconConditionalBroadcastingFlipToSleep – beacon does not advertise when it's stationary and facing gecko pad up.
  *    If the beacon is moving or oriented differently it acts normally.
  *
  *  @since Estimote OS A3.0.0
@@ -545,7 +560,7 @@ enum
  *
  *  @see enableAccelerometer:completion:
  */
-- (void)writeConditionalBroadcastingType:(ESTConditionalBroadcastingType)conditionalBroadcastingType
+- (void)writeConditionalBroadcastingType:(ESTBeaconConditionalBroadcasting)conditionalBroadcastingType
                               completion:(ESTBoolCompletionBlock)completion;
 
 #pragma mark - Writing methods for security features
@@ -634,5 +649,8 @@ enum
  * @warning This method does not reset the `<motionProximityUUID>`. You can reset it yourself to the default value of `ESTIMOTE_PROXIMITY_UUID` using the `<writeMotionProximityUUID:completion:>` method.
  */
 - (void)resetToFactorySettingsWithCompletion:(ESTCompletionBlock)completion;
+
+
+- (void)findPeripheralForBeaconWithTimeout:(NSUInteger)timeout andCompletion:(ESTObjectCompletionBlock)completion;
 
 @end

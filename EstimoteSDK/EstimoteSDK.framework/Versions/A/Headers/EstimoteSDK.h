@@ -9,7 +9,6 @@
 #import <CoreLocation/CoreLocation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 
-#import "ESTConfig.h"
 #import "ESTTriggerManager.h"
 #import "ESTBeaconManager.h"
 #import "ESTSecureBeaconManager.h"
@@ -25,7 +24,7 @@
 #import "ESTSimulatedNearableManager.h"
 #import "ESTNearableDefinitions.h"
 
-#import "ESTCloud.h"
+#import "ESTCloudManager.h"
 #import "ESTBeaconVO.h"
 
 #import "ESTNotificationTransporter.h"
