@@ -66,7 +66,7 @@
  *  @param beaconUID  Identifier of particuar device
  *  @param completion completion block invoked with fetching is done
  */
-- (void)getBeaconDetails:(NSString *)beaconUID completion:(ESTObjectCompletionBlock)completion;
+- (void)fetchBeaconDetails:(NSString *)beaconUID completion:(ESTObjectCompletionBlock)completion;
 
 /**
  *  Collects color of particular beacon device stored in Estimote Cloud.
@@ -85,7 +85,7 @@
  *  @param minor         iBeacon Minor of the device
  *  @param completion    completion block with NSNumber class object contining ESTColor value.
  */
-- (void)getColorForBeaconWithProximityUUID:(NSUUID *)proximityUUID
+- (void)fetchColorForBeaconWithProximityUUID:(NSUUID *)proximityUUID
                                      major:(CLBeaconMajorValue)major
                                      minor:(CLBeaconMinorValue)minor
                                 completion:(ESTObjectCompletionBlock)completion;
@@ -97,7 +97,15 @@
  *  @param macAddress Mac Address of the device
  *  @param completion completion block with NSNumber class object contining ESTColor value.
  */
-- (void)getColorForBeaconWithMacAddress:(NSString *)macAddress
+- (void)fetchColorForBeaconWithMacAddress:(NSString *)macAddress
                                 completion:(ESTObjectCompletionBlock)completion;
+
+/**
+ *  Allows to fetch all pending settings applied to the beacons in Estimote.
+ *  Array returned in completion block can be used directly by ESTBulkUpdater class.
+ *
+ *  @param completion completion block returning Array of ESTBeaconUpdateInfo object
+ */
+- (void)fetchPendingBeaconsSettingsWithCompletion:(ESTArrayCompletionBlock)completion;
 
 @end

@@ -105,6 +105,8 @@
 	
 	<option value="//api/name/cancelConnection">&nbsp;&nbsp;&nbsp;&nbsp;- cancelConnection</option>
 	
+	<option value="//api/name/findPeripheralForBeaconWithTimeout:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- findPeripheralForBeaconWithTimeout:completion:</option>
+	
 	<option value="//api/name/initWithBeacon:delegate:startImmediately:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithBeacon:delegate:startImmediately:</option>
 	
 	<option value="//api/name/initWithMacAddress:delegate:startImmediately:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithMacAddress:delegate:startImmediately:</option>
@@ -122,6 +124,8 @@
 	<option value="//api/name/startConnection">&nbsp;&nbsp;&nbsp;&nbsp;- startConnection</option>
 	
 	<option value="//api/name/startConnectionWithAttempts:connectionTimeout:">&nbsp;&nbsp;&nbsp;&nbsp;- startConnectionWithAttempts:connectionTimeout:</option>
+	
+	<option value="//api/name/updateFirmwareWithProgress:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- updateFirmwareWithProgress:completion:</option>
 	
 	<option value="//api/name/writeAdvInterval:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeAdvInterval:completion:</option>
 	
@@ -243,6 +247,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/cancelConnection">cancelConnection</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/findPeripheralForBeaconWithTimeout:completion:">findPeripheralForBeaconWithTimeout:completion:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithBeacon:delegate:startImmediately:">initWithBeacon:delegate:startImmediately:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithMacAddress:delegate:startImmediately:">initWithMacAddress:delegate:startImmediately:</a></span></li>
@@ -260,6 +266,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/startConnection">startConnection</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/startConnectionWithAttempts:connectionTimeout:">startConnectionWithAttempts:connectionTimeout:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/updateFirmwareWithProgress:completion:">updateFirmwareWithProgress:completion:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeAdvInterval:completion:">writeAdvInterval:completion:</a></span></li>
 	
@@ -643,6 +651,18 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/resetToFactorySettingsWithCompletion:">&ndash;&nbsp;resetToFactorySettingsWithCompletion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/findPeripheralForBeaconWithTimeout:completion:">&ndash;&nbsp;findPeripheralForBeaconWithTimeout:completion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/updateFirmwareWithProgress:completion:">&ndash;&nbsp;updateFirmwareWithProgress:completion:</a></code>
 	</span>
 	
 	
@@ -1078,6 +1098,15 @@
 	
 	
 	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/updateFirmwareWithProgress:completion:">- updateFirmwareWithProgress:completion:</a></p></code></li>
+			
+		</ul>
+	</div>
 	
 	
 	
@@ -1958,6 +1987,57 @@ Based on the method you used to initialize it may contain:
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/findPeripheralForBeaconWithTimeout:completion:" title="findPeripheralForBeaconWithTimeout:completion:"></a>
+	<h3 class="subsubtitle method-title">findPeripheralForBeaconWithTimeout:completion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Allows to find CBPeripheral device using CBCentralManager scan.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)findPeripheralForBeaconWithTimeout:(NSUInteger)<em>timeout</em> completion:(ESTObjectCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>timeout</em></dt>
+			<dd><p>timoute of scan operation</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>completion block returning reference to ESTBeaconConnection object performing operation.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/initWithBeacon:delegate:startImmediately:" title="initWithBeacon:delegate:startImmediately:"></a>
 	<h3 class="subsubtitle method-title">initWithBeacon:delegate:startImmediately:</h3>
 	
@@ -2445,6 +2525,73 @@ delegate object support</p>
 		<dl class="argument-def parameter-def">
 			<dt><em>timeout</em></dt>
 			<dd><p>timeout of single connection</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/updateFirmwareWithProgress:completion:" title="updateFirmwareWithProgress:completion:"></a>
+	<h3 class="subsubtitle method-title">updateFirmwareWithProgress:completion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Updates the beacon&rsquo;s firmware.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)updateFirmwareWithProgress:(ESTProgressBlock)<em>progress</em> completion:(ESTCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>progress</em></dt>
+			<dd><p>A block that is called throughout the update process to report on the progress.</p>
+
+<p>The progress block receives the following parameters:</p>
+
+<ul>
+<li><p><code>NSInteger value</code> - A percentage value (0-100) indicating the update progress.</p></li>
+<li><p><code>NSString *description</code> - A description of the current stage of the update.</p></li>
+<li><p><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</p></li>
+</ul>
+</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>A block that is called when the update has been completed.</p>
+
+<p>The completion block receives the following parameters:</p>
+
+<ul>
+<li><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</li>
+</ul>
+</dd>
 		</dl>
 		
 	</div>
@@ -3268,7 +3415,7 @@ If the beacon is moving or oriented differently it acts normally.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-03-11)</span><br />
+						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-03-12)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						

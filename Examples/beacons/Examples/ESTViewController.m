@@ -17,6 +17,7 @@
 #import "ESTTemperatureDemoVC.h"
 #import "ESTMotionDetectionDemoVC.h"
 #import "ESTMotionUUIDDemoVC.h"
+#import "ESTBulkUpdaterDemoVC.h"
 
 @interface ESTDemoTableViewCell : UITableViewCell
 
@@ -51,8 +52,8 @@
     [self.tableView registerClass:[ESTDemoTableViewCell class] forCellReuseIdentifier:@"DemoCellIdentifier"];
     
     self.beaconDemoList = @[ @[@"Distance Demo", @"Proximity Demo",@"Notification Demo"],
-                             @[@"Temperature Demo", @"Accelerometer Demo", @"Motion UUID Demo"],
-                             @[@"Beacon Settings Demo", @"Update Firmware Demo", @"My beacons in Cloud Demo"]];
+                             @[@"Temperature", @"Accelerometer", @"Motion UUID"],
+                             @[@"Beacon Settings", @"Update Firmware", @"Fetch beacons from cloud", @"Bulk update"]];
 }
 
 #pragma mark - Table view data source
@@ -210,6 +211,17 @@
                 
                 break;
             }
+            case 3:
+            {
+                demoViewController = [[ESTBeaconTableVC alloc] initWithScanType:ESTScanTypeBluetooth
+                                                                     completion:^(ESTBluetoothBeacon *beacon) {
+                                                                         
+                                                                         ESTBulkUpdaterDemoVC *bulkDemoVC = [[ESTBulkUpdaterDemoVC alloc] initWithBeacon:beacon];
+                                                                         [self.navigationController pushViewController:bulkDemoVC animated:YES];
+                                                                     }];
+                break;
+            }
+
             default:
                 break;
         }

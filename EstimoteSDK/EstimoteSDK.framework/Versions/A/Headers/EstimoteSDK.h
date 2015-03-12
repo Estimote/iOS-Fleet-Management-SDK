@@ -17,7 +17,6 @@
 #import "ESTBluetoothBeacon.h"
 #import "ESTBeaconDefinitions.h"
 #import "ESTUtilityManager.h"
-#import "ESTBeaconFirmwareUpdate.h"
 
 #import "ESTNearable.h"
 #import "ESTNearableManager.h"
@@ -28,3 +27,4 @@
 #import "ESTBeaconVO.h"
 
 #import "ESTNotificationTransporter.h"
+#import "ESTBulkUpdater.h"

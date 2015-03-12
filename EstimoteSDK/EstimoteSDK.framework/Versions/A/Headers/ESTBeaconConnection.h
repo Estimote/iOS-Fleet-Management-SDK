@@ -651,6 +651,34 @@ enum
 - (void)resetToFactorySettingsWithCompletion:(ESTCompletionBlock)completion;
 
 
-- (void)findPeripheralForBeaconWithTimeout:(NSUInteger)timeout andCompletion:(ESTObjectCompletionBlock)completion;
+/**
+ *  Allows to find CBPeripheral device using CBCentralManager scan.
+ *
+ *  @param timeout    timoute of scan operation
+ *  @param completion completion block returning reference to ESTBeaconConnection object performing operation.
+ */
+- (void)findPeripheralForBeaconWithTimeout:(NSUInteger)timeout completion:(ESTObjectCompletionBlock)completion;
+
+/**
+ * Updates the beacon's firmware.
+ *
+ * @param progress A block that is called throughout the update process to report on the progress.
+ *
+ * The progress block receives the following parameters:
+ *
+ * - `NSInteger value` - A percentage value (0-100) indicating the update progress.
+ *
+ * - `NSString *description` - A description of the current stage of the update.
+ *
+ * - `NSError *error` - If an error occurred, this error object describes the error. If the operation completed successfully, the value is `nil`.
+ *
+ * @param completion A block that is called when the update has been completed.
+ *
+ * The completion block receives the following parameters:
+ *
+ * - `NSError *error` - If an error occurred, this error object describes the error. If the operation completed successfully, the value is `nil`.
+ */
+- (void)updateFirmwareWithProgress:(ESTProgressBlock)progress
+                        completion:(ESTCompletionBlock)completion;
 
 @end
