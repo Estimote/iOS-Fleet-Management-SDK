@@ -15,6 +15,7 @@
 #define ESTIMOTE_MACBEACON_PROXIMITY_UUID   [[NSUUID alloc] initWithUUIDString:@"08D4A950-80F0-4D42-A14B-D53E063516E6"]
 #define ESTIMOTE_IOSBEACON_PROXIMITY_UUID   [[NSUUID alloc] initWithUUIDString:@"8492E75F-4FD6-469D-B132-043FE94921D8"]
 
+
 @interface ESTBeaconManager : NSObject
 
 #pragma mark iBeacon utilities
@@ -62,7 +63,7 @@
 ///--------------------------------------------------------------------
 
 /**
- * Start advertising the iOS device as a Bluetooth beacon.
+ * Start advertising the iOS device as a iBeacon.
  *
  * @param proximityUUID The `proximityUUID` to advertise.
  * @param major The `major` to advertise.

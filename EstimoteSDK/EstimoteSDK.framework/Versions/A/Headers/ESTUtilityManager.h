@@ -18,9 +18,8 @@
 /**
  * Tells the delegate that one or more beacons were discovered in the vicinity of the device.
  *
- * @param manager The beacon manager object reporting the event.
+ * @param manager The utility manager object reporting the event.
  * @param beacons An array of `<ESTBluetoothBeacon>` objects representing the beacons discovered.
- * @param region The region that was used to discover the beacons.
  */
 - (void)utilityManager:(ESTUtilityManager *)manager
     didDiscoverBeacons:(NSArray *)beacons;
@@ -29,11 +28,15 @@
  * Tells the delegate that beacons discovery error occurred.
  *
  * @param manager The beacon manager object reporting the event.
- * @param region An error object describing why discovery failed.
  */
 - (void)utilityManagerDidFailDiscovery:(ESTUtilityManager *)manager;
 
 @end
+
+/**
+ * The `ESTUtilityManager` class defines the interface for utility methods related to Estimote Beacons. The main functionality 
+ * allows to discover CoreBluetooth based representation of Estimote Beacon devices.
+ */
 
 @interface ESTUtilityManager : NSObject
 
@@ -56,7 +59,7 @@
  *
  * @warning The CoreBluetooth based discovery ignores the provided region's `proximityUUID` property, returning beacons matching the `major` and `minor` values regardless of their `proximityUUID`.
  *
- *  @param interval Interval, in seconds, for updates from delegate method. If `startEstimoteBeaconsDiscoveryForRegion` method is used, default interval (0.2) is set.
+ *  @param interval Interval, in seconds, for updates from delegate method. If `startEstimoteBeaconDiscovery` method is used, default interval (0.2) is set.
  */
 - (void)startEstimoteBeaconDiscoveryWithUpdateInterval:(NSTimeInterval)interval;
 

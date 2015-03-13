@@ -24,6 +24,10 @@ enum
 
 @class ESTBeaconConnection;
 
+/**
+ * The `ESTBeaconConnectionDelegate` protocol defines the delegate methods used to receive updates about `<ESTBeaconConnection>` connection status, as well as sensor related updates once a connection to the beacon has been established.
+ */
+
 @protocol ESTBeaconConnectionDelegate <NSObject>
 
 @optional
@@ -62,6 +66,17 @@ enum
 
 @end
 
+/**
+ * The `ESTBeaconConnection` class defines the interface for interacting with a single Estimote beacon. It enables you to connect to the device, retrieve properties and change its configuration settings.
+ *
+ * The ESTBeaconConnection instance can be intialized using CLBeacon object or mac address being unique identifier of particular device. Fetch required beacon details you can use:
+ *
+ * - `startRangingBeaconsInRegion:` - which is a CoreLocation based scan and deliveres `CLBeacon` objects.
+ *
+ * - `startEstimoteBeaconsDiscovery` - which is a CoreBluetooth based scan and deliveres `ESTBluetoothBeacon` object containing mac address.
+ *
+ * Properties become editable once connected to the beacon. See connect for more details about connecting to the beacon. You will also need to assign a delegate to be notified about connection and disconnection events. The delegate needs to conform to the `<ESTBeaconConnectionDelegate>` protocol.
+ */
 
 @interface ESTBeaconConnection : NSObject
 

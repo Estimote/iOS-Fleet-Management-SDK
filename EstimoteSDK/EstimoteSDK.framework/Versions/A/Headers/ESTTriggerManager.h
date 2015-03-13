@@ -17,6 +17,7 @@
 
 @class ESTTriggerManager;
 
+
 /**
  *  The `ESTTriggerManagerDelegate` protocol defines the delegate methods used to receive trigger state change events from an `<ESTTriggerManager>` object. Trigger manager engine allows to introduce higher level of abstraction and let developer focus on the acctual logic their application should follow. Each trigger is defined by set of rules that should be fulfilled to change make trigger state to positive. Change of trigger state is reported using `<[ESTTriggerManagerDelegate triggerManager:triggerChangedState:]>` method of your `<delegate>`. Out of the box trigger manager supports rules related to nearable proximity, motion and orientation, ambient nearable temperature as well as time and date.
  *

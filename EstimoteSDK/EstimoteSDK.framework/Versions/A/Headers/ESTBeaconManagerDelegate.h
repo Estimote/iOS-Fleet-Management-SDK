@@ -8,6 +8,7 @@
 
 @class ESTBeaconManager;
 
+
 @protocol ESTBeaconManagerDelegate <NSObject>
 
 @optional
@@ -101,7 +102,7 @@ monitoringDidFailForRegion:(CLBeaconRegion *)region
  * Tells the delegate that one or more beacons are in range.
  *
  * @param manager The beacon manager object reporting the event.
- * @param beacons An array of `<ESTBeacon>` objects representing the beacons currently in range. You can use the information in these objects to determine the range of each beacon and its identifying information.
+ * @param beacons An array of `<CLBeacon>` objects representing the beacons currently in range. You can use the information in these objects to determine the range of each beacon and its identifying information.
  * @param region The region that was used to range the beacons.
  */
 - (void)beaconManager:(id)manager
@@ -119,31 +120,6 @@ monitoringDidFailForRegion:(CLBeaconRegion *)region
 - (void)beaconManager:(id)manager
 rangingBeaconsDidFailForRegion:(CLBeaconRegion *)region
             withError:(NSError *)error;
-
-#pragma mark CoreBluetooth Discovery Events
-///--------------------------------------------------------------------
-/// @name CoreBluetooth Discovery Events
-///--------------------------------------------------------------------
-
-/**
- * Tells the delegate that one or more beacons were discovered in the vicinity of the device.
- *
- * @param manager The beacon manager object reporting the event.
- * @param beacons An array of `<ESTBeacon>` objects representing the beacons discovered.
- * @param region The region that was used to discover the beacons.
- */
-- (void)beaconManager:(id)manager
-   didDiscoverBeacons:(NSArray *)beacons
-             inRegion:(CLBeaconRegion *)region;
-
-/**
- * Tells the delegate that beacons discovery error occurred.
- *
- * @param manager The beacon manager object reporting the event.
- * @param region An error object describing why discovery failed.
- */
-- (void)beaconManager:(id)manager
-didFailDiscoveryInRegion:(CLBeaconRegion *)region;
 
 #pragma mark Advertising Events
 ///--------------------------------------------------------------------

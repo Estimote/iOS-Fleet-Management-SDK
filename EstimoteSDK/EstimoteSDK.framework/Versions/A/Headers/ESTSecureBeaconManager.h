@@ -14,7 +14,7 @@
 /**
  * The delegate object to receive update events.
  *
- * @see ESTBeaconDelegate
+ * @see ESTBeaconManagerDelegate
  */
 @property (nonatomic, weak) id <ESTBeaconManagerDelegate> delegate;
 

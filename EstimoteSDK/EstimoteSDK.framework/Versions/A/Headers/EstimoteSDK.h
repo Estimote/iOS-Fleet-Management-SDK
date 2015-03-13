@@ -12,7 +12,6 @@
 #import "ESTTriggerManager.h"
 #import "ESTBeaconManager.h"
 #import "ESTSecureBeaconManager.h"
-#import "ESTSimulatedBeaconManager.h"
 #import "ESTBeaconConnection.h"
 #import "ESTBluetoothBeacon.h"
 #import "ESTBeaconDefinitions.h"

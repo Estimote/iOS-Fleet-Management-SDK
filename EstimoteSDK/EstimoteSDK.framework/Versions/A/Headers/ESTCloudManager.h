@@ -2,7 +2,7 @@
 //  ESTCloudManager.h
 //  EstimoteSDK
 //
-//  Created by Marcin Klimek on 20/01/15.
+//  Version: 3.0.0
 //  Copyright (c) 2015 Estimote. All rights reserved.
 //
 
@@ -11,6 +11,9 @@
 #import "ESTNearable.h"
 #import "ESTBeaconVO.h"
 
+/**
+ *  ESTCloudManager class is responsible for Estimote Cloud integration. It allows you to 
+ */
 @interface ESTCloudManager : NSObject
 
 /**
@@ -21,7 +24,7 @@
  * @param appID The API App ID.
  * @param appToken The API App Token.
  */
-+ (void)setupAppID:(NSString*)appID andAppToken:(NSString*)appToken;
++ (void)setupAppID:(NSString *)appID andAppToken:(NSString *)appToken;
 
 /**
  * Checks if App ID and App Token were set.
@@ -70,15 +73,6 @@
 
 /**
  *  Collects color of particular beacon device stored in Estimote Cloud.
- *  You can use both Mac Address or ProximityUUID:Major:Minor. Returned value
- *  is NSNumber class object contining ESTColor value.
- *
- *  @param beaconUID  Pro of particuar device
- *  @param completion completion block invoked with fetching is done
- */
-
-/**
- *  Collects color of particular beacon device stored in Estimote Cloud.
  *
  *  @param proximityUUID iBeacon ProximityUUID of the device
  *  @param major         iBeacon Major of the device
@@ -89,7 +83,6 @@
                                      major:(CLBeaconMajorValue)major
                                      minor:(CLBeaconMinorValue)minor
                                 completion:(ESTObjectCompletionBlock)completion;
-
 
 /**
  *  Collects color of particular beacon device stored in Estimote Cloud.

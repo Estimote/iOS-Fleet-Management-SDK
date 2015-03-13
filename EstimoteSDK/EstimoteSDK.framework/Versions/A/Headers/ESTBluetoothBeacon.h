@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 
+
 @interface ESTBluetoothBeacon : NSObject
 
 @property (nonatomic, strong) NSString *macAddress;
