@@ -15,6 +15,8 @@ There are two main motivations behind this feature - firstly, it makes it much e
 
 We've also started [discusion about Estimote SDK 3.0.0](https://forums.estimote.com/t/sdk-3-0-beta-discussion/78) using our recently announced Estimote Forums. Feel free to participate and give us your feedback!
 
+If you already use Estimote SDK we've provided [Migration Guide](SDK_3_0_MIGRATION_GUIDE.md) to make it easier for you to update.
+
 ## Table of Contents
 
 <!-- START doctoc -->
