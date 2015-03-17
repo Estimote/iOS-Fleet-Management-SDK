@@ -18,6 +18,7 @@
 #import "ESTMotionDetectionDemoVC.h"
 #import "ESTMotionUUIDDemoVC.h"
 #import "ESTBulkUpdaterDemoVC.h"
+#import "ESTBulkUpdaterRemoteDemoVC.h"
 
 @interface ESTDemoTableViewCell : UITableViewCell
 
@@ -53,7 +54,7 @@
     
     self.beaconDemoList = @[ @[@"Distance Demo", @"Proximity Demo",@"Notification Demo"],
                              @[@"Temperature", @"Accelerometer", @"Motion UUID"],
-                             @[@"Beacon Settings", @"Update Firmware", @"Fetch beacons from cloud", @"Bulk update"]];
+                             @[@"Beacon Settings", @"Update Firmware", @"Fetch beacons from cloud", @"Bulk Update", @"Remote Bulk Update"]];
 }
 
 #pragma mark - Table view data source
@@ -219,6 +220,12 @@
                                                                          ESTBulkUpdaterDemoVC *bulkDemoVC = [[ESTBulkUpdaterDemoVC alloc] initWithBeacon:beacon];
                                                                          [self.navigationController pushViewController:bulkDemoVC animated:YES];
                                                                      }];
+                break;
+            }
+            case 4:
+            {
+                demoViewController = [[ESTBulkUpdaterRemoteDemoVC alloc] init];
+                                                                    
                 break;
             }
 

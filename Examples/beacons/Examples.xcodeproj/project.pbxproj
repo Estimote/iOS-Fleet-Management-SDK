@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		951C167D18E475B6001B3C8E /* ESTNotificationDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 951C167C18E475B6001B3C8E /* ESTNotificationDemoVC.xib */; };
+		952B14901AB8410700573526 /* ESTBulkUpdaterRemoteDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 952B148E1AB8410700573526 /* ESTBulkUpdaterRemoteDemoVC.m */; };
+		952B14911AB8410700573526 /* ESTBulkUpdaterRemoteDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 952B148F1AB8410700573526 /* ESTBulkUpdaterRemoteDemoVC.xib */; };
 		952CEA5C1A88B9CF003A99A6 /* ESTBeaconDetailsDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 952CEA5A1A88B9CF003A99A6 /* ESTBeaconDetailsDemoVC.m */; };
 		952CEA5D1A88B9CF003A99A6 /* ESTBeaconDetailsDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 952CEA5B1A88B9CF003A99A6 /* ESTBeaconDetailsDemoVC.xib */; };
 		954111B81AB1ADEB00340377 /* ESTBulkUpdaterDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 954111B61AB1ADEB00340377 /* ESTBulkUpdaterDemoVC.m */; };
@@ -42,6 +44,9 @@
 
 /* Begin PBXFileReference section */
 		951C167C18E475B6001B3C8E /* ESTNotificationDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESTNotificationDemoVC.xib; sourceTree = "<group>"; };
+		952B148D1AB8410700573526 /* ESTBulkUpdaterRemoteDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBulkUpdaterRemoteDemoVC.h; sourceTree = "<group>"; };
+		952B148E1AB8410700573526 /* ESTBulkUpdaterRemoteDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTBulkUpdaterRemoteDemoVC.m; sourceTree = "<group>"; };
+		952B148F1AB8410700573526 /* ESTBulkUpdaterRemoteDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESTBulkUpdaterRemoteDemoVC.xib; sourceTree = "<group>"; };
 		952CEA591A88B9CF003A99A6 /* ESTBeaconDetailsDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconDetailsDemoVC.h; sourceTree = "<group>"; };
 		952CEA5A1A88B9CF003A99A6 /* ESTBeaconDetailsDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTBeaconDetailsDemoVC.m; sourceTree = "<group>"; };
 		952CEA5B1A88B9CF003A99A6 /* ESTBeaconDetailsDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESTBeaconDetailsDemoVC.xib; sourceTree = "<group>"; };
@@ -180,6 +185,9 @@
 				954111B51AB1ADEB00340377 /* ESTBulkUpdaterDemoVC.h */,
 				954111B61AB1ADEB00340377 /* ESTBulkUpdaterDemoVC.m */,
 				954111B71AB1ADEB00340377 /* ESTBulkUpdaterDemoVC.xib */,
+				952B148D1AB8410700573526 /* ESTBulkUpdaterRemoteDemoVC.h */,
+				952B148E1AB8410700573526 /* ESTBulkUpdaterRemoteDemoVC.m */,
+				952B148F1AB8410700573526 /* ESTBulkUpdaterRemoteDemoVC.xib */,
 				AC39C3D518D72A6F00B38212 /* Images.xcassets */,
 				AC39C3C418D72A6F00B38212 /* Supporting Files */,
 			);
@@ -263,6 +271,7 @@
 				952CEA5D1A88B9CF003A99A6 /* ESTBeaconDetailsDemoVC.xib in Resources */,
 				951C167D18E475B6001B3C8E /* ESTNotificationDemoVC.xib in Resources */,
 				954111B91AB1ADEB00340377 /* ESTBulkUpdaterDemoVC.xib in Resources */,
+				952B14911AB8410700573526 /* ESTBulkUpdaterRemoteDemoVC.xib in Resources */,
 				956C57641AA8AAC900B468D4 /* ESTMotionUUIDSettingsDemoVC.xib in Resources */,
 				A12D28DC18E9638100872A95 /* ESTUpdateFirmwareDemoVC.xib in Resources */,
 				956C57661AA8AAC900B468D4 /* ESTTemperatureDemoVC.xib in Resources */,
@@ -280,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				952B14901AB8410700573526 /* ESTBulkUpdaterRemoteDemoVC.m in Sources */,
 				956C57631AA8AAC900B468D4 /* ESTMotionUUIDSettingsDemoVC.m in Sources */,
 				956C575F1AA8AAC900B468D4 /* ESTMotionDetectionDemoVC.m in Sources */,
 				AC39C3CA18D72A6F00B38212 /* main.m in Sources */,

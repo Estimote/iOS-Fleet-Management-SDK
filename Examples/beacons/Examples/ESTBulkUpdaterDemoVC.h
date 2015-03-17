@@ -2,7 +2,6 @@
 //  ESTBulkUpdaterDemoVC.h
 //  Examples
 //
-//  Created by Marcin Klimek on 19/11/14.
 //  Copyright (c) 2014 com.estimote. All rights reserved.
 //
 

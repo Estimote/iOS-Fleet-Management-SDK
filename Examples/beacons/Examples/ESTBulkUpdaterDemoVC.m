@@ -2,7 +2,6 @@
 //  ESTBulkUpdaterDemoVC.m
 //  Examples
 //
-//  Created by Marcin Klimek on 19/11/14.
 //  Copyright (c) 2014 com.estimote. All rights reserved.
 //
 
@@ -100,7 +99,7 @@
 - (void)bulkUpdateProgress:(NSNotification *)note
 {
     NSNumber *progress = [note.userInfo objectForKey:@"progress"];
-    self.statusLabel.text = [NSString stringWithFormat:@"Bulk Updater progress ... %f", progress.floatValue];
+    self.statusLabel.text = [NSString stringWithFormat:@"Update progress ... %.0f\%%", 100. * progress.floatValue];
 }
 
 - (void)bulkUpdateComplete:(NSNotification *)note
