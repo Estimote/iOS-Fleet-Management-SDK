@@ -73,6 +73,17 @@
 
 /**
  *  Collects color of particular beacon device stored in Estimote Cloud.
+ *  Authorization is not required to access device color.
+ *
+ *  @param beacon        iBeacon device
+ *  @param completion    completion block with NSNumber class object contining ESTColor value.
+ */
+- (void)fetchColorForBeacon:(CLBeacon *)beacon
+                 completion:(ESTObjectCompletionBlock)completion;
+
+/**
+ *  Collects color of particular beacon device stored in Estimote Cloud.
+ *  Authorization is not required to access device color.
  *
  *  @param proximityUUID iBeacon ProximityUUID of the device
  *  @param major         iBeacon Major of the device
@@ -80,12 +91,13 @@
  *  @param completion    completion block with NSNumber class object contining ESTColor value.
  */
 - (void)fetchColorForBeaconWithProximityUUID:(NSUUID *)proximityUUID
-                                     major:(CLBeaconMajorValue)major
-                                     minor:(CLBeaconMinorValue)minor
-                                completion:(ESTObjectCompletionBlock)completion;
+                                       major:(CLBeaconMajorValue)major
+                                       minor:(CLBeaconMinorValue)minor
+                                  completion:(ESTObjectCompletionBlock)completion;
 
 /**
- *  Collects color of particular beacon device stored in Estimote Cloud.
+ *  Collects color of particular beacon device stored in Estimote Cloud. 
+ *  Authorization is not required to access device color.
  *
  *  @param macAddress Mac Address of the device
  *  @param completion completion block with NSNumber class object contining ESTColor value.

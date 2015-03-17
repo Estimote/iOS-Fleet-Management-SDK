@@ -26,6 +26,8 @@
 					<select id="jumpTo">
 	<option value="top">Jump To&#133;</option>
 	
+	<option value="overview">Overview</option>
+	
 	
 	
 	
@@ -54,6 +56,8 @@
 	
 	<option value="//api/name/fetchBeaconDetails:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- fetchBeaconDetails:completion:</option>
 	
+	<option value="//api/name/fetchColorForBeacon:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- fetchColorForBeacon:completion:</option>
+	
 	<option value="//api/name/fetchColorForBeaconWithMacAddress:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- fetchColorForBeaconWithMacAddress:completion:</option>
 	
 	<option value="//api/name/fetchColorForBeaconWithProximityUUID:major:minor:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- fetchColorForBeaconWithProximityUUID:major:minor:completion:</option>
@@ -73,6 +77,8 @@
 		<nav id="tocContainer" class="isShowingTOC">
 			<ul id="toc" role="tree">
 				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
 
 
 
@@ -103,6 +109,8 @@
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fetchBeaconDetails:completion:">fetchBeaconDetails:completion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fetchColorForBeacon:completion:">fetchColorForBeacon:completion:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fetchColorForBeaconWithMacAddress:completion:">fetchColorForBeaconWithMacAddress:completion:</a></span></li>
 	
@@ -147,6 +155,14 @@
 					
                     
                     
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>ESTCloudManager class is responsible for Estimote Cloud integration. It allows you to</p>
+					</div>
+					
+					
 					
 					
 					
@@ -198,6 +214,12 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/fetchBeaconDetails:completion:">&ndash;&nbsp;fetchBeaconDetails:completion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/fetchColorForBeacon:completion:">&ndash;&nbsp;fetchColorForBeacon:completion:</a></code>
 	</span>
 	
 	
@@ -475,13 +497,66 @@ You can use both Mac Address or ProximityUUID:Major:Minor.</p>
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/fetchColorForBeacon:completion:" title="fetchColorForBeacon:completion:"></a>
+	<h3 class="subsubtitle method-title">fetchColorForBeacon:completion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Collects color of particular beacon device stored in Estimote Cloud.
+Authorization is not required to access device color.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)fetchColorForBeacon:(CLBeacon *)<em>beacon</em> completion:(ESTObjectCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>beacon</em></dt>
+			<dd><p>iBeacon device</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>completion block with NSNumber class object contining ESTColor value.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTCloudManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/fetchColorForBeaconWithMacAddress:completion:" title="fetchColorForBeaconWithMacAddress:completion:"></a>
 	<h3 class="subsubtitle method-title">fetchColorForBeaconWithMacAddress:completion:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Collects color of particular beacon device stored in Estimote Cloud.</p>
+		<p>Collects color of particular beacon device stored in Estimote Cloud.
+Authorization is not required to access device color.</p>
 	</div>		
 	
     
@@ -532,7 +607,8 @@ You can use both Mac Address or ProximityUUID:Major:Minor.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Collects color of particular beacon device stored in Estimote Cloud.</p>
+		<p>Collects color of particular beacon device stored in Estimote Cloud.
+Authorization is not required to access device color.</p>
 	</div>		
 	
     
@@ -742,7 +818,7 @@ Array returned in completion block can be used directly by ESTBulkUpdater class.
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-03-12)</span><br />
+						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-03-17)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						

@@ -31,7 +31,7 @@ typedef NS_ENUM(NSInteger, ESBeaconUpdateInfoStatus)
 @end
 
 /**
- * The `ESBeaconUpdateInfo` class represents all required data for single Estimote beacon bulk update operation. It should be intialized by particular `<ESTBeacon>` that should be updated and `<ESBeaconUpdateConfig>` config object that describes how update is going to be performed.
+ * The `ESBeaconUpdateInfo` class represents all required data for single Estimote beacon bulk update operation. It should be intialized by device Mac Address that should be updated and `<ESBeaconUpdateConfig>` config object that describes how update is going to be performed.
  */
 
 @interface ESTBeaconUpdateInfo : NSObject <NSCoding>
@@ -71,8 +71,8 @@ typedef NS_ENUM(NSInteger, ESBeaconUpdateInfoStatus)
  *  Initialize object with beacon that is going to be updated and proper
  *  config file containing description how update should be performed.
  *
- *  @param beacon Beacon object.
- *  @param config Config description for update.
+ *  @param macAddress   Mac Address of beacon.
+ *  @param config       Config description for update.
  *
  *  @return initialized instance of this class
  */
@@ -84,9 +84,9 @@ typedef NS_ENUM(NSInteger, ESBeaconUpdateInfoStatus)
  *  config file containing description how update should be performed
  *  with delegate object.
  *
- *  @param beacon   Beacon object.
- *  @param config   Config description for update.
- *  @param delegate Delegate to receive events.
+ *  @param macAddress   Mac Address of beacon.
+ *  @param config       Config description for update.
+ *  @param delegate     Delegate to receive events.
  *
  *  @return initialized instance of this class
  */

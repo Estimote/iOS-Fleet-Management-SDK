@@ -80,7 +80,7 @@ extern NSString * const ESTBulkUpdaterTimeoutNotification;
 /**
  *  Starts update process for given beacons and updates them accordingly to given config.
  *
- *  @param beacons      Array with beacons to update.
+ *  @param beaconInfos  Array with `<ESBeaconUpdateInfo>` objects, defining updates for beacons.
  *  @param timeout      Timeout for bulk update operation in seconds. 0 means no timeout.
  */
 - (void)startWithBeaconInfos:(NSArray *)beaconInfos
@@ -88,16 +88,28 @@ extern NSString * const ESTBulkUpdaterTimeoutNotification;
 
 /**
  *  Verify if beacon is currently in update process
+ *
+ * @param macAddress Mac Address of device to verify
+ *
+ * @return BOOL value indicating if beacon is waiting for update
  */
 - (BOOL)isUpdateInProgressForBeaconWithMacAddress:(NSString *)macAddress;
 
 /**
  * Verify if beacon is currently waiting for update
+ *
+ * @param macAddress Mac Address of device to verify
+ *
+ * @return BOOL value indicating if beacon is waiting for update
  */
 - (BOOL)isBeaconWaitingForUpdate:(NSString *)macAddress;
 
 /**
  * Get all possible infos for particular beacon
+ *
+ * @param macAddress Mac Address of device to get beacon infos for
+ *
+ * @return NSArray containing all related beacon infos
  */
 - (NSArray *)getBeaconUpdateInfosForBeaconWithMacAddress:(NSString *)macAddress;
 

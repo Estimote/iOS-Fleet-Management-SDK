@@ -26,6 +26,8 @@
 					<select id="jumpTo">
 	<option value="top">Jump To&#133;</option>
 	
+	<option value="overview">Overview</option>
+	
 	
 	
 	
@@ -94,6 +96,8 @@
 	
 	<option value="class_methods">Class Methods</option>
 	
+	<option value="//api/name/connectionWithBeacon:delegate:">&nbsp;&nbsp;&nbsp;&nbsp;+ connectionWithBeacon:delegate:</option>
+	
 	<option value="//api/name/connectionWithMacAddress:delegate:">&nbsp;&nbsp;&nbsp;&nbsp;+ connectionWithMacAddress:delegate:</option>
 	
 	<option value="//api/name/connectionWithProximityUUID:major:minor:delegate:">&nbsp;&nbsp;&nbsp;&nbsp;+ connectionWithProximityUUID:major:minor:delegate:</option>
@@ -104,6 +108,8 @@
 	<option value="instance_methods">Instance Methods</option>
 	
 	<option value="//api/name/cancelConnection">&nbsp;&nbsp;&nbsp;&nbsp;- cancelConnection</option>
+	
+	<option value="//api/name/checkFirmwareUpdateWithCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- checkFirmwareUpdateWithCompletion:</option>
 	
 	<option value="//api/name/findPeripheralForBeaconWithTimeout:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- findPeripheralForBeaconWithTimeout:completion:</option>
 	
@@ -162,12 +168,36 @@
 		<nav id="tocContainer" class="isShowingTOC">
 			<ul id="toc" role="tree">
 				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
 
 
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Interacting with Sensors (must be connected)">Interacting with Sensors (must be connected)</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Connection handling">Connection handling</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Device identification">Device identification</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_iBeacon settings">iBeacon settings</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Power management">Power management</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Sensors handling">Sensors handling</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Reading methods for sensors">Reading methods for sensors</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Writing methods for iBeacon settings">Writing methods for iBeacon settings</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Writing methods for power management">Writing methods for power management</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Writing methods for security features">Writing methods for security features</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Writing methods for sensors">Writing methods for sensors</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Reset to factory settings">Reset to factory settings</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Firmware update">Firmware update</a></span></li>
 	
 </ul></li>
 
@@ -235,6 +265,8 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/connectionWithBeacon:delegate:">connectionWithBeacon:delegate:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/connectionWithMacAddress:delegate:">connectionWithMacAddress:delegate:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/connectionWithProximityUUID:major:minor:delegate:">connectionWithProximityUUID:major:minor:delegate:</a></span></li>
@@ -246,6 +278,8 @@
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/cancelConnection">cancelConnection</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/checkFirmwareUpdateWithCompletion:">checkFirmwareUpdateWithCompletion:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/findPeripheralForBeaconWithTimeout:completion:">findPeripheralForBeaconWithTimeout:completion:</a></span></li>
 	
@@ -329,6 +363,24 @@
                     
                     
 					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>The <code>ESTBeaconConnection</code> class defines the interface for interacting with a single Estimote beacon. It enables you to connect to the device, retrieve properties and change its configuration settings.</p>
+
+<p>The ESTBeaconConnection instance can be intialized using CLBeacon object or mac address being unique identifier of particular device. Fetch required beacon details you can use:</p>
+
+<ul>
+<li><p><code>startRangingBeaconsInRegion:</code> - which is a CoreLocation based scan and deliveres <code>CLBeacon</code> objects.</p></li>
+<li><p><code>startEstimoteBeaconsDiscovery</code> - which is a CoreBluetooth based scan and deliveres <code>ESTBluetoothBeacon</code> object containing mac address.</p></li>
+</ul>
+
+
+<p>Properties become editable once connected to the beacon. See connect for more details about connecting to the beacon. You will also need to assign a delegate to be notified about connection and disconnection events. The delegate needs to conform to the <a href="../Protocols/ESTBeaconConnectionDelegate.html"><code>ESTBeaconConnectionDelegate</code></a> protocol.</p>
+					</div>
+					
+					
+					
 					
 					
 					<div class="section section-tasks">
@@ -366,6 +418,12 @@
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/connectionWithBeacon:delegate:">+&nbsp;connectionWithBeacon:delegate:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/connectionWithMacAddress:delegate:">+&nbsp;connectionWithMacAddress:delegate:</a></code>
 	</span>
 	
@@ -388,7 +446,15 @@
 	</span>
 	
 	
-</li><li>
+</li>
+						</ul>
+						
+						
+						<a title="Connection handling" name="task_Connection handling"></a>
+						<h3 class="subsubtitle task-title">Connection handling</h3>
+
+						<ul class="task-list">
+							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/startConnection">&ndash;&nbsp;startConnection</a></code>
 	</span>
@@ -406,7 +472,15 @@
 	</span>
 	
 	
-</li><li>
+</li>
+						</ul>
+						
+						
+						<a title="Device identification" name="task_Device identification"></a>
+						<h3 class="subsubtitle task-title">Device identification</h3>
+
+						<ul class="task-list">
+							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/macAddress">&nbsp;&nbsp;macAddress</a></code>
 	</span>
@@ -430,7 +504,15 @@
 	</span>
 	<span class="task-item-suffix">property</span>
 	
-</li><li>
+</li>
+						</ul>
+						
+						
+						<a title="iBeacon settings" name="task_iBeacon settings"></a>
+						<h3 class="subsubtitle task-title">iBeacon settings</h3>
+
+						<ul class="task-list">
+							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/proximityUUID">&nbsp;&nbsp;proximityUUID</a></code>
 	</span>
@@ -478,7 +560,15 @@
 	</span>
 	<span class="task-item-suffix">property</span>
 	
-</li><li>
+</li>
+						</ul>
+						
+						
+						<a title="Power management" name="task_Power management"></a>
+						<h3 class="subsubtitle task-title">Power management</h3>
+
+						<ul class="task-list">
+							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/batteryLevel">&nbsp;&nbsp;batteryLevel</a></code>
 	</span>
@@ -520,7 +610,15 @@
 	</span>
 	<span class="task-item-suffix">property</span>
 	
-</li><li>
+</li>
+						</ul>
+						
+						
+						<a title="Sensors handling" name="task_Sensors handling"></a>
+						<h3 class="subsubtitle task-title">Sensors handling</h3>
+
+						<ul class="task-list">
+							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/motionState">&nbsp;&nbsp;motionState</a></code>
 	</span>
@@ -548,8 +646,8 @@
 						</ul>
 						
 						
-						<a title="Interacting with Sensors (must be connected)" name="task_Interacting with Sensors (must be connected)"></a>
-						<h3 class="subsubtitle task-title">Interacting with Sensors (must be connected)</h3>
+						<a title="Reading methods for sensors" name="task_Reading methods for sensors"></a>
+						<h3 class="subsubtitle task-title">Reading methods for sensors</h3>
 
 						<ul class="task-list">
 							<li>
@@ -570,7 +668,15 @@
 	</span>
 	
 	
-</li><li>
+</li>
+						</ul>
+						
+						
+						<a title="Writing methods for iBeacon settings" name="task_Writing methods for iBeacon settings"></a>
+						<h3 class="subsubtitle task-title">Writing methods for iBeacon settings</h3>
+
+						<ul class="task-list">
+							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/writeName:completion:">&ndash;&nbsp;writeName:completion:</a></code>
 	</span>
@@ -606,7 +712,15 @@
 	</span>
 	
 	
-</li><li>
+</li>
+						</ul>
+						
+						
+						<a title="Writing methods for power management" name="task_Writing methods for power management"></a>
+						<h3 class="subsubtitle task-title">Writing methods for power management</h3>
+
+						<ul class="task-list">
+							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/writeBasicPowerModeEnabled:completion:">&ndash;&nbsp;writeBasicPowerModeEnabled:completion:</a></code>
 	</span>
@@ -624,13 +738,29 @@
 	</span>
 	
 	
-</li><li>
+</li>
+						</ul>
+						
+						
+						<a title="Writing methods for security features" name="task_Writing methods for security features"></a>
+						<h3 class="subsubtitle task-title">Writing methods for security features</h3>
+
+						<ul class="task-list">
+							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/writeEstimoteSecureUUIDEnabled:completion:">&ndash;&nbsp;writeEstimoteSecureUUIDEnabled:completion:</a></code>
 	</span>
 	
 	
-</li><li>
+</li>
+						</ul>
+						
+						
+						<a title="Writing methods for sensors" name="task_Writing methods for sensors"></a>
+						<h3 class="subsubtitle task-title">Writing methods for sensors</h3>
+
+						<ul class="task-list">
+							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/writeMotionDetectionEnabled:completion:">&ndash;&nbsp;writeMotionDetectionEnabled:completion:</a></code>
 	</span>
@@ -648,7 +778,15 @@
 	</span>
 	
 	
-</li><li>
+</li>
+						</ul>
+						
+						
+						<a title="Reset to factory settings" name="task_Reset to factory settings"></a>
+						<h3 class="subsubtitle task-title">Reset to factory settings</h3>
+
+						<ul class="task-list">
+							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/resetToFactorySettingsWithCompletion:">&ndash;&nbsp;resetToFactorySettingsWithCompletion:</a></code>
 	</span>
@@ -657,6 +795,20 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/findPeripheralForBeaconWithTimeout:completion:">&ndash;&nbsp;findPeripheralForBeaconWithTimeout:completion:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Firmware update" name="task_Firmware update"></a>
+						<h3 class="subsubtitle task-title">Firmware update</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/checkFirmwareUpdateWithCompletion:">&ndash;&nbsp;checkFirmwareUpdateWithCompletion:</a></code>
 	</span>
 	
 	
@@ -1102,6 +1254,8 @@
 	<div class="method-subsection see-also-section">
 		<h4 class="method-subtitle">See Also</h4>
 		<ul>
+			
+			<li><code><p><a href="#//api/name/checkFirmwareUpdateWithCompletion:">- checkFirmwareUpdateWithCompletion:</a></p></code></li>
 			
 			<li><code><p><a href="#//api/name/updateFirmwareWithProgress:completion:">- updateFirmwareWithProgress:completion:</a></p></code></li>
 			
@@ -1821,6 +1975,62 @@ Based on the method you used to initialize it may contain:
 						<h2 class="subtitle subtitle-methods">Class Methods</h2>
 						
 						<div class="section-method">
+	<a name="//api/name/connectionWithBeacon:delegate:" title="connectionWithBeacon:delegate:"></a>
+	<h3 class="subsubtitle method-title">connectionWithBeacon:delegate:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Static method initializing connection object with Estimote beacon</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (instancetype)connectionWithBeacon:(CLBeacon *)<em>beacon</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt;)<em>delegate</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>beacon</em></dt>
+			<dd><p>discovered beacon</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>delegate</em></dt>
+			<dd><p>delegate reference</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>nearable connection object</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/connectionWithMacAddress:delegate:" title="connectionWithMacAddress:delegate:"></a>
 	<h3 class="subsubtitle method-title">connectionWithMacAddress:delegate:</h3>
 	
@@ -1971,6 +2181,73 @@ Based on the method you used to initialize it may contain:
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/checkFirmwareUpdateWithCompletion:" title="checkFirmwareUpdateWithCompletion:"></a>
+	<h3 class="subsubtitle method-title">checkFirmwareUpdateWithCompletion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Checks if an updated firmware is available.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)checkFirmwareUpdateWithCompletion:(ESTFirmwareInfoCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>A block that is called when the check has been completed.</p>
+
+<p>The completion block receives the following parameters:</p>
+
+<ul>
+<li><p><code>ESTBeaconFirmwareInfoVO value</code> - Indicates whether an update is available. If so, it also holds additional information about the update.</p></li>
+<li><p><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</p></li>
+</ul>
+</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The result of the check is available as a <code>ESTBeaconFirmwareInfoVO</code> structure in the completion block and has the following properties:</p>
+
+<ul>
+<li><p><code>BOOL isUpdateAvailable</code> - YES if an update is available, NO if there&rsquo;s no update available. In the latter case, all the other properties of this structure will be <code>nil</code>.</p></li>
+<li><p><code>NSString *hardwareVersion</code> - The version of hardware this firmware update is dedicated for.</p></li>
+<li><p><code>NSString *firmwareVersion</code> - The version of the firmware available for update.</p></li>
+<li><p><code>NSString *changelog</code> - Changes introduced in the new version.</p></li>
+</ul>
+
+	</div>
 	
 	
 	
@@ -2818,7 +3095,7 @@ If the beacon is moving or oriented differently it acts normally.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)writeConditionalBroadcastingType:(ESTBeaconConditionalBroadcasting)<em>conditionalBroadcastingType</em> completion:(ESTBoolCompletionBlock)<em>completion</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)writeConditionalBroadcastingType:(ESTBeaconConditionalBroadcasting)<em>conditionalBroadcasting</em> completion:(ESTBoolCompletionBlock)<em>completion</em></code></div>
 
     
 	
@@ -2826,13 +3103,13 @@ If the beacon is moving or oriented differently it acts normally.</p>
 		<h4 class="method-subtitle parameter-title">Parameters</h4>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>completion</em></dt>
-			<dd><p>A block that is called when the belly mode has been enabled or disabled.</p></dd>
+			<dt><em>conditionalBroadcasting</em></dt>
+			<dd><p>Conditional broadcasting mode to be set in the beacon.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>conditionalBroadcasting</em></dt>
-			<dd><p>Conditional broadcasting mode to be set in the beacon.</p></dd>
+			<dt><em>completion</em></dt>
+			<dd><p>A block that is called when the belly mode has been enabled or disabled.</p></dd>
 		</dl>
 		
 	</div>
@@ -3415,7 +3692,7 @@ If the beacon is moving or oriented differently it acts normally.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-03-12)</span><br />
+						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-03-17)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						

@@ -12,8 +12,6 @@
 
 @class ESTBeaconConnection;
 
-static NSString *connectionErrorDomain = @"com.estimote.sdk.connection";
-
 enum
 {
     ESTConnectionInternetConnectionError,
@@ -21,8 +19,6 @@ enum
     ESTConnectionNotAuthorizedError,
     ESTConnectionNotConnectedToReadWrite
 };
-
-@class ESTBeaconConnection;
 
 /**
  * The `ESTBeaconConnectionDelegate` protocol defines the delegate methods used to receive updates about `<ESTBeaconConnection>` connection status, as well as sensor related updates once a connection to the beacon has been established.
@@ -55,14 +51,13 @@ enum
  */
 - (void)beaconConnection:(ESTBeaconConnection *)connection didDisconnectWithError:(NSError *)error;
 
-
 /**
- * Tells the delegate that a beacon's `<[ESTBeacon isMoving]>` value has changed.
+ * Tells the delegate that a beacon's `<[ESTBeaconConnection isMoving]>` value has changed.
  *
- * @param beacon The beacon object reporting the event.
+ * @param connection The beacon connection object reporting the event.
  * @param state The new `isMoving` value.
  */
-- (void)beaconConnection:(ESTBeaconConnection *)beaconConnection motionStateChanged:(BOOL)state;
+- (void)beaconConnection:(ESTBeaconConnection *)connection motionStateChanged:(BOOL)state;
 
 @end
 
@@ -97,10 +92,8 @@ enum
 /**
  * The connection status between the user device and the beacon.
  *
- * @see ESTConnectionStatus
  */
 @property (readonly, nonatomic) ESTConnectionStatus connectionStatus;
-
 
 /**
  *  Static method initializing connection object with Estimote beacon
@@ -116,6 +109,17 @@ enum
                                       major:(CLBeaconMajorValue)major
                                       minor:(CLBeaconMinorValue)minor
                               delegate:(id<ESTBeaconConnectionDelegate>)delegate;
+
+/**
+ *  Static method initializing connection object with Estimote beacon
+ *
+ *  @param beacon discovered beacon
+ *  @param delegate delegate reference
+ *
+ *  @return nearable connection object
+ */
++ (instancetype)connectionWithBeacon:(CLBeacon *)beacon
+                            delegate:(id<ESTBeaconConnectionDelegate>)delegate;
 
 /**
  *  Static method initializing connection object with Estimote beacon
@@ -176,6 +180,9 @@ enum
 
 
 #pragma mark Connection handling
+///--------------------------------------------------------------------
+/// @name Connection handling
+///--------------------------------------------------------------------
 
 /**
  *  Initiates connection procedure
@@ -199,6 +206,9 @@ enum
 
 
 #pragma mark - Device identification
+///--------------------------------------------------------------------
+/// @name Device identification
+///--------------------------------------------------------------------
 
 /**
  * The MAC address of the beacon.
@@ -217,7 +227,6 @@ enum
  *
  * This value is stored and retrieved from the Estimote Cloud, which means it might be unavailable under certain circumestances - e.g. no Internet connectivity.
  *
- * @see ESTColor
  */
 @property (readonly, nonatomic) ESTColor color;
 
@@ -227,6 +236,9 @@ enum
 @property (readonly, nonatomic) CBPeripheral *peripheral;
 
 #pragma mark - iBeacon settings
+///--------------------------------------------------------------------
+/// @name iBeacon settings
+///--------------------------------------------------------------------
 
 /**
  * The proximity ID of the beacon.
@@ -248,7 +260,6 @@ enum
  *
  * @since Estimote OS 2.0
  *
- * @see writeMotionProximityUUID:completion:
  */
 @property (readonly, nonatomic) NSUUID *motionProximityUUID;
 
@@ -298,6 +309,9 @@ enum
 @property (readonly, nonatomic) NSString *firmwareVersion;
 
 #pragma mark - Power management
+///--------------------------------------------------------------------
+/// @name Power management
+///--------------------------------------------------------------------
 
 /**
  * The battery charge level for the beacon.
@@ -324,7 +338,6 @@ enum
  * @since Estimote OS A2.1
  *
  * @see ESTBeaconPowerSavingMode
- * @see enableBasicPowerMode:completion
  */
 @property (readonly, nonatomic) ESTBeaconPowerSavingMode basicPowerMode;
 
@@ -334,7 +347,6 @@ enum
  * @since Estimote OS A2.1
  *
  * @see ESTBeaconPowerSavingMode
- * @see writeSmartPowerModeEnabled:completion
  */
 @property (readonly, nonatomic) ESTBeaconPowerSavingMode smartPowerMode;
 
@@ -343,7 +355,6 @@ enum
  *
  *  @since Estimote OS 2.2
  *  @see ESTBeaconEstimoteSecureUUID
- *  @see writeEstimoteSecureUUIDEnabled:completion
  */
 @property (readonly, nonatomic) ESTBeaconEstimoteSecureUUID estimoteSecureUUIDState;
 
@@ -357,6 +368,9 @@ enum
 @property (readonly, nonatomic) ESTBeaconMotionUUID motionUUIDState;
 
 #pragma mark - Sensors handling
+///--------------------------------------------------------------------
+/// @name Sensors handling
+///--------------------------------------------------------------------
 
 /**
  * A flag indicating if the beacon is in motion or not.
@@ -367,7 +381,6 @@ enum
  *
  * - from YES to NO after a beacon stops moving and remains still for 2 seconds.
  *
- * @see [ESTBeaconDelegate beacon:accelerometerStateChanged:]
  */
 @property (readonly, nonatomic) ESTBeaconMotionState motionState;
 
@@ -396,7 +409,7 @@ enum
 
 #pragma mark - Reading methods for sensors
 ///--------------------------------------------------------------------
-/// @name Interacting with Sensors (must be connected)
+/// @name Reading methods for sensors
 ///--------------------------------------------------------------------
 
 /**
@@ -441,6 +454,9 @@ enum
 - (void)resetAccelerometerCountWithCompletion:(ESTUnsignedShortCompletionBlock)completion;
 
 #pragma mark - Writing methods for iBeacon settings
+///--------------------------------------------------------------------
+/// @name Writing methods for iBeacon settings
+///--------------------------------------------------------------------
 
 /**
  * Sets the `<name>` of the beacon.
@@ -528,6 +544,9 @@ enum
 - (void)writePower:(ESTBeaconPower)power completion:(ESTPowerCompletionBlock)completion;
 
 #pragma mark - Writing methods for power management
+///--------------------------------------------------------------------
+/// @name Writing methods for power management
+///--------------------------------------------------------------------
 
 /**
  * Enables or disables the `<basicPowerMode>`.
@@ -573,12 +592,14 @@ enum
  *  @param conditionalBroadcasting Conditional broadcasting mode to be set in the beacon.
  *  @param completion A block that is called when the belly mode has been enabled or disabled.
  *
- *  @see enableAccelerometer:completion:
  */
-- (void)writeConditionalBroadcastingType:(ESTBeaconConditionalBroadcasting)conditionalBroadcastingType
+- (void)writeConditionalBroadcastingType:(ESTBeaconConditionalBroadcasting)conditionalBroadcasting
                               completion:(ESTBoolCompletionBlock)completion;
 
 #pragma mark - Writing methods for security features
+///--------------------------------------------------------------------
+/// @name Writing methods for security features
+///--------------------------------------------------------------------
 
 /**
  *  Enables Estimote Secure UUID.
@@ -590,6 +611,9 @@ enum
                             completion:(ESTBoolCompletionBlock)completion;
 
 #pragma mark - Writing methods for sensors
+///--------------------------------------------------------------------
+/// @name Writing methods for sensors
+///--------------------------------------------------------------------
 
 /**
  * Enables or disables the accelerometer allowing to detect if beacon is in motion.
@@ -605,8 +629,6 @@ enum
  *
  * @since Estimote OS A2.1
  *
- * @see isAccelerometerAvailable
- * @see isAccelerometerEditAvailable
  */
 - (void)writeMotionDetectionEnabled:(BOOL)enable
                          completion:(ESTBoolCompletionBlock)completion;
@@ -625,8 +647,6 @@ enum
  *
  * @since Estimote OS A2.1
  *
- * @see isAccelerometerAvailable
- * @see isAccelerometerEditAvailable
  */
 - (void)writeMotionUUIDEnabled:(BOOL)enable
                     completion:(ESTBoolCompletionBlock)completion;
@@ -651,6 +671,9 @@ enum
                         completion:(ESTNumberCompletionBlock)completion;
 
 #pragma mark - Reset to factory settings
+///--------------------------------------------------------------------
+/// @name Reset to factory settings
+///--------------------------------------------------------------------
 
 /**
  * Resets the beacon's `<major>`, `<minor>`, `<proximityUUID>`, broadcasting `<power>` and `<advInterval>` to factory settings.
@@ -673,6 +696,34 @@ enum
  *  @param completion completion block returning reference to ESTBeaconConnection object performing operation.
  */
 - (void)findPeripheralForBeaconWithTimeout:(NSUInteger)timeout completion:(ESTObjectCompletionBlock)completion;
+
+#pragma mark - Firmware update
+///--------------------------------------------------------------------
+/// @name Firmware update
+///--------------------------------------------------------------------
+
+/**
+ * Checks if an updated firmware is available.
+ *
+ * The result of the check is available as a `ESTBeaconFirmwareInfoVO` structure in the completion block and has the following properties:
+ *
+ * - `BOOL isUpdateAvailable` - YES if an update is available, NO if there's no update available. In the latter case, all the other properties of this structure will be `nil`.
+ *
+ * - `NSString *hardwareVersion` - The version of hardware this firmware update is dedicated for.
+ *
+ * - `NSString *firmwareVersion` - The version of the firmware available for update.
+ *
+ * - `NSString *changelog` - Changes introduced in the new version.
+ *
+ * @param completion A block that is called when the check has been completed.
+ *
+ * The completion block receives the following parameters:
+ *
+ * - `ESTBeaconFirmwareInfoVO value` - Indicates whether an update is available. If so, it also holds additional information about the update.
+ *
+ * - `NSError *error` - If an error occurred, this error object describes the error. If the operation completed successfully, the value is `nil`.
+ */
+- (void)checkFirmwareUpdateWithCompletion:(ESTFirmwareInfoCompletionBlock)completion;
 
 /**
  * Updates the beacon's firmware.

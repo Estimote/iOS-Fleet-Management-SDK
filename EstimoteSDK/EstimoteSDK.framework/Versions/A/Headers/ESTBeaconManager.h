@@ -26,7 +26,7 @@
 /**
  * The delegate object to receive update events.
  *
- * @see ESTBeaconDelegate
+ * @see ESTBeaconManagerDelegate
  */
 @property (nonatomic, weak) id <ESTBeaconManagerDelegate> delegate;
 
@@ -53,6 +53,8 @@
 
 /**
  * Sets the limit (500 by default) of beacons to be delivered to the `<[ESTBeaconManagerDelegate beaconManager:didRangeBeacons:inRegion:]>` delegate method.
+ *
+ * @param limit number of beacons that should be returned
  */
 - (void)updateRangeLimit:(NSInteger)limit;
 
@@ -130,7 +132,6 @@
  *
  * @param region The region object that defines the boundary to monitor. This parameter must not be `nil.`
  *
- * @see ESTBeaconRegion
  * @see stopMonitoringForRegion:
  */
 - (void)startMonitoringForRegion:(CLBeaconRegion *)region;
@@ -142,7 +143,6 @@
  *
  * @param region The region object currently being monitored. This parameter must not be `nil`. The object you specify need not be the exact same object that you registered but its beacon region attributes should be the same.
  *
- * @see ESTBeaconRegion
  * @see startMonitoringForRegion:
  */
 - (void)stopMonitoringForRegion:(CLBeaconRegion *)region;
@@ -154,7 +154,6 @@
  *
  * @param region The region object that defines the identifying information for the targeted beacons. The number of beacons represented by this region object depends on which identifier values you use to initialize it. Beacons must match all of the identifiers you specify. This method copies the region information it needs from the object you provide. If `nil`, defaults to targeting all beacons with `proximityUUID` equal to `ESTIMOTE_PROXIMITY_UUID`.
  *
- * @see ESTBeaconRegion
  * @see stopRangingBeaconsInRegion:
  */
 - (void)startRangingBeaconsInRegion:(CLBeaconRegion *)region;
@@ -164,7 +163,6 @@
  *
  * @param region The region that identifies the beacons. The object you specify need not be the exact same object that you registered but its beacon region attributes should be the same. If `nil`, defaults to targeting all beacons with `proximityUUID` equal to `ESTIMOTE_PROXIMITY_UUID`.
  *
- * @see ESTBeaconRegion
  * @see startRangingBeaconsInRegion:
  */
 - (void)stopRangingBeaconsInRegion:(CLBeaconRegion *)region;
@@ -177,6 +175,11 @@
  * @param region The region whose state you want to know.
  */
 - (void)requestStateForRegion:(CLBeaconRegion *)region;
+
+#pragma mark Estimote Motion UUID support
+///--------------------------------------------------------------------
+/// @name Estimote Motion UUID support
+///--------------------------------------------------------------------
 
 /**
  *  Returns Motion Proximity UUID identifier related to Proxmity UUID returned by param. 

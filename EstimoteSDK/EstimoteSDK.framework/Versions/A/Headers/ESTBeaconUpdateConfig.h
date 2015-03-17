@@ -12,6 +12,10 @@
 #import <Foundation/Foundation.h>
 #import "ESTBeaconDefinitions.h"
 
+/**
+ *  Object of this class contains all settings that should be applied to the Estimote beacon device. 
+ *  It's used by `ESTBulkUpdater` class as a part of `ESTBeaconUpdateInfo` object.
+ */
 @interface ESTBeaconUpdateConfig : NSObject <NSCoding, NSCopying>
 
 /**
