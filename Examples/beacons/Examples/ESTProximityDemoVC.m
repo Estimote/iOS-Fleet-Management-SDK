@@ -7,22 +7,21 @@
 //
 
 #import "ESTProximityDemoVC.h"
-#import "ESTBeaconManager.h"
 
 @interface ESTProximityDemoVC () <ESTBeaconManagerDelegate>
 
-@property (nonatomic, strong) ESTBeacon         *beacon;
-@property (nonatomic, strong) ESTBeaconManager  *beaconManager;
-@property (nonatomic, strong) ESTBeaconRegion   *beaconRegion;
+@property (nonatomic, strong) CLBeacon *beacon;
+@property (nonatomic, strong) ESTBeaconManager *beaconManager;
+@property (nonatomic, strong) CLBeaconRegion *beaconRegion;
 
-@property (nonatomic, strong) UIImageView       *imageView;
-@property (nonatomic, strong) UILabel           *zoneLabel;
+@property (nonatomic, strong) UIImageView *imageView;
+@property (nonatomic, strong) UILabel *zoneLabel;
 
 @end
 
 @implementation ESTProximityDemoVC
 
-- (id)initWithBeacon:(ESTBeacon *)beacon
+- (id)initWithBeacon:(CLBeacon *)beacon
 {
     self = [super init];
     if (self)
@@ -63,11 +62,10 @@
     self.beaconManager = [[ESTBeaconManager alloc] init];
     self.beaconManager.delegate = self;
     
-    self.beaconRegion = [[ESTBeaconRegion alloc] initWithProximityUUID:self.beacon.proximityUUID
+    self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:self.beacon.proximityUUID
                                                                  major:[self.beacon.major unsignedIntValue]
                                                                  minor:[self.beacon.minor unsignedIntValue]
-                                                            identifier:@"RegionIdentifier"
-                                                               secured:self.beacon.isSecured];
+                                                            identifier:@"RegionIdentifier"];
     
     [self.beaconManager startRangingBeaconsInRegion:self.beaconRegion];
 }
@@ -81,11 +79,11 @@
 
 #pragma mark - ESTBeaconManager delegate
 
-- (void)beaconManager:(ESTBeaconManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(ESTBeaconRegion *)region
+- (void)beaconManager:(id)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region
 {
     if (beacons.count > 0)
     {
-        ESTBeacon *firstBeacon = [beacons firstObject];
+        CLBeacon *firstBeacon = [beacons firstObject];
         
         self.zoneLabel.text     = [self textForProximity:firstBeacon.proximity];
         self.imageView.image    = [self imageForProximity:firstBeacon.proximity];

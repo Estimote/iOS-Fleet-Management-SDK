@@ -7,14 +7,14 @@
 
 #import "ESTMotionUUIDDemoVC.h"
 #import <AudioToolbox/AudioToolbox.h>
-#import <ESTBeaconManager.h>
+#import <EstimoteSDK/EstimoteSDK.h>
 #import "ESTMotionUUIDSettingsDemoVC.h"
 
 @interface ESTMotionUUIDDemoVC () <ESTBeaconManagerDelegate>
 
 @property (nonatomic, assign) BOOL shouldVibrate;
 
-@property (nonatomic, strong) ESTBeacon *beacon;
+@property (nonatomic, strong) CLBeacon *beacon;
 @property (nonatomic, strong) ESTBeaconManager *beaconManager;
 
 //UI properties
@@ -25,7 +25,7 @@
 
 @implementation ESTMotionUUIDDemoVC
 
-- (id)initWithBeacon:(ESTBeacon*)beacon
+- (id)initWithBeacon:(CLBeacon *)beacon
 {
     self = [self init];
     if (self)
@@ -39,27 +39,18 @@
 {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    self.title = @"Accelerometer Demo";
+    self.title = @"Motion UUID Demo";
     
     self.beaconManager = [ESTBeaconManager new];
     self.beaconManager.delegate = self;
     
-    ESTBeaconRegion *motionRegion = [[ESTBeaconRegion alloc] initWithProximityUUID:self.beacon.proximityUUID
-                                                                       major:[self.beacon.major unsignedShortValue]
-                                                                       minor:[self.beacon.minor unsignedShortValue]
-                                                                  identifier:@"RegularBeaconRegion"];
+    NSUUID *motionUUID = [ESTBeaconManager motionProximityUUIDForProximityUUID:self.beacon.proximityUUID];
     
+    CLBeaconRegion *motionRegion = [[CLBeaconRegion alloc] initWithProximityUUID:motionUUID
+                                                                           major:[self.beacon.major unsignedShortValue]
+                                                                           minor:[self.beacon.minor unsignedShortValue]
+                                                                      identifier:@"MotionBeaconRegion"];
     
-    /**
-     *  Motion UUID mechanism is simple. When beacon is in motion
-     *  it's Proximiy UUID value changes to the one that is different
-     *  then original (First bit of it is flipped). The best thing is tha
-     *  you don't need to bother how changed proximity UUID looks like.
-     *
-     *  Just set region inMotion flag to YES and let ESTBeaconManager do 
-     *  the rest.
-     */
-    motionRegion.inMotion = YES;
     
     [self.beaconManager startRangingBeaconsInRegion:motionRegion];
 }
@@ -109,16 +100,16 @@
 
 #pragma mark - ESTBeaconDelegate
 
-- (void)beaconManager:(ESTBeaconManager *)manager
+- (void)beaconManager:(id)manager
       didRangeBeacons:(NSArray *)beacons
-             inRegion:(ESTBeaconRegion *)region
+             inRegion:(CLBeaconRegion *)region
 {
     
     /**
      *  You can simply verify if ranged region is the inMotion one
      *  using simple condition as below.
      */
-    if(beacons.count > 0 && region.inMotion)
+    if(beacons.count > 0)
     {
         [self startVibrate];
     }

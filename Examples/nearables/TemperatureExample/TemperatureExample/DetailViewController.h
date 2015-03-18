@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ESTNearableManager.h"
+#import <EstimoteSDK/EstimoteSDK.h>
 
 @interface DetailViewController : UIViewController
 

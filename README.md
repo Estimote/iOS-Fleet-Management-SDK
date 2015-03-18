@@ -1,53 +1,106 @@
-EstimoteSDK for iOS
-=======
+# Estimote SDK for Apple iOS
 
-Introduction
--------
+## IMPORTANT RELEASE NOTE!
 
-Estimote SDK allows you to play with Apple's iBeacon technology using Estimote hardware beacons, as well as [Estimote Virtual Beacon iOS Application](https://itunes.apple.com/us/app/estimote-virtual-beacon/id686915066). To learn more, read the [API section on our website](http://estimote.com/api/index.html#). You can review [SDK documentation](http://estimote.github.io/iOS-SDK/) and check our [Community Portal](http://community.estimote.com) to get the answers for the most common questions related to our Hardware and Software.
+Estimote SDK has been with us for more than a year now. Thanks to feedback from our developer community, we’ve learned a lot about how it helps developers to reach their goals. However we also learned some of its shortcomings. As we want to deliver the best developer experience we decided to restructure our SDK and introduce some backward incompatible changes which will ultimately make it much easier to develop using our stack. 
 
-Overview
--------
+This update comes with firmware update to version 3.0.1. This version changes the way authorization is handled during device connection. It also introduces a new feature we call “conditional broadcasting”, which allows you to restrict broadcasting based on a beacon’s orientation and movement. Now you can enable one of the two new modes of beacon operation:
 
+* *“Flip to Sleep”* — in this mode, the beacon will not broadcast advertising packets when placed on its back (gecko pad facing up).
+* *“Motion only”* — in this mode, the beacon will only broadcast advertising packets when it's moving.
 
-Estimote SDK is a wrapper around Apple's CoreLocation framework. The SDK requires iOS 7+, as it is based on the CoreLocation's support for iBeacon first introduced in iOS 7. The featureset of this Estimote SDK is wrapped mostly in 3 classes: ESTBeaconManager, ESTBeaconRegion and ESTBeacon. Each class corresponds to a similar CoreLocation class (CLLocationManager, CLBeaconRegion, CLBeacon), but also introduces functionalities specific for the Estimate Beacons Platform.
+There are two main motivations behind this feature - firstly, it makes it much easier to test beacon enabled apps, as both of these modes provide a virtual “off” switch for your beacons. Secondly, we’re always looking for ways to save battery life, and both the new broadcasting modes, in particular “motion only” advertising offer innovative ways to save beacon power in some specific use cases.
 
-ESTBeaconManager is the starting point of the library. It allows you to get a list of all Estimote beacon devices (represented by ESTBeacon objects). It exposes monitoring and ranging methods in a similar fashion to CLLocationManager. In addition to location functionality, it allows you to get a list of beacons based on the CoreBluetooth framework. It is extremely important to have this possibility in case the device stops advertising in an iBeacon manner.
+**Please note that Estimote beacon firmware 3.0.1 is not backward compatible! This means you won't be able to perform connection using 2.4.0 Estimote SDK and 2.12 AppStore app to updated devices.**
 
-ESTBeaconRegion directly extends the CLBeaconRegion class of the CoreLocation framework.
+We've also started [discusion about Estimote SDK 3.0.0](https://forums.estimote.com/t/sdk-3-0-beta-discussion/78) using our recently announced Estimote Forums. Feel free to participate and give us your feedback!
 
-ESTBeacon represents a single Estimote Beacon device. Objects of this class are created by the ESTBeaconManager. The most important difference, compared to CLBeacon class, is the two way communication with the beacon device. Keeping reference to the original CLBeacon object allows you to connect with the device and interact with it. All available Bluetooth characteristics, like signal power or major/minor value, can be read and changed to create a customized behavior. The firmware update option is available using this class as well.
+If you already use Estimote SDK we've provided [Migration Guide](SDK_3_0_MIGRATION_GUIDE.md) to make it easier for you to update.
 
+## Table of Contents
 
-Installation
--------
+<!-- START doctoc -->
 
-The easiest way to intall is to use CocoaPods. It takes care of all the required frameworks and third party dependencies:
+- [Introduction](#introduction)
+- [Installation](#installation)
+- [Examples](#examples)
+- [Technical overview](#technical-overview)
+  - [Client](#client)
+    - [Trigger engine](#trigger-engine)
+  - [Utility](#utility)
+- [Changelog](#changelog)
 
-```
-pod 'EstimoteSDK'
-```
+<!-- END doctoc -->
 
-Alternatively, you can install it manually. Follow the steps described below:
+## Introduction
 
-1. Copy the EstimoteSDK directory (containing libEstimoteSDK.a and Headers) into your project directory.
+We want the Estimote iOS SDK to be first choice when building any Estimote Beacons or Nearables related experience for the Apple iOS Platform. Our SDK provides a wide range of both utility and client facing features that will save time and make development easier than ever. It's built purely on Apple Core Location and Core Bluetooth technologies and is 100% iBeacon compatible.
 
-2. Open your project settings and go to the "Build Phases" tab. In the Link library with binaries section click "+". In the popup window click "add another" at the bottom and select the libEstimoteSDK.a library file.
+In addition to the Estimote SDK we've included a lot of examples to show you how to use our SDK in real scenarios. You should also check our utility app that can be found in AppStore: [Estimote iOS app](https://itunes.apple.com/en/app/estimote/id686915066?mt=8).
 
-  In addition, the EstimoteSDK requires the following native iOS frameworks:
-  * CoreBluetooth.framework
-  * CoreLocation.framework
-  * SystemConfiguration.framework
+To learn more, read the [API section on our website](http://estimote.com/api/index.html#). You can review the [SDK documentation](http://estimote.github.io/iOS-SDK/) and check our [Community Portal](http://community.estimote.com) to get the answers for the most common questions related to iBeacon in general as well as to questions about Estimote specific hardware and software.
 
-  When you add them to your project settings, it should look like on the screenshot below.
+## Installation
 
-  ![ScreenShot LinkWithBinaryLibraries](http://estimote.com/api/BuildPhasesScreenshot.png)
+Estimote SDK 3.0 comes to you as a **framework** rather than a **static library + headers** like it used to. This greatly simplifies setup, as you only need to include a single *EstimoteSDK.framework* file in your project to get started:
 
-3. Go to the "Build Settings" section of project settings and search for "Header Search Paths". Add a line containing "$(SRCROOT)/../EstimoteSDK/Headers".
+1. Drag and drop EstimoteSDK.framework file into your Xcode project. It will automatically show up in your project navigator and will be added to *"Linked Frameworks and Libraries"* section in project settings. 
 
-4. You are done, congratulations! Happy tinkering!
+2. Estimote SDK depends on Apple's CoreLocation and CoreBlueooth frameworks as well as SystemConfiguration framework to handle Estimote Cloud API requests, so you should include them in your project too. When you add them to your project settings, it should look like on the screenshot below.
+<img src="images/build_phases.png" alt="Build Phases" width="840">
 
-Changelog
--------
+3. That's it, congratulations and happy hacking!
+
+## Examples
+
+Estimote SDK contains a lot of examples and inspiration to help you get familiar with the way it can be used in your app. Alternatively, you can use the provided example apps as a basis for more sophisticated beacon management tools. Examples are completely open source and cover most important areas of beacons and nearables configuration and management.
+
+<img src="images/home_screen.png" alt="Home Screen" width="280">
+<img src="images/ibeacon_list.png" alt="Beacon List" width="280">
+<img src="images/distance_demo.png" alt="Distance Demo" width="280">
+<img src="images/beacon_details.png" alt="Beacon Details" width="280">
+<img src="images/temperature.png" alt="Temerature" width="280">
+<img src="images/notify_demo.png" alt="Notify Demo" width="280">
+
+## Technical overview
+
+The SDK requires iOS 7+, as it depends on the CoreLocation's support for iBeacon first introduced in iOS 7. The feature set of this Estimote SDK is divided into two parts: *Client* and *Utility*.
+
+### Client
+
+**Client** part is dedicated to be used inside your publicly distributed applications featuring Estimote Beacons or Nearables integration. It helps you work with Apple iBeacon objects, adding some useful functionality like filtering, ranged object limitation or combining beacons from few regions into one callback.
+
+There are also two interesting additions: a simulator class that allows you to speed up testing of your app using virtual beacon/nearable objects, and a helper class for Apple Watch integration. Description of most important components can be found below:
+
+* **ESTBeaconManager** - Simple wrapper around Core Location's CLLocationManager class. It exposes API to range and monitor iBeacon devices with some additional options like sorting or filtering. It works with pure CLBeacon objects.
+* **ESTSecureBeaconManager** - CLLocationManager wrapper dedicated to work with devices that are using Estimote Secure UUID mechanism. Similarily to ESTBeaconManager it allows to range and monitor secured devices as well as verify their proximity.
+* **ESTSimulatedBeaconManager** - Creates virtual beacon instances to use in Xcode iOS Simulator. It lets you dispatch fake beacon events related to iBeacon ranging and monitoring.
+* **ESTNearableManager** - Entry point to work with nearables. It allows to range and monitor stickers with given type or identifier in the similar manner to how it's done with iBeacon.
+* **ESTSimulatedNearableManager** - Analogously to ESTSimulatedBeaconManager it lets you generate fake ranging and monitoring events for nearables. You can see example implementation of this class in [Estimote WatchKit SDK](https://github.com/Estimote/Estimote-WatchKit-SDK).
+* **ESTNotificationTransporter** - Class allowing you to easily exchange iBeacon and Nearable data, gathered from events like ranging or monitoring, between your host app and Apple Watch / other iOS 8 Extension. For more details, check the [Estimote WatchKit SDK](https://github.com/Estimote/Estimote-WatchKit-SDK).
+
+#### Trigger engine
+
+On top of basic ranging and monitoring functionality delivered by classes mentioned above you can also use a higher level **Estimote Trigger engine**. It provides abstraction that simplifies building complex rules describing circumstances that should trigger some action. Sample conditions can be described like this: *"Let me know when I'm next to my moving bike nearable, after 5pm, and when temperature is lower than 15 degrees C."*.
+
+Estimote Trigger engine provides basic rules (ESTRule) related to Estimote nearables and time events. It was created in a way that makes it easy to extend default rules so you can easily build custom rules that suit your needs. Most important classes you will want to use are:
+
+* **ESTTriggerManager** - Entry point for trigger engine mechanism. Its main responsibility is to manage all defined rules and inform you when provided conditions are satisfied.
+* **ESTRule** - Base implementation of a rule. All predefined classes like ESTTemperatureRule or ESTMotionRule are based on it and you should also use it to build your own custom rules.
+* **ESTTrigger** - Class that allows you to describe context based on a set of rules.
+
+In the typical workflow you will wrap your rules in ESTTrigger object and pass it to ESTTriggerManager.
+
+### Utility
+
+**Utility** was created to support apps that manage Estimote Beacons and Nearables. It provides beacon connectivity and configuration methods, so you can easily change settings like Proximity UUID, Major, Minor, Power Modes and much more. It also allows you to easily perform Over The Air firmware update. It works mainly with Core Bluetooth framework. Main classes you are going to use are:
+
+* **ESTUtilityManager** - Allows to discover devices using both Core Location and Core Bluetooth. Discovered device identifier can then be used to connect and configure the device.
+* **ESTBeaconConnection** - Manages connection and configuration of a particular device. Allows to both read and write all the settings.
+* **ESTBeaconFirmwareUpdate** - Needed to perform Over The Air firmware update of an Estimote Beacon.
+
+Another valuable component is the **Bulk Updater** mechanism, which lets you update settings of multiple devices in batches. It's compatible with **Remote Management** feature based on Estimote Cloud, so you can define a set of new settings both locally or remotely. After new settings are defined and synced with Estimote Cloud, the updates will be performed using all iOS running devices that are connected to the particular Estimote Account.
+
+## Changelog
 
 To see what has changed in recent versions of Estimote SDK, see the [CHANGELOG](https://github.com/Estimote/iOS-SDK/blob/master/CHANGELOG.md).

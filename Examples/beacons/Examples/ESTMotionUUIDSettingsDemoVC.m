@@ -8,9 +8,9 @@
 #import "ESTMotionUUIDSettingsDemoVC.h"
 #import <AudioToolbox/AudioToolbox.h>
 
-@interface ESTMotionUUIDSettingsDemoVC ()
+@interface ESTMotionUUIDSettingsDemoVC () <ESTBeaconConnectionDelegate>
 
-@property (nonatomic, strong) ESTBeacon *beacon;
+@property (nonatomic, strong) ESTBeaconConnection *beaconConnection;
 
 //UI properties
 @property (nonatomic, strong) IBOutlet UISwitch *accelerometerSwitch;
@@ -23,12 +23,14 @@
 
 @implementation ESTMotionUUIDSettingsDemoVC
 
-- (id)initWithBeacon:(ESTBeacon*)beacon
+- (id)initWithBeacon:(CLBeacon *)beacon
 {
     self = [self init];
     if (self)
     {
-        self.beacon = beacon;
+        self.beaconConnection = [[ESTBeaconConnection alloc] initWithBeacon:beacon
+                                                                   delegate:self
+                                                           startImmediately:NO];
     }
     return self;
 }
@@ -37,14 +39,14 @@
 {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    self.title = @"Accelerometer Settings";
+    self.title = @"Motion Detection Settings";
     
     /**
      *  In order to adjust beacon accelerometer and motion UUID settings
      *  you need to connect to it first.
      */
-    self.beacon.delegate = self;
-    [self.beacon connect];
+    
+    [self.beaconConnection startConnection];
     
     [self.activityIndicator startAnimating];
     
@@ -56,25 +58,31 @@
 {
     [super viewDidDisappear:animated];
     
-    [self.beacon disconnect];
+    [self.beaconConnection cancelConnection];
 }
 
 #pragma mark - ESTBeaconDelegate
-- (void)beaconConnectionDidSucceeded:(ESTBeacon *)beacon
+
+- (void)beaconConnectionDidSucceed:(ESTBeaconConnection *)connection
 {
     [self.activityIndicator stopAnimating];
     self.activityIndicator.alpha = 0.;
     self.activityLabel.text = @"Connected!";
     
-    self.accelerometerSwitch.enabled = YES;
-    self.motionUUIDSwitch.enabled = YES;
+    if (self.beaconConnection.motionDetectionState != ESTBeaconMotionDetectionUnsupported)
+    {
+        self.accelerometerSwitch.enabled = YES;
+        [self.accelerometerSwitch setOn: self.beaconConnection.motionDetectionState == ESTBeaconMotionDetectionOn];
+    }
     
-    [self.accelerometerSwitch setOn: self.beacon.accelerometerEnabled];
-    [self.motionUUIDSwitch setOn: self.beacon.motionUUIDEnabled ];
-    
+    if (self.beaconConnection.motionUUIDState != ESTBeaconMotionUUIDUnsupported)
+    {
+        self.motionUUIDSwitch.enabled = YES;
+        [self.motionUUIDSwitch setOn: self.beaconConnection.motionUUIDState == ESTBeaconMotionUUIDOn];
+    }
 }
 
-- (void)beaconConnectionDidFail:(ESTBeacon *)beacon withError:(NSError *)error
+- (void)beaconConnection:(ESTBeaconConnection *)connection didFailWithError:(NSError *)error
 {
     NSLog(@"Something went wrong. Beacon connection Did Fail. Error: %@", error);
     
@@ -105,7 +113,8 @@
      *  to the beacon.
      */
     __weak typeof(self) selfRef = self;
-    [self.beacon enableAccelerometer:self.accelerometerSwitch.on completion:^(BOOL value, NSError *error) {
+    [self.beaconConnection writeMotionDetectionEnabled:self.accelerometerSwitch.on
+                                            completion:^(BOOL value, NSError *error) {
        
         [selfRef.accelerometerSwitch setOn:value];
         selfRef.accelerometerSwitch.enabled = YES;
@@ -123,7 +132,8 @@
      *  to the beacon.
      */
     __weak typeof(self) selfRef = self;
-    [self.beacon enableMotionUUID:self.motionUUIDSwitch.on completion:^(BOOL value, NSError *error) {
+    [self.beaconConnection writeMotionUUIDEnabled:self.motionUUIDSwitch.on
+                                       completion:^(BOOL value, NSError *error) {
         
         [selfRef.motionUUIDSwitch setOn:value];
         selfRef.motionUUIDSwitch.enabled = YES;

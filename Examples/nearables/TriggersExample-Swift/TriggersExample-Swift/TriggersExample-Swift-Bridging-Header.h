@@ -9,6 +9,6 @@
 #ifndef TriggersExample_Swift_TriggersExample_Swift_Bridging_Header_h
 #define TriggersExample_Swift_TriggersExample_Swift_Bridging_Header_h
 
-#import "ESTTriggerManager.h"
+#import <EstimoteSDK/EstimoteSDK.h>
 
 #endif

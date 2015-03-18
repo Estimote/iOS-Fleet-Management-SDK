@@ -2,26 +2,22 @@
 //  ESTBulkUpdaterDemoVC.m
 //  Examples
 //
-//  Created by Marcin Klimek on 19/11/14.
 //  Copyright (c) 2014 com.estimote. All rights reserved.
 //
 
 #import "ESTBulkUpdaterDemoVC.h"
-#import <ESTBulkUpdater.h>
-#import <ESTBeaconManager.h>
-#import <ESTConfig.h>
 
 @interface ESTBulkUpdaterDemoVC ()
 
 @property (nonatomic, strong) IBOutlet UILabel *statusLabel;
 
-@property (nonatomic, strong) ESTBeacon *beacon;
+@property (nonatomic, strong) ESTBluetoothBeacon *beacon;
 
 @end
 
 @implementation ESTBulkUpdaterDemoVC
 
-- (id)initWithBeacon:(ESTBeacon *)beacon
+- (id)initWithBeacon:(ESTBluetoothBeacon *)beacon
 {
     self = [super init];
     if (self)
@@ -37,7 +33,7 @@
     
     self.title = @"Bulk Update Demo";
     
-    if ([ESTConfig isAuthorized])
+    if ([ESTCloudManager isAuthorized])
     {
         // Bulk update can be performed only when you are
         // authorized with App ID and App Token
@@ -51,7 +47,7 @@
         
         // create update info object based on config and localy keept beacon
         
-        ESTBeaconUpdateInfo *info = [[ESTBeaconUpdateInfo alloc] initWithBeacon:self.beacon config:sampleConfig];
+        ESTBeaconUpdateInfo *info = [[ESTBeaconUpdateInfo alloc] initWithMacAddress:self.beacon.macAddress config:sampleConfig];
         
     
         // listen for events from Bulk updater
@@ -103,7 +99,7 @@
 - (void)bulkUpdateProgress:(NSNotification *)note
 {
     NSNumber *progress = [note.userInfo objectForKey:@"progress"];
-    self.statusLabel.text = [NSString stringWithFormat:@"Bulk Updater progress ... %f", progress.floatValue];
+    self.statusLabel.text = [NSString stringWithFormat:@"Update progress ... %.0f\%%", 100. * progress.floatValue];
 }
 
 - (void)bulkUpdateComplete:(NSNotification *)note

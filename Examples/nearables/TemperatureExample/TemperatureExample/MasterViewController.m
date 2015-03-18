@@ -8,7 +8,7 @@
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
-#import "ESTNearableManager.h"
+#import <EstimoteSDK/EstimoteSDK.h>
 
 @interface MasterViewController () <ESTNearableManagerDelegate>
 

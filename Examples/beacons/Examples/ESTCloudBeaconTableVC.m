@@ -7,13 +7,11 @@
 //
 
 #import "ESTCloudBeaconTableVC.h"
-#import "ESTBeaconManager.h"
-#import "ESTBeaconVO.h"
 #import "ESTViewController.h"
 
 @interface ESTCloudBeaconTableVC () <UITextFieldDelegate>
 
-@property (nonatomic, strong) ESTBeaconManager *beaconManager;
+@property (nonatomic, strong) ESTCloudManager *cloudAPI;
 @property (nonatomic, strong) NSArray *beaconsArray;
 
 @property (nonatomic, strong) IBOutlet UITableView *beaconsTable;
@@ -43,7 +41,7 @@
 {
     [super viewDidLoad];
     
-    self.beaconManager = [[ESTBeaconManager alloc] init];
+    self.cloudAPI = [[ESTCloudManager alloc] init];
     self.title = @"Cloud Beacons";
     
     self.beaconsTable.delegate = self;
@@ -53,8 +51,8 @@
               forCellReuseIdentifier:@"CellIdentifier"];
 
     // Get list of beacons from the Estimote Cloud
-    __weak ESTCloudBeaconTableVC *selfRef = self;
-    [self.beaconManager fetchEstimoteBeaconsWithCompletion:^(NSArray *value, NSError *error) {
+    __weak typeof(self) selfRef = self;
+    [self.cloudAPI fetchEstimoteBeaconsWithCompletion:^(NSArray *value, NSError *error) {
         
         if (!error)
         {
@@ -101,7 +99,7 @@
     ESTBeaconVO *beacon = [self.beaconsArray objectAtIndex:indexPath.row];
     
     cell.textLabel.text         = [NSString stringWithFormat:@"Major: %@, Minor: %@", beacon.major, beacon.minor];
-    cell.detailTextLabel.text   = [NSString stringWithFormat:@"UUID: %@", beacon.UUID ];
+    cell.detailTextLabel.text   = [NSString stringWithFormat:@"UUID: %@", beacon.proximityUUID ];
     
     cell.imageView.image = beacon.isSecured ? [UIImage imageNamed:@"beacon_secure"] : [UIImage imageNamed:@"beacon"];
     

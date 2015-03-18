@@ -1,3 +1,24 @@
+## 3.0.0 (March 18, 2015)
+
+Features:
+- Conditional broadcasting (flip to stop, motion only)
+- Remote Beacon Management
+
+Improvements:
+- New architecture of Estimote SDK
+- Support for firmware 3.0.1 (Authorization change)
+
+
+## 3.0.0-beta (February 27, 2015)
+
+IMPORTANT:
+This is work in progress version of Estimote SDK 3.0.0. Functionality is currently limited comparing to stable 2.4.0. Please not that both Estimote SDK and Estimote beacons firmware 3.0.0 are not backward compatible!
+
+Improvements:
+- New architecture of Estimote SDK
+- Support for firmware 3.0.0
+
+
 ## 2.4.0 (February 9, 2015)
 
 Improvements:

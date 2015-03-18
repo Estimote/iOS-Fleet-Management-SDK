@@ -26,8 +26,6 @@
 					<select id="jumpTo">
 	<option value="top">Jump To&#133;</option>
 	
-	<option value="overview">Overview</option>
-	
 	
 	
 	
@@ -47,13 +45,9 @@
 	
 	<option value="//api/name/beaconManager:didDetermineState:forRegion:">&nbsp;&nbsp;&nbsp;&nbsp;- beaconManager:didDetermineState:forRegion:</option>
 	
-	<option value="//api/name/beaconManager:didDiscoverBeacons:inRegion:">&nbsp;&nbsp;&nbsp;&nbsp;- beaconManager:didDiscoverBeacons:inRegion:</option>
-	
 	<option value="//api/name/beaconManager:didEnterRegion:">&nbsp;&nbsp;&nbsp;&nbsp;- beaconManager:didEnterRegion:</option>
 	
 	<option value="//api/name/beaconManager:didExitRegion:">&nbsp;&nbsp;&nbsp;&nbsp;- beaconManager:didExitRegion:</option>
-	
-	<option value="//api/name/beaconManager:didFailDiscoveryInRegion:">&nbsp;&nbsp;&nbsp;&nbsp;- beaconManager:didFailDiscoveryInRegion:</option>
 	
 	<option value="//api/name/beaconManager:didRangeBeacons:inRegion:">&nbsp;&nbsp;&nbsp;&nbsp;- beaconManager:didRangeBeacons:inRegion:</option>
 	
@@ -74,22 +68,18 @@
 		<nav id="tocContainer" class="isShowingTOC">
 			<ul id="toc" role="tree">
 				
-<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
-
 
 
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Authorization Change Events (new in iOS 8)">Authorization Change Events (new in iOS 8)</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Monitoring Events">Monitoring Events</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Ranging Events">Ranging Events</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_CoreBluetooth Discovery Events">CoreBluetooth Discovery Events</a></span></li>
-	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Advertising Events">Advertising Events</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Authorization Change Events (new in iOS 8)">Authorization Change Events (new in iOS 8)</a></span></li>
 	
 </ul></li>
 
@@ -107,13 +97,9 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beaconManager:didDetermineState:forRegion:">beaconManager:didDetermineState:forRegion:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beaconManager:didDiscoverBeacons:inRegion:">beaconManager:didDiscoverBeacons:inRegion:</a></span></li>
-	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beaconManager:didEnterRegion:">beaconManager:didEnterRegion:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beaconManager:didExitRegion:">beaconManager:didExitRegion:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beaconManager:didFailDiscoveryInRegion:">beaconManager:didFailDiscoveryInRegion:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beaconManager:didRangeBeacons:inRegion:">beaconManager:didRangeBeacons:inRegion:</a></span></li>
 	
@@ -152,26 +138,32 @@
 	<td class="specification-value">NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">ESTBeaconManager.h</td>
+	<td class="specification-value">ESTBeaconManagerDelegate.h</td>
 </tr>
 						</tbody></table></div>
 					
                     
                     
 					
-					<div class="section section-overview">
-						<a title="Overview" name="overview"></a>
-						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>The <code>ESTBeaconManagerDelegate</code> protocol defines the delegate methods used to receive beacon ranging, monitoring and discovery events from an <a href="../Classes/ESTBeaconManager.html"><code>ESTBeaconManager</code></a> object.</p>
-					</div>
-					
-					
-					
 					
 					
 					<div class="section section-tasks">
 						<a title="Tasks" name="tasks"></a>
 						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						<a title="Authorization Change Events (new in iOS 8)" name="task_Authorization Change Events (new in iOS 8)"></a>
+						<h3 class="subsubtitle task-title">Authorization Change Events (new in iOS 8)</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/beaconManager:didChangeAuthorizationStatus:">&ndash;&nbsp;beaconManager:didChangeAuthorizationStatus:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
 						
 						
 						<a title="Monitoring Events" name="task_Monitoring Events"></a>
@@ -232,26 +224,6 @@
 						</ul>
 						
 						
-						<a title="CoreBluetooth Discovery Events" name="task_CoreBluetooth Discovery Events"></a>
-						<h3 class="subsubtitle task-title">CoreBluetooth Discovery Events</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/beaconManager:didDiscoverBeacons:inRegion:">&ndash;&nbsp;beaconManager:didDiscoverBeacons:inRegion:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/beaconManager:didFailDiscoveryInRegion:">&ndash;&nbsp;beaconManager:didFailDiscoveryInRegion:</a></code>
-	</span>
-	
-	
-</li>
-						</ul>
-						
-						
 						<a title="Advertising Events" name="task_Advertising Events"></a>
 						<h3 class="subsubtitle task-title">Advertising Events</h3>
 
@@ -259,20 +231,6 @@
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/beaconManagerDidStartAdvertising:error:">&ndash;&nbsp;beaconManagerDidStartAdvertising:error:</a></code>
-	</span>
-	
-	
-</li>
-						</ul>
-						
-						
-						<a title="Authorization Change Events (new in iOS 8)" name="task_Authorization Change Events (new in iOS 8)"></a>
-						<h3 class="subsubtitle task-title">Authorization Change Events (new in iOS 8)</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/beaconManager:didChangeAuthorizationStatus:">&ndash;&nbsp;beaconManager:didChangeAuthorizationStatus:</a></code>
 	</span>
 	
 	
@@ -305,7 +263,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)beaconManager:(ESTBeaconManager *)<em>manager</em> didChangeAuthorizationStatus:(CLAuthorizationStatus)<em>status</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)beaconManager:(id)<em>manager</em> didChangeAuthorizationStatus:(CLAuthorizationStatus)<em>status</em></code></div>
 
     
 	
@@ -330,7 +288,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTBeaconManager.h</code><br />
+		<code class="declared-in-ref">ESTBeaconManagerDelegate.h</code><br />
 	</div>				
 	
 	
@@ -348,7 +306,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)beaconManager:(ESTBeaconManager *)<em>manager</em> didDetermineState:(CLRegionState)<em>state</em> forRegion:(ESTBeaconRegion *)<em>region</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)beaconManager:(id)<em>manager</em> didDetermineState:(CLRegionState)<em>state</em> forRegion:(CLBeaconRegion *)<em>region</em></code></div>
 
     
 	
@@ -391,63 +349,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTBeaconManager.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/beaconManager:didDiscoverBeacons:inRegion:" title="beaconManager:didDiscoverBeacons:inRegion:"></a>
-	<h3 class="subsubtitle method-title">beaconManager:didDiscoverBeacons:inRegion:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Tells the delegate that one or more beacons were discovered in the vicinity of the device.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)beaconManager:(ESTBeaconManager *)<em>manager</em> didDiscoverBeacons:(NSArray *)<em>beacons</em> inRegion:(ESTBeaconRegion *)<em>region</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>manager</em></dt>
-			<dd><p>The beacon manager object reporting the event.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>beacons</em></dt>
-			<dd><p>An array of <a href="../Classes/ESTBeacon.html"><code>ESTBeacon</code></a> objects representing the beacons discovered.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>region</em></dt>
-			<dd><p>The region that was used to discover the beacons.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTBeaconManager.h</code><br />
+		<code class="declared-in-ref">ESTBeaconManagerDelegate.h</code><br />
 	</div>				
 	
 	
@@ -465,7 +367,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)beaconManager:(ESTBeaconManager *)<em>manager</em> didEnterRegion:(ESTBeaconRegion *)<em>region</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)beaconManager:(id)<em>manager</em> didEnterRegion:(CLBeaconRegion *)<em>region</em></code></div>
 
     
 	
@@ -505,7 +407,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTBeaconManager.h</code><br />
+		<code class="declared-in-ref">ESTBeaconManagerDelegate.h</code><br />
 	</div>				
 	
 	
@@ -523,7 +425,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)beaconManager:(ESTBeaconManager *)<em>manager</em> didExitRegion:(ESTBeaconRegion *)<em>region</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)beaconManager:(id)<em>manager</em> didExitRegion:(CLBeaconRegion *)<em>region</em></code></div>
 
     
 	
@@ -563,58 +465,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTBeaconManager.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/beaconManager:didFailDiscoveryInRegion:" title="beaconManager:didFailDiscoveryInRegion:"></a>
-	<h3 class="subsubtitle method-title">beaconManager:didFailDiscoveryInRegion:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Tells the delegate that beacons discovery error occurred.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)beaconManager:(ESTBeaconManager *)<em>manager</em> didFailDiscoveryInRegion:(ESTBeaconRegion *)<em>region</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>manager</em></dt>
-			<dd><p>The beacon manager object reporting the event.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>region</em></dt>
-			<dd><p>An error object describing why discovery failed.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTBeaconManager.h</code><br />
+		<code class="declared-in-ref">ESTBeaconManagerDelegate.h</code><br />
 	</div>				
 	
 	
@@ -632,7 +483,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)beaconManager:(ESTBeaconManager *)<em>manager</em> didRangeBeacons:(NSArray *)<em>beacons</em> inRegion:(ESTBeaconRegion *)<em>region</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)beaconManager:(id)<em>manager</em> didRangeBeacons:(NSArray *)<em>beacons</em> inRegion:(CLBeaconRegion *)<em>region</em></code></div>
 
     
 	
@@ -646,7 +497,7 @@
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>beacons</em></dt>
-			<dd><p>An array of <a href="../Classes/ESTBeacon.html"><code>ESTBeacon</code></a> objects representing the beacons currently in range. You can use the information in these objects to determine the range of each beacon and its identifying information.</p></dd>
+			<dd><p>An array of <code>&lt;CLBeacon&gt;</code> objects representing the beacons currently in range. You can use the information in these objects to determine the range of each beacon and its identifying information.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
@@ -670,7 +521,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTBeaconManager.h</code><br />
+		<code class="declared-in-ref">ESTBeaconManagerDelegate.h</code><br />
 	</div>				
 	
 	
@@ -688,7 +539,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)beaconManager:(ESTBeaconManager *)<em>manager</em> didStartMonitoringForRegion:(ESTBeaconRegion *)<em>region</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)beaconManager:(id)<em>manager</em> didStartMonitoringForRegion:(CLBeaconRegion *)<em>region</em></code></div>
 
     
 	
@@ -721,7 +572,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTBeaconManager.h</code><br />
+		<code class="declared-in-ref">ESTBeaconManagerDelegate.h</code><br />
 	</div>				
 	
 	
@@ -739,7 +590,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)beaconManager:(ESTBeaconManager *)<em>manager</em> monitoringDidFailForRegion:(ESTBeaconRegion *)<em>region</em> withError:(NSError *)<em>error</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)beaconManager:(id)<em>manager</em> monitoringDidFailForRegion:(CLBeaconRegion *)<em>region</em> withError:(NSError *)<em>error</em></code></div>
 
     
 	
@@ -777,7 +628,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTBeaconManager.h</code><br />
+		<code class="declared-in-ref">ESTBeaconManagerDelegate.h</code><br />
 	</div>				
 	
 	
@@ -795,7 +646,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)beaconManager:(ESTBeaconManager *)<em>manager</em> rangingBeaconsDidFailForRegion:(ESTBeaconRegion *)<em>region</em> withError:(NSError *)<em>error</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)beaconManager:(id)<em>manager</em> rangingBeaconsDidFailForRegion:(CLBeaconRegion *)<em>region</em> withError:(NSError *)<em>error</em></code></div>
 
     
 	
@@ -833,7 +684,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTBeaconManager.h</code><br />
+		<code class="declared-in-ref">ESTBeaconManagerDelegate.h</code><br />
 	</div>				
 	
 	
@@ -851,7 +702,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)beaconManagerDidStartAdvertising:(ESTBeaconManager *)<em>manager</em> error:(NSError *)<em>error</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)beaconManagerDidStartAdvertising:(id)<em>manager</em> error:(NSError *)<em>error</em></code></div>
 
     
 	
@@ -884,7 +735,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTBeaconManager.h</code><br />
+		<code class="declared-in-ref">ESTBeaconManagerDelegate.h</code><br />
 	</div>				
 	
 	
@@ -905,7 +756,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-02-09)</span><br />
+						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-03-18)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						

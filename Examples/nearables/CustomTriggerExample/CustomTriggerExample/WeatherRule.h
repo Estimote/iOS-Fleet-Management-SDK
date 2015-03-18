@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ESTRule.h"
+#import <EstimoteSDK/EstimoteSDK.h>
 
 
 @interface WeatherRule : ESTRule

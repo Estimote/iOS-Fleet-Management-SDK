@@ -59,13 +59,13 @@
 	
 	<option value="//api/name/cancel">&nbsp;&nbsp;&nbsp;&nbsp;- cancel</option>
 	
-	<option value="//api/name/getBeaconUpdateInfosForBeacon:">&nbsp;&nbsp;&nbsp;&nbsp;- getBeaconUpdateInfosForBeacon:</option>
+	<option value="//api/name/getBeaconUpdateInfosForBeaconWithMacAddress:">&nbsp;&nbsp;&nbsp;&nbsp;- getBeaconUpdateInfosForBeaconWithMacAddress:</option>
 	
 	<option value="//api/name/getTimeLeftToTimeout">&nbsp;&nbsp;&nbsp;&nbsp;- getTimeLeftToTimeout</option>
 	
 	<option value="//api/name/isBeaconWaitingForUpdate:">&nbsp;&nbsp;&nbsp;&nbsp;- isBeaconWaitingForUpdate:</option>
 	
-	<option value="//api/name/isUpdateInProgressForBeacon:">&nbsp;&nbsp;&nbsp;&nbsp;- isUpdateInProgressForBeacon:</option>
+	<option value="//api/name/isUpdateInProgressForBeaconWithMacAddress:">&nbsp;&nbsp;&nbsp;&nbsp;- isUpdateInProgressForBeaconWithMacAddress:</option>
 	
 	<option value="//api/name/startWithBeaconInfos:timeout:">&nbsp;&nbsp;&nbsp;&nbsp;- startWithBeaconInfos:timeout:</option>
 	
@@ -115,13 +115,13 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/cancel">cancel</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getBeaconUpdateInfosForBeacon:">getBeaconUpdateInfosForBeacon:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getBeaconUpdateInfosForBeaconWithMacAddress:">getBeaconUpdateInfosForBeaconWithMacAddress:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getTimeLeftToTimeout">getTimeLeftToTimeout</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isBeaconWaitingForUpdate:">isBeaconWaitingForUpdate:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isUpdateInProgressForBeacon:">isUpdateInProgressForBeacon:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isUpdateInProgressForBeaconWithMacAddress:">isUpdateInProgressForBeaconWithMacAddress:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/startWithBeaconInfos:timeout:">startWithBeaconInfos:timeout:</a></span></li>
 	
@@ -217,7 +217,7 @@
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/isUpdateInProgressForBeacon:">&ndash;&nbsp;isUpdateInProgressForBeacon:</a></code>
+		<code><a href="#//api/name/isUpdateInProgressForBeaconWithMacAddress:">&ndash;&nbsp;isUpdateInProgressForBeaconWithMacAddress:</a></code>
 	</span>
 	
 	
@@ -229,7 +229,7 @@
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/getBeaconUpdateInfosForBeacon:">&ndash;&nbsp;getBeaconUpdateInfosForBeacon:</a></code>
+		<code><a href="#//api/name/getBeaconUpdateInfosForBeaconWithMacAddress:">&ndash;&nbsp;getBeaconUpdateInfosForBeaconWithMacAddress:</a></code>
 	</span>
 	
 	
@@ -460,8 +460,8 @@
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/getBeaconUpdateInfosForBeacon:" title="getBeaconUpdateInfosForBeacon:"></a>
-	<h3 class="subsubtitle method-title">getBeaconUpdateInfosForBeacon:</h3>
+	<a name="//api/name/getBeaconUpdateInfosForBeaconWithMacAddress:" title="getBeaconUpdateInfosForBeaconWithMacAddress:"></a>
+	<h3 class="subsubtitle method-title">getBeaconUpdateInfosForBeaconWithMacAddress:</h3>
 	
 	
 	
@@ -471,11 +471,26 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (NSArray *)getBeaconUpdateInfosForBeacon:(ESTBeacon *)<em>beacon</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (NSArray *)getBeaconUpdateInfosForBeaconWithMacAddress:(NSString *)<em>macAddress</em></code></div>
 
     
 	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>macAddress</em></dt>
+			<dd><p>Mac Address of device to get beacon infos for</p></dd>
+		</dl>
+		
+	</div>
 	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>NSArray containing all related beacon infos</p>
+	</div>
 	
 	
 	
@@ -543,11 +558,26 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (BOOL)isBeaconWaitingForUpdate:(ESTBeacon *)<em>beacon</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (BOOL)isBeaconWaitingForUpdate:(NSString *)<em>macAddress</em></code></div>
 
     
 	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>macAddress</em></dt>
+			<dd><p>Mac Address of device to verify</p></dd>
+		</dl>
+		
+	</div>
 	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>BOOL value indicating if beacon is waiting for update</p>
+	</div>
 	
 	
 	
@@ -568,8 +598,8 @@
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/isUpdateInProgressForBeacon:" title="isUpdateInProgressForBeacon:"></a>
-	<h3 class="subsubtitle method-title">isUpdateInProgressForBeacon:</h3>
+	<a name="//api/name/isUpdateInProgressForBeaconWithMacAddress:" title="isUpdateInProgressForBeaconWithMacAddress:"></a>
+	<h3 class="subsubtitle method-title">isUpdateInProgressForBeaconWithMacAddress:</h3>
 	
 	
 	
@@ -579,11 +609,26 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (BOOL)isUpdateInProgressForBeacon:(ESTBeacon *)<em>beacon</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (BOOL)isUpdateInProgressForBeaconWithMacAddress:(NSString *)<em>macAddress</em></code></div>
 
     
 	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>macAddress</em></dt>
+			<dd><p>Mac Address of device to verify</p></dd>
+		</dl>
+		
+	</div>
 	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>BOOL value indicating if beacon is waiting for update</p>
+	</div>
 	
 	
 	
@@ -623,13 +668,13 @@
 		<h4 class="method-subtitle parameter-title">Parameters</h4>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>timeout</em></dt>
-			<dd><p>Timeout for bulk update operation in seconds. 0 means no timeout.</p></dd>
+			<dt><em>beaconInfos</em></dt>
+			<dd><p>Array with <code>&lt;ESBeaconUpdateInfo&gt;</code> objects, defining updates for beacons.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>beacons</em></dt>
-			<dd><p>Array with beacons to update.</p></dd>
+			<dt><em>timeout</em></dt>
+			<dd><p>Timeout for bulk update operation in seconds. 0 means no timeout.</p></dd>
 		</dl>
 		
 	</div>
@@ -669,7 +714,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-02-09)</span><br />
+						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-03-18)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						

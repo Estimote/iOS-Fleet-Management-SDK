@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9556D4951A9F96D300465B61 /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9556D4941A9F96D300465B61 /* EstimoteSDK.framework */; };
 		95800EFB1A5A961A00972EAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95800EFA1A5A961A00972EAE /* AppDelegate.swift */; };
 		95800EFD1A5A961A00972EAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95800EFC1A5A961A00972EAE /* ViewController.swift */; };
 		95800F001A5A961A00972EAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95800EFE1A5A961A00972EAE /* Main.storyboard */; };
@@ -17,7 +18,6 @@
 		95800F1D1A5A966600972EAE /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95800F1C1A5A966600972EAE /* CoreBluetooth.framework */; };
 		95800F1F1A5A966B00972EAE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95800F1E1A5A966B00972EAE /* CoreLocation.framework */; };
 		95800F211A5A967200972EAE /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95800F201A5A967200972EAE /* CFNetwork.framework */; };
-		95BD43331A5E905900ED14DD /* libEstimoteSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95BD43321A5E905900ED14DD /* libEstimoteSDK.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9556D4941A9F96D300465B61 /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EstimoteSDK.framework; path = ../../../EstimoteSDK/EstimoteSDK.framework; sourceTree = "<group>"; };
 		95800EF51A5A961A00972EAE /* RangingExample-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RangingExample-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95800EF91A5A961A00972EAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95800EFA1A5A961A00972EAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,7 +47,6 @@
 		95800F1E1A5A966B00972EAE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		95800F201A5A967200972EAE /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		95800F241A5A977800972EAE /* RangingExample-Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RangingExample-Swift-Bridging-Header.h"; sourceTree = "<group>"; };
-		95BD43321A5E905900ED14DD /* libEstimoteSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEstimoteSDK.a; path = ../../../EstimoteSDK/libEstimoteSDK.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95BD43331A5E905900ED14DD /* libEstimoteSDK.a in Frameworks */,
 				95800F211A5A967200972EAE /* CFNetwork.framework in Frameworks */,
+				9556D4951A9F96D300465B61 /* EstimoteSDK.framework in Frameworks */,
 				95800F1F1A5A966B00972EAE /* CoreLocation.framework in Frameworks */,
 				95800F1D1A5A966600972EAE /* CoreBluetooth.framework in Frameworks */,
 				95800F1B1A5A966000972EAE /* SystemConfiguration.framework in Frameworks */,
@@ -75,7 +75,7 @@
 		95800EEC1A5A961A00972EAE = {
 			isa = PBXGroup;
 			children = (
-				95BD43321A5E905900ED14DD /* libEstimoteSDK.a */,
+				9556D4941A9F96D300465B61 /* EstimoteSDK.framework */,
 				95800F201A5A967200972EAE /* CFNetwork.framework */,
 				95800F1E1A5A966B00972EAE /* CoreLocation.framework */,
 				95800F1C1A5A966600972EAE /* CoreBluetooth.framework */,
@@ -358,6 +358,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/marcinklimek/Projects/estimote/ios_code/iOS-SDK/EstimoteSDK",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -378,6 +382,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/marcinklimek/Projects/estimote/ios_code/iOS-SDK/EstimoteSDK",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,

@@ -6,10 +6,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ESTBeacon.h"
+#import <EstimoteSDK/EstimoteSDK.h>
 
 @interface ESTMotionUUIDDemoVC : UIViewController
 
-- (id)initWithBeacon:(ESTBeacon*)beacon;
+- (id)initWithBeacon:(CLBeacon*)beacon;
 
 @end

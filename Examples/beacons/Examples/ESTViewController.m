@@ -12,12 +12,13 @@
 #import "ESTDistanceDemoVC.h"
 #import "ESTProximityDemoVC.h"
 #import "ESTNotificationDemoVC.h"
-#import "ESTTemperatureDemoVC.h"
-#import "ESTAccelerometerDemoVC.h"
 #import "ESTUpdateFirmwareDemoVC.h"
-#import "ESTBulkUpdaterDemoVC.h"
-#import "ESTMotionUUIDDemoVC.h"
 #import "ESTBeaconDetailsDemoVC.h"
+#import "ESTTemperatureDemoVC.h"
+#import "ESTMotionDetectionDemoVC.h"
+#import "ESTMotionUUIDDemoVC.h"
+#import "ESTBulkUpdaterDemoVC.h"
+#import "ESTBulkUpdaterRemoteDemoVC.h"
 
 @interface ESTDemoTableViewCell : UITableViewCell
 
@@ -52,8 +53,8 @@
     [self.tableView registerClass:[ESTDemoTableViewCell class] forCellReuseIdentifier:@"DemoCellIdentifier"];
     
     self.beaconDemoList = @[ @[@"Distance Demo", @"Proximity Demo",@"Notification Demo"],
-                             @[@"Temperature Demo", @"Accelerometer Demo", @"Motion UUID Demo"],
-                             @[@"Beacon Settings Demo", @"Update Firmware Demo", @"My beacons in Cloud Demo", @"Bulk update of beacons"]];
+                             @[@"Temperature", @"Accelerometer", @"Motion UUID"],
+                             @[@"Beacon Settings", @"Update Firmware", @"Fetch beacons from cloud", @"Bulk Update", @"Remote Bulk Update"]];
 }
 
 #pragma mark - Table view data source
@@ -106,33 +107,33 @@
             case 0:
             {
                 demoViewController = [[ESTBeaconTableVC alloc] initWithScanType:ESTScanTypeBeacon
-                                                                     completion:^(ESTBeacon *beacon) {
-                    
-                    ESTDistanceDemoVC *distanceDemoVC = [[ESTDistanceDemoVC alloc] initWithBeacon:beacon];
-                    [self.navigationController pushViewController:distanceDemoVC animated:YES];
-                }];
+                                                                     completion:^(CLBeacon *beacon) {
+                                                                         
+                                                                         ESTDistanceDemoVC *distanceDemoVC = [[ESTDistanceDemoVC alloc] initWithBeacon:beacon];
+                                                                         [self.navigationController pushViewController:distanceDemoVC animated:YES];
+                                                                     }];
                 
                 break;
             }
             case 1:
             {
                 demoViewController = [[ESTBeaconTableVC alloc] initWithScanType:ESTScanTypeBeacon
-                                                                     completion:^(ESTBeacon *beacon) {
-                    
-                    ESTProximityDemoVC *proximityDemoVC = [[ESTProximityDemoVC alloc] initWithBeacon:beacon];
-                    [self.navigationController pushViewController:proximityDemoVC animated:YES];
-                }];
+                                                                     completion:^(CLBeacon *beacon) {
+                                                                         
+                                                                         ESTProximityDemoVC *proximityDemoVC = [[ESTProximityDemoVC alloc] initWithBeacon:beacon];
+                                                                         [self.navigationController pushViewController:proximityDemoVC animated:YES];
+                                                                     }];
                 
                 break;
             }
             case 2:
             {
                 demoViewController = [[ESTBeaconTableVC alloc] initWithScanType:ESTScanTypeBeacon
-                                                                     completion:^(ESTBeacon *beacon) {
-                    
-                    ESTNotificationDemoVC *notificationDemoVC = [[ESTNotificationDemoVC alloc] initWithBeacon:beacon];
-                    [self.navigationController pushViewController:notificationDemoVC animated:YES];
-                }];
+                                                                     completion:^(CLBeacon *beacon) {
+                                                                         
+                                                                         ESTNotificationDemoVC *notificationDemoVC = [[ESTNotificationDemoVC alloc] initWithBeacon:beacon];
+                                                                         [self.navigationController pushViewController:notificationDemoVC animated:YES];
+                                                                     }];
                 
                 break;
             }
@@ -147,29 +148,29 @@
             case 0:
             {
                 demoViewController = [[ESTBeaconTableVC alloc] initWithScanType:ESTScanTypeBeacon
-                                                                     completion:^(ESTBeacon *beacon) {
-                    
-                    ESTTemperatureDemoVC *distanceDemoVC = [[ESTTemperatureDemoVC alloc] initWithBeacon:beacon];
-                    [self.navigationController pushViewController:distanceDemoVC animated:YES];
-                }];
+                                                                     completion:^(CLBeacon *beacon) {
+                                                                         
+                                                                         ESTTemperatureDemoVC *distanceDemoVC = [[ESTTemperatureDemoVC alloc] initWithBeacon:beacon];
+                                                                         [self.navigationController pushViewController:distanceDemoVC animated:YES];
+                                                                     }];
                 
                 break;
             }
             case 1:
             {
                 demoViewController = [[ESTBeaconTableVC alloc] initWithScanType:ESTScanTypeBeacon
-                                                                     completion:^(ESTBeacon *beacon) {
-                    
-                    ESTAccelerometerDemoVC *proximityDemoVC = [[ESTAccelerometerDemoVC alloc] initWithBeacon:beacon];
-                    [self.navigationController pushViewController:proximityDemoVC animated:YES];
-                }];
+                                                                     completion:^(CLBeacon *beacon) {
+                                                                         
+                                                                         ESTMotionDetectionDemoVC *proximityDemoVC = [[ESTMotionDetectionDemoVC alloc] initWithBeacon:beacon];
+                                                                         [self.navigationController pushViewController:proximityDemoVC animated:YES];
+                                                                     }];
                 
                 break;
             }
             case 2:
             {
                 demoViewController = [[ESTBeaconTableVC alloc] initWithScanType:ESTScanTypeBeacon
-                                                                     completion:^(ESTBeacon *beacon) {
+                                                                     completion:^(CLBeacon *beacon) {
                                                                          
                                                                          ESTMotionUUIDDemoVC *proximityDemoVC = [[ESTMotionUUIDDemoVC alloc] initWithBeacon:beacon];
                                                                          [self.navigationController pushViewController:proximityDemoVC animated:YES];
@@ -188,9 +189,9 @@
             case 0:
             {
                 demoViewController = [[ESTBeaconTableVC alloc] initWithScanType:ESTScanTypeBluetooth
-                                                                     completion:^(ESTBeacon *beacon) {
+                                                                     completion:^(ESTBluetoothBeacon *beacon) {
                                                                          
-                                                                         ESTBeaconDetailsDemoVC *beaconDetailsVC = [[ESTBeaconDetailsDemoVC alloc] initWithBeacon:beacon];
+                                                                         ESTBeaconDetailsDemoVC *beaconDetailsVC = [[ESTBeaconDetailsDemoVC alloc] initWithMacAddress:beacon.macAddress];
                                                                          [self.navigationController pushViewController:beaconDetailsVC animated:YES];
                                                                      }];
                 break;
@@ -198,11 +199,11 @@
             case 1:
             {
                 demoViewController = [[ESTBeaconTableVC alloc] initWithScanType:ESTScanTypeBluetooth
-                                                                     completion:^(ESTBeacon *beacon) {
-
-                    ESTUpdateFirmwareDemoVC *updateFirmwareVC = [[ESTUpdateFirmwareDemoVC alloc] initWithBeacon:beacon];
-                    [self.navigationController pushViewController:updateFirmwareVC animated:YES];
-                }];
+                                                                     completion:^(ESTBluetoothBeacon *beacon) {
+                                                                         
+                                                                         ESTUpdateFirmwareDemoVC *updateFirmwareVC = [[ESTUpdateFirmwareDemoVC alloc] initWithMacAddress:beacon.macAddress];
+                                                                         [self.navigationController pushViewController:updateFirmwareVC animated:YES];
+                                                                     }];
                 break;
             }
             case 2:
@@ -213,14 +214,21 @@
             }
             case 3:
             {
-                demoViewController = [[ESTBeaconTableVC alloc] initWithScanType:ESTScanTypeBeacon
-                                                                     completion:^(ESTBeacon *beacon) {
+                demoViewController = [[ESTBeaconTableVC alloc] initWithScanType:ESTScanTypeBluetooth
+                                                                     completion:^(ESTBluetoothBeacon *beacon) {
                                                                          
                                                                          ESTBulkUpdaterDemoVC *bulkDemoVC = [[ESTBulkUpdaterDemoVC alloc] initWithBeacon:beacon];
                                                                          [self.navigationController pushViewController:bulkDemoVC animated:YES];
                                                                      }];
                 break;
             }
+            case 4:
+            {
+                demoViewController = [[ESTBulkUpdaterRemoteDemoVC alloc] init];
+                                                                    
+                break;
+            }
+
             default:
                 break;
         }

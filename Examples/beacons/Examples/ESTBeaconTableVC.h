@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ESTBeacon.h"
+#import <EstimoteSDK/EstimoteSDK.h>
 
 typedef enum : int
 {
@@ -24,6 +24,6 @@ typedef enum : int
 /*
  * Selected beacon is returned on given completion handler.
  */
-- (id)initWithScanType:(ESTScanType)scanType completion:(void (^)(ESTBeacon *))completion;
+- (id)initWithScanType:(ESTScanType)scanType completion:(void (^)(id))completion;
 
 @end

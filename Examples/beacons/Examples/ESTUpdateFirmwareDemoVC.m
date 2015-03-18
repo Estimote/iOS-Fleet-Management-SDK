@@ -7,11 +7,11 @@
 //
 
 #import "ESTUpdateFirmwareDemoVC.h"
-#import <ESTBeaconManager.h>
+#import <EstimoteSDK/EstimoteSDK.h>
 
-@interface ESTUpdateFirmwareDemoVC () <ESTBeaconDelegate>
+@interface ESTUpdateFirmwareDemoVC () <ESTBeaconConnectionDelegate>
 
-@property (nonatomic, strong) ESTBeacon *beacon;
+@property (nonatomic, strong) ESTBeaconConnection *beaconConnection;
 
 //UI properties
 @property (strong, nonatomic) IBOutlet UILabel *updateStateLabel;
@@ -22,12 +22,15 @@
 
 @implementation ESTUpdateFirmwareDemoVC
 
-- (id)initWithBeacon:(ESTBeacon*)beacon
+- (id)initWithMacAddress:(NSString *)macAddress
 {
     self = [self init];
     if (self)
     {
-        self.beacon = beacon;
+        //In order to update beacon firmware we need to connect to it.
+        self.beaconConnection = [[ESTBeaconConnection alloc] initWithMacAddress:macAddress
+                                                                   delegate:self
+                                                           startImmediately:YES];
     }
     return self;
 }
@@ -35,86 +38,50 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    //In order to update beacon firmware we need to connect to it.
-    self.beacon.delegate = self;
-    [self.beacon connect];
 }
 
 - (void)viewDidDisappear:(BOOL)animated
 {
     [super viewDidDisappear:animated];
     
-    [self.beacon disconnect];
+    [self.beaconConnection cancelConnection];
 }
 
 #pragma mark - Update Firmware Model
-- (void)checkFirmwareAvailability
-{
-    ESTUpdateFirmwareDemoVC __weak *selfReference = self;
-    
-    //You need to be connected to the Internet.
-    [self.beacon checkFirmwareUpdateWithCompletion:^(ESTFirmwareInfoVO *result, NSError *error) {
 
-        if (!error && result.isUpdateAvailable)
-        {
-            //Update is available
-            [self updateBeaconFirmware];
-        }
-        else if (!error && !result.isUpdateAvailable)
-        {
-            selfReference.updateProgressLabel.text = @"Up to date!";
-            selfReference.updateProgressLabel.font = [UIFont boldSystemFontOfSize:50];
-        }
-        else if (error)
-        {
-            NSLog(@"Error while checking firmware update: %@", [error localizedDescription]);
-        }
-    }];
-}
-
-- (void)updateBeaconFirmware
+- (void)beaconConnectionDidSucceed:(ESTBeaconConnection *)connection
 {
-    ESTUpdateFirmwareDemoVC __weak *selfReference = self;
-    
+    __weak typeof(self) selfRef = self;
     self.navigationItem.hidesBackButton = YES;
 
-    [self.beacon updateFirmwareWithProgress:^(NSInteger value, NSString *description, NSError *error) {
+    [self.beaconConnection updateFirmwareWithProgress:^(NSInteger value, NSString *description, NSError *error) {
         
-        selfReference.updateStateLabel.text = description;
-        selfReference.updateProgressLabel.text = [NSString stringWithFormat:@"%ld %%", (long)value];
+        selfRef.updateStateLabel.text = description;
+        selfRef.updateProgressLabel.text = [NSString stringWithFormat:@"%ld %%", (long)value];
 
     } completion:^(NSError *error) {
         
-        selfReference.navigationItem.hidesBackButton = NO;
+        selfRef.navigationItem.hidesBackButton = NO;
 
         if (!error)
         {
-            selfReference.updateStateLabel.text = @"";
-            selfReference.updateProgressLabel.text = @"Updated!";
-            selfReference.updateProgressLabel.font = [UIFont boldSystemFontOfSize:50];
+            selfRef.updateStateLabel.text = @"";
+            selfRef.updateProgressLabel.text = @"Updated!";
+            selfRef.updateProgressLabel.font = [UIFont boldSystemFontOfSize:50];
         }
         else
         {
             NSLog(@"Update failed.");
-            selfReference.updateStateLabel.text = [error localizedDescription];
-            selfReference.updateProgressLabel.text = @"Failed!";
-            selfReference.updateProgressLabel.font = [UIFont boldSystemFontOfSize:50];
+            selfRef.updateStateLabel.text = [error localizedDescription];
+            selfRef.updateProgressLabel.text = @"Failed!";
+            selfRef.updateProgressLabel.font = [UIFont boldSystemFontOfSize:50];
         }
+        
+        [selfRef.activityIndicator stopAnimating];
     }];
 }
 
-#pragma mark - ESTBeacon Delegate
-- (void)beaconConnectionDidSucceeded:(ESTBeacon *)beacon
-{
-    self.updateStateLabel.text = @"Connected!";
-    [self.activityIndicator stopAnimating];
-    
-    //After succesful connection we check if update for our beacon is available.
-    [self checkFirmwareAvailability];
-}
-
-- (void)beaconConnectionDidFail:(ESTBeacon *)beacon withError:(NSError *)error
+- (void)beaconConnection:(ESTBeaconConnection *)connection didFailWithError:(NSError *)error
 {
     //Beacon connection did fail. Try again.
     

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9534650B1A4ADCDC0049511E /* libEstimoteSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9534650A1A4ADCDC0049511E /* libEstimoteSDK.a */; };
+		9556D49D1A9F979100465B61 /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9556D49C1A9F979100465B61 /* EstimoteSDK.framework */; };
 		AC72C5501A49AD9A00C72132 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC72C54F1A49AD9A00C72132 /* AppDelegate.swift */; };
 		AC72C5521A49AD9A00C72132 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC72C5511A49AD9A00C72132 /* ViewController.swift */; };
 		AC72C5551A49AD9A00C72132 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC72C5531A49AD9A00C72132 /* Main.storyboard */; };
@@ -30,7 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9534650A1A4ADCDC0049511E /* libEstimoteSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEstimoteSDK.a; path = ../../../EstimoteSDK/libEstimoteSDK.a; sourceTree = "<group>"; };
+		9556D49C1A9F979100465B61 /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EstimoteSDK.framework; path = ../../../EstimoteSDK/EstimoteSDK.framework; sourceTree = "<group>"; };
 		AC72C54A1A49AD9A00C72132 /* TriggersExample-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TriggersExample-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC72C54E1A49AD9A00C72132 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC72C54F1A49AD9A00C72132 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -76,8 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9534650B1A4ADCDC0049511E /* libEstimoteSDK.a in Frameworks */,
 				AC72C5901A49B4DB00C72132 /* SystemConfiguration.framework in Frameworks */,
+				9556D49D1A9F979100465B61 /* EstimoteSDK.framework in Frameworks */,
 				AC72C58E1A49B4D300C72132 /* CoreLocation.framework in Frameworks */,
 				AC72C58C1A49B4CE00C72132 /* CoreBluetooth.framework in Frameworks */,
 			);
@@ -96,7 +96,7 @@
 		AC72C5411A49AD9A00C72132 = {
 			isa = PBXGroup;
 			children = (
-				9534650A1A4ADCDC0049511E /* libEstimoteSDK.a */,
+				9556D49C1A9F979100465B61 /* EstimoteSDK.framework */,
 				AC72C58F1A49B4DB00C72132 /* SystemConfiguration.framework */,
 				AC72C58D1A49B4D300C72132 /* CoreLocation.framework */,
 				AC72C58B1A49B4CE00C72132 /* CoreBluetooth.framework */,
@@ -424,6 +424,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/marcinklimek/Projects/estimote/ios_code/iOS-SDK/EstimoteSDK",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -444,6 +448,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/marcinklimek/Projects/estimote/ios_code/iOS-SDK/EstimoteSDK",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
