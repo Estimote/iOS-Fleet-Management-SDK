@@ -33,7 +33,7 @@ enum
  *
  * @param connection The nearable connection object reporting the event.
  */
-- (void)beaconConnectionDidSucceeded:(ESTBeaconConnection *)connection;
+- (void)beaconConnectionDidSucceed:(ESTBeaconConnection *)connection;
 
 /**
  * Tells the delegate that an attempt to connect to a nearable has failed.
@@ -52,12 +52,12 @@ enum
 - (void)beaconConnection:(ESTBeaconConnection *)connection didDisconnectWithError:(NSError *)error;
 
 /**
- * Tells the delegate that a beacon's `<[ESTBeaconConnection isMoving]>` value has changed.
+ * Tells the delegate that a beacon's `<[ESTBeaconConnection motionState]>` value has changed.
  *
  * @param connection The beacon connection object reporting the event.
- * @param state The new `isMoving` value.
+ * @param state The new `motionState` value.
  */
-- (void)beaconConnection:(ESTBeaconConnection *)connection motionStateChanged:(BOOL)state;
+- (void)beaconConnection:(ESTBeaconConnection *)connection motionStateChanged:(ESTBeaconMotionState)state;
 
 @end
 

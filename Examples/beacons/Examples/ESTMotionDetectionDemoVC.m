@@ -81,7 +81,7 @@
 }
 
 #pragma mark - ESTBeaconDelegate
-- (void)beaconConnectionDidSucceeded:(ESTBeaconConnection *)connection
+- (void)beaconConnectionDidSucceed:(ESTBeaconConnection *)connection
 {
     [self.activityIndicator stopAnimating];
     self.activityIndicator.alpha = 0.;
@@ -124,10 +124,10 @@
     [errorView show];
 }
 
-- (void)beaconConnection:(ESTBeaconConnection *)beaconConnection motionStateChanged:(BOOL)state
+- (void)beaconConnection:(ESTBeaconConnection *)beaconConnection motionStateChanged:(ESTBeaconMotionState)state
 {
     //State is updated after beacon accelerometer was stabilised.
-    if (state)
+    if (state == ESTBeaconMotionStateMoving)
     {
         [self vibrateEffect];
     }

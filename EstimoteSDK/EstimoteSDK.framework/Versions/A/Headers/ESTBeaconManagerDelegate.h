@@ -13,12 +13,6 @@
 
 @optional
 
-#pragma mark Monitoring Events
-///--------------------------------------------------------------------
-/// @name Monitoring Events
-///--------------------------------------------------------------------
-
-
 #pragma mark Authorization Change Events (new in iOS 8)
 ///--------------------------------------------------------------------
 /// @name Authorization Change Events (new in iOS 8)
@@ -32,6 +26,11 @@
  * If the authorization status is already known when you call the `requestWhenInUseAuthorization` or `requestAlwaysAuthorization` method, the beacon manager does not report the current authorization status to this method. The beacon manager only reports changes to the authorization status. For example, it calls this method when the status changes from `kCLAuthorizationStatusNotDetermined` to `kCLAuthorizationStatusAuthorizedWhenInUse`.
  */
 - (void)beaconManager:(id)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status;
+
+#pragma mark Monitoring Events
+///--------------------------------------------------------------------
+/// @name Monitoring Events
+///--------------------------------------------------------------------
 
 /**
  * Tells the delegate that a new region is being monitored.

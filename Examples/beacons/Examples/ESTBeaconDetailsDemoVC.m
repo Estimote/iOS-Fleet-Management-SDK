@@ -384,7 +384,7 @@
 
 #pragma mark - ESTBeacon connection handling
 
-- (void)beaconConnectionDidSucceeded:(ESTBeaconConnection *)connection
+- (void)beaconConnectionDidSucceed:(ESTBeaconConnection *)connection
 {
     [self.activityIndicator stopAnimating];
     self.activityIndicator.alpha = 0.;

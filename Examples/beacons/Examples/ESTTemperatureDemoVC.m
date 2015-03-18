@@ -82,14 +82,14 @@
 }
 
 #pragma mark - ESTBeaconDelegate
-- (void)beaconConnectionDidSucceeded:(ESTBeaconConnection *)connection
+- (void)beaconConnectionDidSucceed:(ESTBeaconConnection *)connection
 {
     [self.activityIndicator stopAnimating];
     self.activityIndicator.alpha = 0.;
     self.activityLabel.text = @"Connected!";
     
     //After successful connection, we can start reading temperature.
-    self.readTemperatureWithInterval = [NSTimer scheduledTimerWithTimeInterval:1.0f
+    self.readTemperatureWithInterval = [NSTimer scheduledTimerWithTimeInterval:2.0f
                                                                         target:self
                                                                       selector:@selector(readBeaconTemperature)
                                                                       userInfo:nil repeats:YES];

@@ -49,7 +49,7 @@
 
 #pragma mark - Update Firmware Model
 
-- (void)beaconConnectionDidSucceeded:(ESTBeaconConnection *)connection
+- (void)beaconConnectionDidSucceed:(ESTBeaconConnection *)connection
 {
     __weak typeof(self) selfRef = self;
     self.navigationItem.hidesBackButton = YES;
