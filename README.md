@@ -76,8 +76,8 @@ There are also two interesting additions: a simulator class that allows you to s
 * **ESTSecureBeaconManager** - CLLocationManager wrapper dedicated to work with devices that are using Estimote Secure UUID mechanism. Similarily to ESTBeaconManager it allows to range and monitor secured devices as well as verify their proximity.
 * **ESTSimulatedBeaconManager** - Creates virtual beacon instances to use in Xcode iOS Simulator. It lets you dispatch fake beacon events related to iBeacon ranging and monitoring.
 * **ESTNearableManager** - Entry point to work with nearables. It allows to range and monitor stickers with given type or identifier in the similar manner to how it's done with iBeacon.
-* **ESTSimulatedNearableManager** - Analogously to ESTSimulatedBeaconManager it lets you generate fake ranging and monitoring events for nearables.
-* **ESTNotificationTransporter** - Helper class to take care of communicating ranging and monitoring events from the iPhone to the Apple Watch. For more details, check the [Estimote WatchKit SDK](https://github.com/Estimote/Estimote-WatchKit-SDK).
+* **ESTSimulatedNearableManager** - Analogously to ESTSimulatedBeaconManager it lets you generate fake ranging and monitoring events for nearables. You can see example implementation of this class in [Estimote WatchKit SDK](https://github.com/Estimote/Estimote-WatchKit-SDK).
+* **ESTNotificationTransporter** - Class allowing you to easily exchange iBeacon and Nearable data, gathered from events like ranging or monitoring, between your host app and Apple Watch / other iOS 8 Extension. For more details, check the [Estimote WatchKit SDK](https://github.com/Estimote/Estimote-WatchKit-SDK).
 
 #### Trigger engine
 
