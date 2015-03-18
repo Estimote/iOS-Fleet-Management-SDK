@@ -1,0 +1,1354 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>ESTSimulatedNearableManager Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.2 (build 963)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">EstimoteSDK </a></h1>
+				<a id="developerHome" href="../index.html">Estimote</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">ESTSimulatedNearableManager Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/nearables">&nbsp;&nbsp;&nbsp;&nbsp;nearables</option>
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/addNearableToSimulation:withType:zone:rssi:">&nbsp;&nbsp;&nbsp;&nbsp;- addNearableToSimulation:withType:zone:rssi:</option>
+	
+	<option value="//api/name/addNearablesToSimulationWithPath:">&nbsp;&nbsp;&nbsp;&nbsp;- addNearablesToSimulationWithPath:</option>
+	
+	<option value="//api/name/initWithDelegate:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithDelegate:</option>
+	
+	<option value="//api/name/initWithDelegate:pathForJSON:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithDelegate:pathForJSON:</option>
+	
+	<option value="//api/name/nearableManager:didEnterIdentifierRegion:">&nbsp;&nbsp;&nbsp;&nbsp;- nearableManager:didEnterIdentifierRegion:</option>
+	
+	<option value="//api/name/nearableManager:didExitIdentifierRegion:">&nbsp;&nbsp;&nbsp;&nbsp;- nearableManager:didExitIdentifierRegion:</option>
+	
+	<option value="//api/name/nearableManager:didRangeNearable:">&nbsp;&nbsp;&nbsp;&nbsp;- nearableManager:didRangeNearable:</option>
+	
+	<option value="//api/name/nearableManager:didRangeNearables:withType:">&nbsp;&nbsp;&nbsp;&nbsp;- nearableManager:didRangeNearables:withType:</option>
+	
+	<option value="//api/name/simulateDidEnterRegionForNearable:">&nbsp;&nbsp;&nbsp;&nbsp;- simulateDidEnterRegionForNearable:</option>
+	
+	<option value="//api/name/simulateDidExitRegionForNearable:">&nbsp;&nbsp;&nbsp;&nbsp;- simulateDidExitRegionForNearable:</option>
+	
+	<option value="//api/name/simulateZone:forNearable:">&nbsp;&nbsp;&nbsp;&nbsp;- simulateZone:forNearable:</option>
+	
+	<option value="//api/name/startRangingForIdentifier:">&nbsp;&nbsp;&nbsp;&nbsp;- startRangingForIdentifier:</option>
+	
+	<option value="//api/name/startRangingForType:">&nbsp;&nbsp;&nbsp;&nbsp;- startRangingForType:</option>
+	
+	<option value="//api/name/stopRanging">&nbsp;&nbsp;&nbsp;&nbsp;- stopRanging</option>
+	
+	<option value="//api/name/stopRangingForIdentifier:">&nbsp;&nbsp;&nbsp;&nbsp;- stopRangingForIdentifier:</option>
+	
+	<option value="//api/name/stopRangingForType:">&nbsp;&nbsp;&nbsp;&nbsp;- stopRangingForType:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Ranging delegate methods">Ranging delegate methods</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/nearables">nearables</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addNearableToSimulation:withType:zone:rssi:">addNearableToSimulation:withType:zone:rssi:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addNearablesToSimulationWithPath:">addNearablesToSimulationWithPath:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithDelegate:">initWithDelegate:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithDelegate:pathForJSON:">initWithDelegate:pathForJSON:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/nearableManager:didEnterIdentifierRegion:">nearableManager:didEnterIdentifierRegion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/nearableManager:didExitIdentifierRegion:">nearableManager:didExitIdentifierRegion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/nearableManager:didRangeNearable:">nearableManager:didRangeNearable:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/nearableManager:didRangeNearables:withType:">nearableManager:didRangeNearables:withType:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/simulateDidEnterRegionForNearable:">simulateDidEnterRegionForNearable:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/simulateDidExitRegionForNearable:">simulateDidExitRegionForNearable:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/simulateZone:forNearable:">simulateZone:forNearable:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/startRangingForIdentifier:">startRangingForIdentifier:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/startRangingForType:">startRangingForType:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stopRanging">stopRanging</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stopRangingForIdentifier:">stopRangingForIdentifier:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stopRangingForType:">stopRangingForType:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="ESTSimulatedNearableManager Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">ESTSimulatedNearableManager Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value"><a href="../Classes/ESTNearableManager.html">ESTNearableManager</a> : NSObject</td>
+</tr><tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value"><a href="../Protocols/ESTNearableManagerDelegate.html">ESTNearableManagerDelegate</a></td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">ESTSimulatedNearableManager.h<br />ESTSimulatedNearableManager.m</td>
+</tr>
+						</tbody></table></div>
+					
+                    
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>ESTSimulatedNearableManager is a class for simulating Nearables (ESTNearable) objects.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/nearables">&nbsp;&nbsp;nearables</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithDelegate:">&ndash;&nbsp;initWithDelegate:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithDelegate:pathForJSON:">&ndash;&nbsp;initWithDelegate:pathForJSON:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addNearableToSimulation:withType:zone:rssi:">&ndash;&nbsp;addNearableToSimulation:withType:zone:rssi:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addNearablesToSimulationWithPath:">&ndash;&nbsp;addNearablesToSimulationWithPath:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/simulateZone:forNearable:">&ndash;&nbsp;simulateZone:forNearable:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/simulateDidEnterRegionForNearable:">&ndash;&nbsp;simulateDidEnterRegionForNearable:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/simulateDidExitRegionForNearable:">&ndash;&nbsp;simulateDidExitRegionForNearable:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Ranging delegate methods" name="task_Ranging delegate methods"></a>
+						<h3 class="subsubtitle task-title">Ranging delegate methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/startRangingForIdentifier:">&ndash;&nbsp;startRangingForIdentifier:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stopRangingForIdentifier:">&ndash;&nbsp;stopRangingForIdentifier:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/startRangingForType:">&ndash;&nbsp;startRangingForType:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stopRangingForType:">&ndash;&nbsp;stopRangingForType:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stopRanging">&ndash;&nbsp;stopRanging</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/nearableManager:didRangeNearable:">&ndash;&nbsp;nearableManager:didRangeNearable:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/nearableManager:didRangeNearables:withType:">&ndash;&nbsp;nearableManager:didRangeNearables:withType:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/nearableManager:didEnterIdentifierRegion:">&ndash;&nbsp;nearableManager:didEnterIdentifierRegion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/nearableManager:didExitIdentifierRegion:">&ndash;&nbsp;nearableManager:didExitIdentifierRegion:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/nearables" title="nearables"></a>
+	<h3 class="subsubtitle method-title">nearables</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Array with simulated ESTNearable objects.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSMutableArray *nearables</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTSimulatedNearableManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/addNearableToSimulation:withType:zone:rssi:" title="addNearableToSimulation:withType:zone:rssi:"></a>
+	<h3 class="subsubtitle method-title">addNearableToSimulation:withType:zone:rssi:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Add single nearable by specifying params. ESTNearable object
+will be inserted into nearables array.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)addNearableToSimulation:(NSString *)<em>identifier</em> withType:(ESTNearableType)<em>type</em> zone:(ESTNearableZone)<em>zone</em> rssi:(NSInteger)<em>rssi</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>identifier</em></dt>
+			<dd><p>Identifier for ESTNearable object.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>type</em></dt>
+			<dd><p>Nearable type</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>zone</em></dt>
+			<dd><p>Nearable zone</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTSimulatedNearableManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/addNearablesToSimulationWithPath:" title="addNearablesToSimulationWithPath:"></a>
+	<h3 class="subsubtitle method-title">addNearablesToSimulationWithPath:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>If you used initWithDelegate: initializer to create this class
+and later you want to range nearables with type, use this method
+to set array of nearables.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)addNearablesToSimulationWithPath:(NSString *)<em>path</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>path</em></dt>
+			<dd><p>Path for json file with description of nearables you want to simulate.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTSimulatedNearableManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithDelegate:" title="initWithDelegate:"></a>
+	<h3 class="subsubtitle method-title">initWithDelegate:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initializer with delegate.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithDelegate:(id&lt;ESTNearableManagerDelegate&gt;)<em>delegate</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>delegate</em></dt>
+			<dd><p>Set delegate for ESTNearableManagerDelegate updates.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Instance of this object.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTSimulatedNearableManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithDelegate:pathForJSON:" title="initWithDelegate:pathForJSON:"></a>
+	<h3 class="subsubtitle method-title">initWithDelegate:pathForJSON:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Use this initializer if you want to specify nearables in JSON.
+Providing only filename is sufficient, but remember that your file
+should be *.json type and accessible from MainBundle.
+By default, order of nearables in the list will be reflected in nearables array,
+which means, this class do not provide simulation of fluctuating RSSI or proximity.
+However, you can set those values in JSON file, they will be parsed into ESTNearable object.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithDelegate:(id&lt;ESTNearableManagerDelegate&gt;)<em>delegate</em> pathForJSON:(NSString *)<em>path</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>delegate</em></dt>
+			<dd><p>Set delegate for ESTNearableManagerDelegate updates.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>pathForJSON</em></dt>
+			<dd><p>Path for json file with description of nearables you want to simulate.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Instance of this object.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTSimulatedNearableManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/nearableManager:didEnterIdentifierRegion:" title="nearableManager:didEnterIdentifierRegion:"></a>
+	<h3 class="subsubtitle method-title">nearableManager:didEnterIdentifierRegion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Tells the delegate that the user entered region of specified nearable identifier.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)nearableManager:(ESTNearableManager *)<em>manager</em> didEnterIdentifierRegion:(NSString *)<em>identifier</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>manager</em></dt>
+			<dd><p>The nearable manager object reporting the event.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>region</em></dt>
+			<dd><p>The nearable identifier region that was entered.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTNearableManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/nearableManager:didExitIdentifierRegion:" title="nearableManager:didExitIdentifierRegion:"></a>
+	<h3 class="subsubtitle method-title">nearableManager:didExitIdentifierRegion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Tells the delegate that the user left the region of specified nearable identifier.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)nearableManager:(ESTNearableManager *)<em>manager</em> didExitIdentifierRegion:(NSString *)<em>identifier</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>manager</em></dt>
+			<dd><p>The nearable manager object reporting the event.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>region</em></dt>
+			<dd><p>The nearable identifier region that was exited.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTNearableManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/nearableManager:didRangeNearable:" title="nearableManager:didRangeNearable:"></a>
+	<h3 class="subsubtitle method-title">nearableManager:didRangeNearable:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Tells the delegate that nearable with particular identifier is in range.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)nearableManager:(ESTNearableManager *)<em>manager</em> didRangeNearable:(ESTNearable *)<em>nearable</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>manager</em></dt>
+			<dd><p>The nearable manager object reporting the event.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>nearables</em></dt>
+			<dd><p>An <a href="../Classes/ESTNearable.html"><code>ESTNearable</code></a> object representing the nearables currently in range. You can use the information in these objects to determine the range of nearable and its identifying information.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTNearableManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/nearableManager:didRangeNearables:withType:" title="nearableManager:didRangeNearables:withType:"></a>
+	<h3 class="subsubtitle method-title">nearableManager:didRangeNearables:withType:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Tells the delegate that one or more nearables are in range.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)nearableManager:(ESTNearableManager *)<em>manager</em> didRangeNearables:(NSArray *)<em>nearables</em> withType:(ESTNearableType)<em>type</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>manager</em></dt>
+			<dd><p>The nearable manager object reporting the event.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>nearables</em></dt>
+			<dd><p>An array of <a href="../Classes/ESTNearable.html"><code>ESTNearable</code></a> objects representing the nearables currently in range. You can use the information in these objects to determine the range of each nearables and its identifying information.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>type</em></dt>
+			<dd><p>The nearable type that was used to range the nearables.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTNearableManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/simulateDidEnterRegionForNearable:" title="simulateDidEnterRegionForNearable:"></a>
+	<h3 class="subsubtitle method-title">simulateDidEnterRegionForNearable:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Simulate enter region event for your nearable.
+Ranging will automatically start after calling this method.
+Callback method is nearableManager:didEnterIdentifierRegion from ESTNearableManagerDelegate protocol.
+If you do not implement didEnterIdentifierRegion code will crash,
+it&rsquo;s not checking whether delegate implemented method or not.
+This is &lsquo;by design&rsquo;. During testing you probably want to know
+when your class don&rsquo;t implement ESTNearableManager delegates.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)simulateDidEnterRegionForNearable:(ESTNearable *)<em>nearable</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>nearable</em></dt>
+			<dd><p>Nearable object for this event.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTSimulatedNearableManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/simulateDidExitRegionForNearable:" title="simulateDidExitRegionForNearable:"></a>
+	<h3 class="subsubtitle method-title">simulateDidExitRegionForNearable:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Simulate exit region event for your nearable.
+Ranging will automatically stop after calling this method.
+Callback method is nearableManager:didExitIdentifierRegion from ESTNearableManagerDelegate protocol.
+If you do not implement didExitIdentifierRegion code will crash,
+it&rsquo;s not checking whether delegate implemented method or not.
+This is &lsquo;by design&rsquo;. During testing you probably want to know
+when your class don&rsquo;t implement ESTNearableManager delegates.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)simulateDidExitRegionForNearable:(ESTNearable *)<em>nearable</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>nearable</em></dt>
+			<dd><p>Nearable object for this event.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTSimulatedNearableManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/simulateZone:forNearable:" title="simulateZone:forNearable:"></a>
+	<h3 class="subsubtitle method-title">simulateZone:forNearable:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Set desired zone for your simulated ESTNearableObject.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)simulateZone:(ESTNearableZone)<em>zone</em> forNearable:(NSString *)<em>identifier</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>zone</em></dt>
+			<dd><p>ESTNearableZone to set.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>nearable</em></dt>
+			<dd><p>ESTNearable object you want to change.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTSimulatedNearableManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/startRangingForIdentifier:" title="startRangingForIdentifier:"></a>
+	<h3 class="subsubtitle method-title">startRangingForIdentifier:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Starts the delivery of notifications for nearables with specified identifier.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)startRangingForIdentifier:(NSString *)<em>identifier</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>identifier</em></dt>
+			<dd><p>The identifier of nearables. This parameter must not be <code>nil</code></p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Once registered, the nearable manager reports any encountered nearable to its delegate by calling the <a href="../Protocols/ESTNearableManagerDelegate.html#//api/name/nearableManager:didRangeNearable:"><code>[ESTNearableManagerDelegate nearableManager:didRangeNearable:]</code></a> method. If there is an error registering the specified nearable type, the nearable manager calls its delegate&rsquo;s <a href="../Protocols/ESTNearableManagerDelegate.html#//api/name/nearableManager:rangingFailedWithError:"><code>[ESTNearableManagerDelegate nearableManager:rangingFailedWithError:]</code></a> method and provides the appropriate error information.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Classes/ESTNearableManager.html#//api/name/stopRangingForType:">- stopRangingForType:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTNearableManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/startRangingForType:" title="startRangingForType:"></a>
+	<h3 class="subsubtitle method-title">startRangingForType:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Starts the delivery of notifications for nearables with specified type.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)startRangingForType:(ESTNearableType)<em>type</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>type</em></dt>
+			<dd><p>The type of nearables. This parameter must not be <code>nil</code></p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Once registered, the nearable manager reports any encountered nearable to its delegate by calling the <a href="../Protocols/ESTNearableManagerDelegate.html#//api/name/nearableManager:didRangeNearables:withType:"><code>[ESTNearableManagerDelegate nearableManager:didRangeNearables:withType:]</code></a> method. If there is an error registering the specified nearable type, the nearable manager calls its delegate&rsquo;s <a href="../Protocols/ESTNearableManagerDelegate.html#//api/name/nearableManager:rangingFailedWithError:"><code>[ESTNearableManagerDelegate nearableManager:rangingFailedWithError:]</code></a> method and provides the appropriate error information.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Classes/ESTNearableManager.html#//api/name/stopRangingForType:">- stopRangingForType:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTNearableManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/stopRanging" title="stopRanging"></a>
+	<h3 class="subsubtitle method-title">stopRanging</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Stops ranging all types and identifiers that were ranged.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)stopRanging</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>If there is nothing currently being ranged, this method has no effect.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Classes/ESTNearableManager.html#//api/name/stopRangingForIdentifier:">- stopRangingForIdentifier:</a></p></code></li>
+			
+			<li><code><p><a href="../Classes/ESTNearableManager.html#//api/name/stopRangingForType:">- stopRangingForType:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTNearableManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/stopRangingForIdentifier:" title="stopRangingForIdentifier:"></a>
+	<h3 class="subsubtitle method-title">stopRangingForIdentifier:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Stops the delivery of notifications for the specified nearable identifier.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)stopRangingForIdentifier:(NSString *)<em>identifier</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>type</em></dt>
+			<dd><p>The type of nearables. This parameter must not be <code>nil</code></p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p>nearableManager:<a href="../Classes/ESTNearableManager.html#//api/name/startRangingForType:">- startRangingForType:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTNearableManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/stopRangingForType:" title="stopRangingForType:"></a>
+	<h3 class="subsubtitle method-title">stopRangingForType:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Stops the delivery of notifications for the specified nearable type.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)stopRangingForType:(ESTNearableType)<em>type</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>type</em></dt>
+			<dd><p>The type of nearables. This parameter must not be <code>nil</code></p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Classes/ESTNearableManager.html#//api/name/startRangingForType:">- startRangingForType:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTNearableManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+                    
+                    
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-03-18)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>
