@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>ESTBeaconDelegate Protocol Reference</title>
+		<title>ESTUtilityManagerDelegate Protocol Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">ESTBeaconDelegate Protocol Reference</h1>
+				<h1 class="hideInXcode">ESTUtilityManagerDelegate Protocol Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -25,8 +25,6 @@
 				<li id="jumpto_button" role="navigation">
 					<select id="jumpTo">
 	<option value="top">Jump To&#133;</option>
-	
-	<option value="overview">Overview</option>
 	
 	
 	
@@ -43,13 +41,9 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/beacon:accelerometerStateChanged:">&nbsp;&nbsp;&nbsp;&nbsp;- beacon:accelerometerStateChanged:</option>
+	<option value="//api/name/utilityManager:didDiscoverBeacons:">&nbsp;&nbsp;&nbsp;&nbsp;- utilityManager:didDiscoverBeacons:</option>
 	
-	<option value="//api/name/beacon:didDisconnectWithError:">&nbsp;&nbsp;&nbsp;&nbsp;- beacon:didDisconnectWithError:</option>
-	
-	<option value="//api/name/beaconConnectionDidFail:withError:">&nbsp;&nbsp;&nbsp;&nbsp;- beaconConnectionDidFail:withError:</option>
-	
-	<option value="//api/name/beaconConnectionDidSucceeded:">&nbsp;&nbsp;&nbsp;&nbsp;- beaconConnectionDidSucceeded:</option>
+	<option value="//api/name/utilityManagerDidFailDiscovery:">&nbsp;&nbsp;&nbsp;&nbsp;- utilityManagerDidFailDiscovery:</option>
 	
 	
 	
@@ -60,8 +54,6 @@
 		<nav id="tocContainer" class="isShowingTOC">
 			<ul id="toc" role="tree">
 				
-<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
-
 
 
 
@@ -79,13 +71,9 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beacon:accelerometerStateChanged:">beacon:accelerometerStateChanged:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/utilityManager:didDiscoverBeacons:">utilityManager:didDiscoverBeacons:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beacon:didDisconnectWithError:">beacon:didDisconnectWithError:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beaconConnectionDidFail:withError:">beaconConnectionDidFail:withError:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beaconConnectionDidSucceeded:">beaconConnectionDidSucceeded:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/utilityManagerDidFailDiscovery:">utilityManagerDidFailDiscovery:</a></span></li>
 	
 </ul></li>
 
@@ -94,7 +82,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="ESTBeaconDelegate Protocol Reference" name="top"></a>
+				<a title="ESTUtilityManagerDelegate Protocol Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -103,7 +91,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">ESTBeaconDelegate Protocol Reference</h1>
+						<h1 class="title title-header">ESTUtilityManagerDelegate Protocol Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -114,20 +102,12 @@
 	<td class="specification-value">NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">ESTBeacon.h</td>
+	<td class="specification-value">ESTUtilityManager.h</td>
 </tr>
 						</tbody></table></div>
 					
                     
                     
-					
-					<div class="section section-overview">
-						<a title="Overview" name="overview"></a>
-						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>The <code>ESTBeaconDelegate</code> protocol defines the delegate methods used to receive updates about <a href="../Classes/ESTBeacon.html"><code>ESTBeacon</code></a> connection status, as well as sensor related updates once a connection to the beacon has been established.</p>
-					</div>
-					
-					
 					
 					
 					
@@ -142,25 +122,13 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/beaconConnectionDidSucceeded:">&ndash;&nbsp;beaconConnectionDidSucceeded:</a></code>
+		<code><a href="#//api/name/utilityManager:didDiscoverBeacons:">&ndash;&nbsp;utilityManager:didDiscoverBeacons:</a></code>
 	</span>
 	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/beaconConnectionDidFail:withError:">&ndash;&nbsp;beaconConnectionDidFail:withError:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/beacon:didDisconnectWithError:">&ndash;&nbsp;beacon:didDisconnectWithError:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/beacon:accelerometerStateChanged:">&ndash;&nbsp;beacon:accelerometerStateChanged:</a></code>
+		<code><a href="#//api/name/utilityManagerDidFailDiscovery:">&ndash;&nbsp;utilityManagerDidFailDiscovery:</a></code>
 	</span>
 	
 	
@@ -182,18 +150,18 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/beacon:accelerometerStateChanged:" title="beacon:accelerometerStateChanged:"></a>
-	<h3 class="subsubtitle method-title">beacon:accelerometerStateChanged:</h3>
+	<a name="//api/name/utilityManager:didDiscoverBeacons:" title="utilityManager:didDiscoverBeacons:"></a>
+	<h3 class="subsubtitle method-title">utilityManager:didDiscoverBeacons:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Tells the delegate that a beacon&rsquo;s <a href="../Classes/ESTBeacon.html#//api/name/isMoving"><code>[ESTBeacon isMoving]</code></a> value has changed.</p>
+		<p>Tells the delegate that one or more beacons were discovered in the vicinity of the device.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)beacon:(ESTBeacon *)<em>beacon</em> accelerometerStateChanged:(BOOL)<em>state</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)utilityManager:(ESTUtilityManager *)<em>manager</em> didDiscoverBeacons:(NSArray *)<em>beacons</em></code></div>
 
     
 	
@@ -201,13 +169,13 @@
 		<h4 class="method-subtitle parameter-title">Parameters</h4>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>beacon</em></dt>
-			<dd><p>The beacon object reporting the event.</p></dd>
+			<dt><em>manager</em></dt>
+			<dd><p>The utility manager object reporting the event.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>state</em></dt>
-			<dd><p>The new <code>isMoving</code> value.</p></dd>
+			<dt><em>beacons</em></dt>
+			<dd><p>An array of <code>&lt;ESTBluetoothBeacon&gt;</code> objects representing the beacons discovered.</p></dd>
 		</dl>
 		
 	</div>
@@ -226,25 +194,25 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTBeacon.h</code><br />
+		<code class="declared-in-ref">ESTUtilityManager.h</code><br />
 	</div>				
 	
 	
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/beacon:didDisconnectWithError:" title="beacon:didDisconnectWithError:"></a>
-	<h3 class="subsubtitle method-title">beacon:didDisconnectWithError:</h3>
+	<a name="//api/name/utilityManagerDidFailDiscovery:" title="utilityManagerDidFailDiscovery:"></a>
+	<h3 class="subsubtitle method-title">utilityManagerDidFailDiscovery:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Tells the delegate that a previously connected beacon has disconnected.</p>
+		<p>Tells the delegate that beacons discovery error occurred.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)beacon:(ESTBeacon *)<em>beacon</em> didDisconnectWithError:(NSError *)<em>error</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)utilityManagerDidFailDiscovery:(ESTUtilityManager *)<em>manager</em></code></div>
 
     
 	
@@ -252,13 +220,8 @@
 		<h4 class="method-subtitle parameter-title">Parameters</h4>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>beacon</em></dt>
-			<dd><p>The beacon object reporting the event.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>error</em></dt>
-			<dd><p>An error object containing the error code that indicates why the beacon disconnected.</p></dd>
+			<dt><em>manager</em></dt>
+			<dd><p>The beacon manager object reporting the event.</p></dd>
 		</dl>
 		
 	</div>
@@ -277,104 +240,7 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTBeacon.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/beaconConnectionDidFail:withError:" title="beaconConnectionDidFail:withError:"></a>
-	<h3 class="subsubtitle method-title">beaconConnectionDidFail:withError:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Tells the delegate that an attempt to connect to a beacon has failed.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)beaconConnectionDidFail:(ESTBeacon *)<em>beacon</em> withError:(NSError *)<em>error</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>beacon</em></dt>
-			<dd><p>The beacon object reporting the event.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>error</em></dt>
-			<dd><p>An error object containing the error code that indicates why connection failed.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTBeacon.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/beaconConnectionDidSucceeded:" title="beaconConnectionDidSucceeded:"></a>
-	<h3 class="subsubtitle method-title">beaconConnectionDidSucceeded:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Tells the delegate that an attempt to connect to a beacon succeeded and the connection has been established.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)beaconConnectionDidSucceeded:(ESTBeacon *)<em>beacon</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>beacon</em></dt>
-			<dd><p>The beacon object reporting the event.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTBeacon.h</code><br />
+		<code class="declared-in-ref">ESTUtilityManager.h</code><br />
 	</div>				
 	
 	
@@ -395,7 +261,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-02-09)</span><br />
+						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-03-18)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						

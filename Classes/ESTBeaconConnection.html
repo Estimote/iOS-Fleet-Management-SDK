@@ -1,0 +1,3795 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>ESTBeaconConnection Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.2 (build 963)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">EstimoteSDK </a></h1>
+				<a id="developerHome" href="../index.html">Estimote</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">ESTBeaconConnection Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/advInterval">&nbsp;&nbsp;&nbsp;&nbsp;advInterval</option>
+	
+	<option value="//api/name/basicPowerMode">&nbsp;&nbsp;&nbsp;&nbsp;basicPowerMode</option>
+	
+	<option value="//api/name/batteryLevel">&nbsp;&nbsp;&nbsp;&nbsp;batteryLevel</option>
+	
+	<option value="//api/name/batteryType">&nbsp;&nbsp;&nbsp;&nbsp;batteryType</option>
+	
+	<option value="//api/name/color">&nbsp;&nbsp;&nbsp;&nbsp;color</option>
+	
+	<option value="//api/name/conditionalBroadcastingState">&nbsp;&nbsp;&nbsp;&nbsp;conditionalBroadcastingState</option>
+	
+	<option value="//api/name/connectionStatus">&nbsp;&nbsp;&nbsp;&nbsp;connectionStatus</option>
+	
+	<option value="//api/name/delegate">&nbsp;&nbsp;&nbsp;&nbsp;delegate</option>
+	
+	<option value="//api/name/estimoteSecureUUIDState">&nbsp;&nbsp;&nbsp;&nbsp;estimoteSecureUUIDState</option>
+	
+	<option value="//api/name/firmwareVersion">&nbsp;&nbsp;&nbsp;&nbsp;firmwareVersion</option>
+	
+	<option value="//api/name/hardwareVersion">&nbsp;&nbsp;&nbsp;&nbsp;hardwareVersion</option>
+	
+	<option value="//api/name/identifier">&nbsp;&nbsp;&nbsp;&nbsp;identifier</option>
+	
+	<option value="//api/name/macAddress">&nbsp;&nbsp;&nbsp;&nbsp;macAddress</option>
+	
+	<option value="//api/name/major">&nbsp;&nbsp;&nbsp;&nbsp;major</option>
+	
+	<option value="//api/name/minor">&nbsp;&nbsp;&nbsp;&nbsp;minor</option>
+	
+	<option value="//api/name/motionDetectionState">&nbsp;&nbsp;&nbsp;&nbsp;motionDetectionState</option>
+	
+	<option value="//api/name/motionProximityUUID">&nbsp;&nbsp;&nbsp;&nbsp;motionProximityUUID</option>
+	
+	<option value="//api/name/motionState">&nbsp;&nbsp;&nbsp;&nbsp;motionState</option>
+	
+	<option value="//api/name/motionUUIDState">&nbsp;&nbsp;&nbsp;&nbsp;motionUUIDState</option>
+	
+	<option value="//api/name/name">&nbsp;&nbsp;&nbsp;&nbsp;name</option>
+	
+	<option value="//api/name/peripheral">&nbsp;&nbsp;&nbsp;&nbsp;peripheral</option>
+	
+	<option value="//api/name/power">&nbsp;&nbsp;&nbsp;&nbsp;power</option>
+	
+	<option value="//api/name/proximityUUID">&nbsp;&nbsp;&nbsp;&nbsp;proximityUUID</option>
+	
+	<option value="//api/name/remainingLifetime">&nbsp;&nbsp;&nbsp;&nbsp;remainingLifetime</option>
+	
+	<option value="//api/name/smartPowerMode">&nbsp;&nbsp;&nbsp;&nbsp;smartPowerMode</option>
+	
+	<option value="//api/name/temperatureState">&nbsp;&nbsp;&nbsp;&nbsp;temperatureState</option>
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/connectionWithBeacon:delegate:">&nbsp;&nbsp;&nbsp;&nbsp;+ connectionWithBeacon:delegate:</option>
+	
+	<option value="//api/name/connectionWithMacAddress:delegate:">&nbsp;&nbsp;&nbsp;&nbsp;+ connectionWithMacAddress:delegate:</option>
+	
+	<option value="//api/name/connectionWithProximityUUID:major:minor:delegate:">&nbsp;&nbsp;&nbsp;&nbsp;+ connectionWithProximityUUID:major:minor:delegate:</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/cancelConnection">&nbsp;&nbsp;&nbsp;&nbsp;- cancelConnection</option>
+	
+	<option value="//api/name/checkFirmwareUpdateWithCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- checkFirmwareUpdateWithCompletion:</option>
+	
+	<option value="//api/name/findPeripheralForBeaconWithTimeout:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- findPeripheralForBeaconWithTimeout:completion:</option>
+	
+	<option value="//api/name/initWithBeacon:delegate:startImmediately:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithBeacon:delegate:startImmediately:</option>
+	
+	<option value="//api/name/initWithMacAddress:delegate:startImmediately:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithMacAddress:delegate:startImmediately:</option>
+	
+	<option value="//api/name/initWithProximityUUID:major:minor:delegate:startImmediately:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithProximityUUID:major:minor:delegate:startImmediately:</option>
+	
+	<option value="//api/name/readAccelerometerCountWithCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- readAccelerometerCountWithCompletion:</option>
+	
+	<option value="//api/name/readTemperatureWithCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- readTemperatureWithCompletion:</option>
+	
+	<option value="//api/name/resetAccelerometerCountWithCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- resetAccelerometerCountWithCompletion:</option>
+	
+	<option value="//api/name/resetToFactorySettingsWithCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- resetToFactorySettingsWithCompletion:</option>
+	
+	<option value="//api/name/startConnection">&nbsp;&nbsp;&nbsp;&nbsp;- startConnection</option>
+	
+	<option value="//api/name/startConnectionWithAttempts:connectionTimeout:">&nbsp;&nbsp;&nbsp;&nbsp;- startConnectionWithAttempts:connectionTimeout:</option>
+	
+	<option value="//api/name/updateFirmwareWithProgress:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- updateFirmwareWithProgress:completion:</option>
+	
+	<option value="//api/name/writeAdvInterval:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeAdvInterval:completion:</option>
+	
+	<option value="//api/name/writeBasicPowerModeEnabled:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeBasicPowerModeEnabled:completion:</option>
+	
+	<option value="//api/name/writeCalibratedTemperature:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeCalibratedTemperature:completion:</option>
+	
+	<option value="//api/name/writeConditionalBroadcastingType:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeConditionalBroadcastingType:completion:</option>
+	
+	<option value="//api/name/writeEstimoteSecureUUIDEnabled:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeEstimoteSecureUUIDEnabled:completion:</option>
+	
+	<option value="//api/name/writeMajor:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeMajor:completion:</option>
+	
+	<option value="//api/name/writeMinor:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeMinor:completion:</option>
+	
+	<option value="//api/name/writeMotionDetectionEnabled:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeMotionDetectionEnabled:completion:</option>
+	
+	<option value="//api/name/writeMotionUUIDEnabled:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeMotionUUIDEnabled:completion:</option>
+	
+	<option value="//api/name/writeName:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeName:completion:</option>
+	
+	<option value="//api/name/writePower:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- writePower:completion:</option>
+	
+	<option value="//api/name/writeProximityUUID:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeProximityUUID:completion:</option>
+	
+	<option value="//api/name/writeSmartPowerModeEnabled:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeSmartPowerModeEnabled:completion:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Connection handling">Connection handling</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Device identification">Device identification</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_iBeacon settings">iBeacon settings</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Power management">Power management</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Sensors handling">Sensors handling</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Reading methods for sensors">Reading methods for sensors</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Writing methods for iBeacon settings">Writing methods for iBeacon settings</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Writing methods for power management">Writing methods for power management</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Writing methods for security features">Writing methods for security features</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Writing methods for sensors">Writing methods for sensors</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Reset to factory settings">Reset to factory settings</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Firmware update">Firmware update</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/advInterval">advInterval</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/basicPowerMode">basicPowerMode</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/batteryLevel">batteryLevel</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/batteryType">batteryType</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/color">color</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/conditionalBroadcastingState">conditionalBroadcastingState</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/connectionStatus">connectionStatus</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/delegate">delegate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/estimoteSecureUUIDState">estimoteSecureUUIDState</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/firmwareVersion">firmwareVersion</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/hardwareVersion">hardwareVersion</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/identifier">identifier</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/macAddress">macAddress</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/major">major</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/minor">minor</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/motionDetectionState">motionDetectionState</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/motionProximityUUID">motionProximityUUID</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/motionState">motionState</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/motionUUIDState">motionUUIDState</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/name">name</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/peripheral">peripheral</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/power">power</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/proximityUUID">proximityUUID</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/remainingLifetime">remainingLifetime</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/smartPowerMode">smartPowerMode</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/temperatureState">temperatureState</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/connectionWithBeacon:delegate:">connectionWithBeacon:delegate:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/connectionWithMacAddress:delegate:">connectionWithMacAddress:delegate:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/connectionWithProximityUUID:major:minor:delegate:">connectionWithProximityUUID:major:minor:delegate:</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/cancelConnection">cancelConnection</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/checkFirmwareUpdateWithCompletion:">checkFirmwareUpdateWithCompletion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/findPeripheralForBeaconWithTimeout:completion:">findPeripheralForBeaconWithTimeout:completion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithBeacon:delegate:startImmediately:">initWithBeacon:delegate:startImmediately:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithMacAddress:delegate:startImmediately:">initWithMacAddress:delegate:startImmediately:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithProximityUUID:major:minor:delegate:startImmediately:">initWithProximityUUID:major:minor:delegate:startImmediately:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/readAccelerometerCountWithCompletion:">readAccelerometerCountWithCompletion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/readTemperatureWithCompletion:">readTemperatureWithCompletion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/resetAccelerometerCountWithCompletion:">resetAccelerometerCountWithCompletion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/resetToFactorySettingsWithCompletion:">resetToFactorySettingsWithCompletion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/startConnection">startConnection</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/startConnectionWithAttempts:connectionTimeout:">startConnectionWithAttempts:connectionTimeout:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/updateFirmwareWithProgress:completion:">updateFirmwareWithProgress:completion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeAdvInterval:completion:">writeAdvInterval:completion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeBasicPowerModeEnabled:completion:">writeBasicPowerModeEnabled:completion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeCalibratedTemperature:completion:">writeCalibratedTemperature:completion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeConditionalBroadcastingType:completion:">writeConditionalBroadcastingType:completion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeEstimoteSecureUUIDEnabled:completion:">writeEstimoteSecureUUIDEnabled:completion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeMajor:completion:">writeMajor:completion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeMinor:completion:">writeMinor:completion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeMotionDetectionEnabled:completion:">writeMotionDetectionEnabled:completion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeMotionUUIDEnabled:completion:">writeMotionUUIDEnabled:completion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeName:completion:">writeName:completion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writePower:completion:">writePower:completion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeProximityUUID:completion:">writeProximityUUID:completion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeSmartPowerModeEnabled:completion:">writeSmartPowerModeEnabled:completion:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="ESTBeaconConnection Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">ESTBeaconConnection Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">ESTBeaconConnection.h<br />ESTBeaconConnection.m</td>
+</tr>
+						</tbody></table></div>
+					
+                    
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>The <code>ESTBeaconConnection</code> class defines the interface for interacting with a single Estimote beacon. It enables you to connect to the device, retrieve properties and change its configuration settings.</p>
+
+<p>The ESTBeaconConnection instance can be intialized using CLBeacon object or mac address being unique identifier of particular device. Fetch required beacon details you can use:</p>
+
+<ul>
+<li><p><code>startRangingBeaconsInRegion:</code> - which is a CoreLocation based scan and deliveres <code>CLBeacon</code> objects.</p></li>
+<li><p><code>startEstimoteBeaconsDiscovery</code> - which is a CoreBluetooth based scan and deliveres <code>ESTBluetoothBeacon</code> object containing mac address.</p></li>
+</ul>
+
+
+<p>Properties become editable once connected to the beacon. See connect for more details about connecting to the beacon. You will also need to assign a delegate to be notified about connection and disconnection events. The delegate needs to conform to the <a href="../Protocols/ESTBeaconConnectionDelegate.html"><code>ESTBeaconConnectionDelegate</code></a> protocol.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/delegate">&nbsp;&nbsp;delegate</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/identifier">&nbsp;&nbsp;identifier</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/connectionStatus">&nbsp;&nbsp;connectionStatus</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/connectionWithProximityUUID:major:minor:delegate:">+&nbsp;connectionWithProximityUUID:major:minor:delegate:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/connectionWithBeacon:delegate:">+&nbsp;connectionWithBeacon:delegate:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/connectionWithMacAddress:delegate:">+&nbsp;connectionWithMacAddress:delegate:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithProximityUUID:major:minor:delegate:startImmediately:">&ndash;&nbsp;initWithProximityUUID:major:minor:delegate:startImmediately:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithBeacon:delegate:startImmediately:">&ndash;&nbsp;initWithBeacon:delegate:startImmediately:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithMacAddress:delegate:startImmediately:">&ndash;&nbsp;initWithMacAddress:delegate:startImmediately:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Connection handling" name="task_Connection handling"></a>
+						<h3 class="subsubtitle task-title">Connection handling</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/startConnection">&ndash;&nbsp;startConnection</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/startConnectionWithAttempts:connectionTimeout:">&ndash;&nbsp;startConnectionWithAttempts:connectionTimeout:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/cancelConnection">&ndash;&nbsp;cancelConnection</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Device identification" name="task_Device identification"></a>
+						<h3 class="subsubtitle task-title">Device identification</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/macAddress">&nbsp;&nbsp;macAddress</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/name">&nbsp;&nbsp;name</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/color">&nbsp;&nbsp;color</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/peripheral">&nbsp;&nbsp;peripheral</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="iBeacon settings" name="task_iBeacon settings"></a>
+						<h3 class="subsubtitle task-title">iBeacon settings</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/proximityUUID">&nbsp;&nbsp;proximityUUID</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/motionProximityUUID">&nbsp;&nbsp;motionProximityUUID</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/major">&nbsp;&nbsp;major</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/minor">&nbsp;&nbsp;minor</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/power">&nbsp;&nbsp;power</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/advInterval">&nbsp;&nbsp;advInterval</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/hardwareVersion">&nbsp;&nbsp;hardwareVersion</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/firmwareVersion">&nbsp;&nbsp;firmwareVersion</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Power management" name="task_Power management"></a>
+						<h3 class="subsubtitle task-title">Power management</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/batteryLevel">&nbsp;&nbsp;batteryLevel</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/batteryType">&nbsp;&nbsp;batteryType</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/remainingLifetime">&nbsp;&nbsp;remainingLifetime</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/basicPowerMode">&nbsp;&nbsp;basicPowerMode</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/smartPowerMode">&nbsp;&nbsp;smartPowerMode</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/estimoteSecureUUIDState">&nbsp;&nbsp;estimoteSecureUUIDState</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/motionUUIDState">&nbsp;&nbsp;motionUUIDState</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Sensors handling" name="task_Sensors handling"></a>
+						<h3 class="subsubtitle task-title">Sensors handling</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/motionState">&nbsp;&nbsp;motionState</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/temperatureState">&nbsp;&nbsp;temperatureState</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/conditionalBroadcastingState">&nbsp;&nbsp;conditionalBroadcastingState</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/motionDetectionState">&nbsp;&nbsp;motionDetectionState</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Reading methods for sensors" name="task_Reading methods for sensors"></a>
+						<h3 class="subsubtitle task-title">Reading methods for sensors</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/readTemperatureWithCompletion:">&ndash;&nbsp;readTemperatureWithCompletion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/readAccelerometerCountWithCompletion:">&ndash;&nbsp;readAccelerometerCountWithCompletion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/resetAccelerometerCountWithCompletion:">&ndash;&nbsp;resetAccelerometerCountWithCompletion:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Writing methods for iBeacon settings" name="task_Writing methods for iBeacon settings"></a>
+						<h3 class="subsubtitle task-title">Writing methods for iBeacon settings</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/writeName:completion:">&ndash;&nbsp;writeName:completion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/writeProximityUUID:completion:">&ndash;&nbsp;writeProximityUUID:completion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/writeMajor:completion:">&ndash;&nbsp;writeMajor:completion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/writeMinor:completion:">&ndash;&nbsp;writeMinor:completion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/writeAdvInterval:completion:">&ndash;&nbsp;writeAdvInterval:completion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/writePower:completion:">&ndash;&nbsp;writePower:completion:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Writing methods for power management" name="task_Writing methods for power management"></a>
+						<h3 class="subsubtitle task-title">Writing methods for power management</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/writeBasicPowerModeEnabled:completion:">&ndash;&nbsp;writeBasicPowerModeEnabled:completion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/writeSmartPowerModeEnabled:completion:">&ndash;&nbsp;writeSmartPowerModeEnabled:completion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/writeConditionalBroadcastingType:completion:">&ndash;&nbsp;writeConditionalBroadcastingType:completion:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Writing methods for security features" name="task_Writing methods for security features"></a>
+						<h3 class="subsubtitle task-title">Writing methods for security features</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/writeEstimoteSecureUUIDEnabled:completion:">&ndash;&nbsp;writeEstimoteSecureUUIDEnabled:completion:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Writing methods for sensors" name="task_Writing methods for sensors"></a>
+						<h3 class="subsubtitle task-title">Writing methods for sensors</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/writeMotionDetectionEnabled:completion:">&ndash;&nbsp;writeMotionDetectionEnabled:completion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/writeMotionUUIDEnabled:completion:">&ndash;&nbsp;writeMotionUUIDEnabled:completion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/writeCalibratedTemperature:completion:">&ndash;&nbsp;writeCalibratedTemperature:completion:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Reset to factory settings" name="task_Reset to factory settings"></a>
+						<h3 class="subsubtitle task-title">Reset to factory settings</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/resetToFactorySettingsWithCompletion:">&ndash;&nbsp;resetToFactorySettingsWithCompletion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/findPeripheralForBeaconWithTimeout:completion:">&ndash;&nbsp;findPeripheralForBeaconWithTimeout:completion:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Firmware update" name="task_Firmware update"></a>
+						<h3 class="subsubtitle task-title">Firmware update</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/checkFirmwareUpdateWithCompletion:">&ndash;&nbsp;checkFirmwareUpdateWithCompletion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/updateFirmwareWithProgress:completion:">&ndash;&nbsp;updateFirmwareWithProgress:completion:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/advInterval" title="advInterval"></a>
+	<h3 class="subsubtitle method-title">advInterval</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The advertising interval of the beacon in ms.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) NSNumber *advInterval</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/writeAdvInterval:completion:">- writeAdvInterval:completion:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/basicPowerMode" title="basicPowerMode"></a>
+	<h3 class="subsubtitle method-title">basicPowerMode</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>A flag indicating availability and status of the Basic Power Mode.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) ESTBeaconPowerSavingMode basicPowerMode</code></div>
+
+    
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>Estimote OS A2.1</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Constants/ESTBeaconPowerSavingMode.html">ESTBeaconPowerSavingMode</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/batteryLevel" title="batteryLevel"></a>
+	<h3 class="subsubtitle method-title">batteryLevel</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The battery charge level for the beacon.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) NSNumber *batteryLevel</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Battery level ranges from 0 (fully discharged) to 100 (fully charged).</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/batteryType" title="batteryType"></a>
+	<h3 class="subsubtitle method-title">batteryType</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The battery model.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) ESTBeaconBatteryType batteryType</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Constants/ESTBeaconBatteryType.html">ESTBeaconBatteryType</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/color" title="color"></a>
+	<h3 class="subsubtitle method-title">color</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The color of the beacon.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) ESTColor color</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This value is stored and retrieved from the Estimote Cloud, which means it might be unavailable under certain circumestances - e.g. no Internet connectivity.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/conditionalBroadcastingState" title="conditionalBroadcastingState"></a>
+	<h3 class="subsubtitle method-title">conditionalBroadcastingState</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>A flag indicating which type of broadcasting is enabled</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) ESTBeaconConditionalBroadcasting conditionalBroadcastingState</code></div>
+
+    
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>Estimote OS A3.0.0</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/writeConditionalBroadcastingType:completion:">- writeConditionalBroadcastingType:completion:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/connectionStatus" title="connectionStatus"></a>
+	<h3 class="subsubtitle method-title">connectionStatus</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The connection status between the user device and the beacon.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) ESTConnectionStatus connectionStatus</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/delegate" title="delegate"></a>
+	<h3 class="subsubtitle method-title">delegate</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Delegate object receiving callbacks.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;ESTBeaconConnectionDelegate&gt; delegate</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/estimoteSecureUUIDState" title="estimoteSecureUUIDState"></a>
+	<h3 class="subsubtitle method-title">estimoteSecureUUIDState</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>A flag indicating status of Estimote Secure UUID.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) ESTBeaconEstimoteSecureUUID estimoteSecureUUIDState</code></div>
+
+    
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>Estimote OS 2.2</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Constants/ESTBeaconEstimoteSecureUUID.html">ESTBeaconEstimoteSecureUUID</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/firmwareVersion" title="firmwareVersion"></a>
+	<h3 class="subsubtitle method-title">firmwareVersion</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The firmware version of the beacon.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) NSString *firmwareVersion</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/checkFirmwareUpdateWithCompletion:">- checkFirmwareUpdateWithCompletion:</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/updateFirmwareWithProgress:completion:">- updateFirmwareWithProgress:completion:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/hardwareVersion" title="hardwareVersion"></a>
+	<h3 class="subsubtitle method-title">hardwareVersion</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The hardware version of the beacon.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) NSString *hardwareVersion</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/identifier" title="identifier"></a>
+	<h3 class="subsubtitle method-title">identifier</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Identifier of the device that you aim to connect.
+Based on the method you used to initialize it may contain:
+- Device Mac address
+- Device iBeacon properties formated as follows: ProximityUUUID:Major:Minor</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSString *identifier</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/macAddress" title="macAddress"></a>
+	<h3 class="subsubtitle method-title">macAddress</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The MAC address of the beacon.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) NSString *macAddress</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/major" title="major"></a>
+	<h3 class="subsubtitle method-title">major</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The most significant value in the beacon.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) NSNumber *major</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/writeMajor:completion:">- writeMajor:completion:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/minor" title="minor"></a>
+	<h3 class="subsubtitle method-title">minor</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The least significant value in the beacon.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) NSNumber *minor</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/writeMinor:completion:">- writeMinor:completion:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/motionDetectionState" title="motionDetectionState"></a>
+	<h3 class="subsubtitle method-title">motionDetectionState</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>A flag indicating if accelerometer is enabled.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) ESTBeaconMotionDetection motionDetectionState</code></div>
+
+    
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>Estimote OS A2.1</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/writeMotionDetectionEnabled:completion:">- writeMotionDetectionEnabled:completion:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/motionProximityUUID" title="motionProximityUUID"></a>
+	<h3 class="subsubtitle method-title">motionProximityUUID</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The proximity ID of the beacon when it&rsquo;s in motion.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) NSUUID *motionProximityUUID</code></div>
+
+    
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>Estimote OS 2.0</p>
+	</div>
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This default to the same value as the <a href="#//api/name/proximityUUID"><code>proximityUUID</code></a>. Setting it to a different value enables you to detect whether a beacon is in motion or not without a need to connect to the beacon. This can be achieved in two ways:</p>
+
+<ol>
+<li><p>When ranging beacons - if the beacon is in motion, the <code>proximityUUID</code> property will be equal to the <code>motionProximityUUID</code>. Note that the <code>motionProximityUUID</code> property is not available unless connected to the beacon, so you need to know its value in advance.</p></li>
+<li><p>When monitoring regions - you can have two separate regions, one with the regular <code>proximityUUID</code> and one with the <code>motionProximityUUID</code>. Enter and exit notifications will then correspond to the beacon starting and stopping to move.</p></li>
+</ol>
+<div class="warning"><p><strong>Warning:</strong> This feature is disabled by default. The option to enable it will be made available in an upcoming update to the SDK.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/motionState" title="motionState"></a>
+	<h3 class="subsubtitle method-title">motionState</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>A flag indicating if the beacon is in motion or not.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) ESTBeaconMotionState motionState</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This value changes:</p>
+
+<ul>
+<li><p>from NO to YES immediately after a still beacon starts moving,</p></li>
+<li><p>from YES to NO after a beacon stops moving and remains still for 2 seconds.</p></li>
+</ul>
+
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/motionUUIDState" title="motionUUIDState"></a>
+	<h3 class="subsubtitle method-title">motionUUIDState</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>A flag indicating if motion UUID is enabled.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) ESTBeaconMotionUUID motionUUIDState</code></div>
+
+    
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>Estimote OS A2.1</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/writeMotionUUIDEnabled:completion:">- writeMotionUUIDEnabled:completion:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/name" title="name"></a>
+	<h3 class="subsubtitle method-title">name</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The name of the beacon.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) NSString *name</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This value is stored and retrieved from the Estimote Cloud.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/peripheral" title="peripheral"></a>
+	<h3 class="subsubtitle method-title">peripheral</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The underlying Bluetooth peripheral device.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) CBPeripheral *peripheral</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/power" title="power"></a>
+	<h3 class="subsubtitle method-title">power</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The power of the beacon&rsquo;s radio signal in dBm.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) NSNumber *power</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This is a <code>char</code> value, so the proper way to retrieve it is <code>[beacon.power charValue]</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/writePower:completion:">- writePower:completion:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/proximityUUID" title="proximityUUID"></a>
+	<h3 class="subsubtitle method-title">proximityUUID</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The proximity ID of the beacon.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) NSUUID *proximityUUID</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/writeProximityUUID:completion:">- writeProximityUUID:completion:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/remainingLifetime" title="remainingLifetime"></a>
+	<h3 class="subsubtitle method-title">remainingLifetime</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Remaining lifetime in days, based on current battery level, advertising interval and broadcasting power values</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) NSNumber *remainingLifetime</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/smartPowerMode" title="smartPowerMode"></a>
+	<h3 class="subsubtitle method-title">smartPowerMode</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>A flag indicating availability and status of the Smart Power Mode.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) ESTBeaconPowerSavingMode smartPowerMode</code></div>
+
+    
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>Estimote OS A2.1</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="../Constants/ESTBeaconPowerSavingMode.html">ESTBeaconPowerSavingMode</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/temperatureState" title="temperatureState"></a>
+	<h3 class="subsubtitle method-title">temperatureState</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>State of temeperature sensor.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) ESTBeaconTemperatureState temperatureState</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/connectionWithBeacon:delegate:" title="connectionWithBeacon:delegate:"></a>
+	<h3 class="subsubtitle method-title">connectionWithBeacon:delegate:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Static method initializing connection object with Estimote beacon</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (instancetype)connectionWithBeacon:(CLBeacon *)<em>beacon</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt;)<em>delegate</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>beacon</em></dt>
+			<dd><p>discovered beacon</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>delegate</em></dt>
+			<dd><p>delegate reference</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>nearable connection object</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/connectionWithMacAddress:delegate:" title="connectionWithMacAddress:delegate:"></a>
+	<h3 class="subsubtitle method-title">connectionWithMacAddress:delegate:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Static method initializing connection object with Estimote beacon</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (instancetype)connectionWithMacAddress:(NSString *)<em>macAddress</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt;)<em>delegate</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>macAddress</em></dt>
+			<dd><p>discovered beacon object MAC address</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>delegate</em></dt>
+			<dd><p>delegate reference</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>beacon connection object</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/connectionWithProximityUUID:major:minor:delegate:" title="connectionWithProximityUUID:major:minor:delegate:"></a>
+	<h3 class="subsubtitle method-title">connectionWithProximityUUID:major:minor:delegate:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Static method initializing connection object with Estimote beacon</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (instancetype)connectionWithProximityUUID:(NSUUID *)<em>proximityUUID</em> major:(CLBeaconMajorValue)<em>major</em> minor:(CLBeaconMinorValue)<em>minor</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt;)<em>delegate</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>proximityUUID</em></dt>
+			<dd><p>discovered beacons Proximity UUID</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>major</em></dt>
+			<dd><p>discovered beacons Major</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>minor</em></dt>
+			<dd><p>discovered beacons Minor</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>delegate</em></dt>
+			<dd><p>delegate reference</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>nearable connection object</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/cancelConnection" title="cancelConnection"></a>
+	<h3 class="subsubtitle method-title">cancelConnection</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Cancels connection procedure</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)cancelConnection</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/checkFirmwareUpdateWithCompletion:" title="checkFirmwareUpdateWithCompletion:"></a>
+	<h3 class="subsubtitle method-title">checkFirmwareUpdateWithCompletion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Checks if an updated firmware is available.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)checkFirmwareUpdateWithCompletion:(ESTFirmwareInfoCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>A block that is called when the check has been completed.</p>
+
+<p>The completion block receives the following parameters:</p>
+
+<ul>
+<li><p><code>ESTBeaconFirmwareInfoVO value</code> - Indicates whether an update is available. If so, it also holds additional information about the update.</p></li>
+<li><p><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</p></li>
+</ul>
+</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The result of the check is available as a <code>ESTBeaconFirmwareInfoVO</code> structure in the completion block and has the following properties:</p>
+
+<ul>
+<li><p><code>BOOL isUpdateAvailable</code> - YES if an update is available, NO if there&rsquo;s no update available. In the latter case, all the other properties of this structure will be <code>nil</code>.</p></li>
+<li><p><code>NSString *hardwareVersion</code> - The version of hardware this firmware update is dedicated for.</p></li>
+<li><p><code>NSString *firmwareVersion</code> - The version of the firmware available for update.</p></li>
+<li><p><code>NSString *changelog</code> - Changes introduced in the new version.</p></li>
+</ul>
+
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/findPeripheralForBeaconWithTimeout:completion:" title="findPeripheralForBeaconWithTimeout:completion:"></a>
+	<h3 class="subsubtitle method-title">findPeripheralForBeaconWithTimeout:completion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Allows to find CBPeripheral device using CBCentralManager scan.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)findPeripheralForBeaconWithTimeout:(NSUInteger)<em>timeout</em> completion:(ESTObjectCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>timeout</em></dt>
+			<dd><p>timoute of scan operation</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>completion block returning reference to ESTBeaconConnection object performing operation.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithBeacon:delegate:startImmediately:" title="initWithBeacon:delegate:startImmediately:"></a>
+	<h3 class="subsubtitle method-title">initWithBeacon:delegate:startImmediately:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Method initializing connection object with Estimote beacon with
+delegate object support</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithBeacon:(CLBeacon *)<em>beacon</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt;)<em>delegate</em> startImmediately:(BOOL)<em>startImmediately</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>beacon</em></dt>
+			<dd><p>discovered beacon</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>delegate</em></dt>
+			<dd><p>delegate to handle callbacks</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>startImmediately</em></dt>
+			<dd><p>indicates if created object should start connection immediately</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>beacon connection object</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithMacAddress:delegate:startImmediately:" title="initWithMacAddress:delegate:startImmediately:"></a>
+	<h3 class="subsubtitle method-title">initWithMacAddress:delegate:startImmediately:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Method initializing connection object with beacon with
+delegate object support</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithMacAddress:(NSString *)<em>macAddress</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt;)<em>delegate</em> startImmediately:(BOOL)<em>startImmediately</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>macAddress</em></dt>
+			<dd><p>discovered beacon object MAC address</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>delegate</em></dt>
+			<dd><p>delegate to handle callbacks</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>startImmediately</em></dt>
+			<dd><p>indicates if created object should start connection immediately</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>beacon connection object</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithProximityUUID:major:minor:delegate:startImmediately:" title="initWithProximityUUID:major:minor:delegate:startImmediately:"></a>
+	<h3 class="subsubtitle method-title">initWithProximityUUID:major:minor:delegate:startImmediately:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Method initializing connection object with Estimote beacon with
+delegate object support</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithProximityUUID:(NSUUID *)<em>proximityUUID</em> major:(CLBeaconMajorValue)<em>major</em> minor:(CLBeaconMinorValue)<em>minor</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt;)<em>delegate</em> startImmediately:(BOOL)<em>startImmediately</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>proximityUUID</em></dt>
+			<dd><p>discovered beacons Proximity UUID</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>major</em></dt>
+			<dd><p>discovered beacons Major</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>minor</em></dt>
+			<dd><p>discovered beacons Minor</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>delegate</em></dt>
+			<dd><p>delegate to handle callbacks</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>startImmediately</em></dt>
+			<dd><p>indicates if created object should start connection immediately</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>beacon connection object</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/readAccelerometerCountWithCompletion:" title="readAccelerometerCountWithCompletion:"></a>
+	<h3 class="subsubtitle method-title">readAccelerometerCountWithCompletion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Retrieves the number of times the beacon has been in motion since the last <a href="#//api/name/resetAccelerometerCountWithCompletion:"><code>resetAccelerometerCountWithCompletion:</code></a>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)readAccelerometerCountWithCompletion:(ESTNumberCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>A block that is called when the counter has been retrieved.</p>
+
+<p>The completion block receives the following parameters:</p>
+
+<ul>
+<li><p><code>NSNumber *value</code> - The value of the counter.</p></li>
+<li><p><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</p></li>
+</ul>
+</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/readTemperatureWithCompletion:" title="readTemperatureWithCompletion:"></a>
+	<h3 class="subsubtitle method-title">readTemperatureWithCompletion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Retrieves the temperature of surrounding environment reported by the beacon.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)readTemperatureWithCompletion:(ESTNumberCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>A block that is called when the temperature has been retrieved from the beacon.</p>
+
+<p>The completion block receives the following parameters:</p>
+
+<ul>
+<li><p><code>NSNumber *value</code> - The temperature in Celsius degrees.</p></li>
+<li><p><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</p></li>
+</ul>
+</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/writeCalibratedTemperature:completion:">- writeCalibratedTemperature:completion:</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/resetAccelerometerCountWithCompletion:" title="resetAccelerometerCountWithCompletion:"></a>
+	<h3 class="subsubtitle method-title">resetAccelerometerCountWithCompletion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Resets the counter - number of times the beacon has been in motion since the last reset.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)resetAccelerometerCountWithCompletion:(ESTUnsignedShortCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>A block that is called when the counter has been reset.</p>
+
+<p>The completion block receives the following parameters:</p>
+
+<ul>
+<li><p><code>NSNumber *value</code> - The new value of the counter.</p></li>
+<li><p><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</p></li>
+</ul>
+</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/resetToFactorySettingsWithCompletion:" title="resetToFactorySettingsWithCompletion:"></a>
+	<h3 class="subsubtitle method-title">resetToFactorySettingsWithCompletion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Resets the beacon&rsquo;s <a href="#//api/name/major"><code>major</code></a>, <a href="#//api/name/minor"><code>minor</code></a>, <a href="#//api/name/proximityUUID"><code>proximityUUID</code></a>, broadcasting <a href="#//api/name/power"><code>power</code></a> and <a href="#//api/name/advInterval"><code>advInterval</code></a> to factory settings.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)resetToFactorySettingsWithCompletion:(ESTCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>A block that is called when the settings have been reset.</p>
+
+<p>The completion block receives the following parameters:</p>
+
+<ul>
+<li><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</li>
+</ul>
+</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="warning"><p><strong>Warning:</strong> This method does not reset the <a href="#//api/name/motionProximityUUID"><code>motionProximityUUID</code></a>. You can reset it yourself to the default value of <code>ESTIMOTE_PROXIMITY_UUID</code> using the <code>&lt;writeMotionProximityUUID:completion:&gt;</code> method.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/startConnection" title="startConnection"></a>
+	<h3 class="subsubtitle method-title">startConnection</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initiates connection procedure</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)startConnection</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/startConnectionWithAttempts:connectionTimeout:" title="startConnectionWithAttempts:connectionTimeout:"></a>
+	<h3 class="subsubtitle method-title">startConnectionWithAttempts:connectionTimeout:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initiates connection procedure with additional params</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)startConnectionWithAttempts:(NSInteger)<em>attempts</em> connectionTimeout:(NSInteger)<em>timeout</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>attempts</em></dt>
+			<dd><p>number of connection attempts</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>timeout</em></dt>
+			<dd><p>timeout of single connection</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/updateFirmwareWithProgress:completion:" title="updateFirmwareWithProgress:completion:"></a>
+	<h3 class="subsubtitle method-title">updateFirmwareWithProgress:completion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Updates the beacon&rsquo;s firmware.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)updateFirmwareWithProgress:(ESTProgressBlock)<em>progress</em> completion:(ESTCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>progress</em></dt>
+			<dd><p>A block that is called throughout the update process to report on the progress.</p>
+
+<p>The progress block receives the following parameters:</p>
+
+<ul>
+<li><p><code>NSInteger value</code> - A percentage value (0-100) indicating the update progress.</p></li>
+<li><p><code>NSString *description</code> - A description of the current stage of the update.</p></li>
+<li><p><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</p></li>
+</ul>
+</dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>A block that is called when the update has been completed.</p>
+
+<p>The completion block receives the following parameters:</p>
+
+<ul>
+<li><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</li>
+</ul>
+</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/writeAdvInterval:completion:" title="writeAdvInterval:completion:"></a>
+	<h3 class="subsubtitle method-title">writeAdvInterval:completion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the advertising interval, i.e. <a href="#//api/name/advInterval"><code>advInterval</code></a>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)writeAdvInterval:(unsigned short)<em>interval</em> completion:(ESTUnsignedShortCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>interval</em></dt>
+			<dd><p>The new <code>advInterval</code> in miliseconds. The value must be in range from 100 to 2000.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>A block that is called when the new <code>advInterval</code> has been set.</p>
+
+<p>The completion block receives the following parameters:</p>
+
+<ul>
+<li><p><code>unsigned short value</code> - The new <code>advInterval</code>.</p></li>
+<li><p><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</p></li>
+</ul>
+</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/writeBasicPowerModeEnabled:completion:" title="writeBasicPowerModeEnabled:completion:"></a>
+	<h3 class="subsubtitle method-title">writeBasicPowerModeEnabled:completion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Enables or disables the <a href="#//api/name/basicPowerMode"><code>basicPowerMode</code></a>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)writeBasicPowerModeEnabled:(BOOL)<em>enable</em> completion:(ESTBoolCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>enable</em></dt>
+			<dd><p>YES to enable, NO to disable the Basic Power Mode.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>A block that is called when the Basic Power Mode has been enabled or disabled.</p>
+
+<p>The completion block receives the following parameters:</p>
+
+<ul>
+<li><p><code>BOOL value</code> - YES if the Basic Power Mode has been enabled, NO if the Basic Power Mode has been disabled.</p></li>
+<li><p><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</p></li>
+</ul>
+</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/writeCalibratedTemperature:completion:" title="writeCalibratedTemperature:completion:"></a>
+	<h3 class="subsubtitle method-title">writeCalibratedTemperature:completion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Calibrates the beacon&rsquo;s thermometer sensor.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)writeCalibratedTemperature:(NSNumber *)<em>temperature</em> completion:(ESTNumberCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>temperature</em></dt>
+			<dd><p>The reference temperature in Celsius degrees.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>A block that is called when the calibration has been completed.</p>
+
+<p>The completion block receives the following parameters:</p>
+
+<ul>
+<li><p><code>NSNumber *value</code> - The current temperature in Celsius degrees, after the calibration.</p></li>
+<li><p><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</p></li>
+</ul>
+</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Beacons are basically calibrated out of the box, but additional manual calibration is recommended in order to minimize measurement error. When the sensor is not calibrated, measurement error is ±4 ℃. After calibration it&rsquo;s ±2 ℃.</p>
+
+<p>To perform calibration you need to keep the beacon at room temperature for a couple of minutes. Use a separate thermometer to read the actual value (in Celsius degrees) and pass it to this method.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/writeConditionalBroadcastingType:completion:" title="writeConditionalBroadcastingType:completion:"></a>
+	<h3 class="subsubtitle method-title">writeConditionalBroadcastingType:completion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Changes the conditional broadcasting type. You also have to set Motion Detection Flag in order to use this feature.
+Possible options are:
+- ESTBeaconConditionalBroadcastingOff - the default mode, beacon is broadcasting all the time
+- ESTBeaconConditionalBroadcastingMotionOnly – beacon only advertises when it&rsquo;s in motion.
+Note that UUID used in advertising packet depends on Motion UUID Flag state.
+- ESTBeaconConditionalBroadcastingFlipToSleep – beacon does not advertise when it&rsquo;s stationary and facing gecko pad up.
+If the beacon is moving or oriented differently it acts normally.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)writeConditionalBroadcastingType:(ESTBeaconConditionalBroadcasting)<em>conditionalBroadcasting</em> completion:(ESTBoolCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>conditionalBroadcasting</em></dt>
+			<dd><p>Conditional broadcasting mode to be set in the beacon.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>A block that is called when the belly mode has been enabled or disabled.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>Estimote OS A3.0.0</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/writeEstimoteSecureUUIDEnabled:completion:" title="writeEstimoteSecureUUIDEnabled:completion:"></a>
+	<h3 class="subsubtitle method-title">writeEstimoteSecureUUIDEnabled:completion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Enables Estimote Secure UUID.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)writeEstimoteSecureUUIDEnabled:(BOOL)<em>enable</em> completion:(ESTBoolCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>enable</em></dt>
+			<dd><p>Yes to enable, No to disable Estimote Secure UUID.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>Block with operation result.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/writeMajor:completion:" title="writeMajor:completion:"></a>
+	<h3 class="subsubtitle method-title">writeMajor:completion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the <a href="#//api/name/major"><code>major</code></a> value.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)writeMajor:(unsigned short)<em>major</em> completion:(ESTUnsignedShortCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>major</em></dt>
+			<dd><p>The new <code>major</code> value.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>A block that is called when the new <code>major</code> value has been set.</p>
+
+<p>The completion block receives the following parameters:</p>
+
+<ul>
+<li><p><code>unsigned short value</code> - The new <code>major</code> value.</p></li>
+<li><p><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</p></li>
+</ul>
+</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/writeMinor:completion:" title="writeMinor:completion:"></a>
+	<h3 class="subsubtitle method-title">writeMinor:completion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the <a href="#//api/name/minor"><code>minor</code></a> value.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)writeMinor:(unsigned short)<em>minor</em> completion:(ESTUnsignedShortCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>minor</em></dt>
+			<dd><p>The new <code>minor</code> value.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>A block that is called when the new <code>minor</code> value has been set.</p>
+
+<p>The completion block receives the following parameters:</p>
+
+<ul>
+<li><p><code>unsigned short value</code> - The new <code>minor</code> value.</p></li>
+<li><p><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</p></li>
+</ul>
+</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/writeMotionDetectionEnabled:completion:" title="writeMotionDetectionEnabled:completion:"></a>
+	<h3 class="subsubtitle method-title">writeMotionDetectionEnabled:completion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Enables or disables the accelerometer allowing to detect if beacon is in motion.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)writeMotionDetectionEnabled:(BOOL)<em>enable</em> completion:(ESTBoolCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>enable</em></dt>
+			<dd><p>YES to enable, NO to disable the accelerometer.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>A block that is called when the accelerometer has been enabled or disabled.</p>
+
+<p>The completion block receives the following parameters:</p>
+
+<ul>
+<li><p><code>BOOL value</code> - YES if the accelerometer has been enabled, NO if the accelerometer has been disabled.</p></li>
+<li><p><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</p></li>
+</ul>
+</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>Estimote OS A2.1</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/writeMotionUUIDEnabled:completion:" title="writeMotionUUIDEnabled:completion:"></a>
+	<h3 class="subsubtitle method-title">writeMotionUUIDEnabled:completion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Enables or disables the motion UUID.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)writeMotionUUIDEnabled:(BOOL)<em>enable</em> completion:(ESTBoolCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>enable</em></dt>
+			<dd><p>YES to enable, NO to disable the motion UUID.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>A block that is called when the motion UUID has been enabled or disabled.</p>
+
+<p>The completion block receives the following parameters:</p>
+
+<ul>
+<li><p><code>BOOL value</code> - YES if the motion UUID has been enabled, NO if the motion UUID has been disabled.</p></li>
+<li><p><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</p></li>
+</ul>
+</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	<div class="method-subsection availability">
+		<h4 class="method-subtitle parameter-title">Availability</h4>
+		<p>Estimote OS A2.1</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/writeName:completion:" title="writeName:completion:"></a>
+	<h3 class="subsubtitle method-title">writeName:completion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the <a href="#//api/name/name"><code>name</code></a> of the beacon.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)writeName:(NSString *)<em>name</em> completion:(ESTStringCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>name</em></dt>
+			<dd><p>The new name of the beacon.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>A block that is called when the new name has been set.</p>
+
+<p>The completion block receives the following parameters:</p>
+
+<ul>
+<li><p><code>NSString *value</code> - The new name of the beacon.</p></li>
+<li><p><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</p></li>
+</ul>
+</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/writePower:completion:" title="writePower:completion:"></a>
+	<h3 class="subsubtitle method-title">writePower:completion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the broadcasting <a href="#//api/name/power"><code>power</code></a>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)writePower:(ESTBeaconPower)<em>power</em> completion:(ESTPowerCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>power</em></dt>
+			<dd><p>The new broadcasting <code>power</code>. Must be one of the <a href="../Constants/ESTBeaconPower.html">ESTBeaconPower</a> values.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>A block that is called when the new broadcasting power has been set.</p>
+
+<p>The completion block receives the following parameters:</p>
+
+<ul>
+<li><code>ESTBeaconPower value</code> - The new broadcasting <code>power</code>.</li>
+<li><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</li>
+</ul>
+</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/writeProximityUUID:completion:" title="writeProximityUUID:completion:"></a>
+	<h3 class="subsubtitle method-title">writeProximityUUID:completion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets the <a href="#//api/name/proximityUUID"><code>proximityUUID</code></a>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)writeProximityUUID:(NSString *)<em>pUUID</em> completion:(ESTStringCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>pUUID</em></dt>
+			<dd><p>The new <code>proximityUUID</code>.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>A block that is called when the new <code>proximityUUID</code> has been set.</p>
+
+<p>The completion block receives the following parameters:</p>
+
+<ul>
+<li><p><code>NSString *value</code> - The new <code>proximityUUID</code>.</p></li>
+<li><p><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</p></li>
+</ul>
+</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="warning"><p><strong>Warning:</strong> If you change the <code>proximityUUID</code>, you might want to consider changing the <a href="#//api/name/motionProximityUUID"><code>motionProximityUUID</code></a> as well. If you don&rsquo;t, the beacon will broadcast two different <code>proximityUUIDs</code> depending on whether its in motion or not!@</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/writeSmartPowerModeEnabled:completion:" title="writeSmartPowerModeEnabled:completion:"></a>
+	<h3 class="subsubtitle method-title">writeSmartPowerModeEnabled:completion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Enables or disables the <a href="#//api/name/smartPowerMode"><code>smartPowerMode</code></a>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)writeSmartPowerModeEnabled:(BOOL)<em>enable</em> completion:(ESTBoolCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>enable</em></dt>
+			<dd><p>YES to enable, NO to disable the Smart Power Mode.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>A block that is called when the Smart Power Mode has been enabled or disabled.</p>
+
+<p>The completion block receives the following parameters:</p>
+
+<ul>
+<li><p><code>BOOL value</code> - YES if the Smart Power Mode has been enabled, NO if the Smart Power Mode has been disabled.</p></li>
+<li><p><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</p></li>
+</ul>
+</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+                    
+                    
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-03-18)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

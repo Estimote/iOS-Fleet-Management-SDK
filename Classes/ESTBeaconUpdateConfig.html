@@ -26,6 +26,8 @@
 					<select id="jumpTo">
 	<option value="top">Jump To&#133;</option>
 	
+	<option value="overview">Overview</option>
+	
 	
 	
 	
@@ -41,9 +43,15 @@
 	
 	<option value="//api/name/basicPowerMode">&nbsp;&nbsp;&nbsp;&nbsp;basicPowerMode</option>
 	
-	<option value="//api/name/estimoteSecureUUID">&nbsp;&nbsp;&nbsp;&nbsp;estimoteSecureUUID</option>
+	<option value="//api/name/estimoteSecureUUIDState">&nbsp;&nbsp;&nbsp;&nbsp;estimoteSecureUUIDState</option>
+	
+	<option value="//api/name/major">&nbsp;&nbsp;&nbsp;&nbsp;major</option>
+	
+	<option value="//api/name/minor">&nbsp;&nbsp;&nbsp;&nbsp;minor</option>
 	
 	<option value="//api/name/power">&nbsp;&nbsp;&nbsp;&nbsp;power</option>
+	
+	<option value="//api/name/proximityUUID">&nbsp;&nbsp;&nbsp;&nbsp;proximityUUID</option>
 	
 	<option value="//api/name/smartPowerMode">&nbsp;&nbsp;&nbsp;&nbsp;smartPowerMode</option>
 	
@@ -60,6 +68,8 @@
 		<nav id="tocContainer" class="isShowingTOC">
 			<ul id="toc" role="tree">
 				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
 
 
 
@@ -77,9 +87,15 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/basicPowerMode">basicPowerMode</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/estimoteSecureUUID">estimoteSecureUUID</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/estimoteSecureUUIDState">estimoteSecureUUIDState</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/major">major</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/minor">minor</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/power">power</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/proximityUUID">proximityUUID</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/smartPowerMode">smartPowerMode</a></span></li>
 	
@@ -124,6 +140,15 @@
                     
                     
 					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>Object of this class contains all settings that should be applied to the Estimote beacon device.
+It&rsquo;s used by <code>ESTBulkUpdater</code> class as a part of <code>ESTBeaconUpdateInfo</code> object.</p>
+					</div>
+					
+					
+					
 					
 					
 					<div class="section section-tasks">
@@ -136,6 +161,24 @@
 
 						<ul class="task-list">
 							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/proximityUUID">&nbsp;&nbsp;proximityUUID</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/major">&nbsp;&nbsp;major</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/minor">&nbsp;&nbsp;minor</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/advInterval">&nbsp;&nbsp;advInterval</a></code>
 	</span>
@@ -161,7 +204,7 @@
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/estimoteSecureUUID">&nbsp;&nbsp;estimoteSecureUUID</a></code>
+		<code><a href="#//api/name/estimoteSecureUUIDState">&nbsp;&nbsp;estimoteSecureUUIDState</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -252,8 +295,8 @@ Recommended use: [NSNumber numberWithInt:ESTBeaconPowerSavingMode].</p>
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/estimoteSecureUUID" title="estimoteSecureUUID"></a>
-	<h3 class="subsubtitle method-title">estimoteSecureUUID</h3>
+	<a name="//api/name/estimoteSecureUUIDState" title="estimoteSecureUUIDState"></a>
+	<h3 class="subsubtitle method-title">estimoteSecureUUIDState</h3>
 	
 	
 	
@@ -264,7 +307,79 @@ Recommended use: [NSNumber numberWithInt:ESTBeaconPowerSavingMode].</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *estimoteSecureUUID</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *estimoteSecureUUIDState</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconUpdateConfig.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/major" title="major"></a>
+	<h3 class="subsubtitle method-title">major</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>To what major beacon should be changed.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *major</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconUpdateConfig.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/minor" title="minor"></a>
+	<h3 class="subsubtitle method-title">minor</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>To what minor beacon should be changed.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *minor</code></div>
 
     
 	
@@ -301,6 +416,42 @@ Recommended use: [NSNumber numberWithInt:ESTBeaconPowerSavingMode].</p>
     
 
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *power</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconUpdateConfig.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/proximityUUID" title="proximityUUID"></a>
+	<h3 class="subsubtitle method-title">proximityUUID</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>To what proximity UUID beacon should be changed.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSString *proximityUUID</code></div>
 
     
 	
@@ -380,7 +531,7 @@ Recommended use: [NSNumber numberWithInt:ESTBeaconPowerSavingMode].</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-02-09)</span><br />
+						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-03-18)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						
