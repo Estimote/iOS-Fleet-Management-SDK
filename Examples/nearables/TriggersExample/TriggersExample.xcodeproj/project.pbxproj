@@ -431,7 +431,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/marcinklimek/Projects/estimote/ios_code/iOS-SDK/EstimoteSDK",
+					"$(SRCROOT)/../../../EstimoteSDK",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -454,7 +454,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/marcinklimek/Projects/estimote/ios_code/iOS-SDK/EstimoteSDK",
+					"$(SRCROOT)/../../../EstimoteSDK",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",

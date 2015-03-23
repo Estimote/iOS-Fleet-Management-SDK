@@ -433,7 +433,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/marcinklimek/Projects/estimote/ios_code/iOS-SDK/EstimoteSDK",
+					"$(SRCROOT)/../../../EstimoteSDK",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -458,7 +458,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/marcinklimek/Projects/estimote/ios_code/iOS-SDK/EstimoteSDK",
+					"$(SRCROOT)/../../../EstimoteSDK",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
