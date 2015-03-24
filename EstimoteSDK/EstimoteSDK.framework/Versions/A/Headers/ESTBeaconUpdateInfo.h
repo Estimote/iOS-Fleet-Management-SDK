@@ -2,7 +2,7 @@
 //  ESBeaconUpdateInfo.h
 //  EstimoteSDK
 //
-//  Version: 3.0.0
+//  Version: 3.0.1
 //  Created by Marcin Klimek on 06/03/14.
 //  Copyright (c) 2014 Estimote. All rights reserved.
 
@@ -97,7 +97,7 @@ typedef NS_ENUM(NSInteger, ESBeaconUpdateInfoStatus)
 /**
  *  Scans for peripheral related with the beacon.
  */
-- (void)findPeripheral;
+- (void)findPeripheralWithTimeout:(NSTimeInterval)timeout;
 
 /**
  *  Allows to update config for the related beacon. Overrides previous settings.

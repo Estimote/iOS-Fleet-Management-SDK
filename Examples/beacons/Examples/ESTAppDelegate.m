@@ -45,7 +45,48 @@
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor],
                                                            NSFontAttributeName: [UIFont systemFontOfSize:18]}];
     
+    // Register for remote notificatons related to Estimote Remote Beacon Management.
+    if (IS_OS_8_OR_LATER)
+    {
+        [[UIApplication sharedApplication] registerForRemoteNotifications];
+        
+        UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeNone);
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes
+                                                                                 categories:nil];
+        
+        [application registerUserNotificationSettings:settings];
+    }
+    else
+    {
+        [[UIApplication sharedApplication] registerForRemoteNotificationTypes: UIRemoteNotificationTypeNone];
+    }
+    
     return YES;
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    // After device is registered in iOS to receive Push Notifications,
+    // device token has to be sent to Estimote Cloud.
+    self.cloudManager = [ESTCloudManager new];
+    [self.cloudManager registerDeviceForRemoteManagement:deviceToken
+                                              completion:^(NSError *error) {
+                                                  
+                                              }];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
+{
+    // Verify if push is comming from Estimote Cloud and is related
+    // to remote beacon management
+    if ([ESTBulkUpdater verifyPushNotificationPayload:userInfo])
+    {
+        // pending settings are fetched and performed automatically
+        // after startWithCloudSettingsAndTimeout: method call
+        [[ESTBulkUpdater sharedInstance] startWithCloudSettingsAndTimeout:60 * 60];
+    }
+    
+    completionHandler(UIBackgroundFetchResultNewData);
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

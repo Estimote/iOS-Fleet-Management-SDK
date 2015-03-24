@@ -1,3 +1,13 @@
+## 3.0.1 (March 24, 2015)
+
+Features:
+- Remote Beacon Management based on Push Notifications
+
+Improvements:
+- Save beacon settings after connection corrected
+- Additional settings tracked by the cloud
+
+
 ## 3.0.0 (March 18, 2015)
 
 Features:

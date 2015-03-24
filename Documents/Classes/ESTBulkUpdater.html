@@ -52,6 +52,8 @@
 	
 	<option value="//api/name/sharedInstance">&nbsp;&nbsp;&nbsp;&nbsp;+ sharedInstance</option>
 	
+	<option value="//api/name/verifyPushNotificationPayload:">&nbsp;&nbsp;&nbsp;&nbsp;+ verifyPushNotificationPayload:</option>
+	
 	
 	
 	
@@ -68,6 +70,8 @@
 	<option value="//api/name/isUpdateInProgressForBeaconWithMacAddress:">&nbsp;&nbsp;&nbsp;&nbsp;- isUpdateInProgressForBeaconWithMacAddress:</option>
 	
 	<option value="//api/name/startWithBeaconInfos:timeout:">&nbsp;&nbsp;&nbsp;&nbsp;- startWithBeaconInfos:timeout:</option>
+	
+	<option value="//api/name/startWithCloudSettingsAndTimeout:">&nbsp;&nbsp;&nbsp;&nbsp;- startWithCloudSettingsAndTimeout:</option>
 	
 	
 	
@@ -107,6 +111,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sharedInstance">sharedInstance</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/verifyPushNotificationPayload:">verifyPushNotificationPayload:</a></span></li>
+	
 </ul></li>
 
 
@@ -124,6 +130,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isUpdateInProgressForBeaconWithMacAddress:">isUpdateInProgressForBeaconWithMacAddress:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/startWithBeaconInfos:timeout:">startWithBeaconInfos:timeout:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/startWithCloudSettingsAndTimeout:">startWithCloudSettingsAndTimeout:</a></span></li>
 	
 </ul></li>
 
@@ -206,6 +214,18 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/sharedInstance">+&nbsp;sharedInstance</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/verifyPushNotificationPayload:">+&nbsp;verifyPushNotificationPayload:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/startWithCloudSettingsAndTimeout:">&ndash;&nbsp;startWithCloudSettingsAndTimeout:</a></code>
 	</span>
 	
 	
@@ -395,6 +415,58 @@
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
 		<p>Returns singleton instance of bulk updater.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBulkUpdater.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/verifyPushNotificationPayload:" title="verifyPushNotificationPayload:"></a>
+	<h3 class="subsubtitle method-title">verifyPushNotificationPayload:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Verify if incoming Push Notification is related
+to pending settings update comming from the Estimote Cloud</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (BOOL)verifyPushNotificationPayload:(NSDictionary *)<em>payload</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>payload</em></dt>
+			<dd><p>userInfo field comming from application:didReceiveRemoteNotification:fetchCompletionHandler:</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>result of verification</p>
 	</div>
 	
 	
@@ -699,6 +771,52 @@
 	
 </div>
 						
+						<div class="section-method">
+	<a name="//api/name/startWithCloudSettingsAndTimeout:" title="startWithCloudSettingsAndTimeout:"></a>
+	<h3 class="subsubtitle method-title">startWithCloudSettingsAndTimeout:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Starts update process based on changes applied in the cloud.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)startWithCloudSettingsAndTimeout:(NSTimeInterval)<em>timeout</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>timeout</em></dt>
+			<dd><p>Timeout for bulk update operation in seconds. 0 means no timeout.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBulkUpdater.h</code><br />
+	</div>				
+	
+	
+</div>
+						
 					</div>
 					
 					
@@ -714,7 +832,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-03-18)</span><br />
+						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-03-24)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						

@@ -2,7 +2,7 @@
 //  ESTCloudManager.h
 //  EstimoteSDK
 //
-//  Version: 3.0.0
+//  Version: 3.0.1
 //  Copyright (c) 2015 Estimote. All rights reserved.
 //
 
@@ -104,6 +104,15 @@
  */
 - (void)fetchColorForBeaconWithMacAddress:(NSString *)macAddress
                                 completion:(ESTObjectCompletionBlock)completion;
+
+/**
+ *  Registers device in Estimote Cloud to enable Estimote Remote Beacon Management.
+ *
+ *  @param deviceToken token of the device received from iOS
+ *  @param completion  completion block
+ */
+- (void)registerDeviceForRemoteManagement:(NSData *)deviceToken
+                               completion:(ESTCompletionBlock)completion;
 
 /**
  *  Allows to fetch all pending settings applied to the beacons in Estimote.

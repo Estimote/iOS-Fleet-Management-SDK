@@ -2,7 +2,7 @@
 //  ESTBeaconFirmwareInfoVO.h
 //  EstimoteSDK
 //
-//  Version: 3.0.0
+//  Version: 3.0.1
 //  Created by Łukasz Pikor on 01.04.2014.
 //  Copyright (c) 2014 Estimote. All rights reserved.
 //

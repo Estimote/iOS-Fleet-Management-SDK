@@ -2,7 +2,7 @@
 //  ESTNearable.h
 //  EstimoteSDK
 //
-//  Version: 3.0.0
+//  Version: 3.0.1
 //  Copyright (c) 2013 Estimote. All rights reserved.
 //
 

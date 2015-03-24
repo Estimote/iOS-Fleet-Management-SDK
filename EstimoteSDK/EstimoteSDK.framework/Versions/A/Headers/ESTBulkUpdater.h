@@ -2,7 +2,7 @@
 //  ESBulkUpdater.h
 //  EstimoteSDK
 //
-//  Version: 3.0.0
+//  Version: 3.0.1
 //  Created by Marcin Klimek on 16/10/14.
 //  Copyright (c) 2014 Estimote. All rights reserved.
 
@@ -37,6 +37,11 @@ extern NSString * const ESTBulkUpdaterProgressNotification;
  *  The object associated with the notification is the bulk updater.
  */
 extern NSString * const ESTBulkUpdaterCompleteNotification;
+
+/**
+ *  The object associated with the notification is the bulk updater.
+ */
+extern NSString * const ESTBulkUpdaterFailNotification;
 
 /**
  *  Notification used to inform user about timeout.
@@ -76,6 +81,23 @@ extern NSString * const ESTBulkUpdaterTimeoutNotification;
  *  @return Returns singleton instance of bulk updater.
  */
 + (ESTBulkUpdater *)sharedInstance;
+
+/**
+ *  Verify if incoming Push Notification is related
+ *  to pending settings update comming from the Estimote Cloud
+ *
+ *  @param payload userInfo field comming from application:didReceiveRemoteNotification:fetchCompletionHandler:
+ *
+ *  @return result of verification
+ */
++ (BOOL)verifyPushNotificationPayload:(NSDictionary *)payload;
+
+/**
+ *  Starts update process based on changes applied in the cloud.
+ *
+ *  @param timeout  Timeout for bulk update operation in seconds. 0 means no timeout.
+ */
+- (void)startWithCloudSettingsAndTimeout:(NSTimeInterval)timeout;
 
 /**
  *  Starts update process for given beacons and updates them accordingly to given config.
