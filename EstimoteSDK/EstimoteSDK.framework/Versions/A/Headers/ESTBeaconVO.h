@@ -27,6 +27,10 @@
 @property (nonatomic, strong) NSNumber *smartPowerMode;
 @property (nonatomic, strong) NSNumber *batteryLevel;
 
+@property (nonatomic, strong) NSNumber *latitude;
+@property (nonatomic, strong) NSNumber *longitude;
+@property (nonatomic, strong) NSString *location;
+
 @property (nonatomic, strong) NSNumber *motionDetection;
 @property (nonatomic, assign) ESTBeaconConditionalBroadcasting conditionalBroadcasting;
 

@@ -2,7 +2,7 @@
 //  ESTNearablesManager.h
 //  EstimoteSDK
 //
-//  Version: 3.0.1
+//  Version: 3.0.2
 //  Copyright (c) 2013 Estimote. All rights reserved.
 //
 #import <Foundation/Foundation.h>

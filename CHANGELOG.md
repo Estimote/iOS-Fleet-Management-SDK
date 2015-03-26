@@ -1,3 +1,15 @@
+## 3.0.2 (March 26, 2015)
+
+Bugfixes:
+- Utility Manager bluetooth status handling fixed
+- Multiple invocations of startEstimoteBeaconDiscovery on ESTUtilityManager corrected
+- Fixed crash when using ESTBeaconConnection with swift
+- ESTBeaconManager locationManager:didStartMonitoringForRegion: proxy fixed
+- ESTBeaconManager locationManager:monitoringDidFailForRegion: proxy fixed
+- ESTBeaconManager locationManager:rangingBeaconsDidFailForRegion: proxy fixed
+- ESTBeaconConnection name property filled during connection
+- ESTSecuredBeaconManager related crash fixed
+
 ## 3.0.1 (March 24, 2015)
 
 Features:

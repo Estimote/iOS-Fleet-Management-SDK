@@ -2,7 +2,7 @@
 //  ESTCloudManager.h
 //  EstimoteSDK
 //
-//  Version: 3.0.1
+//  Version: 3.0.2
 //  Copyright (c) 2015 Estimote. All rights reserved.
 //
 
@@ -15,6 +15,8 @@
  *  ESTCloudManager class is responsible for Estimote Cloud integration. It allows you to 
  */
 @interface ESTCloudManager : NSObject
+
+#pragma mark - Configuration
 
 /**
  * Sets App ID and App Token, enabling communication with the Estimote Cloud API.
@@ -45,6 +47,8 @@
  *  @return flag that indicates if analytics is enabled
  */
 + (BOOL)isAnalyticsEnabled;
+
+#pragma mark - Fetching beacons/nearables informations
 
 /**
  *  Collects all the nearables assigned to your Estimote Cloud account.
@@ -104,6 +108,8 @@
  */
 - (void)fetchColorForBeaconWithMacAddress:(NSString *)macAddress
                                 completion:(ESTObjectCompletionBlock)completion;
+
+#pragma mark - Bulk Updater
 
 /**
  *  Registers device in Estimote Cloud to enable Estimote Remote Beacon Management.

@@ -54,7 +54,7 @@
     
     self.beaconDemoList = @[ @[@"Distance Demo", @"Proximity Demo",@"Notification Demo"],
                              @[@"Temperature", @"Accelerometer", @"Motion UUID"],
-                             @[@"Beacon Settings", @"Update Firmware", @"Fetch beacons from cloud", @"Bulk Update", @"Remote Bulk Update"]];
+                             @[@"Beacon Settings", @"Update Firmware", @"Fetch beacons from cloud", @"Local Bulk Update", @"Remote Bulk Update"]];
 }
 
 #pragma mark - Table view data source

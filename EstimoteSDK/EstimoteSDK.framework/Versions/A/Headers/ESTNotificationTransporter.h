@@ -1,6 +1,6 @@
 //
 //  ESTNotificationTransporter.h
-//  AppleWatchExamples
+//  EstimoteSDK
 //
 //  Copyright (c) 2015 Estimote, Inc. All rights reserved.
 //

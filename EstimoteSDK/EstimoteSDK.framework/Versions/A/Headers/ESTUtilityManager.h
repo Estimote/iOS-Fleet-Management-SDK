@@ -2,12 +2,18 @@
 //  ESTUtilityManager.h
 //  EstimoteSDK
 //
-//  Version: 3.0.1
+//  Version: 3.0.2
 //  Copyright (c) 2015 Estimote. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import "ESTBluetoothBeacon.h"
+
+typedef NS_ENUM(NSInteger, ESTUtilitManagerState)
+{
+    ESTUtilitManagerStateIdle,
+    ESTUtilitManagerStateScanning
+};
 
 @class ESTUtilityManager;
 
@@ -40,6 +46,14 @@
 
 @interface ESTUtilityManager : NSObject
 
+ /**
+ *  Current state of Utility manager
+ */
+@property (nonatomic, assign, readonly) ESTUtilitManagerState state;
+
+/**
+ *  Delegate object.
+ */
 @property (nonatomic, assign) id<ESTUtilityManagerDelegate> delegate;
 
 /**
