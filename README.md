@@ -55,12 +55,12 @@ Estimote SDK 3.0 comes to you as a **framework** rather than a **static library 
 
 Estimote SDK contains a lot of examples and inspiration to help you get familiar with the way it can be used in your app. Alternatively, you can use the provided example apps as a basis for more sophisticated beacon management tools. Examples are completely open source and cover most important areas of beacons and nearables configuration and management.
 
-<img src="images/home_screen.png" alt="Home Screen" width="280">
-<img src="images/ibeacon_list.png" alt="Beacon List" width="280">
-<img src="images/distance_demo.png" alt="Distance Demo" width="280">
-<img src="images/beacon_details.png" alt="Beacon Details" width="280">
-<img src="images/temperature.png" alt="Temerature" width="280">
-<img src="images/notify_demo.png" alt="Notify Demo" width="280">
+<img src="images/home_screen.png" alt="Home Screen" width="230">
+<img src="images/ibeacon_list.png" alt="Beacon List" width="230">
+<img src="images/distance_demo.png" alt="Distance Demo" width="230">
+<img src="images/beacon_details.png" alt="Beacon Details" width="230">
+<img src="images/temperature.png" alt="Temerature" width="230">
+<img src="images/notify_demo.png" alt="Notify Demo" width="230">
 
 ## Technical overview
 
