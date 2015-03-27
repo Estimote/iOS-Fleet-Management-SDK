@@ -1,10 +1,14 @@
 //
-//  ESTTrigger.h
-//  EstimoteSDK
+//   ______     _   _                 _          _____ _____  _  __
+//  |  ____|   | | (_)               | |        / ____|  __ \| |/ /
+//  | |__   ___| |_ _ _ __ ___   ___ | |_ ___  | (___ | |  | | ' /
+//  |  __| / __| __| | '_ ` _ \ / _ \| __/ _ \  \___ \| |  | |  <
+//  | |____\__ \ |_| | | | | | | (_) | ||  __/  ____) | |__| | . \
+//  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
-//  Version: 3.0.2
-//  Copyright (c) 2013 Estimote. All rights reserved.
 //
+//  Version: 3.0.3
+//  Copyright (c) 2015 Estimote. All rights reserved.
 
 #import <Foundation/Foundation.h>
 #import "ESTNearable.h"
@@ -23,7 +27,7 @@
  */
 @interface ESTTrigger : NSObject
 
-@property (nonatomic, assign) id <ESTTriggerDelegate> delegate;
+@property (nonatomic, weak) id <ESTTriggerDelegate> delegate;
 
 /**
  *  Set of rules that should be fulfilled to change trigger state to YES. In all other cases state value is NO.

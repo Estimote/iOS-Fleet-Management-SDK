@@ -50,7 +50,7 @@
 {
     [super viewDidDisappear:animated];
     
-    if (self.beaconConnection.connectionStatus == ESTConnectionStatusConnected)
+    if (self.beaconConnection.connectionStatus == ESTConnectionStatusConnected || self.beaconConnection.connectionStatus == ESTConnectionStatusConnecting)
     {
         if (self.readTemperatureWithInterval)
         {

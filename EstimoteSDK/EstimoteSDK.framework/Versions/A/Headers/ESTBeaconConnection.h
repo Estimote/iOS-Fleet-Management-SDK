@@ -1,9 +1,14 @@
 //
-//  ESTBeaconConnection.h
-//  EstimoteSDK
+//   ______     _   _                 _          _____ _____  _  __
+//  |  ____|   | | (_)               | |        / ____|  __ \| |/ /
+//  | |__   ___| |_ _ _ __ ___   ___ | |_ ___  | (___ | |  | | ' /
+//  |  __| / __| __| | '_ ` _ \ / _ \| __/ _ \  \___ \| |  | |  <
+//  | |____\__ \ |_| | | | | | | (_) | ||  __/  ____) | |__| | . \
+//  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
+//
+//  Version: 3.0.3
 //  Copyright (c) 2015 Estimote. All rights reserved.
-//
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
@@ -579,12 +584,13 @@ enum
                         completion:(ESTBoolCompletionBlock)completion;
 
 /**
- *  Changes the conditional broadcasting type. You also have to set Motion Detection Flag in order to use this feature.
+ *  Changes the conditional broadcasting type. Note that the accelerometer must be enabled for this feature to work
+ *  i.e. you must set Motion Detection Flag in order to use this feature.
  *  Possible options are:
  *  - ESTBeaconConditionalBroadcastingOff - the default mode, beacon is broadcasting all the time
  *  - ESTBeaconConditionalBroadcastingMotionOnly – beacon only advertises when it's in motion.
  *    Note that UUID used in advertising packet depends on Motion UUID Flag state.
- *  - ESTBeaconConditionalBroadcastingFlipToSleep – beacon does not advertise when it's stationary and facing gecko pad up.
+ *  - ESTBeaconConditionalBroadcastingFlipToStop – beacon does not advertise when it's stationary and facing gecko pad up.
  *    If the beacon is moving or oriented differently it acts normally.
  *
  *  @since Estimote OS A3.0.0

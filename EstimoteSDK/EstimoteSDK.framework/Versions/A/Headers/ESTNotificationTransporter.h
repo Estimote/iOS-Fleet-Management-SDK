@@ -1,9 +1,14 @@
 //
-//  ESTNotificationTransporter.h
-//  EstimoteSDK
+//   ______     _   _                 _          _____ _____  _  __
+//  |  ____|   | | (_)               | |        / ____|  __ \| |/ /
+//  | |__   ___| |_ _ _ __ ___   ___ | |_ ___  | (___ | |  | | ' /
+//  |  __| / __| __| | '_ ` _ \ / _ \| __/ _ \  \___ \| |  | |  <
+//  | |____\__ \ |_| | | | | | | (_) | ||  __/  ____) | |__| | . \
+//  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
-//  Copyright (c) 2015 Estimote, Inc. All rights reserved.
 //
+//  Version: 3.0.3
+//  Copyright (c) 2015 Estimote. All rights reserved.
 
 /**
 *  ESTNotificationTransporter is a class that allows you to easily exchange data between host app and extension.

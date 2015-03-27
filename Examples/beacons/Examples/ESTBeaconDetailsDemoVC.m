@@ -100,7 +100,7 @@
      * Disconnect beacon when leaving screen
      */
     
-    if (self.beaconConnection.connectionStatus == ESTConnectionStatusConnected)
+    if (self.beaconConnection.connectionStatus == ESTConnectionStatusConnected || self.beaconConnection.connectionStatus == ESTConnectionStatusConnecting)
     {
         [self.beaconConnection cancelConnection];
     }

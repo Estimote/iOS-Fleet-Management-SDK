@@ -1,13 +1,17 @@
 //
-//  ESBeaconUpdateConfig.h
-//  EstimoteSDK
+//   ______     _   _                 _          _____ _____  _  __
+//  |  ____|   | | (_)               | |        / ____|  __ \| |/ /
+//  | |__   ___| |_ _ _ __ ___   ___ | |_ ___  | (___ | |  | | ' /
+//  |  __| / __| __| | '_ ` _ \ / _ \| __/ _ \  \___ \| |  | |  <
+//  | |____\__ \ |_| | | | | | | (_) | ||  __/  ____) | |__| | . \
+//  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
+//
+//  Version: 3.0.3
+//  Copyright (c) 2015 Estimote. All rights reserved.
+
 //  Config object for |ESBulkUpdater|. It describes what needs to be updated
 //  in each beacon. If the value is nil, that beacon's property won't be changed.
-//
-//  Version: 3.0.2
-//  Created by Marcin Klimek on 06/03/14.
-//  Copyright (c) 2014 Estimote. All rights reserved.
 
 #import <Foundation/Foundation.h>
 #import "ESTBeaconDefinitions.h"

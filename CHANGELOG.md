@@ -1,3 +1,13 @@
+## 3.0.3 (March 27, 2015)
+
+Bugfixes:
+- Crash on Utility manager delegate invocation fixed
+- Multiple invocations of Bulk update fixed
+
+Improvements:
+- Cocoapods support updated for Framework architecture
+- Awesome ASCII art header added:) 
+
 ## 3.0.2 (March 26, 2015)
 
 Bugfixes:
