@@ -7,7 +7,7 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 3.0.3
+//  Version: 3.1.0
 //  Copyright (c) 2015 Estimote. All rights reserved.
 
 #import <Foundation/Foundation.h>
@@ -113,6 +113,29 @@
 - (void)fetchColorForBeaconWithMacAddress:(NSString *)macAddress
                                 completion:(ESTObjectCompletionBlock)completion;
 
+#pragma mark - Saving beacon location
+
+/**
+ *  Assings provided GPS location to the beacon.
+ *
+ *  @param location   CLLocation object with latitude and logitude included
+ *  @param beacon     CLBeacon to which location should be asssigned
+ *  @param completion result information with assigned location provided
+ */
+- (void)assignGPSLocation:(CLLocation *)location
+                 toBeacon:(CLBeacon *)beacon
+               completion:(ESTObjectCompletionBlock)completion;
+
+/**
+ *  Assings current GPS location to provided beacon. 
+ *  Location is obtained internaly using single CLLocation manger scan.
+ *
+ *  @param beacon beacon to which location should be asssigned
+ *  @param completion completion block with assigned location provided
+ */
+- (void)assignCurrentGPSLocationToBeacon:(CLBeacon *)beacon
+                              completion:(ESTObjectCompletionBlock)completion;
+
 #pragma mark - Bulk Updater
 
 /**
@@ -131,5 +154,6 @@
  *  @param completion completion block returning Array of ESTBeaconUpdateInfo object
  */
 - (void)fetchPendingBeaconsSettingsWithCompletion:(ESTArrayCompletionBlock)completion;
+
 
 @end

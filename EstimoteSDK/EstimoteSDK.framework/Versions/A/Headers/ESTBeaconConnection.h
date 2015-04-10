@@ -7,7 +7,7 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 3.0.3
+//  Version: 3.1.0
 //  Copyright (c) 2015 Estimote. All rights reserved.
 
 #import <Foundation/Foundation.h>
@@ -34,24 +34,24 @@ enum
 @optional
 
 /**
- * Tells the delegate that an attempt to connect to a nearable succeeded and the connection has been established.
+ * Tells the delegate that an attempt to connect to a beacon succeeded and the connection has been established.
  *
- * @param connection The nearable connection object reporting the event.
+ * @param connection The beacon connection object reporting the event.
  */
 - (void)beaconConnectionDidSucceed:(ESTBeaconConnection *)connection;
 
 /**
- * Tells the delegate that an attempt to connect to a nearable has failed.
+ * Tells the delegate that an attempt to connect to a beacon has failed.
  *
- * @param connection The nearable connection object reporting the event.
+ * @param connection The beacon connection object reporting the event.
  * @param error An error object containing the error code that indicates why connection failed.
  */
 - (void)beaconConnection:(ESTBeaconConnection *)connection didFailWithError:(NSError *)error;
 
 /**
- * Tells the delegate that a previously connected nearable has disconnected.
+ * Tells the delegate that a previously connected beacon has disconnected.
  *
- * @param connection The nearable connection object reporting the event.
+ * @param connection The beacon connection object reporting the event.
  * @param error An error object containing the error code that indicates why the beacon disconnected.
  */
 - (void)beaconConnection:(ESTBeaconConnection *)connection didDisconnectWithError:(NSError *)error;
@@ -108,7 +108,7 @@ enum
  *  @param minor discovered beacons Minor
  *  @param delegate delegate reference
  *
- *  @return nearable connection object
+ *  @return beacon connection object
  */
 + (instancetype)connectionWithProximityUUID:(NSUUID *)proximityUUID
                                       major:(CLBeaconMajorValue)major
@@ -121,7 +121,7 @@ enum
  *  @param beacon discovered beacon
  *  @param delegate delegate reference
  *
- *  @return nearable connection object
+ *  @return beacon connection object
  */
 + (instancetype)connectionWithBeacon:(CLBeacon *)beacon
                             delegate:(id<ESTBeaconConnectionDelegate>)delegate;
@@ -208,6 +208,11 @@ enum
  *  Cancels connection procedure
  */
 - (void)cancelConnection;
+
+/**
+ *  Performs disconnect procedure for connected device.
+ */
+- (void)disconnect;
 
 
 #pragma mark - Device identification

@@ -19,6 +19,8 @@
 #import "ESTMotionUUIDDemoVC.h"
 #import "ESTBulkUpdaterDemoVC.h"
 #import "ESTBulkUpdaterRemoteDemoVC.h"
+#import "ESTSendGPSDemoVC.h"
+
 
 @interface ESTDemoTableViewCell : UITableViewCell
 
@@ -54,7 +56,9 @@
     
     self.beaconDemoList = @[ @[@"Distance Demo", @"Proximity Demo",@"Notification Demo"],
                              @[@"Temperature", @"Accelerometer", @"Motion UUID"],
-                             @[@"Beacon Settings", @"Update Firmware", @"Fetch beacons from cloud", @"Local Bulk Update", @"Remote Bulk Update"]];
+                             @[@"Beacon Settings", @"Update Firmware", @"Local Bulk Update", @"Remote Bulk Update"],
+                             @[@"Fetch beacons from cloud", @"Send Beacons GPS Position"]
+                             ];
 }
 
 #pragma mark - Table view data source
@@ -77,6 +81,8 @@
         return @"Sensor demos";
     if(section == 2)
         return @"Utilities demos";
+    if(section == 3)
+        return @"Estimote Cloud demos";
     
     return nil;
 }
@@ -208,12 +214,6 @@
             }
             case 2:
             {
-                demoViewController = [ESTCloudBeaconTableVC new];
-                
-                break;
-            }
-            case 3:
-            {
                 demoViewController = [[ESTBeaconTableVC alloc] initWithScanType:ESTScanTypeBluetooth
                                                                      completion:^(ESTBluetoothBeacon *beacon) {
                                                                          
@@ -222,7 +222,7 @@
                                                                      }];
                 break;
             }
-            case 4:
+            case 3:
             {
                 demoViewController = [[ESTBulkUpdaterRemoteDemoVC alloc] init];
                                                                     
@@ -233,7 +233,33 @@
                 break;
         }
     }
-    
+    else if (indexPath.section == 3)
+    {
+        switch (indexPath.row)
+        {
+            case 0:
+            {
+                demoViewController = [ESTCloudBeaconTableVC new];
+                
+                break;
+            }
+            case 1:
+            {
+                demoViewController = [[ESTBeaconTableVC alloc] initWithScanType:ESTScanTypeBeacon
+                                                                     completion:^(CLBeacon *beacon) {
+                                                                         
+                                                                         ESTSendGPSDemoVC *demoVC = [[ESTSendGPSDemoVC alloc] initWithBeacon:beacon];
+                                                                         [self.navigationController pushViewController:demoVC animated:YES];
+                                                                     }];
+                
+                break;
+            }
+                
+            default:
+                break;
+        }
+    }
+
     if (demoViewController)
     {
         [self.navigationController pushViewController:demoViewController animated:YES];

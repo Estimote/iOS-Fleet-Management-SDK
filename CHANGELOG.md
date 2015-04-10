@@ -1,3 +1,17 @@
+## 3.1.0 (April 10, 2015)
+
+Features:
+- Option to mark GPS location for beacon
+
+Bugfixes:
+- Memory leak in secured region monitoring
+- Disconnect after OTA procedure issue
+- Analytics not sending events in regular/secured beacon manager
+- Motion state incorrect value sent to delegate fixed
+- Caching beacons corrected
+- Secured beacons ranging delay fixed
+- returnAllRangedBeaconsAtOnce flag of ESTBeaconManager fixed 
+
 ## 3.0.3 (March 27, 2015)
 
 Bugfixes:
@@ -29,7 +43,6 @@ Improvements:
 - Save beacon settings after connection corrected
 - Additional settings tracked by the cloud
 
-
 ## 3.0.0 (March 18, 2015)
 
 Features:
@@ -40,7 +53,6 @@ Improvements:
 - New architecture of Estimote SDK
 - Support for firmware 3.0.1 (Authorization change)
 
-
 ## 3.0.0-beta (February 27, 2015)
 
 IMPORTANT:
@@ -49,7 +61,6 @@ This is work in progress version of Estimote SDK 3.0.0. Functionality is current
 Improvements:
 - New architecture of Estimote SDK
 - Support for firmware 3.0.0
-
 
 ## 2.4.0 (February 9, 2015)
 
@@ -62,7 +73,6 @@ Improvements:
 Bugfixes:
 - Firmware and Hardware version formatting of nearables corrected 
 - Nearables monitoring fixed (constant monitoring issue)
-
 
 ## 2.3.2 (January 16, 2015)
 

@@ -14,6 +14,8 @@
 		952CEA5D1A88B9CF003A99A6 /* ESTBeaconDetailsDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 952CEA5B1A88B9CF003A99A6 /* ESTBeaconDetailsDemoVC.xib */; };
 		954111B81AB1ADEB00340377 /* ESTBulkUpdaterDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 954111B61AB1ADEB00340377 /* ESTBulkUpdaterDemoVC.m */; };
 		954111B91AB1ADEB00340377 /* ESTBulkUpdaterDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 954111B71AB1ADEB00340377 /* ESTBulkUpdaterDemoVC.xib */; };
+		956A942A1AD7D2B100FC0FFA /* ESTSendGPSDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 956A94281AD7D2B100FC0FFA /* ESTSendGPSDemoVC.m */; };
+		956A942B1AD7D2B100FC0FFA /* ESTSendGPSDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 956A94291AD7D2B100FC0FFA /* ESTSendGPSDemoVC.xib */; };
 		956C575F1AA8AAC900B468D4 /* ESTMotionDetectionDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 956C57541AA8AAC900B468D4 /* ESTMotionDetectionDemoVC.m */; };
 		956C57601AA8AAC900B468D4 /* ESTMotionDetectionDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 956C57551AA8AAC900B468D4 /* ESTMotionDetectionDemoVC.xib */; };
 		956C57611AA8AAC900B468D4 /* ESTMotionUUIDDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 956C57571AA8AAC900B468D4 /* ESTMotionUUIDDemoVC.m */; };
@@ -53,6 +55,9 @@
 		954111B51AB1ADEB00340377 /* ESTBulkUpdaterDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBulkUpdaterDemoVC.h; sourceTree = "<group>"; };
 		954111B61AB1ADEB00340377 /* ESTBulkUpdaterDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTBulkUpdaterDemoVC.m; sourceTree = "<group>"; };
 		954111B71AB1ADEB00340377 /* ESTBulkUpdaterDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESTBulkUpdaterDemoVC.xib; sourceTree = "<group>"; };
+		956A94271AD7D2B100FC0FFA /* ESTSendGPSDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTSendGPSDemoVC.h; sourceTree = "<group>"; };
+		956A94281AD7D2B100FC0FFA /* ESTSendGPSDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTSendGPSDemoVC.m; sourceTree = "<group>"; };
+		956A94291AD7D2B100FC0FFA /* ESTSendGPSDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESTSendGPSDemoVC.xib; sourceTree = "<group>"; };
 		956C57531AA8AAC900B468D4 /* ESTMotionDetectionDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTMotionDetectionDemoVC.h; sourceTree = "<group>"; };
 		956C57541AA8AAC900B468D4 /* ESTMotionDetectionDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTMotionDetectionDemoVC.m; sourceTree = "<group>"; };
 		956C57551AA8AAC900B468D4 /* ESTMotionDetectionDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESTMotionDetectionDemoVC.xib; sourceTree = "<group>"; };
@@ -188,6 +193,9 @@
 				952B148D1AB8410700573526 /* ESTBulkUpdaterRemoteDemoVC.h */,
 				952B148E1AB8410700573526 /* ESTBulkUpdaterRemoteDemoVC.m */,
 				952B148F1AB8410700573526 /* ESTBulkUpdaterRemoteDemoVC.xib */,
+				956A94271AD7D2B100FC0FFA /* ESTSendGPSDemoVC.h */,
+				956A94281AD7D2B100FC0FFA /* ESTSendGPSDemoVC.m */,
+				956A94291AD7D2B100FC0FFA /* ESTSendGPSDemoVC.xib */,
 				AC39C3D518D72A6F00B38212 /* Images.xcassets */,
 				AC39C3C418D72A6F00B38212 /* Supporting Files */,
 			);
@@ -279,6 +287,7 @@
 				AC39C3D618D72A6F00B38212 /* Images.xcassets in Resources */,
 				AC39C3C818D72A6F00B38212 /* InfoPlist.strings in Resources */,
 				956C57621AA8AAC900B468D4 /* ESTMotionUUIDDemoVC.xib in Resources */,
+				956A942B1AD7D2B100FC0FFA /* ESTSendGPSDemoVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +310,7 @@
 				AC39C3F418D72BA700B38212 /* ESTBeaconTableVC.m in Sources */,
 				956C57611AA8AAC900B468D4 /* ESTMotionUUIDDemoVC.m in Sources */,
 				AC39C40118D8564100B38212 /* ESTNotificationDemoVC.m in Sources */,
+				956A942A1AD7D2B100FC0FFA /* ESTSendGPSDemoVC.m in Sources */,
 				A12D28DB18E9638100872A95 /* ESTUpdateFirmwareDemoVC.m in Sources */,
 				952CEA5C1A88B9CF003A99A6 /* ESTBeaconDetailsDemoVC.m in Sources */,
 				AC39C3CE18D72A6F00B38212 /* ESTAppDelegate.m in Sources */,
@@ -413,7 +423,7 @@
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "b90fa7e9-409b-4296-9e59-f4508ac7c093";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -440,7 +450,7 @@
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "b90fa7e9-409b-4296-9e59-f4508ac7c093";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

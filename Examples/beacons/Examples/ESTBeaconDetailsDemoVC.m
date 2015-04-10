@@ -468,6 +468,8 @@
     }
     else if (textField == self.powerTextField)
     {
+        
+        
         [self.beaconConnection writePower:[textField.text integerValue] completion:^(ESTBeaconPower power, NSError *error)
         {
             if (error)
@@ -475,7 +477,7 @@
                 NSLog(@"Error Power write: %@", error.localizedDescription);
             }
             
-            self.powerTextField.text = [NSString stringWithFormat:@"%tx", power];
+            self.powerTextField.text = [NSString stringWithFormat:@"%i", power];
         }];
     }
 }
