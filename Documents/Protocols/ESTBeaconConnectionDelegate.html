@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>ESTTrigger Class Reference</title>
+		<title>ESTBeaconConnectionDelegate Protocol Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">ESTTrigger Class Reference</h1>
+				<h1 class="hideInXcode">ESTBeaconConnectionDelegate Protocol Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -37,22 +37,19 @@
 	
 	
 	
-	<option value="properties">Properties</option>
-	
-	<option value="//api/name/identifier">&nbsp;&nbsp;&nbsp;&nbsp;identifier</option>
-	
-	<option value="//api/name/rules">&nbsp;&nbsp;&nbsp;&nbsp;rules</option>
-	
-	<option value="//api/name/state">&nbsp;&nbsp;&nbsp;&nbsp;state</option>
-	
-	
 	
 	
 	
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/initWithRules:identifier:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithRules:identifier:</option>
+	<option value="//api/name/beaconConnection:didDisconnectWithError:">&nbsp;&nbsp;&nbsp;&nbsp;- beaconConnection:didDisconnectWithError:</option>
+	
+	<option value="//api/name/beaconConnection:didFailWithError:">&nbsp;&nbsp;&nbsp;&nbsp;- beaconConnection:didFailWithError:</option>
+	
+	<option value="//api/name/beaconConnection:motionStateChanged:">&nbsp;&nbsp;&nbsp;&nbsp;- beaconConnection:motionStateChanged:</option>
+	
+	<option value="//api/name/beaconConnectionDidSucceed:">&nbsp;&nbsp;&nbsp;&nbsp;- beaconConnectionDidSucceed:</option>
 	
 	
 	
@@ -76,23 +73,19 @@
 
 
 
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/identifier">identifier</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/rules">rules</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/state">state</a></span></li>
-	
-</ul></li>
-
 
 
 
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithRules:identifier:">initWithRules:identifier:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beaconConnection:didDisconnectWithError:">beaconConnection:didDisconnectWithError:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beaconConnection:didFailWithError:">beaconConnection:didFailWithError:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beaconConnection:motionStateChanged:">beaconConnection:motionStateChanged:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beaconConnectionDidSucceed:">beaconConnectionDidSucceed:</a></span></li>
 	
 </ul></li>
 
@@ -101,7 +94,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="ESTTrigger Class Reference" name="top"></a>
+				<a title="ESTBeaconConnectionDelegate Protocol Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -110,18 +103,18 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">ESTTrigger Class Reference</h1>
+						<h1 class="title title-header">ESTBeaconConnectionDelegate Protocol Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
-	<td class="specification-title">Inherits from</td>
+	<td class="specification-title">Conforms to</td>
 	<td class="specification-value">NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">ESTTrigger.h<br />ESTTrigger.m</td>
+	<td class="specification-value">ESTBeaconConnection.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -131,7 +124,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>The <code>ESTTrigger</code> class defines the trigger object that is a part of Estimote Trigger Engine. Trigger allows to create real life situation definition based on particular set of rules. Trigger should be passed to <a href="../Classes/ESTTriggerManager.html"><code>ESTTriggerManager</code></a> class object to start monitoring for its state changes.</p>
+						<p>The <code>ESTBeaconConnectionDelegate</code> protocol defines the delegate methods used to receive updates about <a href="../Classes/ESTBeaconConnection.html"><code>ESTBeaconConnection</code></a> connection status, as well as sensor related updates once a connection to the beacon has been established.</p>
 					</div>
 					
 					
@@ -149,25 +142,25 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/rules">&nbsp;&nbsp;rules</a></code>
+		<code><a href="#//api/name/beaconConnectionDidSucceed:">&ndash;&nbsp;beaconConnectionDidSucceed:</a></code>
 	</span>
-	<span class="task-item-suffix">property</span>
+	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/identifier">&nbsp;&nbsp;identifier</a></code>
+		<code><a href="#//api/name/beaconConnection:didFailWithError:">&ndash;&nbsp;beaconConnection:didFailWithError:</a></code>
 	</span>
-	<span class="task-item-suffix">property</span>
+	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/state">&nbsp;&nbsp;state</a></code>
+		<code><a href="#//api/name/beaconConnection:didDisconnectWithError:">&ndash;&nbsp;beaconConnection:didDisconnectWithError:</a></code>
 	</span>
-	<span class="task-item-suffix">property</span>
+	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/initWithRules:identifier:">&ndash;&nbsp;initWithRules:identifier:</a></code>
+		<code><a href="#//api/name/beaconConnection:motionStateChanged:">&ndash;&nbsp;beaconConnection:motionStateChanged:</a></code>
 	</span>
 	
 	
@@ -180,120 +173,6 @@
 					
 					
 					
-					<div class="section section-methods">
-						<a title="Properties" name="properties"></a>
-						<h2 class="subtitle subtitle-methods">Properties</h2>
-						
-						<div class="section-method">
-	<a name="//api/name/identifier" title="identifier"></a>
-	<h3 class="subsubtitle method-title">identifier</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Unique trigger identifier allows to reference particular object.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSString *identifier</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTTrigger.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/rules" title="rules"></a>
-	<h3 class="subsubtitle method-title">rules</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Set of rules that should be fulfilled to change trigger state to YES. In all other cases state value is NO.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSArray *rules</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTTrigger.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/state" title="state"></a>
-	<h3 class="subsubtitle method-title">state</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>State of trigger. Its value is YES when all defined rules are fulfilled.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) BOOL state</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTTrigger.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-					</div>
-					
 					
 					
 					
@@ -303,18 +182,18 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/initWithRules:identifier:" title="initWithRules:identifier:"></a>
-	<h3 class="subsubtitle method-title">initWithRules:identifier:</h3>
+	<a name="//api/name/beaconConnection:didDisconnectWithError:" title="beaconConnection:didDisconnectWithError:"></a>
+	<h3 class="subsubtitle method-title">beaconConnection:didDisconnectWithError:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Initialization method that allows to create trigger obejct.</p>
+		<p>Tells the delegate that a previously connected beacon has disconnected.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (instancetype)initWithRules:(NSArray *)<em>rules</em> identifier:(NSString *)<em>identifier</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)beaconConnection:(ESTBeaconConnection *)<em>connection</em> didDisconnectWithError:(NSError *)<em>error</em></code></div>
 
     
 	
@@ -322,23 +201,18 @@
 		<h4 class="method-subtitle parameter-title">Parameters</h4>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>rules</em></dt>
-			<dd><p>Array of <a href="../Classes/ESTRule.html"><code>ESTRule</code></a> rule objects</p></dd>
+			<dt><em>connection</em></dt>
+			<dd><p>The beacon connection object reporting the event.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>identifier</em></dt>
-			<dd><p>Unique identifier of trigger</p></dd>
+			<dt><em>error</em></dt>
+			<dd><p>An error object containing the error code that indicates why the beacon disconnected.</p></dd>
 		</dl>
 		
 	</div>
 	
 	
-	
-	<div class="method-subsection return">
-		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>create trigger object</p>
-	</div>
 	
 	
 	
@@ -352,7 +226,155 @@
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTTrigger.h</code><br />
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/beaconConnection:didFailWithError:" title="beaconConnection:didFailWithError:"></a>
+	<h3 class="subsubtitle method-title">beaconConnection:didFailWithError:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Tells the delegate that an attempt to connect to a beacon has failed.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)beaconConnection:(ESTBeaconConnection *)<em>connection</em> didFailWithError:(NSError *)<em>error</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>connection</em></dt>
+			<dd><p>The beacon connection object reporting the event.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>error</em></dt>
+			<dd><p>An error object containing the error code that indicates why connection failed.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/beaconConnection:motionStateChanged:" title="beaconConnection:motionStateChanged:"></a>
+	<h3 class="subsubtitle method-title">beaconConnection:motionStateChanged:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Tells the delegate that a beacon&rsquo;s <a href="../Classes/ESTBeaconConnection.html#//api/name/motionState"><code>[ESTBeaconConnection motionState]</code></a> value has changed.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)beaconConnection:(ESTBeaconConnection *)<em>connection</em> motionStateChanged:(ESTBeaconMotionState)<em>state</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>connection</em></dt>
+			<dd><p>The beacon connection object reporting the event.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>state</em></dt>
+			<dd><p>The new <code>motionState</code> value.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/beaconConnectionDidSucceed:" title="beaconConnectionDidSucceed:"></a>
+	<h3 class="subsubtitle method-title">beaconConnectionDidSucceed:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Tells the delegate that an attempt to connect to a beacon succeeded and the connection has been established.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)beaconConnectionDidSucceed:(ESTBeaconConnection *)<em>connection</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>connection</em></dt>
+			<dd><p>The beacon connection object reporting the event.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
 	</div>				
 	
 	
