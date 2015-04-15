@@ -146,7 +146,7 @@ ESTBeaconRegion *region = [[ESTBeaconRegion alloc] initWithProximityUUID:ESTIMOT
  self.beaconManager = [[ESTBeaconManager alloc] init];
  self.beaconManager.delegate = self;
  
- self.beaconManagerstartEstimoteBeaconDiscoveryForRegion:region updateInterval:1.];
+ self.beaconManager startEstimoteBeaconDiscoveryForRegion:region updateInterval:1.];
 ```
 
 **SDK 3.0 syntax:**
@@ -158,11 +158,13 @@ self.utilityManager.delegate = self;
 [self.utilityManager startEstimoteBeaconDiscovery];
 ```
 
+or you can specify update interval for callback method
+
 ```
 self.utilityManager = [[ESTUtilityManager alloc] init];
 self.utilityManager.delegate = self;
 
-[self.utilityManager startEstimoteBeaconDiscoveryWithUpdateInterval:1.];
+[self.utilityManager startEstimoteBeaconDiscoveryWithUpdateInterval:2.5];
 ```
 
 As a result of scanning array of `ESTBluetoothBeacon` objects in delivered to `utilityManager:didDiscoverBeacons:` delegate method.
@@ -296,7 +298,7 @@ beacon.delegate = self;
 
 ```
 ESTBeaconConnection *beaconConnection = self.doorBeaconConnection;
-beaconConnection = self;
+beaconConnection.delegate = self;
 [beaconConnection startConnection];
 ```
 
