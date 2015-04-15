@@ -95,7 +95,7 @@ In the typical workflow you will wrap your rules in ESTTrigger object and pass i
 
 **Utility** was created to support apps that manage Estimote Beacons and Nearables. It provides beacon connectivity and configuration methods, so you can easily change settings like Proximity UUID, Major, Minor, Power Modes and much more. It also allows you to easily perform Over The Air firmware update. It works mainly with Core Bluetooth framework. Main classes you are going to use are:
 
-* **ESTUtilityManager** - Allows to discover devices using both Core Location and Core Bluetooth. Discovered device identifier can then be used to connect and configure the device.
+* **ESTUtilityManager** - Allows to discover devices using Core Bluetooth. Discovered device identifier can then be used to connect and configure the device.
 * **ESTBeaconConnection** - Manages connection and configuration of a particular device. Allows to both read and write all the settings.
 * **ESTBeaconFirmwareUpdate** - Needed to perform Over The Air firmware update of an Estimote Beacon.
 
