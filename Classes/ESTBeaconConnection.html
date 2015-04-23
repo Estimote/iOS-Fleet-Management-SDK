@@ -111,6 +111,8 @@
 	
 	<option value="//api/name/checkFirmwareUpdateWithCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- checkFirmwareUpdateWithCompletion:</option>
 	
+	<option value="//api/name/disconnect">&nbsp;&nbsp;&nbsp;&nbsp;- disconnect</option>
+	
 	<option value="//api/name/findPeripheralForBeaconWithTimeout:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- findPeripheralForBeaconWithTimeout:completion:</option>
 	
 	<option value="//api/name/initWithBeacon:delegate:startImmediately:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithBeacon:delegate:startImmediately:</option>
@@ -281,6 +283,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/checkFirmwareUpdateWithCompletion:">checkFirmwareUpdateWithCompletion:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/disconnect">disconnect</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/findPeripheralForBeaconWithTimeout:completion:">findPeripheralForBeaconWithTimeout:completion:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithBeacon:delegate:startImmediately:">initWithBeacon:delegate:startImmediately:</a></span></li>
@@ -368,11 +372,11 @@
 						<h2 class="subtitle subtitle-overview">Overview</h2>
 						<p>The <code>ESTBeaconConnection</code> class defines the interface for interacting with a single Estimote beacon. It enables you to connect to the device, retrieve properties and change its configuration settings.</p>
 
-<p>The ESTBeaconConnection instance can be intialized using CLBeacon object or mac address being unique identifier of particular device. Fetch required beacon details you can use:</p>
+<p>The ESTBeaconConnection instance can be initialized using CLBeacon object or mac address being unique identifier of particular device. Fetch required beacon details you can use:</p>
 
 <ul>
-<li><p><code>startRangingBeaconsInRegion:</code> - which is a CoreLocation based scan and deliveres <code>CLBeacon</code> objects.</p></li>
-<li><p><code>startEstimoteBeaconsDiscovery</code> - which is a CoreBluetooth based scan and deliveres <code>ESTBluetoothBeacon</code> object containing mac address.</p></li>
+<li><p><code>startRangingBeaconsInRegion:</code> - which is a CoreLocation based scan and delivers <code>CLBeacon</code> objects.</p></li>
+<li><p><code>startEstimoteBeaconsDiscovery</code> - which is a CoreBluetooth based scan and delivers <code>ESTBluetoothBeacon</code> object containing mac address.</p></li>
 </ul>
 
 
@@ -469,6 +473,12 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/cancelConnection">&ndash;&nbsp;cancelConnection</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/disconnect">&ndash;&nbsp;disconnect</a></code>
 	</span>
 	
 	
@@ -1036,7 +1046,7 @@
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>This value is stored and retrieved from the Estimote Cloud, which means it might be unavailable under certain circumestances - e.g. no Internet connectivity.</p>
+		<p>This value is stored and retrieved from the Estimote Cloud, which means it might be unavailable under certain circumstances - e.g. no Internet connectivity.</p>
 	</div>
 	
 	
@@ -1318,7 +1328,7 @@
 		<p>Identifier of the device that you aim to connect.
 Based on the method you used to initialize it may contain:
 - Device Mac address
-- Device iBeacon properties formated as follows: ProximityUUUID:Major:Minor</p>
+- Device iBeacon properties formatted as follows: ProximityUUUID:Major:Minor</p>
 	</div>		
 	
     
@@ -1937,7 +1947,7 @@ Based on the method you used to initialize it may contain:
 	
 	
 	<div class="method-subsection brief-description">
-		<p>State of temeperature sensor.</p>
+		<p>State of temperature sensor.</p>
 	</div>		
 	
     
@@ -2009,7 +2019,7 @@ Based on the method you used to initialize it may contain:
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>nearable connection object</p>
+		<p>beacon connection object</p>
 	</div>
 	
 	
@@ -2131,7 +2141,7 @@ Based on the method you used to initialize it may contain:
 	
 	<div class="method-subsection return">
 		<h4 class="method-subtitle parameter-title">Return Value</h4>
-		<p>nearable connection object</p>
+		<p>beacon connection object</p>
 	</div>
 	
 	
@@ -2264,6 +2274,42 @@ Based on the method you used to initialize it may contain:
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/disconnect" title="disconnect"></a>
+	<h3 class="subsubtitle method-title">disconnect</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Performs disconnect procedure for connected device.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)disconnect</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/findPeripheralForBeaconWithTimeout:completion:" title="findPeripheralForBeaconWithTimeout:completion:"></a>
 	<h3 class="subsubtitle method-title">findPeripheralForBeaconWithTimeout:completion:</h3>
 	
@@ -2284,7 +2330,7 @@ Based on the method you used to initialize it may contain:
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>timeout</em></dt>
-			<dd><p>timoute of scan operation</p></dd>
+			<dd><p>timeout of scan operation</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
@@ -2914,7 +2960,7 @@ delegate object support</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>interval</em></dt>
-			<dd><p>The new <code>advInterval</code> in miliseconds. The value must be in range from 100 to 2000.</p></dd>
+			<dd><p>The new <code>advInterval</code> in milliseconds. The value must be in range from 100 to 2000.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
@@ -3084,12 +3130,13 @@ delegate object support</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Changes the conditional broadcasting type. You also have to set Motion Detection Flag in order to use this feature.
+		<p>Changes the conditional broadcasting type. Note that the accelerometer must be enabled for this feature to work
+i.e. you must set Motion Detection Flag in order to use this feature.
 Possible options are:
 - ESTBeaconConditionalBroadcastingOff - the default mode, beacon is broadcasting all the time
 - ESTBeaconConditionalBroadcastingMotionOnly – beacon only advertises when it&rsquo;s in motion.
 Note that UUID used in advertising packet depends on Motion UUID Flag state.
-- ESTBeaconConditionalBroadcastingFlipToSleep – beacon does not advertise when it&rsquo;s stationary and facing gecko pad up.
+- ESTBeaconConditionalBroadcastingFlipToStop – beacon does not advertise when it&rsquo;s stationary and facing gecko pad up.
 If the beacon is moving or oriented differently it acts normally.</p>
 	</div>		
 	
@@ -3692,7 +3739,7 @@ If the beacon is moving or oriented differently it acts normally.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-03-18)</span><br />
+						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-04-23)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						

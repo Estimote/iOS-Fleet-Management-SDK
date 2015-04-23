@@ -43,9 +43,19 @@
 	
 	<option value="//api/name/enableAnalytics:">&nbsp;&nbsp;&nbsp;&nbsp;+ enableAnalytics:</option>
 	
+	<option value="//api/name/enableGPSPositioningForAnalytics:">&nbsp;&nbsp;&nbsp;&nbsp;+ enableGPSPositioningForAnalytics:</option>
+	
+	<option value="//api/name/enableMonitoringAnalytics:">&nbsp;&nbsp;&nbsp;&nbsp;+ enableMonitoringAnalytics:</option>
+	
+	<option value="//api/name/enableRangingAnalytics:">&nbsp;&nbsp;&nbsp;&nbsp;+ enableRangingAnalytics:</option>
+	
 	<option value="//api/name/isAnalyticsEnabled">&nbsp;&nbsp;&nbsp;&nbsp;+ isAnalyticsEnabled</option>
 	
 	<option value="//api/name/isAuthorized">&nbsp;&nbsp;&nbsp;&nbsp;+ isAuthorized</option>
+	
+	<option value="//api/name/isMonitoringAnalyticsEnabled">&nbsp;&nbsp;&nbsp;&nbsp;+ isMonitoringAnalyticsEnabled</option>
+	
+	<option value="//api/name/isRangingAnalyticsEnabled">&nbsp;&nbsp;&nbsp;&nbsp;+ isRangingAnalyticsEnabled</option>
 	
 	<option value="//api/name/setupAppID:andAppToken:">&nbsp;&nbsp;&nbsp;&nbsp;+ setupAppID:andAppToken:</option>
 	
@@ -53,6 +63,10 @@
 	
 	
 	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/assignCurrentGPSLocationToBeacon:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- assignCurrentGPSLocationToBeacon:completion:</option>
+	
+	<option value="//api/name/assignGPSLocation:toBeacon:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- assignGPSLocation:toBeacon:completion:</option>
 	
 	<option value="//api/name/fetchBeaconDetails:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- fetchBeaconDetails:completion:</option>
 	
@@ -67,6 +81,8 @@
 	<option value="//api/name/fetchEstimoteNearablesWithCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- fetchEstimoteNearablesWithCompletion:</option>
 	
 	<option value="//api/name/fetchPendingBeaconsSettingsWithCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- fetchPendingBeaconsSettingsWithCompletion:</option>
+	
+	<option value="//api/name/registerDeviceForRemoteManagement:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- registerDeviceForRemoteManagement:completion:</option>
 	
 	
 	
@@ -96,9 +112,19 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/enableAnalytics:">enableAnalytics:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/enableGPSPositioningForAnalytics:">enableGPSPositioningForAnalytics:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/enableMonitoringAnalytics:">enableMonitoringAnalytics:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/enableRangingAnalytics:">enableRangingAnalytics:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isAnalyticsEnabled">isAnalyticsEnabled</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isAuthorized">isAuthorized</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isMonitoringAnalyticsEnabled">isMonitoringAnalyticsEnabled</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isRangingAnalyticsEnabled">isRangingAnalyticsEnabled</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setupAppID:andAppToken:">setupAppID:andAppToken:</a></span></li>
 	
@@ -107,6 +133,10 @@
 
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/assignCurrentGPSLocationToBeacon:completion:">assignCurrentGPSLocationToBeacon:completion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/assignGPSLocation:toBeacon:completion:">assignGPSLocation:toBeacon:completion:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fetchBeaconDetails:completion:">fetchBeaconDetails:completion:</a></span></li>
 	
@@ -121,6 +151,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fetchEstimoteNearablesWithCompletion:">fetchEstimoteNearablesWithCompletion:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fetchPendingBeaconsSettingsWithCompletion:">fetchPendingBeaconsSettingsWithCompletion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/registerDeviceForRemoteManagement:completion:">registerDeviceForRemoteManagement:completion:</a></span></li>
 	
 </ul></li>
 
@@ -159,7 +191,8 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>ESTCloudManager class is responsible for Estimote Cloud integration. It allows you to</p>
+						<p>ESTCloudManager class is responsible for Estimote Cloud integration. It allows you to invoke
+available Estimote Cloud API methods using block pattern to handle result.</p>
 					</div>
 					
 					
@@ -195,7 +228,37 @@
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/enableMonitoringAnalytics:">+&nbsp;enableMonitoringAnalytics:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/enableRangingAnalytics:">+&nbsp;enableRangingAnalytics:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/enableGPSPositioningForAnalytics:">+&nbsp;enableGPSPositioningForAnalytics:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/isAnalyticsEnabled">+&nbsp;isAnalyticsEnabled</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isMonitoringAnalyticsEnabled">+&nbsp;isMonitoringAnalyticsEnabled</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isRangingAnalyticsEnabled">+&nbsp;isRangingAnalyticsEnabled</a></code>
 	</span>
 	
 	
@@ -232,6 +295,24 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/fetchColorForBeaconWithMacAddress:completion:">&ndash;&nbsp;fetchColorForBeaconWithMacAddress:completion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/assignGPSLocation:toBeacon:completion:">&ndash;&nbsp;assignGPSLocation:toBeacon:completion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/assignCurrentGPSLocationToBeacon:completion:">&ndash;&nbsp;assignCurrentGPSLocationToBeacon:completion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/registerDeviceForRemoteManagement:completion:">&ndash;&nbsp;registerDeviceForRemoteManagement:completion:</a></code>
 	</span>
 	
 	
@@ -279,6 +360,148 @@ is collected in the Estimote Cloud.</p>
 		<dl class="argument-def parameter-def">
 			<dt><em>enable</em></dt>
 			<dd><p>flag indicating if analytics should be enabled</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTCloudManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/enableGPSPositioningForAnalytics:" title="enableGPSPositioningForAnalytics:"></a>
+	<h3 class="subsubtitle method-title">enableGPSPositioningForAnalytics:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>When GPS Positioning is turned on analytics events
+contains information about GPS Location.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (void)enableGPSPositioningForAnalytics:(BOOL)<em>enable</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>enable</em></dt>
+			<dd><p>flag indicating if GPS Positioning should be enabled</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTCloudManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/enableMonitoringAnalytics:" title="enableMonitoringAnalytics:"></a>
+	<h3 class="subsubtitle method-title">enableMonitoringAnalytics:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Enables analytics requests on Enter/Exit monitoring events. Analytics data
+is collected in the Estimote Cloud.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (void)enableMonitoringAnalytics:(BOOL)<em>enable</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>enable</em></dt>
+			<dd><p>flag indicating if analytics for monitoring should be enabled</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTCloudManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/enableRangingAnalytics:" title="enableRangingAnalytics:"></a>
+	<h3 class="subsubtitle method-title">enableRangingAnalytics:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Enables analytics requests for ranging events.
+Information about beacons and their Proximity is collected
+in the Estimote Cloud.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (void)enableRangingAnalytics:(BOOL)<em>enable</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>enable</em></dt>
+			<dd><p>flag indicating if analytics for ranging should be enabled</p></dd>
 		</dl>
 		
 	</div>
@@ -381,6 +604,88 @@ is collected in the Estimote Cloud.</p>
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/isMonitoringAnalyticsEnabled" title="isMonitoringAnalyticsEnabled"></a>
+	<h3 class="subsubtitle method-title">isMonitoringAnalyticsEnabled</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Indicates current state of monitoring analytics.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (BOOL)isMonitoringAnalyticsEnabled</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>flag that indicates if analytics is enabled</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTCloudManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isRangingAnalyticsEnabled" title="isRangingAnalyticsEnabled"></a>
+	<h3 class="subsubtitle method-title">isRangingAnalyticsEnabled</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Indicates current state of ranging analytics.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (BOOL)isRangingAnalyticsEnabled</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>flag that indicates if analytics is enabled</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTCloudManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/setupAppID:andAppToken:" title="setupAppID:andAppToken:"></a>
 	<h3 class="subsubtitle method-title">setupAppID:andAppToken:</h3>
 	
@@ -445,6 +750,114 @@ is collected in the Estimote Cloud.</p>
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
+	<a name="//api/name/assignCurrentGPSLocationToBeacon:completion:" title="assignCurrentGPSLocationToBeacon:completion:"></a>
+	<h3 class="subsubtitle method-title">assignCurrentGPSLocationToBeacon:completion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Assigns current GPS location to provided beacon.
+Location is obtained internally using single CLLocation manger scan.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)assignCurrentGPSLocationToBeacon:(CLBeacon *)<em>beacon</em> completion:(ESTObjectCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>beacon</em></dt>
+			<dd><p>beacon to which location should be assigned</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>completion block with assigned location provided</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTCloudManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/assignGPSLocation:toBeacon:completion:" title="assignGPSLocation:toBeacon:completion:"></a>
+	<h3 class="subsubtitle method-title">assignGPSLocation:toBeacon:completion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Assigns provided GPS location to the beacon.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)assignGPSLocation:(CLLocation *)<em>location</em> toBeacon:(CLBeacon *)<em>beacon</em> completion:(ESTObjectCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>location</em></dt>
+			<dd><p>CLLocation object with latitude and longitude included</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>beacon</em></dt>
+			<dd><p>CLBeacon to which location should be assigned</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>result information with assigned location provided</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTCloudManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/fetchBeaconDetails:completion:" title="fetchBeaconDetails:completion:"></a>
 	<h3 class="subsubtitle method-title">fetchBeaconDetails:completion:</h3>
 	
@@ -466,7 +879,7 @@ You can use both Mac Address or ProximityUUID:Major:Minor.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>beaconUID</em></dt>
-			<dd><p>Identifier of particuar device</p></dd>
+			<dd><p>Identifier of particular device</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
@@ -523,7 +936,7 @@ Authorization is not required to access device color.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>completion</em></dt>
-			<dd><p>completion block with NSNumber class object contining ESTColor value.</p></dd>
+			<dd><p>completion block with NSNumber class object containing ESTColor value.</p></dd>
 		</dl>
 		
 	</div>
@@ -575,7 +988,7 @@ Authorization is not required to access device color.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>completion</em></dt>
-			<dd><p>completion block with NSNumber class object contining ESTColor value.</p></dd>
+			<dd><p>completion block with NSNumber class object containing ESTColor value.</p></dd>
 		</dl>
 		
 	</div>
@@ -637,7 +1050,7 @@ Authorization is not required to access device color.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>completion</em></dt>
-			<dd><p>completion block with NSNumber class object contining ESTColor value.</p></dd>
+			<dd><p>completion block with NSNumber class object containing ESTColor value.</p></dd>
 		</dl>
 		
 	</div>
@@ -803,6 +1216,57 @@ Array returned in completion block can be used directly by ESTBulkUpdater class.
 	
 </div>
 						
+						<div class="section-method">
+	<a name="//api/name/registerDeviceForRemoteManagement:completion:" title="registerDeviceForRemoteManagement:completion:"></a>
+	<h3 class="subsubtitle method-title">registerDeviceForRemoteManagement:completion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Registers device in Estimote Cloud to enable Estimote Remote Beacon Management.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)registerDeviceForRemoteManagement:(NSData *)<em>deviceToken</em> completion:(ESTCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>deviceToken</em></dt>
+			<dd><p>token of the device received from iOS</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>completion block</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTCloudManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
 					</div>
 					
 					
@@ -818,7 +1282,7 @@ Array returned in completion block can be used directly by ESTBulkUpdater class.
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-03-18)</span><br />
+						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-04-23)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						
