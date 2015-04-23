@@ -7,7 +7,7 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 3.1.0
+//  Version: 3.2.0
 //  Copyright (c) 2015 Estimote. All rights reserved.
 
 #import <Foundation/Foundation.h>
@@ -61,23 +61,20 @@ typedef NS_ENUM(NSInteger, ESTUtilitManagerState)
 @property (nonatomic, weak) id<ESTUtilityManagerDelegate> delegate;
 
 /**
- * Starts a CoreBluetooth scan in search for Estimote Beacons matching the beacon region provided, with callback interval set in second parameter.
- *
- * Only a single CoreBluetooth based beacon discovery can be active at the same time.
- *
- * @warning The CoreBluetooth based discovery ignores the provided region's `proximityUUID` property, returning beacons matching the `major` and `minor` values regardless of their `proximityUUID`.
+ * Starts a CoreBluetooth scan in search for all Estimote Beacons in range.
+ * Related `utilityManager:didDiscoverBeacons:` is fired every 0.2 sec until
+ * stopEstimoteBeaconDiscovery method invocation.
  *
  */
 - (void)startEstimoteBeaconDiscovery;
 
 /**
- * Starts a CoreBluetooth scan in search for Estimote Beacons matching the beacon region provided, with callback interval set in second parameter.
+ * Starts a CoreBluetooth scan in search for all Estimote Beacons in range.
+ * Related `utilityManager:didDiscoverBeacons:` is fired until
+ * stopEstimoteBeaconDiscovery method invocation. Delegate method interval
+ * is provided as a method param.
  *
- * Only a single CoreBluetooth based beacon discovery can be active at the same time.
- *
- * @warning The CoreBluetooth based discovery ignores the provided region's `proximityUUID` property, returning beacons matching the `major` and `minor` values regardless of their `proximityUUID`.
- *
- *  @param interval Interval, in seconds, for updates from delegate method. If `startEstimoteBeaconDiscovery` method is used, default interval (0.2) is set.
+ *  @param interval Interval, in seconds, for updates from delegate method.
  */
 - (void)startEstimoteBeaconDiscoveryWithUpdateInterval:(NSTimeInterval)interval;
 

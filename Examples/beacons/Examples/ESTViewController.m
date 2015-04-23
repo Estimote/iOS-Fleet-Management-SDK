@@ -20,7 +20,7 @@
 #import "ESTBulkUpdaterDemoVC.h"
 #import "ESTBulkUpdaterRemoteDemoVC.h"
 #import "ESTSendGPSDemoVC.h"
-
+#import "ESTVirtualBeaconDemoVC.h"
 
 @interface ESTDemoTableViewCell : UITableViewCell
 
@@ -54,7 +54,7 @@
     self.tableView.sectionHeaderHeight = 20;
     [self.tableView registerClass:[ESTDemoTableViewCell class] forCellReuseIdentifier:@"DemoCellIdentifier"];
     
-    self.beaconDemoList = @[ @[@"Distance Demo", @"Proximity Demo",@"Notification Demo"],
+    self.beaconDemoList = @[ @[@"Virtual Beacon", @"Distance", @"Proximity Zones",@"Notifications"],
                              @[@"Temperature", @"Accelerometer", @"Motion UUID"],
                              @[@"Beacon Settings", @"Update Firmware", @"Local Bulk Update", @"Remote Bulk Update"],
                              @[@"Fetch beacons from cloud", @"Send Beacons GPS Position"]
@@ -112,6 +112,12 @@
         {
             case 0:
             {
+                demoViewController = [[ESTVirtualBeaconDemoVC alloc] init];
+                
+                break;
+            }
+            case 1:
+            {
                 demoViewController = [[ESTBeaconTableVC alloc] initWithScanType:ESTScanTypeBeacon
                                                                      completion:^(CLBeacon *beacon) {
                                                                          
@@ -121,7 +127,7 @@
                 
                 break;
             }
-            case 1:
+            case 2:
             {
                 demoViewController = [[ESTBeaconTableVC alloc] initWithScanType:ESTScanTypeBeacon
                                                                      completion:^(CLBeacon *beacon) {
@@ -132,7 +138,7 @@
                 
                 break;
             }
-            case 2:
+            case 3:
             {
                 demoViewController = [[ESTBeaconTableVC alloc] initWithScanType:ESTScanTypeBeacon
                                                                      completion:^(CLBeacon *beacon) {

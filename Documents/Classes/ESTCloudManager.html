@@ -43,9 +43,19 @@
 	
 	<option value="//api/name/enableAnalytics:">&nbsp;&nbsp;&nbsp;&nbsp;+ enableAnalytics:</option>
 	
+	<option value="//api/name/enableGPSPositioningForAnalytics:">&nbsp;&nbsp;&nbsp;&nbsp;+ enableGPSPositioningForAnalytics:</option>
+	
+	<option value="//api/name/enableMonitoringAnalytics:">&nbsp;&nbsp;&nbsp;&nbsp;+ enableMonitoringAnalytics:</option>
+	
+	<option value="//api/name/enableRangingAnalytics:">&nbsp;&nbsp;&nbsp;&nbsp;+ enableRangingAnalytics:</option>
+	
 	<option value="//api/name/isAnalyticsEnabled">&nbsp;&nbsp;&nbsp;&nbsp;+ isAnalyticsEnabled</option>
 	
 	<option value="//api/name/isAuthorized">&nbsp;&nbsp;&nbsp;&nbsp;+ isAuthorized</option>
+	
+	<option value="//api/name/isMonitoringAnalyticsEnabled">&nbsp;&nbsp;&nbsp;&nbsp;+ isMonitoringAnalyticsEnabled</option>
+	
+	<option value="//api/name/isRangingAnalyticsEnabled">&nbsp;&nbsp;&nbsp;&nbsp;+ isRangingAnalyticsEnabled</option>
 	
 	<option value="//api/name/setupAppID:andAppToken:">&nbsp;&nbsp;&nbsp;&nbsp;+ setupAppID:andAppToken:</option>
 	
@@ -102,9 +112,19 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/enableAnalytics:">enableAnalytics:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/enableGPSPositioningForAnalytics:">enableGPSPositioningForAnalytics:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/enableMonitoringAnalytics:">enableMonitoringAnalytics:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/enableRangingAnalytics:">enableRangingAnalytics:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isAnalyticsEnabled">isAnalyticsEnabled</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isAuthorized">isAuthorized</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isMonitoringAnalyticsEnabled">isMonitoringAnalyticsEnabled</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isRangingAnalyticsEnabled">isRangingAnalyticsEnabled</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setupAppID:andAppToken:">setupAppID:andAppToken:</a></span></li>
 	
@@ -208,7 +228,37 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/enableMonitoringAnalytics:">+&nbsp;enableMonitoringAnalytics:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/enableRangingAnalytics:">+&nbsp;enableRangingAnalytics:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/enableGPSPositioningForAnalytics:">+&nbsp;enableGPSPositioningForAnalytics:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/isAnalyticsEnabled">+&nbsp;isAnalyticsEnabled</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isMonitoringAnalyticsEnabled">+&nbsp;isMonitoringAnalyticsEnabled</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isRangingAnalyticsEnabled">+&nbsp;isRangingAnalyticsEnabled</a></code>
 	</span>
 	
 	
@@ -335,6 +385,148 @@ is collected in the Estimote Cloud.</p>
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/enableGPSPositioningForAnalytics:" title="enableGPSPositioningForAnalytics:"></a>
+	<h3 class="subsubtitle method-title">enableGPSPositioningForAnalytics:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>When GPS Positioning is turned on analytics events
+contains information about GPS Location.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (void)enableGPSPositioningForAnalytics:(BOOL)<em>enable</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>enable</em></dt>
+			<dd><p>flag indicating if GPS Positioning should be enabled</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTCloudManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/enableMonitoringAnalytics:" title="enableMonitoringAnalytics:"></a>
+	<h3 class="subsubtitle method-title">enableMonitoringAnalytics:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Enables analytics requests on Enter/Exit monitoring events. Analytics data
+is collected in the Estimote Cloud.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (void)enableMonitoringAnalytics:(BOOL)<em>enable</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>enable</em></dt>
+			<dd><p>flag indicating if analytics for monitoring should be enabled</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTCloudManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/enableRangingAnalytics:" title="enableRangingAnalytics:"></a>
+	<h3 class="subsubtitle method-title">enableRangingAnalytics:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Enables analytics requests for ranging events.
+Information about beacons and their Proximity is collected
+in the Estimote Cloud.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (void)enableRangingAnalytics:(BOOL)<em>enable</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>enable</em></dt>
+			<dd><p>flag indicating if analytics for ranging should be enabled</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTCloudManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/isAnalyticsEnabled" title="isAnalyticsEnabled"></a>
 	<h3 class="subsubtitle method-title">isAnalyticsEnabled</h3>
 	
@@ -392,6 +584,88 @@ is collected in the Estimote Cloud.</p>
     
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTCloudManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isMonitoringAnalyticsEnabled" title="isMonitoringAnalyticsEnabled"></a>
+	<h3 class="subsubtitle method-title">isMonitoringAnalyticsEnabled</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Indicates current state of monitoring analytics.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (BOOL)isMonitoringAnalyticsEnabled</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>flag that indicates if analytics is enabled</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTCloudManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isRangingAnalyticsEnabled" title="isRangingAnalyticsEnabled"></a>
+	<h3 class="subsubtitle method-title">isRangingAnalyticsEnabled</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Indicates current state of ranging analytics.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (BOOL)isRangingAnalyticsEnabled</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>flag that indicates if analytics is enabled</p>
+	</div>
 	
 	
 	
@@ -482,8 +756,8 @@ is collected in the Estimote Cloud.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Assings current GPS location to provided beacon.
-Location is obtained internaly using single CLLocation manger scan.</p>
+		<p>Assigns current GPS location to provided beacon.
+Location is obtained internally using single CLLocation manger scan.</p>
 	</div>		
 	
     
@@ -497,7 +771,7 @@ Location is obtained internaly using single CLLocation manger scan.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>beacon</em></dt>
-			<dd><p>beacon to which location should be asssigned</p></dd>
+			<dd><p>beacon to which location should be assigned</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
@@ -534,7 +808,7 @@ Location is obtained internaly using single CLLocation manger scan.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Assings provided GPS location to the beacon.</p>
+		<p>Assigns provided GPS location to the beacon.</p>
 	</div>		
 	
     
@@ -548,12 +822,12 @@ Location is obtained internaly using single CLLocation manger scan.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>location</em></dt>
-			<dd><p>CLLocation object with latitude and logitude included</p></dd>
+			<dd><p>CLLocation object with latitude and longitude included</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>beacon</em></dt>
-			<dd><p>CLBeacon to which location should be asssigned</p></dd>
+			<dd><p>CLBeacon to which location should be assigned</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
@@ -605,7 +879,7 @@ You can use both Mac Address or ProximityUUID:Major:Minor.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>beaconUID</em></dt>
-			<dd><p>Identifier of particuar device</p></dd>
+			<dd><p>Identifier of particular device</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
@@ -662,7 +936,7 @@ Authorization is not required to access device color.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>completion</em></dt>
-			<dd><p>completion block with NSNumber class object contining ESTColor value.</p></dd>
+			<dd><p>completion block with NSNumber class object containing ESTColor value.</p></dd>
 		</dl>
 		
 	</div>
@@ -714,7 +988,7 @@ Authorization is not required to access device color.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>completion</em></dt>
-			<dd><p>completion block with NSNumber class object contining ESTColor value.</p></dd>
+			<dd><p>completion block with NSNumber class object containing ESTColor value.</p></dd>
 		</dl>
 		
 	</div>
@@ -776,7 +1050,7 @@ Authorization is not required to access device color.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>completion</em></dt>
-			<dd><p>completion block with NSNumber class object contining ESTColor value.</p></dd>
+			<dd><p>completion block with NSNumber class object containing ESTColor value.</p></dd>
 		</dl>
 		
 	</div>
@@ -1008,7 +1282,7 @@ Array returned in completion block can be used directly by ESTBulkUpdater class.
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-04-13)</span><br />
+						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-04-23)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						

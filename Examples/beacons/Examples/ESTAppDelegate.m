@@ -27,9 +27,8 @@
     // Particular beacons (Proximity UUID, Major, Minor values needs to be provided).
     
     NSLog(@"ESTAppDelegate: Analytics are turned OFF by defaults. You can enable them changing flag");
-    [ESTCloudManager enableAnalytics:NO];
-    
-    
+    [ESTCloudManager enableMonitoringAnalytics:NO];
+    [ESTCloudManager enableGPSPositioningForAnalytics:NO];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     

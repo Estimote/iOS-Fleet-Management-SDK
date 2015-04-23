@@ -7,7 +7,7 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 3.1.0
+//  Version: 3.2.0
 //  Copyright (c) 2015 Estimote. All rights reserved.
 
 #import <Foundation/Foundation.h>
@@ -22,11 +22,6 @@
 
 @interface ESTBeaconManager : NSObject
 
-#pragma mark iBeacon utilities
-///--------------------------------------------------------------------
-/// @name iBeacon utilities
-///--------------------------------------------------------------------
-
 /**
  * The delegate object to receive update events.
  *
@@ -34,6 +29,10 @@
  */
 @property (nonatomic, weak) id <ESTBeaconManagerDelegate> delegate;
 
+#pragma mark iBeacon utilities
+///--------------------------------------------------------------------
+/// @name iBeacon utilities
+///--------------------------------------------------------------------
 
 /**
  * When `proximity` of a ranged beacon is `CLProximityUnknown`, iOS reports certain properties such as `rssi` or `distance` as unknown too. This property enables you to retain last known attributes of the beacon for a certain amount of time after its proximity changes to `CLProximityUnknown`.
@@ -186,7 +185,7 @@
 ///--------------------------------------------------------------------
 
 /**
- *  Returns Motion Proximity UUID identifier related to Proxmity UUID returned by param. 
+ *  Returns Motion Proximity UUID identifier related to Proximity UUID returned by param.
  *  Motion Proximity UUID is created by reversing first bit of corresponding Proximity UUID.
  *
  *  @param proximityUUID corresponding Proximity UUID

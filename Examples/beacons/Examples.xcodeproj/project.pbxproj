@@ -14,6 +14,8 @@
 		952CEA5D1A88B9CF003A99A6 /* ESTBeaconDetailsDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 952CEA5B1A88B9CF003A99A6 /* ESTBeaconDetailsDemoVC.xib */; };
 		954111B81AB1ADEB00340377 /* ESTBulkUpdaterDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 954111B61AB1ADEB00340377 /* ESTBulkUpdaterDemoVC.m */; };
 		954111B91AB1ADEB00340377 /* ESTBulkUpdaterDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 954111B71AB1ADEB00340377 /* ESTBulkUpdaterDemoVC.xib */; };
+		954AF5861AE9775D0028C914 /* ESTVirtualBeaconDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 954AF5841AE9775D0028C914 /* ESTVirtualBeaconDemoVC.m */; };
+		954AF5871AE9775D0028C914 /* ESTVirtualBeaconDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 954AF5851AE9775D0028C914 /* ESTVirtualBeaconDemoVC.xib */; };
 		956A942A1AD7D2B100FC0FFA /* ESTSendGPSDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 956A94281AD7D2B100FC0FFA /* ESTSendGPSDemoVC.m */; };
 		956A942B1AD7D2B100FC0FFA /* ESTSendGPSDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 956A94291AD7D2B100FC0FFA /* ESTSendGPSDemoVC.xib */; };
 		956C575F1AA8AAC900B468D4 /* ESTMotionDetectionDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 956C57541AA8AAC900B468D4 /* ESTMotionDetectionDemoVC.m */; };
@@ -55,6 +57,9 @@
 		954111B51AB1ADEB00340377 /* ESTBulkUpdaterDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBulkUpdaterDemoVC.h; sourceTree = "<group>"; };
 		954111B61AB1ADEB00340377 /* ESTBulkUpdaterDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTBulkUpdaterDemoVC.m; sourceTree = "<group>"; };
 		954111B71AB1ADEB00340377 /* ESTBulkUpdaterDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESTBulkUpdaterDemoVC.xib; sourceTree = "<group>"; };
+		954AF5831AE9775D0028C914 /* ESTVirtualBeaconDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTVirtualBeaconDemoVC.h; sourceTree = "<group>"; };
+		954AF5841AE9775D0028C914 /* ESTVirtualBeaconDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTVirtualBeaconDemoVC.m; sourceTree = "<group>"; };
+		954AF5851AE9775D0028C914 /* ESTVirtualBeaconDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESTVirtualBeaconDemoVC.xib; sourceTree = "<group>"; };
 		956A94271AD7D2B100FC0FFA /* ESTSendGPSDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTSendGPSDemoVC.h; sourceTree = "<group>"; };
 		956A94281AD7D2B100FC0FFA /* ESTSendGPSDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTSendGPSDemoVC.m; sourceTree = "<group>"; };
 		956A94291AD7D2B100FC0FFA /* ESTSendGPSDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESTSendGPSDemoVC.xib; sourceTree = "<group>"; };
@@ -196,6 +201,9 @@
 				956A94271AD7D2B100FC0FFA /* ESTSendGPSDemoVC.h */,
 				956A94281AD7D2B100FC0FFA /* ESTSendGPSDemoVC.m */,
 				956A94291AD7D2B100FC0FFA /* ESTSendGPSDemoVC.xib */,
+				954AF5831AE9775D0028C914 /* ESTVirtualBeaconDemoVC.h */,
+				954AF5841AE9775D0028C914 /* ESTVirtualBeaconDemoVC.m */,
+				954AF5851AE9775D0028C914 /* ESTVirtualBeaconDemoVC.xib */,
 				AC39C3D518D72A6F00B38212 /* Images.xcassets */,
 				AC39C3C418D72A6F00B38212 /* Supporting Files */,
 			);
@@ -283,6 +291,7 @@
 				956C57641AA8AAC900B468D4 /* ESTMotionUUIDSettingsDemoVC.xib in Resources */,
 				A12D28DC18E9638100872A95 /* ESTUpdateFirmwareDemoVC.xib in Resources */,
 				956C57661AA8AAC900B468D4 /* ESTTemperatureDemoVC.xib in Resources */,
+				954AF5871AE9775D0028C914 /* ESTVirtualBeaconDemoVC.xib in Resources */,
 				956C57601AA8AAC900B468D4 /* ESTMotionDetectionDemoVC.xib in Resources */,
 				AC39C3D618D72A6F00B38212 /* Images.xcassets in Resources */,
 				AC39C3C818D72A6F00B38212 /* InfoPlist.strings in Resources */,
@@ -300,6 +309,7 @@
 			files = (
 				952B14901AB8410700573526 /* ESTBulkUpdaterRemoteDemoVC.m in Sources */,
 				956C57631AA8AAC900B468D4 /* ESTMotionUUIDSettingsDemoVC.m in Sources */,
+				954AF5861AE9775D0028C914 /* ESTVirtualBeaconDemoVC.m in Sources */,
 				956C575F1AA8AAC900B468D4 /* ESTMotionDetectionDemoVC.m in Sources */,
 				AC39C3CA18D72A6F00B38212 /* main.m in Sources */,
 				AC39C3D418D72A6F00B38212 /* ESTViewController.m in Sources */,

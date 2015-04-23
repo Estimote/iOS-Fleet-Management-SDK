@@ -7,7 +7,7 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 3.1.0
+//  Version: 3.2.0
 //  Copyright (c) 2015 Estimote. All rights reserved.
 
 #import <Foundation/Foundation.h>
@@ -69,11 +69,11 @@ enum
 /**
  * The `ESTBeaconConnection` class defines the interface for interacting with a single Estimote beacon. It enables you to connect to the device, retrieve properties and change its configuration settings.
  *
- * The ESTBeaconConnection instance can be intialized using CLBeacon object or mac address being unique identifier of particular device. Fetch required beacon details you can use:
+ * The ESTBeaconConnection instance can be initialized using CLBeacon object or mac address being unique identifier of particular device. Fetch required beacon details you can use:
  *
- * - `startRangingBeaconsInRegion:` - which is a CoreLocation based scan and deliveres `CLBeacon` objects.
+ * - `startRangingBeaconsInRegion:` - which is a CoreLocation based scan and delivers `CLBeacon` objects.
  *
- * - `startEstimoteBeaconsDiscovery` - which is a CoreBluetooth based scan and deliveres `ESTBluetoothBeacon` object containing mac address.
+ * - `startEstimoteBeaconsDiscovery` - which is a CoreBluetooth based scan and delivers `ESTBluetoothBeacon` object containing mac address.
  *
  * Properties become editable once connected to the beacon. See connect for more details about connecting to the beacon. You will also need to assign a delegate to be notified about connection and disconnection events. The delegate needs to conform to the `<ESTBeaconConnectionDelegate>` protocol.
  */
@@ -89,7 +89,7 @@ enum
  * Identifier of the device that you aim to connect. 
  * Based on the method you used to initialize it may contain:
  * - Device Mac address
- * - Device iBeacon properties formated as follows: ProximityUUUID:Major:Minor
+ * - Device iBeacon properties formatted as follows: ProximityUUUID:Major:Minor
  *
  */
 @property (nonatomic, strong, readonly) NSString *identifier;
@@ -235,7 +235,7 @@ enum
 /**
  * The color of the beacon.
  *
- * This value is stored and retrieved from the Estimote Cloud, which means it might be unavailable under certain circumestances - e.g. no Internet connectivity.
+ * This value is stored and retrieved from the Estimote Cloud, which means it might be unavailable under certain circumstances - e.g. no Internet connectivity.
  *
  */
 @property (readonly, nonatomic) ESTColor color;
@@ -395,7 +395,7 @@ enum
 @property (readonly, nonatomic) ESTBeaconMotionState motionState;
 
 /**
- *  State of temeperature sensor.
+ *  State of temperature sensor.
  */
 @property (readonly, nonatomic) ESTBeaconTemperatureState temperatureState;
 
@@ -529,7 +529,7 @@ enum
 /**
  * Sets the advertising interval, i.e. `<advInterval>`.
  *
- * @param interval The new `advInterval` in miliseconds. The value must be in range from 100 to 2000.
+ * @param interval The new `advInterval` in milliseconds. The value must be in range from 100 to 2000.
  * @param completion A block that is called when the new `advInterval` has been set.
  *
  * The completion block receives the following parameters:
@@ -703,7 +703,7 @@ enum
 /**
  *  Allows to find CBPeripheral device using CBCentralManager scan.
  *
- *  @param timeout    timoute of scan operation
+ *  @param timeout    timeout of scan operation
  *  @param completion completion block returning reference to ESTBeaconConnection object performing operation.
  */
 - (void)findPeripheralForBeaconWithTimeout:(NSUInteger)timeout completion:(ESTObjectCompletionBlock)completion;

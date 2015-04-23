@@ -7,7 +7,7 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 3.1.0
+//  Version: 3.2.0
 //  Copyright (c) 2015 Estimote. All rights reserved.
 
 #import <Foundation/Foundation.h>
@@ -16,7 +16,8 @@
 #import "ESTBeaconVO.h"
 
 /**
- *  ESTCloudManager class is responsible for Estimote Cloud integration. It allows you to 
+ *  ESTCloudManager class is responsible for Estimote Cloud integration. It allows you to invoke 
+ *  available Estimote Cloud API methods using block pattern to handle result.
  */
 @interface ESTCloudManager : NSObject
 
@@ -43,14 +44,53 @@
  *
  *  @param enable flag indicating if analytics should be enabled
  */
-+ (void)enableAnalytics:(BOOL)enable;
++ (void)enableAnalytics:(BOOL)enable __attribute ((deprecated(("Staring from SDK 3.2.0 use enableMonitoringAnalytics: or enableRangingAnalytics: instead."))));
+
+/**
+ *  Enables analytics requests on Enter/Exit monitoring events. Analytics data
+ *  is collected in the Estimote Cloud.
+ *
+ *  @param enable flag indicating if analytics for monitoring should be enabled
+ */
++ (void)enableMonitoringAnalytics:(BOOL)enable;
+
+/**
+ *  Enables analytics requests for ranging events. 
+ *  Information about beacons and their Proximity is collected
+ *  in the Estimote Cloud.
+ *
+ *  @param enable flag indicating if analytics for ranging should be enabled
+ */
++ (void)enableRangingAnalytics:(BOOL)enable;
+
+/**
+ *  When GPS Positioning is turned on analytics events
+ *  contains information about GPS Location.
+ *
+ *  @param enable flag indicating if GPS Positioning should be enabled
+ */
++ (void)enableGPSPositioningForAnalytics:(BOOL)enable;
 
 /**
  *  Indicates current state of analytics.
  *
  *  @return flag that indicates if analytics is enabled
  */
-+ (BOOL)isAnalyticsEnabled;
++ (BOOL)isAnalyticsEnabled __attribute ((deprecated(("Staring from SDK 3.2.0 use enableMonitoringAnalytics: or enableRangingAnalytics: instead."))));
+
+/**
+ *  Indicates current state of monitoring analytics.
+ *
+ *  @return flag that indicates if analytics is enabled
+ */
++ (BOOL)isMonitoringAnalyticsEnabled;
+
+/**
+ *  Indicates current state of ranging analytics.
+ *
+ *  @return flag that indicates if analytics is enabled
+ */
++ (BOOL)isRangingAnalyticsEnabled;
 
 #pragma mark - Fetching beacons/nearables informations
 
@@ -74,7 +114,7 @@
  *  Collects details of particular beacon device stored in Estimote Cloud.
  *  You can use both Mac Address or ProximityUUID:Major:Minor.
  *
- *  @param beaconUID  Identifier of particuar device
+ *  @param beaconUID  Identifier of particular device
  *  @param completion completion block invoked with fetching is done
  */
 - (void)fetchBeaconDetails:(NSString *)beaconUID completion:(ESTObjectCompletionBlock)completion;
@@ -84,7 +124,7 @@
  *  Authorization is not required to access device color.
  *
  *  @param beacon        iBeacon device
- *  @param completion    completion block with NSNumber class object contining ESTColor value.
+ *  @param completion    completion block with NSNumber class object containing ESTColor value.
  */
 - (void)fetchColorForBeacon:(CLBeacon *)beacon
                  completion:(ESTObjectCompletionBlock)completion;
@@ -96,7 +136,7 @@
  *  @param proximityUUID iBeacon ProximityUUID of the device
  *  @param major         iBeacon Major of the device
  *  @param minor         iBeacon Minor of the device
- *  @param completion    completion block with NSNumber class object contining ESTColor value.
+ *  @param completion    completion block with NSNumber class object containing ESTColor value.
  */
 - (void)fetchColorForBeaconWithProximityUUID:(NSUUID *)proximityUUID
                                        major:(CLBeaconMajorValue)major
@@ -108,7 +148,7 @@
  *  Authorization is not required to access device color.
  *
  *  @param macAddress Mac Address of the device
- *  @param completion completion block with NSNumber class object contining ESTColor value.
+ *  @param completion completion block with NSNumber class object containing ESTColor value.
  */
 - (void)fetchColorForBeaconWithMacAddress:(NSString *)macAddress
                                 completion:(ESTObjectCompletionBlock)completion;
@@ -116,10 +156,10 @@
 #pragma mark - Saving beacon location
 
 /**
- *  Assings provided GPS location to the beacon.
+ *  Assigns provided GPS location to the beacon.
  *
- *  @param location   CLLocation object with latitude and logitude included
- *  @param beacon     CLBeacon to which location should be asssigned
+ *  @param location   CLLocation object with latitude and longitude included
+ *  @param beacon     CLBeacon to which location should be assigned
  *  @param completion result information with assigned location provided
  */
 - (void)assignGPSLocation:(CLLocation *)location
@@ -127,10 +167,10 @@
                completion:(ESTObjectCompletionBlock)completion;
 
 /**
- *  Assings current GPS location to provided beacon. 
- *  Location is obtained internaly using single CLLocation manger scan.
+ *  Assigns current GPS location to provided beacon.
+ *  Location is obtained internally using single CLLocation manger scan.
  *
- *  @param beacon beacon to which location should be asssigned
+ *  @param beacon beacon to which location should be assigned
  *  @param completion completion block with assigned location provided
  */
 - (void)assignCurrentGPSLocationToBeacon:(CLBeacon *)beacon

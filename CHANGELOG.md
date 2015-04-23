@@ -1,3 +1,15 @@
+## 3.2.0 (April 23, 2015)
+
+Features:
+- New Analytics covering CoreLocation regions implemented
+- GPS support for Analytics added
+- Virtual Beacon demo added
+
+Bugfixes:
+- Virtual beacon fixed
+- Missing disconnect event for beacons fixed
+- Nearables monitoring fixed
+
 ## 3.1.0 (April 10, 2015)
 
 Features:
