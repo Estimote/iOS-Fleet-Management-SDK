@@ -1,3 +1,25 @@
+## 3.2.2 (April 29, 2015)
+
+Features:
+- New `monitoredRegions` and `rangedRegions` properties
+  for ESTBeaconManager and ESTSecureBeaconManager
+
+Bugfixes:
+- ESTSecureBeaconManager now reports the initial state of the
+  monitored region to the didDetermineState delegate method, just
+  like Core Location monitoring does
+- ESTSecureBeaconManager now responds correctly to the
+  `requestStateForRegion` method
+- The `color` property is now properly filled in from the Estimote
+  Cloud during the process of connecting to the beacon
+- The `name` is now properly updated after changing it via the
+  `writeName` method
+
+## 3.2.1 (April 24, 2015)
+
+Bugfixes:
+- Deleted unnecessary logs
+
 ## 3.2.0 (April 23, 2015)
 
 Features:

@@ -7,7 +7,7 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 3.2.1
+//  Version: 3.2.2
 //  Copyright (c) 2015 Estimote. All rights reserved.
 
 #import <Foundation/Foundation.h>
@@ -178,6 +178,16 @@
  * @param region The region whose state you want to know.
  */
 - (void)requestStateForRegion:(CLBeaconRegion *)region;
+
+/**
+ * The set of shared beacon regions monitored by all beacon and location manager objects. (read-only)
+ */
+@property (readonly, nonatomic, copy) NSSet *monitoredRegions;
+
+/**
+ * The set of beacon regions currently being tracked using ranging. (read-only)
+ */
+@property (readonly, nonatomic, copy) NSSet *rangedRegions;
 
 #pragma mark Estimote Motion UUID support
 ///--------------------------------------------------------------------
