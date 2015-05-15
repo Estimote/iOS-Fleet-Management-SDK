@@ -1,10 +1,27 @@
+## 3.2.3 (May 15, 2015)
+
+Bugfixes:
+
+- Bulk updater issue with updating device power to 0 value
+- Fixed duplicated events in Secured Beacon Manager
+- Smart Power Mode reading corrected
+
+Improvements:
+
+- Supress the "Bluetooth disabled" warning
+- Persist secure monitored regions between app relaunches
+- Secured Beacon Manager invoke beaconManager:didDeterminState: on main thread
+- SystemConfiguration added to the umbrella header
+  
 ## 3.2.2 (April 29, 2015)
 
 Features:
+
 - New `monitoredRegions` and `rangedRegions` properties
   for ESTBeaconManager and ESTSecureBeaconManager
 
 Bugfixes:
+
 - ESTSecureBeaconManager now reports the initial state of the
   monitored region to the didDetermineState delegate method, just
   like Core Location monitoring does
@@ -18,16 +35,19 @@ Bugfixes:
 ## 3.2.1 (April 24, 2015)
 
 Bugfixes:
+
 - Deleted unnecessary logs
 
 ## 3.2.0 (April 23, 2015)
 
 Features:
+
 - New Analytics covering CoreLocation regions implemented
 - GPS support for Analytics added
 - Virtual Beacon demo added
 
 Bugfixes:
+
 - Virtual beacon fixed
 - Missing disconnect event for beacons fixed
 - Nearables monitoring fixed
@@ -35,9 +55,11 @@ Bugfixes:
 ## 3.1.0 (April 10, 2015)
 
 Features:
+
 - Option to mark GPS location for beacon
 
 Bugfixes:
+
 - Memory leak in secured region monitoring
 - Disconnect after OTA procedure issue
 - Analytics not sending events in regular/secured beacon manager
@@ -49,10 +71,12 @@ Bugfixes:
 ## 3.0.3 (March 27, 2015)
 
 Bugfixes:
+
 - Crash on Utility manager delegate invocation fixed
 - Multiple invocations of Bulk update fixed
 
 Improvements:
+
 - Cocoapods support updated for Framework architecture
 - Awesome ASCII art header added:) 
 
