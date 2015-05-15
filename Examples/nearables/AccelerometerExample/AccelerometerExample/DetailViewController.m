@@ -34,9 +34,9 @@
 - (void)nearableManager:(ESTNearableManager *)manager didRangeNearable:(ESTNearable *)nearable
 {
     NSString *orientationString = @"";
-    if (!self.nearable.isMoving)
+    if (!nearable.isMoving)
     {
-        switch (self.nearable.orientation)
+        switch (nearable.orientation)
         {
             case ESTNearableOrientationHorizontal:
                 orientationString = @"Sticker is on its back";
@@ -71,10 +71,10 @@
     
     self.orientationLabel.text = orientationString;
     
-    self.accelerometerLabel.text = [NSString stringWithFormat:@"x axis: %dmG \n y axis: %dmG \n z axis: %dmG \n",
-                                    self.nearable.xAcceleration,
-                                    self.nearable.yAcceleration,
-                                    self.nearable.zAcceleration];
+    self.accelerometerLabel.text = [NSString stringWithFormat:@"x axis: %ldmG \n y axis: %ldmG \n z axis: %ldmG \n",
+                                    (long) nearable.xAcceleration,
+                                    (long) nearable.yAcceleration,
+                                    (long) nearable.zAcceleration];
 }
 
 @end
