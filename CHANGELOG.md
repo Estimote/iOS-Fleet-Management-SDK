@@ -1,3 +1,10 @@
+## 3.2.4 (May 19, 2015)
+
+Bugfixes:
+
+- Fixed a crash that could sometimes occur when stopping monitoring of a secure
+  UUID region
+
 ## 3.2.3 (May 15, 2015)
 
 Bugfixes:
