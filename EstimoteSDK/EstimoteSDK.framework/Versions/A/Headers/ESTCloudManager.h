@@ -7,7 +7,7 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 3.2.4
+//  Version: 3.2.5
 //  Copyright (c) 2015 Estimote. All rights reserved.
 
 #import <Foundation/Foundation.h>
@@ -152,6 +152,14 @@
  */
 - (void)fetchColorForBeaconWithMacAddress:(NSString *)macAddress
                                 completion:(ESTObjectCompletionBlock)completion;
+
+/**
+ *  Collects MAC address of particular beacon device stored in Estimote Cloud.
+ *
+ *  @param beacon        iBeacon device
+ *  @param completion    completion block with NSString class object containing the MAC address.
+ */
+- (void)fetchMacAddressForBeacon:(CLBeacon *)beacon completion:(ESTStringCompletionBlock)completion;
 
 #pragma mark - Saving beacon location
 

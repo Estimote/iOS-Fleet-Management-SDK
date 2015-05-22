@@ -7,13 +7,28 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 3.2.4
+//  Version: 3.2.5
 //  Copyright (c) 2015 Estimote. All rights reserved.
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 #import "ESTBeaconDefinitions.h"
+
+#define CONNECTION_ERROR_UID_MISSING    400
+#define CONNECTION_ERROR_AUTHORIZATION  401
+#define CONNECTION_ERROR_TIMEOUT        402
+#define CONNECTION_ERROR_NOT_LOGGED_IN  403
+
+#define CHARACTERISTIC_ERROR            410
+#define SAME_VALUE_ERROR                411
+
+
+#define AUTHORIZATION_ERROR_DIFFERENT_USER      601
+#define AUTHORIZATION_ERROR_NO_CLOUD_ACCOUNT    602
+#define AUTHORIZATION_ERROR_NOT_ASSIGNED        603
+#define AUTHORIZATION_ERROR_NOT_REGISTERED      604
+#define AUTHORIZATION_ERROR_SERVER              605
 
 @class ESTBeaconConnection;
 
@@ -63,6 +78,8 @@ enum
  * @param state The new `motionState` value.
  */
 - (void)beaconConnection:(ESTBeaconConnection *)connection motionStateChanged:(ESTBeaconMotionState)state;
+
+- (void)beaconConnection:(ESTBeaconConnection *)connection didUpdateRSSI:(NSNumber *)rssi;
 
 @end
 
@@ -317,6 +334,11 @@ enum
  * @see updateFirmwareWithProgress:completion:
  */
 @property (readonly, nonatomic) NSString *firmwareVersion;
+
+/**
+ * The received signal strength of the beacon, measured in decibels.
+ */
+@property (readonly, nonatomic) NSNumber *rssi;
 
 #pragma mark - Power management
 ///--------------------------------------------------------------------
@@ -699,6 +721,14 @@ enum
  */
 - (void)resetToFactorySettingsWithCompletion:(ESTCompletionBlock)completion;
 
+#pragma mark - MAC & Peripheral
+
+/**
+ *  Allows to get MAC address.
+ *
+ *  @param completion completion block returning reference to ESTBeaconConnection object performing operation.
+ */
+- (void)getMacAddressWithCompletion:(ESTStringCompletionBlock)completion;
 
 /**
  *  Allows to find CBPeripheral device using CBCentralManager scan.

@@ -87,6 +87,8 @@
 	
 	<option value="//api/name/remainingLifetime">&nbsp;&nbsp;&nbsp;&nbsp;remainingLifetime</option>
 	
+	<option value="//api/name/rssi">&nbsp;&nbsp;&nbsp;&nbsp;rssi</option>
+	
 	<option value="//api/name/smartPowerMode">&nbsp;&nbsp;&nbsp;&nbsp;smartPowerMode</option>
 	
 	<option value="//api/name/temperatureState">&nbsp;&nbsp;&nbsp;&nbsp;temperatureState</option>
@@ -114,6 +116,8 @@
 	<option value="//api/name/disconnect">&nbsp;&nbsp;&nbsp;&nbsp;- disconnect</option>
 	
 	<option value="//api/name/findPeripheralForBeaconWithTimeout:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- findPeripheralForBeaconWithTimeout:completion:</option>
+	
+	<option value="//api/name/getMacAddressWithCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- getMacAddressWithCompletion:</option>
 	
 	<option value="//api/name/initWithBeacon:delegate:startImmediately:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithBeacon:delegate:startImmediately:</option>
 	
@@ -257,6 +261,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/remainingLifetime">remainingLifetime</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/rssi">rssi</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/smartPowerMode">smartPowerMode</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/temperatureState">temperatureState</a></span></li>
@@ -286,6 +292,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/disconnect">disconnect</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/findPeripheralForBeaconWithTimeout:completion:">findPeripheralForBeaconWithTimeout:completion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getMacAddressWithCompletion:">getMacAddressWithCompletion:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithBeacon:delegate:startImmediately:">initWithBeacon:delegate:startImmediately:</a></span></li>
 	
@@ -360,7 +368,7 @@
 	<td class="specification-value">NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">ESTBeaconConnection.h<br />ESTBeaconConnection.m</td>
+	<td class="specification-value">ESTBeaconConnection.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -567,6 +575,12 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/firmwareVersion">&nbsp;&nbsp;firmwareVersion</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/rssi">&nbsp;&nbsp;rssi</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -799,6 +813,12 @@
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/resetToFactorySettingsWithCompletion:">&ndash;&nbsp;resetToFactorySettingsWithCompletion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/getMacAddressWithCompletion:">&ndash;&nbsp;getMacAddressWithCompletion:</a></code>
 	</span>
 	
 	
@@ -1891,6 +1911,42 @@ Based on the method you used to initialize it may contain:
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/rssi" title="rssi"></a>
+	<h3 class="subsubtitle method-title">rssi</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The received signal strength of the beacon, measured in decibels.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) NSNumber *rssi</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/smartPowerMode" title="smartPowerMode"></a>
 	<h3 class="subsubtitle method-title">smartPowerMode</h3>
 	
@@ -2332,6 +2388,52 @@ Based on the method you used to initialize it may contain:
 			<dt><em>timeout</em></dt>
 			<dd><p>timeout of scan operation</p></dd>
 		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>completion block returning reference to ESTBeaconConnection object performing operation.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/getMacAddressWithCompletion:" title="getMacAddressWithCompletion:"></a>
+	<h3 class="subsubtitle method-title">getMacAddressWithCompletion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Allows to get MAC address.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)getMacAddressWithCompletion:(ESTStringCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>completion</em></dt>
@@ -3739,7 +3841,7 @@ If the beacon is moving or oriented differently it acts normally.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-05-19)</span><br />
+						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-05-22)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						
