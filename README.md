@@ -46,7 +46,7 @@ Estimote SDK 3.0 comes to you as a **framework** rather than a **static library 
 
 1. Drag and drop EstimoteSDK.framework file into your Xcode project. It will automatically show up in your project navigator and will be added to *"Linked Frameworks and Libraries"* section in project settings. 
 
-2. Estimote SDK depends on Apple's CoreLocation and CoreBlueooth frameworks as well as SystemConfiguration framework to handle Estimote Cloud API requests, so you should include them in your project too. When you add them to your project settings, it should look like on the screenshot below.
+2. Estimote SDK depends on Apple's CoreLocation and CoreBluetooth frameworks as well as SystemConfiguration framework to handle Estimote Cloud API requests, so you should include them in your project too. When you add them to your project settings, it should look like on the screenshot below.
 <img src="images/build_phases.png" alt="Build Phases" width="840">
 
 3. That's it, congratulations and happy hacking!
