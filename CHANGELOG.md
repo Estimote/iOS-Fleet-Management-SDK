@@ -1,3 +1,21 @@
+## 3.2.6 (June 10, 2015)
+
+Bugfixes:
+
+- fixed incorrect handling of accented characters in beacon names
+
+## 3.2.5 (May 22, 2015) 
+
+Bugfixes:
+
+- saving cache to disk no longer happens on the main thread
+
+Improvements:
+
+- added RSSI property (updated in real-time) to the ESTBeaconConnection
+- added a method to fetch a beacon's MAC address from the cloud to the
+ESTCloudManager
+
 ## 3.2.4 (May 19, 2015)
 
 Bugfixes:
