@@ -1,3 +1,9 @@
+## 3.2.7 (June 11, 2015)
+
+Bugfixes:
+
+- fixed crash in nearables caching 
+
 ## 3.2.6 (June 10, 2015)
 
 Bugfixes:
