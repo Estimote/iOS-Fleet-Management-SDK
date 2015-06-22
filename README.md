@@ -2,7 +2,7 @@
 
 ## IMPORTANT RELEASE NOTE!
 
-Estimote SDK has been with us for more than a year now. Thanks to feedback from our developer community, we’ve learned a lot about how it helps developers to reach their goals. However we also learned some of its shortcomings. As we want to deliver the best developer experience we decided to restructure our SDK and introduce some backward incompatible changes which will ultimately make it much easier to develop using our stack. 
+Estimote SDK has been with us for more than a year now. Thanks to feedback from our developer community, we’ve learned a lot about how it helps developers to reach their goals. However we also learned some of its shortcomings. As we want to deliver the best developer experience we decided to restructure our SDK and introduce some backward incompatible changes which will ultimately make it much easier to develop using our stack.
 
 This update comes with firmware update to version 3.0.1. This version changes the way authorization is handled during device connection. It also introduces a new feature we call “conditional broadcasting”, which allows you to restrict broadcasting based on a beacon’s orientation and movement. Now you can enable one of the two new modes of beacon operation:
 
@@ -44,12 +44,21 @@ To learn more, read the [API section on our website](http://estimote.com/api/ind
 
 Estimote SDK 3.0 comes to you as a **framework** rather than a **static library + headers** like it used to. This greatly simplifies setup, as you only need to include a single *EstimoteSDK.framework* file in your project to get started:
 
-1. Drag and drop EstimoteSDK.framework file into your Xcode project. It will automatically show up in your project navigator and will be added to *"Linked Frameworks and Libraries"* section in project settings. 
+1. Drag and drop EstimoteSDK.framework file into your Xcode project. It will automatically show up in your project navigator and will be added to *"Linked Frameworks and Libraries"* section in project settings.
 
-2. Estimote SDK depends on Apple's CoreLocation and CoreBluetooth frameworks as well as SystemConfiguration framework to handle Estimote Cloud API requests, so you should include them in your project too. When you add them to your project settings, it should look like on the screenshot below.
-<img src="images/build_phases.png" alt="Build Phases" width="840">
+2. Use `#import <EstimoteSDK/EstimoteSDK.h>` in your implementation files.
 
-3. That's it, congratulations and happy hacking!
+   **Note:** in Swift, you need to add `#import <EstimoteSDK/EstimoteSDK.h>` to an *Objective-C Bridging Header* instead:
+
+   * right-click on the "Support Files" group in the navigator, and choose "New File…"
+   * pick a "Header File" from the "iOS - Source" section, and save it as "ObjCBridge.h"
+   * add the `#import <EstimoteSDK/EstimoteSDK.h>` line to the newly created file
+   * select your project in the navigator and go to "Build Settings"
+   * look for the "Objective-C Bridging Header" setting and set it to `${PROJECT_NAME}/ObjCBridge.h`
+
+Estimote SDK is also available from [CocoaPods.org](https://cocoapods.org/pods/EstimoteSDK).
+
+**Remember to keep the Estimote SDK updated to benefit from the latest and greatest: bug fixes, new features etc.**
 
 ## Examples
 
