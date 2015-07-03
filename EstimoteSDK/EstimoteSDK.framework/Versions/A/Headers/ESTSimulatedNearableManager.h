@@ -7,7 +7,7 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 3.2.7
+//  Version: 3.2.8
 //  Copyright (c) 2015 Estimote. All rights reserved.
 
 #import "ESTNearableManager.h"

@@ -1,3 +1,14 @@
+## 3.2.8 (July 2, 2015)
+
+Bugfixes:
+
+- Crash on beacon device disconnect event corrected
+- nil region handling added to Beacon Manager and Secure Beacon Manager
+- beaconManager:didFailWithError: callback added to Beacon Manager and Secure Beacon Manager
+- handling of beaconManager:didStartMonitoringForRegion: added to Secure Beacon Manager
+- handling of beaconManager:rangingBeaconsDidFailForRegion: added to Secure Beacon Manager
+- handling of beaconManager:monitoringDidFailForRegion: added to Secure Beacon Manager
+
 ## 3.2.7 (June 11, 2015)
 
 Bugfixes:

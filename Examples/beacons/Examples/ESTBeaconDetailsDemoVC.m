@@ -452,6 +452,7 @@
             }
             
             self.UUIDTextFiled.text = [NSString stringWithFormat:@"%@", value];
+            self.motinoUUIDTextFiled.text = [self.beaconConnection.motionProximityUUID UUIDString];
         }];
     }
     else if (textField == self.advertisingTextField)

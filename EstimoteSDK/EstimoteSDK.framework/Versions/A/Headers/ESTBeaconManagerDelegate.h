@@ -7,7 +7,7 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 3.2.7
+//  Version: 3.2.8
 //  Copyright (c) 2015 Estimote. All rights reserved.
 
 @class ESTBeaconManager;
@@ -137,6 +137,19 @@ rangingBeaconsDidFailForRegion:(CLBeaconRegion *)region
  */
 - (void)beaconManagerDidStartAdvertising:(id)manager
                                    error:(NSError *)error;
+    
+#pragma mark General Events
+///--------------------------------------------------------------------
+/// @name General Events
+///--------------------------------------------------------------------
+
+/**
+ * The beacon manager calls this method when it encounters an error trying to get the beacons data. If the user denies your application’s use of the location service, this method reports a kCLErrorDenied error. Upon receiving such an error, you should stop the location service. This method is forwarding locationManager:didFailWithError: method of CLLocationManager.
+ *
+ * @param manager The beacon manager object reporting the event.
+ * @param error If an error occurred, this error object describes the error.
+ */
+- (void)beaconManager:(id)manager didFailWithError:(NSError *)error;
 
 
 @end
