@@ -1,11 +1,11 @@
 Pod::Spec.new do |s|
   s.name         = "EstimoteSDK"
-  s.version      = “3.2.9”
+  s.version      = "3.2.9"
   s.summary      = "iOS library for Estimote iBeacon devices"
   s.homepage     = "http://estimote.com"
   s.author       = { "Estimote, Inc" => "contact@estimote.com" }
-  s.platform     = :ios 
-  s.source       = { :git => "https://github.com/Estimote/iOS-SDK.git", :tag => “3.2.9” }
+  s.platform     = :ios
+  s.source       = { :git => "https://github.com/Estimote/iOS-SDK.git", :tag => "3.2.9" }
   s.source_files =  'EstimoteSDK/EstimoteSDK.framework/Versions/A/Headers/*.h'
   s.vendored_frameworks = 'EstimoteSDK/EstimoteSDK.framework'
   s.ios.deployment_target = '7.0'
