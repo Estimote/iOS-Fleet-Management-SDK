@@ -1,3 +1,10 @@
+## 3.2.9 (July 7, 2015)
+
+Bugfixes:
+
+- Incorrect values sent to Estimote Cloud for Basic and Smart Power Modes
+- Crash on beacon device disconnect event corrected (additional issues found)
+
 ## 3.2.8 (July 2, 2015)
 
 Bugfixes:
