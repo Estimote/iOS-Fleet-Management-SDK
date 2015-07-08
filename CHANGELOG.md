@@ -1,3 +1,10 @@
+## 3.2.10 (July 8, 2015)
+
+Bugfixes:
+
+- Crash during ranging beacons related to caching fixed
+- Missing beaconConnection:didDisconnectWithError: event enabled in ESTBeaconConnection
+
 ## 3.2.9 (July 7, 2015)
 
 Bugfixes:
@@ -20,7 +27,7 @@ Bugfixes:
 
 Bugfixes:
 
-- fixed crash in nearables caching 
+- fixed crash in nearables caching
 
 ## 3.2.6 (June 10, 2015)
 
@@ -28,7 +35,7 @@ Bugfixes:
 
 - fixed incorrect handling of accented characters in beacon names
 
-## 3.2.5 (May 22, 2015) 
+## 3.2.5 (May 22, 2015)
 
 Bugfixes:
 
@@ -61,7 +68,7 @@ Improvements:
 - Persist secure monitored regions between app relaunches
 - Secured Beacon Manager invoke beaconManager:didDeterminState: on main thread
 - SystemConfiguration added to the umbrella header
-  
+
 ## 3.2.2 (April 29, 2015)
 
 Features:
@@ -115,7 +122,7 @@ Bugfixes:
 - Motion state incorrect value sent to delegate fixed
 - Caching beacons corrected
 - Secured beacons ranging delay fixed
-- returnAllRangedBeaconsAtOnce flag of ESTBeaconManager fixed 
+- returnAllRangedBeaconsAtOnce flag of ESTBeaconManager fixed
 
 ## 3.0.3 (March 27, 2015)
 
@@ -127,7 +134,7 @@ Bugfixes:
 Improvements:
 
 - Cocoapods support updated for Framework architecture
-- Awesome ASCII art header added:) 
+- Awesome ASCII art header added:)
 
 ## 3.0.2 (March 26, 2015)
 
@@ -178,7 +185,7 @@ Improvements:
 - Example of changing beacons settings added
 
 Bugfixes:
-- Firmware and Hardware version formatting of nearables corrected 
+- Firmware and Hardware version formatting of nearables corrected
 - Nearables monitoring fixed (constant monitoring issue)
 
 ## 2.3.2 (January 16, 2015)
@@ -199,7 +206,7 @@ Improvements:
 
 Bugfixes:
 - Trigger manager double monitoring crash solved
-- Compilation issue with undefined symbol solved 
+- Compilation issue with undefined symbol solved
 
 ## 2.3.0 (December 24, 2014)
 
@@ -255,7 +262,7 @@ Improvements:
 Features:
 
  - Added support for the new CoreLocation authorization model introduced in iOS 8
- 
+
    You can read more about it in our [Estimote SDK and iOS 8 Location Services](https://community.estimote.com/hc/en-us/articles/203393036-Estimote-SDK-and-iOS-8-Location-Services) guide.
 
 Improvements:
@@ -291,12 +298,12 @@ Features:
  - Added support for temperature and accelerometer sensors
  - Added `motionProximityUUID` to `ESTBeacon`
  - Added support for firmware: Estimote OS 2.0 and up
- 
+
 Improvements:
 
  - Better connection status handling
  - Improved Examples app
-	
+
 New `ESTBeacon` API:
 
  - The following methods have new names:
@@ -327,7 +334,7 @@ Improvements:
 Bugfixes:
 
   - Corrected the name of the DistanceDemo project
-  
+
 ## 1.1.0 (December 2, 2013)
 
 Features:
