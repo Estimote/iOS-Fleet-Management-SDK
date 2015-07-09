@@ -1,3 +1,9 @@
+## 3.2.11 (July 9, 2015)
+
+Bugfixes:
+
+- Incorrect monitoring related events from ESTSecureBeaconManager fixed
+
 ## 3.2.10 (July 8, 2015)
 
 Bugfixes:
