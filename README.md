@@ -1,44 +1,27 @@
 # Estimote SDK for Apple iOS
 
-## IMPORTANT RELEASE NOTE!
-
-Estimote SDK has been with us for more than a year now. Thanks to feedback from our developer community, we’ve learned a lot about how it helps developers to reach their goals. However we also learned some of its shortcomings. As we want to deliver the best developer experience we decided to restructure our SDK and introduce some backward incompatible changes which will ultimately make it much easier to develop using our stack.
-
-This update comes with firmware update to version 3.0.1. This version changes the way authorization is handled during device connection. It also introduces a new feature we call “conditional broadcasting”, which allows you to restrict broadcasting based on a beacon’s orientation and movement. Now you can enable one of the two new modes of beacon operation:
-
-* *“Flip to Sleep”* — in this mode, the beacon will not broadcast advertising packets when placed on its back (gecko pad facing up).
-* *“Motion only”* — in this mode, the beacon will only broadcast advertising packets when it's moving.
-
-There are two main motivations behind this feature - firstly, it makes it much easier to test beacon enabled apps, as both of these modes provide a virtual “off” switch for your beacons. Secondly, we’re always looking for ways to save battery life, and both the new broadcasting modes, in particular “motion only” advertising offer innovative ways to save beacon power in some specific use cases.
-
-**Please note that Estimote beacon firmware 3.0.1 is not backward compatible! This means you won't be able to perform connection using 2.4.0 Estimote SDK and 2.12 AppStore app to updated devices.**
-
-We've also started [discusion about Estimote SDK 3.0.0](https://forums.estimote.com/t/sdk-3-0-beta-discussion/78) using our recently announced Estimote Forums. Feel free to participate and give us your feedback!
-
-If you already use Estimote SDK we've provided [Migration Guide](SDK_3_0_MIGRATION_GUIDE.md) to make it easier for you to update.
-
 ## Table of Contents
 
-<!-- START doctoc -->
-
-- [Introduction](#introduction)
 - [Installation](#installation)
 - [Examples](#examples)
 - [Technical overview](#technical-overview)
   - [Client](#client)
-    - [Trigger engine](#trigger-engine)
   - [Utility](#utility)
+- [Important 3.0 migration notes](#important-30-migration-notes)
 - [Changelog](#changelog)
-
-<!-- END doctoc -->
 
 ## Introduction
 
 We want the Estimote iOS SDK to be first choice when building any Estimote Beacons or Nearables related experience for the Apple iOS Platform. Our SDK provides a wide range of both utility and client facing features that will save time and make development easier than ever. It's built purely on Apple Core Location and Core Bluetooth technologies and is 100% iBeacon compatible.
 
-In addition to the Estimote SDK we've included a lot of examples to show you how to use our SDK in real scenarios. You should also check our utility app that can be found in AppStore: [Estimote iOS app](https://itunes.apple.com/en/app/estimote/id686915066?mt=8).
+Learn more:
 
-To learn more, read the [API section on our website](http://estimote.com/api/index.html#). You can review the [SDK documentation](http://estimote.github.io/iOS-SDK/) and check our [Community Portal](http://community.estimote.com) to get the answers for the most common questions related to iBeacon in general as well as to questions about Estimote specific hardware and software.
+- Go through our [Developer Docs](http://developer.estimote.com).
+- Play with [Examples](https://github.com/Estimote/iOS-SDK/tree/master/Examples) demonstrating how to use the SDK.
+- Download [Estimote iOS app](https://itunes.apple.com/us/app/estimote/id686915066?mt=8) for demos and beacon management features.
+- For answers to the most common questions and app inspirations, see [Estimote Community Portal](http://community.estimote.com).
+- Ask your own questions on [Estimote Community Forums](https://forums.estimote.com).
+- [Comprehensive SDK reference](http://estimote.github.io/iOS-SDK/)
 
 ## Installation
 
@@ -107,6 +90,23 @@ In the typical workflow you will wrap your rules in ESTTrigger object and pass i
 * **ESTBeaconConnection** - Manages connection and configuration of a particular device. Allows to both read and write all the settings.Allows to perform Over The Air firmware update of an Estimote Beacon.
 
 Another valuable component is the **Bulk Updater** mechanism, which lets you update settings of multiple devices in batches. It's compatible with **Remote Management** feature based on Estimote Cloud, so you can define a set of new settings both locally or remotely. After new settings are defined and synced with Estimote Cloud, the updates will be performed using all iOS running devices that are connected to the particular Estimote Account.
+
+## Important 3.0 migration notes
+
+Estimote SDK has been with us for more than a year now. Thanks to feedback from our developer community, we’ve learned a lot about how it helps developers to reach their goals. However we also learned some of its shortcomings. As we want to deliver the best developer experience we decided to restructure our SDK and introduce some backward incompatible changes which will ultimately make it much easier to develop using our stack.
+
+This update comes with firmware update to version 3.0.1. This version changes the way authorization is handled during device connection. It also introduces a new feature we call “conditional broadcasting”, which allows you to restrict broadcasting based on a beacon’s orientation and movement. Now you can enable one of the two new modes of beacon operation:
+
+* *“Flip to Sleep”* — in this mode, the beacon will not broadcast advertising packets when placed on its back (gecko pad facing up).
+* *“Motion only”* — in this mode, the beacon will only broadcast advertising packets when it's moving.
+
+There are two main motivations behind this feature - firstly, it makes it much easier to test beacon enabled apps, as both of these modes provide a virtual “off” switch for your beacons. Secondly, we’re always looking for ways to save battery life, and both the new broadcasting modes, in particular “motion only” advertising offer innovative ways to save beacon power in some specific use cases.
+
+**Please note that Estimote beacon firmware 3.0.1 is not backward compatible! This means you won't be able to perform connection using 2.4.0 Estimote SDK and 2.12 AppStore app to updated devices.**
+
+We've also started [discusion about Estimote SDK 3.0.0](https://forums.estimote.com/t/sdk-3-0-beta-discussion/78) using our recently announced Estimote Forums. Feel free to participate and give us your feedback!
+
+If you already use Estimote SDK we've provided [Migration Guide](SDK_3_0_MIGRATION_GUIDE.md) to make it easier for you to update.
 
 ## Changelog
 
