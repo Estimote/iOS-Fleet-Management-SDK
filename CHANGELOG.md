@@ -3,6 +3,7 @@
 Features:
 
 - Eddystone support
+- Broadcasting schemes introduced
 
 ## 3.2.12 (July 14, 2015)
 
