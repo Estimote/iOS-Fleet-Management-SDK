@@ -7,7 +7,7 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 3.2.12
+//  Version: 3.3.0
 //  Copyright (c) 2015 Estimote. All rights reserved.
 
 #import <CoreLocation/CoreLocation.h>
@@ -32,3 +32,8 @@
 
 #import "ESTNotificationTransporter.h"
 #import "ESTBulkUpdater.h"
+#import "ESTEddystoneManager.h"
+
+#import "ESTEddystoneFilterUID.h"
+#import "ESTEddystoneFilterURL.h"
+#import "ESTEddystoneFilterURLDomain.h"

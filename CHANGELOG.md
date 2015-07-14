@@ -1,3 +1,9 @@
+## 3.3.0 (July 14, 2015)
+
+Features:
+
+- Eddystone support
+
 ## 3.2.12 (July 14, 2015)
 
 Bugfixes:

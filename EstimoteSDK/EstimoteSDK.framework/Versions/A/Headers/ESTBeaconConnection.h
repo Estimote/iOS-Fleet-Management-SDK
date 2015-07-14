@@ -7,13 +7,14 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 3.2.12
+//  Version: 3.3.0
 //  Copyright (c) 2015 Estimote. All rights reserved.
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 #import "ESTBeaconDefinitions.h"
+#import "ESTBeaconVO.h"
 
 #define CONNECTION_ERROR_UID_MISSING    400
 #define CONNECTION_ERROR_AUTHORIZATION  401
@@ -47,6 +48,15 @@ enum
 @protocol ESTBeaconConnectionDelegate <NSObject>
 
 @optional
+
+/**
+ * Tells the delegate that Estimote Cloud verified device for authorized user.
+ *
+ * @param connection The beacon connection object reporting the event.
+ * @param data Information about the device stored in the Estimote Cloud.
+ * @param error An error object containing the error code that indicates why connection failed.
+ */
+- (void)beaconConnection:(ESTBeaconConnection *)connection didVerifyWithData:(ESTBeaconVO *)data error:(NSError *)error;
 
 /**
  * Tells the delegate that an attempt to connect to a beacon succeeded and the connection has been established.
@@ -130,7 +140,7 @@ enum
 + (instancetype)connectionWithProximityUUID:(NSUUID *)proximityUUID
                                       major:(CLBeaconMajorValue)major
                                       minor:(CLBeaconMinorValue)minor
-                              delegate:(id<ESTBeaconConnectionDelegate>)delegate;
+                                   delegate:(id<ESTBeaconConnectionDelegate>)delegate;
 
 /**
  *  Static method initializing connection object with Estimote beacon
@@ -262,6 +272,11 @@ enum
  */
 @property (readonly, nonatomic) CBPeripheral *peripheral;
 
+/**
+ *  Broadcasting scheme of device.
+ */
+@property (readonly, nonatomic) ESTBroadcastingScheme broadcastingScheme;
+
 #pragma mark - iBeacon settings
 ///--------------------------------------------------------------------
 /// @name iBeacon settings
@@ -319,6 +334,23 @@ enum
  * @see writeAdvInterval:completion:
  */
 @property (readonly, nonatomic) NSNumber *advInterval;
+
+#pragma mark - Google Eddystone
+
+/**
+ * Namespace ID of Google Eddystone - part of device identification.
+ */
+@property (readonly, nonatomic) NSString *eddystoneNamespace;
+
+/**
+ * Instance ID of Google Eddystone - part of device identification.
+ */
+@property (readonly, nonatomic) NSString *eddystoneInstance;
+
+/**
+ * URL advertised by Google Eddystone device in URL mode.
+ */
+@property (readonly, nonatomic) NSString *eddystoneURL;
 
 #pragma mark - Hardware and software information
 
@@ -485,6 +517,45 @@ enum
  */
 - (void)resetAccelerometerCountWithCompletion:(ESTUnsignedShortCompletionBlock)completion;
 
+#pragma mark - Writing methods for broadcasting settings
+///--------------------------------------------------------------------
+/// @name Writing methods for broadcasting settings
+///--------------------------------------------------------------------
+
+/**
+ *  Changes broadcasting scheme for device. Broadcasting scheme describes set settings
+ *  defining what kind of data and how often is broadcasting.
+ *
+ *  Possible options are:
+ *  - ESTBroadcastingSchemeEstimote - broadcasts iBeacon packets with customizable Advertising interval. 
+ *    Default advertising interval (950ms) value is set after method invocation.
+ *  - ESTBroadcastingSchemeIBeacon - broadcasts iBeacon packets with iBeacon Advertising interval.
+ *  - ESTBroadcastingSchemeEddystoneURL - broadcasts Eddystone-URL packets with customizable interval.
+ *    Default advertising interval (500ms) value is set after method invocation.
+ *  - ESTBroadcastingSchemeEddystoneUID - broadcasts Eddystone-UID packets with customizable interval.
+ *    Default advertising interval (500ms) value is set after method invocation.
+ */
+- (void)writeBroadcastingScheme:(ESTBroadcastingScheme)broadcastingScheme completion:(ESTUnsignedShortCompletionBlock)completion;
+
+/**
+ *  Changes the conditional broadcasting type. Note that the accelerometer must be enabled for this feature to work
+ *  i.e. you must set Motion Detection Flag in order to use this feature.
+ *  Possible options are:
+ *  - ESTBeaconConditionalBroadcastingOff - the default mode, beacon is broadcasting all the time
+ *  - ESTBeaconConditionalBroadcastingMotionOnly – beacon only advertises when it's in motion.
+ *    Note that UUID used in advertising packet depends on Motion UUID Flag state.
+ *  - ESTBeaconConditionalBroadcastingFlipToStop – beacon does not advertise when it's stationary and facing gecko pad up.
+ *    If the beacon is moving or oriented differently it acts normally.
+ *
+ *  @since Estimote OS A3.0.0
+ *
+ *  @param conditionalBroadcasting Conditional broadcasting mode to be set in the beacon.
+ *  @param completion A block that is called when the belly mode has been enabled or disabled.
+ *
+ */
+- (void)writeConditionalBroadcastingType:(ESTBeaconConditionalBroadcasting)conditionalBroadcasting
+                              completion:(ESTBoolCompletionBlock)completion;
+
 #pragma mark - Writing methods for iBeacon settings
 ///--------------------------------------------------------------------
 /// @name Writing methods for iBeacon settings
@@ -575,6 +646,48 @@ enum
  */
 - (void)writePower:(ESTBeaconPower)power completion:(ESTPowerCompletionBlock)completion;
 
+#pragma mark - Writing methods for Google beacons
+///--------------------------------------------------------------------
+/// @name Writing methods for Google beacons
+///--------------------------------------------------------------------
+
+/**
+ *  Sets Google beacon Namespace ID. Value should be provided as a domain formatted string (FQDN)
+ *  according to Google beacon best practices. Method automatically produce SHA-1 hash.
+ *  First 10 bytes of produced hash are used as Namespace ID.
+ *
+ *  @param eddystoneNamespace Google beacon Namespace ID
+ *  @param completion A block that is called when the Namespace has been changed or error occurred.
+ */
+- (void)writeEddystoneDomainNamespace:(NSString *)eddystoneNamespace completion:(ESTStringCompletionBlock)completion;
+
+/**
+ *  Sets Google beacon Instance ID. Value should be provided as a Hexadecimal string
+ *  representing 6 bytes (12 character string - 2 chars for 1 byte).
+ *
+ *  @param gInstance Google beacon Instance ID
+ *  @param completion A block that is called when the Instance ID has been changed or error occurred.
+ */
+- (void)writeEddystoneHexNamespace:(NSString *)eddystoneNamespace completion:(ESTStringCompletionBlock)completion;
+
+/**
+ *  Sets Google beacon Instance ID. Value should be provided as a Hexadecimal string
+ *  representing 6 bytes (12 character string - 2 chars for 1 byte).
+ *
+ *  @param gInstance Google beacon Instance ID
+ *  @param completion A block that is called when the Instance ID has been changed or error occurred.
+ */
+- (void)writeEddystoneInstance:(NSString *)eddystoneInstance completion:(ESTStringCompletionBlock)completion;
+
+/**
+ *  Sets Eddystone URL. Defined URL is provided in advertising packet
+ *  when ESTBeaconPacketTypeEddystoneURL is selected as a packet type.
+ *
+ *  @param eddystoneURL Eddystone URL
+ *  @param completion A block that is called when the URL has been changed or error occurred.
+ */
+- (void)writeEddystoneURL:(NSString *)eddystoneURL completion:(ESTStringCompletionBlock)completion;
+
 #pragma mark - Writing methods for power management
 ///--------------------------------------------------------------------
 /// @name Writing methods for power management
@@ -609,25 +722,6 @@ enum
  */
 - (void)writeSmartPowerModeEnabled:(BOOL)enable
                         completion:(ESTBoolCompletionBlock)completion;
-
-/**
- *  Changes the conditional broadcasting type. Note that the accelerometer must be enabled for this feature to work
- *  i.e. you must set Motion Detection Flag in order to use this feature.
- *  Possible options are:
- *  - ESTBeaconConditionalBroadcastingOff - the default mode, beacon is broadcasting all the time
- *  - ESTBeaconConditionalBroadcastingMotionOnly – beacon only advertises when it's in motion.
- *    Note that UUID used in advertising packet depends on Motion UUID Flag state.
- *  - ESTBeaconConditionalBroadcastingFlipToStop – beacon does not advertise when it's stationary and facing gecko pad up.
- *    If the beacon is moving or oriented differently it acts normally.
- *
- *  @since Estimote OS A3.0.0
- *
- *  @param conditionalBroadcasting Conditional broadcasting mode to be set in the beacon.
- *  @param completion A block that is called when the belly mode has been enabled or disabled.
- *
- */
-- (void)writeConditionalBroadcastingType:(ESTBeaconConditionalBroadcasting)conditionalBroadcasting
-                              completion:(ESTBoolCompletionBlock)completion;
 
 #pragma mark - Writing methods for security features
 ///--------------------------------------------------------------------

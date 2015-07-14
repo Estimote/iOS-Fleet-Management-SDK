@@ -7,7 +7,7 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 3.2.12
+//  Version: 3.3.0
 //  Copyright (c) 2015 Estimote. All rights reserved.
 
 #import <Foundation/Foundation.h>
@@ -19,6 +19,7 @@
 @property (nonatomic, strong) NSNumber *major;
 @property (nonatomic, strong) NSNumber *minor;
 @property (nonatomic, strong) NSString *macAddress;
+@property (nonatomic, assign) ESTBroadcastingScheme broadcastingScheme;
 
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSNumber *batteryLifeExpectancy;
@@ -34,6 +35,10 @@
 @property (nonatomic, strong) NSNumber *latitude;
 @property (nonatomic, strong) NSNumber *longitude;
 @property (nonatomic, strong) NSString *location;
+
+@property (nonatomic, strong) NSString *eddystoneNamespaceID;
+@property (nonatomic, strong) NSString *eddystoneInstanceID;
+@property (nonatomic, strong) NSString *eddystoneURL;
 
 @property (nonatomic, strong) NSNumber *motionDetection;
 @property (nonatomic, assign) ESTBeaconConditionalBroadcasting conditionalBroadcasting;

@@ -20,7 +20,9 @@
 #import "ESTBulkUpdaterDemoVC.h"
 #import "ESTBulkUpdaterRemoteDemoVC.h"
 #import "ESTSendGPSDemoVC.h"
+#import "ESTEddystoneTableVC.h"
 #import "ESTVirtualBeaconDemoVC.h"
+#import <EstimoteSDK/ESTEddystone.h>
 
 @interface ESTDemoTableViewCell : UITableViewCell
 
@@ -57,7 +59,8 @@
     self.beaconDemoList = @[ @[@"Virtual Beacon", @"Distance", @"Proximity Zones",@"Notifications"],
                              @[@"Temperature", @"Accelerometer", @"Motion UUID"],
                              @[@"Beacon Settings", @"Update Firmware", @"Local Bulk Update", @"Remote Bulk Update"],
-                             @[@"Fetch beacons from cloud", @"Send Beacons GPS Position"]
+                             @[@"Fetch beacons from cloud", @"Send Beacons GPS Position"],
+                             @[@"Discovery and details"]
                              ];
 }
 
@@ -83,6 +86,8 @@
         return @"Utilities demos";
     if(section == 3)
         return @"Estimote Cloud demos";
+    if(section == 4)
+        return @"Eddystone demos";
     
     return nil;
 }
@@ -265,7 +270,25 @@
                 break;
         }
     }
-
+    else if (indexPath.section == 4)
+    {
+        switch (indexPath.row)
+        {
+            case 0:
+            {
+                demoViewController = [[ESTEddystoneTableVC alloc] initWithCompletion:^(ESTEddystone *beacon) {
+                    
+                    ESTBeaconDetailsDemoVC *beaconDetailsVC = [[ESTBeaconDetailsDemoVC alloc] initWithMacAddress:beacon.macAddress];
+                    [self.navigationController pushViewController:beaconDetailsVC animated:YES];
+                    
+                                                                     }];
+                break;
+            }
+            default:
+                break;
+        }
+    }
+    
     if (demoViewController)
     {
         [self.navigationController pushViewController:demoViewController animated:YES];

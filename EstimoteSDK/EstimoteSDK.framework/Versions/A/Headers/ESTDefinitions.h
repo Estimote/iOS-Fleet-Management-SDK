@@ -7,7 +7,7 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 3.2.12
+//  Version: 3.3.0
 //  Copyright (c) 2015 Estimote. All rights reserved.
 
 #import <Foundation/Foundation.h>
@@ -40,6 +40,15 @@ typedef NS_ENUM(int, ESTConnectionStatus)
     ESTConnectionStatusDisconnected,
     ESTConnectionStatusConnecting,
     ESTConnectionStatusConnected
+};
+
+typedef NS_ENUM(char, ESTBroadcastingScheme)
+{
+    ESTBroadcastingSchemeUnknown,
+    ESTBroadcastingSchemeEstimote,
+    ESTBroadcastingSchemeIBeacon,
+    ESTBroadcastingSchemeEddystoneURL,
+    ESTBroadcastingSchemeEddystoneUID
 };
 
 typedef void(^ESTCompletionBlock)(NSError* error);

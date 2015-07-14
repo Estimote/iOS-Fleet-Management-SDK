@@ -28,11 +28,16 @@
 @property (nonatomic, strong) IBOutlet UITextField *advertisingTextField;
 @property (nonatomic, strong) IBOutlet UITextField *powerTextField;
 
+@property (nonatomic, strong) IBOutlet UITextField *eddystoneNamespaceTextField;
+@property (nonatomic, strong) IBOutlet UITextField *eddystoneInstanceTextField;
+@property (nonatomic, strong) IBOutlet UITextField *eddystoneURLTextField;
+
 @property (nonatomic, strong) IBOutlet UISwitch *basicPowerModeSwitch;
 @property (nonatomic, strong) IBOutlet UISwitch *smartPowerModeSwitch;
 
 @property (nonatomic, strong) IBOutlet UISwitch *secureUUIDSwitch;
 @property (nonatomic, strong) IBOutlet UISegmentedControl *conditionalBroadcastingSegment;
+@property (nonatomic, strong) IBOutlet UISegmentedControl *broadcastingSchemeSegment;
 
 @property (nonatomic, strong) IBOutlet UITextView *mac;
 @property (nonatomic, strong) IBOutlet UILabel *batteryLevel;
@@ -65,7 +70,7 @@
 {
     [super viewDidLoad];
     
-    self.title = @"Beacon Details";
+    self.title = @"Device Details";
     
     [self enableView:NO];
     
@@ -76,7 +81,7 @@
                                        [UIScreen mainScreen].bounds.size.width,
                                        [UIScreen mainScreen].bounds.size.height);
     
-    self.mainScrollView.contentSize = CGSizeMake(320, 800);
+    self.mainScrollView.contentSize = CGSizeMake(320, 1200);
     self.mainScrollView.contentOffset = CGPointMake(0, 10);
     
     //In order to read beacon accelerometer we need to connect to it.
@@ -99,7 +104,6 @@
     /*
      * Disconnect beacon when leaving screen
      */
-    
     if (self.beaconConnection.connectionStatus == ESTConnectionStatusConnected || self.beaconConnection.connectionStatus == ESTConnectionStatusConnecting)
     {
         [self.beaconConnection cancelConnection];
@@ -208,6 +212,30 @@
         self.mac.text = @"--";
     }
     
+    self.broadcastingSchemeSegment.enabled = YES;
+    switch (self.beaconConnection.broadcastingScheme)
+    {
+        case ESTBroadcastingSchemeUnknown:
+            self.broadcastingSchemeSegment.enabled = NO;
+            self.broadcastingSchemeSegment.selectedSegmentIndex = UISegmentedControlNoSegment;
+            break;
+        case ESTBroadcastingSchemeEstimote:
+            self.broadcastingSchemeSegment.selectedSegmentIndex = 0;
+            break;
+        case ESTBroadcastingSchemeIBeacon:
+            self.broadcastingSchemeSegment.selectedSegmentIndex = 1;
+            break;
+        case ESTBroadcastingSchemeEddystoneUID:
+            self.broadcastingSchemeSegment.selectedSegmentIndex = 2;
+            break;
+        case ESTBroadcastingSchemeEddystoneURL:
+            self.broadcastingSchemeSegment.selectedSegmentIndex = 3;
+            break;
+            
+        default:
+            break;
+    }
+    
     if (self.beaconConnection.basicPowerMode == ESTBeaconPowerSavingModeOn)
     {
         self.basicPowerModeSwitch.enabled = YES;
@@ -257,13 +285,40 @@
             self.conditionalBroadcastingSegment.selectedSegmentIndex = UISegmentedControlNoSegment;
             self.conditionalBroadcastingSegment.enabled = NO;
     }
+    
+    if (self.beaconConnection.eddystoneNamespace)
+    {
+        self.eddystoneNamespaceTextField.text = self.beaconConnection.eddystoneNamespace;
+    }
+    else
+    {
+        self.eddystoneNamespaceTextField.text = @"--";
+    }
+    
+    if (self.beaconConnection.eddystoneInstance)
+    {
+        self.eddystoneInstanceTextField.text = self.beaconConnection.eddystoneInstance;
+    }
+    else
+    {
+        self.eddystoneInstanceTextField.text = @"--";
+    }
+    
+    if (self.beaconConnection.eddystoneURL)
+    {
+        self.eddystoneURLTextField.text = self.beaconConnection.eddystoneURL;
+    }
+    else
+    {
+        self.eddystoneURLTextField.text = @"--";
+    }
 }
 
 ////////////////////////////////////////////////////////
 # pragma mark - UI Button handling
 
 - (IBAction)resetBtnTapped:(id)sender
-{
+{    
     __weak typeof(self) selfRef = self;
     [self.beaconConnection resetToFactorySettingsWithCompletion:^(NSError *error)
     {
@@ -382,6 +437,42 @@
     }
 }
 
+- (IBAction)changeBroadcastingScheme:(UISegmentedControl *)sender
+{
+    self.broadcastingSchemeSegment.enabled = NO;
+    
+    ESTBroadcastingScheme broadcastingScheme;
+    
+    switch ([sender selectedSegmentIndex])
+    {
+        case 0:
+            broadcastingScheme = ESTBroadcastingSchemeEstimote;
+            break;
+        case 1:
+            broadcastingScheme = ESTBroadcastingSchemeIBeacon;
+            break;
+        case 2:
+            broadcastingScheme = ESTBroadcastingSchemeEddystoneUID;
+            break;
+        case 3:
+            broadcastingScheme = ESTBroadcastingSchemeEddystoneURL;
+            break;
+        default:
+            broadcastingScheme = ESTBroadcastingSchemeUnknown;
+    }
+    
+    if (broadcastingScheme)
+    {
+        __weak typeof(self) selfRef = self;
+        [self.beaconConnection writeBroadcastingScheme:broadcastingScheme
+                                            completion:^(unsigned short value, NSError *error)
+         {
+             selfRef.broadcastingSchemeSegment.enabled = YES;
+             [self updateDataLabels];
+         }];
+    }
+}
+
 #pragma mark - ESTBeacon connection handling
 
 - (void)beaconConnectionDidSucceed:(ESTBeaconConnection *)connection
@@ -396,8 +487,6 @@
 
 - (void)beaconConnection:(ESTBeaconConnection *)connection didFailWithError:(NSError *)error
 {
-    NSLog(@"Something went wrong. Beacon connection Did Fail. Error: %@", error);
-    
     [self.activityIndicator stopAnimating];
     self.activityIndicator.alpha = 0.;
     
@@ -469,8 +558,6 @@
     }
     else if (textField == self.powerTextField)
     {
-        
-        
         [self.beaconConnection writePower:[textField.text integerValue] completion:^(ESTBeaconPower power, NSError *error)
         {
             if (error)
@@ -478,8 +565,50 @@
                 NSLog(@"Error Power write: %@", error.localizedDescription);
             }
             
-            self.powerTextField.text = [NSString stringWithFormat:@"%i", power];
+            self.powerTextField.text = [NSString stringWithFormat:@"%tx", power];
         }];
+    }
+    else if (textField == self.eddystoneInstanceTextField)
+    {
+        [self.beaconConnection writeEddystoneInstance:self.eddystoneInstanceTextField.text
+                                         completion:^(NSString *value, NSError *error) {
+                                             
+                                             if (error)
+                                             {
+                                                 NSLog(@"Error eddystoneInstance write: %@", error.localizedDescription);
+                                             }
+                                             
+                                             self.eddystoneInstanceTextField.text = value;
+                                             
+                                         }];
+    }
+    else if (textField == self.eddystoneNamespaceTextField)
+    {
+        [self.beaconConnection writeEddystoneHexNamespace:self.eddystoneNamespaceTextField.text
+                                         completion:^(NSString *value, NSError *error) {
+                                             
+                                             if (error)
+                                             {
+                                                 NSLog(@"Error eddystoneNamespace write: %@", error.localizedDescription);
+                                             }
+                                             
+                                             self.eddystoneNamespaceTextField.text = value;
+                                             
+                                         }];
+    }
+    else if (textField == self.eddystoneURLTextField)
+    {
+        [self.beaconConnection writeEddystoneURL:self.eddystoneURLTextField.text
+                                    completion:^(NSString *value, NSError *error) {
+                                              
+                                              if (error)
+                                              {
+                                                  NSLog(@"Error eddystoneURI write: %@", error.localizedDescription);
+                                              }
+                                              
+                                              self.eddystoneURLTextField.text = value;
+                                              
+                                          }];
     }
 }
 
