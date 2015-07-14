@@ -1,3 +1,9 @@
+## 3.2.12 (July 14, 2015)
+
+Bugfixes:
+
+- Lots of improvements to stability and performance of Secure UUID ranging and monitoring
+
 ## 3.2.11 (July 9, 2015)
 
 Bugfixes:
