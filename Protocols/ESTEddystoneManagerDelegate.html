@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>ESTRule Class Reference</title>
+		<title>ESTEddystoneManagerDelegate Protocol Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">ESTRule Class Reference</h1>
+				<h1 class="hideInXcode">ESTEddystoneManagerDelegate Protocol Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -37,18 +37,15 @@
 	
 	
 	
-	<option value="properties">Properties</option>
-	
-	<option value="//api/name/state">&nbsp;&nbsp;&nbsp;&nbsp;state</option>
-	
-	
 	
 	
 	
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/update">&nbsp;&nbsp;&nbsp;&nbsp;- update</option>
+	<option value="//api/name/eddystoneManager:didDiscoverEddystones:withFilter:">&nbsp;&nbsp;&nbsp;&nbsp;- eddystoneManager:didDiscoverEddystones:withFilter:</option>
+	
+	<option value="//api/name/eddystoneManagerDidFailDiscovery:withError:">&nbsp;&nbsp;&nbsp;&nbsp;- eddystoneManagerDidFailDiscovery:withError:</option>
 	
 	
 	
@@ -72,19 +69,15 @@
 
 
 
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/state">state</a></span></li>
-	
-</ul></li>
-
 
 
 
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/update">update</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/eddystoneManager:didDiscoverEddystones:withFilter:">eddystoneManager:didDiscoverEddystones:withFilter:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/eddystoneManagerDidFailDiscovery:withError:">eddystoneManagerDidFailDiscovery:withError:</a></span></li>
 	
 </ul></li>
 
@@ -93,7 +86,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="ESTRule Class Reference" name="top"></a>
+				<a title="ESTEddystoneManagerDelegate Protocol Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -102,18 +95,18 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">ESTRule Class Reference</h1>
+						<h1 class="title title-header">ESTEddystoneManagerDelegate Protocol Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
 					
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
-	<td class="specification-title">Inherits from</td>
+	<td class="specification-title">Conforms to</td>
 	<td class="specification-value">NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">ESTRule.h<br />ESTRule.m</td>
+	<td class="specification-value">ESTEddystoneManager.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -123,7 +116,8 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>The <code>ESTRule</code> class defines single rule of <a href="../Classes/ESTTrigger.html"><code>ESTTrigger</code></a> object. Each rule has state value that indicates if it was fulfilled or not.</p>
+						<p>Protocol for <code>ESTEddystoneManager</code> delegate object. Allows to handle callbacks
+from Eddystone devices discovery process.</p>
 					</div>
 					
 					
@@ -141,13 +135,13 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/state">&nbsp;&nbsp;state</a></code>
+		<code><a href="#//api/name/eddystoneManager:didDiscoverEddystones:withFilter:">&ndash;&nbsp;eddystoneManager:didDiscoverEddystones:withFilter:</a></code>
 	</span>
-	<span class="task-item-suffix">property</span>
+	
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/update">&ndash;&nbsp;update</a></code>
+		<code><a href="#//api/name/eddystoneManagerDidFailDiscovery:withError:">&ndash;&nbsp;eddystoneManagerDidFailDiscovery:withError:</a></code>
 	</span>
 	
 	
@@ -160,48 +154,6 @@
 					
 					
 					
-					<div class="section section-methods">
-						<a title="Properties" name="properties"></a>
-						<h2 class="subtitle subtitle-methods">Properties</h2>
-						
-						<div class="section-method">
-	<a name="//api/name/state" title="state"></a>
-	<h3 class="subsubtitle method-title">state</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Current state of the rule.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL state</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTRule.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-					</div>
-					
 					
 					
 					
@@ -211,32 +163,46 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/update" title="update"></a>
-	<h3 class="subsubtitle method-title">update</h3>
+	<a name="//api/name/eddystoneManager:didDiscoverEddystones:withFilter:" title="eddystoneManager:didDiscoverEddystones:withFilter:"></a>
+	<h3 class="subsubtitle method-title">eddystoneManager:didDiscoverEddystones:withFilter:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Method that is invoked by trigger manager object to update state of the rule.</p>
+		<p>Tells the delegate that one or more beacons were discovered in the vicinity of the device.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)update</code></div>
+	<div class="method-subsection method-declaration"><code>- (void)eddystoneManager:(ESTEddystoneManager *)<em>manager</em> didDiscoverEddystones:(NSArray *)<em>eddystones</em> withFilter:(ESTEddystoneFilter *)<em>eddystoneFilter</em></code></div>
 
     
 	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>When creating custom rule, this method should be implemented to update state property of this class,
-based on developer defined conditions.</p>
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>manager</em></dt>
+			<dd><p>The Eddystone Manager object reporting the event.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>eddystones</em></dt>
+			<dd><p>An array of <a href="../Classes/ESTEddystone.html"><code>ESTEddystone</code></a> objects representing the beacons discovered.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>eddystoneFilter</em></dt>
+			<dd><p>Filter represented by subclass of <code>&lt;ESTEddystoneFilter&gt;</code> applied to discovery.</p></dd>
+		</dl>
+		
 	</div>
+	
+	
+	
+	
+	
+	
 	
 	
 	
@@ -246,7 +212,53 @@ based on developer defined conditions.</p>
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTRule.h</code><br />
+		<code class="declared-in-ref">ESTEddystoneManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/eddystoneManagerDidFailDiscovery:withError:" title="eddystoneManagerDidFailDiscovery:withError:"></a>
+	<h3 class="subsubtitle method-title">eddystoneManagerDidFailDiscovery:withError:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Tells the delegate that Google beacons discovery error occurred.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)eddystoneManagerDidFailDiscovery:(ESTEddystoneManager *)<em>manager</em> withError:(NSError *)<em>error</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>manager</em></dt>
+			<dd><p>The beacon manager object reporting the event.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTEddystoneManager.h</code><br />
 	</div>				
 	
 	

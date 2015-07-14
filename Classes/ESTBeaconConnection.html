@@ -47,6 +47,8 @@
 	
 	<option value="//api/name/batteryType">&nbsp;&nbsp;&nbsp;&nbsp;batteryType</option>
 	
+	<option value="//api/name/broadcastingScheme">&nbsp;&nbsp;&nbsp;&nbsp;broadcastingScheme</option>
+	
 	<option value="//api/name/color">&nbsp;&nbsp;&nbsp;&nbsp;color</option>
 	
 	<option value="//api/name/conditionalBroadcastingState">&nbsp;&nbsp;&nbsp;&nbsp;conditionalBroadcastingState</option>
@@ -54,6 +56,12 @@
 	<option value="//api/name/connectionStatus">&nbsp;&nbsp;&nbsp;&nbsp;connectionStatus</option>
 	
 	<option value="//api/name/delegate">&nbsp;&nbsp;&nbsp;&nbsp;delegate</option>
+	
+	<option value="//api/name/eddystoneInstance">&nbsp;&nbsp;&nbsp;&nbsp;eddystoneInstance</option>
+	
+	<option value="//api/name/eddystoneNamespace">&nbsp;&nbsp;&nbsp;&nbsp;eddystoneNamespace</option>
+	
+	<option value="//api/name/eddystoneURL">&nbsp;&nbsp;&nbsp;&nbsp;eddystoneURL</option>
 	
 	<option value="//api/name/estimoteSecureUUIDState">&nbsp;&nbsp;&nbsp;&nbsp;estimoteSecureUUIDState</option>
 	
@@ -143,9 +151,19 @@
 	
 	<option value="//api/name/writeBasicPowerModeEnabled:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeBasicPowerModeEnabled:completion:</option>
 	
+	<option value="//api/name/writeBroadcastingScheme:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeBroadcastingScheme:completion:</option>
+	
 	<option value="//api/name/writeCalibratedTemperature:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeCalibratedTemperature:completion:</option>
 	
 	<option value="//api/name/writeConditionalBroadcastingType:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeConditionalBroadcastingType:completion:</option>
+	
+	<option value="//api/name/writeEddystoneDomainNamespace:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeEddystoneDomainNamespace:completion:</option>
+	
+	<option value="//api/name/writeEddystoneHexNamespace:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeEddystoneHexNamespace:completion:</option>
+	
+	<option value="//api/name/writeEddystoneInstance:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeEddystoneInstance:completion:</option>
+	
+	<option value="//api/name/writeEddystoneURL:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeEddystoneURL:completion:</option>
 	
 	<option value="//api/name/writeEstimoteSecureUUIDEnabled:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeEstimoteSecureUUIDEnabled:completion:</option>
 	
@@ -193,7 +211,11 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Reading methods for sensors">Reading methods for sensors</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Writing methods for broadcasting settings">Writing methods for broadcasting settings</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Writing methods for iBeacon settings">Writing methods for iBeacon settings</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Writing methods for Google beacons">Writing methods for Google beacons</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Writing methods for power management">Writing methods for power management</a></span></li>
 	
@@ -221,6 +243,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/batteryType">batteryType</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/broadcastingScheme">broadcastingScheme</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/color">color</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/conditionalBroadcastingState">conditionalBroadcastingState</a></span></li>
@@ -228,6 +252,12 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/connectionStatus">connectionStatus</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/delegate">delegate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/eddystoneInstance">eddystoneInstance</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/eddystoneNamespace">eddystoneNamespace</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/eddystoneURL">eddystoneURL</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/estimoteSecureUUIDState">estimoteSecureUUIDState</a></span></li>
 	
@@ -319,9 +349,19 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeBasicPowerModeEnabled:completion:">writeBasicPowerModeEnabled:completion:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeBroadcastingScheme:completion:">writeBroadcastingScheme:completion:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeCalibratedTemperature:completion:">writeCalibratedTemperature:completion:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeConditionalBroadcastingType:completion:">writeConditionalBroadcastingType:completion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeEddystoneDomainNamespace:completion:">writeEddystoneDomainNamespace:completion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeEddystoneHexNamespace:completion:">writeEddystoneHexNamespace:completion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeEddystoneInstance:completion:">writeEddystoneInstance:completion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeEddystoneURL:completion:">writeEddystoneURL:completion:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeEstimoteSecureUUIDEnabled:completion:">writeEstimoteSecureUUIDEnabled:completion:</a></span></li>
 	
@@ -522,6 +562,12 @@
 	</span>
 	<span class="task-item-suffix">property</span>
 	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/broadcastingScheme">&nbsp;&nbsp;broadcastingScheme</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
 </li>
 						</ul>
 						
@@ -563,6 +609,24 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/advInterval">&nbsp;&nbsp;advInterval</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/eddystoneNamespace">&nbsp;&nbsp;eddystoneNamespace</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/eddystoneInstance">&nbsp;&nbsp;eddystoneInstance</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/eddystoneURL">&nbsp;&nbsp;eddystoneURL</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -696,6 +760,26 @@
 						</ul>
 						
 						
+						<a title="Writing methods for broadcasting settings" name="task_Writing methods for broadcasting settings"></a>
+						<h3 class="subsubtitle task-title">Writing methods for broadcasting settings</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/writeBroadcastingScheme:completion:">&ndash;&nbsp;writeBroadcastingScheme:completion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/writeConditionalBroadcastingType:completion:">&ndash;&nbsp;writeConditionalBroadcastingType:completion:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
 						<a title="Writing methods for iBeacon settings" name="task_Writing methods for iBeacon settings"></a>
 						<h3 class="subsubtitle task-title">Writing methods for iBeacon settings</h3>
 
@@ -740,6 +824,38 @@
 						</ul>
 						
 						
+						<a title="Writing methods for Google beacons" name="task_Writing methods for Google beacons"></a>
+						<h3 class="subsubtitle task-title">Writing methods for Google beacons</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/writeEddystoneDomainNamespace:completion:">&ndash;&nbsp;writeEddystoneDomainNamespace:completion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/writeEddystoneHexNamespace:completion:">&ndash;&nbsp;writeEddystoneHexNamespace:completion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/writeEddystoneInstance:completion:">&ndash;&nbsp;writeEddystoneInstance:completion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/writeEddystoneURL:completion:">&ndash;&nbsp;writeEddystoneURL:completion:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
 						<a title="Writing methods for power management" name="task_Writing methods for power management"></a>
 						<h3 class="subsubtitle task-title">Writing methods for power management</h3>
 
@@ -753,12 +869,6 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/writeSmartPowerModeEnabled:completion:">&ndash;&nbsp;writeSmartPowerModeEnabled:completion:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/writeConditionalBroadcastingType:completion:">&ndash;&nbsp;writeConditionalBroadcastingType:completion:</a></code>
 	</span>
 	
 	
@@ -1043,6 +1153,42 @@
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/broadcastingScheme" title="broadcastingScheme"></a>
+	<h3 class="subsubtitle method-title">broadcastingScheme</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Broadcasting scheme of device.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) ESTBroadcastingScheme broadcastingScheme</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/color" title="color"></a>
 	<h3 class="subsubtitle method-title">color</h3>
 	
@@ -1182,6 +1328,114 @@
     
 
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;ESTBeaconConnectionDelegate&gt; delegate</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/eddystoneInstance" title="eddystoneInstance"></a>
+	<h3 class="subsubtitle method-title">eddystoneInstance</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Instance ID of Google Eddystone - part of device identification.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) NSString *eddystoneInstance</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/eddystoneNamespace" title="eddystoneNamespace"></a>
+	<h3 class="subsubtitle method-title">eddystoneNamespace</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Namespace ID of Google Eddystone - part of device identification.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) NSString *eddystoneNamespace</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/eddystoneURL" title="eddystoneURL"></a>
+	<h3 class="subsubtitle method-title">eddystoneURL</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>URL advertised by Google Eddystone device in URL mode.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) NSString *eddystoneURL</code></div>
 
     
 	
@@ -3160,6 +3414,55 @@ delegate object support</p>
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/writeBroadcastingScheme:completion:" title="writeBroadcastingScheme:completion:"></a>
+	<h3 class="subsubtitle method-title">writeBroadcastingScheme:completion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Changes broadcasting scheme for device. Broadcasting scheme describes set settings
+defining what kind of data and how often is broadcasting.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)writeBroadcastingScheme:(ESTBroadcastingScheme)<em>broadcastingScheme</em> completion:(ESTUnsignedShortCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Possible options are:
+- ESTBroadcastingSchemeEstimote - broadcasts iBeacon packets with customizable Advertising interval.
+Default advertising interval (950ms) value is set after method invocation.
+- ESTBroadcastingSchemeIBeacon - broadcasts iBeacon packets with iBeacon Advertising interval.
+- ESTBroadcastingSchemeEddystoneURL - broadcasts Eddystone-URL packets with customizable interval.
+Default advertising interval (500ms) value is set after method invocation.
+- ESTBroadcastingSchemeEddystoneUID - broadcasts Eddystone-UID packets with customizable interval.
+Default advertising interval (500ms) value is set after method invocation.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/writeCalibratedTemperature:completion:" title="writeCalibratedTemperature:completion:"></a>
 	<h3 class="subsubtitle method-title">writeCalibratedTemperature:completion:</h3>
 	
@@ -3271,6 +3574,215 @@ If the beacon is moving or oriented differently it acts normally.</p>
 		<h4 class="method-subtitle parameter-title">Availability</h4>
 		<p>Estimote OS A3.0.0</p>
 	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/writeEddystoneDomainNamespace:completion:" title="writeEddystoneDomainNamespace:completion:"></a>
+	<h3 class="subsubtitle method-title">writeEddystoneDomainNamespace:completion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets Google beacon Namespace ID. Value should be provided as a domain formatted string (FQDN)
+according to Google beacon best practices. Method automatically produce SHA-1 hash.
+First 10 bytes of produced hash are used as Namespace ID.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)writeEddystoneDomainNamespace:(NSString *)<em>eddystoneNamespace</em> completion:(ESTStringCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>eddystoneNamespace</em></dt>
+			<dd><p>Google beacon Namespace ID</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>A block that is called when the Namespace has been changed or error occurred.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/writeEddystoneHexNamespace:completion:" title="writeEddystoneHexNamespace:completion:"></a>
+	<h3 class="subsubtitle method-title">writeEddystoneHexNamespace:completion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets Google beacon Instance ID. Value should be provided as a Hexadecimal string
+representing 6 bytes (12 character string - 2 chars for 1 byte).</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)writeEddystoneHexNamespace:(NSString *)<em>eddystoneNamespace</em> completion:(ESTStringCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>A block that is called when the Instance ID has been changed or error occurred.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>gInstance</em></dt>
+			<dd><p>Google beacon Instance ID</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/writeEddystoneInstance:completion:" title="writeEddystoneInstance:completion:"></a>
+	<h3 class="subsubtitle method-title">writeEddystoneInstance:completion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets Google beacon Instance ID. Value should be provided as a Hexadecimal string
+representing 6 bytes (12 character string - 2 chars for 1 byte).</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)writeEddystoneInstance:(NSString *)<em>eddystoneInstance</em> completion:(ESTStringCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>A block that is called when the Instance ID has been changed or error occurred.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>gInstance</em></dt>
+			<dd><p>Google beacon Instance ID</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/writeEddystoneURL:completion:" title="writeEddystoneURL:completion:"></a>
+	<h3 class="subsubtitle method-title">writeEddystoneURL:completion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets Eddystone URL. Defined URL is provided in advertising packet
+when ESTBeaconPacketTypeEddystoneURL is selected as a packet type.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)writeEddystoneURL:(NSString *)<em>eddystoneURL</em> completion:(ESTStringCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>eddystoneURL</em></dt>
+			<dd><p>Eddystone URL</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>A block that is called when the URL has been changed or error occurred.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
 	
 	
 	
@@ -3841,7 +4353,7 @@ If the beacon is moving or oriented differently it acts normally.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-05-22)</span><br />
+						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-07-15)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						
