@@ -280,7 +280,9 @@ separately with corresponding filter provided.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Starts Eddystone discovery process by providing particular filter:
+		<p>Starts Eddystone discovery process. Filter param is optional.
+When not provided (nil) manager discovers all devices in range.
+Optional filters are:
 - UID identifier - consists of Namespace ID (10 bytes) and Instance ID (6 bytes).
 - URL - URL address eg. &lsquo;http://go.esti.be&rsquo;
 - URL Domain - URL domain eg. &lsquo;esti.be&rsquo;</p>

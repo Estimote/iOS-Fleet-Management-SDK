@@ -7,7 +7,7 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 3.3.0
+//  Version: 3.3.1
 //  Copyright (c) 2015 Estimote. All rights reserved.
 
 #import <Foundation/Foundation.h>
@@ -77,7 +77,9 @@ typedef NS_ENUM(NSInteger, ESTEddystoneManagerState)
 @property (nonatomic, strong, readonly) NSArray *filtersInDiscovery;
 
 /**
- * Starts Eddystone discovery process by providing particular filter:
+ * Starts Eddystone discovery process. Filter param is optional. 
+ * When not provided (nil) manager discovers all devices in range.
+ * Optional filters are:
  * - UID identifier - consists of Namespace ID (10 bytes) and Instance ID (6 bytes).
  * - URL - URL address eg. 'http://go.esti.be'
  * - URL Domain - URL domain eg. 'esti.be'

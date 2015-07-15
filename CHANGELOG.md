@@ -1,3 +1,10 @@
+## 3.3.1 (July 15, 2015)
+
+Features:
+
+- Eddystone manager supports discovery of all devices in range
+- Type corrections
+
 ## 3.3.0 (July 14, 2015)
 
 Features:

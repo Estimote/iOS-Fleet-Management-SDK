@@ -7,7 +7,7 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 3.3.0
+//  Version: 3.3.1
 //  Copyright (c) 2015 Estimote. All rights reserved.
 
 #import <Foundation/Foundation.h>
@@ -29,7 +29,7 @@
 @interface ESTEddystoneTelemetry : NSObject <NSCopying>
 
 /**
- * Battery Level (Values between 0 - 100)
+ * Battery Level in Milivolts [mV]
  */
 @property (nonatomic, strong) NSNumber *battery;
 
