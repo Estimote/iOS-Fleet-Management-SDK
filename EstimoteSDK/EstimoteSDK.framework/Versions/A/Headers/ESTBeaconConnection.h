@@ -7,7 +7,6 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 3.3.1
 //  Copyright (c) 2015 Estimote. All rights reserved.
 
 #import <Foundation/Foundation.h>
@@ -858,7 +857,7 @@ enum
  *
  * - `NSError *error` - If an error occurred, this error object describes the error. If the operation completed successfully, the value is `nil`.
  */
-- (void)checkFirmwareUpdateWithCompletion:(ESTFirmwareInfoCompletionBlock)completion;
+- (void)checkFirmwareUpdateWithCompletion:(ESTObjectCompletionBlock)completion;
 
 /**
  * Updates the beacon's firmware.

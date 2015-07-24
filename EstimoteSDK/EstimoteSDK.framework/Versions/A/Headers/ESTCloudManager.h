@@ -7,7 +7,6 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 3.3.1
 //  Copyright (c) 2015 Estimote. All rights reserved.
 
 #import <Foundation/Foundation.h>
@@ -44,7 +43,7 @@
  *
  *  @param enable flag indicating if analytics should be enabled
  */
-+ (void)enableAnalytics:(BOOL)enable __attribute ((deprecated(("Staring from SDK 3.2.0 use enableMonitoringAnalytics: or enableRangingAnalytics: instead."))));
++ (void)enableAnalytics:(BOOL)enable __attribute ((deprecated(("Starting from SDK 3.2.0 use enableMonitoringAnalytics: or enableRangingAnalytics: instead."))));
 
 /**
  *  Enables analytics requests on Enter/Exit monitoring events. Analytics data
@@ -76,7 +75,7 @@
  *
  *  @return flag that indicates if analytics is enabled
  */
-+ (BOOL)isAnalyticsEnabled __attribute ((deprecated(("Staring from SDK 3.2.0 use enableMonitoringAnalytics: or enableRangingAnalytics: instead."))));
++ (BOOL)isAnalyticsEnabled __attribute ((deprecated(("Starting from SDK 3.2.0 use enableMonitoringAnalytics: or enableRangingAnalytics: instead."))));
 
 /**
  *  Indicates current state of monitoring analytics.

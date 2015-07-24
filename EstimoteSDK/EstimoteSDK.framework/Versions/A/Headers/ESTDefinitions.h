@@ -7,11 +7,9 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 3.3.1
 //  Copyright (c) 2015 Estimote. All rights reserved.
 
 #import <Foundation/Foundation.h>
-#import "ESTFirmwareInfoVO.h"
 
 typedef NS_ENUM(int, ESTColor)
 {
@@ -39,7 +37,8 @@ typedef NS_ENUM(int, ESTConnectionStatus)
 {
     ESTConnectionStatusDisconnected,
     ESTConnectionStatusConnecting,
-    ESTConnectionStatusConnected
+    ESTConnectionStatusConnected,
+    ESTConnectionStatusUpdating
 };
 
 typedef NS_ENUM(char, ESTBroadcastingScheme)
@@ -60,7 +59,7 @@ typedef void(^ESTBoolCompletionBlock)(BOOL value, NSError* error);
 typedef void(^ESTStringCompletionBlock)(NSString* value, NSError* error);
 typedef void(^ESTProgressBlock)(NSInteger value, NSString* description, NSError* error);
 typedef void(^ESTArrayCompletionBlock)(NSArray* value, NSError* error);
-typedef void(^ESTFirmwareInfoCompletionBlock)(ESTFirmwareInfoVO *result, NSError* error);
+typedef void(^ESTDictionaryCompletionBlock)(NSDictionary *value, NSError *error);
 typedef void(^ESTCsRegisterCompletonBlock)(NSError* error);
 
 @interface ESTDefinitions : NSObject

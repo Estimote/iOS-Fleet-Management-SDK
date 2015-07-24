@@ -1,3 +1,12 @@
+## 3.3.2 (July 24, 2015)
+
+Bug fixes:
+
+- Unified way of handling Namespace ID and Instance ID (uppercase)
+- Eddystone telemetry property changes (awakeTime -> uptimeMillis, battery -> batteryVoltage, pocketType -> packetType)
+- Incorrect error when changing broadcasting type between Eddystone options.
+- Detecting Eddystone devices with telemetry only fixed.
+
 ## 3.3.1 (July 15, 2015)
 
 Features:
