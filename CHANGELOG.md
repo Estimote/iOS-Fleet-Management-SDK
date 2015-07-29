@@ -1,3 +1,18 @@
+## 3.3.3 (July 29, 2015)
+
+Improvements:
+
+- Reduced frequency with which beacon cache is being written to disk, which
+  results in reduced recurring CPU utilization.
+- Secure UUID performance improvements continue: in this episode, we sped up
+  ranging for secure beacons; noticeable especially when ranging for a large
+  amount of regions.
+
+Bug fixes:
+
+- Eddystone-URL will now correctly handle printable characters appearing at the
+  very end of the URL.
+
 ## 3.3.2 (July 24, 2015)
 
 Bug fixes:
