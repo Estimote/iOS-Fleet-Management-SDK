@@ -259,7 +259,7 @@
 					AC39C3B918D72A6F00B38212 = {
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};

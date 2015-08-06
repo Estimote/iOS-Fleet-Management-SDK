@@ -26,13 +26,6 @@
 	<true/>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>This is necessary to discover your beacons, and for the in-background Notification Demo.</string>
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>bluetooth-central</string>
-		<string>bluetooth-peripheral</string>
-		<string>external-accessory</string>
-		<string>remote-notification</string>
-	</array>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
