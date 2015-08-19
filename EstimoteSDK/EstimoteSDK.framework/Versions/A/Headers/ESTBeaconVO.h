@@ -19,6 +19,7 @@
 @property (nonatomic, strong) NSNumber *minor;
 @property (nonatomic, strong) NSString *macAddress;
 @property (nonatomic, assign) ESTBroadcastingScheme broadcastingScheme;
+@property (nonatomic, assign) ESTBeaconMotionUUID motionUUIDState;
 
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSNumber *batteryLifeExpectancy;
@@ -33,7 +34,15 @@
 
 @property (nonatomic, strong) NSNumber *latitude;
 @property (nonatomic, strong) NSNumber *longitude;
-@property (nonatomic, strong) NSString *location;
+@property (nonatomic, strong) NSDictionary *location;
+@property (nonatomic) NSString *city;
+@property (nonatomic) NSString *country;
+@property (nonatomic) NSString *formattedAddress;
+@property (nonatomic) NSString *stateName;
+@property (nonatomic) NSString *stateCode;
+@property (nonatomic) NSString *streetName;
+@property (nonatomic) NSString *streetNumber;
+@property (nonatomic) NSString *zipCode;
 
 @property (nonatomic, strong) NSString *eddystoneNamespaceID;
 @property (nonatomic, strong) NSString *eddystoneInstanceID;

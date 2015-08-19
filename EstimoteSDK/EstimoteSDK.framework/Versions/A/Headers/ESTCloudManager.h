@@ -33,6 +33,20 @@
 + (void)setupAppID:(NSString *)appID andAppToken:(NSString *)appToken;
 
 /**
+ * Returns currently used App ID.
+ *
+ * @return currently used App ID.
+ */
++ (NSString *)appID;
+
+/**
+ * Returns currently used App Token.
+ *
+ * @return currently used App Token.
+ */
++ (NSString *)appToken;
+
+/**
  * Checks if App ID and App Token were set.
  */
 + (BOOL)isAuthorized;
@@ -174,6 +188,17 @@
                completion:(ESTObjectCompletionBlock)completion;
 
 /**
+ *  Assigns provided GPS location to the beacon.
+ *
+ *  @param location   CLLocation object with latitude and longitude included
+ *  @param macAddress macAddress of beacon to which location should be assigned
+ *  @param completion result information with assigned location provided
+ */
+- (void)assignGPSLocation:(CLLocation *)location
+                 toBeaconWithMac:(NSString *)macAddress
+               completion:(ESTObjectCompletionBlock)completion;
+
+/**
  *  Assigns current GPS location to provided beacon.
  *  Location is obtained internally using single CLLocation manger scan.
  *
@@ -181,6 +206,16 @@
  *  @param completion completion block with assigned location provided
  */
 - (void)assignCurrentGPSLocationToBeacon:(CLBeacon *)beacon
+                              completion:(ESTObjectCompletionBlock)completion;
+
+/**
+ *  Assigns current GPS location to provided beacon.
+ *  Location is obtained internally using single CLLocation manger scan.
+ *
+ *  @param macAddress macAddress of beacon to which location should be assigned
+ *  @param completion completion block with assigned location provided
+ */
+- (void)assignCurrentGPSLocationToBeaconWithMac:(NSString *)macAddress
                               completion:(ESTObjectCompletionBlock)completion;
 
 #pragma mark - Bulk Updater

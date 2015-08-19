@@ -1,3 +1,12 @@
+## 3.4.0 (August 19, 2015)
+
+Improvements:
+
+- Security improvements in the beacon authorization mechanism
+- Over The Air Update (OTA) stability improvements
+- AppID and AppToken accessible from ESTCloudManager
+- GPS location accessible from ESTBeaconConnection
+
 ## 3.3.3 (July 29, 2015)
 
 Improvements:

@@ -26,13 +26,6 @@ typedef NS_ENUM(int, ESTColor)
     ESTColorTransparent
 };
 
-typedef NS_ENUM(int, ESTFirmwareUpdate)
-{
-    ESTFirmwareUpdateNone,
-    ESTFirmwareUpdateAvailable,
-    ESTFirmwareUpdateUnsupported
-};
-
 typedef NS_ENUM(int, ESTConnectionStatus)
 {
     ESTConnectionStatusDisconnected,

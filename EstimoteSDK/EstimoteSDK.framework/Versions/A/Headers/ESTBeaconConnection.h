@@ -259,6 +259,27 @@ enum
 @property (readonly, nonatomic) NSString *name;
 
 /**
+ * The dictionary containing geocoding data for beacon's GPS location.
+ *
+ * This value is stored and retrieved from the Estimote Cloud.
+ */
+@property (readonly, nonatomic) NSDictionary *location;
+
+/**
+ * The latitude of beacon's GPS location.
+ *
+ * This value is stored and retrieved from the Estimote Cloud.
+ */
+@property (readonly, nonatomic) NSNumber *latitude;
+
+/**
+ * The longitude of beacon's GPS location.
+ *
+ * This value is stored and retrieved from the Estimote Cloud.
+ */
+@property (readonly, nonatomic) NSNumber *longitude;
+
+/**
  * The color of the beacon.
  *
  * This value is stored and retrieved from the Estimote Cloud, which means it might be unavailable under certain circumstances - e.g. no Internet connectivity.
