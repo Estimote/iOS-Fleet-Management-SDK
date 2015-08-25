@@ -7,7 +7,7 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 3.4.0
+//  Version: 3.4.1
 //  Copyright (c) 2015 Estimote. All rights reserved.
 
 #import <CoreLocation/CoreLocation.h>
@@ -29,6 +29,7 @@
 
 #import "ESTCloudManager.h"
 #import "ESTBeaconVO.h"
+#import "ESTNearableVO.h"
 
 #import "ESTNotificationTransporter.h"
 #import "ESTBulkUpdater.h"

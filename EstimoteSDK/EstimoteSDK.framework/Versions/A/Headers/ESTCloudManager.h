@@ -133,6 +133,17 @@
 - (void)fetchBeaconDetails:(NSString *)beaconUID completion:(ESTObjectCompletionBlock)completion;
 
 /**
+ *  Fetches additional data about the nearable with the given identifier from Estimote Cloud.
+ *
+ *  @param nearableUID A nearable identifier, as broadcast in the Nearable packet;
+ *         or a “<UUID>:<major>:<minor>” string with nearable’s iBeacon identifier, as broadcast in the iBeacon packet.
+ *  @param completion A block to call upon completion of the request.
+ *         If successful, first argument will be an ESTNearableVO object.
+ *         If not, first argument will be nil, and second argument will be the error object.
+ */
+- (void)fetchNearableDetails:(NSString *)nearableUID completion:(ESTObjectCompletionBlock)completion;
+
+/**
  *  Collects color of particular beacon device stored in Estimote Cloud.
  *  Authorization is not required to access device color.
  *
