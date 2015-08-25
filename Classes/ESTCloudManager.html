@@ -41,6 +41,10 @@
 	
 	<option value="class_methods">Class Methods</option>
 	
+	<option value="//api/name/appID">&nbsp;&nbsp;&nbsp;&nbsp;+ appID</option>
+	
+	<option value="//api/name/appToken">&nbsp;&nbsp;&nbsp;&nbsp;+ appToken</option>
+	
 	<option value="//api/name/enableAnalytics:">&nbsp;&nbsp;&nbsp;&nbsp;+ enableAnalytics:</option>
 	
 	<option value="//api/name/enableGPSPositioningForAnalytics:">&nbsp;&nbsp;&nbsp;&nbsp;+ enableGPSPositioningForAnalytics:</option>
@@ -66,7 +70,11 @@
 	
 	<option value="//api/name/assignCurrentGPSLocationToBeacon:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- assignCurrentGPSLocationToBeacon:completion:</option>
 	
+	<option value="//api/name/assignCurrentGPSLocationToBeaconWithMac:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- assignCurrentGPSLocationToBeaconWithMac:completion:</option>
+	
 	<option value="//api/name/assignGPSLocation:toBeacon:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- assignGPSLocation:toBeacon:completion:</option>
+	
+	<option value="//api/name/assignGPSLocation:toBeaconWithMac:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- assignGPSLocation:toBeaconWithMac:completion:</option>
 	
 	<option value="//api/name/fetchBeaconDetails:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- fetchBeaconDetails:completion:</option>
 	
@@ -81,6 +89,8 @@
 	<option value="//api/name/fetchEstimoteNearablesWithCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- fetchEstimoteNearablesWithCompletion:</option>
 	
 	<option value="//api/name/fetchMacAddressForBeacon:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- fetchMacAddressForBeacon:completion:</option>
+	
+	<option value="//api/name/fetchNearableDetails:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- fetchNearableDetails:completion:</option>
 	
 	<option value="//api/name/fetchPendingBeaconsSettingsWithCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- fetchPendingBeaconsSettingsWithCompletion:</option>
 	
@@ -112,6 +122,10 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/appID">appID</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/appToken">appToken</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/enableAnalytics:">enableAnalytics:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/enableGPSPositioningForAnalytics:">enableGPSPositioningForAnalytics:</a></span></li>
@@ -138,7 +152,11 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/assignCurrentGPSLocationToBeacon:completion:">assignCurrentGPSLocationToBeacon:completion:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/assignCurrentGPSLocationToBeaconWithMac:completion:">assignCurrentGPSLocationToBeaconWithMac:completion:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/assignGPSLocation:toBeacon:completion:">assignGPSLocation:toBeacon:completion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/assignGPSLocation:toBeaconWithMac:completion:">assignGPSLocation:toBeaconWithMac:completion:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fetchBeaconDetails:completion:">fetchBeaconDetails:completion:</a></span></li>
 	
@@ -153,6 +171,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fetchEstimoteNearablesWithCompletion:">fetchEstimoteNearablesWithCompletion:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fetchMacAddressForBeacon:completion:">fetchMacAddressForBeacon:completion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fetchNearableDetails:completion:">fetchNearableDetails:completion:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/fetchPendingBeaconsSettingsWithCompletion:">fetchPendingBeaconsSettingsWithCompletion:</a></span></li>
 	
@@ -215,6 +235,18 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
 							<li>
 	<span class="tooltip">
 		<code><a href="#//api/name/setupAppID:andAppToken:">+&nbsp;setupAppID:andAppToken:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/appID">+&nbsp;appID</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/appToken">+&nbsp;appToken</a></code>
 	</span>
 	
 	
@@ -286,6 +318,12 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/fetchNearableDetails:completion:">&ndash;&nbsp;fetchNearableDetails:completion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/fetchColorForBeacon:completion:">&ndash;&nbsp;fetchColorForBeacon:completion:</a></code>
 	</span>
 	
@@ -316,7 +354,19 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/assignGPSLocation:toBeaconWithMac:completion:">&ndash;&nbsp;assignGPSLocation:toBeaconWithMac:completion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/assignCurrentGPSLocationToBeacon:completion:">&ndash;&nbsp;assignCurrentGPSLocationToBeacon:completion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/assignCurrentGPSLocationToBeaconWithMac:completion:">&ndash;&nbsp;assignCurrentGPSLocationToBeaconWithMac:completion:</a></code>
 	</span>
 	
 	
@@ -346,6 +396,88 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
 					<div class="section section-methods">
 						<a title="Class Methods" name="class_methods"></a>
 						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/appID" title="appID"></a>
+	<h3 class="subsubtitle method-title">appID</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns currently used App ID.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSString *)appID</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>currently used App ID.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTCloudManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/appToken" title="appToken"></a>
+	<h3 class="subsubtitle method-title">appToken</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns currently used App Token.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSString *)appToken</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>currently used App Token.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTCloudManager.h</code><br />
+	</div>				
+	
+	
+</div>
 						
 						<div class="section-method">
 	<a name="//api/name/enableAnalytics:" title="enableAnalytics:"></a>
@@ -812,6 +944,58 @@ Location is obtained internally using single CLLocation manger scan.</p>
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/assignCurrentGPSLocationToBeaconWithMac:completion:" title="assignCurrentGPSLocationToBeaconWithMac:completion:"></a>
+	<h3 class="subsubtitle method-title">assignCurrentGPSLocationToBeaconWithMac:completion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Assigns current GPS location to provided beacon.
+Location is obtained internally using single CLLocation manger scan.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)assignCurrentGPSLocationToBeaconWithMac:(NSString *)<em>macAddress</em> completion:(ESTObjectCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>macAddress</em></dt>
+			<dd><p>macAddress of beacon to which location should be assigned</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>completion block with assigned location provided</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTCloudManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/assignGPSLocation:toBeacon:completion:" title="assignGPSLocation:toBeacon:completion:"></a>
 	<h3 class="subsubtitle method-title">assignGPSLocation:toBeacon:completion:</h3>
 	
@@ -838,6 +1022,62 @@ Location is obtained internally using single CLLocation manger scan.</p>
 		<dl class="argument-def parameter-def">
 			<dt><em>beacon</em></dt>
 			<dd><p>CLBeacon to which location should be assigned</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>result information with assigned location provided</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTCloudManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/assignGPSLocation:toBeaconWithMac:completion:" title="assignGPSLocation:toBeaconWithMac:completion:"></a>
+	<h3 class="subsubtitle method-title">assignGPSLocation:toBeaconWithMac:completion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Assigns provided GPS location to the beacon.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)assignGPSLocation:(CLLocation *)<em>location</em> toBeaconWithMac:(NSString *)<em>macAddress</em> completion:(ESTObjectCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>location</em></dt>
+			<dd><p>CLLocation object with latitude and longitude included</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>macAddress</em></dt>
+			<dd><p>macAddress of beacon to which location should be assigned</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
@@ -1231,6 +1471,60 @@ Nearables are delivered as NSArray containing ESTNearable objects.</p>
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/fetchNearableDetails:completion:" title="fetchNearableDetails:completion:"></a>
+	<h3 class="subsubtitle method-title">fetchNearableDetails:completion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Fetches additional data about the nearable with the given identifier from Estimote Cloud.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)fetchNearableDetails:(NSString *)<em>nearableUID</em> completion:(ESTObjectCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>nearableUID</em></dt>
+			<dd><p>A nearable identifier, as broadcast in the Nearable packet;
+or a “<UUID>:<major>:<minor>” string with nearable’s iBeacon identifier, as broadcast in the iBeacon packet.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>A block to call upon completion of the request.
+If successful, first argument will be an ESTNearableVO object.
+If not, first argument will be nil, and second argument will be the error object.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTCloudManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/fetchPendingBeaconsSettingsWithCompletion:" title="fetchPendingBeaconsSettingsWithCompletion:"></a>
 	<h3 class="subsubtitle method-title">fetchPendingBeaconsSettingsWithCompletion:</h3>
 	
@@ -1343,7 +1637,7 @@ Array returned in completion block can be used directly by ESTBulkUpdater class.
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-07-15)</span><br />
+						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-08-25)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						

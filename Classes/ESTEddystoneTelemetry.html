@@ -39,13 +39,15 @@
 	
 	<option value="properties">Properties</option>
 	
-	<option value="//api/name/awakeTime">&nbsp;&nbsp;&nbsp;&nbsp;awakeTime</option>
+	<option value="//api/name/)">&nbsp;&nbsp;&nbsp;&nbsp;)</option>
 	
-	<option value="//api/name/battery">&nbsp;&nbsp;&nbsp;&nbsp;battery</option>
+	<option value="//api/name/batteryVoltage">&nbsp;&nbsp;&nbsp;&nbsp;batteryVoltage</option>
 	
-	<option value="//api/name/pocketCount">&nbsp;&nbsp;&nbsp;&nbsp;pocketCount</option>
+	<option value="//api/name/packetCount">&nbsp;&nbsp;&nbsp;&nbsp;packetCount</option>
 	
 	<option value="//api/name/temperature">&nbsp;&nbsp;&nbsp;&nbsp;temperature</option>
+	
+	<option value="//api/name/uptimeMillis">&nbsp;&nbsp;&nbsp;&nbsp;uptimeMillis</option>
 	
 	
 	
@@ -75,13 +77,15 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/awakeTime">awakeTime</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/)">)</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/battery">battery</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/batteryVoltage">batteryVoltage</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/pocketCount">pocketCount</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/packetCount">packetCount</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/temperature">temperature</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/uptimeMillis">uptimeMillis</a></span></li>
 	
 </ul></li>
 
@@ -158,7 +162,13 @@ accessible with small time delay.</p>
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/battery">&nbsp;&nbsp;battery</a></code>
+		<code><a href="#//api/name/)">&nbsp;&nbsp;)</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/batteryVoltage">&nbsp;&nbsp;batteryVoltage</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -170,13 +180,13 @@ accessible with small time delay.</p>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/pocketCount">&nbsp;&nbsp;pocketCount</a></code>
+		<code><a href="#//api/name/packetCount">&nbsp;&nbsp;packetCount</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/awakeTime">&nbsp;&nbsp;awakeTime</a></code>
+		<code><a href="#//api/name/uptimeMillis">&nbsp;&nbsp;uptimeMillis</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -194,18 +204,18 @@ accessible with small time delay.</p>
 						<h2 class="subtitle subtitle-methods">Properties</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/awakeTime" title="awakeTime"></a>
-	<h3 class="subsubtitle method-title">awakeTime</h3>
+	<a name="//api/name/)" title=")"></a>
+	<h3 class="subsubtitle method-title">)</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Time the device is running since last power up.</p>
+		<p>Battery Level in millivolts [mV]</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *awakeTime</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *__attribute ( ( deprecated ( ( &quot;Starting from SDK 3.2.2 use batteryVoltage instead.&quot; )</code></div>
 
     
 	
@@ -230,18 +240,18 @@ accessible with small time delay.</p>
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/battery" title="battery"></a>
-	<h3 class="subsubtitle method-title">battery</h3>
+	<a name="//api/name/batteryVoltage" title="batteryVoltage"></a>
+	<h3 class="subsubtitle method-title">batteryVoltage</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Battery Level (Values between 0 - 100)</p>
+		<p>Battery Level in millivolts [mV]</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *battery</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *batteryVoltage</code></div>
 
     
 	
@@ -266,18 +276,18 @@ accessible with small time delay.</p>
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/pocketCount" title="pocketCount"></a>
-	<h3 class="subsubtitle method-title">pocketCount</h3>
+	<a name="//api/name/packetCount" title="packetCount"></a>
+	<h3 class="subsubtitle method-title">packetCount</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Count of packet sent by the device since last power up.</p>
+		<p>Count of packet sent by the device since last power-up.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *pocketCount</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *packetCount</code></div>
 
     
 	
@@ -308,12 +318,48 @@ accessible with small time delay.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Sensor ambient temperature (Provided in Celsius)</p>
+		<p>Sensor ambient temperature provided in Celsius degrees.</p>
 	</div>		
 	
     
 
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *temperature</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTEddystoneTelemetry.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/uptimeMillis" title="uptimeMillis"></a>
+	<h3 class="subsubtitle method-title">uptimeMillis</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Uptime of the device since last power-up provided in milliseconds.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSNumber *uptimeMillis</code></div>
 
     
 	
@@ -356,7 +402,7 @@ accessible with small time delay.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-07-15)</span><br />
+						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-08-25)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						
