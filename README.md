@@ -83,6 +83,60 @@ Estimote Trigger engine provides basic rules (ESTRule) related to Estimote neara
 
 In the typical workflow you will wrap your rules in ESTTrigger object and pass it to ESTTriggerManager.
 
+#### Estimote Cloud API
+
+Estimote Cloud API can be easily accessed using set of request objects available in Estimote SDK. Requests are using NSURLConnection based framework and can be invoked with completion blocks. Available requests should be used instead of **ESTCloudManager** class that is deprecated starting from Estimote SDK version 3.5.0. Usage of Estimote Cloud related requests should be preceded by API configuration using **ESTConfig** class. It allows to authorize user based on AppID and AppToken available in Estimote Cloud / Apps tab. We recommend to configure API in AppDelegate class of your App using code like this:
+
+```
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    // App ID and App Token should be provided using method below
+    // to allow beacons connection and Estimote Cloud requests possible.
+    // Both values can be found in Estimote Cloud ( http://cloud.estimote.com )
+    // in Account Settings tab.
+
+    [ESTConfig setupAppID:nil andAppToken:nil];
+
+    // Estimote Analytics allows you to log activity related to monitoring mechanism.
+    // At the current stage it is possible to log all enter/exit events when monitoring
+    // Particular beacons (Proximity UUID, Major, Minor values needs to be provided).
+
+    [ESTConfig enableMonitoringAnalytics:YES];
+    [ESTConfig enableRangingAnalytics:NO];
+    [ESTConfig enableGPSPositioningForAnalytics:NO];
+
+
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+
+    return YES;
+}
+```
+Following requests are available:
+
+* **ESTRequestGetBeacons** - Request allows to fetch all beacons assigned to authorized user account.
+* **ESTRequestBeaconMac** - Request allows to fetch MAC address of beacon based on it's CLBeacon representation.
+* **ESTRequestBeaconColor** - Request allows to fetch color of beacon based on MAC address or CLBeacon representation.
+* **ESTRequestBeaconDetails** - Request allows to fetch all information about beacon including its current settings.
+* **ESTRequestGetNearables** - Request allows to fetch all nearables assigned to authorized user account.
+* **ESTRequestGetPendingSettings** - Request allows to fetch all pending settings for authorized user beacons. Request is a part of Estimote Remote Fleet Management mechanism.
+* **ESTRequestRegisterDevice** - Request allows register device in Estimote Cloud to receive APN based notifications about new pending changes. Request is a part of Estimote Remote Fleet Management mechanism.
+
+Sample request invocation looks like this:
+
+
+```
+// Get list of beacons from the Estimote Cloud
+ESTRequestGetBeacons *request = [[ESTRequestGetBeacons alloc] init];
+
+[request sendRequestWithCompletion:^(NSArray *beaconVOs, NSError *error) {
+
+  // Handle response from the Estimote Cloud here ...
+  [self.tableView reloadData];
+}];
+```
+
+Requests are using simple retain cycle based mechanism. They are not deallocated until completion block is returned. Self reference should be kept somewhere in the block body thought.
+
 ### Utility
 
 **Utility** was created to support apps that manage Estimote Beacons and Nearables. It provides beacon connectivity and configuration methods, so you can easily change settings like Proximity UUID, Major, Minor, Power Modes and much more. It also allows you to easily perform Over The Air firmware update. It works mainly with Core Bluetooth framework. Main classes you are going to use are:
@@ -90,7 +144,7 @@ In the typical workflow you will wrap your rules in ESTTrigger object and pass i
 * **ESTUtilityManager** - Allows to discover devices using Core Bluetooth. Discovered device identifier can then be used to connect and configure the device.
 * **ESTBeaconConnection** - Manages connection and configuration of a particular device. Allows to both read and write all the settings.Allows to perform Over The Air firmware update of an Estimote Beacon.
 
-Another valuable component is the **Bulk Updater** mechanism, which lets you update settings of multiple devices in batches. It's compatible with **Remote Management** feature based on Estimote Cloud, so you can define a set of new settings both locally or remotely. After new settings are defined and synced with Estimote Cloud, the updates will be performed using all iOS running devices that are connected to the particular Estimote Account.
+Another valuable component is the **Bulk Updater** mechanism, which lets you update settings of multiple devices in batches. It's compatible with **Remote Management** feature using Estimote Cloud, so you can define a set of new settings both locally or remotely. After new settings are defined and synced with Estimote Cloud, the updates will be performed using all iOS running devices that are connected to the particular Estimote Account.
 
 ## Important 3.0 migration notes
 

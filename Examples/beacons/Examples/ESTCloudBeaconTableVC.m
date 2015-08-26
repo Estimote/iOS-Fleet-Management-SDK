@@ -11,7 +11,6 @@
 
 @interface ESTCloudBeaconTableVC () <UITextFieldDelegate>
 
-@property (nonatomic, strong) ESTCloudManager *cloudAPI;
 @property (nonatomic, strong) NSArray *beaconsArray;
 
 @property (nonatomic, strong) IBOutlet UITableView *beaconsTable;
@@ -40,8 +39,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    self.cloudAPI = [[ESTCloudManager alloc] init];
     self.title = @"Cloud Beacons";
     
     self.beaconsTable.delegate = self;
@@ -51,18 +48,21 @@
               forCellReuseIdentifier:@"CellIdentifier"];
 
     // Get list of beacons from the Estimote Cloud
-    __weak typeof(self) selfRef = self;
-    [self.cloudAPI fetchEstimoteBeaconsWithCompletion:^(NSArray *value, NSError *error) {
+    ESTRequestGetBeacons *request = [[ESTRequestGetBeacons alloc] init];
+    
+    [request sendRequestWithCompletion:^(id result, NSError *error) {
         
         if (!error)
         {
-            selfRef.beaconsArray = value;
-            [selfRef.beaconsTable reloadData];
+            self.beaconsArray = result;
+            [self.beaconsTable reloadData];
         }
         else
         {
+            NSString *errorMessage = [error.localizedDescription stringByAppendingString:error.localizedRecoverySuggestion];
+            
             UIAlertView* errorView = [[UIAlertView alloc] initWithTitle:@"Connection error"
-                                                                message:error.localizedDescription
+                                                                message:errorMessage
                                                                delegate:nil
                                                       cancelButtonTitle:@"OK"
                                                       otherButtonTitles:nil];

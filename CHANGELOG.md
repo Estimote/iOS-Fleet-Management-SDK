@@ -1,3 +1,9 @@
+## 3.5.0 (August 26, 2015)
+
+Improvements:
+
+- Strongly improved Estimote Cloud API handling mechanism. ESTCloudManager was deprecated. ESTConfig with direct requests should be used instead.
+- ESTSecureBeaconManager supports accuracy based sorting for ranging
 
 ## 3.4.1 (August 25, 2015)
 
@@ -5,7 +11,7 @@ Improvements:
 
 - Improvements to memory and network load: SDK won't automatically fetch and cache list of your beacons after invoking `[ESTCloudManager setupAppID:andAppToken:];`
 - Method `fetchNearableDetails:completion` in `ESTCloudManager` class allowing you to fetch additional data about nearable.
-- `ESTNearableVO` class available 
+- `ESTNearableVO` class available
 
 ## 3.4.0 (August 19, 2015)
 

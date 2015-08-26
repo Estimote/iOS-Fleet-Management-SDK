@@ -492,6 +492,14 @@
     
     self.activityLabel.text = @"Connection failed";
     self.activityLabel.textColor = [UIColor redColor];
+    
+    UIAlertView* errorView = [[UIAlertView alloc] initWithTitle:@"Connection error"
+                                                        message:error.localizedDescription
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+    
+    [errorView show];
 }
 
 - (void)beaconConnection:(ESTBeaconConnection *)connection didDisconnectWithError:(NSError *)error

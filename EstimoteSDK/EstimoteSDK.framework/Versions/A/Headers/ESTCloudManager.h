@@ -18,6 +18,8 @@
  *  ESTCloudManager class is responsible for Estimote Cloud integration. It allows you to invoke 
  *  available Estimote Cloud API methods using block pattern to handle result.
  */
+
+__attribute__ ((deprecated(("Starting from SDK 3.5.0 use ESTConfig class and particular requests (eg. ESTRequestGetBeacons) to interact with Estimote Cloud API."))))
 @interface ESTCloudManager : NSObject
 
 #pragma mark - Configuration

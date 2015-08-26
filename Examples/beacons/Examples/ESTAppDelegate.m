@@ -20,15 +20,15 @@
     // in Account Settings tab.
     
     NSLog(@"ESTAppDelegate: APP ID and APP TOKEN are required to connect to your beacons and make Estimote API calls.");
-    [ESTCloudManager setupAppID:nil andAppToken:nil];
+    [ESTConfig setupAppID:nil andAppToken:nil];
     
     // Estimote Analytics allows you to log activity related to monitoring mechanism.
     // At the current stage it is possible to log all enter/exit events when monitoring
     // Particular beacons (Proximity UUID, Major, Minor values needs to be provided).
     
     NSLog(@"ESTAppDelegate: Analytics are turned OFF by defaults. You can enable them changing flag");
-    [ESTCloudManager enableMonitoringAnalytics:NO];
-    [ESTCloudManager enableGPSPositioningForAnalytics:NO];
+    [ESTConfig enableMonitoringAnalytics:NO];
+    [ESTConfig enableGPSPositioningForAnalytics:NO];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
@@ -67,11 +67,11 @@
 {
     // After device is registered in iOS to receive Push Notifications,
     // device token has to be sent to Estimote Cloud.
-    self.cloudManager = [ESTCloudManager new];
-    [self.cloudManager registerDeviceForRemoteManagement:deviceToken
-                                              completion:^(NSError *error) {
-                                                  
-                                              }];
+    
+    ESTRequestRegisterDevice *request = [[ESTRequestRegisterDevice alloc] initWithDeviceToken:deviceToken];
+    [request sendRequestWithCompletion:^(NSError *error) {
+        
+    }];
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler

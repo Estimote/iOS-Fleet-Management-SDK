@@ -33,7 +33,7 @@
     
     self.title = @"Bulk Update Demo";
     
-    if ([ESTCloudManager isAuthorized])
+    if ([ESTConfig isAuthorized])
     {
         // Bulk update can be performed only when you are
         // authorized with App ID and App Token

@@ -9,7 +9,6 @@
 
 @interface ESTBulkUpdaterRemoteDemoVC ()
 
-@property (nonatomic, strong) ESTCloudManager *cloudManager;
 @property (nonatomic, strong) IBOutlet UILabel *statusLabel;
 @property (nonatomic, strong) IBOutlet UILabel *cloudLabel;
 
@@ -24,7 +23,7 @@
     
     self.title = @"Remote Bulk Update Demo";
     
-    if ([ESTCloudManager isAuthorized])
+    if ([ESTConfig isAuthorized])
     {
         // Bulk update can be performed only when you are
         // authorized with App ID and App Token
@@ -51,18 +50,22 @@
                                                      name:ESTBulkUpdaterTimeoutNotification
                                                    object:nil];
         
-        // Create ESTCloudManager object to fetch pending settings
-        // from Estimote Cloud
-        self.cloudManager = [ESTCloudManager new];
-        
         // Perform pending settings fetch from Estimote Cloud
-        [self.cloudManager fetchPendingBeaconsSettingsWithCompletion:^(NSArray *value, NSError *error)
-        {
-            self.cloudLabel.text = [NSString stringWithFormat:@"%tu beacons updated\nin Estimote Cloud", value.count];
+        ESTRequestGetPendingSettings *request = [ESTRequestGetPendingSettings new];
+        [request sendRequestWithCompletion:^(NSArray *beaconUpdateInfos, NSError *error) {
             
-            // start performing beacons update based on information fetched
-            // from Estimote Cloud
-            [[ESTBulkUpdater sharedInstance] startWithBeaconInfos:value timeout:60 * 60];
+            self.cloudLabel.text = [NSString stringWithFormat:@"%tu beacons updated\nin Estimote Cloud", beaconUpdateInfos.count];
+            
+            if (beaconUpdateInfos.count > 0)
+            {
+                // start performing beacons update based on information fetched
+                // from Estimote Cloud
+                [[ESTBulkUpdater sharedInstance] startWithBeaconInfos:beaconUpdateInfos timeout:60 * 60];
+            }
+            else
+            {
+                self.statusLabel.text = @"Nothing to update!";
+            }
         }];
     }
     else

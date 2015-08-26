@@ -13,7 +13,6 @@
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) UINavigationController *mainNavigation;
-@property (strong, nonatomic) ESTCloudManager *cloudManager;
 
 
 @end
