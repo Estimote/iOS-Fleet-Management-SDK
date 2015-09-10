@@ -6,7 +6,7 @@
 - [Examples](#examples)
 - [Client part technical overview](#client-part-technical-overview)
   - [Estimote Cloud API](#estimote-cloud-api)
-  - [Estimote Analytics](#beacons-analytics)
+  - [Estimote Analytics](#estimote-analytics)
   - [Trigger engine](#trigger-engine)
 - [Utility part technical overview](#utility-part-technical-overview)
 - [Important 3.0 migration notes](#important-30-migration-notes)
