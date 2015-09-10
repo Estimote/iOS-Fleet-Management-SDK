@@ -28,6 +28,7 @@
     
     NSLog(@"ESTAppDelegate: Analytics are turned OFF by defaults. You can enable them changing flag");
     [ESTConfig enableMonitoringAnalytics:NO];
+    [ESTConfig enableRangingAnalytics:NO];
     [ESTConfig enableGPSPositioningForAnalytics:NO];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];

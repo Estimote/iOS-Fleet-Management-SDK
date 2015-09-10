@@ -4,9 +4,11 @@
 
 - [Installation](#installation)
 - [Examples](#examples)
-- [Technical overview](#technical-overview)
-  - [Client](#client)
-  - [Utility](#utility)
+- [Client part technical overview](#client-part-technical-overview)
+  - [Estimote Cloud API](#estimote-cloud-api)
+  - [Estimote Analytics](#beacons-analytics)
+  - [Trigger engine](#trigger-engine)
+- [Utility part technical overview](#utility-part-technical-overview)
 - [Important 3.0 migration notes](#important-30-migration-notes)
 - [Changelog](#changelog)
 
@@ -25,7 +27,7 @@ Learn more:
 
 ## Installation
 
-Estimote SDK 3.0 comes to you as a **framework** rather than a **static library + headers** like it used to. This greatly simplifies setup, as you only need to include a single *EstimoteSDK.framework* file in your project to get started:
+Estimote SDK 3.X comes to you as a **framework** rather than a **static library + headers** like it used to. This greatly simplifies setup, as you only need to include a single *EstimoteSDK.framework* file in your project to get started:
 
 1. Drag and drop EstimoteSDK.framework file into your Xcode project. It will automatically show up in your project navigator and will be added to *"Linked Frameworks and Libraries"* section in project settings.
 
@@ -54,11 +56,9 @@ Estimote SDK contains a lot of examples and inspiration to help you get familiar
 <img src="images/temperature.png" alt="Temerature" width="230">
 <img src="images/notify_demo.png" alt="Notify Demo" width="230">
 
-## Technical overview
+## Client part technical overview
 
-The SDK requires iOS 7+, as it depends on the CoreLocation's support for iBeacon first introduced in iOS 7. The feature set of this Estimote SDK is divided into two parts: *Client* and *Utility*.
-
-### Client
+The SDK requires iOS 7+, as it depends on the CoreLocation's support for iBeacon first introduced in iOS 7. The feature set of this Estimote SDK is divided into two parts: **Client** and **Utility**.
 
 **Client** part is dedicated to be used inside your publicly distributed applications featuring Estimote Beacons or Nearables integration. It helps you work with Apple iBeacon objects, adding some useful functionality like filtering, ranged object limitation or combining beacons from few regions into one callback.
 
@@ -70,18 +70,6 @@ There are also two interesting additions: a simulator class that allows you to s
 * **ESTNearableManager** - Entry point to work with nearables. It allows to range and monitor stickers with given type or identifier in the similar manner to how it's done with iBeacon.
 * **ESTSimulatedNearableManager** - Analogously to ESTSimulatedBeaconManager it lets you generate fake ranging and monitoring events for nearables. You can see example implementation of this class in [Estimote WatchKit SDK](https://github.com/Estimote/Estimote-WatchKit-SDK).
 * **ESTNotificationTransporter** - Class allowing you to easily exchange iBeacon and Nearable data, gathered from events like ranging or monitoring, between your host app and Apple Watch / other iOS 8 Extension. For more details, check the [Estimote WatchKit SDK](https://github.com/Estimote/Estimote-WatchKit-SDK).
-
-#### Trigger engine
-
-On top of basic ranging and monitoring functionality delivered by classes mentioned above you can also use a higher level **Estimote Trigger engine**. It provides abstraction that simplifies building complex rules describing circumstances that should trigger some action. Sample conditions can be described like this: *"Let me know when I'm next to my moving bike nearable, after 5pm, and when temperature is lower than 15 degrees C."*.
-
-Estimote Trigger engine provides basic rules (ESTRule) related to Estimote nearables and time events. It was created in a way that makes it easy to extend default rules so you can easily build custom rules that suit your needs. Most important classes you will want to use are:
-
-* **ESTTriggerManager** - Entry point for trigger engine mechanism. Its main responsibility is to manage all defined rules and inform you when provided conditions are satisfied.
-* **ESTRule** - Base implementation of a rule. All predefined classes like ESTTemperatureRule or ESTMotionRule are based on it and you should also use it to build your own custom rules.
-* **ESTTrigger** - Class that allows you to describe context based on a set of rules.
-
-In the typical workflow you will wrap your rules in ESTTrigger object and pass it to ESTTriggerManager.
 
 #### Estimote Cloud API
 
@@ -137,7 +125,46 @@ ESTRequestGetBeacons *request = [[ESTRequestGetBeacons alloc] init];
 
 Requests are using simple retain cycle based mechanism. They are not deallocated until completion block is returned. Self reference should be kept somewhere in the block body thought.
 
-### Utility
+#### Estimote Analytics
+
+Estimote platform allows you to collect analytics information about your beacons usage. Setup of Estimote Analytics is very easy. Enabling feature using `ESTConfig` class methods automatically sents events to Estimote Cloud . No additional code is required.
+
+Developer decides what kind of analytics data collect. Ranging, Monitoring or both can be tracked. GPS position of device can be collected optionally. Start using Estimote analytics by placing following code in `application:didFinishLaunchingWithOptions:` method of AppDelegate class:
+```
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    // ESTAppDelegate: APP ID and APP TOKEN are required
+    // to collect Analytics data.
+    [ESTConfig setupAppID:nil andAppToken:nil];
+
+    // To enable Estimote Cloud Analytics just pass YES
+    [ESTConfig enableMonitoringAnalytics:NO];
+    [ESTConfig enableRangingAnalytics:NO];
+
+    // You can optionally collect GPS location
+    [ESTConfig enableGPSPositioningForAnalytics:NO];
+}
+```
+
+**IMPORTANT!** Please note that Estimote Analytics works only with Proximity UUID identifiers different then default one (*B9407F30-F5F8-466E-AFF9-25556B57FE6D*). Please change it before using this feature.
+
+<img src="images/analytics.png" alt="Estimote Analytics">
+
+Collected analytics data can be easily access in Estimote Cloud (http://cloud.estimote.com) for each beacon individually. Navigate to **Beacons** section and press **Analytics** button next to the beacon you are interested in.
+
+#### Trigger engine
+
+On top of basic ranging and monitoring functionality delivered by classes mentioned above you can also use a higher level **Estimote Trigger engine**. It provides abstraction that simplifies building complex rules describing circumstances that should trigger some action. Sample conditions can be described like this: *"Let me know when I'm next to my moving bike nearable, after 5pm, and when temperature is lower than 15 degrees C."*.
+
+Estimote Trigger engine provides basic rules (ESTRule) related to Estimote nearables and time events. It was created in a way that makes it easy to extend default rules so you can easily build custom rules that suit your needs. Most important classes you will want to use are:
+
+* **ESTTriggerManager** - Entry point for trigger engine mechanism. Its main responsibility is to manage all defined rules and inform you when provided conditions are satisfied.
+* **ESTRule** - Base implementation of a rule. All predefined classes like ESTTemperatureRule or ESTMotionRule are based on it and you should also use it to build your own custom rules.
+* **ESTTrigger** - Class that allows you to describe context based on a set of rules.
+
+In the typical workflow you will wrap your rules in ESTTrigger object and pass it to ESTTriggerManager.
+
+## Utility part technical overview
 
 **Utility** was created to support apps that manage Estimote Beacons and Nearables. It provides beacon connectivity and configuration methods, so you can easily change settings like Proximity UUID, Major, Minor, Power Modes and much more. It also allows you to easily perform Over The Air firmware update. It works mainly with Core Bluetooth framework. Main classes you are going to use are:
 
