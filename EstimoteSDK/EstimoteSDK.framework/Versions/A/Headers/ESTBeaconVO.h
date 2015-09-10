@@ -44,6 +44,9 @@
 @property (nonatomic) NSString *streetNumber;
 @property (nonatomic) NSString *zipCode;
 
+@property (nonatomic) NSString *indoorLocationIdentifier;
+@property (nonatomic) NSString *indoorLocationName;
+
 @property (nonatomic, strong) NSString *eddystoneNamespaceID;
 @property (nonatomic, strong) NSString *eddystoneInstanceID;
 @property (nonatomic, strong) NSString *eddystoneURL;

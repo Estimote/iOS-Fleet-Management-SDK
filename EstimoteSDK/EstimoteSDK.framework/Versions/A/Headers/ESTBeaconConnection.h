@@ -280,6 +280,20 @@ enum
 @property (readonly, nonatomic) NSNumber *longitude;
 
 /**
+ * The identifier of indoor location beacon belongs to.
+ *
+ * This value is stored and retrieved from the Estimote Cloud.
+ */
+@property (readonly, nonatomic) NSString *indoorLocationIdentifier;
+
+/**
+ * The name of indoor location beacon belongs to.
+ *
+ * This value is stored and retrieved from the Estimote Cloud.
+ */
+@property (readonly, nonatomic) NSString *indoorLocationName;
+
+/**
  * The color of the beacon.
  *
  * This value is stored and retrieved from the Estimote Cloud, which means it might be unavailable under certain circumstances - e.g. no Internet connectivity.

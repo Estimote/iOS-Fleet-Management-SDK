@@ -33,6 +33,8 @@ typedef void(^ESTRequestBeaconDetailsBlock)(ESTBeaconVO *beaconVO, NSError *erro
  *  ESTRequestBeaconDetails is used to fetch details of single beacon device.
  */
 
+__attribute__ ((deprecated(("Starting from SDK 3.6.0 use ESTRequestGetBeaconsDetails class instead."))));
+
 @interface ESTRequestBeaconDetails : ESTRequestGetJSON
 
 @property (nonatomic, strong, readonly) NSString *beaconUID;

@@ -25,6 +25,6 @@ typedef NS_ENUM(NSInteger, ESTRequestPostJSONError)
 
 @interface ESTRequestPostJSON : ESTRequestBase
 
-- (void)setParams:(NSDictionary *)params forRequest:(NSMutableURLRequest *)request;
+- (void)setParams:(id)params forRequest:(NSMutableURLRequest *)request;
 
 @end

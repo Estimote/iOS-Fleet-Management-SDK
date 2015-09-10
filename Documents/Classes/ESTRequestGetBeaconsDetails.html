@@ -44,6 +44,15 @@
 	
 	
 	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/initWithBeacons:andFields:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithBeacons:andFields:</option>
+	
+	<option value="//api/name/initWithMacAddresses:andFields:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithMacAddresses:andFields:</option>
+	
+	<option value="//api/name/sendRequestWithCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- sendRequestWithCompletion:</option>
+	
+	
 	
 </select>
 				</li>
@@ -72,6 +81,16 @@
 
 
 
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithBeacons:andFields:">initWithBeacons:andFields:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithMacAddresses:andFields:">initWithMacAddresses:andFields:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sendRequestWithCompletion:">sendRequestWithCompletion:</a></span></li>
+	
+</ul></li>
 
 
 			</ul>
@@ -122,6 +141,24 @@
 	</span>
 	<span class="task-item-suffix">property</span>
 	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithBeacons:andFields:">&ndash;&nbsp;initWithBeacons:andFields:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithMacAddresses:andFields:">&ndash;&nbsp;initWithMacAddresses:andFields:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sendRequestWithCompletion:">&ndash;&nbsp;sendRequestWithCompletion:</a></code>
+	</span>
+	
+	
 </li>
 						</ul>
 						
@@ -148,7 +185,7 @@ Can be MAC addresses or Eddystone Identifiers or proximityUUID:major:minor strin
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSArray *beaconIdentifiers</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSArray *beaconIdentifiers</code></div>
 
     
 	
@@ -178,6 +215,170 @@ Can be MAC addresses or Eddystone Identifiers or proximityUUID:major:minor strin
 					
 					
 					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithBeacons:andFields:" title="initWithBeacons:andFields:"></a>
+	<h3 class="subsubtitle method-title">initWithBeacons:andFields:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initialise request with Beacons array.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithBeacons:(NSArray *)<em>beacons</em> andFields:(ESTBeaconDetailsFields)<em>fields</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>beacons</em></dt>
+			<dd><p>Array of CLBeacon objects</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>fields</em></dt>
+			<dd><p>A mask of fields indicating which beacon parameters you want to fetch</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>instance of request</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTRequestGetBeaconsDetails.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithMacAddresses:andFields:" title="initWithMacAddresses:andFields:"></a>
+	<h3 class="subsubtitle method-title">initWithMacAddresses:andFields:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initialise request with MAC addresses.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithMacAddresses:(NSArray *)<em>macAddresses</em> andFields:(ESTBeaconDetailsFields)<em>fields</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>macAddresses</em></dt>
+			<dd><p>Array of MAC addresses as NSStrings</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>fields</em></dt>
+			<dd><p>A mask of fields indicating which beacon parameters you want to fetch</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>instance of request</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTRequestGetBeaconsDetails.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sendRequestWithCompletion:" title="sendRequestWithCompletion:"></a>
+	<h3 class="subsubtitle method-title">sendRequestWithCompletion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Methods allows to send request with completion block invoked as a result.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)sendRequestWithCompletion:(ESTRequestGetBeaconsDetailsBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>Completion block with returned data (Array of beaconVO objects).</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTRequestGetBeaconsDetails.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
 					
                     
                     
@@ -191,7 +392,7 @@ Can be MAC addresses or Eddystone Identifiers or proximityUUID:major:minor strin
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-08-26)</span><br />
+						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-09-10)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						

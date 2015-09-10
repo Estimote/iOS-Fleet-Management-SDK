@@ -13,6 +13,6 @@
 
 @interface ESTRequestPutJSON : ESTRequestPostJSON
 
-- (void)setParams:(NSDictionary *)params forRequest:(NSMutableURLRequest *)request;
+- (void)setParams:(id)params forRequest:(NSMutableURLRequest *)request;
 
 @end

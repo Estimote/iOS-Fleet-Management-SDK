@@ -1,3 +1,16 @@
+## 3.6.0 (September 10, 2015)
+
+Features:
+
+- New Beacon details request with option to request multiple beacons and selective fields
+- New request for fetching history of beacon settings changes
+- New request canceling pending settings applied in cloud
+
+Improvements:
+
+- Optimized analytics requests. Now sent in batch and locally cached
+- Bulk Updated progress contains additional update information
+
 ## 3.5.0 (August 26, 2015)
 
 Improvements:

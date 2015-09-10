@@ -65,13 +65,24 @@ typedef NS_ENUM(NSInteger, ESBeaconUpdateInfoStatus)
 @property (nonatomic, assign) ESBeaconUpdateInfoStatus status;
 
 /**
+ *  Settings creation timestamp.
+ */
+@property (nonatomic, strong) NSDate *createdAt;
+
+/**
+ *  Time when settings were applied to the device.
+ */
+@property (nonatomic, strong) NSDate *syncedAt;
+
+
+/**
  *  Error object if beacon failed to update.
  */
 @property (nonatomic, strong) NSError *error;
 
 
 /**
- *  Initialize object with beacon that is going to be updated and proper
+ *  Initialize object with beacon that is going to be (or was) updated and proper
  *  config file containing description how update should be performed.
  *
  *  @param macAddress   Mac Address of beacon.
@@ -83,7 +94,7 @@ typedef NS_ENUM(NSInteger, ESBeaconUpdateInfoStatus)
                             config:(ESTBeaconUpdateConfig *)config;
 
 /**
- *  Initialize object with beacon that is going to be updated and proper
+ *  Initialize object with beacon that is going to be (or was) updated and proper
  *  config file containing description how update should be performed
  *  with delegate object.
  *
