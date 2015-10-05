@@ -12,6 +12,9 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 #import "ESTNearableDefinitions.h"
+#import "ESTDefinitions.h"
+
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * The `ESTNearable` class defines the interface for interacting with a single Estimote nearable. It enables you to retrieve properties of the nearable. You do not create instances of this class directly. The `<ESTNearableManager>` object reports encountered beacons to its associated delegate object.
@@ -19,6 +22,7 @@
  * The identity of a nearable is defined by its `<identifier>`` property. Identifier of the device is unique among all the Estimote nearables and can not be changed.
  *
  */
+
 @interface ESTNearable : NSObject <NSCopying, NSCoding>
 
 /**
@@ -59,12 +63,12 @@
 /**
  *  Battery voltage when nearable is in idle state defined in Volts.
  */
-@property (nonatomic, strong, readonly) NSNumber *idleBatteryVoltage;
+@property (nonatomic, strong, readonly) NSNumber * _Nullable idleBatteryVoltage;
 
 /**
  *  Battery voltage when nearable is under stress (sending packet) defined in Volts.
  */
-@property (nonatomic, strong, readonly) NSNumber *stressBatteryVoltage;
+@property (nonatomic, strong, readonly) NSNumber * _Nullable stressBatteryVoltage;
 
 /**
  *  Time since last change of motion state (isMoving value change) returned in seconds.
@@ -112,6 +116,12 @@
 @property (nonatomic, strong, readonly) NSNumber *power;
 
 /**
+ * The advertising interval of the sticker in ms.
+ *
+ */
+@property (nonatomic, strong, readonly) NSNumber *advInterval;
+
+/**
  * Indicates if nearable is in Boot or App state.
  */
 @property (nonatomic, assign, readonly) ESTNearableFirmwareState firmwareState;
@@ -125,3 +135,5 @@
 - (CLBeaconRegion *)beaconRegion;
 
 @end
+
+NS_ASSUME_NONNULL_END

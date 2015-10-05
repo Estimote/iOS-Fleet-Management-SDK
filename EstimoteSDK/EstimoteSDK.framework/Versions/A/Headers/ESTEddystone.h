@@ -12,6 +12,8 @@
 #import <Foundation/Foundation.h>
 #import "ESTEddystoneTelemetry.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 typedef NS_ENUM(NSInteger, ESTEddystoneProximity)
 {
     ESTEddystoneProximityUnknown,
@@ -62,26 +64,28 @@ typedef NS_ENUM(NSInteger, ESTEddystoneProximity)
  *  Namespace ID required for device identification. 
  *  Value usually defined on the company level.
  */
-@property (nonatomic, strong) NSString *namespaceID;
+@property (nonatomic, strong) NSString * _Nullable namespaceID;
 
 /**
  *  Instance ID required for device identification.
  *  Value defined per device.
  */
-@property (nonatomic, strong) NSString *instanceID;
+@property (nonatomic, strong) NSString * _Nullable instanceID;
 
 /**
  *  URL address advertised by the beacon device
  *  packet type is set to ESTBeaconPacketTypeEddystoneURL
  */
-@property (nonatomic, strong) NSString *url;
+@property (nonatomic, strong) NSString * _Nullable url;
 
 /**
  *  Telemetry information delivered in separate packet packet every 10 seconds.
  *  Availability of this information can be delayed.
  */
-@property (nonatomic, strong) ESTEddystoneTelemetry *telemetry;
+@property (nonatomic, strong) ESTEddystoneTelemetry * _Nullable telemetry;
 
 - (void)updateWithEddystone:(ESTEddystone *)eddystone;
 
 @end
+
+NS_ASSUME_NONNULL_END

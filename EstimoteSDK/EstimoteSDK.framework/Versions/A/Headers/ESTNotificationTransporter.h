@@ -33,6 +33,7 @@ typedef NS_ENUM(NSInteger, ESTNotification)
 
 #define BEACON_REGION_KEY @"beaconRegionKey"
 
+
 @interface ESTNotificationTransporter : NSObject
 
 @property (nonatomic, readonly) NSString *currentAppGroupIdentifier;

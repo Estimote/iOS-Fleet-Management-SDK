@@ -11,6 +11,8 @@
 
 #import "ESTDefinitions.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  *  Type of the device marked on enclosure.
  */
@@ -64,7 +66,6 @@ typedef NS_ENUM(NSInteger, ESTNearableFirmwareState)
     ESTNearableFirmwareStateApp
 };
 
-
 @interface ESTNearableDefinitions : ESTDefinitions
 
 /**
@@ -76,5 +77,6 @@ typedef NS_ENUM(NSInteger, ESTNearableFirmwareState)
  */
 + (NSString *)nameForType:(ESTNearableType)type;
 
-
 @end
+
+NS_ASSUME_NONNULL_END

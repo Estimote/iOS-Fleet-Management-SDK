@@ -11,6 +11,8 @@
 
 #import "ESTRequestBase.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 #define ESTRequestGetJSONErrorDomain @"ESTRequestGetJSONErrorDomain"
 
 typedef NS_ENUM(NSInteger, ESTRequestGetJSONError)
@@ -20,7 +22,8 @@ typedef NS_ENUM(NSInteger, ESTRequestGetJSONError)
     ESTRequestGetJSONErrorNoResurce
 };
 
-
 @interface ESTRequestGetJSON : ESTRequestBase
 
 @end
+
+NS_ASSUME_NONNULL_END

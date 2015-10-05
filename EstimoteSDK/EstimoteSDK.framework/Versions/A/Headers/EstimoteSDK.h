@@ -7,7 +7,7 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 3.6.0
+//  Version: 3.7.0
 //  Copyright (c) 2015 Estimote. All rights reserved.
 
 /**
@@ -38,6 +38,13 @@
 #import "ESTNearableManager.h"
 #import "ESTSimulatedNearableManager.h"
 #import "ESTNearableDefinitions.h"
+
+#import "ESTDeviceNearable.h"
+#import "ESTNearableSettingBootVersion.h"
+#import "ESTNearableSettingAppVersion.h"
+#import "ESTNearableSettingHardwareVersion.h"
+#import "ESTNearableSettingAdvertisingIntervalStill.h"
+#import "ESTNearableSettingBroadcastingPower.h"
 
 /**
  *  Bulk updater

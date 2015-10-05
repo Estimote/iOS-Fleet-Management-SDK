@@ -116,4 +116,15 @@
     [errorView show];
 }
 
+- (void)beaconConnection:(ESTBeaconConnection *)connection didDisconnectWithError:(NSError *)error
+{
+    [self.activityIndicator stopAnimating];
+    self.activityIndicator.alpha = 0.;
+    
+    self.activityLabel.text = @"Disconnected!";
+    self.activityLabel.textColor = [UIColor redColor];
+    
+    self.temperatureLabel.text = @"--°C";
+}
+
 @end

@@ -12,6 +12,8 @@
 #import <CoreLocation/CoreLocation.h>
 #import "ESTBeaconManagerDelegate.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface ESTSecureBeaconManager : NSObject
 
 /**
@@ -19,8 +21,7 @@
  *
  * @see ESTBeaconManagerDelegate
  */
-@property (nonatomic, weak) id <ESTBeaconManagerDelegate> delegate;
-
+@property (nonatomic, weak) id <ESTBeaconManagerDelegate> _Nullable delegate;
 
 #pragma mark CoreLocation Authorization (new in iOS 8)
 ///--------------------------------------------------------------------
@@ -130,3 +131,5 @@
 @property (readonly, nonatomic, copy) NSSet *rangedRegions;
 
 @end
+
+NS_ASSUME_NONNULL_END

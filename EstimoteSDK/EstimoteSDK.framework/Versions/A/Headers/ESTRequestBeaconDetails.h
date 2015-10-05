@@ -14,6 +14,8 @@
 #import "ESTRequestGetJSON.h"
 #import "ESTBeaconVO.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 #define ESTRequestBeaconDetailsErrorDomain @"ESTRequestBeaconDetailsErrorDomain"
 
 /**
@@ -27,14 +29,13 @@ typedef NS_ENUM(NSInteger, ESTRequestBeaconDetailsError)
     ESTRequestBeaconDetailsErrorDetailsNotAvailable
 };
 
-typedef void(^ESTRequestBeaconDetailsBlock)(ESTBeaconVO *beaconVO, NSError *error);
+typedef void(^ESTRequestBeaconDetailsBlock)(ESTBeaconVO * _Nullable beaconVO, NSError * _Nullable error);
 
 /**
  *  ESTRequestBeaconDetails is used to fetch details of single beacon device.
  */
 
-__attribute__ ((deprecated(("Starting from SDK 3.6.0 use ESTRequestGetBeaconsDetails class instead."))));
-
+__attribute__ ((deprecated(("Starting from SDK 3.6.0 use ESTRequestGetBeaconsDetails class instead."))))
 @interface ESTRequestBeaconDetails : ESTRequestGetJSON
 
 @property (nonatomic, strong, readonly) NSString *beaconUID;
@@ -78,3 +79,5 @@ __attribute__ ((deprecated(("Starting from SDK 3.6.0 use ESTRequestGetBeaconsDet
 - (void)sendRequestWithCompletion:(ESTRequestBeaconDetailsBlock)completion;
 
 @end
+
+NS_ASSUME_NONNULL_END

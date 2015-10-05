@@ -11,19 +11,19 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
+#import "ESTDevice.h"
 
+NS_ASSUME_NONNULL_BEGIN
 
-@interface ESTBluetoothBeacon : NSObject
+@interface ESTBluetoothBeacon : ESTDevice
 
-@property (nonatomic, strong) NSString *macAddress;
 @property (nonatomic, strong) NSNumber *major;
 @property (nonatomic, strong) NSNumber *minor;
 @property (nonatomic, strong) CBPeripheral *peripheral;
 @property (nonatomic, strong) NSNumber *measuredPower;
-@property (nonatomic, strong) NSDate *discoveryDate;
-@property (nonatomic, strong) NSData *advertisementData;
-@property (nonatomic, assign) NSInteger rssi;
 
 @property (nonatomic, assign) NSInteger firmwareState;
 
 @end
+
+NS_ASSUME_NONNULL_END

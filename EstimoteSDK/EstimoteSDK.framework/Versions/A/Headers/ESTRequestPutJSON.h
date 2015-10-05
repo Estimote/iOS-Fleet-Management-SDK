@@ -11,8 +11,12 @@
 
 #import "ESTRequestPostJSON.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface ESTRequestPutJSON : ESTRequestPostJSON
 
 - (void)setParams:(id)params forRequest:(NSMutableURLRequest *)request;
 
 @end
+
+NS_ASSUME_NONNULL_END

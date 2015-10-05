@@ -1,3 +1,15 @@
+## 3.7.0 (October 5, 2015)
+
+Features:
+
+- Firmware update for nearables
+- Reading and writing advertising interval and broadcasting power for nearables.
+
+Improvements:
+
+- iOS 9 support (nullability and bitcode)
+
+
 ## 3.6.0 (September 10, 2015)
 
 Features:

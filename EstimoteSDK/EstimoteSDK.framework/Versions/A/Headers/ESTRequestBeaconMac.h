@@ -12,6 +12,8 @@
 #import "ESTRequestGetJSON.h"
 #import <CoreLocation/CoreLocation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 #define ESTRequestBeaconMacErrorDomain @"ESTRequestBeaconMacErrorDomain"
 
 /**
@@ -25,7 +27,7 @@ typedef NS_ENUM(NSInteger, ESTRequestBeaconMacError)
     ESTRequestBeaconMacErrorUnknown
 };
 
-typedef void(^ESTRequestBeaconMacBlock)(NSString *macAddress, NSError *error);
+typedef void(^ESTRequestBeaconMacBlock)(NSString * _Nullable macAddress, NSError * _Nullable error);
 
 /**
  *  ESTRequestBeaconMac allows to get MAC address for beacon based on CLBeacon
@@ -36,7 +38,6 @@ typedef void(^ESTRequestBeaconMacBlock)(NSString *macAddress, NSError *error);
 @interface ESTRequestBeaconMac : ESTRequestGetJSON
 
 @property (nonatomic, strong, readonly) CLBeacon *beacon;
-
 
 /**
  *  Initialise request with beacon.
@@ -55,3 +56,5 @@ typedef void(^ESTRequestBeaconMacBlock)(NSString *macAddress, NSError *error);
 - (void)sendRequestWithCompletion:(ESTRequestBeaconMacBlock)completion;
 
 @end
+
+NS_ASSUME_NONNULL_END

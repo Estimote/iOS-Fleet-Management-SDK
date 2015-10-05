@@ -11,6 +11,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  * Telemetry is a set of utility information showing state
  * of broadcasting device. According to Google documentation
@@ -25,12 +27,13 @@
  * accessible with small time delay.
  *
  */
+
 @interface ESTEddystoneTelemetry : NSObject <NSCopying>
 
 /**
  * Battery Level in millivolts [mV]
  */
-@property (nonatomic, strong) NSNumber *battery __attribute ((deprecated(("Starting from SDK 3.2.2 use batteryVoltage instead."))));
+@property (nonatomic, strong) NSNumber * battery __attribute ((deprecated(("Starting from SDK 3.2.2 use batteryVoltage instead."))));
 
 /**
  * Battery Level in millivolts [mV]
@@ -55,6 +58,8 @@
 /**
  * Uptime of the device since last power-up provided in seconds.
  */
-@property (nonatomic, strong) NSNumber *awakeTime __attribute ((deprecated(("Starting from SDK 3.2.2 use uptimeMillis instead."))));
+@property (nonatomic, strong) NSNumber * awakeTime __attribute ((deprecated(("Starting from SDK 3.2.2 use uptimeMillis instead."))));
 
 @end
+
+NS_ASSUME_NONNULL_END

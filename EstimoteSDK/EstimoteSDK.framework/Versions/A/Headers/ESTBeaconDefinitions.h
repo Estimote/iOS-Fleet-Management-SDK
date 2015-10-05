@@ -12,6 +12,8 @@
 #import <Foundation/Foundation.h>
 #import "ESTDefinitions.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 #define ESTIMOTE_PROXIMITY_UUID             [[NSUUID alloc] initWithUUIDString:@"B9407F30-F5F8-466E-AFF9-25556B57FE6D"]
 #define ESTIMOTE_MACBEACON_PROXIMITY_UUID   [[NSUUID alloc] initWithUUIDString:@"08D4A950-80F0-4D42-A14B-D53E063516E6"]
 #define ESTIMOTE_IOSBEACON_PROXIMITY_UUID   [[NSUUID alloc] initWithUUIDString:@"8492E75F-4FD6-469D-B132-043FE94921D8"]
@@ -108,9 +110,10 @@ typedef NS_ENUM(NSInteger, ESTBeaconCharInfoType)
     ESTBeaconCharInfoTypeWriteOnly
 };
 
-typedef void(^ESTPowerCompletionBlock)(ESTBeaconPower value, NSError *error);
-
+typedef void(^ESTPowerCompletionBlock)(ESTBeaconPower value, NSError * _Nullable error);
 
 @interface ESTBeaconDefinitions : NSObject
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -12,6 +12,8 @@
 #import "ESTBeaconUpdateConfig.h"
 #import "ESTBeaconUpdateInfo.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 typedef NS_ENUM(NSInteger, ESBulkUpdaterStatus)
 {
     ESBulkUpdaterStatusIdle,
@@ -61,12 +63,13 @@ extern NSString * const ESTBulkUpdaterTimeoutNotification;
  *  to start update procedure. This class defines notifications that can be used to get progress
  *  of update procedure state.
  */
+
 @interface ESTBulkUpdater : NSObject
 
 /**
  *  Array with information about beacons update status. Contains objects of ESBeaconUpdateInfo.
  */
-@property (nonatomic, strong) NSArray *beaconInfos;
+@property (nonatomic, strong) NSArray<ESTBeaconUpdateInfo *> * _Nullable beaconInfos;
 
 /**
  *  Indicating what mode is bulk updater currently running.
@@ -149,3 +152,5 @@ extern NSString * const ESTBulkUpdaterTimeoutNotification;
 - (void)cancel;
 
 @end
+
+NS_ASSUME_NONNULL_END

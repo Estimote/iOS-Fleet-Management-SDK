@@ -11,6 +11,9 @@
 
 #import <Foundation/Foundation.h>
 #import "ESTRequestGetJSON.h"
+#import "ESTNearable.h"
+
+NS_ASSUME_NONNULL_BEGIN
 
 #define ESTRequestGetNearablesErrorDomain @"ESTRequestGetNearablesErrorDomain"
 
@@ -25,7 +28,7 @@ typedef NS_ENUM(NSInteger, ESTRequestGetNearablesError)
     ESTRequestGetNearablesUnknown
 };
 
-typedef void(^ESTRequestGetNearablesBlock)(NSArray *nearables, NSError *error);
+typedef void(^ESTRequestGetNearablesBlock)(NSArray<ESTNearable *> * _Nullable nearables, NSError * _Nullable error);
 
 /**
  *  ESTRequestGetNearables is used to fetch details about all user nearables.
@@ -41,3 +44,5 @@ typedef void(^ESTRequestGetNearablesBlock)(NSArray *nearables, NSError *error);
 - (void)sendRequestWithCompletion:(ESTRequestGetNearablesBlock)completion;
 
 @end
+
+NS_ASSUME_NONNULL_END

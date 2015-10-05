@@ -10,8 +10,11 @@
 //  Copyright (c) 2015 Estimote. All rights reserved.
 
 #import "ESTRequestGetJSON.h"
+#import "ESTBeaconUpdateInfo.h"
 
-typedef void(^ESTRequestGetSettingsHistoryBlock)(NSArray *beaconUpdateInfos, NSError *error);
+NS_ASSUME_NONNULL_BEGIN
+
+typedef void(^ESTRequestGetSettingsHistoryBlock)(NSArray<ESTBeaconUpdateInfo *> * _Nullable beaconUpdateInfos, NSError * _Nullable error);
 
 /**
  *  This request is fetching all device's settings changes from the Estimote Cloud for authorized user.
@@ -38,3 +41,5 @@ typedef void(^ESTRequestGetSettingsHistoryBlock)(NSArray *beaconUpdateInfos, NSE
 - (void)sendRequestWithCompletion:(ESTRequestGetSettingsHistoryBlock)completion;
 
 @end
+
+NS_ASSUME_NONNULL_END

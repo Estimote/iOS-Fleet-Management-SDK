@@ -8,6 +8,8 @@
 
 #import "ESTRequestBase.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 #define ESTRequestDeleteErrorDomain @"ESTRequestDeleteErrorDomain"
 
 typedef NS_ENUM(NSInteger, ESTRequestDeleteError)
@@ -21,3 +23,5 @@ typedef NS_ENUM(NSInteger, ESTRequestDeleteError)
 @interface ESTRequestDelete : ESTRequestBase
 
 @end
+
+NS_ASSUME_NONNULL_END

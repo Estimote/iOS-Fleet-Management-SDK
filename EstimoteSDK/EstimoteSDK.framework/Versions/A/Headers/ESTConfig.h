@@ -12,6 +12,8 @@
 #import <Foundation/Foundation.h>
 #import "ESTDefinitions.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  *  ESTConfig is used to configure Estimote Cloud API. It allows to authorize app using AppID and AppToken 
  *  and configure Estimote Analytics settings.
@@ -36,14 +38,14 @@
  *
  * @return currently used App ID.
  */
-+ (NSString *)appID;
++ (NSString * _Nullable)appID;
 
 /**
  * Returns currently used App Token.
  *
  * @return currently used App Token.
  */
-+ (NSString *)appToken;
++ (NSString * _Nullable)appToken;
 
 /**
  * Checks if App ID and App Token were set.
@@ -90,3 +92,5 @@
 + (BOOL)isRangingAnalyticsEnabled;
 
 @end
+
+NS_ASSUME_NONNULL_END

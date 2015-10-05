@@ -56,38 +56,37 @@
     
     self.title = @"Select beacon";
     [self.tableView registerClass:[ESTTableViewCell class] forCellReuseIdentifier:@"CellIdentifier"];
-    
-    self.beaconManager = [[ESTBeaconManager alloc] init];
-    self.beaconManager.delegate = self;
-    
-    self.utilityManager = [[ESTUtilityManager alloc] init];
-    self.utilityManager.delegate = self;
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     
-    
-    /* 
-     * Creates sample region object (you can additionaly pass major / minor values).
-     *
-     * We specify it using only the ESTIMOTE_PROXIMITY_UUID because we want to discover all
-     * hardware beacons with Estimote's proximty UUID.
-     */
-    self.region = [[CLBeaconRegion alloc] initWithProximityUUID:ESTIMOTE_PROXIMITY_UUID
-                                                      identifier:@"EstimoteSampleRegion"];
-
     /*
      * Starts looking for Estimote beacons.
      * All callbacks will be delivered to beaconManager delegate.
      */
     if (self.scanType == ESTScanTypeBeacon)
     {
+        /*
+         * Creates sample region object (you can additionaly pass major / minor values).
+         *
+         * We specify it using only the ESTIMOTE_PROXIMITY_UUID because we want to discover all
+         * hardware beacons with Estimote's proximty UUID.
+         */
+        self.region = [[CLBeaconRegion alloc] initWithProximityUUID:ESTIMOTE_PROXIMITY_UUID
+                                                         identifier:@"EstimoteSampleRegion"];
+        
+        self.beaconManager = [[ESTBeaconManager alloc] init];
+        self.beaconManager.delegate = self;
+        
         [self startRangingBeacons];
     }
     else
     {
+        self.utilityManager = [[ESTUtilityManager alloc] init];
+        self.utilityManager.delegate = self;
+        
         [self.utilityManager startEstimoteBeaconDiscovery];
     }
 }
@@ -97,11 +96,6 @@
     if ([ESTBeaconManager authorizationStatus] == kCLAuthorizationStatusNotDetermined)
     {
         [self.beaconManager requestAlwaysAuthorization];
-        [self.beaconManager startRangingBeaconsInRegion:self.region];
-    }
-    else if([ESTBeaconManager authorizationStatus] == kCLAuthorizationStatusAuthorized)
-    {
-        [self.beaconManager startRangingBeaconsInRegion:self.region];
     }
     else if([ESTBeaconManager authorizationStatus] == kCLAuthorizationStatusDenied)
     {
@@ -142,6 +136,14 @@
 }
 
 #pragma mark - ESTBeaconManager delegate
+
+- (void)beaconManager:(id)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
+{
+    if (status != kCLAuthorizationStatusNotDetermined && status != kCLAuthorizationStatusDenied )
+    {
+        [self.beaconManager startRangingBeaconsInRegion:self.region];
+    }
+}
 
 - (void)beaconManager:(id)manager rangingBeaconsDidFailForRegion:(CLBeaconRegion *)region withError:(NSError *)error
 {

@@ -11,8 +11,9 @@
 
 #import "ESTRequestDelete.h"
 
+NS_ASSUME_NONNULL_BEGIN
 
-typedef void(^ESTRequestCancelPendingSettingsBlock)(NSError *error);
+typedef void(^ESTRequestCancelPendingSettingsBlock)(NSError * _Nullable error);
 
 /**
  *  This request is deleting the device's pending settings from the Estimote Cloud for authorized user.
@@ -39,3 +40,5 @@ typedef void(^ESTRequestCancelPendingSettingsBlock)(NSError *error);
 - (void)sendRequestWithCompletion:(ESTRequestCancelPendingSettingsBlock)completion;
 
 @end
+
+NS_ASSUME_NONNULL_END

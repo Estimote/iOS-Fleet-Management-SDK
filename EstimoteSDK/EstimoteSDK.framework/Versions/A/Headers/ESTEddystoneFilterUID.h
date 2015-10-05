@@ -12,6 +12,8 @@
 #import "ESTEddystoneFilter.h"
 #import "ESTEddystoneUID.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  *  Eddystone-UID based filter used by `ESTEddystoneManager` in discovery process.
  *  Filter should be initialized with `ESTEddystoneUID` object that is matching device(s)
@@ -29,3 +31,5 @@
 - (instancetype)initWithUID:(ESTEddystoneUID *)eddystoneUID;
 
 @end
+
+NS_ASSUME_NONNULL_END

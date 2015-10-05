@@ -12,6 +12,8 @@
 #import <Foundation/Foundation.h>
 #import "ESTRequestBase.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 #define ESTRequestPostJSONErrorDomain @"ESTRequestPostJSONErrorDomain"
 
 typedef NS_ENUM(NSInteger, ESTRequestPostJSONError)
@@ -22,9 +24,10 @@ typedef NS_ENUM(NSInteger, ESTRequestPostJSONError)
     ESTRequestPostJSONErrorCloudReturnedError
 };
 
-
 @interface ESTRequestPostJSON : ESTRequestBase
 
 - (void)setParams:(id)params forRequest:(NSMutableURLRequest *)request;
 
 @end
+
+NS_ASSUME_NONNULL_END

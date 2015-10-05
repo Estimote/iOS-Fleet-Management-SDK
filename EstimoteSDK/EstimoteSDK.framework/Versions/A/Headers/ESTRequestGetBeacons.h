@@ -11,6 +11,9 @@
 
 #import <Foundation/Foundation.h>
 #import "ESTRequestGetJSON.h"
+#import "ESTBeaconVO.h"
+
+NS_ASSUME_NONNULL_BEGIN
 
 #define ESTRequestGetBeaconsErrorDomain @"ESTRequestGetBeaconsErrorDomain"
 
@@ -25,7 +28,7 @@ typedef NS_ENUM(NSInteger, ESTRequestGetBeaconsError)
     ESTRequestGetBeaconsErrorUnknown
 };
 
-typedef void(^ESTRequestGetBeaconsBlock)(NSArray *beaconVOs, NSError *error);
+typedef void(^ESTRequestGetBeaconsBlock)(NSArray<ESTBeaconVO *> * _Nullable beaconVOs, NSError * _Nullable error);
 
 /**
  *  ESTRequestGetBeacons is used to fetch list of all beacons 
@@ -43,3 +46,5 @@ typedef void(^ESTRequestGetBeaconsBlock)(NSArray *beaconVOs, NSError *error);
 - (void)sendRequestWithCompletion:(ESTRequestGetBeaconsBlock)completion;
 
 @end
+
+NS_ASSUME_NONNULL_END

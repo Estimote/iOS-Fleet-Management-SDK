@@ -15,53 +15,58 @@
 #import <Foundation/Foundation.h>
 #import "ESTBeaconDefinitions.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  *  Object of this class contains all settings that should be applied to the Estimote beacon device. 
  *  It's used by `ESTBulkUpdater` class as a part of `ESTBeaconUpdateInfo` object.
  */
+
 @interface ESTBeaconUpdateConfig : NSObject <NSCoding, NSCopying>
 
 /**
  *  To what proximity UUID beacon should be changed.
  */
-@property (nonatomic, strong) NSString *proximityUUID;
+@property (nonatomic, strong) NSString * _Nullable proximityUUID;
 
 /**
  *  To what major beacon should be changed.
  */
-@property (nonatomic, strong) NSNumber *major;
+@property (nonatomic, strong) NSNumber * _Nullable major;
 
 /**
  *  To what minor beacon should be changed.
  */
-@property (nonatomic, strong) NSNumber *minor;
+@property (nonatomic, strong) NSNumber * _Nullable minor;
 
 /**
  *  To what advertising interval beacon should be changed.
  */
-@property (nonatomic, strong) NSNumber *advInterval;
+@property (nonatomic, strong) NSNumber * _Nullable advInterval;
 
 /**
  *  To what broadcasting power beacon should be changed.
  */
-@property (nonatomic, strong) NSNumber *power;
+@property (nonatomic, strong) NSNumber * _Nullable power;
 
 /**
  *  Flag for switching state of basic power mode.
  *  Recommended use: [NSNumber numberWithInt:ESTBeaconPowerSavingMode].
  */
-@property (nonatomic, strong) NSNumber *basicPowerMode;
+@property (nonatomic, strong) NSNumber * _Nullable basicPowerMode;
 
 /**
  *  Flag for switching state of smart power mode.
  *  Recommended use: [NSNumber numberWithInt:ESTBeaconPowerSavingMode].
  */
-@property (nonatomic, strong) NSNumber *smartPowerMode;
+@property (nonatomic, strong) NSNumber * _Nullable smartPowerMode;
 
 /**
  *  Flag for switching state of Estimote Secure UUID.
  *  Recommended use: [NSNumber numberWithInt:ESTBeaconPowerSavingMode].
  */
-@property (nonatomic, strong) NSNumber *estimoteSecureUUIDState;
+@property (nonatomic, strong) NSNumber * _Nullable estimoteSecureUUIDState;
 
 @end
+
+NS_ASSUME_NONNULL_END

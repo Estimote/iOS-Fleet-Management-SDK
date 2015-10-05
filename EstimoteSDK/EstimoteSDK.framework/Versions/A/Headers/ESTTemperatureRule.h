@@ -11,13 +11,16 @@
 
 #import "ESTNearableRule.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  * The `ESTTemperatureRule` class defines single rule related to ambient temperature of the Estimote nearable device.
  */
+
 @interface ESTTemperatureRule : ESTNearableRule
 
-@property (nonatomic, strong) NSNumber *maxValue;
-@property (nonatomic, strong) NSNumber *minValue;
+@property (nonatomic, strong) NSNumber * _Nullable maxValue;
+@property (nonatomic, strong) NSNumber * _Nullable minValue;
 
 + (instancetype)temperatureGraterThan:(double)value forNearableIdentifier:(NSString *)identifier;
 + (instancetype)temperatureLowerThan:(double)value forNearableIdentifier:(NSString *)identifier;
@@ -28,3 +31,5 @@
 + (instancetype)temperatureBetween:(double)minValue and:(double)maxValue forNearableType:(ESTNearableType)type;
 
 @end
+
+NS_ASSUME_NONNULL_END

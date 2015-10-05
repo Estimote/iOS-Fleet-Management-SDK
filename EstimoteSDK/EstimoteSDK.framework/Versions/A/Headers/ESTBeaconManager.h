@@ -14,10 +14,19 @@
 #import "ESTBeaconManagerDelegate.h"
 #import <CoreLocation/CoreLocation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 #define ESTIMOTE_PROXIMITY_UUID             [[NSUUID alloc] initWithUUIDString:@"B9407F30-F5F8-466E-AFF9-25556B57FE6D"]
 #define ESTIMOTE_MACBEACON_PROXIMITY_UUID   [[NSUUID alloc] initWithUUIDString:@"08D4A950-80F0-4D42-A14B-D53E063516E6"]
 #define ESTIMOTE_IOSBEACON_PROXIMITY_UUID   [[NSUUID alloc] initWithUUIDString:@"8492E75F-4FD6-469D-B132-043FE94921D8"]
 
+#define ESTBeaconManagerErrorDomain @"ESTBeaconManagerErrorDomain"
+
+typedef NS_ENUM(NSInteger, ESTBeaconManagerError)
+{
+    ESTBeaconManagerErrorInvalidRegion = 1,
+    ESTBeaconManagerErrorLocationServicesUnauthorized
+};
 
 @interface ESTBeaconManager : NSObject
 
@@ -26,7 +35,7 @@
  *
  * @see ESTBeaconManagerDelegate
  */
-@property (nonatomic, weak) id <ESTBeaconManagerDelegate> delegate;
+@property (nonatomic, weak) id <ESTBeaconManagerDelegate> _Nullable delegate;
 
 #pragma mark iBeacon utilities
 ///--------------------------------------------------------------------
@@ -77,7 +86,7 @@
 - (void)startAdvertisingWithProximityUUID:(NSUUID *)proximityUUID
                                     major:(CLBeaconMajorValue)major
                                     minor:(CLBeaconMinorValue)minor
-                               identifier:(NSString*)identifier;
+                               identifier:(NSString *)identifier;
 
 - (void)stopAdvertising;
 
@@ -118,6 +127,16 @@
  * @see -[CLLocationManager requestWhenInUseAuthorization]
  */
 - (void)requestAlwaysAuthorization;
+
+/**
+ * Checks if the current Location Services authorization is enough to do ranging (i.e., either 'when in use' or 'always').
+ */
+- (BOOL)isAuthorizedForRanging;
+
+/**
+ * Checks if the current Location Services authorization is enough to do monitoring (i.e., 'always').
+ */
+- (BOOL)isAuthorizedForMonitoring;
 
 
 #pragma mark CoreLocation Based Scanning
@@ -204,3 +223,5 @@
 + (NSUUID *)motionProximityUUIDForProximityUUID:(NSUUID *)proximityUUID;
 
 @end
+
+NS_ASSUME_NONNULL_END

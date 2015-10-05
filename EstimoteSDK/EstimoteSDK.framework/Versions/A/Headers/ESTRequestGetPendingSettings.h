@@ -10,8 +10,11 @@
 //  Copyright (c) 2015 Estimote. All rights reserved.
 
 #import "ESTRequestGetJSON.h"
+#import "ESTBeaconUpdateInfo.h"
 
-typedef void(^ESTRequestGetPendingSettingsBlock)(NSArray *beaconUpdateInfos, NSError *error);
+NS_ASSUME_NONNULL_BEGIN
+
+typedef void(^ESTRequestGetPendingSettingsBlock)(NSArray<ESTBeaconUpdateInfo *> * _Nullable beaconUpdateInfos, NSError * _Nullable error);
 
 /**
  *  This request is fetching all the pending settings from the Estimote Cloud for authorized user.
@@ -27,3 +30,5 @@ typedef void(^ESTRequestGetPendingSettingsBlock)(NSArray *beaconUpdateInfos, NSE
 - (void)sendRequestWithCompletion:(ESTRequestGetPendingSettingsBlock)completion;
 
 @end
+
+NS_ASSUME_NONNULL_END

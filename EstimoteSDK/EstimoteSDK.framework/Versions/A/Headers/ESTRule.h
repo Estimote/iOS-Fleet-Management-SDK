@@ -10,11 +10,13 @@
 //  Copyright (c) 2015 Estimote. All rights reserved.
 
 #import <Foundation/Foundation.h>
-#import "ESTTrigger.h"
+
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * The `ESTRule` class defines single rule of `<ESTTrigger>` object. Each rule has state value that indicates if it was fulfilled or not.
  */
+
 @interface ESTRule : NSObject
 
 /**
@@ -31,3 +33,5 @@
 - (void)update;
 
 @end
+
+NS_ASSUME_NONNULL_END

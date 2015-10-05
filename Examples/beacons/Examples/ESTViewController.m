@@ -23,6 +23,9 @@
 #import "ESTEddystoneTableVC.h"
 #import "ESTVirtualBeaconDemoVC.h"
 #import <EstimoteSDK/ESTEddystone.h>
+#import "ESTNearableTableVC.h"
+#import "ESTNearableDetailsDemoVC.h"
+#import "ESTNearableFirmwareUpdateDemoVC.h"
 
 @interface ESTDemoTableViewCell : UITableViewCell
 
@@ -60,7 +63,8 @@
                              @[@"Temperature", @"Accelerometer", @"Motion UUID"],
                              @[@"Beacon Settings", @"Update Firmware", @"Local Bulk Update", @"Remote Bulk Update"],
                              @[@"Fetch beacons from cloud", @"Send Beacons GPS Position"],
-                             @[@"Discovery and details"]
+                             @[@"Discovery and details"],
+                             @[@"Device settings", @"Update Firmware"]
                              ];
 }
 
@@ -88,6 +92,8 @@
         return @"Estimote Cloud demos";
     if(section == 4)
         return @"Eddystone demos";
+    if(section == 5)
+        return @"Nearable demos";
     
     return nil;
 }
@@ -288,6 +294,35 @@
                 break;
         }
     }
+    else if (indexPath.section == 5)
+    {
+        switch (indexPath.row)
+        {
+            case 0:
+            {
+                demoViewController = [[ESTNearableTableVC alloc] initWithCompletion:^(ESTDeviceNearable *nearable) {
+                    
+                    ESTNearableDetailsDemoVC *detailsVC = [[ESTNearableDetailsDemoVC alloc] initWithNearableDevice:nearable];
+                    [self.navigationController pushViewController:detailsVC animated:YES];
+                    
+                }];
+                break;
+            }
+            case 1:
+            {
+                demoViewController = [[ESTNearableTableVC alloc] initWithCompletion:^(ESTDeviceNearable *nearable) {
+                    
+                    ESTNearableFirmwareUpdateDemoVC *detailsVC = [[ESTNearableFirmwareUpdateDemoVC alloc] initWithNearableDevice:nearable];
+                    [self.navigationController pushViewController:detailsVC animated:YES];
+                    
+                }];
+                break;
+            }
+            default:
+                break;
+        }
+    }
+
     
     if (demoViewController)
     {

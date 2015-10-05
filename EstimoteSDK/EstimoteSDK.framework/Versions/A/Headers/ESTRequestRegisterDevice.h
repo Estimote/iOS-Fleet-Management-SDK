@@ -11,7 +11,9 @@
 
 #import "ESTRequestPostJSON.h"
 
-typedef void(^ESTRequestRegisterDeviceBlock)(NSError *error);
+NS_ASSUME_NONNULL_BEGIN
+
+typedef void(^ESTRequestRegisterDeviceBlock)(NSError * _Nullable error);
 
 /**
  *  Request allows to register device in Estimote Cloud. After registration device can remotely receive information
@@ -39,3 +41,5 @@ typedef void(^ESTRequestRegisterDeviceBlock)(NSError *error);
 - (void)sendRequestWithCompletion:(ESTRequestRegisterDeviceBlock)completion;
 
 @end
+
+NS_ASSUME_NONNULL_END

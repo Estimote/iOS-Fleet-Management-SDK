@@ -12,9 +12,10 @@
 #import <Foundation/Foundation.h>
 #import "ESTFirmwareInfoVO.h"
 
+
 @interface ESTBeaconFirmwareVO : ESTFirmwareInfoVO
 
-@property (nonatomic, strong) NSString* firmwareUrl;
-@property (nonatomic, strong) NSString* firmwareCleanerUrl;
+@property (nonatomic, strong) NSString *firmwareUrl;
+@property (nonatomic, strong) NSString *firmwareCleanerUrl;
 
 @end

@@ -30,6 +30,11 @@
 		95A43D771940CDDB004D81E3 /* ESTCloudBeaconTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 95A43D761940CDDB004D81E3 /* ESTCloudBeaconTableVC.m */; };
 		95B084531AA9229D007EA98D /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95D588B51AA70CFB0093D178 /* EstimoteSDK.framework */; };
 		95C7C3501941BAA300D9BF17 /* ESTCloudBeaconTableVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95C7C34F1941BAA300D9BF17 /* ESTCloudBeaconTableVC.xib */; };
+		95CBE8E21BBE823800112BB0 /* ESTNearableDetailsDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 95CBE8DD1BBE823800112BB0 /* ESTNearableDetailsDemoVC.m */; settings = {ASSET_TAGS = (); }; };
+		95CBE8E31BBE823800112BB0 /* ESTNearableDetailsDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95CBE8DE1BBE823800112BB0 /* ESTNearableDetailsDemoVC.xib */; settings = {ASSET_TAGS = (); }; };
+		95CBE8E41BBE823800112BB0 /* ESTNearableFirmwareUpdateDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 95CBE8E01BBE823800112BB0 /* ESTNearableFirmwareUpdateDemoVC.m */; settings = {ASSET_TAGS = (); }; };
+		95CBE8E51BBE823800112BB0 /* ESTNearableFirmwareUpdateDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95CBE8E11BBE823800112BB0 /* ESTNearableFirmwareUpdateDemoVC.xib */; settings = {ASSET_TAGS = (); }; };
+		95CBE8E81BBE826300112BB0 /* ESTNearableTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 95CBE8E71BBE826300112BB0 /* ESTNearableTableVC.m */; settings = {ASSET_TAGS = (); }; };
 		A12D28DB18E9638100872A95 /* ESTUpdateFirmwareDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A12D28D918E9638100872A95 /* ESTUpdateFirmwareDemoVC.m */; };
 		A12D28DC18E9638100872A95 /* ESTUpdateFirmwareDemoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A12D28DA18E9638100872A95 /* ESTUpdateFirmwareDemoVC.xib */; };
 		AC39C3BE18D72A6F00B38212 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC39C3BD18D72A6F00B38212 /* Foundation.framework */; };
@@ -81,6 +86,14 @@
 		95A43D751940CDDB004D81E3 /* ESTCloudBeaconTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTCloudBeaconTableVC.h; sourceTree = "<group>"; };
 		95A43D761940CDDB004D81E3 /* ESTCloudBeaconTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTCloudBeaconTableVC.m; sourceTree = "<group>"; };
 		95C7C34F1941BAA300D9BF17 /* ESTCloudBeaconTableVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESTCloudBeaconTableVC.xib; sourceTree = "<group>"; };
+		95CBE8DC1BBE823800112BB0 /* ESTNearableDetailsDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTNearableDetailsDemoVC.h; sourceTree = "<group>"; };
+		95CBE8DD1BBE823800112BB0 /* ESTNearableDetailsDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTNearableDetailsDemoVC.m; sourceTree = "<group>"; };
+		95CBE8DE1BBE823800112BB0 /* ESTNearableDetailsDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESTNearableDetailsDemoVC.xib; sourceTree = "<group>"; };
+		95CBE8DF1BBE823800112BB0 /* ESTNearableFirmwareUpdateDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTNearableFirmwareUpdateDemoVC.h; sourceTree = "<group>"; };
+		95CBE8E01BBE823800112BB0 /* ESTNearableFirmwareUpdateDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTNearableFirmwareUpdateDemoVC.m; sourceTree = "<group>"; };
+		95CBE8E11BBE823800112BB0 /* ESTNearableFirmwareUpdateDemoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ESTNearableFirmwareUpdateDemoVC.xib; sourceTree = "<group>"; };
+		95CBE8E61BBE826300112BB0 /* ESTNearableTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTNearableTableVC.h; sourceTree = "<group>"; };
+		95CBE8E71BBE826300112BB0 /* ESTNearableTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTNearableTableVC.m; sourceTree = "<group>"; };
 		95D588B51AA70CFB0093D178 /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EstimoteSDK.framework; path = ../../EstimoteSDK/EstimoteSDK.framework; sourceTree = "<group>"; };
 		A12D28D818E9638100872A95 /* ESTUpdateFirmwareDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTUpdateFirmwareDemoVC.h; sourceTree = "<group>"; };
 		A12D28D918E9638100872A95 /* ESTUpdateFirmwareDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ESTUpdateFirmwareDemoVC.m; sourceTree = "<group>"; };
@@ -209,6 +222,14 @@
 				954AF5831AE9775D0028C914 /* ESTVirtualBeaconDemoVC.h */,
 				954AF5841AE9775D0028C914 /* ESTVirtualBeaconDemoVC.m */,
 				954AF5851AE9775D0028C914 /* ESTVirtualBeaconDemoVC.xib */,
+				95CBE8E61BBE826300112BB0 /* ESTNearableTableVC.h */,
+				95CBE8E71BBE826300112BB0 /* ESTNearableTableVC.m */,
+				95CBE8DC1BBE823800112BB0 /* ESTNearableDetailsDemoVC.h */,
+				95CBE8DD1BBE823800112BB0 /* ESTNearableDetailsDemoVC.m */,
+				95CBE8DE1BBE823800112BB0 /* ESTNearableDetailsDemoVC.xib */,
+				95CBE8DF1BBE823800112BB0 /* ESTNearableFirmwareUpdateDemoVC.h */,
+				95CBE8E01BBE823800112BB0 /* ESTNearableFirmwareUpdateDemoVC.m */,
+				95CBE8E11BBE823800112BB0 /* ESTNearableFirmwareUpdateDemoVC.xib */,
 				AC39C3D518D72A6F00B38212 /* Images.xcassets */,
 				AC39C3C418D72A6F00B38212 /* Supporting Files */,
 			);
@@ -289,12 +310,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				95C7C3501941BAA300D9BF17 /* ESTCloudBeaconTableVC.xib in Resources */,
+				95CBE8E31BBE823800112BB0 /* ESTNearableDetailsDemoVC.xib in Resources */,
 				952CEA5D1A88B9CF003A99A6 /* ESTBeaconDetailsDemoVC.xib in Resources */,
 				951C167D18E475B6001B3C8E /* ESTNotificationDemoVC.xib in Resources */,
 				954111B91AB1ADEB00340377 /* ESTBulkUpdaterDemoVC.xib in Resources */,
 				952B14911AB8410700573526 /* ESTBulkUpdaterRemoteDemoVC.xib in Resources */,
 				956C57641AA8AAC900B468D4 /* ESTMotionUUIDSettingsDemoVC.xib in Resources */,
 				A12D28DC18E9638100872A95 /* ESTUpdateFirmwareDemoVC.xib in Resources */,
+				95CBE8E51BBE823800112BB0 /* ESTNearableFirmwareUpdateDemoVC.xib in Resources */,
 				956C57661AA8AAC900B468D4 /* ESTTemperatureDemoVC.xib in Resources */,
 				954AF5871AE9775D0028C914 /* ESTVirtualBeaconDemoVC.xib in Resources */,
 				956C57601AA8AAC900B468D4 /* ESTMotionDetectionDemoVC.xib in Resources */,
@@ -315,6 +338,7 @@
 				952B14901AB8410700573526 /* ESTBulkUpdaterRemoteDemoVC.m in Sources */,
 				956C57631AA8AAC900B468D4 /* ESTMotionUUIDSettingsDemoVC.m in Sources */,
 				954AF5861AE9775D0028C914 /* ESTVirtualBeaconDemoVC.m in Sources */,
+				95CBE8E21BBE823800112BB0 /* ESTNearableDetailsDemoVC.m in Sources */,
 				956C575F1AA8AAC900B468D4 /* ESTMotionDetectionDemoVC.m in Sources */,
 				AC39C3CA18D72A6F00B38212 /* main.m in Sources */,
 				AC39C3D418D72A6F00B38212 /* ESTViewController.m in Sources */,
@@ -323,8 +347,10 @@
 				AC39C3FB18D7346C00B38212 /* ESTProximityDemoVC.m in Sources */,
 				95A43D771940CDDB004D81E3 /* ESTCloudBeaconTableVC.m in Sources */,
 				AC39C3FE18D73DCB00B38212 /* ESTDistanceDemoVC.m in Sources */,
+				95CBE8E81BBE826300112BB0 /* ESTNearableTableVC.m in Sources */,
 				AC39C3F418D72BA700B38212 /* ESTBeaconTableVC.m in Sources */,
 				956C57611AA8AAC900B468D4 /* ESTMotionUUIDDemoVC.m in Sources */,
+				95CBE8E41BBE823800112BB0 /* ESTNearableFirmwareUpdateDemoVC.m in Sources */,
 				AC39C40118D8564100B38212 /* ESTNotificationDemoVC.m in Sources */,
 				956A942A1AD7D2B100FC0FFA /* ESTSendGPSDemoVC.m in Sources */,
 				A12D28DB18E9638100872A95 /* ESTUpdateFirmwareDemoVC.m in Sources */,

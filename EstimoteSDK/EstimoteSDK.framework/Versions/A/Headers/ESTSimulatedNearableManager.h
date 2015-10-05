@@ -11,15 +11,18 @@
 
 #import "ESTNearableManager.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
 * ESTSimulatedNearableManager is a class for simulating Nearables (ESTNearable) objects.
 */
+
 @interface ESTSimulatedNearableManager : ESTNearableManager <ESTNearableManagerDelegate>
 
 /**
 * Array with simulated ESTNearable objects.
 */
-@property (nonatomic, strong, readonly) NSMutableArray *nearables;
+@property (nonatomic, strong, readonly) NSMutableArray<ESTNearable *> *nearables;
 
 /**
 *  Initializer with delegate.
@@ -28,7 +31,7 @@
 *
 *  @return Instance of this object.
 */
-- (instancetype)initWithDelegate:(id<ESTNearableManagerDelegate>)delegate;
+- (instancetype)initWithDelegate:(id<ESTNearableManagerDelegate> _Nullable)delegate;
 
 /**
 *  Use this initializer if you want to specify nearables in JSON.
@@ -39,11 +42,11 @@
 *  However, you can set those values in JSON file, they will be parsed into ESTNearable object.
 *
 *  @param delegate        Set delegate for ESTNearableManagerDelegate updates.
-*  @param pathForJSON     Path for json file with description of nearables you want to simulate.
+*  @param path            Path for json file with description of nearables you want to simulate.
 *
 *  @return Instance of this object.
 */
-- (instancetype)initWithDelegate:(id<ESTNearableManagerDelegate>)delegate
+- (instancetype)initWithDelegate:(id<ESTNearableManagerDelegate> _Nullable)delegate
                      pathForJSON:(NSString *)path;
 
 - (ESTNearable *)generateRandomNearableAndAddToSimulator:(BOOL)add;
@@ -57,6 +60,7 @@
 * @param identifier Identifier for ESTNearable object.
 * @param type       Nearable type
 * @param zone       Nearable zone
+* @param rssi       Nearable rssi
 */
 - (void)addNearableToSimulation:(NSString *)identifier
                        withType:(ESTNearableType)type
@@ -77,8 +81,8 @@
 /**
  *  Set desired zone for your simulated ESTNearableObject.
  *
- *  @param zone     ESTNearableZone to set.
- *  @param nearable ESTNearable object you want to change.
+ *  @param zone         ESTNearableZone to set.
+ *  @param identifier   Identifier of ESTNearable you want to change.
  */
 - (void)simulateZone:(ESTNearableZone)zone forNearable:(NSString *)identifier;
 
@@ -109,3 +113,5 @@
 - (void)simulateDidExitRegionForNearable:(ESTNearable *)nearable;
 
 @end
+
+NS_ASSUME_NONNULL_END

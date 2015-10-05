@@ -10,6 +10,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 #define ESTRequestBaseErrorDomain @"ESTRequestBaseErrorDomain"
 
 typedef NS_ENUM(NSInteger, ESTRequestBaseError)
@@ -17,10 +19,8 @@ typedef NS_ENUM(NSInteger, ESTRequestBaseError)
     ESTRequestBaseErrorConnectionFail
 };
 
+typedef void(^ESTRequestBlock)(id _Nullable result, NSError * _Nullable error);
 
-typedef void(^ESTRequestBlock)(id result, NSError *error);
-typedef void(^ESTRequestSuccessBlock)(id result, NSError *error);
-typedef void(^ESTRequestFailureBlock)(NSError *error);
 
 @class ESTRequestBase;
 
@@ -36,13 +36,12 @@ typedef void(^ESTRequestFailureBlock)(NSError *error);
 
 @interface ESTRequestBase : NSObject <NSURLConnectionDelegate, NSURLConnectionDataDelegate>
 
-@property (nonatomic, weak) id<ESTRequestBaseDelegate> delegate;
+@property (nonatomic, weak) id<ESTRequestBaseDelegate> _Nullable delegate;
 
 @property (nonatomic, assign) NSInteger code;
-@property (nonatomic, strong) NSURLConnection *connection;
-@property (nonatomic, strong) NSMutableData *receivedData;
+@property (nonatomic, strong) NSURLConnection * _Nullable connection;
+@property (nonatomic, strong) NSMutableData * _Nullable receivedData;
 
-- (NSMutableURLRequest *)createRequestWithCloudUrl:(NSString *)url;
 - (NSMutableURLRequest *)createRequestWithUrl:(NSString *)url;
 
 - (void)fireRequest:(NSMutableURLRequest *)request;
@@ -55,10 +54,12 @@ typedef void(^ESTRequestFailureBlock)(NSError *error);
 
 #pragma mark - Helper methods
 
-- (id)objectForKey:(NSString *)aKey inDictionary:(NSDictionary *)dict;
+- (id _Nullable)objectForKey:(NSString *)aKey inDictionary:(NSDictionary * _Nullable)dict;
 
 #pragma mark - Equality
 
 - (BOOL)isEqualToRequest:(ESTRequestBase *)request;
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -11,6 +11,8 @@
 
 #import "ESTEddystoneFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
 *  Eddystone-URL based filter used by `ESTEddystoneManager` in discovery process.
 *  Filter should be initialized with URL string that is matching device(s)
@@ -29,3 +31,5 @@
 - (instancetype)initWithURL:(NSString *)eddystoneURL;
 
 @end
+
+NS_ASSUME_NONNULL_END

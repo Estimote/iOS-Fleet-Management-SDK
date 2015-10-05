@@ -72,6 +72,8 @@
 	
 	<option value="//api/name/assignCurrentGPSLocationToBeaconWithMac:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- assignCurrentGPSLocationToBeaconWithMac:completion:</option>
 	
+	<option value="//api/name/assignCurrentGPSLocationToBeaconWithProximityUUID:major:minor:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- assignCurrentGPSLocationToBeaconWithProximityUUID:major:minor:completion:</option>
+	
 	<option value="//api/name/assignGPSLocation:toBeacon:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- assignGPSLocation:toBeacon:completion:</option>
 	
 	<option value="//api/name/assignGPSLocation:toBeaconWithMac:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- assignGPSLocation:toBeaconWithMac:completion:</option>
@@ -153,6 +155,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/assignCurrentGPSLocationToBeacon:completion:">assignCurrentGPSLocationToBeacon:completion:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/assignCurrentGPSLocationToBeaconWithMac:completion:">assignCurrentGPSLocationToBeaconWithMac:completion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/assignCurrentGPSLocationToBeaconWithProximityUUID:major:minor:completion:">assignCurrentGPSLocationToBeaconWithProximityUUID:major:minor:completion:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/assignGPSLocation:toBeacon:completion:">assignGPSLocation:toBeacon:completion:</a></span></li>
 	
@@ -372,6 +376,12 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/assignCurrentGPSLocationToBeaconWithProximityUUID:major:minor:completion:">&ndash;&nbsp;assignCurrentGPSLocationToBeaconWithProximityUUID:major:minor:completion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/registerDeviceForRemoteManagement:completion:">&ndash;&nbsp;registerDeviceForRemoteManagement:completion:</a></code>
 	</span>
 	
@@ -409,7 +419,7 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (NSString *)appID</code></div>
+	<div class="method-subsection method-declaration"><code>+ (NSString *_Nullable)appID</code></div>
 
     
 	
@@ -450,7 +460,7 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (NSString *)appToken</code></div>
+	<div class="method-subsection method-declaration"><code>+ (NSString *_Nullable)appToken</code></div>
 
     
 	
@@ -898,8 +908,7 @@ in the Estimote Cloud.</p>
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Assigns current GPS location to provided beacon.
-Location is obtained internally using single CLLocation manger scan.</p>
+		<p>Assigns current GPS location to provided beacon.</p>
 	</div>		
 	
     
@@ -913,12 +922,12 @@ Location is obtained internally using single CLLocation manger scan.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>beacon</em></dt>
-			<dd><p>beacon to which location should be assigned</p></dd>
+			<dd><p>the beacon to assign the location to</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>completion</em></dt>
-			<dd><p>completion block with assigned location provided</p></dd>
+			<dd><p>completion callback; first param is the CLLocation just assigned (or nil if there was an error); second param is an NSError object (or nil if assigned successfully)</p></dd>
 		</dl>
 		
 	</div>
@@ -928,6 +937,11 @@ Location is obtained internally using single CLLocation manger scan.</p>
 	
 	
 	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Location is obtained internally using a single CLLocation manger scan.</p>
+	</div>
 	
 	
 	
@@ -996,6 +1010,67 @@ Location is obtained internally using single CLLocation manger scan.</p>
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/assignCurrentGPSLocationToBeaconWithProximityUUID:major:minor:completion:" title="assignCurrentGPSLocationToBeaconWithProximityUUID:major:minor:completion:"></a>
+	<h3 class="subsubtitle method-title">assignCurrentGPSLocationToBeaconWithProximityUUID:major:minor:completion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Location is obtained internally using a single CLLocation manger scan.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)assignCurrentGPSLocationToBeaconWithProximityUUID:(NSUUID *)<em>uuid</em> major:(NSNumber *)<em>major</em> minor:(NSNumber *)<em>minor</em> completion:(ESTObjectCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>uuid</em></dt>
+			<dd><p>UUID of the beacon to assign the location to</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>major</em></dt>
+			<dd><p>major of the beacon to assign the location to</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>minor</em></dt>
+			<dd><p>minor of the beacon to assign the location to</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>completion callback; first param is the CLLocation just assigned (or nil if there was an error); second param is an NSError object (or nil if assigned successfully)</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTCloudManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/assignGPSLocation:toBeacon:completion:" title="assignGPSLocation:toBeacon:completion:"></a>
 	<h3 class="subsubtitle method-title">assignGPSLocation:toBeacon:completion:</h3>
 	
@@ -1016,17 +1091,17 @@ Location is obtained internally using single CLLocation manger scan.</p>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>location</em></dt>
-			<dd><p>CLLocation object with latitude and longitude included</p></dd>
+			<dd><p>the location (lat/lng) to assign to the beacon</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>beacon</em></dt>
-			<dd><p>CLBeacon to which location should be assigned</p></dd>
+			<dd><p>the beacon to assign the location to</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>completion</em></dt>
-			<dd><p>result information with assigned location provided</p></dd>
+			<dd><p>completion callback; first param is the CLLocation just assigned (or nil if there was an error); second param is an NSError object (or nil if assigned successfully)</p></dd>
 		</dl>
 		
 	</div>
@@ -1637,7 +1712,7 @@ Array returned in completion block can be used directly by ESTBulkUpdater class.
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-09-10)</span><br />
+						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-10-02)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						

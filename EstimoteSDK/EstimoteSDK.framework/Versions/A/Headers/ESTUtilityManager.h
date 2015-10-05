@@ -11,6 +11,9 @@
 
 #import <Foundation/Foundation.h>
 #import "ESTBluetoothBeacon.h"
+#import "ESTDeviceNearable.h"
+
+NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_ENUM(NSInteger, ESTUtilitManagerState)
 {
@@ -31,19 +34,28 @@ typedef NS_ENUM(NSInteger, ESTUtilitManagerState)
  * @param beacons An array of `<ESTBluetoothBeacon>` objects representing the beacons discovered.
  */
 - (void)utilityManager:(ESTUtilityManager *)manager
-    didDiscoverBeacons:(NSArray *)beacons;
+    didDiscoverBeacons:(NSArray<ESTDevice *> *)beacons;
+
+/**
+ * Tells the delegate that one or more beacons were discovered in the vicinity of the device.
+ *
+ * @param manager The utility manager object reporting the event.
+ * @param beacons An array of `<ESTDeviceNearable>` objects representing the nearables discovered.
+ */
+- (void)utilityManager:(ESTUtilityManager *)manager
+    didDiscoverNearables:(NSArray<ESTDeviceNearable *> *)nearables;
 
 /**
  * Tells the delegate that beacons discovery error occurred.
  *
- * @param manager The beacon manager object reporting the event.
+ * @param manager The utility manager object reporting the event.
  */
 - (void)utilityManagerDidFailDiscovery:(ESTUtilityManager *)manager;
 
 @end
 
 /**
- * The `ESTUtilityManager` class defines the interface for utility methods related to Estimote Beacons. The main functionality 
+ * The `ESTUtilityManager` class defines the interface for utility methods related to Estimote Beacons. The main functionality
  * allows to discover CoreBluetooth based representation of Estimote Beacon devices.
  */
 
@@ -57,7 +69,7 @@ typedef NS_ENUM(NSInteger, ESTUtilitManagerState)
 /**
  *  Delegate object.
  */
-@property (nonatomic, weak) id<ESTUtilityManagerDelegate> delegate;
+@property (nonatomic, weak) id<ESTUtilityManagerDelegate> _Nullable delegate;
 
 /**
  * Starts a CoreBluetooth scan in search for all Estimote Beacons in range.
@@ -82,4 +94,29 @@ typedef NS_ENUM(NSInteger, ESTUtilitManagerState)
  */
 - (void)stopEstimoteBeaconDiscovery;
 
+/**
+ * Starts a CoreBluetooth scan in search for all Estimote Nearables in range.
+ * Related `utilityManager:didDiscoverNearables:` is fired every 0.2 sec until
+ * stopEstimoteNearablesDiscovery method invocation.
+ *
+ */
+- (void)startEstimoteNearableDiscovery;
+
+/**
+ * Starts a CoreBluetooth scan in search for all Estimote Nearables in range.
+ * Related `utilityManager:didDiscoverNearables:` is fired until
+ * stopEstimoteNearablesDiscovery method invocation. Delegate method interval
+ * is provided as a method param.
+ *
+ *  @param interval Interval, in seconds, for updates from delegate method.
+ */
+- (void)startEstimoteNearableDiscoveryWithUpdateInterval:(NSTimeInterval)interval;
+
+/**
+ * Stops the CoreBluetooth based nearables discovery.
+ */
+- (void)stopEstimoteNearableDiscovery;
+
 @end
+
+NS_ASSUME_NONNULL_END

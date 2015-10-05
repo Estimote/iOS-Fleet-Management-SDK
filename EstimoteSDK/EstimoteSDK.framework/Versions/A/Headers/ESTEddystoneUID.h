@@ -11,8 +11,9 @@
 
 #import <Foundation/Foundation.h>
 
-#define ESTIMOTE_EDDYSTONE_NAMESPACE_ID @"EDD1EBEAC04E5DEFA017"
+NS_ASSUME_NONNULL_BEGIN
 
+#define ESTIMOTE_EDDYSTONE_NAMESPACE_ID @"EDD1EBEAC04E5DEFA017"
 
 /**
  * According to Google documentation Eddystone device is identified
@@ -25,6 +26,7 @@
  * devices having the same namespace.
  *
  */
+
 @interface ESTEddystoneUID : NSObject
 
 @property (nonatomic, strong, readonly) NSString *namespaceID;
@@ -45,6 +47,6 @@
  */
 - (instancetype)initWithNamespaceID:(NSString *)namespaceID instanceID:(NSString *)instanceID;
 
-
-
 @end
+
+NS_ASSUME_NONNULL_END
