@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>ESTProximityRule Class Reference</title>
+		<title>ESTRequestGetSettingsHistory Class Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">ESTProximityRule Class Reference</h1>
+				<h1 class="hideInXcode">ESTRequestGetSettingsHistory Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -43,7 +43,9 @@
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/updateWithNearable:">&nbsp;&nbsp;&nbsp;&nbsp;- updateWithNearable:</option>
+	<option value="//api/name/initWithMacAddress:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithMacAddress:</option>
+	
+	<option value="//api/name/sendRequestWithCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- sendRequestWithCompletion:</option>
 	
 	
 	
@@ -73,7 +75,9 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/updateWithNearable:">updateWithNearable:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithMacAddress:">initWithMacAddress:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sendRequestWithCompletion:">sendRequestWithCompletion:</a></span></li>
 	
 </ul></li>
 
@@ -82,7 +86,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="ESTProximityRule Class Reference" name="top"></a>
+				<a title="ESTRequestGetSettingsHistory Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -91,7 +95,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">ESTProximityRule Class Reference</h1>
+						<h1 class="title title-header">ESTRequestGetSettingsHistory Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -99,10 +103,10 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Inherits from</td>
-	<td class="specification-value"><a href="../Classes/ESTNearableRule.html">ESTNearableRule</a> : <a href="../Classes/ESTRule.html">ESTRule</a> : NSObject</td>
+	<td class="specification-value">ESTRequestGetJSON : ESTRequestBase : NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">ESTProximityRule.h<br />ESTProximityRule.m</td>
+	<td class="specification-value">ESTRequestGetSettingsHistory.h<br />ESTRequestGetSettingsHistory.m</td>
 </tr>
 						</tbody></table></div>
 					
@@ -112,7 +116,7 @@
 					<div class="section section-overview">
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
-						<p>The <code>ESTProximityRule</code> class defines single rule related to proximity from the Estimote nearable device.</p>
+						<p>This request is fetching all device&rsquo;s settings changes from the Estimote Cloud for authorized user.</p>
 					</div>
 					
 					
@@ -130,7 +134,13 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/updateWithNearable:">&ndash;&nbsp;updateWithNearable:</a></code>
+		<code><a href="#//api/name/initWithMacAddress:">&ndash;&nbsp;initWithMacAddress:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sendRequestWithCompletion:">&ndash;&nbsp;sendRequestWithCompletion:</a></code>
 	</span>
 	
 	
@@ -152,18 +162,18 @@
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/updateWithNearable:" title="updateWithNearable:"></a>
-	<h3 class="subsubtitle method-title">updateWithNearable:</h3>
+	<a name="//api/name/initWithMacAddress:" title="initWithMacAddress:"></a>
+	<h3 class="subsubtitle method-title">initWithMacAddress:</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Method that is invoked by trigger manager object to update state of the rule.</p>
+		<p>Initialise request with MAC address.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)updateWithNearable:(ESTNearable *)<em>nearable</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithMacAddress:(NSString *)<em>macAddress</em></code></div>
 
     
 	
@@ -171,8 +181,59 @@
 		<h4 class="method-subtitle parameter-title">Parameters</h4>
 		
 		<dl class="argument-def parameter-def">
-			<dt><em>nearable</em></dt>
-			<dd><p>Estimote nearable object with most recent settings</p></dd>
+			<dt><em>macAddress</em></dt>
+			<dd><p>MAC address of device provided as NSString</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>instance of request</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTRequestGetSettingsHistory.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sendRequestWithCompletion:" title="sendRequestWithCompletion:"></a>
+	<h3 class="subsubtitle method-title">sendRequestWithCompletion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Methods allows to send request with completion block invoked as a result.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)sendRequestWithCompletion:(ESTRequestGetSettingsHistoryBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>Completion block with returned data (NSArray containing ESTBeaconUpdateInfo objects).</p></dd>
 		</dl>
 		
 	</div>
@@ -183,12 +244,6 @@
 	
 	
 	
-	<div class="method-subsection discussion-section">
-		<h4 class="method-subtitle">Discussion</h4>
-		<p>When creating custom nearable related rule, this method should be implemented to update state property of this class,
-based on passed nearable object. For not nearable related rules <code>update</code> method of <a href="../Classes/ESTRule.html"><code>ESTRule</code></a> should be used instead.</p>
-	</div>
-	
 	
 	
 	
@@ -197,7 +252,7 @@ based on passed nearable object. For not nearable related rules <code>update</co
 	
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTNearableRule.h</code><br />
+		<code class="declared-in-ref">ESTRequestGetSettingsHistory.h</code><br />
 	</div>				
 	
 	

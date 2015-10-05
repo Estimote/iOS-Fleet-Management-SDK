@@ -71,6 +71,10 @@
 	
 	<option value="//api/name/identifier">&nbsp;&nbsp;&nbsp;&nbsp;identifier</option>
 	
+	<option value="//api/name/indoorLocationIdentifier">&nbsp;&nbsp;&nbsp;&nbsp;indoorLocationIdentifier</option>
+	
+	<option value="//api/name/indoorLocationName">&nbsp;&nbsp;&nbsp;&nbsp;indoorLocationName</option>
+	
 	<option value="//api/name/latitude">&nbsp;&nbsp;&nbsp;&nbsp;latitude</option>
 	
 	<option value="//api/name/location">&nbsp;&nbsp;&nbsp;&nbsp;location</option>
@@ -114,6 +118,8 @@
 	
 	<option value="//api/name/connectionWithBeacon:delegate:">&nbsp;&nbsp;&nbsp;&nbsp;+ connectionWithBeacon:delegate:</option>
 	
+	<option value="//api/name/connectionWithIdentifier:delegate:">&nbsp;&nbsp;&nbsp;&nbsp;+ connectionWithIdentifier:delegate:</option>
+	
 	<option value="//api/name/connectionWithMacAddress:delegate:">&nbsp;&nbsp;&nbsp;&nbsp;+ connectionWithMacAddress:delegate:</option>
 	
 	<option value="//api/name/connectionWithProximityUUID:major:minor:delegate:">&nbsp;&nbsp;&nbsp;&nbsp;+ connectionWithProximityUUID:major:minor:delegate:</option>
@@ -134,6 +140,8 @@
 	<option value="//api/name/getMacAddressWithCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- getMacAddressWithCompletion:</option>
 	
 	<option value="//api/name/initWithBeacon:delegate:startImmediately:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithBeacon:delegate:startImmediately:</option>
+	
+	<option value="//api/name/initWithIdentifier:delegate:startImmediately:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithIdentifier:delegate:startImmediately:</option>
 	
 	<option value="//api/name/initWithMacAddress:delegate:startImmediately:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithMacAddress:delegate:startImmediately:</option>
 	
@@ -273,6 +281,10 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/identifier">identifier</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/indoorLocationIdentifier">indoorLocationIdentifier</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/indoorLocationName">indoorLocationName</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/latitude">latitude</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/location">location</a></span></li>
@@ -317,6 +329,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/connectionWithBeacon:delegate:">connectionWithBeacon:delegate:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/connectionWithIdentifier:delegate:">connectionWithIdentifier:delegate:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/connectionWithMacAddress:delegate:">connectionWithMacAddress:delegate:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/connectionWithProximityUUID:major:minor:delegate:">connectionWithProximityUUID:major:minor:delegate:</a></span></li>
@@ -338,6 +352,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/getMacAddressWithCompletion:">getMacAddressWithCompletion:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithBeacon:delegate:startImmediately:">initWithBeacon:delegate:startImmediately:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithIdentifier:delegate:startImmediately:">initWithIdentifier:delegate:startImmediately:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithMacAddress:delegate:startImmediately:">initWithMacAddress:delegate:startImmediately:</a></span></li>
 	
@@ -494,6 +510,12 @@
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/connectionWithIdentifier:delegate:">+&nbsp;connectionWithIdentifier:delegate:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/initWithProximityUUID:major:minor:delegate:startImmediately:">&ndash;&nbsp;initWithProximityUUID:major:minor:delegate:startImmediately:</a></code>
 	</span>
 	
@@ -507,6 +529,12 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/initWithMacAddress:delegate:startImmediately:">&ndash;&nbsp;initWithMacAddress:delegate:startImmediately:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithIdentifier:delegate:startImmediately:">&ndash;&nbsp;initWithIdentifier:delegate:startImmediately:</a></code>
 	</span>
 	
 	
@@ -577,6 +605,18 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/longitude">&nbsp;&nbsp;longitude</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/indoorLocationIdentifier">&nbsp;&nbsp;indoorLocationIdentifier</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/indoorLocationName">&nbsp;&nbsp;indoorLocationName</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
@@ -1357,7 +1397,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;ESTBeaconConnectionDelegate&gt; delegate</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;ESTBeaconConnectionDelegate&gt; _Nullable delegate</code></div>
 
     
 	
@@ -1646,6 +1686,88 @@ Based on the method you used to initialize it may contain:
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/indoorLocationIdentifier" title="indoorLocationIdentifier"></a>
+	<h3 class="subsubtitle method-title">indoorLocationIdentifier</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The identifier of indoor location beacon belongs to.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) NSString *indoorLocationIdentifier</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This value is stored and retrieved from the Estimote Cloud.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/indoorLocationName" title="indoorLocationName"></a>
+	<h3 class="subsubtitle method-title">indoorLocationName</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The name of indoor location beacon belongs to.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (readonly, nonatomic) NSString *indoorLocationName</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This value is stored and retrieved from the Estimote Cloud.</p>
+	</div>
 	
 	
 	
@@ -2459,7 +2581,7 @@ Based on the method you used to initialize it may contain:
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (instancetype)connectionWithBeacon:(CLBeacon *)<em>beacon</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt;)<em>delegate</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (instancetype)connectionWithBeacon:(CLBeacon *)<em>beacon</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt; _Nullable)<em>delegate</em></code></div>
 
     
 	
@@ -2469,6 +2591,62 @@ Based on the method you used to initialize it may contain:
 		<dl class="argument-def parameter-def">
 			<dt><em>beacon</em></dt>
 			<dd><p>discovered beacon</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>delegate</em></dt>
+			<dd><p>delegate reference</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>beacon connection object</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/connectionWithIdentifier:delegate:" title="connectionWithIdentifier:delegate:"></a>
+	<h3 class="subsubtitle method-title">connectionWithIdentifier:delegate:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Static method initializing connection object with Estimote beacon</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (instancetype)connectionWithIdentifier:(NSString *)<em>identifier</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt; _Nullable)<em>delegate</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>identifier</em></dt>
+			<dd><p>discovered beacon object identifier</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
@@ -2515,7 +2693,7 @@ Based on the method you used to initialize it may contain:
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (instancetype)connectionWithMacAddress:(NSString *)<em>macAddress</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt;)<em>delegate</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (instancetype)connectionWithMacAddress:(NSString *)<em>macAddress</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt; _Nullable)<em>delegate</em></code></div>
 
     
 	
@@ -2571,7 +2749,7 @@ Based on the method you used to initialize it may contain:
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (instancetype)connectionWithProximityUUID:(NSUUID *)<em>proximityUUID</em> major:(CLBeaconMajorValue)<em>major</em> minor:(CLBeaconMinorValue)<em>minor</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt;)<em>delegate</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (instancetype)connectionWithProximityUUID:(NSUUID *)<em>proximityUUID</em> major:(CLBeaconMajorValue)<em>major</em> minor:(CLBeaconMinorValue)<em>minor</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt; _Nullable)<em>delegate</em></code></div>
 
     
 	
@@ -2695,7 +2873,7 @@ Based on the method you used to initialize it may contain:
 <p>The completion block receives the following parameters:</p>
 
 <ul>
-<li><p><code>ESTBeaconFirmwareInfoVO value</code> - Indicates whether an update is available. If so, it also holds additional information about the update.</p></li>
+<li><p><code>ESTFirmwareInfoVO value</code> - Indicates whether an update is available. If so, it also holds additional information about the update.</p></li>
 <li><p><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</p></li>
 </ul>
 </dd>
@@ -2711,7 +2889,7 @@ Based on the method you used to initialize it may contain:
 	
 	<div class="method-subsection discussion-section">
 		<h4 class="method-subtitle">Discussion</h4>
-		<p>The result of the check is available as a <code>ESTBeaconFirmwareInfoVO</code> structure in the completion block and has the following properties:</p>
+		<p>The result of the check is available as a <code>ESTFirmwareInfoVO</code> class in the completion block and has the following properties:</p>
 
 <ul>
 <li><p><code>BOOL isUpdateAvailable</code> - YES if an update is available, NO if there&rsquo;s no update available. In the latter case, all the other properties of this structure will be <code>nil</code>.</p></li>
@@ -2882,7 +3060,7 @@ delegate object support</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (instancetype)initWithBeacon:(CLBeacon *)<em>beacon</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt;)<em>delegate</em> startImmediately:(BOOL)<em>startImmediately</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithBeacon:(CLBeacon *)<em>beacon</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt; _Nullable)<em>delegate</em> startImmediately:(BOOL)<em>startImmediately</em></code></div>
 
     
 	
@@ -2892,6 +3070,68 @@ delegate object support</p>
 		<dl class="argument-def parameter-def">
 			<dt><em>beacon</em></dt>
 			<dd><p>discovered beacon</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>delegate</em></dt>
+			<dd><p>delegate to handle callbacks</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>startImmediately</em></dt>
+			<dd><p>indicates if created object should start connection immediately</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>beacon connection object</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithIdentifier:delegate:startImmediately:" title="initWithIdentifier:delegate:startImmediately:"></a>
+	<h3 class="subsubtitle method-title">initWithIdentifier:delegate:startImmediately:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Method initializing connection object with beacon with
+delegate object support</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithIdentifier:(NSString *)<em>identifier</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt; _Nullable)<em>delegate</em> startImmediately:(BOOL)<em>startImmediately</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>identifier</em></dt>
+			<dd><p>discovered beacon object identifier</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
@@ -2944,7 +3184,7 @@ delegate object support</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (instancetype)initWithMacAddress:(NSString *)<em>macAddress</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt;)<em>delegate</em> startImmediately:(BOOL)<em>startImmediately</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithMacAddress:(NSString *)<em>macAddress</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt; _Nullable)<em>delegate</em> startImmediately:(BOOL)<em>startImmediately</em></code></div>
 
     
 	
@@ -3006,7 +3246,7 @@ delegate object support</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (instancetype)initWithProximityUUID:(NSUUID *)<em>proximityUUID</em> major:(CLBeaconMajorValue)<em>major</em> minor:(CLBeaconMinorValue)<em>minor</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt;)<em>delegate</em> startImmediately:(BOOL)<em>startImmediately</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithProximityUUID:(NSUUID *)<em>proximityUUID</em> major:(CLBeaconMajorValue)<em>major</em> minor:(CLBeaconMinorValue)<em>minor</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt; _Nullable)<em>delegate</em> startImmediately:(BOOL)<em>startImmediately</em></code></div>
 
     
 	
@@ -4506,7 +4746,7 @@ when ESTBeaconPacketTypeEddystoneURL is selected as a packet type.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-08-26)</span><br />
+						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-10-02)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						

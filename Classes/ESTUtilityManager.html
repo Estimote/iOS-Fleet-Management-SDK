@@ -54,7 +54,13 @@
 	
 	<option value="//api/name/startEstimoteBeaconDiscoveryWithUpdateInterval:">&nbsp;&nbsp;&nbsp;&nbsp;- startEstimoteBeaconDiscoveryWithUpdateInterval:</option>
 	
+	<option value="//api/name/startEstimoteNearableDiscovery">&nbsp;&nbsp;&nbsp;&nbsp;- startEstimoteNearableDiscovery</option>
+	
+	<option value="//api/name/startEstimoteNearableDiscoveryWithUpdateInterval:">&nbsp;&nbsp;&nbsp;&nbsp;- startEstimoteNearableDiscoveryWithUpdateInterval:</option>
+	
 	<option value="//api/name/stopEstimoteBeaconDiscovery">&nbsp;&nbsp;&nbsp;&nbsp;- stopEstimoteBeaconDiscovery</option>
+	
+	<option value="//api/name/stopEstimoteNearableDiscovery">&nbsp;&nbsp;&nbsp;&nbsp;- stopEstimoteNearableDiscovery</option>
 	
 	
 	
@@ -96,7 +102,13 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/startEstimoteBeaconDiscoveryWithUpdateInterval:">startEstimoteBeaconDiscoveryWithUpdateInterval:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/startEstimoteNearableDiscovery">startEstimoteNearableDiscovery</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/startEstimoteNearableDiscoveryWithUpdateInterval:">startEstimoteNearableDiscoveryWithUpdateInterval:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stopEstimoteBeaconDiscovery">stopEstimoteBeaconDiscovery</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stopEstimoteNearableDiscovery">stopEstimoteNearableDiscovery</a></span></li>
 	
 </ul></li>
 
@@ -182,6 +194,24 @@ allows to discover CoreBluetooth based representation of Estimote Beacon devices
 	</span>
 	
 	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/startEstimoteNearableDiscovery">&ndash;&nbsp;startEstimoteNearableDiscovery</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/startEstimoteNearableDiscoveryWithUpdateInterval:">&ndash;&nbsp;startEstimoteNearableDiscoveryWithUpdateInterval:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stopEstimoteNearableDiscovery">&ndash;&nbsp;stopEstimoteNearableDiscovery</a></code>
+	</span>
+	
+	
 </li>
 						</ul>
 						
@@ -207,7 +237,7 @@ allows to discover CoreBluetooth based representation of Estimote Beacon devices
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;ESTUtilityManagerDelegate&gt; delegate</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;ESTUtilityManagerDelegate&gt; _Nullable delegate</code></div>
 
     
 	
@@ -365,6 +395,93 @@ is provided as a method param.</p>
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/startEstimoteNearableDiscovery" title="startEstimoteNearableDiscovery"></a>
+	<h3 class="subsubtitle method-title">startEstimoteNearableDiscovery</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Starts a CoreBluetooth scan in search for all Estimote Nearables in range.
+Related <code>utilityManager:didDiscoverNearables:</code> is fired every 0.2 sec until
+stopEstimoteNearablesDiscovery method invocation.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)startEstimoteNearableDiscovery</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTUtilityManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/startEstimoteNearableDiscoveryWithUpdateInterval:" title="startEstimoteNearableDiscoveryWithUpdateInterval:"></a>
+	<h3 class="subsubtitle method-title">startEstimoteNearableDiscoveryWithUpdateInterval:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Starts a CoreBluetooth scan in search for all Estimote Nearables in range.
+Related <code>utilityManager:didDiscoverNearables:</code> is fired until
+stopEstimoteNearablesDiscovery method invocation. Delegate method interval
+is provided as a method param.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)startEstimoteNearableDiscoveryWithUpdateInterval:(NSTimeInterval)<em>interval</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>interval</em></dt>
+			<dd><p>Interval, in seconds, for updates from delegate method.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTUtilityManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/stopEstimoteBeaconDiscovery" title="stopEstimoteBeaconDiscovery"></a>
 	<h3 class="subsubtitle method-title">stopEstimoteBeaconDiscovery</h3>
 	
@@ -377,6 +494,42 @@ is provided as a method param.</p>
     
 
 	<div class="method-subsection method-declaration"><code>- (void)stopEstimoteBeaconDiscovery</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTUtilityManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/stopEstimoteNearableDiscovery" title="stopEstimoteNearableDiscovery"></a>
+	<h3 class="subsubtitle method-title">stopEstimoteNearableDiscovery</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Stops the CoreBluetooth based nearables discovery.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)stopEstimoteNearableDiscovery</code></div>
 
     
 	
@@ -415,7 +568,7 @@ is provided as a method param.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-08-26)</span><br />
+						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-10-02)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						

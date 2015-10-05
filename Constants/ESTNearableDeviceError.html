@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>ESTRequestAssignGPSLocationError Constants Reference</title>
+		<title>ESTNearableDeviceError Constants Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">ESTRequestAssignGPSLocationError Constants Reference</h1>
+				<h1 class="hideInXcode">ESTNearableDeviceError Constants Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -45,7 +45,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="ESTRequestAssignGPSLocationError Constants Reference" name="top"></a>
+				<a title="ESTNearableDeviceError Constants Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -54,7 +54,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">ESTRequestAssignGPSLocationError Constants Reference</h1>
+						<h1 class="title title-header">ESTNearableDeviceError Constants Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -62,7 +62,7 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">ESTRequestAssignGPSLocation.h</td>
+	<td class="specification-value">ESTDeviceNearable.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -74,21 +74,33 @@
 					
                     
                     
-                    <h3 class="subsubtitle method-title">ESTRequestAssignGPSLocationError</h3>
+                    <h3 class="subsubtitle method-title">ESTNearableDeviceError</h3>
                     
-					
-					<div class="section section-overview">
-                        <p>Errors occurring for request.</p>
-					</div>
-					
-					
                     <div class="section">
                         <!-- display enum values -->
                         
                         <h4 class="method-subtitle">Definition</h4>
-                        <code>typedef NS_ENUM(NSInteger, ESTRequestAssignGPSLocationError ) {<br/>
+                        <code>typedef NS_ENUM(NSInteger, ESTNearableDeviceError ) {<br/>
                             
-                            &nbsp;&nbsp; <a href="">ESTRequestAssignGPSLocationErrorGPSLocationNotAvailable</a>,<br/>
+                            &nbsp;&nbsp; <a href="">ESTDeviceNearableErrorDeviceNotConnected</a>,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">ESTDeviceNearableErrorConnectionOwnershipVerificationFail</a>,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">ESTDeviceNearableErrorDisconnectDuringConnection</a>,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">ESTNearableDeviceErrorConnectionVersionReadFailed</a>,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">ESTDeviceNearableErrorSettingNotSupported</a>,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">ESTDeviceNearableErrorSettingWriteValueMissing</a>,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">ESTDeviceNearableErrorSettingCloudSaveFailed</a>,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">ESTNearableDeviceErrorConnectionCloudConfirmationFailed</a>,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">ESTDeviceNearableErrorUpdateNotAvailable</a>,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">ESTDeviceNearableErrorFailedToDownloadFirmware</a>,<br/>
                             
                             };</code>
                     
@@ -98,20 +110,102 @@
                         <h4 class="method-subtitle">Constants</h4>
                         <dl class="termdef">
                             
-                            <dt><a name="" title="ESTRequestAssignGPSLocationErrorGPSLocationNotAvailable"></a><code>ESTRequestAssignGPSLocationErrorGPSLocationNotAvailable</code></dt>
+                            <dt><a name="" title="ESTDeviceNearableErrorDeviceNotConnected"></a><code>ESTDeviceNearableErrorDeviceNotConnected</code></dt>
 <dd>
-
-
-<p>Error returned when request failed to obtain current GPS Location.
-It can occurs only when location was not provided during initialisation.</p>
-
-    
-
-    
 
     
 	<p>
-		Declared In <code class="declared-in-ref">ESTRequestAssignGPSLocation.h</code>.
+		Declared In <code class="declared-in-ref">ESTDeviceNearable.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ESTDeviceNearableErrorConnectionOwnershipVerificationFail"></a><code>ESTDeviceNearableErrorConnectionOwnershipVerificationFail</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">ESTDeviceNearable.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ESTDeviceNearableErrorDisconnectDuringConnection"></a><code>ESTDeviceNearableErrorDisconnectDuringConnection</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">ESTDeviceNearable.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ESTNearableDeviceErrorConnectionVersionReadFailed"></a><code>ESTNearableDeviceErrorConnectionVersionReadFailed</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">ESTDeviceNearable.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ESTDeviceNearableErrorSettingNotSupported"></a><code>ESTDeviceNearableErrorSettingNotSupported</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">ESTDeviceNearable.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ESTDeviceNearableErrorSettingWriteValueMissing"></a><code>ESTDeviceNearableErrorSettingWriteValueMissing</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">ESTDeviceNearable.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ESTDeviceNearableErrorSettingCloudSaveFailed"></a><code>ESTDeviceNearableErrorSettingCloudSaveFailed</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">ESTDeviceNearable.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ESTNearableDeviceErrorConnectionCloudConfirmationFailed"></a><code>ESTNearableDeviceErrorConnectionCloudConfirmationFailed</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">ESTDeviceNearable.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ESTDeviceNearableErrorUpdateNotAvailable"></a><code>ESTDeviceNearableErrorUpdateNotAvailable</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">ESTDeviceNearable.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ESTDeviceNearableErrorFailedToDownloadFirmware"></a><code>ESTDeviceNearableErrorFailedToDownloadFirmware</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">ESTDeviceNearable.h</code>.
 	</p>
 	
 </dd>
@@ -119,17 +213,6 @@ It can occurs only when location was not provided during initialisation.</p>
                         </dl>
                     </div>
                     
-                    
-                    
-                    
-
-                    
-                    
-                    
-                    <div class="method-subsection declared-in-section">
-                        <h4 class="method-subtitle">Declared In</h4>
-                        <code class="declared-in-ref">ESTRequestAssignGPSLocation.h</code><br />
-                    </div>				
                     
                     
                     
