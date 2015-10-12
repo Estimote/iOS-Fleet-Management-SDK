@@ -216,7 +216,7 @@
     {
         ESTBluetoothBeacon *cBeacon = (ESTBluetoothBeacon *)beacon;
         
-        cell.textLabel.text = [NSString stringWithFormat:@"Mac Address: %@", cBeacon.macAddress];
+        cell.textLabel.text = [NSString stringWithFormat:@"Mac Address: %@", cBeacon.identifier];
         cell.detailTextLabel.text = [NSString stringWithFormat:@"RSSI: %zd", cBeacon.rssi];
     }
     

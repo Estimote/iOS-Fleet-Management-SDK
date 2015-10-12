@@ -47,7 +47,7 @@
         
         // create update info object based on config and localy keept beacon
         
-        ESTBeaconUpdateInfo *info = [[ESTBeaconUpdateInfo alloc] initWithMacAddress:self.beacon.macAddress config:sampleConfig];
+        ESTBeaconUpdateInfo *info = [[ESTBeaconUpdateInfo alloc] initWithMacAddress:self.beacon.identifier config:sampleConfig];
         
     
         // listen for events from Bulk updater

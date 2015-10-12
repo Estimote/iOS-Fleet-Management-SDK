@@ -28,7 +28,7 @@
     if (self)
     {
         //In order to update beacon firmware we need to connect to it.
-        self.beaconConnection = [[ESTBeaconConnection alloc] initWithMacAddress:macAddress
+        self.beaconConnection = [[ESTBeaconConnection alloc] initWithIdentifier:macAddress
                                                                    delegate:self
                                                            startImmediately:YES];
     }

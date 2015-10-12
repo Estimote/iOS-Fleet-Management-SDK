@@ -214,7 +214,7 @@
                 demoViewController = [[ESTBeaconTableVC alloc] initWithScanType:ESTScanTypeBluetooth
                                                                      completion:^(ESTBluetoothBeacon *beacon) {
                                                                          
-                                                                         ESTBeaconDetailsDemoVC *beaconDetailsVC = [[ESTBeaconDetailsDemoVC alloc] initWithMacAddress:beacon.macAddress];
+                                                                         ESTBeaconDetailsDemoVC *beaconDetailsVC = [[ESTBeaconDetailsDemoVC alloc] initWithMacAddress:beacon.identifier];
                                                                          [self.navigationController pushViewController:beaconDetailsVC animated:YES];
                                                                      }];
                 break;
@@ -224,7 +224,7 @@
                 demoViewController = [[ESTBeaconTableVC alloc] initWithScanType:ESTScanTypeBluetooth
                                                                      completion:^(ESTBluetoothBeacon *beacon) {
                                                                          
-                                                                         ESTUpdateFirmwareDemoVC *updateFirmwareVC = [[ESTUpdateFirmwareDemoVC alloc] initWithMacAddress:beacon.macAddress];
+                                                                         ESTUpdateFirmwareDemoVC *updateFirmwareVC = [[ESTUpdateFirmwareDemoVC alloc] initWithMacAddress:beacon.identifier];
                                                                          [self.navigationController pushViewController:updateFirmwareVC animated:YES];
                                                                      }];
                 break;

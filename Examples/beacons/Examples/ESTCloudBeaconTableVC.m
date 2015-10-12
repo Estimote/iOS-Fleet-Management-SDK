@@ -101,7 +101,7 @@
     cell.textLabel.text         = [NSString stringWithFormat:@"Major: %@, Minor: %@", beacon.major, beacon.minor];
     cell.detailTextLabel.text   = [NSString stringWithFormat:@"UUID: %@", beacon.proximityUUID ];
     
-    cell.imageView.image = beacon.isSecured ? [UIImage imageNamed:@"beacon_secure"] : [UIImage imageNamed:@"beacon"];
+    cell.imageView.image = beacon.security.integerValue ? [UIImage imageNamed:@"beacon_secure"] : [UIImage imageNamed:@"beacon"];
     
     return cell;
 }

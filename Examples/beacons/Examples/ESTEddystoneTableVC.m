@@ -198,7 +198,7 @@
     {
         cell.detailTextLabel.text = [NSString stringWithFormat:@"RSSI: %zd Battery: %zd Temp: %.2f",
                                      [cBeacon.rssi integerValue],
-                                     [cBeacon.telemetry.battery integerValue],
+                                     [cBeacon.telemetry.batteryVoltage integerValue],
                                      [cBeacon.telemetry.temperature floatValue]];
     }
     else
