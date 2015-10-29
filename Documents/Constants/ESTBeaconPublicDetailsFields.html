@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title>ESTBeaconMotionDetection Constants Reference</title>
+		<title>ESTBeaconPublicDetailsFields Constants Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode">ESTBeaconMotionDetection Constants Reference</h1>
+				<h1 class="hideInXcode">ESTBeaconPublicDetailsFields Constants Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -45,7 +45,7 @@
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="ESTBeaconMotionDetection Constants Reference" name="top"></a>
+				<a title="ESTBeaconPublicDetailsFields Constants Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -54,7 +54,7 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header">ESTBeaconMotionDetection Constants Reference</h1>
+						<h1 class="title title-header">ESTBeaconPublicDetailsFields Constants Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
@@ -62,7 +62,7 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">ESTBeaconDefinitions.h</td>
+	<td class="specification-value">ESTRequestGetBeaconsPublicDetails.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -74,21 +74,35 @@
 					
                     
                     
-                    <h3 class="subsubtitle method-title">ESTBeaconMotionDetection</h3>
+                    <h3 class="subsubtitle method-title">ESTBeaconPublicDetailsFields</h3>
                     
                     <div class="section">
                         <!-- display enum values -->
                         
                         <h4 class="method-subtitle">Definition</h4>
-                        <code>typedef NS_ENUM(NSInteger, ESTBeaconMotionDetection ) {<br/>
+                        <code>typedef NS_OPTIONS(NSUInteger, ESTBeaconPublicDetailsFields ) {<br/>
                             
-                            &nbsp;&nbsp; <a href="">ESTBeaconMotionDetectionUnknown</a>,<br/>
+                            &nbsp;&nbsp; <a href="">ESTBeaconPublicDetailsAllFields</a> = 1 &lt; &lt; 0,<br/>
                             
-                            &nbsp;&nbsp; <a href="">ESTBeaconMotionDetectionUnsupported</a>,<br/>
+                            &nbsp;&nbsp; <a href="">ESTBeaconPublicDetailsFieldMac</a> = 1 &lt; &lt; 1,<br/>
                             
-                            &nbsp;&nbsp; <a href="">ESTBeaconMotionDetectionOn</a>,<br/>
+                            &nbsp;&nbsp; <a href="">ESTBeaconPublicDetailsFieldColor</a> = 1 &lt; &lt; 2,<br/>
                             
-                            &nbsp;&nbsp; <a href="">ESTBeaconMotionDetectionOff</a>,<br/>
+                            &nbsp;&nbsp; <a href="">ESTBeaconPublicDetailsFieldPublicIdentifier</a> = 1 &lt; &lt; 3,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">ESTBeaconPublicDetailsAllSettings</a> = 1 &lt; &lt; 4,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">ESTBeaconPublicDetailsFieldPower</a> = 1 &lt; &lt; 5,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">ESTBeaconPublicDetailsFieldSecurity</a> = 1 &lt; &lt; 6,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">ESTBeaconPublicDetailsFieldBroadcastingScheme</a> = 1 &lt; &lt; 7,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">ESTBeaconPublicDetailsFieldUUIDMajorMinor</a> = 1 &lt; &lt; 8,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">ESTBeaconPublicDetailsFieldEddystoneNamespaceID</a> = 1 &lt; &lt; 9,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">ESTBeaconPublicDetailsFieldEddystoneInstanceID</a> = 1 &lt; &lt; 10,<br/>
                             
                             };</code>
                     
@@ -98,42 +112,112 @@
                         <h4 class="method-subtitle">Constants</h4>
                         <dl class="termdef">
                             
-                            <dt><a name="" title="ESTBeaconMotionDetectionUnknown"></a><code>ESTBeaconMotionDetectionUnknown</code></dt>
+                            <dt><a name="" title="ESTBeaconPublicDetailsAllFields"></a><code>ESTBeaconPublicDetailsAllFields</code></dt>
 <dd>
 
     
 	<p>
-		Declared In <code class="declared-in-ref">ESTBeaconDefinitions.h</code>.
+		Declared In <code class="declared-in-ref">ESTRequestGetBeaconsPublicDetails.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="ESTBeaconMotionDetectionUnsupported"></a><code>ESTBeaconMotionDetectionUnsupported</code></dt>
+                            <dt><a name="" title="ESTBeaconPublicDetailsFieldMac"></a><code>ESTBeaconPublicDetailsFieldMac</code></dt>
 <dd>
 
     
 	<p>
-		Declared In <code class="declared-in-ref">ESTBeaconDefinitions.h</code>.
+		Declared In <code class="declared-in-ref">ESTRequestGetBeaconsPublicDetails.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="ESTBeaconMotionDetectionOn"></a><code>ESTBeaconMotionDetectionOn</code></dt>
+                            <dt><a name="" title="ESTBeaconPublicDetailsFieldColor"></a><code>ESTBeaconPublicDetailsFieldColor</code></dt>
 <dd>
 
     
 	<p>
-		Declared In <code class="declared-in-ref">ESTBeaconDefinitions.h</code>.
+		Declared In <code class="declared-in-ref">ESTRequestGetBeaconsPublicDetails.h</code>.
 	</p>
 	
 </dd>
                             
-                            <dt><a name="" title="ESTBeaconMotionDetectionOff"></a><code>ESTBeaconMotionDetectionOff</code></dt>
+                            <dt><a name="" title="ESTBeaconPublicDetailsFieldPublicIdentifier"></a><code>ESTBeaconPublicDetailsFieldPublicIdentifier</code></dt>
 <dd>
 
     
 	<p>
-		Declared In <code class="declared-in-ref">ESTBeaconDefinitions.h</code>.
+		Declared In <code class="declared-in-ref">ESTRequestGetBeaconsPublicDetails.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ESTBeaconPublicDetailsAllSettings"></a><code>ESTBeaconPublicDetailsAllSettings</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">ESTRequestGetBeaconsPublicDetails.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ESTBeaconPublicDetailsFieldPower"></a><code>ESTBeaconPublicDetailsFieldPower</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">ESTRequestGetBeaconsPublicDetails.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ESTBeaconPublicDetailsFieldSecurity"></a><code>ESTBeaconPublicDetailsFieldSecurity</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">ESTRequestGetBeaconsPublicDetails.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ESTBeaconPublicDetailsFieldBroadcastingScheme"></a><code>ESTBeaconPublicDetailsFieldBroadcastingScheme</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">ESTRequestGetBeaconsPublicDetails.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ESTBeaconPublicDetailsFieldUUIDMajorMinor"></a><code>ESTBeaconPublicDetailsFieldUUIDMajorMinor</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">ESTRequestGetBeaconsPublicDetails.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ESTBeaconPublicDetailsFieldEddystoneNamespaceID"></a><code>ESTBeaconPublicDetailsFieldEddystoneNamespaceID</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">ESTRequestGetBeaconsPublicDetails.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ESTBeaconPublicDetailsFieldEddystoneInstanceID"></a><code>ESTBeaconPublicDetailsFieldEddystoneInstanceID</code></dt>
+<dd>
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">ESTRequestGetBeaconsPublicDetails.h</code>.
 	</p>
 	
 </dd>

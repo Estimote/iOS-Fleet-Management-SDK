@@ -1,9 +1,24 @@
+## 3.7.1 (October 29, 2015)
+
+Features:
+
+- Estimote Cloud request to fetch public information about beacons
+
+Improvements:
+
+- Improved performance of Analytics in Secure Beacon Manager
+
+Bugfixes:
+
+- Corrected Eddystone Cloud data parsing
+- Corrected Power Modes parsing in settings history
+
 ## 3.7.0 (October 5, 2015)
 
 Features:
 
 - Firmware update for nearables
-- Reading and writing advertising interval and broadcasting power for nearables.
+- Reading and writing advertising interval and broadcasting power for nearables
 
 Improvements:
 
