@@ -25,6 +25,7 @@ typedef NS_ENUM(int, ESTColor)
     ESTColorVanillaJello,
     ESTColorLiquoriceSwirl,
     ESTColorWhite,
+    ESTColorBlack,
     ESTColorTransparent
 };
 

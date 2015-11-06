@@ -944,6 +944,11 @@ enum
 - (void)updateFirmwareWithProgress:(ESTProgressBlock)progress
                         completion:(ESTCompletionBlock)completion;
 
+/**
+ * Returns value object for current `ESTBeaconConnection` object.
+ */
+- (ESTBeaconVO *)valueObject;
+
 @end
 
 NS_ASSUME_NONNULL_END

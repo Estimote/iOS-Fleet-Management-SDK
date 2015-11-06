@@ -16,6 +16,8 @@
 #import "ESTCloudSettingProtocol.h"
 #import "ESTNotificationSettingProtocol.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @class ESTDeviceConnectable;
 
 @protocol ESTDeviceConnectableDelegate <NSObject>
@@ -24,7 +26,7 @@
 
 - (void)estDeviceConnectionDidSucceed:(ESTDeviceConnectable *)device;
 
-- (void)estDevice:(ESTDeviceConnectable *)device didDisconnectWithError:(NSError *)error;
+- (void)estDevice:(ESTDeviceConnectable *)device didDisconnectWithError:(NSError * _Nullable)error;
 
 - (void)estDevice:(ESTDeviceConnectable *)device didFailConnectionWithError:(NSError *)error;
 
@@ -33,7 +35,7 @@
 
 @interface ESTDeviceConnectable : ESTDevice
 
-@property (nonatomic, weak) id <ESTDeviceConnectableDelegate> delegate;
+@property (nonatomic, weak) id <ESTDeviceConnectableDelegate> _Nullable delegate;
 
 @property (nonatomic, assign, readonly) ESTConnectionStatus connectionStatus;
 
@@ -78,3 +80,5 @@
 - (void)registerForNotificationSettings:(NSArray *)settings;
 
 @end
+
+NS_ASSUME_NONNULL_END

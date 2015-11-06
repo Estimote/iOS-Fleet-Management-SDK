@@ -11,6 +11,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 
 @protocol ESTNotificationSettingProtocol <NSObject>
 
@@ -57,3 +59,5 @@
 - (BOOL)isAvailableForFirmwareVersion:(NSString *)firmware;
 
 @end
+
+NS_ASSUME_NONNULL_END

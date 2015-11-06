@@ -14,20 +14,22 @@
 
 #define ESTDeviceNearableErrorDomain @"ESTDeviceNearableErrorDomain"
 
-typedef NS_ENUM(NSInteger, ESTNearableDeviceError)
+typedef NS_ENUM(NSInteger, ESTDeviceNearableError)
 {
-    // FIXME: 
     ESTDeviceNearableErrorDeviceNotConnected,
     ESTDeviceNearableErrorConnectionOwnershipVerificationFail,
     ESTDeviceNearableErrorDisconnectDuringConnection,
-    ESTNearableDeviceErrorConnectionVersionReadFailed,
+    ESTDeviceNearableErrorConnectionVersionReadFailed,
     ESTDeviceNearableErrorSettingNotSupported,
     ESTDeviceNearableErrorSettingWriteValueMissing,
     ESTDeviceNearableErrorSettingCloudSaveFailed,
-    ESTNearableDeviceErrorConnectionCloudConfirmationFailed,
+    ESTDeviceNearableErrorConnectionCloudConfirmationFailed,
     ESTDeviceNearableErrorUpdateNotAvailable,
     ESTDeviceNearableErrorFailedToDownloadFirmware
 };
+
+NS_ASSUME_NONNULL_BEGIN
+
 
 @interface ESTDeviceNearable : ESTDeviceConnectable
 
@@ -41,3 +43,5 @@ typedef NS_ENUM(NSInteger, ESTNearableDeviceError)
                         completion:(ESTCompletionBlock)completion;
 
 @end
+
+NS_ASSUME_NONNULL_END

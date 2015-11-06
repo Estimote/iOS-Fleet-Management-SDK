@@ -15,6 +15,8 @@
 #import "ESTCloudSettingProtocol.h"
 #import "ESTDefinitions.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 
 @interface ESTNearableSettingAdvertisingIntervalStill : NSObject <ESTDeviceNearableSettingProtocol, ESTCloudSettingProtocol>
 
@@ -24,3 +26,5 @@
                    completion:(ESTSettingAdvertisingIntervalCompletionBlock)completion;
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -11,6 +11,7 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
 
 @protocol ESTSettingProtocol <NSObject>
 
@@ -38,3 +39,5 @@
 - (id)getValue;
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -13,6 +13,8 @@
 #import "ESTDeviceNearableSettingProtocol.h"
 #import "ESTCloudSettingProtocol.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 typedef void (^ESTNearableSettingAppVersionCompletionBlock) (NSString *version, NSError *error);
 
 
@@ -21,3 +23,5 @@ typedef void (^ESTNearableSettingAppVersionCompletionBlock) (NSString *version, 
 - (instancetype)initWithCompletion:(ESTNearableSettingAppVersionCompletionBlock)completion;
 
 @end
+
+NS_ASSUME_NONNULL_END

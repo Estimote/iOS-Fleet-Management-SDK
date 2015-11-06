@@ -46,12 +46,22 @@ typedef NS_OPTIONS(NSUInteger, ESTBeaconDetailsFields)
 typedef void(^ESTRequestGetBeaconsDetailsBlock)(NSArray * _Nullable beaconVOArray, NSError * _Nullable error);
 
 
+/**
+ *  Request allows to fetch information about group of beacons
+ *  with identifiers provided during initialization.
+ */
 @interface ESTRequestGetBeaconsDetails : ESTRequestGetJSON
 
-/** Array of identifiers of beacons which details should be fetched. 
- * Can be MAC addresses or Eddystone Identifiers or proximityUUID:major:minor strings
+/** 
+ *  Array of identifiers of beacons which details should be fetched.
+ *  Can be MAC addresses or Eddystone Identifiers or proximityUUID:major:minor strings
  */
 @property (nonatomic, strong, readonly) NSArray<NSString *> *beaconIdentifiers;
+
+/**
+ *  Possible beacon parameters that can be fetched from the Estimote Cloud.
+ *  Provided as NS_OPTIONS ESTBeaconDetailsFields.
+ */
 @property (nonatomic, assign, readonly) ESTBeaconDetailsFields fields;
 
 /**

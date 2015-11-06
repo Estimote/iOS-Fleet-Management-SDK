@@ -1,3 +1,14 @@
+## 3.8.0 (November 6, 2015)
+
+Features:
+
+- Internal structure update to support Estimote Indoor SDK 2.0.0
+- Request for fetching public beacon information
+
+Improvements:
+
+- Nullability coverage improved
+
 ## 3.7.1 (October 29, 2015)
 
 Features:
