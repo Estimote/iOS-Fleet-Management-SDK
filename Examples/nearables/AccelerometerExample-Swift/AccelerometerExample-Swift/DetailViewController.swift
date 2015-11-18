@@ -29,7 +29,7 @@ class DetailViewController: UIViewController, ESTNearableManagerDelegate {
     
     //MARK: - ESTNearableManager delegate
     
-    func nearableManager(manager: ESTNearableManager!, didRangeNearable nearable: ESTNearable!) {
+    func nearableManager(manager: ESTNearableManager, didRangeNearable nearable: ESTNearable) {
 //        temperatureLabel.text = NSString(format: "%.1f°C", nearable.temperature)
         
         var orientationString:String
@@ -63,7 +63,7 @@ class DetailViewController: UIViewController, ESTNearableManagerDelegate {
         self.accelerometerLabel.text = NSString(format: "x axis: %dmG \n y axis: %dmG \n z axis: %dmG \n",
         nearable.xAcceleration,
         nearable.yAcceleration,
-        nearable.zAcceleration)
+        nearable.zAcceleration) as String
     }
 }
 

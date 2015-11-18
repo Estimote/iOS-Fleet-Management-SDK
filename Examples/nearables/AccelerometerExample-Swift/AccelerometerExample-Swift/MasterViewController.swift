@@ -26,9 +26,9 @@ class MasterViewController: UITableViewController, ESTNearableManagerDelegate {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDetail" {
-            if let indexPath = self.tableView.indexPathForSelectedRow() {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
                 let selectedNearable = nearables[indexPath.row] as ESTNearable
-                (segue.destinationViewController as DetailViewController).nearable = selectedNearable
+                (segue.destinationViewController as! DetailViewController).nearable = selectedNearable
             }
         }
     }
@@ -54,9 +54,9 @@ class MasterViewController: UITableViewController, ESTNearableManagerDelegate {
     
     // MARK: - ESTNearableManager delegate
     
-    func nearableManager(manager: ESTNearableManager!, didRangeNearables nearables: [AnyObject]!, withType type: ESTNearableType) {
+    func nearableManager(manager: ESTNearableManager!, _didRangeNearables nearables: [AnyObject]!, withType type: ESTNearableType) {
         
-        self.nearables = nearables as Array<ESTNearable>
+        self.nearables = nearables as! Array<ESTNearable>
         tableView.reloadData()
     }
 }
