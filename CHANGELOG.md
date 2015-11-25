@@ -1,3 +1,10 @@
+## 3.8.1 (November 25, 2015)
+
+Improvements:
+
+- Bitcode support fixed (Issue with archiving apps)
+- Eddystone stability improvements
+
 ## 3.8.0 (November 6, 2015)
 
 Features:

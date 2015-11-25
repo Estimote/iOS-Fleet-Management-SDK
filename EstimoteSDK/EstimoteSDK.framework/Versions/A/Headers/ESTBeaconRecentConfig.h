@@ -89,6 +89,11 @@
 @property (nonatomic, readonly) NSString *zone;
 
 /**
+ *  Flag switching state of device motion detection (accelerometer).
+ */
+@property (nonatomic, readonly) NSNumber *motionDetection;
+
+/**
  *  Method initializing recent change's config object.
  *
  *  @param data NSDictionary of data parsed from Cloud response
