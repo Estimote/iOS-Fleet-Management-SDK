@@ -1,0 +1,360 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AECA380F1B8F2758009A9324 /* EstimoteCloudBeaconDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECA380E1B8F2757009A9324 /* EstimoteCloudBeaconDetails.swift */; };
+		AECA38121B904D2A009A9324 /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AECA38111B904D2A009A9324 /* EstimoteSDK.framework */; };
+		AECA38141B904D49009A9324 /* NearestBeaconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECA38131B904D49009A9324 /* NearestBeaconManager.swift */; };
+		AECA381A1B904E1F009A9324 /* BeaconID.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECA38191B904E1F009A9324 /* BeaconID.swift */; };
+		AECA381C1B907836009A9324 /* BeaconContentCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECA381B1B907836009A9324 /* BeaconContentCache.swift */; };
+		AECA38201B908E60009A9324 /* ProximityContentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECA381F1B908E60009A9324 /* ProximityContentManager.swift */; };
+		AECA38361B948BCE009A9324 /* BeaconContentFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECA38351B948BCE009A9324 /* BeaconContentFactory.swift */; };
+		AECF16611B0E0B1000CC83B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECF16601B0E0B1000CC83B2 /* AppDelegate.swift */; };
+		AECF16631B0E0B1000CC83B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECF16621B0E0B1000CC83B2 /* ViewController.swift */; };
+		AECF16661B0E0B1000CC83B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AECF16641B0E0B1000CC83B2 /* Main.storyboard */; };
+		AECF16681B0E0B1000CC83B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AECF16671B0E0B1000CC83B2 /* Assets.xcassets */; };
+		AEFD99541BC5948700BC1771 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEFD99521BC5948700BC1771 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AECA380E1B8F2757009A9324 /* EstimoteCloudBeaconDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EstimoteCloudBeaconDetails.swift; path = ProximityContent/Estimote/EstimoteCloudBeaconDetails.swift; sourceTree = SOURCE_ROOT; };
+		AECA38111B904D2A009A9324 /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EstimoteSDK.framework; path = ../../../../../EstimoteSDK/EstimoteSDK.framework; sourceTree = "<group>"; };
+		AECA38131B904D49009A9324 /* NearestBeaconManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearestBeaconManager.swift; sourceTree = "<group>"; };
+		AECA38191B904E1F009A9324 /* BeaconID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconID.swift; sourceTree = "<group>"; };
+		AECA381B1B907836009A9324 /* BeaconContentCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconContentCache.swift; sourceTree = "<group>"; };
+		AECA381F1B908E60009A9324 /* ProximityContentManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProximityContentManager.swift; sourceTree = "<group>"; };
+		AECA38351B948BCE009A9324 /* BeaconContentFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconContentFactory.swift; sourceTree = "<group>"; };
+		AECF165B1B0E0B1000CC83B2 /* ProximityContent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProximityContent.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AECF165F1B0E0B1000CC83B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AECF16601B0E0B1000CC83B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AECF16621B0E0B1000CC83B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AECF16651B0E0B1000CC83B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AECF16671B0E0B1000CC83B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AECF16801B0E0B2F00CC83B2 /* ObjCBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCBridge.h; sourceTree = "<group>"; };
+		AEFD99531BC5948700BC1771 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AECF16581B0E0B1000CC83B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AECA38121B904D2A009A9324 /* EstimoteSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AECA38101B904D2A009A9324 /* Estimote */ = {
+			isa = PBXGroup;
+			children = (
+				AECA38111B904D2A009A9324 /* EstimoteSDK.framework */,
+				AECA381B1B907836009A9324 /* BeaconContentCache.swift */,
+				AECA38351B948BCE009A9324 /* BeaconContentFactory.swift */,
+				AECA38191B904E1F009A9324 /* BeaconID.swift */,
+				AECA380E1B8F2757009A9324 /* EstimoteCloudBeaconDetails.swift */,
+				AECA38131B904D49009A9324 /* NearestBeaconManager.swift */,
+				AECA381F1B908E60009A9324 /* ProximityContentManager.swift */,
+			);
+			path = Estimote;
+			sourceTree = "<group>";
+		};
+		AECF16521B0E0B1000CC83B2 = {
+			isa = PBXGroup;
+			children = (
+				AECF165D1B0E0B1000CC83B2 /* ProximityContent */,
+				AECF165C1B0E0B1000CC83B2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AECF165C1B0E0B1000CC83B2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AECF165B1B0E0B1000CC83B2 /* ProximityContent.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AECF165D1B0E0B1000CC83B2 /* ProximityContent */ = {
+			isa = PBXGroup;
+			children = (
+				AECF16601B0E0B1000CC83B2 /* AppDelegate.swift */,
+				AECF16621B0E0B1000CC83B2 /* ViewController.swift */,
+				AECF16641B0E0B1000CC83B2 /* Main.storyboard */,
+				AECF16671B0E0B1000CC83B2 /* Assets.xcassets */,
+				AEFD99521BC5948700BC1771 /* LaunchScreen.storyboard */,
+				AECF165F1B0E0B1000CC83B2 /* Info.plist */,
+				AECF16801B0E0B2F00CC83B2 /* ObjCBridge.h */,
+				AECA38101B904D2A009A9324 /* Estimote */,
+			);
+			path = ProximityContent;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AECF165A1B0E0B1000CC83B2 /* ProximityContent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AECF167A1B0E0B1000CC83B2 /* Build configuration list for PBXNativeTarget "ProximityContent" */;
+			buildPhases = (
+				AED499A41BDA532C00445E08 /* Check TODOs */,
+				AECF16571B0E0B1000CC83B2 /* Sources */,
+				AECF16581B0E0B1000CC83B2 /* Frameworks */,
+				AECF16591B0E0B1000CC83B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ProximityContent;
+			productName = ProximityContent;
+			productReference = AECF165B1B0E0B1000CC83B2 /* ProximityContent.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AECF16531B0E0B1000CC83B2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Estimote, Inc.";
+				TargetAttributes = {
+					AECF165A1B0E0B1000CC83B2 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+				};
+			};
+			buildConfigurationList = AECF16561B0E0B1000CC83B2 /* Build configuration list for PBXProject "ProximityContent" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AECF16521B0E0B1000CC83B2;
+			productRefGroup = AECF165C1B0E0B1000CC83B2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AECF165A1B0E0B1000CC83B2 /* ProximityContent */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AECF16591B0E0B1000CC83B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEFD99541BC5948700BC1771 /* LaunchScreen.storyboard in Resources */,
+				AECF16661B0E0B1000CC83B2 /* Main.storyboard in Resources */,
+				AECF16681B0E0B1000CC83B2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AED499A41BDA532C00445E08 /* Check TODOs */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check TODOs";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "tags=\"TODO:\"\nmatches=`find \"${SRCROOT}\" \\( -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($tags).*\\$\"`\necho \"$matches\" | perl -p -e \"s/($tags)/ error: \\$1/\"\n[ -z \"$matches\" ] || exit 1";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AECF16571B0E0B1000CC83B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AECA38361B948BCE009A9324 /* BeaconContentFactory.swift in Sources */,
+				AECA38201B908E60009A9324 /* ProximityContentManager.swift in Sources */,
+				AECF16631B0E0B1000CC83B2 /* ViewController.swift in Sources */,
+				AECA381C1B907836009A9324 /* BeaconContentCache.swift in Sources */,
+				AECF16611B0E0B1000CC83B2 /* AppDelegate.swift in Sources */,
+				AECA38141B904D49009A9324 /* NearestBeaconManager.swift in Sources */,
+				AECA381A1B904E1F009A9324 /* BeaconID.swift in Sources */,
+				AECA380F1B8F2758009A9324 /* EstimoteCloudBeaconDetails.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AECF16641B0E0B1000CC83B2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AECF16651B0E0B1000CC83B2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AEFD99521BC5948700BC1771 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AEFD99531BC5948700BC1771 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AECF16781B0E0B1000CC83B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AECF16791B0E0B1000CC83B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AECF167B1B0E0B1000CC83B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../../../EstimoteSDK",
+				);
+				INFOPLIST_FILE = ProximityContent/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.estimote.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = ProximityContent/ObjCBridge.h;
+			};
+			name = Debug;
+		};
+		AECF167C1B0E0B1000CC83B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../../../EstimoteSDK",
+				);
+				INFOPLIST_FILE = ProximityContent/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.estimote.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = ProximityContent/ObjCBridge.h;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AECF16561B0E0B1000CC83B2 /* Build configuration list for PBXProject "ProximityContent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AECF16781B0E0B1000CC83B2 /* Debug */,
+				AECF16791B0E0B1000CC83B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AECF167A1B0E0B1000CC83B2 /* Build configuration list for PBXNativeTarget "ProximityContent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AECF167B1B0E0B1000CC83B2 /* Debug */,
+				AECF167C1B0E0B1000CC83B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AECF16531B0E0B1000CC83B2 /* Project object */;
+}

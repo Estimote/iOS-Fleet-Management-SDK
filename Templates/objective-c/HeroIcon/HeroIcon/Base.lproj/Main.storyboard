@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A282b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BigIcon" translatesAutoresizingMaskIntoConstraints="NO" id="7Am-As-MYN">
+                                <rect key="frame" x="200" y="280" width="200" height="200"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="215-gn-6Ww"/>
+                                    <constraint firstAttribute="height" constant="200" id="rbm-lY-QDK"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lock the phone, move in range of the beacon and light the screen up. The app's icon should show up in the bottom-left corner." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ob-Gv-ZXx">
+                                <rect key="frame" x="20" y="95" width="560" height="100"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Kah-uz-cep"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check the Xcode's console for errors if it doesn't." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yI6-Ab-sIN">
+                                <rect key="frame" x="28" y="210" width="544" height="40"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="DGx-Im-64A"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="7Am-As-MYN" secondAttribute="centerX" id="0ac-dx-kkC"/>
+                            <constraint firstItem="yI6-Ab-sIN" firstAttribute="top" secondItem="6Ob-Gv-ZXx" secondAttribute="bottom" constant="15" id="HNt-RE-Rr3"/>
+                            <constraint firstItem="yI6-Ab-sIN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="JfK-fz-fhN"/>
+                            <constraint firstAttribute="centerX" secondItem="yI6-Ab-sIN" secondAttribute="centerX" id="RFy-8t-Qu2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6Ob-Gv-ZXx" secondAttribute="trailing" id="STk-oC-mw8"/>
+                            <constraint firstAttribute="centerY" secondItem="7Am-As-MYN" secondAttribute="centerY" constant="-80" id="XVf-Iu-dYy"/>
+                            <constraint firstItem="6Ob-Gv-ZXx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="fOa-3d-lJf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yI6-Ab-sIN" secondAttribute="trailing" constant="8" id="oCV-AQ-lkc"/>
+                            <constraint firstItem="7Am-As-MYN" firstAttribute="top" secondItem="yI6-Ab-sIN" secondAttribute="bottom" constant="30" id="yBV-9B-WGI"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="RFy-8t-Qu2"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BigIcon" width="341" height="341"/>
+    </resources>
+</document>

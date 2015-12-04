@@ -1,0 +1,358 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AECA38991B971AE8009A9324 /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AECA38961B971AE8009A9324 /* EstimoteSDK.framework */; };
+		AECA389D1B971B07009A9324 /* HeroIconManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AECA389C1B971B07009A9324 /* HeroIconManager.m */; };
+		AECA38AF1B9720DA009A9324 /* BeaconID.m in Sources */ = {isa = PBXBuildFile; fileRef = AECA38AE1B9720DA009A9324 /* BeaconID.m */; };
+		AECF16921B0E0C0200CC83B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AECF16911B0E0C0200CC83B2 /* main.m */; };
+		AECF16951B0E0C0200CC83B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AECF16941B0E0C0200CC83B2 /* AppDelegate.m */; };
+		AECF16981B0E0C0200CC83B2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AECF16971B0E0C0200CC83B2 /* ViewController.m */; };
+		AECF169B1B0E0C0200CC83B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AECF16991B0E0C0200CC83B2 /* Main.storyboard */; };
+		AECF169D1B0E0C0200CC83B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AECF169C1B0E0C0200CC83B2 /* Assets.xcassets */; };
+		AEFD995A1BC5980800BC1771 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEFD99581BC5980800BC1771 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AECA38961B971AE8009A9324 /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EstimoteSDK.framework; path = ../../../../../EstimoteSDK/EstimoteSDK.framework; sourceTree = "<group>"; };
+		AECA389B1B971B07009A9324 /* HeroIconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeroIconManager.h; sourceTree = "<group>"; };
+		AECA389C1B971B07009A9324 /* HeroIconManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeroIconManager.m; sourceTree = "<group>"; };
+		AECA38AD1B9720DA009A9324 /* BeaconID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconID.h; sourceTree = "<group>"; };
+		AECA38AE1B9720DA009A9324 /* BeaconID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconID.m; sourceTree = "<group>"; };
+		AECF168C1B0E0C0200CC83B2 /* HeroIcon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeroIcon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AECF16901B0E0C0200CC83B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AECF16911B0E0C0200CC83B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AECF16931B0E0C0200CC83B2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AECF16941B0E0C0200CC83B2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AECF16961B0E0C0200CC83B2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AECF16971B0E0C0200CC83B2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AECF169A1B0E0C0200CC83B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AECF169C1B0E0C0200CC83B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AEFD99591BC5980800BC1771 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AECF16891B0E0C0200CC83B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AECA38991B971AE8009A9324 /* EstimoteSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AECA38951B971AE8009A9324 /* Estimote */ = {
+			isa = PBXGroup;
+			children = (
+				AECA38961B971AE8009A9324 /* EstimoteSDK.framework */,
+				AECA38AD1B9720DA009A9324 /* BeaconID.h */,
+				AECA38AE1B9720DA009A9324 /* BeaconID.m */,
+				AECA389B1B971B07009A9324 /* HeroIconManager.h */,
+				AECA389C1B971B07009A9324 /* HeroIconManager.m */,
+			);
+			path = Estimote;
+			sourceTree = "<group>";
+		};
+		AECF16831B0E0C0200CC83B2 = {
+			isa = PBXGroup;
+			children = (
+				AECF168E1B0E0C0200CC83B2 /* HeroIcon */,
+				AECF168D1B0E0C0200CC83B2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AECF168D1B0E0C0200CC83B2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AECF168C1B0E0C0200CC83B2 /* HeroIcon.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AECF168E1B0E0C0200CC83B2 /* HeroIcon */ = {
+			isa = PBXGroup;
+			children = (
+				AECF16931B0E0C0200CC83B2 /* AppDelegate.h */,
+				AECF16941B0E0C0200CC83B2 /* AppDelegate.m */,
+				AECF16961B0E0C0200CC83B2 /* ViewController.h */,
+				AECF16971B0E0C0200CC83B2 /* ViewController.m */,
+				AECF16991B0E0C0200CC83B2 /* Main.storyboard */,
+				AECF169C1B0E0C0200CC83B2 /* Assets.xcassets */,
+				AEFD99581BC5980800BC1771 /* LaunchScreen.storyboard */,
+				AECF16901B0E0C0200CC83B2 /* Info.plist */,
+				AECF168F1B0E0C0200CC83B2 /* Supporting Files */,
+				AECA38951B971AE8009A9324 /* Estimote */,
+			);
+			path = HeroIcon;
+			sourceTree = "<group>";
+		};
+		AECF168F1B0E0C0200CC83B2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AECF16911B0E0C0200CC83B2 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AECF168B1B0E0C0200CC83B2 /* HeroIcon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AECF16AF1B0E0C0200CC83B2 /* Build configuration list for PBXNativeTarget "HeroIcon" */;
+			buildPhases = (
+				AED499AA1BDA5EB900445E08 /* Check TODOs */,
+				AECF16881B0E0C0200CC83B2 /* Sources */,
+				AECF16891B0E0C0200CC83B2 /* Frameworks */,
+				AECF168A1B0E0C0200CC83B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HeroIcon;
+			productName = HeroIcon;
+			productReference = AECF168C1B0E0C0200CC83B2 /* HeroIcon.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AECF16841B0E0C0200CC83B2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Estimote, Inc.";
+				TargetAttributes = {
+					AECF168B1B0E0C0200CC83B2 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+				};
+			};
+			buildConfigurationList = AECF16871B0E0C0200CC83B2 /* Build configuration list for PBXProject "HeroIcon" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AECF16831B0E0C0200CC83B2;
+			productRefGroup = AECF168D1B0E0C0200CC83B2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AECF168B1B0E0C0200CC83B2 /* HeroIcon */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AECF168A1B0E0C0200CC83B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEFD995A1BC5980800BC1771 /* LaunchScreen.storyboard in Resources */,
+				AECF169B1B0E0C0200CC83B2 /* Main.storyboard in Resources */,
+				AECF169D1B0E0C0200CC83B2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AED499AA1BDA5EB900445E08 /* Check TODOs */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check TODOs";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "tags=\"TODO:\"\nmatches=`find \"${SRCROOT}\" \\( -name \"*.m\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($tags).*\\$\"`\necho \"$matches\" | perl -p -e \"s/($tags)/ error: \\$1/\"\n[ -z \"$matches\" ] || exit 1";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AECF16881B0E0C0200CC83B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AECF16981B0E0C0200CC83B2 /* ViewController.m in Sources */,
+				AECF16951B0E0C0200CC83B2 /* AppDelegate.m in Sources */,
+				AECA389D1B971B07009A9324 /* HeroIconManager.m in Sources */,
+				AECA38AF1B9720DA009A9324 /* BeaconID.m in Sources */,
+				AECF16921B0E0C0200CC83B2 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AECF16991B0E0C0200CC83B2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AECF169A1B0E0C0200CC83B2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AEFD99581BC5980800BC1771 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AEFD99591BC5980800BC1771 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AECF16AD1B0E0C0200CC83B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AECF16AE1B0E0C0200CC83B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AECF16B01B0E0C0200CC83B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HeroIcon/Estimote",
+				);
+				INFOPLIST_FILE = HeroIcon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.estimote.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AECF16B11B0E0C0200CC83B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HeroIcon/Estimote",
+				);
+				INFOPLIST_FILE = HeroIcon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.estimote.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AECF16871B0E0C0200CC83B2 /* Build configuration list for PBXProject "HeroIcon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AECF16AD1B0E0C0200CC83B2 /* Debug */,
+				AECF16AE1B0E0C0200CC83B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AECF16AF1B0E0C0200CC83B2 /* Build configuration list for PBXNativeTarget "HeroIcon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AECF16B01B0E0C0200CC83B2 /* Debug */,
+				AECF16B11B0E0C0200CC83B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AECF16841B0E0C0200CC83B2 /* Project object */;
+}
