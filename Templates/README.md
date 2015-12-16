@@ -1,10 +1,11 @@
 ## Estimote SDK example apps
 
-Available examples:
+**Hint:**  
+You can generate yourself a ready-made project from one of these templates on https://cloud.estimote.com/#/apps/add. It will be automatically renamed for you, and have your App Token and beacon UUIDs already put in.
 
 - **Blank**
 
-  A blank Xcode project with Estimote SDK already integrated. Use it to learn how to add Estimote SDK to your project.
+  A blank Xcode project with Estimote SDK already integrated.
 
 - **HeroIcon**
 
@@ -18,7 +19,7 @@ Available examples:
 
   Show a notification if the app is not running, and the user enters or exits range of a monitored beacon.
 
-- **Proximity Content**
+- **ProximityContent**
 
   > Uses: ranging beacons, Estimote Cloud API to fetch the beacon's name & color
 
