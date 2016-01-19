@@ -859,6 +859,20 @@ enum
 - (void)writeCalibratedTemperature:(NSNumber *)temperature
                         completion:(ESTNumberCompletionBlock)completion;
 
+#pragma mark - Writing methods for GPS location
+
+/**
+ * Saves GPS latitude and longitude in Estimote Cloud.
+ * After successful save lat and log is set in beacon connection object.
+ *
+ *  @param latitude   GPS latitude
+ *  @param longitude  GPS longitude
+ *  @param completion completion block fired on operation completion
+ */
+- (void)writeLatitude:(NSNumber *)latitude
+            longitude:(NSNumber *)longitude
+           completion:(ESTCompletionBlock)completion;
+
 #pragma mark - Reset to factory settings
 ///--------------------------------------------------------------------
 /// @name Reset to factory settings

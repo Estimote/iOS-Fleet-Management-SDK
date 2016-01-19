@@ -1,3 +1,17 @@
+## 3.8.2 (January 19, 2016)
+
+Improvements:
+
+- GPS Location support in ESTBeaconConnection
+- Firmware and Hardware version added to ESTNearableVO object fetched from cloud
+- Improved efficiency of Secure UUID monitoring.
+
+Bugfixes:
+
+- Firmware changelog properly filled in Cloud request.
+- Parsing of power and interval value in Nearables packet fixed
+- Occasional nearable connection crash fixed.
+
 ## 3.8.1 (November 25, 2015)
 
 Improvements:

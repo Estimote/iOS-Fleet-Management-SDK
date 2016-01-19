@@ -50,7 +50,7 @@
 		AC39C3FB18D7346C00B38212 /* ESTProximityDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39C3FA18D7346C00B38212 /* ESTProximityDemoVC.m */; };
 		AC39C3FE18D73DCB00B38212 /* ESTDistanceDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39C3FD18D73DCB00B38212 /* ESTDistanceDemoVC.m */; };
 		AC39C40118D8564100B38212 /* ESTNotificationDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AC39C40018D8564100B38212 /* ESTNotificationDemoVC.m */; };
-		AEC361C71BCBD7B5006D1E6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEC361C61BCBD7B5006D1E6C /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
+		AEC361C71BCBD7B5006D1E6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEC361C61BCBD7B5006D1E6C /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -453,7 +453,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -482,7 +481,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
