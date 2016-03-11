@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param ambientLight AmbientLight setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingSensorsAmbientLightCompletionBlock)(ESTSettingSensorsAmbientLight *  ambientLightSetting, NSError *  error);
+typedef void(^ESTSettingSensorsAmbientLightCompletionBlock)(ESTSettingSensorsAmbientLight * _Nullable ambientLightSetting, NSError * _Nullable error);
 
 
 /**

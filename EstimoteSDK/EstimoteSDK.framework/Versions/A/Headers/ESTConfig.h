@@ -38,14 +38,14 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * @return currently used App ID.
  */
-+ (NSString * )appID;
++ (NSString * _Nullable)appID;
 
 /**
  * Returns currently used App Token.
  *
  * @return currently used App Token.
  */
-+ (NSString * )appToken;
++ (NSString * _Nullable)appToken;
 
 /**
  * Checks if App ID and App Token were set.

@@ -42,7 +42,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param namespace Namespace setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingEddystoneUIDNamespaceCompletionBlock)(ESTSettingEddystoneUIDNamespace *  namespaceSetting, NSError *  error);
+typedef void(^ESTSettingEddystoneUIDNamespaceCompletionBlock)(ESTSettingEddystoneUIDNamespace * _Nullable namespaceSetting, NSError * _Nullable error);
 
 
 /**
@@ -59,7 +59,7 @@ typedef void(^ESTSettingEddystoneUIDNamespaceCompletionBlock)(ESTSettingEddyston
  *
  *  @return Initialized object. Nil if validation fails.
  */
-- (instancetype )initWithValue:(NSString *)namespaceID;
+- (instancetype _Nullable)initWithValue:(NSString *)namespaceID;
 
 /**
  *  Returns current value of Eddystone UID Namespace ID in form of a hex string.
@@ -105,7 +105,7 @@ typedef void(^ESTSettingEddystoneUIDNamespaceCompletionBlock)(ESTSettingEddyston
  *
  *  @return Error object describing why validation failed. Nil if validation passes.
  */
-+ (NSError * )validationErrorForValue:(NSString *)namespaceID;
++ (NSError * _Nullable)validationErrorForValue:(NSString *)namespaceID;
 
 @end
 

@@ -39,7 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param applicationVersion ApplicationVersion setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingDeviceInfoApplicationVersionCompletionBlock)(ESTSettingDeviceInfoApplicationVersion *  applicationVersionSetting, NSError *  error);
+typedef void(^ESTSettingDeviceInfoApplicationVersionCompletionBlock)(ESTSettingDeviceInfoApplicationVersion * _Nullable applicationVersionSetting, NSError * _Nullable error);
 
 
 /**

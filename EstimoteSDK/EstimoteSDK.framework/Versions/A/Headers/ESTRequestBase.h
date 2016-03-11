@@ -49,7 +49,7 @@ typedef NS_ENUM(NSInteger, ESTRequestBaseError)
     ESTRequestBaseErrorInternalServerError = 500,
 };
 
-typedef void(^ESTRequestBlock)(id  result, NSError *  error);
+typedef void(^ESTRequestBlock)(id _Nullable result, NSError * _Nullable error);
 
 
 @class ESTRequestBase;
@@ -66,11 +66,11 @@ typedef void(^ESTRequestBlock)(id  result, NSError *  error);
 
 @interface ESTRequestBase : NSObject <NSURLConnectionDelegate, NSURLConnectionDataDelegate>
 
-@property (nonatomic, weak) id<ESTRequestBaseDelegate>  delegate;
+@property (nonatomic, weak) id<ESTRequestBaseDelegate> _Nullable delegate;
 
 @property (nonatomic, assign) NSInteger code;
-@property (nonatomic, strong) NSURLConnection *  connection;
-@property (nonatomic, strong) NSMutableData *  receivedData;
+@property (nonatomic, strong) NSURLConnection * _Nullable connection;
+@property (nonatomic, strong) NSMutableData * _Nullable receivedData;
 
 - (NSMutableURLRequest *)createRequestWithUrl:(NSString *)url;
 
@@ -86,7 +86,7 @@ typedef void(^ESTRequestBlock)(id  result, NSError *  error);
 
 #pragma mark - Helper methods
 
-- (id )objectForKey:(NSString *)aKey inDictionary:(NSDictionary * )dict;
+- (id _Nullable)objectForKey:(NSString *)aKey inDictionary:(NSDictionary * _Nullable)dict;
 
 #pragma mark - Equality
 

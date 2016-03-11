@@ -34,7 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @see ESTDeviceFilterIBeacon, ESTDeviceFilterTypeUtility.
  */
 - (void)deviceManager:(ESTDeviceManager *)manager
-    didDiscoverDevices:(NSArray *)devices;
+    didDiscoverDevices:(NSArray<ESTDevice *> *)devices;
 
 /**
  * Tells the delegate that a discovery error occurred.

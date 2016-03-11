@@ -110,7 +110,7 @@ typedef NS_ENUM(NSInteger, ESTBeaconCharInfoType)
     ESTBeaconCharInfoTypeWriteOnly
 };
 
-typedef void(^ESTPowerCompletionBlock)(ESTBeaconPower value, NSError *  error);
+typedef void(^ESTPowerCompletionBlock)(ESTBeaconPower value, NSError * _Nullable error);
 
 @interface ESTBeaconDefinitions : NSObject
 

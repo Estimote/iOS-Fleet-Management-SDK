@@ -41,7 +41,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param period ScheduledAdvertisingPeriod setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingPowerScheduledAdvertisingPeriodCompletionBlock)(ESTSettingPowerScheduledAdvertisingPeriod *  periodSetting, NSError *  error);
+typedef void(^ESTSettingPowerScheduledAdvertisingPeriodCompletionBlock)(ESTSettingPowerScheduledAdvertisingPeriod * _Nullable periodSetting, NSError * _Nullable error);
 
 
 /**
@@ -94,7 +94,7 @@ typedef void(^ESTSettingPowerScheduledAdvertisingPeriodCompletionBlock)(ESTSetti
  *
  *  @return Error object describing why validation failed. Nil if validation passes.
  */
-+ (NSError * )validationErrorForValue:(ESTTimePeriod *)period;
++ (NSError * _Nullable)validationErrorForValue:(ESTTimePeriod *)period;
 
 @end
 

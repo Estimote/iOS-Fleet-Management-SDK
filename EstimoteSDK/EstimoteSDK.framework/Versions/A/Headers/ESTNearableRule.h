@@ -24,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  Identifier of nearable that is going to be associated with this rule.
  */
-@property (nonatomic, strong, readonly) NSString *  nearableIdentifier;
+@property (nonatomic, strong, readonly) NSString * _Nullable nearableIdentifier;
 
 /**
  *  Type of nearable that is going to be associated with this rule.

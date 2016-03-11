@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param UTCTime UTCTime setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingDeviceInfoUTCTimeCompletionBlock)(ESTSettingDeviceInfoUTCTime *  UTCTimeSetting, NSError *  error);
+typedef void(^ESTSettingDeviceInfoUTCTimeCompletionBlock)(ESTSettingDeviceInfoUTCTime * _Nullable UTCTimeSetting, NSError * _Nullable error);
 
 
 /**
@@ -73,7 +73,7 @@ typedef void(^ESTSettingDeviceInfoUTCTimeCompletionBlock)(ESTSettingDeviceInfoUT
  *
  *  @return Error object describing why validation failed. Nil if validation passes.
  */
-+ (NSError * )validationErrorForValue:(NSTimeInterval)UTCTime;
++ (NSError * _Nullable)validationErrorForValue:(NSTimeInterval)UTCTime;
 
 @end
 

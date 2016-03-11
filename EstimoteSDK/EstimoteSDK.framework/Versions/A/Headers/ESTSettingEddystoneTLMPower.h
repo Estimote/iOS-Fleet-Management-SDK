@@ -34,7 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param power Power setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingEddystoneTLMPowerCompletionBlock)(ESTSettingEddystoneTLMPower *  powerSetting, NSError *  error);
+typedef void(^ESTSettingEddystoneTLMPowerCompletionBlock)(ESTSettingEddystoneTLMPower * _Nullable powerSetting, NSError * _Nullable error);
 
 /**
  *  Available Tx Power levels for Eddystone TLM packet.
@@ -67,7 +67,7 @@ typedef NS_ENUM(int8_t, ESTEddystoneTLMPower)
  *
  *  @return Initialized object. Nil if validation fails.
  */
-- (instancetype )initWithValue:(ESTEddystoneTLMPower)power;
+- (instancetype _Nullable)initWithValue:(ESTEddystoneTLMPower)power;
 
 /**
  *  Returns current value of Eddystone Telemetry Power setting.
@@ -103,7 +103,7 @@ typedef NS_ENUM(int8_t, ESTEddystoneTLMPower)
  *
  *  @return Error object describing why validation failed. Nil if validation passes.
  */
-+ (NSError * )validationErrorForValue:(ESTEddystoneTLMPower)power;
++ (NSError * _Nullable)validationErrorForValue:(ESTEddystoneTLMPower)power;
 
 @end
 

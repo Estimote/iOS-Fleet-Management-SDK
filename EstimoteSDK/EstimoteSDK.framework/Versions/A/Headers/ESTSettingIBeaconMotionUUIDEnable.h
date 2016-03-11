@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param enabled MotionUUIDEnable setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingIBeaconMotionUUIDEnableCompletionBlock)(ESTSettingIBeaconMotionUUIDEnable *  enabledSetting, NSError *  error);
+typedef void(^ESTSettingIBeaconMotionUUIDEnableCompletionBlock)(ESTSettingIBeaconMotionUUIDEnable * _Nullable enabledSetting, NSError * _Nullable error);
 
 
 /**

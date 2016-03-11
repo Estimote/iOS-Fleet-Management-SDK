@@ -36,37 +36,37 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  Advertiser settings for Estimote Service packets.
  */
-@property (nonatomic, strong, readonly) NSArray *connectivity;
+@property (nonatomic, strong, readonly) NSArray<ESTDeviceSettingsAdvertiser *> *connectivity;
 
 /**
  *  Advertiser settings for iBeacon packets.
  */
-@property (nonatomic, strong, readonly) NSArray *iBeacon;
+@property (nonatomic, strong, readonly) NSArray<ESTDeviceSettingsAdvertiserIBeacon *> *iBeacon;
 
 /**
  *  Advertiser settings for Eddystone UID packets.
  */
-@property (nonatomic, strong, readonly) NSArray *eddystoneUID;
+@property (nonatomic, strong, readonly) NSArray<ESTDeviceSettingsAdvertiserEddystoneUID *> *eddystoneUID;
 
 /**
  *  Advertiser settings for Eddystone URL packets.
  */
-@property (nonatomic, strong, readonly) NSArray *eddystoneURL;
+@property (nonatomic, strong, readonly) NSArray<ESTDeviceSettingsAdvertiserEddystoneURL *> *eddystoneURL;
 
 /**
  *  Advertiser settings for Eddystone TLM packets.
  */
-@property (nonatomic, strong, readonly) NSArray *eddystoneTLM;
+@property (nonatomic, strong, readonly) NSArray<ESTDeviceSettingsAdvertiserEddystoneTLM *> *eddystoneTLM;
 
 /**
  *  Advertiser settings for Estimote Location packets.
  */
-@property (nonatomic, strong, readonly) NSArray *estimoteLocation;
+@property (nonatomic, strong, readonly) NSArray<ESTDeviceSettingsAdvertiserEstimoteLocation *> *estimoteLocation;
 
 /**
  *  Advertiser settings for Estimote TLM packets.
  */
-@property (nonatomic, strong, readonly) NSArray *estimoteTLM;
+@property (nonatomic, strong, readonly) NSArray<ESTDeviceSettingsAdvertiserEstimoteTLM *> *estimoteTLM;
 
 /**
  *  Designated initializer.

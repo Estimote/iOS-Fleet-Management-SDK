@@ -43,7 +43,7 @@ typedef NS_OPTIONS(NSUInteger, ESTBeaconDetailsFields)
     ESTBeaconDetailsFieldEddystoneInstanceID         = 1 << 22
 };
 
-typedef void(^ESTRequestGetBeaconsDetailsBlock)(NSArray *  beaconVOArray, NSError *  error);
+typedef void(^ESTRequestGetBeaconsDetailsBlock)(NSArray * _Nullable beaconVOArray, NSError * _Nullable error);
 
 
 /**
@@ -56,7 +56,7 @@ typedef void(^ESTRequestGetBeaconsDetailsBlock)(NSArray *  beaconVOArray, NSErro
  *  Array of identifiers of beacons which details should be fetched.
  *  Can be MAC addresses or Eddystone Identifiers or proximityUUID:major:minor strings
  */
-@property (nonatomic, strong, readonly) NSArray *beaconIdentifiers;
+@property (nonatomic, strong, readonly) NSArray<NSString *> *beaconIdentifiers;
 
 /**
  *  Possible beacon parameters that can be fetched from the Estimote Cloud.
@@ -73,7 +73,7 @@ typedef void(^ESTRequestGetBeaconsDetailsBlock)(NSArray *  beaconVOArray, NSErro
  *
  *  @return instance of request
  */
-- (instancetype)initWithBeacons:(NSArray *)beacons andFields:(ESTBeaconDetailsFields)fields;
+- (instancetype)initWithBeacons:(NSArray<CLBeacon *> *)beacons andFields:(ESTBeaconDetailsFields)fields;
 
 /**
  *  Initialise request with MAC addresses.
@@ -84,7 +84,7 @@ typedef void(^ESTRequestGetBeaconsDetailsBlock)(NSArray *  beaconVOArray, NSErro
  *
  *  @return instance of request
  */
-- (instancetype)initWithMacAddresses:(NSArray *)macAddresses andFields:(ESTBeaconDetailsFields)fields;
+- (instancetype)initWithMacAddresses:(NSArray<NSString *> *)macAddresses andFields:(ESTBeaconDetailsFields)fields;
 
 /**
  *  Methods allows to send request with completion block invoked as a result.

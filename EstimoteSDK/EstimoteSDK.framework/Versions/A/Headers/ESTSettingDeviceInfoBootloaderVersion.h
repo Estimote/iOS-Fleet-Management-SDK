@@ -39,7 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param version BootloaderVersion setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingDeviceInfoBootloaderVersionCompletionBlock)(ESTSettingDeviceInfoBootloaderVersion *  versionSetting, NSError *  error);
+typedef void(^ESTSettingDeviceInfoBootloaderVersionCompletionBlock)(ESTSettingDeviceInfoBootloaderVersion * _Nullable versionSetting, NSError * _Nullable error);
 
 
 /**

@@ -41,7 +41,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param advertisingInterval Interval setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingEddystoneURLIntervalCompletionBlock)(ESTSettingEddystoneURLInterval *  advertisingIntervalSetting, NSError *  error);
+typedef void(^ESTSettingEddystoneURLIntervalCompletionBlock)(ESTSettingEddystoneURLInterval * _Nullable advertisingIntervalSetting, NSError * _Nullable error);
 
 
 /**
@@ -58,7 +58,7 @@ typedef void(^ESTSettingEddystoneURLIntervalCompletionBlock)(ESTSettingEddystone
  *
  *  @return Initialized object. Nil if validation fails.
  */
-- (instancetype )initWithValue:(unsigned short)advertisingInterval;
+- (instancetype _Nullable)initWithValue:(unsigned short)advertisingInterval;
 
 /**
  *  Returns current value of Eddystone URL Advertising Interval setting.
@@ -94,7 +94,7 @@ typedef void(^ESTSettingEddystoneURLIntervalCompletionBlock)(ESTSettingEddystone
  *
  *  @return Error object describing why validation failed. Nil if validation passes.
  */
-+ (NSError * )validationErrorForValue:(unsigned short)advertisingInterval;
++ (NSError * _Nullable)validationErrorForValue:(unsigned short)advertisingInterval;
 
 @end
 

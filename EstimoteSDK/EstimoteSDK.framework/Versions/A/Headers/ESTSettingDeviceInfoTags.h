@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param tags Tags setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingDeviceInfoTagsCompletionBlock)(ESTSettingDeviceInfoTags *  tagsSetting, NSError *  error);
+typedef void(^ESTSettingDeviceInfoTagsCompletionBlock)(ESTSettingDeviceInfoTags * _Nullable tagsSetting, NSError * _Nullable error);
 
 
 /**
@@ -75,7 +75,7 @@ typedef void(^ESTSettingDeviceInfoTagsCompletionBlock)(ESTSettingDeviceInfoTags 
  *
  *  @return Error object describing why validation failed. Nil if validation passes.
  */
-+ (NSError * )validationErrorForValue:(NSSet<NSString *> *)tags;
++ (NSError * _Nullable)validationErrorForValue:(NSSet<NSString *> *)tags;
 
 @end
 

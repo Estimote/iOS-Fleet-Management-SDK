@@ -28,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @return Initialized object.
  */
-- (instancetype)initWithSettingsArray:(NSArray *)settingsArray;
+- (instancetype)initWithSettingsArray:(NSArray<ESTSettingBase *> *)settingsArray;
 
 /**
  *  Method allows to set device setting represented by object implementing 
@@ -48,7 +48,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param setting Setting should be set.
  */
-- (void)addOrReplaceSettings:(NSArray *)settings;
+- (void)addOrReplaceSettings:(NSArray<ESTSettingBase *> *)settings;
 
 /**
  *  Method allows to get Setting represented by particular class.

@@ -34,7 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param power Broadcasting Power setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingEstimoteLocationPowerCompletionBlock)(ESTSettingEstimoteLocationPower *  powerSetting, NSError *  error);
+typedef void(^ESTSettingEstimoteLocationPowerCompletionBlock)(ESTSettingEstimoteLocationPower * _Nullable powerSetting, NSError * _Nullable error);
 
 /**
  *  Available Tx Power levels for Estimote Location packet.
@@ -67,7 +67,7 @@ typedef NS_ENUM(int8_t, ESTEstimoteLocationPower)
  *
  *  @return Initialized object. Returns nil if validation fails.
  */
-- (instancetype )initWithValue:(ESTEstimoteLocationPower)power;
+- (instancetype _Nullable)initWithValue:(ESTEstimoteLocationPower)power;
 
 /**
  *  Returns current value of Estimote Location Broadcasting Power setting.
@@ -103,7 +103,7 @@ typedef NS_ENUM(int8_t, ESTEstimoteLocationPower)
  *
  *  @return Error object describing why validation failed. Nil if validation passes.
  */
-+ (NSError * )validationErrorForValue:(ESTEstimoteLocationPower)power;
++ (NSError * _Nullable)validationErrorForValue:(ESTEstimoteLocationPower)power;
 
 @end
 

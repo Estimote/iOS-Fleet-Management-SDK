@@ -32,7 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 #define ESTDeviceSettingsManagerErrorDomain @"ESTDeviceSettingsManagerErrorDomain"
 
-typedef void(^ESTDeviceSettingsManagerSyncCompletionBlock)(NSError *  error);
+typedef void(^ESTDeviceSettingsManagerSyncCompletionBlock)(NSError * _Nullable error);
 
 /**
  *  Block used as a result of all operation success or failure of one of them.
@@ -41,7 +41,7 @@ typedef void(^ESTDeviceSettingsManagerSyncCompletionBlock)(NSError *  error);
  *
  *  @param error Error of operation. No error means success.
  */
-typedef void(^ESTDeviceSettingsManagerOperationsCompletionBlock)(NSError *  error);
+typedef void(^ESTDeviceSettingsManagerOperationsCompletionBlock)(NSError * _Nullable error);
 
 /**
  *  Settings related errors.
@@ -168,7 +168,7 @@ typedef NS_ENUM(NSInteger, ESTDeviceSettingsManagerError)
  *
  *  @param operationsArray Array of setting operations.
  */
-- (void)performOperationsFromArray:(NSArray *)operationsArray;
+- (void)performOperationsFromArray:(NSArray<id<ESTBeaconOperationProtocol>> *)operationsArray;
 
 /**
  *  Method allows to perform group of setting read/write operations provided in an array.
@@ -176,7 +176,7 @@ typedef NS_ENUM(NSInteger, ESTDeviceSettingsManagerError)
  *  @param operationsArray Array of setting operations.
  *  @param completion Completion block that should be executed after all operations succeed or any of the operation fails.
  */
-- (void)performOperationsFromArray:(NSArray *)operationsArray completion:(ESTDeviceSettingsManagerOperationsCompletionBlock )completion;
+- (void)performOperationsFromArray:(NSArray<id<ESTBeaconOperationProtocol>> *)operationsArray completion:(ESTDeviceSettingsManagerOperationsCompletionBlock _Nullable)completion;
 
 #pragma mark Notifications
 ///--------------------------------------------------------------------

@@ -19,8 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ESTTemperatureRule : ESTNearableRule
 
-@property (nonatomic, strong) NSNumber *  maxValue;
-@property (nonatomic, strong) NSNumber *  minValue;
+@property (nonatomic, strong) NSNumber * _Nullable maxValue;
+@property (nonatomic, strong) NSNumber * _Nullable minValue;
 
 + (instancetype)temperatureGraterThan:(double)value forNearableIdentifier:(NSString *)identifier;
 + (instancetype)temperatureLowerThan:(double)value forNearableIdentifier:(NSString *)identifier;

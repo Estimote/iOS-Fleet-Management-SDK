@@ -34,7 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @return Array of ESTScanInfo subclasses.
  */
-- (NSArray *)getScanInfoClasses;
+- (NSArray<Class> *)getScanInfoClasses;
 
 @end
 

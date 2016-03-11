@@ -56,7 +56,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param powerSetting Power setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingNearablePowerCompletionBlock)(ESTSettingNearablePower *  powerSetting, NSError *  error);
+typedef void(^ESTSettingNearablePowerCompletionBlock)(ESTSettingNearablePower * _Nullable powerSetting, NSError * _Nullable error);
 
 
 /**
@@ -109,7 +109,7 @@ typedef void(^ESTSettingNearablePowerCompletionBlock)(ESTSettingNearablePower * 
  *
  *  @return Error object describing why validation failed. Nil if validation passes.
  */
-+ (NSError * )validationErrorForValue:(ESTNearablePower)Power;
++ (NSError * _Nullable)validationErrorForValue:(ESTNearablePower)Power;
 
 @end
 

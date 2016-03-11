@@ -40,7 +40,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param interval Interval setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingConnectivityIntervalCompletionBlock)(ESTSettingConnectivityInterval *  intervalSetting, NSError *  error);
+typedef void(^ESTSettingConnectivityIntervalCompletionBlock)(ESTSettingConnectivityInterval * _Nullable intervalSetting, NSError * _Nullable error);
 
 
 /**

@@ -40,7 +40,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param advertisingInterval Advertising Interval setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingIBeaconIntervalCompletionBlock)(ESTSettingIBeaconInterval *  advertisingIntervalSetting, NSError *  error);
+typedef void(^ESTSettingIBeaconIntervalCompletionBlock)(ESTSettingIBeaconInterval * _Nullable advertisingIntervalSetting, NSError * _Nullable error);
 
 
 /**
@@ -57,7 +57,7 @@ typedef void(^ESTSettingIBeaconIntervalCompletionBlock)(ESTSettingIBeaconInterva
  *
  *  @return Initialized object. Nil if validation fails.
  */
-- (instancetype )initWithValue:(unsigned short)advertisingInterval;
+- (instancetype _Nullable)initWithValue:(unsigned short)advertisingInterval;
 
 /**
  *  Returns current value of iBeacon Advertising Interval setting.
@@ -93,7 +93,7 @@ typedef void(^ESTSettingIBeaconIntervalCompletionBlock)(ESTSettingIBeaconInterva
  *
  *  @return Error object describing why validation failed. Nil if validation passes.
  */
-+ (NSError * )validationErrorForValue:(unsigned short)advertisingInterval;
++ (NSError * _Nullable)validationErrorForValue:(unsigned short)advertisingInterval;
 
 @end
 

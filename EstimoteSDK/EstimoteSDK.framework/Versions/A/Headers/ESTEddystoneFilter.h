@@ -28,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @return Properly validated eddystones.
  */
-- (NSArray *)filterEddystones:(NSArray *)eddystones;
+- (NSArray<ESTEddystone *> *)filterEddystones:(NSArray<ESTEddystone *> *)eddystones;
 
 @end
 

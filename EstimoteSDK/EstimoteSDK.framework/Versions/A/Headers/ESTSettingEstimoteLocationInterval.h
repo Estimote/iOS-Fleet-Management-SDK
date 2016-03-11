@@ -38,7 +38,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param advertisingInterval Advertising Interval setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingEstimoteLocationIntervalCompletionBlock)(ESTSettingEstimoteLocationInterval *  advertisingIntervalSetting, NSError *  error);
+typedef void(^ESTSettingEstimoteLocationIntervalCompletionBlock)(ESTSettingEstimoteLocationInterval * _Nullable advertisingIntervalSetting, NSError * _Nullable error);
 
 
 /**
@@ -55,7 +55,7 @@ typedef void(^ESTSettingEstimoteLocationIntervalCompletionBlock)(ESTSettingEstim
  *
  *  @return Initialized object. Nil if validation fails.
  */
-- (instancetype )initWithValue:(unsigned short)advertisingInterval;
+- (instancetype _Nullable)initWithValue:(unsigned short)advertisingInterval;
 
 /**
  *  Returns current value of Estimote Location Advertising Interval setting.
@@ -91,7 +91,7 @@ typedef void(^ESTSettingEstimoteLocationIntervalCompletionBlock)(ESTSettingEstim
  *
  *  @return Error object describing why validation failed. Nil if validation passes.
  */
-+ (NSError * )validationErrorForValue:(unsigned short)advertisingInterval;
++ (NSError * _Nullable)validationErrorForValue:(unsigned short)advertisingInterval;
 
 @end
 

@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param version FirmwareVersion setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingDeviceInfoFirmwareVersionCompletionBlock)(ESTSettingDeviceInfoFirmwareVersion *  versionSetting, NSError *  error);
+typedef void(^ESTSettingDeviceInfoFirmwareVersionCompletionBlock)(ESTSettingDeviceInfoFirmwareVersion * _Nullable versionSetting, NSError * _Nullable error);
 
 
 /**

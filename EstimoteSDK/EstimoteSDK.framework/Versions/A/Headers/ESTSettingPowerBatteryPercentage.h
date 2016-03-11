@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param batteryPercentage BatteryPercentage setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingPowerBatteryPercentageCompletionBlock)(ESTSettingPowerBatteryPercentage *  batteryPercentageSetting, NSError *  error);
+typedef void(^ESTSettingPowerBatteryPercentageCompletionBlock)(ESTSettingPowerBatteryPercentage * _Nullable batteryPercentageSetting, NSError * _Nullable error);
 
 
 /**

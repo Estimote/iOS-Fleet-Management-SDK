@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param geoLocation GeoLocation setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingDeviceInfoGeoLocationCompletionBlock)(ESTSettingDeviceInfoGeoLocation *  geoLocationSetting, NSError *  error);
+typedef void(^ESTSettingDeviceInfoGeoLocationCompletionBlock)(ESTSettingDeviceInfoGeoLocation * _Nullable geoLocationSetting, NSError * _Nullable error);
 
 
 /**
@@ -76,7 +76,7 @@ typedef void(^ESTSettingDeviceInfoGeoLocationCompletionBlock)(ESTSettingDeviceIn
  *
  *  @return Error object describing why validation failed. Nil if validation passes.
  */
-+ (NSError * )validationErrorForValue:(ESTDeviceGeoLocation *)geoLocation;
++ (NSError * _Nullable)validationErrorForValue:(ESTDeviceGeoLocation *)geoLocation;
 
 @end
 

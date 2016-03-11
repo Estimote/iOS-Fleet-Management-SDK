@@ -69,7 +69,7 @@ extern NSString * const ESTBulkUpdaterTimeoutNotification;
 /**
  *  Array with information about beacons update status. Contains objects of ESBeaconUpdateInfo.
  */
-@property (nonatomic, strong) NSArray *  beaconInfos;
+@property (nonatomic, strong) NSArray<ESTBeaconUpdateInfo *> * _Nullable beaconInfos;
 
 /**
  *  Indicating what mode is bulk updater currently running.

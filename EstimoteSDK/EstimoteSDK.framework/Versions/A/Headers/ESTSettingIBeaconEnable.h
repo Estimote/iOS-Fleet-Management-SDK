@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param iBeaconEnable IBeaconEnable setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingIBeaconEnableCompletionBlock)(ESTSettingIBeaconEnable *  iBeaconEnableSetting, NSError *  error);
+typedef void(^ESTSettingIBeaconEnableCompletionBlock)(ESTSettingIBeaconEnable * _Nullable iBeaconEnableSetting, NSError * _Nullable error);
 
 
 /**

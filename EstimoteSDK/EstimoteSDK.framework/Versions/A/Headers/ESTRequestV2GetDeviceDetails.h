@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param deviceDetails  Details of the device wrapped in ESTDeviceDetails class object.
  *  @param error          Error of request. No error means success.
  */
-typedef void(^ESTRequestV2GetDeviceDetailsBlock)(ESTDeviceDetails *  deviceDetails, NSError *  error);
+typedef void(^ESTRequestV2GetDeviceDetailsBlock)(ESTDeviceDetails * _Nullable deviceDetails, NSError * _Nullable error);
 
 
 /**

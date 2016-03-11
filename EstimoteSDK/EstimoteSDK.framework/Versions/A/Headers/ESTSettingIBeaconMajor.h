@@ -34,7 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param major Major setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingIBeaconMajorCompletionBlock)(ESTSettingIBeaconMajor *  major, NSError *  error);
+typedef void(^ESTSettingIBeaconMajorCompletionBlock)(ESTSettingIBeaconMajor * _Nullable major, NSError * _Nullable error);
 
 
 /**
@@ -51,7 +51,7 @@ typedef void(^ESTSettingIBeaconMajorCompletionBlock)(ESTSettingIBeaconMajor *  m
  *
  *  @return Initialized object. Nil if validation fails.
  */
-- (instancetype )initWithValue:(unsigned short)major;
+- (instancetype _Nullable)initWithValue:(unsigned short)major;
 
 /**
  *  Returns current value of iBeacon major setting.
@@ -86,7 +86,7 @@ typedef void(^ESTSettingIBeaconMajorCompletionBlock)(ESTSettingIBeaconMajor *  m
  *
  *  @return Error object describing why validation failed. Nil if validation passes.
  */
-+ (NSError * )validationErrorForValue:(unsigned short)major;
++ (NSError * _Nullable)validationErrorForValue:(unsigned short)major;
 
 @end
 

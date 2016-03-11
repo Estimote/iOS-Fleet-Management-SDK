@@ -34,7 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param power Power setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingEstimoteTLMPowerCompletionBlock)(ESTSettingEstimoteTLMPower *  powerSetting, NSError *  error);
+typedef void(^ESTSettingEstimoteTLMPowerCompletionBlock)(ESTSettingEstimoteTLMPower * _Nullable powerSetting, NSError * _Nullable error);
 
 /**
  *  Available Tx Power levels for Estimote Telemetry packet.
@@ -67,7 +67,7 @@ typedef NS_ENUM(int8_t, ESTEstimoteTLMPower)
  *
  *  @return Initialized object. Returns nil if validation fails.
  */
-- (instancetype )initWithValue:(ESTEstimoteTLMPower)power;
+- (instancetype _Nullable)initWithValue:(ESTEstimoteTLMPower)power;
 
 /**
  *  Returns current value of Estimote Telemetry Power setting.
@@ -103,7 +103,7 @@ typedef NS_ENUM(int8_t, ESTEstimoteTLMPower)
  *
  *  @return Error object describing why validation failed. Nil if validation passes.
  */
-+ (NSError * )validationErrorForValue:(ESTEstimoteTLMPower)power;
++ (NSError * _Nullable)validationErrorForValue:(ESTEstimoteTLMPower)power;
 
 @end
 

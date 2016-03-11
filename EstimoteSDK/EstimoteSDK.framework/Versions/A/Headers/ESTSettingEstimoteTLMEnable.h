@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param enabled Enable setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingEstimoteTLMEnableCompletionBlock)(ESTSettingEstimoteTLMEnable *  enabledSetting, NSError *  error);
+typedef void(^ESTSettingEstimoteTLMEnableCompletionBlock)(ESTSettingEstimoteTLMEnable * _Nullable enabledSetting, NSError * _Nullable error);
 
 
 /**

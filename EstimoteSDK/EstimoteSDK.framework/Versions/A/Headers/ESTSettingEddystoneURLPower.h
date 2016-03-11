@@ -34,7 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param power Power setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingEddystoneURLPowerCompletionBlock)(ESTSettingEddystoneURLPower *  powerSetting, NSError *  error);
+typedef void(^ESTSettingEddystoneURLPowerCompletionBlock)(ESTSettingEddystoneURLPower * _Nullable powerSetting, NSError * _Nullable error);
 
 /**
  *  Available Tx Power levels for Eddystone URL packet.
@@ -67,7 +67,7 @@ typedef NS_ENUM(int8_t, ESTEddystoneURLPower)
  *
  *  @return Initialized object. Nil if validation fails.
  */
-- (instancetype )initWithValue:(ESTEddystoneURLPower)power;
+- (instancetype _Nullable)initWithValue:(ESTEddystoneURLPower)power;
 
 /**
  *  Returns current value of Eddystone URL Power setting.
@@ -103,7 +103,7 @@ typedef NS_ENUM(int8_t, ESTEddystoneURLPower)
  *
  *  @return Error object describing why validation failed. Nil if validation passes.
  */
-+ (NSError * )validationErrorForValue:(ESTEddystoneURLPower)power;
++ (NSError * _Nullable)validationErrorForValue:(ESTEddystoneURLPower)power;
 
 @end
 

@@ -43,8 +43,8 @@ typedef NS_ENUM(NSInteger, ESTEddystoneManagerState)
  * @param eddystoneFilter Filter represented by subclass of `<ESTEddystoneFilter>` applied to discovery.
  */
 - (void)eddystoneManager:(ESTEddystoneManager *)manager
-   didDiscoverEddystones:(NSArray *)eddystones
-              withFilter:(ESTEddystoneFilter * )eddystoneFilter;
+   didDiscoverEddystones:(NSArray<ESTEddystone *> *)eddystones
+              withFilter:(ESTEddystoneFilter * _Nullable)eddystoneFilter;
 
 /**
  * Tells the delegate that Google beacons discovery error occurred.
@@ -52,7 +52,7 @@ typedef NS_ENUM(NSInteger, ESTEddystoneManagerState)
  * @param manager The beacon manager object reporting the event.
  */
 - (void)eddystoneManagerDidFailDiscovery:(ESTEddystoneManager *)manager
-                               withError:(NSError * )error;
+                               withError:(NSError * _Nullable)error;
 
 @end
 
@@ -72,12 +72,12 @@ typedef NS_ENUM(NSInteger, ESTEddystoneManagerState)
 /**
  *  Delegate object.
  */
-@property (nonatomic, weak) id<ESTEddystoneManagerDelegate>  delegate;
+@property (nonatomic, weak) id<ESTEddystoneManagerDelegate> _Nullable delegate;
 
 /**
  *  Array containg `ESTEddystoneFilter` objects for requested UUID discovery.
  */
-@property (nonatomic, strong, readonly) NSArray *filtersInDiscovery;
+@property (nonatomic, strong, readonly) NSArray<ESTEddystoneFilter *> *filtersInDiscovery;
 
 /**
  * Starts Eddystone discovery process. Filter param is optional. 
@@ -87,12 +87,12 @@ typedef NS_ENUM(NSInteger, ESTEddystoneManagerState)
  * - URL - URL address eg. 'http://go.esti.be'
  * - URL Domain - URL domain eg. 'esti.be'
  */
-- (void)startEddystoneDiscoveryWithFilter:(ESTEddystoneFilter * )eddystoneFilter;
+- (void)startEddystoneDiscoveryWithFilter:(ESTEddystoneFilter * _Nullable)eddystoneFilter;
 
 /**
  * Stops discovery of Eddystones for particular filter.
  */
-- (void)stopEddystoneDiscoveryWithFilter:(ESTEddystoneFilter * )eddystoneFilter;
+- (void)stopEddystoneDiscoveryWithFilter:(ESTEddystoneFilter * _Nullable)eddystoneFilter;
 
 @end
 

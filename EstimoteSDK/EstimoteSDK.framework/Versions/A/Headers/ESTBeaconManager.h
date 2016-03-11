@@ -35,7 +35,7 @@ typedef NS_ENUM(NSInteger, ESTBeaconManagerError)
  *
  * @see ESTBeaconManagerDelegate
  */
-@property (nonatomic, weak) id <ESTBeaconManagerDelegate>  delegate;
+@property (nonatomic, weak) id <ESTBeaconManagerDelegate> _Nullable delegate;
 
 #pragma mark iBeacon utilities
 ///--------------------------------------------------------------------

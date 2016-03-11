@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param config ConfigPort1 setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingGPIOConfigPort1CompletionBlock)(ESTSettingGPIOConfigPort1 *  configSetting, NSError *  error);
+typedef void(^ESTSettingGPIOConfigPort1CompletionBlock)(ESTSettingGPIOConfigPort1 * _Nullable configSetting, NSError * _Nullable error);
 
 
 /**
@@ -76,7 +76,7 @@ typedef void(^ESTSettingGPIOConfigPort1CompletionBlock)(ESTSettingGPIOConfigPort
  *
  *  @return Error object describing why validation failed. Nil if validation passes.
  */
-+ (NSError * )validationErrorForValue:(ESTGPIOConfig)config;
++ (NSError * _Nullable)validationErrorForValue:(ESTGPIOConfig)config;
 
 @end
 

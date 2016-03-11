@@ -34,7 +34,7 @@ typedef NS_ENUM(NSInteger, ESTUtilityManagerState)
  * @param beacons An array of `<ESTBluetoothBeacon>` objects representing the beacons discovered.
  */
 - (void)utilityManager:(ESTUtilityManager *)manager
-    didDiscoverBeacons:(NSArray *)beacons;
+    didDiscoverBeacons:(NSArray<ESTDevice *> *)beacons;
 
 /**
  * Tells the delegate that one or more beacons were discovered in the vicinity of the device.
@@ -43,7 +43,7 @@ typedef NS_ENUM(NSInteger, ESTUtilityManagerState)
  * @param beacons An array of `<ESTDeviceNearable>` objects representing the nearables discovered.
  */
 - (void)utilityManager:(ESTUtilityManager *)manager
-    didDiscoverNearables:(NSArray *)nearables;
+    didDiscoverNearables:(NSArray<ESTDeviceNearable *> *)nearables;
 
 /**
  * Tells the delegate that beacons discovery error occurred.
@@ -69,7 +69,7 @@ typedef NS_ENUM(NSInteger, ESTUtilityManagerState)
 /**
  *  Delegate object.
  */
-@property (nonatomic, weak) id<ESTUtilityManagerDelegate>  delegate;
+@property (nonatomic, weak) id<ESTUtilityManagerDelegate> _Nullable delegate;
 
 /**
  * Starts a CoreBluetooth scan in search for all Estimote Beacons in range.

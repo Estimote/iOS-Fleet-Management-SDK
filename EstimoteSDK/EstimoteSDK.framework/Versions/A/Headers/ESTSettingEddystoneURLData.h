@@ -34,7 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param eddystoneURL URL Data setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingEddystoneURLDataCompletionBlock)(ESTSettingEddystoneURLData *  eddystoneURLSetting, NSError *  error);
+typedef void(^ESTSettingEddystoneURLDataCompletionBlock)(ESTSettingEddystoneURLData * _Nullable eddystoneURLSetting, NSError * _Nullable error);
 
 
 /**
@@ -51,7 +51,7 @@ typedef void(^ESTSettingEddystoneURLDataCompletionBlock)(ESTSettingEddystoneURLD
  *
  *  @return Initialized object. Nil if validation fails.
  */
-- (instancetype )initWithValue:(NSString *)eddystoneURL;
+- (instancetype _Nullable)initWithValue:(NSString *)eddystoneURL;
 
 /**
  *  Returns current value of Eddystone URL Data setting.
@@ -87,7 +87,7 @@ typedef void(^ESTSettingEddystoneURLDataCompletionBlock)(ESTSettingEddystoneURLD
  *
  *  @return Error object describing why validation failed. Nil if validation passes.
  */
-+ (NSError * )validationErrorForValue:(NSString *)eddystoneURL;
++ (NSError * _Nullable)validationErrorForValue:(NSString *)eddystoneURL;
 
 @end
 

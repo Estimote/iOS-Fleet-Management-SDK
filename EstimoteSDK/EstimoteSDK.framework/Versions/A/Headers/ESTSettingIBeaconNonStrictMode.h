@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param nonStrictMode NonStrictMode setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingIBeaconNonStrictModeCompletionBlock)(ESTSettingIBeaconNonStrictMode *  nonStrictModeSetting, NSError *  error);
+typedef void(^ESTSettingIBeaconNonStrictModeCompletionBlock)(ESTSettingIBeaconNonStrictMode * _Nullable nonStrictModeSetting, NSError * _Nullable error);
 
 
 /**

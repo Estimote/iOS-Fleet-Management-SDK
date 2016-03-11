@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param smartPowerModeEnable SmartPowerModeEnable setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingPowerSmartPowerModeEnableCompletionBlock)(ESTSettingPowerSmartPowerModeEnable *  smartPowerModeEnableSetting, NSError *  error);
+typedef void(^ESTSettingPowerSmartPowerModeEnableCompletionBlock)(ESTSettingPowerSmartPowerModeEnable * _Nullable smartPowerModeEnableSetting, NSError * _Nullable error);
 
 
 /**
@@ -75,7 +75,7 @@ typedef void(^ESTSettingPowerSmartPowerModeEnableCompletionBlock)(ESTSettingPowe
  *
  *  @return Error object describing why validation failed. Nil if validation passes.
  */
-+ (NSError * )validationErrorForValue:(BOOL)smartPowerModeEnable;
++ (NSError * _Nullable)validationErrorForValue:(BOOL)smartPowerModeEnable;
 
 @end
 

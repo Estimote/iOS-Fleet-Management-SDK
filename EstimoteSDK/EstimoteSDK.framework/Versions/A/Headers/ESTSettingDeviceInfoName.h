@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param name Name setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingDeviceInfoNameCompletionBlock)(ESTSettingDeviceInfoName *  nameSetting, NSError *  error);
+typedef void(^ESTSettingDeviceInfoNameCompletionBlock)(ESTSettingDeviceInfoName * _Nullable nameSetting, NSError * _Nullable error);
 
 
 /**
@@ -75,7 +75,7 @@ typedef void(^ESTSettingDeviceInfoNameCompletionBlock)(ESTSettingDeviceInfoName 
  *
  *  @return Error object describing why validation failed. Nil if validation passes.
  */
-+ (NSError * )validationErrorForValue:(NSString *)name;
++ (NSError * _Nullable)validationErrorForValue:(NSString *)name;
 
 @end
 

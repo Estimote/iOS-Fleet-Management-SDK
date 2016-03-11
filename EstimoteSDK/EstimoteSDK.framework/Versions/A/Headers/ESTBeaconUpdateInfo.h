@@ -46,7 +46,7 @@ typedef NS_ENUM(NSInteger, ESBeaconUpdateInfoStatus)
 /**
  *  Delegate object described with `ESBeaconUpdateInfoDelegate` protocol.
  */
-@property (nonatomic, weak) id<ESBeaconUpdateInfoDelegate>  delegate;
+@property (nonatomic, weak) id<ESBeaconUpdateInfoDelegate> _Nullable delegate;
 
 /**
  *  Beacon about which this info is for.
@@ -71,18 +71,18 @@ typedef NS_ENUM(NSInteger, ESBeaconUpdateInfoStatus)
 /**
  *  Settings creation timestamp.
  */
-@property (nonatomic, strong) NSDate *  createdAt;
+@property (nonatomic, strong) NSDate * _Nullable createdAt;
 
 /**
  *  Time when settings were applied to the device.
  */
-@property (nonatomic, strong) NSDate *  syncedAt;
+@property (nonatomic, strong) NSDate * _Nullable syncedAt;
 
 
 /**
  *  Error object if beacon failed to update.
  */
-@property (nonatomic, strong) NSError *  error;
+@property (nonatomic, strong) NSError * _Nullable error;
 
 
 /**
@@ -110,7 +110,7 @@ typedef NS_ENUM(NSInteger, ESBeaconUpdateInfoStatus)
  */
 - (instancetype)initWithMacAddress:(NSString *)macAddress
                             config:(ESTBeaconUpdateConfig *)config
-                          delegate:(id<ESBeaconUpdateInfoDelegate> )delegate NS_DESIGNATED_INITIALIZER;
+                          delegate:(id<ESBeaconUpdateInfoDelegate> _Nullable)delegate NS_DESIGNATED_INITIALIZER;
 
 /**
  *  Scans for peripheral related with the beacon.

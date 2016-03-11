@@ -48,12 +48,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ESTTriggerManager : NSObject <ESTTriggerDelegate>
 
-@property (nonatomic, weak) id<ESTTriggerManagerDelegate>  delegate;
+@property (nonatomic, weak) id<ESTTriggerManagerDelegate> _Nullable delegate;
 
 /**
  *  Array of alraedy registered monitored triggers.
  */
-@property (nonatomic, strong, readonly) NSArray *triggers;
+@property (nonatomic, strong, readonly) NSArray<ESTTrigger *> *triggers;
 
 /**
  *  Starts monitoring for defined trigger.

@@ -35,7 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param power Power setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingIBeaconPowerCompletionBlock)(ESTSettingIBeaconPower *  powerSetting, NSError *  error);
+typedef void(^ESTSettingIBeaconPowerCompletionBlock)(ESTSettingIBeaconPower * _Nullable powerSetting, NSError * _Nullable error);
 
 /**
  *  Available Tx Power levels for iBeacon packet.
@@ -68,7 +68,7 @@ typedef NS_ENUM(int8_t, ESTIBeaconPower)
  *
  *  @return Initialized object. Nil if validation fails.
  */
-- (instancetype )initWithValue:(ESTIBeaconPower)power;
+- (instancetype _Nullable)initWithValue:(ESTIBeaconPower)power;
 
 /**
  *  Returns current value of iBeacon Power setting.
@@ -104,7 +104,7 @@ typedef NS_ENUM(int8_t, ESTIBeaconPower)
  *
  *  @return Error object describing why validation failed. Nil if validation passes.
  */
-+ (NSError * )validationErrorForValue:(ESTIBeaconPower)power;
++ (NSError * _Nullable)validationErrorForValue:(ESTIBeaconPower)power;
 
 @end
 

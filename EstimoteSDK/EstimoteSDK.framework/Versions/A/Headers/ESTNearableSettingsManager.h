@@ -55,7 +55,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param operations Nearable Operations to be performed.
  */
-- (void)performOperationsFromArray:(NSArray *)operations;
+- (void)performOperationsFromArray:(NSArray<id<ESTNearableOperationProtocol>> *)operations;
 
 @end
 

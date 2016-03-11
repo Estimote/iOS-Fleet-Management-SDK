@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param motionUUID MotionUUID setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingIBeaconMotionUUIDCompletionBlock)(ESTSettingIBeaconMotionUUID *  motionUUIDSetting, NSError *  error);
+typedef void(^ESTSettingIBeaconMotionUUIDCompletionBlock)(ESTSettingIBeaconMotionUUID * _Nullable motionUUIDSetting, NSError * _Nullable error);
 
 
 /**

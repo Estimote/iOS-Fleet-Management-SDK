@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param temperature Temperature setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingSensorsTemperatureCompletionBlock)(ESTSettingSensorsTemperature *  temperatureSetting, NSError *  error);
+typedef void(^ESTSettingSensorsTemperatureCompletionBlock)(ESTSettingSensorsTemperature * _Nullable temperatureSetting, NSError * _Nullable error);
 
 
 /**

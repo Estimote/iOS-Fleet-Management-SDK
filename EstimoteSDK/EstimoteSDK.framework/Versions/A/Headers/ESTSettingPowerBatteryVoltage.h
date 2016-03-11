@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param voltage BatteryVoltage setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingPowerBatteryVoltageCompletionBlock)(ESTSettingPowerBatteryVoltage *  voltageSetting, NSError *  error);
+typedef void(^ESTSettingPowerBatteryVoltageCompletionBlock)(ESTSettingPowerBatteryVoltage * _Nullable voltageSetting, NSError * _Nullable error);
 
 
 /**

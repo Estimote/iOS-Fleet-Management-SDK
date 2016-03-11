@@ -34,7 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param minor Minor setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingIBeaconMinorCompletionBlock)(ESTSettingIBeaconMinor *  minor, NSError *  error);
+typedef void(^ESTSettingIBeaconMinorCompletionBlock)(ESTSettingIBeaconMinor * _Nullable minor, NSError * _Nullable error);
 
 
 /**
@@ -49,7 +49,7 @@ typedef void(^ESTSettingIBeaconMinorCompletionBlock)(ESTSettingIBeaconMinor *  m
  *
  *  @return Initialized object.
  */
-- (instancetype )initWithValue:(unsigned short)minor;
+- (instancetype _Nullable)initWithValue:(unsigned short)minor;
 
 /**
  *  Returns current value of iBeacon Minor setting.
@@ -85,7 +85,7 @@ typedef void(^ESTSettingIBeaconMinorCompletionBlock)(ESTSettingIBeaconMinor *  m
  *
  *  @return Error object describing why validation failed. Nil if validation passes.
  */
-+ (NSError * )validationErrorForValue:(unsigned short)minor;
++ (NSError * _Nullable)validationErrorForValue:(unsigned short)minor;
 
 @end
 

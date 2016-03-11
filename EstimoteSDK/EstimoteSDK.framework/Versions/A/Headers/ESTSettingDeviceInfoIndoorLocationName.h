@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param name IndoorLocationName setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingDeviceInfoIndoorLocationNameCompletionBlock)(ESTSettingDeviceInfoIndoorLocationName *  nameSetting, NSError *  error);
+typedef void(^ESTSettingDeviceInfoIndoorLocationNameCompletionBlock)(ESTSettingDeviceInfoIndoorLocationName * _Nullable nameSetting, NSError * _Nullable error);
 
 
 /**

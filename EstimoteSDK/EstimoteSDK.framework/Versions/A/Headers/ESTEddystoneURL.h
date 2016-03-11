@@ -24,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  URL address advertised by the beacon device
  *  packet type is set to ESTBeaconPacketTypeEddystoneURL
  */
-@property (nonatomic, strong, readonly) NSString *  url;
+@property (nonatomic, strong, readonly) NSString * _Nullable url;
 
 /**
  *  Initialized ESTEddystoneURL object with url.

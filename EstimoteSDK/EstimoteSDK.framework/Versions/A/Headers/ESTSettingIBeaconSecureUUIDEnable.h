@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param enabled SecureUUIDEnable setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingIBeaconSecureUUIDEnableCompletionBlock)(ESTSettingIBeaconSecureUUIDEnable *  enabledSetting, NSError *  error);
+typedef void(^ESTSettingIBeaconSecureUUIDEnableCompletionBlock)(ESTSettingIBeaconSecureUUIDEnable * _Nullable enabledSetting, NSError * _Nullable error);
 
 
 /**

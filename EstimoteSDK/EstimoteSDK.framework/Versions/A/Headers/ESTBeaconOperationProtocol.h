@@ -126,7 +126,7 @@ typedef NS_ENUM(NSUInteger, ESTSettingStorageType)
  *
  *  @return Array of associated operations.
  */
-- (NSArray *)associatedOperations;
+- (NSArray<id<ESTBeaconOperationProtocol>> *)associatedOperations;
 
 @end
 

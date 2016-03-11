@@ -15,9 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ESTFirmwareInfoVO : NSObject
 
-@property (nonatomic, strong) NSString *  hardwareVersion;
-@property (nonatomic, strong) NSString *  firmwareVersion;
-@property (nonatomic, strong) NSString *  changelog;
+@property (nonatomic, strong) NSString * _Nullable hardwareVersion;
+@property (nonatomic, strong) NSString * _Nullable firmwareVersion;
+@property (nonatomic, strong) NSString * _Nullable changelog;
 @property (nonatomic, assign) BOOL isUpdateAvailable;
 
 @end

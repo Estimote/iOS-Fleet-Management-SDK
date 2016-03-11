@@ -46,17 +46,17 @@ typedef NS_ENUM(char, ESTBroadcastingScheme)
     ESTBroadcastingSchemeEddystoneUID
 };
 
-typedef void(^ESTCompletionBlock)(NSError *  error);
-typedef void(^ESTObjectCompletionBlock)(id  result, NSError *  error);
-typedef void(^ESTDataCompletionBlock)(NSData *  result, NSError *  error);
-typedef void(^ESTNumberCompletionBlock)(NSNumber *  value, NSError *  error);
-typedef void(^ESTUnsignedShortCompletionBlock)(unsigned short value, NSError *  error);
-typedef void(^ESTBoolCompletionBlock)(BOOL value, NSError *  error);
-typedef void(^ESTStringCompletionBlock)(NSString *  value, NSError *  error);
-typedef void(^ESTProgressBlock)(NSInteger value, NSString *  description, NSError *  error);
-typedef void(^ESTArrayCompletionBlock)(NSArray *  value, NSError *  error);
-typedef void(^ESTDictionaryCompletionBlock)(NSDictionary *  value, NSError *  error);
-typedef void(^ESTCsRegisterCompletonBlock)(NSError *  error);
+typedef void(^ESTCompletionBlock)(NSError * _Nullable error);
+typedef void(^ESTObjectCompletionBlock)(id _Nullable result, NSError * _Nullable error);
+typedef void(^ESTDataCompletionBlock)(NSData * _Nullable result, NSError * _Nullable error);
+typedef void(^ESTNumberCompletionBlock)(NSNumber * _Nullable value, NSError * _Nullable error);
+typedef void(^ESTUnsignedShortCompletionBlock)(unsigned short value, NSError * _Nullable error);
+typedef void(^ESTBoolCompletionBlock)(BOOL value, NSError * _Nullable error);
+typedef void(^ESTStringCompletionBlock)(NSString * _Nullable value, NSError * _Nullable error);
+typedef void(^ESTProgressBlock)(NSInteger value, NSString * _Nullable description, NSError * _Nullable error);
+typedef void(^ESTArrayCompletionBlock)(NSArray * _Nullable value, NSError * _Nullable error);
+typedef void(^ESTDictionaryCompletionBlock)(NSDictionary * _Nullable value, NSError * _Nullable error);
+typedef void(^ESTCsRegisterCompletonBlock)(NSError * _Nullable error);
 
 @interface ESTDefinitions : NSObject
 

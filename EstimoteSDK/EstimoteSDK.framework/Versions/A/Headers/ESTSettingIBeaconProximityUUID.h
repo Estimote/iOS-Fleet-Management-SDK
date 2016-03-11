@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param proximityUUID ProximityUUID setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingIBeaconProximityUUIDCompletionBlock)(ESTSettingIBeaconProximityUUID *  proximityUUIDSetting, NSError *  error);
+typedef void(^ESTSettingIBeaconProximityUUIDCompletionBlock)(ESTSettingIBeaconProximityUUID * _Nullable proximityUUIDSetting, NSError * _Nullable error);
 
 
 /**

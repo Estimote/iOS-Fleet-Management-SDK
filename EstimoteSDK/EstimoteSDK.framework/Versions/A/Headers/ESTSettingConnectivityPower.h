@@ -48,7 +48,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param power Power setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingConnectivityPowerCompletionBlock)(ESTSettingConnectivityPower *  powerSetting, NSError *  error);
+typedef void(^ESTSettingConnectivityPowerCompletionBlock)(ESTSettingConnectivityPower * _Nullable powerSetting, NSError * _Nullable error);
 
 
 /**
@@ -101,7 +101,7 @@ typedef void(^ESTSettingConnectivityPowerCompletionBlock)(ESTSettingConnectivity
  *
  *  @return Error object describing why validation failed. Nil if validation passes.
  */
-+ (NSError * )validationErrorForValue:(ESTConnectablePowerLevel)power;
++ (NSError * _Nullable)validationErrorForValue:(ESTConnectablePowerLevel)power;
 
 @end
 

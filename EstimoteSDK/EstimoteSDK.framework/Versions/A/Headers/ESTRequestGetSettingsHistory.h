@@ -14,7 +14,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void(^ESTRequestGetSettingsHistoryBlock)(NSArray *  beaconUpdateInfos, NSError *  error);
+typedef void(^ESTRequestGetSettingsHistoryBlock)(NSArray<ESTBeaconUpdateInfo *> * _Nullable beaconUpdateInfos, NSError * _Nullable error);
 
 /**
  *  This request is fetching all device's settings changes from the Estimote Cloud for authorized user.

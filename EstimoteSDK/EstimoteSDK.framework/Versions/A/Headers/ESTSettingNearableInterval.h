@@ -43,7 +43,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param interval Interval setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingNearableIntervalCompletionBlock)(ESTSettingNearableInterval *  intervalSetting, NSError *  error);
+typedef void(^ESTSettingNearableIntervalCompletionBlock)(ESTSettingNearableInterval * _Nullable intervalSetting, NSError * _Nullable error);
 
 
 /**
@@ -96,7 +96,7 @@ typedef void(^ESTSettingNearableIntervalCompletionBlock)(ESTSettingNearableInter
  *
  *  @return Error object describing why validation failed. Nil if validation passes.
  */
-+ (NSError * )validationErrorForValue:(unsigned short)interval;
++ (NSError * _Nullable)validationErrorForValue:(unsigned short)interval;
 
 @end
 

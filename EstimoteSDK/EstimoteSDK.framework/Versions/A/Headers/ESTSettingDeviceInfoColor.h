@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param Color Color setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingDeviceInfoColorCompletionBlock)(ESTSettingDeviceInfoColor *  ColorSetting, NSError *  error);
+typedef void(^ESTSettingDeviceInfoColorCompletionBlock)(ESTSettingDeviceInfoColor * _Nullable ColorSetting, NSError * _Nullable error);
 
 
 /**

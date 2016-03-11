@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param enable ScheduledAdvertisingEnable setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingPowerScheduledAdvertisingEnableCompletionBlock)(ESTSettingPowerScheduledAdvertisingEnable *  enableSetting, NSError *  error);
+typedef void(^ESTSettingPowerScheduledAdvertisingEnableCompletionBlock)(ESTSettingPowerScheduledAdvertisingEnable * _Nullable enableSetting, NSError * _Nullable error);
 
 
 /**
@@ -75,7 +75,7 @@ typedef void(^ESTSettingPowerScheduledAdvertisingEnableCompletionBlock)(ESTSetti
  *
  *  @return Error object describing why validation failed. Nil if validation passes.
  */
-+ (NSError * )validationErrorForValue:(BOOL)enable;
++ (NSError * _Nullable)validationErrorForValue:(BOOL)enable;
 
 @end
 

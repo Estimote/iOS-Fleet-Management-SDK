@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param scaler SecureUUIDPeriodScaler setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingIBeaconSecureUUIDPeriodScalerCompletionBlock)(ESTSettingIBeaconSecureUUIDPeriodScaler *  scalerSetting, NSError *  error);
+typedef void(^ESTSettingIBeaconSecureUUIDPeriodScalerCompletionBlock)(ESTSettingIBeaconSecureUUIDPeriodScaler * _Nullable scalerSetting, NSError * _Nullable error);
 
 
 /**

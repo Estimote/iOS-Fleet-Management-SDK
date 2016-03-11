@@ -33,7 +33,7 @@
 /**
  *  Tags array.
  */
-@property (nonatomic, strong, readonly) NSArray *tags;
+@property (nonatomic, strong, readonly) NSArray<NSString *> *tags;
 
 /**
  *  Physical location of the device.

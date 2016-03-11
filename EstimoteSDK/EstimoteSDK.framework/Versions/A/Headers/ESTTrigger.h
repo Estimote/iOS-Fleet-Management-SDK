@@ -30,12 +30,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ESTTrigger : NSObject
 
-@property (nonatomic, weak) id <ESTTriggerDelegate>  delegate;
+@property (nonatomic, weak) id <ESTTriggerDelegate> _Nullable delegate;
 
 /**
  *  Set of rules that should be fulfilled to change trigger state to YES. In all other cases state value is NO.
  */
-@property (nonatomic, strong, readonly) NSArray *rules;
+@property (nonatomic, strong, readonly) NSArray<ESTRule *> *rules;
 
 /**
  *  Unique trigger identifier allows to reference particular object.
@@ -55,7 +55,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @return create trigger object
  */
-- (instancetype)initWithRules:(NSArray *)rules identifier:(NSString *)identifier;
+- (instancetype)initWithRules:(NSArray<ESTRule *> *)rules identifier:(NSString *)identifier;
 
 @end
 

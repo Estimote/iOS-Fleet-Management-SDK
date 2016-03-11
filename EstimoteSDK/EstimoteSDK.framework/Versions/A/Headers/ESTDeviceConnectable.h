@@ -44,7 +44,7 @@ typedef void(^ESTDeviceFirmwareUpdateProgressBlock)(NSInteger value);
  *  @param device Disconnected device.
  *  @param error  Error representing reason of disconnect.
  */
-- (void)estDevice:(ESTDeviceConnectable *)device didDisconnectWithError:(NSError * )error;
+- (void)estDevice:(ESTDeviceConnectable *)device didDisconnectWithError:(NSError * _Nullable)error;
 
 /**
  *  Method invoked when connection to device failed.
@@ -65,7 +65,7 @@ typedef void(^ESTDeviceFirmwareUpdateProgressBlock)(NSInteger value);
 /**
  *  Delegate object that will get method calls related to connection.
  */
-@property (nonatomic, weak) id <ESTDeviceConnectableDelegate>  delegate;
+@property (nonatomic, weak) id <ESTDeviceConnectableDelegate> _Nullable delegate;
 
 /**
  *  Status of device connection.

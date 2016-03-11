@@ -42,7 +42,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param instanceID Instance ID setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingEddystoneUIDInstanceCompletionBlock)(ESTSettingEddystoneUIDInstance *  instanceIDSetting, NSError *  error);
+typedef void(^ESTSettingEddystoneUIDInstanceCompletionBlock)(ESTSettingEddystoneUIDInstance * _Nullable instanceIDSetting, NSError * _Nullable error);
 
 
 /**
@@ -59,7 +59,7 @@ typedef void(^ESTSettingEddystoneUIDInstanceCompletionBlock)(ESTSettingEddystone
  *
  *  @return Initialized object. Nil if validation fails.
  */
-- (instancetype )initWithValue:(NSString *)instanceID;
+- (instancetype _Nullable)initWithValue:(NSString *)instanceID;
 
 /**
  *  Returns current value of Eddystone UID Instance ID setting.
@@ -95,7 +95,7 @@ typedef void(^ESTSettingEddystoneUIDInstanceCompletionBlock)(ESTSettingEddystone
  *
  *  @return Error object describing why validation failed. Nil if validation passes.
  */
-+ (NSError * )validationErrorForValue:(NSString *)instanceID;
++ (NSError * _Nullable)validationErrorForValue:(NSString *)instanceID;
 
 @end
 

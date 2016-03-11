@@ -27,13 +27,13 @@ NS_ASSUME_NONNULL_BEGIN
  *  Namespace ID required for device identification.
  *  Value usually defined on the company level.
  */
-@property (nonatomic, strong, readonly) NSString *  namespaceID;
+@property (nonatomic, strong, readonly) NSString * _Nullable namespaceID;
 
 /**
  *  Instance ID required for device identification.
  *  Value defined per device.
  */
-@property (nonatomic, strong, readonly) NSString *  instanceID;
+@property (nonatomic, strong, readonly) NSString * _Nullable instanceID;
 
 /**
  * Initialize Eddystone UUID object instance with Namespace ID only.

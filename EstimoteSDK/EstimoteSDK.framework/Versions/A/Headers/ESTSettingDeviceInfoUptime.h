@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param uptime Uptime setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingDeviceInfoUptimeCompletionBlock)(ESTSettingDeviceInfoUptime *  uptimeSetting, NSError *  error);
+typedef void(^ESTSettingDeviceInfoUptimeCompletionBlock)(ESTSettingDeviceInfoUptime * _Nullable uptimeSetting, NSError * _Nullable error);
 
 
 /**

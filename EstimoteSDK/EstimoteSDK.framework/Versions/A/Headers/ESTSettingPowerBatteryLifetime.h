@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param batteryLifetime BatteryLifetime setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingPowerBatteryLifetimeCompletionBlock)(ESTSettingPowerBatteryLifetime *  batteryLifetimeSetting, NSError *  error);
+typedef void(^ESTSettingPowerBatteryLifetimeCompletionBlock)(ESTSettingPowerBatteryLifetime * _Nullable batteryLifetimeSetting, NSError * _Nullable error);
 
 
 /**

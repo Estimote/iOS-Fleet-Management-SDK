@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param enabled MotionNotificationEnable setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingSensorsMotionNotificationEnableCompletionBlock)(ESTSettingSensorsMotionNotificationEnable *  enabledSetting, NSError *  error);
+typedef void(^ESTSettingSensorsMotionNotificationEnableCompletionBlock)(ESTSettingSensorsMotionNotificationEnable * _Nullable enabledSetting, NSError * _Nullable error);
 
 
 /**
@@ -75,7 +75,7 @@ typedef void(^ESTSettingSensorsMotionNotificationEnableCompletionBlock)(ESTSetti
  *
  *  @return Error object describing why validation failed. Nil if validation passes.
  */
-+ (NSError * )validationErrorForValue:(BOOL)enabled;
++ (NSError * _Nullable)validationErrorForValue:(BOOL)enabled;
 
 @end
 

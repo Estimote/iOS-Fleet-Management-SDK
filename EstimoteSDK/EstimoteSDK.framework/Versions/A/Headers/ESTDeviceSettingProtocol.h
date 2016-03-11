@@ -33,7 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @return NSData representing setting value
  */
-- (NSData * )getValueData;
+- (NSData * _Nullable)getValueData;
 
 /**
  *  Method updates setting value based on NSData object delivered from the device.
