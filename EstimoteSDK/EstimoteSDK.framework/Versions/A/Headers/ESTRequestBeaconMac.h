@@ -27,7 +27,7 @@ typedef NS_ENUM(NSInteger, ESTRequestBeaconMacError)
     ESTRequestBeaconMacErrorUnknown
 };
 
-typedef void(^ESTRequestBeaconMacBlock)(NSString * _Nullable macAddress, NSError * _Nullable error);
+typedef void(^ESTRequestBeaconMacBlock)(NSString *  macAddress, NSError *  error);
 
 /**
  *  ESTRequestBeaconMac allows to get MAC address for beacon based on CLBeacon

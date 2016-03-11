@@ -14,16 +14,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-#define ESTRequestPatchJSONErrorDomain @"ESTRequestPatchJSONErrorDomain"
-
-typedef NS_ENUM(NSInteger, ESTRequestPatchJSONError)
-{
-    ESTRequestPatchJSONErrorNoData,
-    ESTRequestPatchJSONErrorNotAuthorized,
-    ESTRequestPatchJSONErrorNotResource,
-    ESTRequestPatchJSONErrorCloudReturnedError
-};
-
 @interface ESTRequestPatchJSON : ESTRequestBase
 
 - (void)setParams:(id)params forRequest:(NSMutableURLRequest *)request;

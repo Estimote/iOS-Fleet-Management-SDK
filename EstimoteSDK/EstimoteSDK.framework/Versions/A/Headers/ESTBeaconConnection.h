@@ -58,7 +58,7 @@ enum
  * @param data Information about the device stored in the Estimote Cloud.
  * @param error An error object containing the error code that indicates why connection failed.
  */
-- (void)beaconConnection:(ESTBeaconConnection *)connection didVerifyWithData:(ESTBeaconVO * _Nullable)data error:(NSError * _Nullable)error;
+- (void)beaconConnection:(ESTBeaconConnection *)connection didVerifyWithData:(ESTBeaconVO * )data error:(NSError * )error;
 
 /**
  * Tells the delegate that an attempt to connect to a beacon succeeded and the connection has been established.
@@ -81,7 +81,7 @@ enum
  * @param connection The beacon connection object reporting the event.
  * @param error An error object containing the error code that indicates why the beacon disconnected.
  */
-- (void)beaconConnection:(ESTBeaconConnection *)connection didDisconnectWithError:(NSError * _Nullable)error;
+- (void)beaconConnection:(ESTBeaconConnection *)connection didDisconnectWithError:(NSError * )error;
 
 /**
  * Tells the delegate that a beacon's `<[ESTBeaconConnection motionState]>` value has changed.
@@ -91,6 +91,12 @@ enum
  */
 - (void)beaconConnection:(ESTBeaconConnection *)connection motionStateChanged:(ESTBeaconMotionState)state;
 
+/**
+ * Tells the delegate that a beacon's RSSI value was updated.
+ *
+ * @param connection The beacon connection object reporting the event.
+ * @param rssi The new rssi value.
+ */
 - (void)beaconConnection:(ESTBeaconConnection *)connection didUpdateRSSI:(NSNumber *)rssi;
 
 @end
@@ -112,10 +118,10 @@ enum
 /**
  *  Delegate object receiving callbacks.
  */
-@property (nonatomic, weak) id<ESTBeaconConnectionDelegate> _Nullable delegate;
+@property (nonatomic, weak) id<ESTBeaconConnectionDelegate>  delegate;
 
 /**
- * Identifier of the device that you aim to connect. 
+ * Identifier of the device that you aim to connect.
  * Based on the method you used to initialize it may contain:
  * - Device Mac address
  * - Device iBeacon properties formatted as follows: ProximityUUUID:Major:Minor
@@ -142,7 +148,7 @@ enum
 + (instancetype)connectionWithProximityUUID:(NSUUID *)proximityUUID
                                       major:(CLBeaconMajorValue)major
                                       minor:(CLBeaconMinorValue)minor
-                              delegate:(id<ESTBeaconConnectionDelegate> _Nullable)delegate;
+                                   delegate:(id<ESTBeaconConnectionDelegate> )delegate;
 
 /**
  *  Static method initializing connection object with Estimote beacon
@@ -153,7 +159,7 @@ enum
  *  @return beacon connection object
  */
 + (instancetype)connectionWithBeacon:(CLBeacon *)beacon
-                            delegate:(id<ESTBeaconConnectionDelegate> _Nullable)delegate;
+                            delegate:(id<ESTBeaconConnectionDelegate> )delegate;
 
 /**
  *  Static method initializing connection object with Estimote beacon
@@ -164,7 +170,7 @@ enum
  *  @return beacon connection object
  */
 + (instancetype)connectionWithMacAddress:(NSString *)macAddress
-                                delegate:(id<ESTBeaconConnectionDelegate> _Nullable)delegate __attribute__((deprecated("Starting from SDK 4.0.0-beta1 macAddress is deprecated. Use initWithIdentifier constructor")));
+                                delegate:(id<ESTBeaconConnectionDelegate> )delegate __attribute__((deprecated("Starting from SDK 4.0.0-beta1 macAddress is deprecated. Use initWithIdentifier constructor")));
 
 /**
  *  Static method initializing connection object with Estimote beacon
@@ -175,7 +181,7 @@ enum
  *  @return beacon connection object
  */
 + (instancetype)connectionWithIdentifier:(NSString *)identifier
-                                delegate:(id<ESTBeaconConnectionDelegate> _Nullable)delegate;
+                                delegate:(id<ESTBeaconConnectionDelegate> )delegate;
 
 /**
  *  Method initializing connection object with Estimote beacon with
@@ -192,7 +198,7 @@ enum
 - (instancetype)initWithProximityUUID:(NSUUID *)proximityUUID
                                 major:(CLBeaconMajorValue)major
                                 minor:(CLBeaconMinorValue)minor
-                             delegate:(id<ESTBeaconConnectionDelegate> _Nullable)delegate
+                             delegate:(id<ESTBeaconConnectionDelegate> )delegate
                      startImmediately:(BOOL)startImmediately;
 
 /**
@@ -206,7 +212,7 @@ enum
  *  @return beacon connection object
  */
 - (instancetype)initWithBeacon:(CLBeacon *)beacon
-                      delegate:(id<ESTBeaconConnectionDelegate> _Nullable)delegate
+                      delegate:(id<ESTBeaconConnectionDelegate> )delegate
               startImmediately:(BOOL)startImmediately;
 
 /**
@@ -220,7 +226,7 @@ enum
  *  @return beacon connection object
  */
 - (instancetype)initWithMacAddress:(NSString *)macAddress
-                          delegate:(id<ESTBeaconConnectionDelegate> _Nullable)delegate
+                          delegate:(id<ESTBeaconConnectionDelegate> )delegate
                   startImmediately:(BOOL)startImmediately __attribute__((deprecated("Starting from SDK 3.7.0 macAddress is deprecated. Use initWithIdentifier constructor")));
 
 /**
@@ -234,7 +240,7 @@ enum
  *  @return beacon connection object
  */
 - (instancetype)initWithIdentifier:(NSString *)identifier
-                          delegate:(id<ESTBeaconConnectionDelegate> _Nullable)delegate
+                          delegate:(id<ESTBeaconConnectionDelegate> )delegate
                   startImmediately:(BOOL)startImmediately;
 
 #pragma mark Connection handling
@@ -276,49 +282,49 @@ enum
 /**
  * The MAC address of the beacon.
  */
-@property (readonly, nonatomic) NSString * _Nullable macAddress;
+@property (readonly, nonatomic) NSString *  macAddress;
 
 /**
  * The name of the beacon.
  *
  * This value is stored and retrieved from the Estimote Cloud.
  */
-@property (readonly, nonatomic) NSString * _Nullable name;
+@property (readonly, nonatomic) NSString *  name;
 
 /**
  * The dictionary containing geocoding data for beacon's GPS location.
  *
  * This value is stored and retrieved from the Estimote Cloud.
  */
-@property (readonly, nonatomic) NSDictionary * _Nullable location;
+@property (readonly, nonatomic) NSDictionary *  location;
 
 /**
  * The latitude of beacon's GPS location.
  *
  * This value is stored and retrieved from the Estimote Cloud.
  */
-@property (readonly, nonatomic) NSNumber * _Nullable latitude;
+@property (readonly, nonatomic) NSNumber *  latitude;
 
 /**
  * The longitude of beacon's GPS location.
  *
  * This value is stored and retrieved from the Estimote Cloud.
  */
-@property (readonly, nonatomic) NSNumber * _Nullable longitude;
+@property (readonly, nonatomic) NSNumber *  longitude;
 
 /**
  * The identifier of indoor location beacon belongs to.
  *
  * This value is stored and retrieved from the Estimote Cloud.
  */
-@property (readonly, nonatomic) NSString * _Nullable indoorLocationIdentifier;
+@property (readonly, nonatomic) NSString *  indoorLocationIdentifier;
 
 /**
  * The name of indoor location beacon belongs to.
  *
  * This value is stored and retrieved from the Estimote Cloud.
  */
-@property (readonly, nonatomic) NSString * _Nullable indoorLocationName;
+@property (readonly, nonatomic) NSString *  indoorLocationName;
 
 /**
  * The color of the beacon.
@@ -331,7 +337,7 @@ enum
 /**
  *  The underlying Bluetooth peripheral device.
  */
-@property (readonly, nonatomic) CBPeripheral * _Nullable peripheral __attribute__((deprecated("CBPeripheral peripheral property is deprecated since 3.7.0 version")));
+@property (readonly, nonatomic) CBPeripheral *  peripheral __attribute__((deprecated("CBPeripheral peripheral property is deprecated since 3.7.0 version")));
 
 /**
  *  Broadcasting scheme of device.
@@ -348,7 +354,7 @@ enum
  *
  * @see writeProximityUUID:completion:
  */
-@property (readonly, nonatomic) NSUUID * _Nullable proximityUUID;
+@property (readonly, nonatomic) NSUUID *  proximityUUID;
 
 /**
  * The proximity ID of the beacon when it's in motion.
@@ -364,21 +370,21 @@ enum
  * @since Estimote OS 2.0
  *
  */
-@property (readonly, nonatomic) NSUUID * _Nullable motionProximityUUID;
+@property (readonly, nonatomic) NSUUID *  motionProximityUUID;
 
 /**
  * The most significant value in the beacon.
  *
  * @see writeMajor:completion:
  */
-@property (readonly, nonatomic) NSNumber * _Nullable major;
+@property (readonly, nonatomic) NSNumber *  major;
 
 /**
  * The least significant value in the beacon.
  *
  * @see writeMinor:completion:
  */
-@property (readonly, nonatomic) NSNumber * _Nullable minor;
+@property (readonly, nonatomic) NSNumber *  minor;
 
 /**
  * The power of the beacon's radio signal in dBm.
@@ -387,38 +393,38 @@ enum
  *
  * @see writePower:completion:
  */
-@property (readonly, nonatomic) NSNumber * _Nullable power;
+@property (readonly, nonatomic) NSNumber *  power;
 
 /**
  * The advertising interval of the beacon in ms.
  *
  * @see writeAdvInterval:completion:
  */
-@property (readonly, nonatomic) NSNumber * _Nullable advInterval;
+@property (readonly, nonatomic) NSNumber *  advInterval;
 
 #pragma mark - Google Eddystone
 
 /**
  * Namespace ID of Google Eddystone - part of device identification.
  */
-@property (readonly, nonatomic) NSString * _Nullable eddystoneNamespace;
+@property (readonly, nonatomic) NSString *  eddystoneNamespace;
 
 /**
  * Instance ID of Google Eddystone - part of device identification.
  */
-@property (readonly, nonatomic) NSString * _Nullable eddystoneInstance;
+@property (readonly, nonatomic) NSString *  eddystoneInstance;
 
 /**
  * URL advertised by Google Eddystone device in URL mode.
  */
-@property (readonly, nonatomic) NSString * _Nullable eddystoneURL;
+@property (readonly, nonatomic) NSString *  eddystoneURL;
 
 #pragma mark - Hardware and software information
 
 /**
  * The hardware version of the beacon.
  */
-@property (readonly, nonatomic) NSString * _Nullable hardwareVersion;
+@property (readonly, nonatomic) NSString *  hardwareVersion;
 
 /**
  * The firmware version of the beacon.
@@ -426,12 +432,12 @@ enum
  * @see checkFirmwareUpdateWithCompletion:
  * @see updateFirmwareWithProgress:completion:
  */
-@property (readonly, nonatomic) NSString * _Nullable firmwareVersion;
+@property (readonly, nonatomic) NSString *  firmwareVersion;
 
 /**
  * The received signal strength of the beacon, measured in decibels.
  */
-@property (readonly, nonatomic) NSNumber * _Nullable rssi;
+@property (readonly, nonatomic) NSNumber *  rssi;
 
 #pragma mark - Power management
 ///--------------------------------------------------------------------
@@ -443,7 +449,7 @@ enum
  *
  * Battery level ranges from 0 (fully discharged) to 100 (fully charged).
  */
-@property (readonly, nonatomic) NSNumber * _Nullable batteryLevel;
+@property (readonly, nonatomic) NSNumber *  batteryLevel;
 
 /**
  * The battery model.
@@ -455,7 +461,7 @@ enum
 /**
  *    Remaining lifetime in days, based on current battery level, advertising interval and broadcasting power values
  */
-@property (readonly, nonatomic) NSNumber * _Nullable remainingLifetime;
+@property (readonly, nonatomic) NSNumber *  remainingLifetime;
 
 /**
  * A flag indicating availability and status of the Basic Power Mode.
@@ -860,15 +866,18 @@ enum
                         completion:(ESTNumberCompletionBlock)completion;
 
 #pragma mark - Writing methods for GPS location
+///--------------------------------------------------------------------
+/// @name Writing methods for GPS location
+///--------------------------------------------------------------------
 
 /**
- * Saves GPS latitude and longitude in Estimote Cloud.
- * After successful save lat and log is set in beacon connection object.
- *
- *  @param latitude   GPS latitude
- *  @param longitude  GPS longitude
- *  @param completion completion block fired on operation completion
- */
+  * Saves GPS latitude and longitude in Estimote Cloud.
+  * After successful save lat and log is set in beacon connection object.
+  *
+  *  @param latitude   GPS latitude
+  *  @param longitude  GPS longitude
+  *  @param completion completion block fired on operation completion
+  */
 - (void)writeLatitude:(NSNumber *)latitude
             longitude:(NSNumber *)longitude
            completion:(ESTCompletionBlock)completion;

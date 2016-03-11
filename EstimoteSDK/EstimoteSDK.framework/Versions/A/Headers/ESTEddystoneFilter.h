@@ -14,9 +14,21 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+
+/**
+ *  Generic Eddystone based filter used by `ESTEddystoneManager` in discovery process.
+ *  Instance of `ESTEddystoneFilter` can be used as a base for other filters.
+ */
 @interface ESTEddystoneFilter : NSObject
 
-- (NSArray<ESTEddystone *> *)filterEddystones:(NSArray<ESTEddystone *> *)eddystones;
+/**
+ *  Method allows to check if provided eddystones belong to filter.
+ *
+ *  @param eddystones Eddystones to validate.
+ *
+ *  @return Properly validated eddystones.
+ */
+- (NSArray *)filterEddystones:(NSArray *)eddystones;
 
 @end
 

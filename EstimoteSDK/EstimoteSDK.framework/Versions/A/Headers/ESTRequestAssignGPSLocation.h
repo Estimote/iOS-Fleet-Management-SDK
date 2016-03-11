@@ -29,7 +29,7 @@ typedef NS_ENUM(NSInteger, ESTRequestAssignGPSLocationError)
     ESTRequestAssignGPSLocationErrorGPSLocationNotAvailable
 };
 
-typedef void(^ESTRequestAssignGPSLocationBlock)(CLLocation * _Nullable result, NSError * _Nullable error);
+typedef void(^ESTRequestAssignGPSLocationBlock)(CLLocation *  result, NSError *  error);
 
 /**
  *  ESTRequestBeaconColor is used to assign GPS location to single beacon device. 

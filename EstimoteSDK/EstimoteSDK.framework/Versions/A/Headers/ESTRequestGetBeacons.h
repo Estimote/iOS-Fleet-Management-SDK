@@ -28,7 +28,7 @@ typedef NS_ENUM(NSInteger, ESTRequestGetBeaconsError)
     ESTRequestGetBeaconsErrorUnknown
 };
 
-typedef void(^ESTRequestGetBeaconsBlock)(NSArray<ESTBeaconVO *> * _Nullable beaconVOs, NSError * _Nullable error);
+typedef void(^ESTRequestGetBeaconsBlock)(NSArray *  beaconVOs, NSError *  error);
 
 /**
  *  ESTRequestGetBeacons is used to fetch list of all beacons 

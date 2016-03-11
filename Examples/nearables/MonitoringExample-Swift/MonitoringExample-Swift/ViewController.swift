@@ -17,7 +17,7 @@ class ESTTableViewCell: UITableViewCell
         super.init(style: UITableViewCellStyle.Subtitle, reuseIdentifier: reuseIdentifier)
     }
     
-    required init(coder aDecoder: NSCoder)
+    required init?(coder aDecoder: NSCoder)
     {
         fatalError("init(coder:) has not been implemented")
     }
@@ -64,14 +64,14 @@ class ViewController: UIViewController,
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier("CellIdentifier", forIndexPath: indexPath) as ESTTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("CellIdentifier", forIndexPath: indexPath) as! ESTTableViewCell
         
         let nearable = nearables[indexPath.row] as ESTNearable
-        var details:NSString = NSString(format:"Type: %@ RSSI: %zd", ESTNearableDefinitions.nameForType(nearable.type), nearable.rssi);
-        cell.textLabel?.text = NSString(format:"Identifier: %@", nearable.identifier);
+        let details = "Type: \(ESTNearableDefinitions.nameForType(nearable.type)) RSSI: \(nearable.rssi)"
+        cell.textLabel?.text = "Identifier: \(nearable.identifier)"
         cell.detailTextLabel?.text = details;
         
-        var imageView = UIImageView(frame: CGRectMake(self.view.frame.size.width - 60, 30, 30, 30))
+        let imageView = UIImageView(frame: CGRectMake(self.view.frame.size.width - 60, 30, 30, 30))
         imageView.contentMode = UIViewContentMode.ScaleAspectFill
         imageView.image = self.imageForNearableType(nearable.type)
         cell.contentView.addSubview(imageView)
@@ -93,16 +93,15 @@ class ViewController: UIViewController,
     {
         if(segue.identifier == "details")
         {
-            var monitVC:MonitoringDetailsViewController = segue.destinationViewController as MonitoringDetailsViewController
-            monitVC.nearable = self.nearables[(sender as NSIndexPath).row]
+            let monitVC:MonitoringDetailsViewController = segue.destinationViewController as! MonitoringDetailsViewController
+            monitVC.nearable = self.nearables[(sender as! NSIndexPath).row]
         }
     }
     
     // MARK: - ESTNearableManager delegate
-    
-    func nearableManager(manager: ESTNearableManager!, didRangeNearables nearables: [AnyObject]!, withType type: ESTNearableType)
-    {
-        self.nearables = nearables as Array<ESTNearable>
+
+    func nearableManager(manager: ESTNearableManager, didRangeNearables nearables: [ESTNearable], withType type: ESTNearableType) {
+        self.nearables = nearables
         self.tableView.reloadData()
     }
     

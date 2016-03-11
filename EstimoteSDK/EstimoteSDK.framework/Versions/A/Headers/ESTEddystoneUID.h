@@ -10,27 +10,28 @@
 //  Copyright (c) 2015 Estimote. All rights reserved.
 
 #import <Foundation/Foundation.h>
+#import "ESTEddystone.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 #define ESTIMOTE_EDDYSTONE_NAMESPACE_ID @"EDD1EBEAC04E5DEFA017"
 
 /**
- * According to Google documentation Eddystone device is identified
- * by UUID that consists of Namespace ID and Instance ID.
- *
- * The Eddystone namespace serves to ensure ID uniqueness across 
- * multiple Eddystone implementers. It consisting of a 10-byte.
- *
- * The Eddystone instance serves to ensure ID uniqueness across
- * devices having the same namespace.
- *
+ * ESTEddystoneUID represents Eddystone UID packet coming from `ESTEddystoneManager` class.
  */
+@interface ESTEddystoneUID : ESTEddystone
 
-@interface ESTEddystoneUID : NSObject
+/**
+ *  Namespace ID required for device identification.
+ *  Value usually defined on the company level.
+ */
+@property (nonatomic, strong, readonly) NSString *  namespaceID;
 
-@property (nonatomic, strong, readonly) NSString *namespaceID;
-@property (nonatomic, strong, readonly) NSString *instanceID;
+/**
+ *  Instance ID required for device identification.
+ *  Value defined per device.
+ */
+@property (nonatomic, strong, readonly) NSString *  instanceID;
 
 /**
  * Initialize Eddystone UUID object instance with Namespace ID only.
@@ -45,7 +46,8 @@ NS_ASSUME_NONNULL_BEGIN
  * @param namespaceID Eddystone Namespace ID.
  * @param instanceID Eddystone Instance ID.
  */
-- (instancetype)initWithNamespaceID:(NSString *)namespaceID instanceID:(NSString *)instanceID;
+- (instancetype)initWithNamespaceID:(NSString *)namespaceID
+                         instanceID:(nullable NSString *)instanceID;
 
 @end
 

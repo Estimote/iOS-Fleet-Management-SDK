@@ -14,7 +14,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void(^ESTRequestGetPendingSettingsBlock)(NSArray<ESTBeaconUpdateInfo *> * _Nullable beaconUpdateInfos, NSError * _Nullable error);
+typedef void(^ESTRequestGetPendingSettingsBlock)(NSArray *  beaconUpdateInfos, NSError *  error);
 
 /**
  *  This request is fetching all the pending settings from the Estimote Cloud for authorized user.

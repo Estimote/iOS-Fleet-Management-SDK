@@ -10,30 +10,50 @@
 //  Copyright (c) 2015 Estimote. All rights reserved.
 
 #import <Foundation/Foundation.h>
-#import "ESTEddystoneTelemetry.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef NS_ENUM(NSInteger, ESTEddystoneProximity)
-{
+/**
+ *  Proximity zone where device was located.
+ */
+typedef NS_ENUM(NSInteger, ESTEddystoneProximity) {
+    /**
+     *  Unknown proximity zone.
+     */
     ESTEddystoneProximityUnknown,
+    /**
+     *  Immediate proximity zone.
+     */
     ESTEddystoneProximityImmediate,
+    /**
+     *  Near proximity zone.
+     */
     ESTEddystoneProximityNear,
+    /**
+     *  Far proximity zone.
+     */
     ESTEddystoneProximityFar
 };
+
 
 /**
  *  Object of this class represents single Eddystone device, with all its available properties.
  *  `ESTEddystone` object should not be created manually. Instances are created by ESTEddystoneManager
-*   with discovery process and return in `eddystoneManager:didDiscoverEddystones:withFilter:` delegate method.
+ *  with discovery process and return in `eddystoneManager:didDiscoverEddystones:withFilter:` delegate method.
  */
-
 @interface ESTEddystone : NSObject <NSCopying>
 
 /**
- *  MAC address of device advertising Eddystone packets
+ *  MAC address of device advertising Eddystone packets.
+ *  This property is filled only for eddystone packets
+ *  broadcasted by proximity beacons (1st generation).
  */
 @property (nonatomic, strong) NSString *macAddress;
+
+/**
+ *  Bluetooth peripheral identifier.
+ */
+@property (nonatomic, strong) NSUUID *peripheralIdentifier;
 
 /**
  *  Signal strength detected on the phone (-100 to 0))
@@ -46,7 +66,7 @@ typedef NS_ENUM(NSInteger, ESTEddystoneProximity)
 @property (nonatomic, strong) NSNumber *accuracy;
 
 /**
- * Proximity of the device.
+ * Proximity zone of the device.
  */
 @property (nonatomic) ESTEddystoneProximity proximity;
 
@@ -61,31 +81,20 @@ typedef NS_ENUM(NSInteger, ESTEddystoneProximity)
 @property (nonatomic, strong) NSNumber *measuredPower;
 
 /**
- *  Namespace ID required for device identification. 
- *  Value usually defined on the company level.
+ *  Internaly used method allows to update ESTEddystone object with another ESTEddystone object.
+ *
+ *  @param eddystone provided ESTEddystone object.
  */
-@property (nonatomic, strong) NSString * _Nullable namespaceID;
-
-/**
- *  Instance ID required for device identification.
- *  Value defined per device.
- */
-@property (nonatomic, strong) NSString * _Nullable instanceID;
-
-/**
- *  URL address advertised by the beacon device
- *  packet type is set to ESTBeaconPacketTypeEddystoneURL
- */
-@property (nonatomic, strong) NSString * _Nullable url;
-
-/**
- *  Telemetry information delivered in separate packet packet every 10 seconds.
- *  Availability of this information can be delayed.
- */
-@property (nonatomic, strong) ESTEddystoneTelemetry * _Nullable telemetry;
-
 - (void)updateWithEddystone:(ESTEddystone *)eddystone;
 
+/**
+ *  Equality method
+ *
+ *  @param eddystone Eddystone you want to compare with.
+ *
+ *  @return Bool value indicating equality.
+ */
+- (BOOL)isEqualToEddystone:(ESTEddystone *)eddystone;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -14,30 +14,68 @@
 #import "ESTDefinitions.h"
 #import "ESTDeviceSettingProtocol.h"
 #import "ESTCloudSettingProtocol.h"
-#import "ESTNotificationSettingProtocol.h"
+#import "ESTDeviceNotificationProtocol.h"
+#import "ESTBeaconOperationProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef void(^ESTDeviceFirmwareUpdateProgressBlock)(NSInteger value);
+
 @class ESTDeviceConnectable;
 
+
+/**
+ *  ESTDeviceConnectableDelegate defines protocol for ESTDeviceConnectable delegate object.
+ */
 @protocol ESTDeviceConnectableDelegate <NSObject>
 
 @optional
 
+/**
+ *  Method invoked when connection to device was successful.
+ *
+ *  @param device Device connection was established with.
+ */
 - (void)estDeviceConnectionDidSucceed:(ESTDeviceConnectable *)device;
 
-- (void)estDevice:(ESTDeviceConnectable *)device didDisconnectWithError:(NSError * _Nullable)error;
+/**
+ *  Method invoked when device disconnect event occurred.
+ *
+ *  @param device Disconnected device.
+ *  @param error  Error representing reason of disconnect.
+ */
+- (void)estDevice:(ESTDeviceConnectable *)device didDisconnectWithError:(NSError * )error;
 
+/**
+ *  Method invoked when connection to device failed.
+ *
+ *  @param device Device connection failed for.
+ *  @param error  Error representing reason of failure.
+ */
 - (void)estDevice:(ESTDeviceConnectable *)device didFailConnectionWithError:(NSError *)error;
 
 @end
 
 
+/**
+ *  ESTDeviceConnectable is a superclass for connectable Estimote devices.
+ */
 @interface ESTDeviceConnectable : ESTDevice
 
-@property (nonatomic, weak) id <ESTDeviceConnectableDelegate> _Nullable delegate;
+/**
+ *  Delegate object that will get method calls related to connection.
+ */
+@property (nonatomic, weak) id <ESTDeviceConnectableDelegate>  delegate;
 
+/**
+ *  Status of device connection.
+ */
 @property (nonatomic, assign, readonly) ESTConnectionStatus connectionStatus;
+
+#pragma mark Connectivity
+///--------------------------------------------------------------------
+/// @name Connectivity
+///--------------------------------------------------------------------
 
 /*
  * Perform connection to the device.
@@ -49,35 +87,28 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)disconnect;
 
-/*
- * Read single setting.
- */
-- (void)readSetting:(id <ESTSettingProtocol>)setting;
+#pragma mark Firmware update
+///--------------------------------------------------------------------
+/// @name Firmware update
+///--------------------------------------------------------------------
 
-/*
- * Reads array of settings defined by objects implementing <ESTSettingProtocol> protocol.
+/**
+ *  Allows to validate firmware update availability.
+ *
+ *  @param completion Blocked invoked when validation is complete.
  */
-- (void)readSettings:(NSArray *)settings;
+- (void)checkFirmwareUpdateWithCompletion:(ESTObjectCompletionBlock)completion;
 
-/*
- * Write single setting.
+/**
+ *  Allows to perform firmware update of the device Over The Air. 
+ *  Keep in mind that established bluetooth connection
+ *  is required to perform firmware update.
+ *
+ *  @param progress   Block invoked on firmware update progress.
+ *  @param completion Block invoked on firmware update complete.
  */
-- (void)writeSetting:(id <ESTSettingProtocol>)setting;
-
-/*
- * Writes array of settings defined by objects implementing <ESTSettingProtocol> protocol.
- */
-- (void)writeSettings:(NSArray *)settings;
-
-/*
- * Allows to register for setting with notification type, implementing <ESTNotificationSettingProtocol> protocol.
- */
-- (void)registerForNotificationSetting:(id <ESTNotificationSettingProtocol>)setting;
-
-/*
- * Allows to register for settings with notification type, implementing <ESTNotificationSettingProtocol> protocol.
- */
-- (void)registerForNotificationSettings:(NSArray *)settings;
+- (void)updateFirmwareWithProgress:(ESTDeviceFirmwareUpdateProgressBlock)progress
+                        completion:(ESTCompletionBlock)completion;
 
 @end
 

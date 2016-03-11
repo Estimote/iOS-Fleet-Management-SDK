@@ -35,7 +35,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param nearables An array of `<ESTNearable>` objects representing the nearables currently in range. You can use the information in these objects to determine the range of each nearables and its identifying information.
  * @param type The nearable type that was used to range the nearables.
  */
-- (void)nearableManager:(ESTNearableManager *)manager didRangeNearables:(NSArray<ESTNearable *> *)nearables withType:(ESTNearableType)type;
+- (void)nearableManager:(ESTNearableManager *)manager didRangeNearables:(NSArray *)nearables withType:(ESTNearableType)type;
 
 /**
  * Tells the delegate that nearable with particular identifier is in range.
@@ -108,7 +108,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ESTNearableManager : NSObject
 
-@property (nonatomic, weak) id <ESTNearableManagerDelegate> _Nullable delegate;
+@property (nonatomic, weak) id <ESTNearableManagerDelegate>  delegate;
 
 #pragma mark - Nearable monitoring related methods
 ///--------------------------------------------------------------------

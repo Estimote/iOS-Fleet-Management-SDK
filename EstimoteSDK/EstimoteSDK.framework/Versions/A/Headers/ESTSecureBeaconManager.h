@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * @see ESTBeaconManagerDelegate
  */
-@property (nonatomic, weak) id <ESTBeaconManagerDelegate> _Nullable delegate;
+@property (nonatomic, weak) id <ESTBeaconManagerDelegate>  delegate;
 
 #pragma mark CoreLocation Authorization (new in iOS 8)
 ///--------------------------------------------------------------------

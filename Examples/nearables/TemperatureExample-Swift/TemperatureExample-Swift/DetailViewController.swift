@@ -28,8 +28,8 @@ class DetailViewController: UIViewController, ESTNearableManagerDelegate {
     
     //MARK: - ESTNearableManager delegate
     
-    func nearableManager(manager: ESTNearableManager!, didRangeNearable nearable: ESTNearable!) {
-        temperatureLabel.text = NSString(format: "%.1f°C", nearable.temperature)
+    func nearableManager(manager: ESTNearableManager, didRangeNearable nearable: ESTNearable) {
+        temperatureLabel.text = NSString(format: "%.1f°C", nearable.temperature) as String
     }
 }
 

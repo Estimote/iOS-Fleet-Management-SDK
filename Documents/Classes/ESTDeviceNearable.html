@@ -6,7 +6,7 @@
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.2 (build 963)" />
+		<meta name="generator" content="appledoc 2.2.1 (build 1334)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -26,6 +26,8 @@
 					<select id="jumpTo">
 	<option value="top">Jump To&#133;</option>
 	
+	<option value="overview">Overview</option>
+	
 	
 	
 	
@@ -35,13 +37,13 @@
 	
 	
 	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/settings">&nbsp;&nbsp;&nbsp;&nbsp;settings</option>
 	
 	
 	
 	
-	<option value="instance_methods">Instance Methods</option>
-	
-	<option value="//api/name/updateFirmwareWithData:progress:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- updateFirmwareWithData:progress:completion:</option>
 	
 	
 	
@@ -52,6 +54,8 @@
 		<nav id="tocContainer" class="isShowingTOC">
 			<ul id="toc" role="tree">
 				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
 
 
 
@@ -63,15 +67,15 @@
 
 
 
-
-
-
-
-<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/updateFirmwareWithData:progress:completion:">updateFirmwareWithData:progress:completion:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/settings">settings</a></span></li>
 	
 </ul></li>
+
+
+
+
 
 
 			</ul>
@@ -95,15 +99,27 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Inherits from</td>
-	<td class="specification-value">ESTDeviceConnectable</td>
+	<td class="specification-value"><a href="../Classes/ESTDeviceConnectable.html">ESTDeviceConnectable</a> : ESTDevice : NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">ESTDeviceNearable.h<br />ESTDeviceNearable.m</td>
+	<td class="specification-value">ESTDeviceNearable.h</td>
 </tr>
 						</tbody></table></div>
 					
                     
                     
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>ESTDeviceNearable represents Nearable device. It allows to to establish
+connection to the device and change its settings.</p>
+
+<p>Object of this class is returned as a result of ESTUtilityManager scanning.
+It is not intended to be initialized manually.</p>
+					</div>
+					
+					
 					
 					
 					
@@ -118,9 +134,9 @@
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/updateFirmwareWithData:progress:completion:">&ndash;&nbsp;updateFirmwareWithData:progress:completion:</a></code>
+		<code><a href="#//api/name/settings">&nbsp;&nbsp;settings</a></code>
 	</span>
-	
+	<span class="task-item-suffix">property</span>
 	
 </li>
 						</ul>
@@ -131,29 +147,23 @@
 					
 					
 					
-					
-					
-					
-					
 					<div class="section section-methods">
-						<a title="Instance Methods" name="instance_methods"></a>
-						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/updateFirmwareWithData:progress:completion:" title="updateFirmwareWithData:progress:completion:"></a>
-	<h3 class="subsubtitle method-title">updateFirmwareWithData:progress:completion:</h3>
+	<a name="//api/name/settings" title="settings"></a>
+	<h3 class="subsubtitle method-title">settings</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>We read firmware from beacon in following format: SAX.X.X
-But from cloud we get firmware in correct semver format: X.X.X
-That&rsquo;s why we strip two first letters.</p>
+		<p>Allows to access and interact with device settings.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)updateFirmwareWithData:(NSData *)<em>data</em> progress:(ESTProgressBlock)<em>progress</em> completion:(ESTCompletionBlock)<em>completion</em></code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) ESTNearableSettingsManager *settings</code></div>
 
     
 	
@@ -162,6 +172,18 @@ That&rsquo;s why we strip two first letters.</p>
 	
 	
 	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Object expose convenience API where you can access and change individual
+settings of the device.
+You can also register for settings change notifications (e.g. motion state)
+provided during connection using <code>registerForNotification:</code> method.</p>
+
+<p>Advanced API allows to define group of settings read/write operations
+that should be performed on the device and then perform them using
+<code>performOperation:</code> kind of methods.</p>
+	</div>
 	
 	
 	
@@ -180,8 +202,15 @@ That&rsquo;s why we strip two first letters.</p>
 					</div>
 					
 					
+					
+					
+					
+					
                     
                     
+                    
+                    
+
 				</div>
 				<div class="main-navigation navigation-bottom">
 					<ul>
@@ -192,9 +221,9 @@ That&rsquo;s why we strip two first letters.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-10-29)</span><br />
+						<p><span class="copyright">&copy; 2016 Estimote. All rights reserved. (Last updated: 2016-03-11)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</span></p>
 						
 					</div>
 				</div>

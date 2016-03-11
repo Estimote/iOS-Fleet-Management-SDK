@@ -15,10 +15,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef NS_ENUM(NSInteger, ESTUtilitManagerState)
+typedef NS_ENUM(NSInteger, ESTUtilityManagerState)
 {
-    ESTUtilitManagerStateIdle,
-    ESTUtilitManagerStateScanning
+    ESTUtilityManagerStateIdle,
+    ESTUtilityManagerStateScanning
 };
 
 @class ESTUtilityManager;
@@ -34,7 +34,7 @@ typedef NS_ENUM(NSInteger, ESTUtilitManagerState)
  * @param beacons An array of `<ESTBluetoothBeacon>` objects representing the beacons discovered.
  */
 - (void)utilityManager:(ESTUtilityManager *)manager
-    didDiscoverBeacons:(NSArray<ESTDevice *> *)beacons;
+    didDiscoverBeacons:(NSArray *)beacons;
 
 /**
  * Tells the delegate that one or more beacons were discovered in the vicinity of the device.
@@ -43,7 +43,7 @@ typedef NS_ENUM(NSInteger, ESTUtilitManagerState)
  * @param beacons An array of `<ESTDeviceNearable>` objects representing the nearables discovered.
  */
 - (void)utilityManager:(ESTUtilityManager *)manager
-    didDiscoverNearables:(NSArray<ESTDeviceNearable *> *)nearables;
+    didDiscoverNearables:(NSArray *)nearables;
 
 /**
  * Tells the delegate that beacons discovery error occurred.
@@ -64,12 +64,12 @@ typedef NS_ENUM(NSInteger, ESTUtilitManagerState)
  /**
  *  Current state of Utility manager
  */
-@property (nonatomic, assign, readonly) ESTUtilitManagerState state;
+@property (nonatomic, assign, readonly) ESTUtilityManagerState state;
 
 /**
  *  Delegate object.
  */
-@property (nonatomic, weak) id<ESTUtilityManagerDelegate> _Nullable delegate;
+@property (nonatomic, weak) id<ESTUtilityManagerDelegate>  delegate;
 
 /**
  * Starts a CoreBluetooth scan in search for all Estimote Beacons in range.

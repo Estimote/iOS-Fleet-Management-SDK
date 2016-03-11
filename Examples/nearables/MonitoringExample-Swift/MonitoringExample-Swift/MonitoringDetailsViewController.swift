@@ -16,7 +16,7 @@ class MonitoringDetailsViewController: UIViewController, ESTNearableManagerDeleg
     @IBOutlet weak var enterSwitch: UISwitch!
     @IBOutlet weak var exitSwitch: UISwitch!
     
-    required init(coder aDecoder: NSCoder)
+    required init?(coder aDecoder: NSCoder)
     {
         self.nearable = ESTNearable()
         self.nearableManager = ESTNearableManager()
@@ -31,7 +31,7 @@ class MonitoringDetailsViewController: UIViewController, ESTNearableManagerDeleg
         /**
         *  Setup title of the screen based on nearable type.
         */
-        self.title = NSString(format: "Nearable: %@", ESTNearableDefinitions.nameForType(nearable.type))
+        self.title = NSString(format: "Nearable: %@", ESTNearableDefinitions.nameForType(nearable.type)) as String
         
         /**
         *  Create Estimote Nearable Manager and start looking for
@@ -48,7 +48,7 @@ class MonitoringDetailsViewController: UIViewController, ESTNearableManagerDeleg
         */
         if (self.enterSwitch.on)
         {
-            var notification:UILocalNotification = UILocalNotification();
+            let notification:UILocalNotification = UILocalNotification();
             notification.alertBody = "Enter region notification";
             
             UIApplication.sharedApplication().presentLocalNotificationNow(notification)
@@ -62,7 +62,7 @@ class MonitoringDetailsViewController: UIViewController, ESTNearableManagerDeleg
         */
         if (self.exitSwitch.on)
         {
-            var notification:UILocalNotification = UILocalNotification();
+            let notification:UILocalNotification = UILocalNotification();
             notification.alertBody = "Exit region notification";
             
             UIApplication.sharedApplication().presentLocalNotificationNow(notification)

@@ -13,7 +13,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void(^ESTRequestCancelPendingSettingsBlock)(NSError * _Nullable error);
+typedef void(^ESTRequestCancelPendingSettingsBlock)(NSError *  error);
 
 /**
  *  This request is deleting the device's pending settings from the Estimote Cloud for authorized user.

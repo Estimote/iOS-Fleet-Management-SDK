@@ -13,7 +13,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol ESTSettingProtocol <NSObject>
+@protocol ESTSettingProtocol <NSObject, NSCopying>
 
 @required
 

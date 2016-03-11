@@ -178,11 +178,18 @@
 		95800EED1A5A961A00972EAE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0720;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = Estimote;
 				TargetAttributes = {
 					95800EF41A5A961A00972EAE = {
 						CreatedOnToolsVersion = 6.1.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					95800F091A5A961B00972EAE = {
 						CreatedOnToolsVersion = 6.1.1;

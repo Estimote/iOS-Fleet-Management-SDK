@@ -181,6 +181,8 @@
 		950057291A601A170092315E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0720;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = Estimote;
 				TargetAttributes = {

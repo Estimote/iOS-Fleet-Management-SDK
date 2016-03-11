@@ -177,11 +177,17 @@
 		AC6CD7631A4AC70C00B5AC2F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Estimote Inc.";
 				TargetAttributes = {
 					AC6CD76A1A4AC70C00B5AC2F = {
 						CreatedOnToolsVersion = 6.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					AC6CD7811A4AC70D00B5AC2F = {
 						CreatedOnToolsVersion = 6.1;

@@ -13,15 +13,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-#define ESTRequestGetJSONErrorDomain @"ESTRequestGetJSONErrorDomain"
-
-typedef NS_ENUM(NSInteger, ESTRequestGetJSONError)
-{
-    ESTRequestGetJSONErrorNoData,
-    ESTRequestGetJSONErrorNotAuthorized,
-    ESTRequestGetJSONErrorNoResurce
-};
-
 @interface ESTRequestGetJSON : ESTRequestBase
 
 @end

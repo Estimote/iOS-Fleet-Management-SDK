@@ -28,7 +28,7 @@ typedef NS_ENUM(NSInteger, ESTRequestGetNearablesError)
     ESTRequestGetNearablesUnknown
 };
 
-typedef void(^ESTRequestGetNearablesBlock)(NSArray<ESTNearable *> * _Nullable nearables, NSError * _Nullable error);
+typedef void(^ESTRequestGetNearablesBlock)(NSArray *  nearables, NSError *  error);
 
 /**
  *  ESTRequestGetNearables is used to fetch details about all user nearables.

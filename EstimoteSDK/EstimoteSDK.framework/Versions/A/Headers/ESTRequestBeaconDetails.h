@@ -29,7 +29,7 @@ typedef NS_ENUM(NSInteger, ESTRequestBeaconDetailsError)
     ESTRequestBeaconDetailsErrorDetailsNotAvailable
 };
 
-typedef void(^ESTRequestBeaconDetailsBlock)(ESTBeaconVO * _Nullable beaconVO, NSError * _Nullable error);
+typedef void(^ESTRequestBeaconDetailsBlock)(ESTBeaconVO *  beaconVO, NSError *  error);
 
 /**
  *  ESTRequestBeaconDetails is used to fetch details of single beacon device.

@@ -63,12 +63,12 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  Battery voltage when nearable is in idle state defined in Volts.
  */
-@property (nonatomic, strong, readonly) NSNumber * _Nullable idleBatteryVoltage;
+@property (nonatomic, strong, readonly) NSNumber *  idleBatteryVoltage;
 
 /**
  *  Battery voltage when nearable is under stress (sending packet) defined in Volts.
  */
-@property (nonatomic, strong, readonly) NSNumber * _Nullable stressBatteryVoltage;
+@property (nonatomic, strong, readonly) NSNumber *  stressBatteryVoltage;
 
 /**
  *  Time since last change of motion state (isMoving value change) returned in seconds.

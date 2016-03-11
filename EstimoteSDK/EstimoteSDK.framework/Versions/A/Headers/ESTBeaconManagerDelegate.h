@@ -54,7 +54,7 @@ didStartMonitoringForRegion:(CLBeaconRegion *)region;
  * @param error An error object describing why monitoring failed.
  */
 - (void)beaconManager:(id)manager
-monitoringDidFailForRegion:(CLBeaconRegion * _Nullable)region
+monitoringDidFailForRegion:(CLBeaconRegion * )region
             withError:(NSError *)error;
 
 /**
@@ -109,7 +109,7 @@ monitoringDidFailForRegion:(CLBeaconRegion * _Nullable)region
  * @param region The region that was used to range the beacons.
  */
 - (void)beaconManager:(id)manager
-      didRangeBeacons:(NSArray<CLBeacon *> *)beacons
+      didRangeBeacons:(NSArray *)beacons
              inRegion:(CLBeaconRegion *)region;
 
 
@@ -121,7 +121,7 @@ monitoringDidFailForRegion:(CLBeaconRegion * _Nullable)region
  * @param error An error object describing why ranging failed.
  */
 - (void)beaconManager:(id)manager
-rangingBeaconsDidFailForRegion:(CLBeaconRegion * _Nullable)region
+rangingBeaconsDidFailForRegion:(CLBeaconRegion * )region
             withError:(NSError *)error;
 
 #pragma mark Advertising Events
@@ -136,7 +136,7 @@ rangingBeaconsDidFailForRegion:(CLBeaconRegion * _Nullable)region
  * @param error If an error occurred, this error object describes the error. If the operation completed successfully, the value is `nil`.
  */
 - (void)beaconManagerDidStartAdvertising:(id)manager
-                                   error:(NSError * _Nullable)error;
+                                   error:(NSError * )error;
 
 #pragma mark General Events
 ///--------------------------------------------------------------------

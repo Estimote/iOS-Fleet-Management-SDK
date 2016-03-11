@@ -6,7 +6,7 @@
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.2 (build 963)" />
+		<meta name="generator" content="appledoc 2.2.1 (build 1334)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -161,6 +161,8 @@
 	
 	<option value="//api/name/updateFirmwareWithProgress:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- updateFirmwareWithProgress:completion:</option>
 	
+	<option value="//api/name/valueObject">&nbsp;&nbsp;&nbsp;&nbsp;- valueObject</option>
+	
 	<option value="//api/name/writeAdvInterval:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeAdvInterval:completion:</option>
 	
 	<option value="//api/name/writeBasicPowerModeEnabled:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeBasicPowerModeEnabled:completion:</option>
@@ -180,6 +182,8 @@
 	<option value="//api/name/writeEddystoneURL:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeEddystoneURL:completion:</option>
 	
 	<option value="//api/name/writeEstimoteSecureUUIDEnabled:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeEstimoteSecureUUIDEnabled:completion:</option>
+	
+	<option value="//api/name/writeLatitude:longitude:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeLatitude:longitude:completion:</option>
 	
 	<option value="//api/name/writeMajor:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- writeMajor:completion:</option>
 	
@@ -236,6 +240,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Writing methods for security features">Writing methods for security features</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Writing methods for sensors">Writing methods for sensors</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Writing methods for GPS location">Writing methods for GPS location</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Reset to factory settings">Reset to factory settings</a></span></li>
 	
@@ -373,6 +379,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/updateFirmwareWithProgress:completion:">updateFirmwareWithProgress:completion:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/valueObject">valueObject</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeAdvInterval:completion:">writeAdvInterval:completion:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeBasicPowerModeEnabled:completion:">writeBasicPowerModeEnabled:completion:</a></span></li>
@@ -392,6 +400,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeEddystoneURL:completion:">writeEddystoneURL:completion:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeEstimoteSecureUUIDEnabled:completion:">writeEstimoteSecureUUIDEnabled:completion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeLatitude:longitude:completion:">writeLatitude:longitude:completion:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/writeMajor:completion:">writeMajor:completion:</a></span></li>
 	
@@ -986,6 +996,20 @@
 						</ul>
 						
 						
+						<a title="Writing methods for GPS location" name="task_Writing methods for GPS location"></a>
+						<h3 class="subsubtitle task-title">Writing methods for GPS location</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/writeLatitude:longitude:completion:">&ndash;&nbsp;writeLatitude:longitude:completion:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
 						<a title="Reset to factory settings" name="task_Reset to factory settings"></a>
 						<h3 class="subsubtitle task-title">Reset to factory settings</h3>
 
@@ -1025,6 +1049,12 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/updateFirmwareWithProgress:completion:">&ndash;&nbsp;updateFirmwareWithProgress:completion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/valueObject">&ndash;&nbsp;valueObject</a></code>
 	</span>
 	
 	
@@ -1397,7 +1427,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;ESTBeaconConnectionDelegate&gt; _Nullable delegate</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;ESTBeaconConnectionDelegate&gt; delegate</code></div>
 
     
 	
@@ -2581,7 +2611,7 @@ Based on the method you used to initialize it may contain:
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (instancetype)connectionWithBeacon:(CLBeacon *)<em>beacon</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt; _Nullable)<em>delegate</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (instancetype)connectionWithBeacon:(CLBeacon *)<em>beacon</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt;)<em>delegate</em></code></div>
 
     
 	
@@ -2637,7 +2667,7 @@ Based on the method you used to initialize it may contain:
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (instancetype)connectionWithIdentifier:(NSString *)<em>identifier</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt; _Nullable)<em>delegate</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (instancetype)connectionWithIdentifier:(NSString *)<em>identifier</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt;)<em>delegate</em></code></div>
 
     
 	
@@ -2693,7 +2723,7 @@ Based on the method you used to initialize it may contain:
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (instancetype)connectionWithMacAddress:(NSString *)<em>macAddress</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt; _Nullable)<em>delegate</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (instancetype)connectionWithMacAddress:(NSString *)<em>macAddress</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt;)<em>delegate</em></code></div>
 
     
 	
@@ -2749,7 +2779,7 @@ Based on the method you used to initialize it may contain:
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (instancetype)connectionWithProximityUUID:(NSUUID *)<em>proximityUUID</em> major:(CLBeaconMajorValue)<em>major</em> minor:(CLBeaconMinorValue)<em>minor</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt; _Nullable)<em>delegate</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (instancetype)connectionWithProximityUUID:(NSUUID *)<em>proximityUUID</em> major:(CLBeaconMajorValue)<em>major</em> minor:(CLBeaconMinorValue)<em>minor</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt;)<em>delegate</em></code></div>
 
     
 	
@@ -3060,7 +3090,7 @@ delegate object support</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (instancetype)initWithBeacon:(CLBeacon *)<em>beacon</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt; _Nullable)<em>delegate</em> startImmediately:(BOOL)<em>startImmediately</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithBeacon:(CLBeacon *)<em>beacon</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt;)<em>delegate</em> startImmediately:(BOOL)<em>startImmediately</em></code></div>
 
     
 	
@@ -3122,7 +3152,7 @@ delegate object support</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (instancetype)initWithIdentifier:(NSString *)<em>identifier</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt; _Nullable)<em>delegate</em> startImmediately:(BOOL)<em>startImmediately</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithIdentifier:(NSString *)<em>identifier</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt;)<em>delegate</em> startImmediately:(BOOL)<em>startImmediately</em></code></div>
 
     
 	
@@ -3184,7 +3214,7 @@ delegate object support</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (instancetype)initWithMacAddress:(NSString *)<em>macAddress</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt; _Nullable)<em>delegate</em> startImmediately:(BOOL)<em>startImmediately</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithMacAddress:(NSString *)<em>macAddress</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt;)<em>delegate</em> startImmediately:(BOOL)<em>startImmediately</em></code></div>
 
     
 	
@@ -3246,7 +3276,7 @@ delegate object support</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (instancetype)initWithProximityUUID:(NSUUID *)<em>proximityUUID</em> major:(CLBeaconMajorValue)<em>major</em> minor:(CLBeaconMinorValue)<em>minor</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt; _Nullable)<em>delegate</em> startImmediately:(BOOL)<em>startImmediately</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithProximityUUID:(NSUUID *)<em>proximityUUID</em> major:(CLBeaconMajorValue)<em>major</em> minor:(CLBeaconMinorValue)<em>minor</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt;)<em>delegate</em> startImmediately:(BOOL)<em>startImmediately</em></code></div>
 
     
 	
@@ -3667,6 +3697,42 @@ delegate object support</p>
 		</dl>
 		
 	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/valueObject" title="valueObject"></a>
+	<h3 class="subsubtitle method-title">valueObject</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns value object for current <code>ESTBeaconConnection</code> object.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (ESTBeaconVO *)valueObject</code></div>
+
+    
 	
 	
 	
@@ -4245,6 +4311,63 @@ when ESTBeaconPacketTypeEddystoneURL is selected as a packet type.</p>
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/writeLatitude:longitude:completion:" title="writeLatitude:longitude:completion:"></a>
+	<h3 class="subsubtitle method-title">writeLatitude:longitude:completion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Saves GPS latitude and longitude in Estimote Cloud.
+After successful save lat and log is set in beacon connection object.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)writeLatitude:(NSNumber *)<em>latitude</em> longitude:(NSNumber *)<em>longitude</em> completion:(ESTCompletionBlock)<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>latitude</em></dt>
+			<dd><p>GPS latitude</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>longitude</em></dt>
+			<dd><p>GPS longitude</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>completion block fired on operation completion</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconConnection.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/writeMajor:completion:" title="writeMajor:completion:"></a>
 	<h3 class="subsubtitle method-title">writeMajor:completion:</h3>
 	
@@ -4736,6 +4859,9 @@ when ESTBeaconPacketTypeEddystoneURL is selected as a packet type.</p>
 					
                     
                     
+                    
+                    
+
 				</div>
 				<div class="main-navigation navigation-bottom">
 					<ul>
@@ -4746,9 +4872,9 @@ when ESTBeaconPacketTypeEddystoneURL is selected as a packet type.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-10-29)</span><br />
+						<p><span class="copyright">&copy; 2016 Estimote. All rights reserved. (Last updated: 2016-03-11)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</span></p>
 						
 					</div>
 				</div>

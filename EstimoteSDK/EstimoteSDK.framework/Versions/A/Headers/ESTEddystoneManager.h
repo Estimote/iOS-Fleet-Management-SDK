@@ -12,6 +12,8 @@
 #import <Foundation/Foundation.h>
 #import "ESTEddystone.h"
 #import "ESTEddystoneUID.h"
+#import "ESTEddystoneURL.h"
+#import "ESTEddystoneTLM.h"
 #import "ESTEddystoneFilter.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -41,8 +43,8 @@ typedef NS_ENUM(NSInteger, ESTEddystoneManagerState)
  * @param eddystoneFilter Filter represented by subclass of `<ESTEddystoneFilter>` applied to discovery.
  */
 - (void)eddystoneManager:(ESTEddystoneManager *)manager
-   didDiscoverEddystones:(NSArray<ESTEddystone *> *)eddystones
-              withFilter:(ESTEddystoneFilter * _Nullable)eddystoneFilter;
+   didDiscoverEddystones:(NSArray *)eddystones
+              withFilter:(ESTEddystoneFilter * )eddystoneFilter;
 
 /**
  * Tells the delegate that Google beacons discovery error occurred.
@@ -50,7 +52,7 @@ typedef NS_ENUM(NSInteger, ESTEddystoneManagerState)
  * @param manager The beacon manager object reporting the event.
  */
 - (void)eddystoneManagerDidFailDiscovery:(ESTEddystoneManager *)manager
-                               withError:(NSError * _Nullable)error;
+                               withError:(NSError * )error;
 
 @end
 
@@ -70,12 +72,12 @@ typedef NS_ENUM(NSInteger, ESTEddystoneManagerState)
 /**
  *  Delegate object.
  */
-@property (nonatomic, weak) id<ESTEddystoneManagerDelegate> _Nullable delegate;
+@property (nonatomic, weak) id<ESTEddystoneManagerDelegate>  delegate;
 
 /**
  *  Array containg `ESTEddystoneFilter` objects for requested UUID discovery.
  */
-@property (nonatomic, strong, readonly) NSArray<ESTEddystoneFilter *> *filtersInDiscovery;
+@property (nonatomic, strong, readonly) NSArray *filtersInDiscovery;
 
 /**
  * Starts Eddystone discovery process. Filter param is optional. 
@@ -85,12 +87,12 @@ typedef NS_ENUM(NSInteger, ESTEddystoneManagerState)
  * - URL - URL address eg. 'http://go.esti.be'
  * - URL Domain - URL domain eg. 'esti.be'
  */
-- (void)startEddystoneDiscoveryWithFilter:(ESTEddystoneFilter * _Nullable)eddystoneFilter;
+- (void)startEddystoneDiscoveryWithFilter:(ESTEddystoneFilter * )eddystoneFilter;
 
 /**
  * Stops discovery of Eddystones for particular filter.
  */
-- (void)stopEddystoneDiscoveryWithFilter:(ESTEddystoneFilter * _Nullable)eddystoneFilter;
+- (void)stopEddystoneDiscoveryWithFilter:(ESTEddystoneFilter * )eddystoneFilter;
 
 @end
 

@@ -14,26 +14,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-#define ESTRequestPostFormDataErrorDomain @"ESTRequestPostFormDataErrorDomain"
-
-/*
- *  ESTRequestPostFormDataError
- *
- *  Discussion:
- *      Specifies different types of errors that can occure for this request.
- *
- */
-typedef NS_ENUM(NSInteger, ESTRequestPostFormDataError)
-{
-    /** You have no access to requested resource or it doesn't exist. */
-    ESTRequestPostFormDataErrorNotResource,
-    /** Access was not authorized for this request. */
-    ESTRequestPostFormDataErrorNotAuthorized,
-    /** Cloud API failed to handle request. */
-    ESTRequestPostFormDataErrorCloudReturnedError
-};
-
-
 /**
  * ESTRequestPostFormData class allows you to create POST request for sending single file
  * to cloud, if cloud api requires multipart/form-data as Content-Type.

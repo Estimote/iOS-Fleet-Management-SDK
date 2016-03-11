@@ -31,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 *
 *  @return Instance of this object.
 */
-- (instancetype)initWithDelegate:(id<ESTNearableManagerDelegate> _Nullable)delegate;
+- (instancetype)initWithDelegate:(id<ESTNearableManagerDelegate> )delegate;
 
 /**
 *  Use this initializer if you want to specify nearables in JSON.
@@ -46,7 +46,7 @@ NS_ASSUME_NONNULL_BEGIN
 *
 *  @return Instance of this object.
 */
-- (instancetype)initWithDelegate:(id<ESTNearableManagerDelegate> _Nullable)delegate
+- (instancetype)initWithDelegate:(id<ESTNearableManagerDelegate> )delegate
                      pathForJSON:(NSString *)path;
 
 - (ESTNearable *)generateRandomNearableAndAddToSimulator:(BOOL)add;

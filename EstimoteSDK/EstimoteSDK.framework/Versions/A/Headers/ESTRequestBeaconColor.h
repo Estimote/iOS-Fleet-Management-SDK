@@ -29,7 +29,7 @@ typedef NS_ENUM(NSInteger, ESTRequestBeaconColorError)
     ESTRequestBeaconColorErrorColorNotAvailable
 };
 
-typedef void(^ESTRequestBeaconColorBlock)(ESTColor beaconColor, NSError * _Nullable error);
+typedef void(^ESTRequestBeaconColorBlock)(ESTColor beaconColor, NSError *  error);
 
 /**
  *  ESTRequestBeaconColor is used to fetch color of single beacon device.
@@ -37,11 +37,11 @@ typedef void(^ESTRequestBeaconColorBlock)(ESTColor beaconColor, NSError * _Nulla
 
 @interface ESTRequestBeaconColor : ESTRequestGetJSON
 
-@property (nonatomic, strong, readonly) NSString * _Nullable macAddress;
+@property (nonatomic, strong, readonly) NSString *  macAddress;
 
-@property (nonatomic, strong, readonly) NSUUID * _Nullable proximityUUID;
-@property (nonatomic, strong, readonly) NSNumber * _Nullable major;
-@property (nonatomic, strong, readonly) NSNumber * _Nullable minor;
+@property (nonatomic, strong, readonly) NSUUID *  proximityUUID;
+@property (nonatomic, strong, readonly) NSNumber *  major;
+@property (nonatomic, strong, readonly) NSNumber *  minor;
 
 /**
  *  Initialise request with MAC address.

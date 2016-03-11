@@ -35,7 +35,7 @@ typedef NS_ENUM(NSInteger, ESTBeaconManagerError)
  *
  * @see ESTBeaconManagerDelegate
  */
-@property (nonatomic, weak) id <ESTBeaconManagerDelegate> _Nullable delegate;
+@property (nonatomic, weak) id <ESTBeaconManagerDelegate>  delegate;
 
 #pragma mark iBeacon utilities
 ///--------------------------------------------------------------------
@@ -154,6 +154,7 @@ typedef NS_ENUM(NSInteger, ESTBeaconManagerError)
  * @param region The region object that defines the boundary to monitor. This parameter must not be `nil.`
  *
  * @see stopMonitoringForRegion:
+ * @see stopMonitoringForAllRegions
  */
 - (void)startMonitoringForRegion:(CLBeaconRegion *)region;
 
@@ -165,8 +166,17 @@ typedef NS_ENUM(NSInteger, ESTBeaconManagerError)
  * @param region The region object currently being monitored. This parameter must not be `nil`. The object you specify need not be the exact same object that you registered but its beacon region attributes should be the same.
  *
  * @see startMonitoringForRegion:
+ * @see stopMonitoringForAllRegions
  */
 - (void)stopMonitoringForRegion:(CLBeaconRegion *)region;
+
+/**
+ * Stops monitoring all monitored regions.
+ *
+ * @see startMonitoringForRegion:
+ * @see stopMonitoringForRegion:
+ */
+- (void)stopMonitoringForAllRegions;
 
 /**
  * Starts the delivery of notifications for beacons in the specified region.
@@ -176,6 +186,7 @@ typedef NS_ENUM(NSInteger, ESTBeaconManagerError)
  * @param region The region object that defines the identifying information for the targeted beacons. The number of beacons represented by this region object depends on which identifier values you use to initialize it. Beacons must match all of the identifiers you specify. This method copies the region information it needs from the object you provide. If `nil`, defaults to targeting all beacons with `proximityUUID` equal to `ESTIMOTE_PROXIMITY_UUID`.
  *
  * @see stopRangingBeaconsInRegion:
+ * @see stopRangingBeaconsInAllRegions
  */
 - (void)startRangingBeaconsInRegion:(CLBeaconRegion *)region;
 
@@ -185,8 +196,17 @@ typedef NS_ENUM(NSInteger, ESTBeaconManagerError)
  * @param region The region that identifies the beacons. The object you specify need not be the exact same object that you registered but its beacon region attributes should be the same. If `nil`, defaults to targeting all beacons with `proximityUUID` equal to `ESTIMOTE_PROXIMITY_UUID`.
  *
  * @see startRangingBeaconsInRegion:
+ * @see stopRangingBeaconsInAllRegions
  */
 - (void)stopRangingBeaconsInRegion:(CLBeaconRegion *)region;
+
+/**
+ * Stops the delivery of notifications for all ranged beacon regions.
+ *
+ * @see startRangingBeaconsInRegion:
+ * @see stopRangingBeaconsInRegion:
+ */
+- (void)stopRangingBeaconsInAllRegions;
 
 /**
  * Retrieves the state of a region.

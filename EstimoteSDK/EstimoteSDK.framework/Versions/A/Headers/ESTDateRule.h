@@ -19,8 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ESTDateRule : ESTRule 
 
-@property (nonatomic, strong) NSNumber * _Nullable afterHour;
-@property (nonatomic, strong) NSNumber * _Nullable beforeHour;
+@property (nonatomic, strong) NSNumber *  afterHour;
+@property (nonatomic, strong) NSNumber *  beforeHour;
 
 /**
  *  Initialization method creating rule when targeted hour is later then.

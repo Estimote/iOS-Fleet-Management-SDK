@@ -33,7 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @return NSData representing setting value
  */
-- (NSData * _Nullable)getValueData;
+- (NSData * )getValueData;
 
 /**
  *  Method updates setting value based on NSData object delivered from the device.
@@ -62,6 +62,14 @@ NS_ASSUME_NONNULL_BEGIN
 * You should use ESTErrorCodeInvalidValue as a error code.
 */
 - (NSError *)validateValue;
+
+/**
+ *  Decorator method that should update particular field in settings object
+ *  with proper value it is carrying.
+ *
+ *  @param settings Settings object that should be decorated
+ */
+- (void)updateValueInSettings:(id)settings;
 
 @end
 

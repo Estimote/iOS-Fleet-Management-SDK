@@ -1,3 +1,20 @@
+## 4.0.0 (March 11, 2016)
+
+Features:
+
+- Two brand new management APIs: Convenience API and Advanced API.
+- Separate classes for each device setting.
+- Support for Estimote Location and Estimote Telemetry packets.
+- Multipacket support for next gen beacons - now devices can broadcast multiple packets, with separate powers and advertising intervals independently.
+- Motion and temperature notifications support for next gen beacons.
+- GPIO support for next gen beacons.
+- Dark To Sleep support for next gen beacons.
+- ESTDeviceManager class for connectivity packet discovery.
+
+Improvements:
+
+- Using Cloud API v2 under the hood for next gen beacons synchronizes settings with Cloud during connection process.
+
 ## 3.8.2 (January 19, 2016)
 
 Improvements:

@@ -14,21 +14,41 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+
 /**
  *  Eddystone-UID based filter used by `ESTEddystoneManager` in discovery process.
- *  Filter should be initialized with `ESTEddystoneUID` object that is matching device(s)
- *  should be discovered. In ESTEddystoneUID object only Namespace ID is required,
+ *  Filter should be initialized with namespaceID and instanceID 
+ *  that is matching device(s) should be discovered. Only Namespace ID is required,
  *  Instance ID can be provided optionally for better flexibility.
  */
-
 @interface ESTEddystoneFilterUID : ESTEddystoneFilter
 
-@property (nonatomic, strong, readonly) ESTEddystoneUID *eddystoneUID;
+/**
+ *  Namespace ID required for device identification.
+ *  Value usually defined on the company level.
+ */
+@property (nonatomic, strong, readonly) NSString *  namespaceID;
 
 /**
-* Initialize filter with `ESTEddystoneUID` object providing NamespaceID and optional InstanceID;
-*/
-- (instancetype)initWithUID:(ESTEddystoneUID *)eddystoneUID;
+ *  Instance ID required for device identification.
+ *  Value defined per device.
+ */
+@property (nonatomic, strong, readonly) NSString *  instanceID;
+
+/**
+ * Initialize Eddystone UUID object instance with Namespace ID only.
+ *
+ * @param namespaceID Eddystone Namespace ID.
+ */
+- (instancetype)initWithNamespaceID:(NSString *)namespaceID;
+
+/**
+ * Initialize Eddystone UUID object instance with Namespace ID and Instance ID.
+ *
+ * @param namespaceID Eddystone Namespace ID.
+ * @param instanceID Eddystone Instance ID.
+ */
+- (instancetype)initWithNamespaceID:(NSString *)namespaceID instanceID:(NSString *)instanceID;
 
 @end
 

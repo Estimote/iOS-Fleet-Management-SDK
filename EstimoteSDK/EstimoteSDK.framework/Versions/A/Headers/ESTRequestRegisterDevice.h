@@ -13,7 +13,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void(^ESTRequestRegisterDeviceBlock)(NSError * _Nullable error);
+typedef void(^ESTRequestRegisterDeviceBlock)(NSError *  error);
 
 /**
  *  Request allows to register device in Estimote Cloud. After registration device can remotely receive information

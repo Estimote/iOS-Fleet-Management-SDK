@@ -17,7 +17,7 @@ class ESTTableViewCell: UITableViewCell
         super.init(style: UITableViewCellStyle.Subtitle, reuseIdentifier: reuseIdentifier)
     }
     
-    required init(coder aDecoder: NSCoder)
+    required init?(coder aDecoder: NSCoder)
     {
         fatalError("init(coder:) has not been implemented")
     }
@@ -64,7 +64,7 @@ class ViewController: UIViewController,
     
     // MARK: - ESTNearableManager delegate
     
-    func nearableManager(manager: ESTNearableManager!, didRangeNearables nearables: [AnyObject]!, withType type: ESTNearableType)
+    func nearableManager(manager: ESTNearableManager, didRangeNearables nearables: [ESTNearable], withType type: ESTNearableType)
     {
         /*
         * Update local nearables array and reload table view
@@ -87,14 +87,13 @@ class ViewController: UIViewController,
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier("CellIdentifier", forIndexPath: indexPath) as ESTTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("CellIdentifier", forIndexPath: indexPath) as! ESTTableViewCell
         
         let nearable = nearables[indexPath.row] as ESTNearable
-        var details:NSString = NSString(format:"Type: %@ RSSI: %zd", ESTNearableDefinitions.nameForType(nearable.type), nearable.rssi);
-        cell.textLabel?.text = NSString(format:"Identifier: %@", nearable.identifier);
-        cell.detailTextLabel?.text = details;
+        cell.textLabel?.text = "Identifier: \(nearable.identifier)"
+        cell.detailTextLabel?.text = "Type: \(ESTNearableDefinitions.nameForType(nearable.type)) RSSI: \(nearable.rssi)"
         
-        var imageView = UIImageView(frame: CGRectMake(self.view.frame.size.width - 60, 30, 30, 30))
+        let imageView = UIImageView(frame: CGRectMake(self.view.frame.size.width - 60, 30, 30, 30))
         imageView.contentMode = UIViewContentMode.ScaleAspectFill
         imageView.image = self.imageForNearableType(nearable.type)
         cell.contentView.addSubview(imageView)

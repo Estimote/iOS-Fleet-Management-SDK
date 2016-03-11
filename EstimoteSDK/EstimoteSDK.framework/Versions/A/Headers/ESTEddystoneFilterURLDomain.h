@@ -23,6 +23,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ESTEddystoneFilterURLDomain : ESTEddystoneFilter
 
+/**
+ *  URL Domain broadcasted by the device (based on `ESTEddystoneURL`).
+ */
 @property (nonatomic, strong, readonly) NSString *eddystoneURLDomain;
 
 /**

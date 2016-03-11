@@ -54,9 +54,8 @@ class MasterViewController: UITableViewController, ESTNearableManagerDelegate {
     
     // MARK: - ESTNearableManager delegate
     
-    func nearableManager(manager: ESTNearableManager!, _didRangeNearables nearables: [AnyObject]!, withType type: ESTNearableType) {
-        
-        self.nearables = nearables as! Array<ESTNearable>
+    func nearableManager(manager: ESTNearableManager, didRangeNearables nearables: [ESTNearable], withType type: ESTNearableType) {
+        self.nearables = nearables
         tableView.reloadData()
     }
 }

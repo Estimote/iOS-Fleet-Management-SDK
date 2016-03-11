@@ -27,45 +27,45 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  To what proximity UUID beacon should be changed.
  */
-@property (nonatomic, strong) NSString * _Nullable proximityUUID;
+@property (nonatomic, strong) NSString *  proximityUUID;
 
 /**
  *  To what major beacon should be changed.
  */
-@property (nonatomic, strong) NSNumber * _Nullable major;
+@property (nonatomic, strong) NSNumber *  major;
 
 /**
  *  To what minor beacon should be changed.
  */
-@property (nonatomic, strong) NSNumber * _Nullable minor;
+@property (nonatomic, strong) NSNumber *  minor;
 
 /**
  *  To what advertising interval beacon should be changed.
  */
-@property (nonatomic, strong) NSNumber * _Nullable advInterval;
+@property (nonatomic, strong) NSNumber *  advInterval;
 
 /**
  *  To what broadcasting power beacon should be changed.
  */
-@property (nonatomic, strong) NSNumber * _Nullable power;
+@property (nonatomic, strong) NSNumber *  power;
 
 /**
  *  Flag for switching state of basic power mode.
  *  Recommended use: [NSNumber numberWithInt:ESTBeaconPowerSavingMode].
  */
-@property (nonatomic, strong) NSNumber * _Nullable basicPowerMode;
+@property (nonatomic, strong) NSNumber *  basicPowerMode;
 
 /**
  *  Flag for switching state of smart power mode.
  *  Recommended use: [NSNumber numberWithInt:ESTBeaconPowerSavingMode].
  */
-@property (nonatomic, strong) NSNumber * _Nullable smartPowerMode;
+@property (nonatomic, strong) NSNumber *  smartPowerMode;
 
 /**
  *  Flag for switching state of Estimote Secure UUID.
  *  Recommended use: [NSNumber numberWithInt:ESTBeaconPowerSavingMode].
  */
-@property (nonatomic, strong) NSNumber * _Nullable estimoteSecureUUIDState;
+@property (nonatomic, strong) NSNumber *  estimoteSecureUUIDState;
 
 @end
 
