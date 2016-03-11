@@ -22,7 +22,7 @@
 		AEEA894D1C32C90D006378F4 /* ImmediateBeaconDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEA894C1C32C90D006378F4 /* ImmediateBeaconDetector.swift */; };
 		AEF5B0DD1C29AC7300C90621 /* BeaconSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF5B0DC1C29AC7300C90621 /* BeaconSetupViewController.swift */; };
 		AEFCFAD81C3FBE780036EAB7 /* SwiftState.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEFCFAD71C3FBE780036EAB7 /* SwiftState.framework */; };
-		FAE9C7DD1C92F06A0080DA17 /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE9C7DC1C92F06A0080DA17 /* EstimoteSDK.framework */; };
+		FA755ECC1C93063A0023D60E /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA755ECB1C93063A0023D60E /* EstimoteSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,7 +44,7 @@
 		AEEA894C1C32C90D006378F4 /* ImmediateBeaconDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImmediateBeaconDetector.swift; sourceTree = "<group>"; };
 		AEF5B0DC1C29AC7300C90621 /* BeaconSetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconSetupViewController.swift; sourceTree = "<group>"; };
 		AEFCFAD71C3FBE780036EAB7 /* SwiftState.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftState.framework; path = ../../Carthage/Build/iOS/SwiftState.framework; sourceTree = "<group>"; };
-		FAE9C7DC1C92F06A0080DA17 /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EstimoteSDK.framework; path = ../../../../../EstimoteSDK/EstimoteSDK.framework; sourceTree = "<group>"; };
+		FA755ECB1C93063A0023D60E /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EstimoteSDK.framework; path = ../../../../../EstimoteSDK/EstimoteSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +53,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEFCFAD81C3FBE780036EAB7 /* SwiftState.framework in Frameworks */,
-				FAE9C7DD1C92F06A0080DA17 /* EstimoteSDK.framework in Frameworks */,
+				FA755ECC1C93063A0023D60E /* EstimoteSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,8 +103,8 @@
 				AE5AC2511C29610600158445 /* BeaconPlaceholderView.swift */,
 				AEEA894C1C32C90D006378F4 /* ImmediateBeaconDetector.swift */,
 				AE090D311C747B85009C8468 /* GeoLocator.swift */,
+				FA755ECB1C93063A0023D60E /* EstimoteSDK.framework */,
 				AEFCFAD71C3FBE780036EAB7 /* SwiftState.framework */,
-				FAE9C7DC1C92F06A0080DA17 /* EstimoteSDK.framework */,
 			);
 			path = Estimote;
 			sourceTree = "<group>";
@@ -341,6 +341,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Configuration/Estimote",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/../../../EstimoteSDK",
 				);
 				INFOPLIST_FILE = Configuration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -359,6 +360,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Configuration/Estimote",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/../../../EstimoteSDK",
 				);
 				INFOPLIST_FILE = Configuration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
