@@ -6,7 +6,7 @@
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.2 (build 963)" />
+		<meta name="generator" content="appledoc 2.2.1 (build 1334)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -79,7 +79,11 @@
 	
 	<option value="//api/name/startRangingBeaconsInRegion:">&nbsp;&nbsp;&nbsp;&nbsp;- startRangingBeaconsInRegion:</option>
 	
+	<option value="//api/name/stopMonitoringForAllRegions">&nbsp;&nbsp;&nbsp;&nbsp;- stopMonitoringForAllRegions</option>
+	
 	<option value="//api/name/stopMonitoringForRegion:">&nbsp;&nbsp;&nbsp;&nbsp;- stopMonitoringForRegion:</option>
+	
+	<option value="//api/name/stopRangingBeaconsInAllRegions">&nbsp;&nbsp;&nbsp;&nbsp;- stopRangingBeaconsInAllRegions</option>
 	
 	<option value="//api/name/stopRangingBeaconsInRegion:">&nbsp;&nbsp;&nbsp;&nbsp;- stopRangingBeaconsInRegion:</option>
 	
@@ -161,7 +165,11 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/startRangingBeaconsInRegion:">startRangingBeaconsInRegion:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stopMonitoringForAllRegions">stopMonitoringForAllRegions</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stopMonitoringForRegion:">stopMonitoringForRegion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stopRangingBeaconsInAllRegions">stopRangingBeaconsInAllRegions</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stopRangingBeaconsInRegion:">stopRangingBeaconsInRegion:</a></span></li>
 	
@@ -194,7 +202,7 @@
 	<td class="specification-value">NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">ESTBeaconManager.h<br />ESTBeaconManager.m</td>
+	<td class="specification-value">ESTBeaconManager.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -324,6 +332,12 @@
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/stopMonitoringForAllRegions">&ndash;&nbsp;stopMonitoringForAllRegions</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/startRangingBeaconsInRegion:">&ndash;&nbsp;startRangingBeaconsInRegion:</a></code>
 	</span>
 	
@@ -331,6 +345,12 @@
 </li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/stopRangingBeaconsInRegion:">&ndash;&nbsp;stopRangingBeaconsInRegion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stopRangingBeaconsInAllRegions">&ndash;&nbsp;stopRangingBeaconsInAllRegions</a></code>
 	</span>
 	
 	
@@ -427,7 +447,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;ESTBeaconManagerDelegate&gt; _Nullable delegate</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;ESTBeaconManagerDelegate&gt; delegate</code></div>
 
     
 	
@@ -1071,6 +1091,8 @@ Motion Proximity UUID is created by reversing first bit of corresponding Proximi
 			
 			<li><code><p><a href="#//api/name/stopMonitoringForRegion:">- stopMonitoringForRegion:</a></p></code></li>
 			
+			<li><code><p><a href="#//api/name/stopMonitoringForAllRegions">- stopMonitoringForAllRegions</a></p></code></li>
+			
 		</ul>
 	</div>
 	
@@ -1130,6 +1152,55 @@ Motion Proximity UUID is created by reversing first bit of corresponding Proximi
 		<ul>
 			
 			<li><code><p><a href="#//api/name/stopRangingBeaconsInRegion:">- stopRangingBeaconsInRegion:</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/stopRangingBeaconsInAllRegions">- stopRangingBeaconsInAllRegions</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/stopMonitoringForAllRegions" title="stopMonitoringForAllRegions"></a>
+	<h3 class="subsubtitle method-title">stopMonitoringForAllRegions</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Stops monitoring all monitored regions.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)stopMonitoringForAllRegions</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/startMonitoringForRegion:">- startMonitoringForRegion:</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/stopMonitoringForRegion:">- stopMonitoringForRegion:</a></p></code></li>
 			
 		</ul>
 	</div>
@@ -1191,6 +1262,55 @@ Motion Proximity UUID is created by reversing first bit of corresponding Proximi
 			
 			<li><code><p><a href="#//api/name/startMonitoringForRegion:">- startMonitoringForRegion:</a></p></code></li>
 			
+			<li><code><p><a href="#//api/name/stopMonitoringForAllRegions">- stopMonitoringForAllRegions</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/stopRangingBeaconsInAllRegions" title="stopRangingBeaconsInAllRegions"></a>
+	<h3 class="subsubtitle method-title">stopRangingBeaconsInAllRegions</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Stops the delivery of notifications for all ranged beacon regions.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)stopRangingBeaconsInAllRegions</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/startRangingBeaconsInRegion:">- startRangingBeaconsInRegion:</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/stopRangingBeaconsInRegion:">- stopRangingBeaconsInRegion:</a></p></code></li>
+			
 		</ul>
 	</div>
 	
@@ -1245,6 +1365,8 @@ Motion Proximity UUID is created by reversing first bit of corresponding Proximi
 		<ul>
 			
 			<li><code><p><a href="#//api/name/startRangingBeaconsInRegion:">- startRangingBeaconsInRegion:</a></p></code></li>
+			
+			<li><code><p><a href="#//api/name/stopRangingBeaconsInAllRegions">- stopRangingBeaconsInAllRegions</a></p></code></li>
 			
 		</ul>
 	</div>
@@ -1310,6 +1432,9 @@ Motion Proximity UUID is created by reversing first bit of corresponding Proximi
 					
                     
                     
+                    
+                    
+
 				</div>
 				<div class="main-navigation navigation-bottom">
 					<ul>
@@ -1320,9 +1445,9 @@ Motion Proximity UUID is created by reversing first bit of corresponding Proximi
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-10-02)</span><br />
+						<p><span class="copyright">&copy; 2016 Estimote. All rights reserved. (Last updated: 2016-03-11)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</span></p>
 						
 					</div>
 				</div>

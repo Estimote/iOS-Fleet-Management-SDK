@@ -6,7 +6,7 @@
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.2 (build 963)" />
+		<meta name="generator" content="appledoc 2.2.1 (build 1334)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -37,13 +37,22 @@
 	
 	
 	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/instanceID">&nbsp;&nbsp;&nbsp;&nbsp;instanceID</option>
+	
+	<option value="//api/name/namespaceID">&nbsp;&nbsp;&nbsp;&nbsp;namespaceID</option>
+	
+	
 	
 	
 	
 	
 	<option value="instance_methods">Instance Methods</option>
 	
-	<option value="//api/name/initWithUID:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithUID:</option>
+	<option value="//api/name/initWithNamespaceID:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithNamespaceID:</option>
+	
+	<option value="//api/name/initWithNamespaceID:instanceID:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithNamespaceID:instanceID:</option>
 	
 	
 	
@@ -67,13 +76,23 @@
 
 
 
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/instanceID">instanceID</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/namespaceID">namespaceID</a></span></li>
+	
+</ul></li>
+
 
 
 
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithUID:">initWithUID:</a></span></li>
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithNamespaceID:">initWithNamespaceID:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithNamespaceID:instanceID:">initWithNamespaceID:instanceID:</a></span></li>
 	
 </ul></li>
 
@@ -99,10 +118,10 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Inherits from</td>
-	<td class="specification-value">ESTEddystoneFilter : NSObject</td>
+	<td class="specification-value"><a href="../Classes/ESTEddystoneFilter.html">ESTEddystoneFilter</a> : NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">ESTEddystoneFilterUID.h<br />ESTEddystoneFilterUID.m</td>
+	<td class="specification-value">ESTEddystoneFilterUID.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -113,8 +132,8 @@
 						<a title="Overview" name="overview"></a>
 						<h2 class="subtitle subtitle-overview">Overview</h2>
 						<p>Eddystone-UID based filter used by <code>ESTEddystoneManager</code> in discovery process.
-Filter should be initialized with <code>ESTEddystoneUID</code> object that is matching device(s)
-should be discovered. In ESTEddystoneUID object only Namespace ID is required,
+Filter should be initialized with namespaceID and instanceID
+that is matching device(s) should be discovered. Only Namespace ID is required,
 Instance ID can be provided optionally for better flexibility.</p>
 					</div>
 					
@@ -133,7 +152,25 @@ Instance ID can be provided optionally for better flexibility.</p>
 						<ul class="task-list">
 							<li>
 	<span class="tooltip">
-		<code><a href="#//api/name/initWithUID:">&ndash;&nbsp;initWithUID:</a></code>
+		<code><a href="#//api/name/namespaceID">&nbsp;&nbsp;namespaceID</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/instanceID">&nbsp;&nbsp;instanceID</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithNamespaceID:">&ndash;&nbsp;initWithNamespaceID:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithNamespaceID:instanceID:">&ndash;&nbsp;initWithNamespaceID:instanceID:</a></code>
 	</span>
 	
 	
@@ -146,27 +183,61 @@ Instance ID can be provided optionally for better flexibility.</p>
 					
 					
 					
-					
-					
-					
-					
 					<div class="section section-methods">
-						<a title="Instance Methods" name="instance_methods"></a>
-						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
 						
 						<div class="section-method">
-	<a name="//api/name/initWithUID:" title="initWithUID:"></a>
-	<h3 class="subsubtitle method-title">initWithUID:</h3>
+	<a name="//api/name/instanceID" title="instanceID"></a>
+	<h3 class="subsubtitle method-title">instanceID</h3>
 	
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Initialize filter with <code>ESTEddystoneUID</code> object providing NamespaceID and optional InstanceID;</p>
+		<p>Instance ID required for device identification.
+Value defined per device.</p>
 	</div>		
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (instancetype)initWithUID:(ESTEddystoneUID *)<em>eddystoneUID</em></code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSString *instanceID</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTEddystoneFilterUID.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/namespaceID" title="namespaceID"></a>
+	<h3 class="subsubtitle method-title">namespaceID</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Namespace ID required for device identification.
+Value usually defined on the company level.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSString *namespaceID</code></div>
 
     
 	
@@ -193,8 +264,118 @@ Instance ID can be provided optionally for better flexibility.</p>
 					</div>
 					
 					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithNamespaceID:" title="initWithNamespaceID:"></a>
+	<h3 class="subsubtitle method-title">initWithNamespaceID:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initialize Eddystone UUID object instance with Namespace ID only.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithNamespaceID:(NSString *)<em>namespaceID</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>namespaceID</em></dt>
+			<dd><p>Eddystone Namespace ID.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTEddystoneFilterUID.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithNamespaceID:instanceID:" title="initWithNamespaceID:instanceID:"></a>
+	<h3 class="subsubtitle method-title">initWithNamespaceID:instanceID:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initialize Eddystone UUID object instance with Namespace ID and Instance ID.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithNamespaceID:(NSString *)<em>namespaceID</em> instanceID:(NSString *)<em>instanceID</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>namespaceID</em></dt>
+			<dd><p>Eddystone Namespace ID.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>instanceID</em></dt>
+			<dd><p>Eddystone Instance ID.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTEddystoneFilterUID.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
                     
                     
+                    
+                    
+
 				</div>
 				<div class="main-navigation navigation-bottom">
 					<ul>
@@ -205,9 +386,9 @@ Instance ID can be provided optionally for better flexibility.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-10-02)</span><br />
+						<p><span class="copyright">&copy; 2016 Estimote. All rights reserved. (Last updated: 2016-03-11)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</span></p>
 						
 					</div>
 				</div>

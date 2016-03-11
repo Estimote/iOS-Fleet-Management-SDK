@@ -6,7 +6,7 @@
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.2 (build 963)" />
+		<meta name="generator" content="appledoc 2.2.1 (build 1334)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -76,13 +76,31 @@
                     
                     <h3 class="subsubtitle method-title">ESTRequestBaseError</h3>
                     
+					
+					<div class="section section-overview">
+                        <p>Describes possible errors that can occur during sending request.</p>
+					</div>
+					
+					
                     <div class="section">
                         <!-- display enum values -->
                         
                         <h4 class="method-subtitle">Definition</h4>
                         <code>typedef NS_ENUM(NSInteger, ESTRequestBaseError ) {<br/>
                             
-                            &nbsp;&nbsp; <a href="">ESTRequestBaseErrorConnectionFail</a>,<br/>
+                            &nbsp;&nbsp; <a href="">ESTRequestBaseErrorConnectionFail</a> = -1,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">ESTRequestBaseErrorNoData</a> = -2,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">ESTRequestBaseErrorBadRequest</a> = 400,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">ESTRequestBaseErrorUnauthorized</a> = 401,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">ESTRequestBaseErrorForbidden</a> = 403,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">ESTRequestBaseErrorNotFound</a> = 404,<br/>
+                            
+                            &nbsp;&nbsp; <a href="">ESTRequestBaseErrorInternalServerError</a> = 500,<br/>
                             
                             };</code>
                     
@@ -94,6 +112,115 @@
                             
                             <dt><a name="" title="ESTRequestBaseErrorConnectionFail"></a><code>ESTRequestBaseErrorConnectionFail</code></dt>
 <dd>
+
+
+<p>Error was encountered during the connection attempt.</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">ESTRequestBase.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ESTRequestBaseErrorNoData"></a><code>ESTRequestBaseErrorNoData</code></dt>
+<dd>
+
+
+<p>No data was returned as a response or it couldn&rsquo;t be parsed as JSON.</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">ESTRequestBase.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ESTRequestBaseErrorBadRequest"></a><code>ESTRequestBaseErrorBadRequest</code></dt>
+<dd>
+
+
+<p>The server cannot or will not process the request due to an apparent client error.</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">ESTRequestBase.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ESTRequestBaseErrorUnauthorized"></a><code>ESTRequestBaseErrorUnauthorized</code></dt>
+<dd>
+
+
+<p>The server is refusing to respond to the request, authorization is required for the resource.</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">ESTRequestBase.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ESTRequestBaseErrorForbidden"></a><code>ESTRequestBaseErrorForbidden</code></dt>
+<dd>
+
+
+<p>The server is refusing to respond to the request, the user does not have the necessary permissions for the resource.</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">ESTRequestBase.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ESTRequestBaseErrorNotFound"></a><code>ESTRequestBaseErrorNotFound</code></dt>
+<dd>
+
+
+<p>The requested resource could not be found.</p>
+
+
+
+
+
+    
+	<p>
+		Declared In <code class="declared-in-ref">ESTRequestBase.h</code>.
+	</p>
+	
+</dd>
+                            
+                            <dt><a name="" title="ESTRequestBaseErrorInternalServerError"></a><code>ESTRequestBaseErrorInternalServerError</code></dt>
+<dd>
+
+
+<p>Estimote Cloud failed to properly handle the request.</p>
+
+
+
+
 
     
 	<p>
@@ -108,6 +235,20 @@
                     
                     
                     
+
+                    
+                    
+                    
+                    <div class="method-subsection declared-in-section">
+                        <h4 class="method-subtitle">Declared In</h4>
+                        <code class="declared-in-ref">ESTRequestBase.h</code><br />
+                    </div>				
+                    
+                    
+                    
+                    
+                    
+
 				</div>
 				<div class="main-navigation navigation-bottom">
 					<ul>
@@ -118,9 +259,9 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-10-02)</span><br />
+						<p><span class="copyright">&copy; 2016 Estimote. All rights reserved. (Last updated: 2016-03-11)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</span></p>
 						
 					</div>
 				</div>

@@ -6,7 +6,7 @@
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.2 (build 963)" />
+		<meta name="generator" content="appledoc 2.2.1 (build 1334)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -51,8 +51,6 @@
 	
 	<option value="//api/name/macAddress">&nbsp;&nbsp;&nbsp;&nbsp;macAddress</option>
 	
-	<option value="//api/name/peripheralID">&nbsp;&nbsp;&nbsp;&nbsp;peripheralID</option>
-	
 	<option value="//api/name/status">&nbsp;&nbsp;&nbsp;&nbsp;status</option>
 	
 	<option value="//api/name/syncedAt">&nbsp;&nbsp;&nbsp;&nbsp;syncedAt</option>
@@ -90,8 +88,6 @@
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Extension Methods">Extension Methods</a></span></li>
-	
 </ul></li>
 
 
@@ -111,8 +107,6 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/error">error</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/macAddress">macAddress</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/peripheralID">peripheralID</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/status">status</a></span></li>
 	
@@ -166,7 +160,7 @@
 	<td class="specification-value">NSCoding</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
-	<td class="specification-value">ESTBeaconUpdateInfo.h<br />ESTBeaconUpdateInfo.m</td>
+	<td class="specification-value">ESTBeaconUpdateInfo.h</td>
 </tr>
 						</tbody></table></div>
 					
@@ -189,7 +183,7 @@
 						
 						
 						
-						<h3 class="subsubtitle task-title">Other Methods</h3>
+						
 
 						<ul class="task-list">
 							<li>
@@ -269,20 +263,6 @@
 		<code><a href="#//api/name/description">&ndash;&nbsp;description</a></code>
 	</span>
 	
-	
-</li>
-						</ul>
-						
-						
-						<a title="Extension Methods" name="task_Extension Methods"></a>
-						<h3 class="subsubtitle task-title">Extension Methods</h3>
-
-						<ul class="task-list">
-							<li>
-	<span class="tooltip">
-		<code><a href="#//api/name/peripheralID">&nbsp;&nbsp;peripheralID</a></code>
-	</span>
-	<span class="task-item-suffix">property</span>
 	
 </li>
 						</ul>
@@ -417,7 +397,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;ESBeaconUpdateInfoDelegate&gt; _Nullable delegate</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;ESBeaconUpdateInfoDelegate&gt; delegate</code></div>
 
     
 	
@@ -508,42 +488,6 @@
 	<div class="method-subsection declared-in-section">
 		<h4 class="method-subtitle">Declared In</h4>
 		<code class="declared-in-ref">ESTBeaconUpdateInfo.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/peripheralID" title="peripheralID"></a>
-	<h3 class="subsubtitle method-title">peripheralID</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Bluetooth Peripheral object related to the beacon.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSString *peripheralID</code></div>
-
-    
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">ESTBeaconUpdateInfo.m</code><br />
 	</div>				
 	
 	
@@ -779,7 +723,7 @@ with delegate object.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (instancetype)initWithMacAddress:(NSString *)<em>macAddress</em> config:(ESTBeaconUpdateConfig *)<em>config</em> delegate:(id&lt;ESBeaconUpdateInfoDelegate&gt; _Nullable)<em>delegate</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithMacAddress:(NSString *)<em>macAddress</em> config:(ESTBeaconUpdateConfig *)<em>config</em> delegate:(id&lt;ESBeaconUpdateInfoDelegate&gt;)<em>delegate</em></code></div>
 
     
 	
@@ -879,6 +823,9 @@ with delegate object.</p>
 					
                     
                     
+                    
+                    
+
 				</div>
 				<div class="main-navigation navigation-bottom">
 					<ul>
@@ -889,9 +836,9 @@ with delegate object.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2015 Estimote. All rights reserved. (Last updated: 2015-10-02)</span><br />
+						<p><span class="copyright">&copy; 2016 Estimote. All rights reserved. (Last updated: 2016-03-11)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</span></p>
 						
 					</div>
 				</div>
