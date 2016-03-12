@@ -5,12 +5,12 @@
 
 #import "ProximityContentManager.h"
 
-#import "BeaconContentCache.h"
+#import "BeaconContentFactory.h"
 #import "NearestBeaconManager.h"
 
 @interface ProximityContentManager () <NearestBeaconManagerDelegate>
 
-@property (nonatomic) BeaconContentCache *beaconContentCache;
+@property (nonatomic) id<BeaconContentFactory> beaconContentFactory;
 @property (nonatomic) NearestBeaconManager *nearestBeaconManager;
 
 @end
@@ -20,7 +20,7 @@
 - (instancetype)initWithBeaconRegions:(NSArray *)beaconRegions beaconContentFactory:(id<BeaconContentFactory>)beaconContentFactory {
     self = [super init];
     if (self) {
-        self.beaconContentCache = [[BeaconContentCache alloc] initWithBeaconContentFactory:beaconContentFactory];
+        self.beaconContentFactory = beaconContentFactory;
         self.nearestBeaconManager = [[NearestBeaconManager alloc] initWithBeaconRegions:beaconRegions];
         self.nearestBeaconManager.delegate = self;
     }
@@ -45,7 +45,7 @@
 
 - (void)nearestBeaconManager:(NearestBeaconManager *)nearestBeaconManager didUpdateNearestBeaconID:(BeaconID *)beaconID {
     if (beaconID) {
-        [self.beaconContentCache contentForBeaconID:beaconID completion:^(id content) {
+        [self.beaconContentFactory contentForBeaconID:beaconID completion:^(id content) {
             [self.delegate proximityContentManager:self didUpdateContent:content];
         }];
     } else {

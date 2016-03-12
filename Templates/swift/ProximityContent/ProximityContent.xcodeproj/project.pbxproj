@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AECA380F1B8F2758009A9324 /* EstimoteCloudBeaconDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECA380E1B8F2757009A9324 /* EstimoteCloudBeaconDetails.swift */; };
+		AE9764471C2037730058A4DC /* BeaconDetailsStaticFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9764461C2037730058A4DC /* BeaconDetailsStaticFactory.swift */; };
+		AE9764491C2037AA0058A4DC /* BeaconDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9764481C2037AA0058A4DC /* BeaconDetails.swift */; };
+		AECA380F1B8F2758009A9324 /* BeaconDetailsCloudFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECA380E1B8F2757009A9324 /* BeaconDetailsCloudFactory.swift */; };
 		AECA38121B904D2A009A9324 /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AECA38111B904D2A009A9324 /* EstimoteSDK.framework */; };
 		AECA38141B904D49009A9324 /* NearestBeaconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECA38131B904D49009A9324 /* NearestBeaconManager.swift */; };
 		AECA381A1B904E1F009A9324 /* BeaconID.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECA38191B904E1F009A9324 /* BeaconID.swift */; };
-		AECA381C1B907836009A9324 /* BeaconContentCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECA381B1B907836009A9324 /* BeaconContentCache.swift */; };
+		AECA381C1B907836009A9324 /* CachingContentFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECA381B1B907836009A9324 /* CachingContentFactory.swift */; };
 		AECA38201B908E60009A9324 /* ProximityContentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECA381F1B908E60009A9324 /* ProximityContentManager.swift */; };
 		AECA38361B948BCE009A9324 /* BeaconContentFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECA38351B948BCE009A9324 /* BeaconContentFactory.swift */; };
 		AECF16611B0E0B1000CC83B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECF16601B0E0B1000CC83B2 /* AppDelegate.swift */; };
@@ -22,11 +24,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AECA380E1B8F2757009A9324 /* EstimoteCloudBeaconDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EstimoteCloudBeaconDetails.swift; path = ProximityContent/Estimote/EstimoteCloudBeaconDetails.swift; sourceTree = SOURCE_ROOT; };
+		AE9764461C2037730058A4DC /* BeaconDetailsStaticFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconDetailsStaticFactory.swift; sourceTree = "<group>"; };
+		AE9764481C2037AA0058A4DC /* BeaconDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconDetails.swift; sourceTree = "<group>"; };
+		AECA380E1B8F2757009A9324 /* BeaconDetailsCloudFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BeaconDetailsCloudFactory.swift; path = ProximityContent/Estimote/BeaconDetailsCloudFactory.swift; sourceTree = SOURCE_ROOT; };
 		AECA38111B904D2A009A9324 /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EstimoteSDK.framework; path = ../../../../../EstimoteSDK/EstimoteSDK.framework; sourceTree = "<group>"; };
 		AECA38131B904D49009A9324 /* NearestBeaconManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearestBeaconManager.swift; sourceTree = "<group>"; };
 		AECA38191B904E1F009A9324 /* BeaconID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconID.swift; sourceTree = "<group>"; };
-		AECA381B1B907836009A9324 /* BeaconContentCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconContentCache.swift; sourceTree = "<group>"; };
+		AECA381B1B907836009A9324 /* CachingContentFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CachingContentFactory.swift; sourceTree = "<group>"; };
 		AECA381F1B908E60009A9324 /* ProximityContentManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProximityContentManager.swift; sourceTree = "<group>"; };
 		AECA38351B948BCE009A9324 /* BeaconContentFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconContentFactory.swift; sourceTree = "<group>"; };
 		AECF165B1B0E0B1000CC83B2 /* ProximityContent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProximityContent.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,10 +59,12 @@
 			isa = PBXGroup;
 			children = (
 				AECA38111B904D2A009A9324 /* EstimoteSDK.framework */,
-				AECA381B1B907836009A9324 /* BeaconContentCache.swift */,
 				AECA38351B948BCE009A9324 /* BeaconContentFactory.swift */,
+				AE9764481C2037AA0058A4DC /* BeaconDetails.swift */,
+				AECA380E1B8F2757009A9324 /* BeaconDetailsCloudFactory.swift */,
+				AE9764461C2037730058A4DC /* BeaconDetailsStaticFactory.swift */,
 				AECA38191B904E1F009A9324 /* BeaconID.swift */,
-				AECA380E1B8F2757009A9324 /* EstimoteCloudBeaconDetails.swift */,
+				AECA381B1B907836009A9324 /* CachingContentFactory.swift */,
 				AECA38131B904D49009A9324 /* NearestBeaconManager.swift */,
 				AECA381F1B908E60009A9324 /* ProximityContentManager.swift */,
 			);
@@ -188,11 +194,13 @@
 				AECA38361B948BCE009A9324 /* BeaconContentFactory.swift in Sources */,
 				AECA38201B908E60009A9324 /* ProximityContentManager.swift in Sources */,
 				AECF16631B0E0B1000CC83B2 /* ViewController.swift in Sources */,
-				AECA381C1B907836009A9324 /* BeaconContentCache.swift in Sources */,
+				AECA381C1B907836009A9324 /* CachingContentFactory.swift in Sources */,
 				AECF16611B0E0B1000CC83B2 /* AppDelegate.swift in Sources */,
 				AECA38141B904D49009A9324 /* NearestBeaconManager.swift in Sources */,
 				AECA381A1B904E1F009A9324 /* BeaconID.swift in Sources */,
-				AECA380F1B8F2758009A9324 /* EstimoteCloudBeaconDetails.swift in Sources */,
+				AECA380F1B8F2758009A9324 /* BeaconDetailsCloudFactory.swift in Sources */,
+				AE9764491C2037AA0058A4DC /* BeaconDetails.swift in Sources */,
+				AE9764471C2037730058A4DC /* BeaconDetailsStaticFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

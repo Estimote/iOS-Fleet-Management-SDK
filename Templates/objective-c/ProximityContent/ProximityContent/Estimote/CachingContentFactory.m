@@ -3,9 +3,9 @@
 //  ProximityContent
 //
 
-#import "BeaconContentCache.h"
+#import "CachingContentFactory.h"
 
-@interface BeaconContentCache ()
+@interface CachingContentFactory ()
 
 @property (nonatomic, readonly) id<BeaconContentFactory> beaconContentFactory;
 
@@ -13,7 +13,7 @@
 
 @end
 
-@implementation BeaconContentCache
+@implementation CachingContentFactory
 
 - (instancetype)initWithBeaconContentFactory:(id<BeaconContentFactory>)beaconContentFactory {
     self = [super init];

@@ -5,8 +5,9 @@
 
 #import "ViewController.h"
 
-#import "EstimoteCloudBeaconDetails.h"
-#import "EstimoteCloudBeaconDetailsFactory.h"
+#import "BeaconDetails.h"
+#import "BeaconDetailsCloudFactory.h"
+#import "CachingContentFactory.h"
 #import "ProximityContentManager.h"
 
 @interface ViewController () <ProximityContentManagerDelegate>
@@ -33,8 +34,9 @@
             [[BeaconID alloc] initWithUUIDString:@"B9407F30-F5F8-466E-AFF9-25556B57FE6D" major:2 minor:2],
             [[BeaconID alloc] initWithUUIDString:@"B9407F30-F5F8-466E-AFF9-25556B57FE6D" major:3 minor:3]
         ]
-        beaconContentFactory:[EstimoteCloudBeaconDetailsFactory new]];
+        beaconContentFactory:[[CachingContentFactory alloc] initWithBeaconContentFactory:[BeaconDetailsCloudFactory new]]];
     self.proximityContentManager.delegate = self;
+
     [self.proximityContentManager startContentUpdates];
 }
 
@@ -42,13 +44,13 @@
     [self.activityIndicator stopAnimating];
     [self.activityIndicator removeFromSuperview];
 
-    EstimoteCloudBeaconDetails *beaconDetails = content;
+    BeaconDetails *beaconDetails = content;
     if (beaconDetails) {
         self.view.backgroundColor = beaconDetails.backgroundColor;
         self.label.text = [NSString stringWithFormat:@"You're in %@'s range!", beaconDetails.beaconName];
         self.image.hidden = NO;
     } else {
-        self.view.backgroundColor = EstimoteCloudBeaconDetails.neutralColor;
+        self.view.backgroundColor = BeaconDetails.neutralColor;
         self.label.text = @"No beacons in range.";
         self.image.hidden = YES;
     }

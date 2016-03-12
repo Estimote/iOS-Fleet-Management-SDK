@@ -11,7 +11,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, ESTBeaconManagerDelegate 
     var window: UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // ODO: put your App ID and App Token here
+        // TODO: put your App ID and App Token here
         // You can get them by adding your app on https://cloud.estimote.com/#/apps
         ESTConfig.setupAppID("<#App ID#>", andAppToken: "<#App Token#>")
 

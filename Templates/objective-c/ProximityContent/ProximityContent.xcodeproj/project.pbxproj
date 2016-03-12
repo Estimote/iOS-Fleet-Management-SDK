@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE9764611C216F5E0058A4DC /* BeaconDetailsStaticFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = AE9764601C216F5E0058A4DC /* BeaconDetailsStaticFactory.m */; };
 		AECA38231B9477B7009A9324 /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AECA38221B9477B7009A9324 /* EstimoteSDK.framework */; };
 		AECA38461B95BC33009A9324 /* BeaconID.m in Sources */ = {isa = PBXBuildFile; fileRef = AECA38451B95BC33009A9324 /* BeaconID.m */; };
-		AECA384A1B95C146009A9324 /* BeaconContentCache.m in Sources */ = {isa = PBXBuildFile; fileRef = AECA38491B95C146009A9324 /* BeaconContentCache.m */; };
-		AECA384D1B95C4E6009A9324 /* EstimoteCloudBeaconDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = AECA384C1B95C4E6009A9324 /* EstimoteCloudBeaconDetails.m */; };
-		AECA38501B95C5E7009A9324 /* EstimoteCloudBeaconDetailsFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = AECA384F1B95C5E7009A9324 /* EstimoteCloudBeaconDetailsFactory.m */; };
+		AECA384A1B95C146009A9324 /* CachingContentFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = AECA38491B95C146009A9324 /* CachingContentFactory.m */; };
+		AECA384D1B95C4E6009A9324 /* BeaconDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = AECA384C1B95C4E6009A9324 /* BeaconDetails.m */; };
+		AECA38501B95C5E7009A9324 /* BeaconDetailsCloudFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = AECA384F1B95C5E7009A9324 /* BeaconDetailsCloudFactory.m */; };
 		AECA38531B95C91D009A9324 /* NearestBeaconManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AECA38521B95C91D009A9324 /* NearestBeaconManager.m */; };
 		AECA38561B95D59E009A9324 /* ProximityContentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AECA38551B95D59E009A9324 /* ProximityContentManager.m */; };
 		AECF16921B0E0C0200CC83B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AECF16911B0E0C0200CC83B2 /* main.m */; };
@@ -23,16 +24,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE97645F1C216F5E0058A4DC /* BeaconDetailsStaticFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconDetailsStaticFactory.h; sourceTree = "<group>"; };
+		AE9764601C216F5E0058A4DC /* BeaconDetailsStaticFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconDetailsStaticFactory.m; sourceTree = "<group>"; };
 		AECA38221B9477B7009A9324 /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EstimoteSDK.framework; path = ../../../../../EstimoteSDK/EstimoteSDK.framework; sourceTree = "<group>"; };
 		AECA38441B95BC33009A9324 /* BeaconID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconID.h; sourceTree = "<group>"; };
 		AECA38451B95BC33009A9324 /* BeaconID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconID.m; sourceTree = "<group>"; };
 		AECA38471B95C06D009A9324 /* BeaconContentFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeaconContentFactory.h; sourceTree = "<group>"; };
-		AECA38481B95C146009A9324 /* BeaconContentCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconContentCache.h; sourceTree = "<group>"; };
-		AECA38491B95C146009A9324 /* BeaconContentCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconContentCache.m; sourceTree = "<group>"; };
-		AECA384B1B95C4E6009A9324 /* EstimoteCloudBeaconDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EstimoteCloudBeaconDetails.h; sourceTree = "<group>"; };
-		AECA384C1B95C4E6009A9324 /* EstimoteCloudBeaconDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EstimoteCloudBeaconDetails.m; sourceTree = "<group>"; };
-		AECA384E1B95C5E7009A9324 /* EstimoteCloudBeaconDetailsFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EstimoteCloudBeaconDetailsFactory.h; sourceTree = "<group>"; };
-		AECA384F1B95C5E7009A9324 /* EstimoteCloudBeaconDetailsFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EstimoteCloudBeaconDetailsFactory.m; sourceTree = "<group>"; };
+		AECA38481B95C146009A9324 /* CachingContentFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CachingContentFactory.h; sourceTree = "<group>"; };
+		AECA38491B95C146009A9324 /* CachingContentFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CachingContentFactory.m; sourceTree = "<group>"; };
+		AECA384B1B95C4E6009A9324 /* BeaconDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconDetails.h; sourceTree = "<group>"; };
+		AECA384C1B95C4E6009A9324 /* BeaconDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconDetails.m; sourceTree = "<group>"; };
+		AECA384E1B95C5E7009A9324 /* BeaconDetailsCloudFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconDetailsCloudFactory.h; sourceTree = "<group>"; };
+		AECA384F1B95C5E7009A9324 /* BeaconDetailsCloudFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconDetailsCloudFactory.m; sourceTree = "<group>"; };
 		AECA38511B95C91D009A9324 /* NearestBeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearestBeaconManager.h; sourceTree = "<group>"; };
 		AECA38521B95C91D009A9324 /* NearestBeaconManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearestBeaconManager.m; sourceTree = "<group>"; };
 		AECA38541B95D59E009A9324 /* ProximityContentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProximityContentManager.h; sourceTree = "<group>"; };
@@ -65,15 +68,17 @@
 			isa = PBXGroup;
 			children = (
 				AECA38221B9477B7009A9324 /* EstimoteSDK.framework */,
-				AECA38481B95C146009A9324 /* BeaconContentCache.h */,
-				AECA38491B95C146009A9324 /* BeaconContentCache.m */,
 				AECA38471B95C06D009A9324 /* BeaconContentFactory.h */,
+				AECA384B1B95C4E6009A9324 /* BeaconDetails.h */,
+				AECA384C1B95C4E6009A9324 /* BeaconDetails.m */,
+				AECA384E1B95C5E7009A9324 /* BeaconDetailsCloudFactory.h */,
+				AECA384F1B95C5E7009A9324 /* BeaconDetailsCloudFactory.m */,
+				AE97645F1C216F5E0058A4DC /* BeaconDetailsStaticFactory.h */,
+				AE9764601C216F5E0058A4DC /* BeaconDetailsStaticFactory.m */,
 				AECA38441B95BC33009A9324 /* BeaconID.h */,
 				AECA38451B95BC33009A9324 /* BeaconID.m */,
-				AECA384B1B95C4E6009A9324 /* EstimoteCloudBeaconDetails.h */,
-				AECA384C1B95C4E6009A9324 /* EstimoteCloudBeaconDetails.m */,
-				AECA384E1B95C5E7009A9324 /* EstimoteCloudBeaconDetailsFactory.h */,
-				AECA384F1B95C5E7009A9324 /* EstimoteCloudBeaconDetailsFactory.m */,
+				AECA38481B95C146009A9324 /* CachingContentFactory.h */,
+				AECA38491B95C146009A9324 /* CachingContentFactory.m */,
 				AECA38511B95C91D009A9324 /* NearestBeaconManager.h */,
 				AECA38521B95C91D009A9324 /* NearestBeaconManager.m */,
 				AECA38541B95D59E009A9324 /* ProximityContentManager.h */,
@@ -213,11 +218,12 @@
 			files = (
 				AECF16981B0E0C0200CC83B2 /* ViewController.m in Sources */,
 				AECF16951B0E0C0200CC83B2 /* AppDelegate.m in Sources */,
-				AECA38501B95C5E7009A9324 /* EstimoteCloudBeaconDetailsFactory.m in Sources */,
-				AECA384A1B95C146009A9324 /* BeaconContentCache.m in Sources */,
+				AECA38501B95C5E7009A9324 /* BeaconDetailsCloudFactory.m in Sources */,
+				AECA384A1B95C146009A9324 /* CachingContentFactory.m in Sources */,
 				AECA38461B95BC33009A9324 /* BeaconID.m in Sources */,
+				AE9764611C216F5E0058A4DC /* BeaconDetailsStaticFactory.m in Sources */,
 				AECA38561B95D59E009A9324 /* ProximityContentManager.m in Sources */,
-				AECA384D1B95C4E6009A9324 /* EstimoteCloudBeaconDetails.m in Sources */,
+				AECA384D1B95C4E6009A9324 /* BeaconDetails.m in Sources */,
 				AECA38531B95C91D009A9324 /* NearestBeaconManager.m in Sources */,
 				AECF16921B0E0C0200CC83B2 /* main.m in Sources */,
 			);

@@ -19,7 +19,9 @@
 
 @property (weak, nonatomic) id<NearestBeaconManagerDelegate> delegate;
 
++ (instancetype)new NS_UNAVAILABLE;
 - (instancetype)init NS_UNAVAILABLE;
+
 - (instancetype)initWithBeaconRegions:(NSArray *)beaconRegions NS_DESIGNATED_INITIALIZER;
 
 - (void)startNearestBeaconUpdates;

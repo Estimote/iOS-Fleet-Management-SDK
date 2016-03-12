@@ -1,9 +1,9 @@
 //
-//  BeaconContentCache.swift
+//  CachingContentFactory.swift
 //  ProximityContent
 //
 
-class BeaconContentCache {
+class CachingContentFactory: BeaconContentFactory {
 
     private let beaconContentFactory: BeaconContentFactory
 
@@ -13,13 +13,13 @@ class BeaconContentCache {
         self.beaconContentFactory = beaconContentFactory
     }
 
-    func contentForBeaconID(beaconID: BeaconID, completion: (AnyObject) -> ()) {
-        if let content: AnyObject = self.cachedContent[beaconID] {
-            completion(content)
+    func contentForBeaconID(beaconID: BeaconID, completion: (content: AnyObject) -> ()) {
+        if let cachedContent: AnyObject = self.cachedContent[beaconID] {
+            completion(content: cachedContent)
         } else {
             self.beaconContentFactory.contentForBeaconID(beaconID) { (content) in
                 self.cachedContent[beaconID] = content
-                completion(content)
+                completion(content: content)
             }
         }
     }

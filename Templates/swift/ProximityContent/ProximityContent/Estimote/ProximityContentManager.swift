@@ -13,11 +13,12 @@ class ProximityContentManager: NearestBeaconManagerDelegate {
 
     weak var delegate: ProximityContentManagerDelegate?
 
-    private let beaconContentCache: BeaconContentCache
+    private let beaconContentFactory: BeaconContentFactory
+
     private let nearestBeaconManager: NearestBeaconManager
 
     init(beaconRegions: [CLBeaconRegion], beaconContentFactory: BeaconContentFactory) {
-        self.beaconContentCache = BeaconContentCache(beaconContentFactory: beaconContentFactory)
+        self.beaconContentFactory = beaconContentFactory
         self.nearestBeaconManager = NearestBeaconManager(beaconRegions: beaconRegions)
         self.nearestBeaconManager.delegate = self
     }
@@ -37,7 +38,7 @@ class ProximityContentManager: NearestBeaconManagerDelegate {
 
     func nearestBeaconManager(nearestBeaconManager: NearestBeaconManager, didUpdateNearestBeaconID nearestBeaconID: BeaconID?) {
         if let nearestBeaconID = nearestBeaconID {
-            self.beaconContentCache.contentForBeaconID(nearestBeaconID) { (proximityContent) in
+            self.beaconContentFactory.contentForBeaconID(nearestBeaconID) { (proximityContent) in
                 self.delegate?.proximityContentManager(self, didUpdateContent: proximityContent)
             }
         } else {
