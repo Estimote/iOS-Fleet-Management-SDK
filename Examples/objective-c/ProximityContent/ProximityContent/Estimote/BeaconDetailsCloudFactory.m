@@ -3,6 +3,8 @@
 //  ProximityContent
 //
 
+#import <EstimoteSDK/ESTRequestBeaconDetails.h>
+
 #import "BeaconDetailsCloudFactory.h"
 
 #import "BeaconDetails.h"
