@@ -73,14 +73,14 @@ class ViewController: UIViewController, UITableViewDataSource, ESTBeaconManagerD
 
             for device in devices {
                 /* ==> MODIFY THIS ==> */
-                let aisle = (device.shadow.tags.map({ tag -> String? in
+                let aisle = device.shadow.tags.map({ tag -> String? in
                     let entireTagRange = NSMakeRange(0, tag.utf16.count)
                     if let aisleRange = aisleRegex.firstMatchInString(tag, options: [], range: entireTagRange)?.rangeAtIndex(1) {
                         return (tag as NSString).substringWithRange(aisleRange)
                     } else {
                         return nil
                     }
-                }).filter({ $0 != nil }) as! [String]).first
+                }).filter({ $0 != nil }).map({ $0! }).first
 
                 let firstNonAisleTag = device.shadow.tags.filter({ tag in
                     let entireTagRange = NSMakeRange(0, tag.utf16.count)
