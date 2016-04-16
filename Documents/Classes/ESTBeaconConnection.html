@@ -6,7 +6,7 @@
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.2.1 (build 1334)" />
+		<meta name="generator" content="appledoc 2.2 (build 963)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -1427,7 +1427,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;ESTBeaconConnectionDelegate&gt; delegate</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;ESTBeaconConnectionDelegate&gt; _Nullable delegate</code></div>
 
     
 	
@@ -2611,7 +2611,7 @@ Based on the method you used to initialize it may contain:
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (instancetype)connectionWithBeacon:(CLBeacon *)<em>beacon</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt;)<em>delegate</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (instancetype)connectionWithBeacon:(CLBeacon *)<em>beacon</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt; _Nullable)<em>delegate</em></code></div>
 
     
 	
@@ -2667,7 +2667,7 @@ Based on the method you used to initialize it may contain:
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (instancetype)connectionWithIdentifier:(NSString *)<em>identifier</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt;)<em>delegate</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (instancetype)connectionWithIdentifier:(NSString *)<em>identifier</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt; _Nullable)<em>delegate</em></code></div>
 
     
 	
@@ -2723,7 +2723,7 @@ Based on the method you used to initialize it may contain:
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (instancetype)connectionWithMacAddress:(NSString *)<em>macAddress</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt;)<em>delegate</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (instancetype)connectionWithMacAddress:(NSString *)<em>macAddress</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt; _Nullable)<em>delegate</em></code></div>
 
     
 	
@@ -2779,7 +2779,7 @@ Based on the method you used to initialize it may contain:
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (instancetype)connectionWithProximityUUID:(NSUUID *)<em>proximityUUID</em> major:(CLBeaconMajorValue)<em>major</em> minor:(CLBeaconMinorValue)<em>minor</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt;)<em>delegate</em></code></div>
+	<div class="method-subsection method-declaration"><code>+ (instancetype)connectionWithProximityUUID:(NSUUID *)<em>proximityUUID</em> major:(CLBeaconMajorValue)<em>major</em> minor:(CLBeaconMinorValue)<em>minor</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt; _Nullable)<em>delegate</em></code></div>
 
     
 	
@@ -3090,7 +3090,7 @@ delegate object support</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (instancetype)initWithBeacon:(CLBeacon *)<em>beacon</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt;)<em>delegate</em> startImmediately:(BOOL)<em>startImmediately</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithBeacon:(CLBeacon *)<em>beacon</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt; _Nullable)<em>delegate</em> startImmediately:(BOOL)<em>startImmediately</em></code></div>
 
     
 	
@@ -3152,7 +3152,7 @@ delegate object support</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (instancetype)initWithIdentifier:(NSString *)<em>identifier</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt;)<em>delegate</em> startImmediately:(BOOL)<em>startImmediately</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithIdentifier:(NSString *)<em>identifier</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt; _Nullable)<em>delegate</em> startImmediately:(BOOL)<em>startImmediately</em></code></div>
 
     
 	
@@ -3214,7 +3214,7 @@ delegate object support</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (instancetype)initWithMacAddress:(NSString *)<em>macAddress</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt;)<em>delegate</em> startImmediately:(BOOL)<em>startImmediately</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithMacAddress:(NSString *)<em>macAddress</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt; _Nullable)<em>delegate</em> startImmediately:(BOOL)<em>startImmediately</em></code></div>
 
     
 	
@@ -3276,7 +3276,7 @@ delegate object support</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (instancetype)initWithProximityUUID:(NSUUID *)<em>proximityUUID</em> major:(CLBeaconMajorValue)<em>major</em> minor:(CLBeaconMinorValue)<em>minor</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt;)<em>delegate</em> startImmediately:(BOOL)<em>startImmediately</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithProximityUUID:(NSUUID *)<em>proximityUUID</em> major:(CLBeaconMajorValue)<em>major</em> minor:(CLBeaconMinorValue)<em>minor</em> delegate:(id&lt;ESTBeaconConnectionDelegate&gt; _Nullable)<em>delegate</em> startImmediately:(BOOL)<em>startImmediately</em></code></div>
 
     
 	
@@ -4859,9 +4859,6 @@ After successful save lat and log is set in beacon connection object.</p>
 					
                     
                     
-                    
-                    
-
 				</div>
 				<div class="main-navigation navigation-bottom">
 					<ul>
@@ -4872,9 +4869,9 @@ After successful save lat and log is set in beacon connection object.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2016 Estimote. All rights reserved. (Last updated: 2016-03-11)</span><br />
+						<p><span class="copyright">&copy; 2016 Estimote. All rights reserved. (Last updated: 2016-04-16)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						
 					</div>
 				</div>

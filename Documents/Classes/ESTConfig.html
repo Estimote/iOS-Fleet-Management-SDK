@@ -6,7 +6,7 @@
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.2.1 (build 1334)" />
+		<meta name="generator" content="appledoc 2.2 (build 963)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -51,6 +51,8 @@
 	
 	<option value="//api/name/enableRangingAnalytics:">&nbsp;&nbsp;&nbsp;&nbsp;+ enableRangingAnalytics:</option>
 	
+	<option value="//api/name/googleAPIKey">&nbsp;&nbsp;&nbsp;&nbsp;+ googleAPIKey</option>
+	
 	<option value="//api/name/isAuthorized">&nbsp;&nbsp;&nbsp;&nbsp;+ isAuthorized</option>
 	
 	<option value="//api/name/isMonitoringAnalyticsEnabled">&nbsp;&nbsp;&nbsp;&nbsp;+ isMonitoringAnalyticsEnabled</option>
@@ -58,6 +60,8 @@
 	<option value="//api/name/isRangingAnalyticsEnabled">&nbsp;&nbsp;&nbsp;&nbsp;+ isRangingAnalyticsEnabled</option>
 	
 	<option value="//api/name/setupAppID:andAppToken:">&nbsp;&nbsp;&nbsp;&nbsp;+ setupAppID:andAppToken:</option>
+	
+	<option value="//api/name/setupGoogleAPIKey:">&nbsp;&nbsp;&nbsp;&nbsp;+ setupGoogleAPIKey:</option>
 	
 	
 	
@@ -97,6 +101,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/enableRangingAnalytics:">enableRangingAnalytics:</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/googleAPIKey">googleAPIKey</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isAuthorized">isAuthorized</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isMonitoringAnalyticsEnabled">isMonitoringAnalyticsEnabled</a></span></li>
@@ -104,6 +110,8 @@
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isRangingAnalyticsEnabled">isRangingAnalyticsEnabled</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setupAppID:andAppToken:">setupAppID:andAppToken:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setupGoogleAPIKey:">setupGoogleAPIKey:</a></span></li>
 	
 </ul></li>
 
@@ -187,6 +195,18 @@ and configure Estimote Analytics settings.</p>
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/setupGoogleAPIKey:">+&nbsp;setupGoogleAPIKey:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/googleAPIKey">+&nbsp;googleAPIKey</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/enableMonitoringAnalytics:">+&nbsp;enableMonitoringAnalytics:</a></code>
 	</span>
 	
@@ -242,7 +262,7 @@ and configure Estimote Analytics settings.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (NSString *)appID</code></div>
+	<div class="method-subsection method-declaration"><code>+ (NSString *_Nullable)appID</code></div>
 
     
 	
@@ -283,7 +303,7 @@ and configure Estimote Analytics settings.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>+ (NSString *)appToken</code></div>
+	<div class="method-subsection method-declaration"><code>+ (NSString *_Nullable)appToken</code></div>
 
     
 	
@@ -435,6 +455,47 @@ in the Estimote Cloud.</p>
 	</div>
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTConfig.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/googleAPIKey" title="googleAPIKey"></a>
+	<h3 class="subsubtitle method-title">googleAPIKey</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns currently used Google API Key.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (NSString *_Nullable)googleAPIKey</code></div>
+
+    
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>currently used Google API Key.</p>
+	</div>
 	
 	
 	
@@ -628,6 +689,58 @@ in the Estimote Cloud.</p>
 	
 </div>
 						
+						<div class="section-method">
+	<a name="//api/name/setupGoogleAPIKey:" title="setupGoogleAPIKey:"></a>
+	<h3 class="subsubtitle method-title">setupGoogleAPIKey:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Sets Google API Key, enabling communication with Google API.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (void)setupGoogleAPIKey:(NSString *)<em>googleAPIKey</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>googleAPIKey</em></dt>
+			<dd><p>Google API Key.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>You can get it from Google Developer Console ( https://console.developers.google.com ) using project credentials settings.
+Google API Key is required to properly resolve Eddystone-EID packet.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTConfig.h</code><br />
+	</div>				
+	
+	
+</div>
+						
 					</div>
 					
 					
@@ -635,9 +748,6 @@ in the Estimote Cloud.</p>
 					
                     
                     
-                    
-                    
-
 				</div>
 				<div class="main-navigation navigation-bottom">
 					<ul>
@@ -648,9 +758,9 @@ in the Estimote Cloud.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2016 Estimote. All rights reserved. (Last updated: 2016-03-11)</span><br />
+						<p><span class="copyright">&copy; 2016 Estimote. All rights reserved. (Last updated: 2016-04-16)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						
 					</div>
 				</div>

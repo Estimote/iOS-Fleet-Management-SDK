@@ -7,7 +7,7 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 4.0.0
+//  Version: 4.1.0
 //  Copyright (c) 2016 Estimote. All rights reserved.
 
 /**
@@ -105,6 +105,7 @@
 #import "ESTBeaconOperationDeviceInfoUTCTime.h"
 #import "ESTCloudOperationDeviceInfoTags.h"
 #import "ESTCloudOperationDeviceInfoGeoLocation.h"
+#import "ESTCloudOperationDeviceInfoName.h"
 #import "ESTCloudOperationDeviceInfoColor.h"
 #import "ESTCloudOperationDeviceInfoIndoorLocationIdentifier.h"
 #import "ESTBeaconOperationDeviceInfoUptime.h"
@@ -204,11 +205,25 @@
 #import "ESTBeaconOperationEddystoneTLMPower.h"
 
 /**
+ Settings Eddystone EID packet
+ */
+#import "ESTSettingsEddystoneEID.h"
+#import "ESTSettingEddystoneEIDInterval.h"
+#import "ESTSettingEddystoneEIDEnable.h"
+#import "ESTSettingEddystoneEIDPower.h"
+
+#import "ESTBeaconOperationEddystoneEIDInterval.h"
+#import "ESTBeaconOperationEddystoneEIDEnable.h"
+#import "ESTBeaconOperationEddystoneEIDPower.h"
+
+/**
  *  GPIO Support
  */
 #import "ESTSettingsGPIO.h"
 #import "ESTSettingGPIONotificationEnable.h"
 #import "ESTGPIOConfig.h"
+#import "ESTGPIOPortsData.h"
+#import "ESTSettingGPIOPortsData.h"
 #import "ESTSettingGPIOConfigPort0.h"
 #import "ESTSettingGPIOConfigPort1.h"
 
@@ -229,6 +244,7 @@
 #import "ESTBeaconOperationSensorsTemperature.h"
 
 #import "ESTNotificationMotion.h"
+#import "ESTNotificationGPIOData.h"
 
 /**
  *  Nearables
@@ -269,6 +285,7 @@
  */
 #import "ESTEddystoneManager.h"
 #import "ESTEddystoneFilterUID.h"
+#import "ESTEddystoneFilterEID.h"
 #import "ESTEddystoneFilterURL.h"
 #import "ESTEddystoneFilterURLDomain.h"
 
@@ -317,6 +334,7 @@
 #import "ESTDeviceSettingsAdvertiserEddystoneUID.h"
 #import "ESTDeviceSettingsAdvertiserEddystoneURL.h"
 #import "ESTDeviceSettingsAdvertiserEddystoneTLM.h"
+#import "ESTDeviceSettingsAdvertiserEddystoneEID.h"
 #import "ESTDeviceStatusReport.h"
 #import "ESTDeviceGeoLocation.h"
 #import "ESTDeviceIndoorLocation.h"

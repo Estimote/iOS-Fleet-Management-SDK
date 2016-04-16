@@ -1,6 +1,98 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 2705133, 2013-12-10T08:02:42-0500
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Slate Std Light by Monotype 
+ * URL: http://www.myfonts.com/fonts/mti/slate/std-light/
+ * Copyright: Copyright 2006 Monotype Imaging Inc. All rights reserved.
+ * Licensed pageviews: 250,000
+ * 
+ * Webfont: Slate Std Regular by Monotype 
+ * URL: http://www.myfonts.com/fonts/mti/slate/std-regular/
+ * Copyright: Copyright 2006 Monotype Imaging Inc. All rights reserved.
+ * Licensed pageviews: 250,000
+ * 
+ * Webfont: Brandon Text Light by HVD Fonts
+ * URL: http://www.myfonts.com/fonts/hvdfonts/brandon-text/light/
+ * Copyright: Copyright (c) 2012 by Hannes von Doehren. All rights reserved.
+ * Licensed pageviews: 10,000
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=2705133
+ * 
+ * © 2013 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/2946ed");
+
+  
+@font-face {font-family: 'SlateStd-Light';src: url('http://estimote.com/webfonts/2946ED_0_0.eot');src: url('http://estimote.com/webfonts/2946ED_0_0.eot?#iefix') format('embedded-opentype'),url('http://estimote.com/webfonts/2946ED_0_0.woff') format('woff'),url('http://estimote.com/webfonts/2946ED_0_0.ttf') format('truetype');}
+ 
+@font-face {font-family: 'SlateStd';src: url('http://estimote.com/webfonts/2946ED_1_0.eot');src: url('http://estimote.com/webfonts/2946ED_1_0.eot?#iefix') format('embedded-opentype'),url('http://estimote.com/webfonts/2946ED_1_0.woff') format('woff'),url('http://estimote.com/webfonts/2946ED_1_0.ttf') format('truetype');}
+  
+@font-face {font-family: 'BrandonText-Light';src: url('http://estimote.com/webfonts/2946ED_2_0.eot');src: url('http://estimote.com/webfonts/2946ED_2_0.eot?#iefix') format('embedded-opentype'),url('http://estimote.com/webfonts/2946ED_2_0.woff') format('woff'),url('http://estimote.com/webfonts/2946ED_2_0.ttf') format('truetype');}
+ 
+
+
+/* =====================
+
+"ESTIMOTE SDK DOCUMENTATION STYLESHEET"
+
+INDEX:
+1. Generic
+----
+*. Media Queries
+
+===================== */
+
+/* 1. GENERIC */
+
 body {
-	font-family: 'Lucida Grande',Geneva,Helvetica,Arial,sans-serif;
-	font-size: 13px;
+	font: normal normal normal 16px/22px "SlateStd-Bk", sans-serif;
+  color: #333132;
+  -webkit-font-smoothing: antialiased;
+	margin: 0;
+}
+
+h1 { 
+  font: normal normal normal 36px "BrandonText-Medium", sans-serif;
+  margin-bottom: 10px;
+  line-height: 42px;
+  -webkit-font-smoothing: antialiased;
+}
+
+h2 {
+  font: normal normal normal 32px "BrandonText-Medium", sans-serif;
+  margin-bottom: 40px;
+  color: #333132;
+  -webkit-font-smoothing: antialiased;
+}
+
+h3 {
+  font: normal normal normal 22px/12px "SlateStd-Bk", sans-serif;
+  margin-bottom: 14px;
+  font-weight: 600;
+  -webkit-font-smoothing: antialiased;
+  border-bottom: 1px #e5e5e5 solid;
+  padding-bottom: 10px;
+}
+
+h4 {
+  font: normal normal normal 16px "SlateStd-Bk", sans-serif;
+  font-weight: 600;
+  -webkit-font-smoothing: antialiased;
+}
+
+a, a:hover {
+  color: #4d94b1;
 }
 
 code {
@@ -28,7 +120,11 @@ li {
 	margin-bottom: 10px;
 }
 
-a, a code {
+code a {
+	text-decoration: none;
+}
+
+/* a, a code {
 	text-decoration: none;
 	color: #36C;
 }
@@ -45,7 +141,7 @@ h2 {
 	font-weight: normal;
 	margin-top: 1.75em;
 	padding-bottom: 2px;	
-}
+} */
 
 table {
     margin-bottom: 4em;
@@ -71,41 +167,94 @@ th {
 
 /* @group Common page elements */
 
+article {
+	overflow: hidden;
+}
+
 #top_header {
-	height: 91px;
-	left: 0;
+	height: 300px;
 	min-width: 598px;
-	position: absolute;
-	right: 0;
-	top: 0;
 	z-index: 900;
 }
 
 #footer {
+	box-sizing: border-box;
 	clear: both;
-	padding-top: 20px;
 	text-align: center;
+	background: #60957a;
+  padding: 40px 0;
+  left: 0;
+  width: 100%;
+}
+
+#footer hr {
+	display: none;
+}
+
+#footer .footer-copyright p span {
+	font-family: 'SlateStd-Light', 'Helvetica Neue', 'Arial', sans-serif;
+	font-size: 15px;
+	color: #fff;
+	font-style: normal;
+	opacity: .6;
+	line-height: 24px;
+	margin: 0;
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
+	font-weight: 100;
+}
+
+#footer .footer-copyright p span a {
+	color: #fff;
+}
+
+#contents {
+	padding-left: 30px;
 }
 
 #contents, #overview_contents {
 	-webkit-overflow-scrolling: touch;
-	border-top: 1px solid #A9A9A9;
-	position: absolute;
-	top: 90px;
-	left: 0;
-	right: 0;
-	bottom: 0;
 	overflow-x: hidden;
-	overflow-y: auto;
-	padding-left: 2em;
+	overflow-y: hidden;
+	/* padding-left: 2em;
 	padding-right: 2em;
-	padding-top: 1em;
+	padding-top: 1em; */
 	min-width: 550px;
+	width: 100%;
 }
+
+#header, #container {
+	padding-left: 14%;
+	padding-right: 13%;
+}
+
+#contents {
+	width: auto;
+	padding-right: 18%;
+}
+
+#contents #footer {
+	position: absolute;
+}
+
+#contents #header, #contents #container {
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 22px;
+}
+
 
 #contents.isShowingTOC {
 	left: 230px;
 	min-width: 320px;
+}
+
+#contents #header, #overview_contents #header {
+	display: none;
+}
+
+#overview_contents #container {
+	margin-top: 60px;
 }
 
 .copyright {
@@ -116,6 +265,10 @@ th {
 	font-size: 11px;
 }
 
+#overview_contents .navigation-top {
+	display: none;
+}
+
 .main-navigation ul li {
 	display: inline;
 	margin-left: 15px;
@@ -124,14 +277,39 @@ th {
 
 .navigation-top {
 	clear: both;
-	float: right;
+	position: absolute;
+	top: 56px;
+	margin-left: -80px;
+}
+
+.navigation-top a {
+	text-decoration: none;
+  color: #333132;
+  padding: 9px 20px 10px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  font: normal normal normal 16px/1 "BrandonText-Medium", sans-serif;  
+  text-transform: lowercase;
+}
+
+.navigation-top a:hover, .navigation-top a:focus {
+  border-color: #454545;
 }
 
 .navigation-bottom {
 	clear: both;
 	float: right;
-	margin-top: 20px;
-	margin-bottom: -10px;
+	margin: 40px 16% 40px 0;
+}
+
+#overview_contents .navigation-bottom {
+  border: 1px solid rgba(77,148,177,.8);
+  border-radius: 3px;
+ 	padding: 6px 18px 2px;
+}
+
+#overview_contents .navigation-bottom a {
+	text-decoration: none;
 }
 
 .open > .disclosure {
@@ -155,22 +333,24 @@ th {
 /* @group Header */
 
 #top_header #library {
-	background: url("../img/library_background.png") repeat-x 0 0 #485E78;
-	background-color: #ccc;
-	height: 35px;
-	font-size: 115%;
+	background: transparent url('http://estimote.com/api/images/nav.png') no-repeat top right;
+	background-color: #fff;
+	height: 145px;
+	font-size: 100%;
 }
 
 #top_header #library #libraryTitle {
-	color: #FFFFFF;
-	margin-left: 15px;
+	margin-left: 45px;
 	text-shadow: 0 -1px 0 #485E78;
-	top: 8px;
+	top: 5px;
 	position: absolute;
+	text-indent: -9999px;
 }
 
 #libraryTitle {
-        left: 0;
+  width: 270px;
+  height: 115px;
+  background: url('http://estimote.com/api/images/branding.png');
 }
 
 #top_header #library #developerHome {
@@ -178,30 +358,43 @@ th {
 	right: 15px;
 	top: 8px;
 	position: absolute;
+	text-indent: -9999px;
 }
 
 #top_header #library a:hover {
 	text-decoration: none;
 }
 
+#top_header #library h1 {
+	font-size: 32px;
+  color: #333132;
+  line-height: 130px;
+  margin: 0;
+	white-space: nowrap;
+}
+
 #top_header #title {
-	background: url("../img/title_background.png") repeat-x 0 0 #8A98A9;
-	border-bottom: 1px solid #757575;
-	height: 25px;
+	background: #5cadce;
+  height: 170px;
 	overflow: hidden;
 }
 
-#top_header h1 {
-	font-size: 105%;
-	font-weight: normal;
-	margin: 0;
-	padding: 3px 0 2px;
-	text-align: center;
-	/*text-shadow: 0 1px 0 #D5D5D5;*/
+#top_header #title h1 {
+	font-size: 36px;
+  color: #fff;
+  line-height: 170px;
+  margin: 0;
+  margin-left: 172px;
 	white-space: nowrap;
 }
 
 #headerButtons {
+	height: 0;
+	width: 0;
+	display: none;
+}
+
+/* #headerButtons {
 	background-color: #D8D8D8;
 	background-image: url("../img/button_bar_background.png");
 	border-bottom: 0px solid #EDEDED;
@@ -224,10 +417,10 @@ th {
 	margin-top: 0;
 	margin-bottom: 0;
 	padding: 0;
-}
+} */
 
 #toc_button button {
-    background-color: #EBEEF1;
+  /*  background-color: #EBEEF1;
 	border-color: #ACACAC;
 	border-style: none solid none none;
 	border-width: 0 1px 0 0;
@@ -235,7 +428,11 @@ th {
 	margin: 0;
 	padding-left: 30px;
 	text-align: left;
-	width: 230px;
+	width: 230px; */
+
+	display: none;
+	height: 0;
+	width: 0;
 }
 
 li#jumpto_button {
@@ -255,23 +452,20 @@ li#jumpto_button select {
 /* @group Table of contents */
 
 #tocContainer.isShowingTOC {
-	border-right: 1px solid #ACACAC;
 	display: block;
 	overflow-x: hidden;
 	overflow-y: auto;
 	padding: 0;
+	padding-left: 15%;
 }
 
 #tocContainer {
-	background-color: #EBEEF1;
-	border-top: 1px solid #ACACAC;
-	bottom: 0;
 	display: none;
-	left: 0;
 	overflow: hidden;
-	position: absolute;
-	top: 90px;
-	width: 229px;
+	margin-top: 24px;
+	width: 170px;
+	float: left;
+	margin-top: 55px;
 }
 
 #tocContainer > ul#toc {
@@ -282,21 +476,25 @@ li#jumpto_button select {
 	-moz-user-select: none;
 	-webkit-user-select: none;
 	user-select: none;
+
+	list-style: none;
 }
 
 #tocContainer > ul#toc > li {
 	margin: 0;
 	padding: 0 0 7px 30px;
-	text-indent: -15px;
+	text-indent: -54px;
 }
 
 #tocContainer > ul#toc > li > .sectionName a {
-	color: #000000;
-	font-weight: bold;
+	font: normal normal normal 16px/22px "SlateStd-Bk", sans-serif;
+  color: #333132;
+  -webkit-font-smoothing: antialiased;
+	margin: 0;
+	text-decoration: none;
 }
 
 #tocContainer > ul#toc > li > .sectionName a:hover {
-	text-decoration: none;
 }
 
 #tocContainer > ul#toc li.children > ul {
@@ -316,7 +514,7 @@ li#jumpto_button select {
 }
 
 #tocContainer > ul#toc > li ul {
-    list-style: none;
+list-style-type:circle;
     margin-right: 0;
     padding-right: 0;
 }
@@ -340,16 +538,38 @@ li#jumpto_button select {
     white-space: nowrap;
 }
 
+#tocContainer > ul#toc > li ul > li {
+	margin-left: -38px;
+	padding-right: 36px;
+	line-height: 0;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+#tocContainer > ul#toc > li ul > li:first-child {
+	padding-top: 0;
+}
+
+#tocContainer > ul#toc > li ul > li:last-child {
+	padding-bottom: 20px;
+}
+
 #tocContainer li ul li span.sectionName {
     white-space: normal;
+    margin-left: 38px;
 }
 
 #tocContainer > ul#toc > li > ul > li > .sectionName a {
-    font-weight: bold;
+	font: normal normal normal 12px/22px "SlateStd-Light", sans-serif;
+  color: #333132;
+  -webkit-font-smoothing: antialiased;
+	margin: 0;
+	text-decoration: none;
+	line-height: 14px;
 }
 
 #tocContainer > ul#toc > li > ul a {
-    color: #4F4F4F;
+  
 }
 
 /* @end */
@@ -357,21 +577,20 @@ li#jumpto_button select {
 /* @group Index formatting */
 
 .index-title {
-	font-size: 13px;
-	font-weight: normal;
 }
 
 .index-column {
 	float: left;
-	width: 30%;
+	width: 50%;
 	min-width: 200px;
 	font-size: 11px;
 }
 
 .index-column ul {
-	margin: 8px 0 0 0;
+	margin: 0;
 	padding: 0;
 	list-style: none;
+	margin-top: 24px;
 }
 
 .index-column ul li {
@@ -379,16 +598,29 @@ li#jumpto_button select {
 	padding: 0;
 }
 
+.index-column h2 {
+	margin-bottom: 20px;
+	padding-bottom: 6px;
+	border-bottom: 1px #e5e5e5 solid;
+	margin-right: 20px;
+}
+
+.index-column a {
+	font-size: 16px;
+	text-decoration: none;
+}
+
 .hierarchy-column {
 	min-width: 400px;
 }
 
 .hierarchy-column ul {
-	margin: 3px 0 0 15px;
+	margin: 0;
+	font: normal normal normal 16px "SlateStd-Bk", sans-serif;
 }
 
-.hierarchy-column ul li {
-	list-style-type: square;
+.hierarchy-column ul li ul li {
+	margin-left: 15px;
 }
 
 /* @end */
@@ -398,20 +630,7 @@ li#jumpto_button select {
 .title {
 	font-weight: normal;
 	font-size: 215%;
-	margin-top:0;
-}
-
-.subtitle {
-	font-weight: normal;
-	font-size: 180%;
-	color: #3C4C6C;
-	border-bottom: 1px solid #5088C5;
-}
-
-.subsubtitle {
-	font-weight: normal;
-	font-size: 145%;
-	height: 0.7em;
+	margin-top: 60px;
 }
 
 .note {
@@ -452,23 +671,24 @@ li#jumpto_button select {
 /* @group Object specification section */
 
 .section-specification {
-	margin-left: 2.5em;
-	margin-right: 2.5em;
-	font-size: 12px;
+	font-size: 16px;
 }
 
 .section-specification table {
     margin-bottom: 0em;
-	border-top: 1px solid #d6e0e5;
+}
+
+.section-specification tr {
+	background: #f2f7f9;
+	border-bottom: 10px #fff solid;
 }
 
 .section-specification td {
 	vertical-align: top;
-	border-bottom: 1px solid #d6e0e5;
 	border-left-width: 0px;
 	border-right-width: 0px;
 	border-top-width: 0px;
-	padding: .6em;
+	padding: 1em;
 }
 
 .section-specification .specification-title {
@@ -479,13 +699,24 @@ li#jumpto_button select {
 
 /* @group Tasks section */
 
+.subtitle {
+	/* border-bottom: 1px #e5e5e5 solid; */
+	padding-bottom: 2px;
+	margin-bottom: 28px;
+}
+
 .task-list {
 	list-style-type: none;
 	padding-left: 0px;
+	padding-bottom: 16px;
 }
 
 .task-list li {
 	margin-bottom: 3px;
+}
+
+.task-list a {
+
 }
 
 .task-item-suffix {
@@ -516,11 +747,19 @@ span.tooltip:hover span.tooltip {
 /* @group Method section */
 
 .section-method {
-	margin-top: 2.3em;
+	margin: 2.3em 0 80px;
+}
+
+.section-method h4 {
+	margin: 28px 0 0;
 }
 
 .method-title {
-	margin-bottom: 1.5em;
+	padding-top: 32px;
+}
+
+.method-title:nth-of-type(1) {
+	padding-top: 0;
 }
 
 .method-subtitle {

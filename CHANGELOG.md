@@ -1,3 +1,14 @@
+## 4.1.0 (April 15, 2016)
+
+Features:
+
+- Support of Google Eddystone Ephemeral ID.
+
+Improvements:
+
+- Improved monitoring of firmware stability.
+- Missing ESTNearableProtocolDelegate warning fixed.
+
 ## 4.0.0 (March 11, 2016)
 
 Features:

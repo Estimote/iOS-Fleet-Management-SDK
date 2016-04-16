@@ -97,7 +97,7 @@
         self.powerTextField.text = [NSString stringWithFormat:@"%i", [powerSetting getValue]];
     }];
 
-    ESTNearableOperationApplicationVersion *appVersionOperation = [ESTNearableOperationApplicationVersion readOperationWithCompletion:^(ESTSettingApplicationVersion * _Nullable applicationVersionSetting, NSError * _Nullable error) {
+    ESTNearableOperationApplicationVersion *appVersionOperation = [ESTNearableOperationApplicationVersion readOperationWithCompletion:^(ESTSettingDeviceInfoApplicationVersion * _Nullable applicationVersionSetting, NSError * _Nullable error) {
         
         self.softwareVersion.text = [applicationVersionSetting getValue];
     }];

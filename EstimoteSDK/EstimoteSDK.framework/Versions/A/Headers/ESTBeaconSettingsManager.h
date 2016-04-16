@@ -18,6 +18,7 @@
 #import "ESTSettingsEddystoneUID.h"
 #import "ESTSettingsEddystoneURL.h"
 #import "ESTSettingsEddystoneTLM.h"
+#import "ESTSettingsEddystoneEID.h"
 #import "ESTSettingsDeviceInfo.h"
 #import "ESTSettingsPower.h"
 #import "ESTSettingsGPIO.h"
@@ -56,6 +57,10 @@ typedef NS_ENUM(NSInteger, ESTDeviceSettingsManagerError)
      *  Settings is not support by the device.
      */
     ESTDeviceSettingsManagerErrorSettingNotSupported,
+    /**
+     *  Settings is not provided for write operation.
+     */
+    ESTDeviceSettingsManagerErrorSettingNotProvidedForWrite,
     /**
      *  Validation failed for another setting provided in the group.
      */
@@ -133,6 +138,11 @@ typedef NS_ENUM(NSInteger, ESTDeviceSettingsManagerError)
  *  Group of settings related to Eddystone TLM packet configuration.
  */
 @property (nonatomic, strong, readonly) ESTSettingsEddystoneTLM *eddystoneTLM;
+
+/**
+ * Group of settings related to Eddystone EID packet configuration.
+ */
+@property (nonatomic, strong, readonly) ESTSettingsEddystoneEID *eddystoneEID;
 
 /**
  *  Group of settings related to device GPIO configuration.

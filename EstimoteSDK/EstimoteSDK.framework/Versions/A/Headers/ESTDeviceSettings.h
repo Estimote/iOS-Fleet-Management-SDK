@@ -18,7 +18,8 @@ ESTDeviceSettingsAdvertiserEddystoneUID,
 ESTDeviceSettingsAdvertiserEddystoneURL,
 ESTDeviceSettingsAdvertiserEddystoneTLM,
 ESTDeviceSettingsAdvertiserEstimoteLocation,
-ESTDeviceSettingsAdvertiserEstimoteTLM;
+ESTDeviceSettingsAdvertiserEstimoteTLM,
+ESTDeviceSettingsAdvertiserEddystoneEID;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -57,6 +58,11 @@ NS_ASSUME_NONNULL_BEGIN
  *  Advertiser settings for Eddystone TLM packets.
  */
 @property (nonatomic, strong, readonly) NSArray<ESTDeviceSettingsAdvertiserEddystoneTLM *> *eddystoneTLM;
+
+/**
+ *  Advertiser settings for Eddystone EID packets.
+ */
+@property (nonatomic, strong, readonly) NSArray<ESTDeviceSettingsAdvertiserEddystoneEID *> *eddystoneEID;
 
 /**
  *  Advertiser settings for Estimote Location packets.

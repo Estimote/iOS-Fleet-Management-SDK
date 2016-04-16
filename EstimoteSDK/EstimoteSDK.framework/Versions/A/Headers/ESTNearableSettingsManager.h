@@ -11,13 +11,12 @@
 
 #import <Foundation/Foundation.h>
 #import "ESTNearableOperationProtocol.h"
+#import "ESTPeripheralNearable.h"
 
 @class ESTPeripheralNearable;
 @class ESTDeviceSettingsCollection;
 @class ESTDeviceNearable;
 @class ESTNearableVO;
-
-@protocol ESTPeripheralNearableDelegate;
 
 #define ESTNearableSettingsManagerErrorDomain @"ESTNearableSettingsManagerErrorDomain" 
 

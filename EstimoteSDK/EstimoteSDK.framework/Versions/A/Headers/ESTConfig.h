@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ESTConfig : NSObject
 
-#pragma mark - Configuration
+#pragma mark - Estimote API Credentials
 
 /**
  * Sets App ID and App Token, enabling communication with the Estimote Cloud API.
@@ -51,6 +51,27 @@ NS_ASSUME_NONNULL_BEGIN
  * Checks if App ID and App Token were set.
  */
 + (BOOL)isAuthorized;
+
+#pragma mark - Google API Credentials
+
+/**
+ * Sets Google API Key, enabling communication with Google API.
+ *
+ * You can get it from Google Developer Console ( https://console.developers.google.com ) using project credentials settings.
+ * Google API Key is required to properly resolve Eddystone-EID packet.
+ *
+ * @param googleAPIKey Google API Key.
+ */
++ (void)setupGoogleAPIKey:(NSString *)googleAPIKey;
+
+/**
+ * Returns currently used Google API Key.
+ *
+ * @return currently used Google API Key.
+ */
++ (NSString * _Nullable)googleAPIKey;
+
+#pragma mark - Analytics settings
 
 /**
  *  Enables analytics requests on Enter/Exit monitoring events. Analytics data
