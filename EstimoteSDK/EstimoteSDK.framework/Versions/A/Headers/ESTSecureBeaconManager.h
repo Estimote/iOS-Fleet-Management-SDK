@@ -10,7 +10,7 @@
 //  Copyright (c) 2015 Estimote. All rights reserved.
 
 #import <CoreLocation/CoreLocation.h>
-#import "ESTBeaconManagerDelegate.h"
+#import "ESTSecureBeaconManagerDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * @see ESTBeaconManagerDelegate
  */
-@property (nonatomic, weak) id <ESTBeaconManagerDelegate> _Nullable delegate;
+@property (nonatomic, weak) id <ESTSecureBeaconManagerDelegate> _Nullable delegate;
 
 #pragma mark CoreLocation Authorization (new in iOS 8)
 ///--------------------------------------------------------------------

@@ -1,3 +1,10 @@
+## 4.2.0 (May 6, 2016)
+
+Improvements:
+
+- ESTSecureBeaconManager now returns ESTBeacon objects instead of CLBeacon.
+
+
 ## 4.1.0 (April 15, 2016)
 
 Features:

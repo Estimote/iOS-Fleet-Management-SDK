@@ -37,7 +37,9 @@ typedef void(^ESTRequestBeaconMacBlock)(NSString * _Nullable macAddress, NSError
 
 @interface ESTRequestBeaconMac : ESTRequestGetJSON
 
-@property (nonatomic, strong, readonly) CLBeacon *beacon;
+@property (nonatomic, strong, readonly) NSUUID *beaconProximityUUID;
+@property (nonatomic, strong, readonly) NSNumber *beaconMajor;
+@property (nonatomic, strong, readonly) NSNumber *beaconMinor;
 
 /**
  *  Initialise request with beacon.
@@ -47,6 +49,19 @@ typedef void(^ESTRequestBeaconMacBlock)(NSString * _Nullable macAddress, NSError
  *  @return instance of request
  */
 - (instancetype)initWithBeacon:(CLBeacon *)beacon;
+
+/**
+ *  Initialise request with beacon params.
+ *
+ *  @param proximityUUID Corresponding beacon Proximity UUID.
+ *  @param major Corresponding beacon Major.
+ *  @param minor Corresponding beacon Minor.
+ *
+ *  @return instance of request
+ */
+- (instancetype)initWithProximityUUID:(NSUUID *)proximityUUID
+                                major:(short)major
+                                minor:(short)minor;
 
 /**
  *  Methods allows to send request with completion block invoked as a result.

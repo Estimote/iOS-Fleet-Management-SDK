@@ -7,7 +7,7 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 4.1.0
+//  Version: 4.2.0
 //  Copyright (c) 2016 Estimote. All rights reserved.
 
 /**
@@ -30,6 +30,7 @@
 /**
  *  Beacons
  */
+#import "ESTBeacon.h"
 #import "ESTBeaconManager.h"
 #import "ESTSecureBeaconManager.h"
 #import "ESTBeaconConnection.h"
