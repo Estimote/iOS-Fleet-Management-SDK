@@ -28,12 +28,12 @@ typedef NS_ENUM(NSInteger, ESTPeripheralDiscoveryError)
 
 @required
 
-/*
+/**
  * Initialize device with provided CoreBluetooth CBPeripheral
  */
 - (id)initWithPeripheral:(CBPeripheral *)peripheral;
 
-/*
+/**
  * Discover bluetooth service and characteristics
  */
 - (void)discoverServicesAndCharacteristicsWithCompletion:(ESTPeripheralDiscoveryCompletionBlock)completion;

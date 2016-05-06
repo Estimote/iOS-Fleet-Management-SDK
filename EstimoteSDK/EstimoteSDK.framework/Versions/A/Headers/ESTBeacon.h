@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface ESTBeacon : NSObject <NSCopying, NSSecureCoding>
 
-/*
+/**
  *  proximityUUID
  *
  *  Discussion:
@@ -49,7 +49,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (readonly, nonatomic, strong) NSNumber *minor;
 
-/*
+/**
  *  proximity
  *
  *  Discussion:

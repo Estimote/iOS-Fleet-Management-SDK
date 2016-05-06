@@ -14,22 +14,22 @@
 
 @class ESTDeviceConnectable;
 
-/*
+/**
  * Possible statuses of `ESTSettingOperationStatus`
  */
 typedef NS_ENUM(NSInteger, ESTSettingOperationStatus)
 {
-    /*
+    /**
      *  The operation is in progress.
      */
     ESTSettingOperationStatusInProgress,
     
-    /*
+    /**
      *  The operation is complete.
      */
     ESTSettingOperationStatusComplete,
    
-    /*
+    /**
      *  The operation failed.
      */
     ESTSettingOperationStatusFailed

@@ -7,7 +7,7 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 4.2.0
+//  Version: 4.3.0
 //  Copyright (c) 2016 Estimote. All rights reserved.
 
 /**
@@ -26,6 +26,7 @@
 #import "ESTDeviceFilterBeaconV1.h"
 #import "ESTDeviceFilterLocationBeacon.h"
 #import "ESTDeviceFilterNearable.h"
+#import "ESTLogger.h"
 
 /**
  *  Beacons
@@ -315,6 +316,13 @@
 
 #import "ESTNearableFirmwareVO.h"
 #import "ESTNearableFirmwareUpdateVO.h"
+
+/**
+ *  Analytics handling
+ */
+#import "ESTAnalyticsManager.h"
+#import "ESTRequestAnalyticsTrack.h"
+#import "ESTAnalyticsEventVO.h"
 
 /**
  *  Cloud API v2 requests

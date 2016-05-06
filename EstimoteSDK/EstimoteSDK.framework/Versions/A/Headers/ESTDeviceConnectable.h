@@ -77,12 +77,12 @@ typedef void(^ESTDeviceFirmwareUpdateProgressBlock)(NSInteger value);
 /// @name Connectivity
 ///--------------------------------------------------------------------
 
-/*
+/**
  * Perform connection to the device.
  */
 - (void)connect;
 
-/*
+/**
  * Cancel connection to the device.
  */
 - (void)disconnect;

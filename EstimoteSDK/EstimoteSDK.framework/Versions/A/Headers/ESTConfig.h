@@ -79,7 +79,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param enable flag indicating if analytics for monitoring should be enabled
  */
-+ (void)enableMonitoringAnalytics:(BOOL)enable;
++ (void)enableMonitoringAnalytics:(BOOL)enable DEPRECATED_MSG_ATTRIBUTE("Starting from SDK 4.1.1 this method is deprecated. Please use [ESTAnalyticsManager enableMonitoringAnalytics:]");
 
 /**
  *  Enables analytics requests for ranging events.
@@ -88,7 +88,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param enable flag indicating if analytics for ranging should be enabled
  */
-+ (void)enableRangingAnalytics:(BOOL)enable;
++ (void)enableRangingAnalytics:(BOOL)enable DEPRECATED_MSG_ATTRIBUTE("Starting from SDK 4.1.1 this method is deprecated. Please use [ESTAnalyticsManager enableRangingAnalytics:]");
 
 /**
  *  When GPS Positioning is turned on analytics events
@@ -96,21 +96,21 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param enable flag indicating if GPS Positioning should be enabled
  */
-+ (void)enableGPSPositioningForAnalytics:(BOOL)enable;
++ (void)enableGPSPositioningForAnalytics:(BOOL)enable DEPRECATED_MSG_ATTRIBUTE("Starting from SDK 4.1.1 this method is deprecated. Please use [ESTAnalyticsManager enableGPSPositioningForAnalytics:]");
 
 /**
  *  Indicates current state of monitoring analytics.
  *
  *  @return flag that indicates if analytics is enabled
  */
-+ (BOOL)isMonitoringAnalyticsEnabled;
++ (BOOL)isMonitoringAnalyticsEnabled DEPRECATED_MSG_ATTRIBUTE("Starting from SDK 4.1.1 this method is deprecated. Please use [ESTAnalyticsManager isMonitoringAnalyticsEnabled:]");
 
 /**
  *  Indicates current state of ranging analytics.
  *
  *  @return flag that indicates if analytics is enabled
  */
-+ (BOOL)isRangingAnalyticsEnabled;
++ (BOOL)isRangingAnalyticsEnabled DEPRECATED_MSG_ATTRIBUTE("Starting from SDK 4.1.1 this method is deprecated. Please use [ESTAnalyticsManager isRangingAnalyticsEnabled:]");
 
 @end
 

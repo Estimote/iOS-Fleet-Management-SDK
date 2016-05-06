@@ -212,7 +212,7 @@ typedef NS_ENUM(NSInteger, ESTDeviceSettingsManagerError)
 
 @interface ESTBeaconSettingsManager (Internal)
 
-/*
+/**
  *  Method allows to initialize object with device and peripheral.
  *
  *  @param device     Device to be managed (not retained).

@@ -16,7 +16,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/**ž
+/**
  *  Block used as a result of read/write setting Enable operation for Estimote Location packet.
  *
  *  @param enabled Enable setting carrying value.

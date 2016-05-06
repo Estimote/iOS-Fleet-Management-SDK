@@ -16,48 +16,50 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ESTBeaconVO : NSObject <NSCoding>
 
-@property (nonatomic, strong) NSString * proximityUUID;
-@property (nonatomic, strong) NSNumber * major;
-@property (nonatomic, strong) NSNumber * minor;
-@property (nonatomic, strong) NSString * macAddress;
-@property (nonatomic, strong) NSString * publicIdentifier;
+@property (nonatomic, strong) NSString *proximityUUID;
+@property (nonatomic, strong) NSNumber *major;
+@property (nonatomic, strong) NSNumber *minor;
+@property (nonatomic, strong) NSString *macAddress;
+@property (nonatomic, strong) NSString *publicIdentifier;
 @property (nonatomic, assign) ESTBroadcastingScheme broadcastingScheme;
 @property (nonatomic, assign) ESTBeaconMotionUUID motionUUIDState;
 
-@property (nonatomic, strong) NSString * _Nullable name;
-@property (nonatomic, strong) NSNumber * _Nullable batteryLifeExpectancy;
-@property (nonatomic, strong) NSString * _Nullable hardware;
-@property (nonatomic, strong) NSString * _Nullable firmware;
+@property (nonatomic, strong, nullable) NSString *name;
+@property (nonatomic, strong, nullable) NSNumber *batteryLifeExpectancy;
+@property (nonatomic, strong, nullable) NSString *hardware;
+@property (nonatomic, strong, nullable) NSString *firmware;
 @property (nonatomic, assign) ESTBeaconPower power;
 @property (nonatomic, assign) NSInteger advInterval;
 
-@property (nonatomic, strong) NSNumber * _Nullable basicPowerMode;
-@property (nonatomic, strong) NSNumber * _Nullable smartPowerMode;
-@property (nonatomic, strong) NSNumber * _Nullable batteryLevel;
+@property (nonatomic, strong, nullable) NSNumber *basicPowerMode;
+@property (nonatomic, strong, nullable) NSNumber *smartPowerMode;
+@property (nonatomic, strong, nullable) NSNumber *batteryLevel;
 
-@property (nonatomic, strong) NSNumber * _Nullable latitude;
-@property (nonatomic, strong) NSNumber * _Nullable longitude;
-@property (nonatomic, strong) NSDictionary * _Nullable location;
-@property (nonatomic) NSString * _Nullable city;
-@property (nonatomic) NSString * _Nullable country;
-@property (nonatomic) NSString * _Nullable formattedAddress;
-@property (nonatomic) NSString * _Nullable stateName;
-@property (nonatomic) NSString * _Nullable stateCode;
-@property (nonatomic) NSString * _Nullable streetName;
-@property (nonatomic) NSString * _Nullable streetNumber;
-@property (nonatomic) NSString * _Nullable zipCode;
+@property (nonatomic, strong, nullable) NSNumber *latitude;
+@property (nonatomic, strong, nullable) NSNumber *longitude;
+@property (nonatomic, strong, nullable) NSDictionary *location;
+@property (nonatomic, nullable) NSString *city;
+@property (nonatomic, nullable) NSString *country;
+@property (nonatomic, nullable) NSString *formattedAddress;
+@property (nonatomic, nullable) NSString *stateName;
+@property (nonatomic, nullable) NSString *stateCode;
+@property (nonatomic, nullable) NSString *streetName;
+@property (nonatomic, nullable) NSString *streetNumber;
+@property (nonatomic, nullable) NSString *zipCode;
 
-@property (nonatomic) NSString * _Nullable indoorLocationIdentifier;
-@property (nonatomic) NSString * _Nullable indoorLocationName;
+@property (nonatomic, nullable) NSSet <NSString *> *tags;
 
-@property (nonatomic, strong) NSString * _Nullable eddystoneNamespaceID;
-@property (nonatomic, strong) NSString * _Nullable eddystoneInstanceID;
-@property (nonatomic, strong) NSString * _Nullable eddystoneURL;
+@property (nonatomic, nullable) NSString *indoorLocationIdentifier;
+@property (nonatomic, nullable) NSString *indoorLocationName;
 
-@property (nonatomic, strong) NSNumber * _Nullable motionDetection;
+@property (nonatomic, strong, nullable) NSString *eddystoneNamespaceID;
+@property (nonatomic, strong, nullable) NSString *eddystoneInstanceID;
+@property (nonatomic, strong, nullable) NSString *eddystoneURL;
+
+@property (nonatomic, strong, nullable) NSNumber *motionDetection;
 @property (nonatomic, assign) ESTBeaconConditionalBroadcasting conditionalBroadcasting;
 
-@property (nonatomic, strong) NSNumber * _Nullable security;
+@property (nonatomic, strong, nullable) NSNumber *security;
 @property (nonatomic, assign) BOOL isSecured __attribute__ ((deprecated(("Starting from SDK 3.7.0 use security property instead"))));
 
 @property (nonatomic) ESTColor color;

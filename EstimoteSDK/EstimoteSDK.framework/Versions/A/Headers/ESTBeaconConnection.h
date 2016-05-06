@@ -882,6 +882,20 @@ enum
             longitude:(NSNumber *)longitude
            completion:(ESTCompletionBlock)completion;
 
+#pragma mark - Writing methods for Cloud Tags setting of a device
+///--------------------------------------------------------------------
+/// @name Writing methods for Cloud Tags setting of a device
+///--------------------------------------------------------------------
+
+/**
+  * Saves Cloud Tags setting for the device in Estimote Cloud.
+  *
+  *  @param tags       Cloud Tags
+  *  @param completion completion block fired on operation completion
+  */
+-  (void)writeTags:(NSSet <NSString *> *)tags
+        completion:(ESTCompletionBlock)completion;
+
 #pragma mark - Reset to factory settings
 ///--------------------------------------------------------------------
 /// @name Reset to factory settings

@@ -1,4 +1,16 @@
-## 4.2.0 (May 6, 2016)
+## 4.3.0 (May 6, 2016)
+
+Features:
+
+- ESTLogger added to ease debugging. Can be set with different levels for printing and caching logs.
+- Added writing tags for Proximity Beacons.
+
+Improvements:
+
+- Fixed changing beacon's settings on firmware update completion.
+- Refactored logs with new ESTLogger.
+
+## 4.2.0 (May 5, 2016)
 
 Improvements:
 
