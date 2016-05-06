@@ -6,7 +6,7 @@
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.2.1 (build 1334)" />
+		<meta name="generator" content="appledoc 2.2 (build 963)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -52,6 +52,10 @@
 	
 	<option value="//api/name/checkFirmwareUpdateWithCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- checkFirmwareUpdateWithCompletion:</option>
 	
+	<option value="//api/name/connect">&nbsp;&nbsp;&nbsp;&nbsp;- connect</option>
+	
+	<option value="//api/name/disconnect">&nbsp;&nbsp;&nbsp;&nbsp;- disconnect</option>
+	
 	<option value="//api/name/updateFirmwareWithProgress:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- updateFirmwareWithProgress:completion:</option>
 	
 	
@@ -69,6 +73,8 @@
 
 
 <li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Connectivity">Connectivity</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Firmware update">Firmware update</a></span></li>
 	
@@ -93,6 +99,10 @@
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/checkFirmwareUpdateWithCompletion:">checkFirmwareUpdateWithCompletion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/connect">connect</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/disconnect">disconnect</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/updateFirmwareWithProgress:completion:">updateFirmwareWithProgress:completion:</a></span></li>
 	
@@ -160,6 +170,26 @@
 		<code><a href="#//api/name/connectionStatus">&nbsp;&nbsp;connectionStatus</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Connectivity" name="task_Connectivity"></a>
+						<h3 class="subsubtitle task-title">Connectivity</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/connect">&ndash;&nbsp;connect</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/disconnect">&ndash;&nbsp;disconnect</a></code>
+	</span>
+	
 	
 </li>
 						</ul>
@@ -242,7 +272,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;ESTDeviceConnectableDelegate&gt; delegate</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;ESTDeviceConnectableDelegate&gt; _Nullable delegate</code></div>
 
     
 	
@@ -323,6 +353,78 @@
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/connect" title="connect"></a>
+	<h3 class="subsubtitle method-title">connect</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Perform connection to the device.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)connect</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTDeviceConnectable.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/disconnect" title="disconnect"></a>
+	<h3 class="subsubtitle method-title">disconnect</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Cancel connection to the device.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)disconnect</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTDeviceConnectable.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/updateFirmwareWithProgress:completion:" title="updateFirmwareWithProgress:completion:"></a>
 	<h3 class="subsubtitle method-title">updateFirmwareWithProgress:completion:</h3>
 	
@@ -380,9 +482,6 @@ is required to perform firmware update.</p>
 					
                     
                     
-                    
-                    
-
 				</div>
 				<div class="main-navigation navigation-bottom">
 					<ul>
@@ -393,9 +492,9 @@ is required to perform firmware update.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2016 Estimote. All rights reserved. (Last updated: 2016-03-11)</span><br />
+						<p><span class="copyright">&copy; 2016 Estimote. All rights reserved. (Last updated: 2016-05-06)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						
 					</div>
 				</div>

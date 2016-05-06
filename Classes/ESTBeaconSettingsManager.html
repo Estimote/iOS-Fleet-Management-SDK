@@ -6,7 +6,7 @@
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.2.1 (build 1334)" />
+		<meta name="generator" content="appledoc 2.2 (build 963)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -45,6 +45,8 @@
 	
 	<option value="//api/name/deviceInfo">&nbsp;&nbsp;&nbsp;&nbsp;deviceInfo</option>
 	
+	<option value="//api/name/eddystoneEID">&nbsp;&nbsp;&nbsp;&nbsp;eddystoneEID</option>
+	
 	<option value="//api/name/eddystoneTLM">&nbsp;&nbsp;&nbsp;&nbsp;eddystoneTLM</option>
 	
 	<option value="//api/name/eddystoneUID">&nbsp;&nbsp;&nbsp;&nbsp;eddystoneUID</option>
@@ -69,6 +71,8 @@
 	
 	
 	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/initWithDevice:peripheral:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithDevice:peripheral:</option>
 	
 	<option value="//api/name/performOperation:">&nbsp;&nbsp;&nbsp;&nbsp;- performOperation:</option>
 	
@@ -122,6 +126,8 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/deviceInfo">deviceInfo</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/eddystoneEID">eddystoneEID</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/eddystoneTLM">eddystoneTLM</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/eddystoneUID">eddystoneUID</a></span></li>
@@ -147,6 +153,8 @@
 
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithDevice:peripheral:">initWithDevice:peripheral:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/performOperation:">performOperation:</a></span></li>
 	
@@ -286,6 +294,12 @@ like writing to peripheral and saving to the Estimote Cloud.</p>
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/eddystoneEID">&nbsp;&nbsp;eddystoneEID</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/GPIO">&nbsp;&nbsp;GPIO</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
@@ -351,6 +365,12 @@ like writing to peripheral and saving to the Estimote Cloud.</p>
 
 						<ul class="task-list">
 							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithDevice:peripheral:">&ndash;&nbsp;initWithDevice:peripheral:</a></code>
+	</span>
+	
+	
+</li><li>
 	<span class="tooltip">
 		<code><a href="#//api/name/updatePeripheral:">&ndash;&nbsp;updatePeripheral:</a></code>
 	</span>
@@ -460,6 +480,42 @@ like writing to peripheral and saving to the Estimote Cloud.</p>
     
 
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) ESTSettingsDeviceInfo *deviceInfo</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconSettingsManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/eddystoneEID" title="eddystoneEID"></a>
+	<h3 class="subsubtitle method-title">eddystoneEID</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Group of settings related to Eddystone EID packet configuration.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) ESTSettingsEddystoneEID *eddystoneEID</code></div>
 
     
 	
@@ -818,6 +874,62 @@ like writing to peripheral and saving to the Estimote Cloud.</p>
 						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
 						
 						<div class="section-method">
+	<a name="//api/name/initWithDevice:peripheral:" title="initWithDevice:peripheral:"></a>
+	<h3 class="subsubtitle method-title">initWithDevice:peripheral:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Method allows to initialize object with device and peripheral.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithDevice:(ESTDeviceLocationBeacon *)<em>device</em> peripheral:(ESTPeripheralTypeUtility *)<em>peripheral</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>device</em></dt>
+			<dd><p>Device to be managed (not retained).</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>peripheral</em></dt>
+			<dd><p>Peripheral implementing <code>ESTPeripheralConfigurable</code> protocol.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Initialized object.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTBeaconSettingsManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/performOperation:" title="performOperation:"></a>
 	<h3 class="subsubtitle method-title">performOperation:</h3>
 	
@@ -921,7 +1033,7 @@ like writing to peripheral and saving to the Estimote Cloud.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)performOperationsFromArray:(NSArray *)<em>operationsArray</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)performOperationsFromArray:(NSArray&lt;id&lt;ESTBeaconOperationProtocol&gt; &gt; *)<em>operationsArray</em></code></div>
 
     
 	
@@ -967,7 +1079,7 @@ like writing to peripheral and saving to the Estimote Cloud.</p>
 	
     
 
-	<div class="method-subsection method-declaration"><code>- (void)performOperationsFromArray:(NSArray *)<em>operationsArray</em> completion:(ESTDeviceSettingsManagerOperationsCompletionBlock)<em>completion</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)performOperationsFromArray:(NSArray&lt;id&lt;ESTBeaconOperationProtocol&gt; &gt; *)<em>operationsArray</em> completion:(ESTDeviceSettingsManagerOperationsCompletionBlock _Nullable)<em>completion</em></code></div>
 
     
 	
@@ -1139,9 +1251,6 @@ like writing to peripheral and saving to the Estimote Cloud.</p>
 					
                     
                     
-                    
-                    
-
 				</div>
 				<div class="main-navigation navigation-bottom">
 					<ul>
@@ -1152,9 +1261,9 @@ like writing to peripheral and saving to the Estimote Cloud.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2016 Estimote. All rights reserved. (Last updated: 2016-03-11)</span><br />
+						<p><span class="copyright">&copy; 2016 Estimote. All rights reserved. (Last updated: 2016-05-06)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						
 					</div>
 				</div>

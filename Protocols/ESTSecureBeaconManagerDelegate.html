@@ -1,0 +1,859 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>ESTSecureBeaconManagerDelegate Protocol Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.2 (build 963)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">EstimoteSDK </a></h1>
+				<a id="developerHome" href="../index.html">Estimote</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">ESTSecureBeaconManagerDelegate Protocol Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/beaconManager:didChangeAuthorizationStatus:">&nbsp;&nbsp;&nbsp;&nbsp;- beaconManager:didChangeAuthorizationStatus:</option>
+	
+	<option value="//api/name/beaconManager:didDetermineState:forRegion:">&nbsp;&nbsp;&nbsp;&nbsp;- beaconManager:didDetermineState:forRegion:</option>
+	
+	<option value="//api/name/beaconManager:didEnterRegion:">&nbsp;&nbsp;&nbsp;&nbsp;- beaconManager:didEnterRegion:</option>
+	
+	<option value="//api/name/beaconManager:didExitRegion:">&nbsp;&nbsp;&nbsp;&nbsp;- beaconManager:didExitRegion:</option>
+	
+	<option value="//api/name/beaconManager:didFailWithError:">&nbsp;&nbsp;&nbsp;&nbsp;- beaconManager:didFailWithError:</option>
+	
+	<option value="//api/name/beaconManager:didRangeBeacons:inRegion:">&nbsp;&nbsp;&nbsp;&nbsp;- beaconManager:didRangeBeacons:inRegion:</option>
+	
+	<option value="//api/name/beaconManager:didStartMonitoringForRegion:">&nbsp;&nbsp;&nbsp;&nbsp;- beaconManager:didStartMonitoringForRegion:</option>
+	
+	<option value="//api/name/beaconManager:monitoringDidFailForRegion:withError:">&nbsp;&nbsp;&nbsp;&nbsp;- beaconManager:monitoringDidFailForRegion:withError:</option>
+	
+	<option value="//api/name/beaconManager:rangingBeaconsDidFailForRegion:withError:">&nbsp;&nbsp;&nbsp;&nbsp;- beaconManager:rangingBeaconsDidFailForRegion:withError:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Authorization Change Events (new in iOS 8)">Authorization Change Events (new in iOS 8)</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Monitoring Events">Monitoring Events</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Ranging Events">Ranging Events</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_General Events">General Events</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beaconManager:didChangeAuthorizationStatus:">beaconManager:didChangeAuthorizationStatus:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beaconManager:didDetermineState:forRegion:">beaconManager:didDetermineState:forRegion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beaconManager:didEnterRegion:">beaconManager:didEnterRegion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beaconManager:didExitRegion:">beaconManager:didExitRegion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beaconManager:didFailWithError:">beaconManager:didFailWithError:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beaconManager:didRangeBeacons:inRegion:">beaconManager:didRangeBeacons:inRegion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beaconManager:didStartMonitoringForRegion:">beaconManager:didStartMonitoringForRegion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beaconManager:monitoringDidFailForRegion:withError:">beaconManager:monitoringDidFailForRegion:withError:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/beaconManager:rangingBeaconsDidFailForRegion:withError:">beaconManager:rangingBeaconsDidFailForRegion:withError:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="ESTSecureBeaconManagerDelegate Protocol Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">ESTSecureBeaconManagerDelegate Protocol Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">ESTSecureBeaconManagerDelegate.h</td>
+</tr>
+						</tbody></table></div>
+					
+                    
+                    
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						<a title="Authorization Change Events (new in iOS 8)" name="task_Authorization Change Events (new in iOS 8)"></a>
+						<h3 class="subsubtitle task-title">Authorization Change Events (new in iOS 8)</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/beaconManager:didChangeAuthorizationStatus:">&ndash;&nbsp;beaconManager:didChangeAuthorizationStatus:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Monitoring Events" name="task_Monitoring Events"></a>
+						<h3 class="subsubtitle task-title">Monitoring Events</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/beaconManager:didStartMonitoringForRegion:">&ndash;&nbsp;beaconManager:didStartMonitoringForRegion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/beaconManager:monitoringDidFailForRegion:withError:">&ndash;&nbsp;beaconManager:monitoringDidFailForRegion:withError:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/beaconManager:didEnterRegion:">&ndash;&nbsp;beaconManager:didEnterRegion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/beaconManager:didExitRegion:">&ndash;&nbsp;beaconManager:didExitRegion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/beaconManager:didDetermineState:forRegion:">&ndash;&nbsp;beaconManager:didDetermineState:forRegion:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Ranging Events" name="task_Ranging Events"></a>
+						<h3 class="subsubtitle task-title">Ranging Events</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/beaconManager:didRangeBeacons:inRegion:">&ndash;&nbsp;beaconManager:didRangeBeacons:inRegion:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/beaconManager:rangingBeaconsDidFailForRegion:withError:">&ndash;&nbsp;beaconManager:rangingBeaconsDidFailForRegion:withError:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="General Events" name="task_General Events"></a>
+						<h3 class="subsubtitle task-title">General Events</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/beaconManager:didFailWithError:">&ndash;&nbsp;beaconManager:didFailWithError:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/beaconManager:didChangeAuthorizationStatus:" title="beaconManager:didChangeAuthorizationStatus:"></a>
+	<h3 class="subsubtitle method-title">beaconManager:didChangeAuthorizationStatus:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Tells the delegate that the authorization status for the application changed.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)beaconManager:(id)<em>manager</em> didChangeAuthorizationStatus:(CLAuthorizationStatus)<em>status</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This method is called whenever the application&rsquo;s ability to use location services changes. Changes can occur because the user allowed or denied the use of location services for your application or for the system as a whole.</p>
+
+<p>If the authorization status is already known when you call the <code>requestWhenInUseAuthorization</code> or <code>requestAlwaysAuthorization</code> method, the beacon manager does not report the current authorization status to this method. The beacon manager only reports changes to the authorization status. For example, it calls this method when the status changes from <code>kCLAuthorizationStatusNotDetermined</code> to <code>kCLAuthorizationStatusAuthorizedWhenInUse</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTSecureBeaconManagerDelegate.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/beaconManager:didDetermineState:forRegion:" title="beaconManager:didDetermineState:forRegion:"></a>
+	<h3 class="subsubtitle method-title">beaconManager:didDetermineState:forRegion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Tells the delegate about the state of the specified region.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)beaconManager:(id)<em>manager</em> didDetermineState:(CLRegionState)<em>state</em> forRegion:(CLBeaconRegion *)<em>region</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>manager</em></dt>
+			<dd><p>The beacon manager object reporting the event.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>state</em></dt>
+			<dd><p>The state of the specified region: <code>CLRegionStateUnknown</code>, <code>CLRegionStateInside</code> or <code>CLRegionStateOutside</code>.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>region</em></dt>
+			<dd><p>The region which state was determined.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>The beacon manager calls this method whenever there is a boundary transition for a region. It calls this method in addition to calling the <a href="#//api/name/beaconManager:didEnterRegion:"><code>beaconManager:didEnterRegion:</code></a> and <a href="#//api/name/beaconManager:didExitRegion:"><code>beaconManager:didExitRegion:</code></a> methods. The beacon manager also calls this method in response to a call to its <a href="../Classes/ESTBeaconManager.html#//api/name/requestStateForRegion:"><code>[ESTBeaconManager requestStateForRegion:]</code></a> method, which runs asynchronously.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTSecureBeaconManagerDelegate.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/beaconManager:didEnterRegion:" title="beaconManager:didEnterRegion:"></a>
+	<h3 class="subsubtitle method-title">beaconManager:didEnterRegion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Tells the delegate that the user entered the specified region.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)beaconManager:(id)<em>manager</em> didEnterRegion:(CLBeaconRegion *)<em>region</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>manager</em></dt>
+			<dd><p>The beacon manager object reporting the event.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>region</em></dt>
+			<dd><p>The region that was entered.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Because regions are a shared application resource, every active beacon and location manager object delivers this message to its associated delegate. It does not matter which beacon or location manager actually registered the specified region. And if multiple beacon and location managers share a delegate object, that delegate receives the message multiple times.</p>
+
+<p>The region object provided may not be the same one that was registered. As a result, you should never perform pointer-level comparisons to determine equality. Instead, use the region&rsquo;s identifier string to determine if your delegate should respond.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTSecureBeaconManagerDelegate.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/beaconManager:didExitRegion:" title="beaconManager:didExitRegion:"></a>
+	<h3 class="subsubtitle method-title">beaconManager:didExitRegion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Tells the delegate that the user left the specified region.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)beaconManager:(id)<em>manager</em> didExitRegion:(CLBeaconRegion *)<em>region</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>manager</em></dt>
+			<dd><p>The beacon manager object reporting the event.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>region</em></dt>
+			<dd><p>The region that was exited.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Because regions are a shared application resource, every active beacon and location manager object delivers this message to its associated delegate. It does not matter which beacon or location manager actually registered the specified region. And if multiple beacon and location managers share a delegate object, that delegate receives the message multiple times.</p>
+
+<p>The region object provided may not be the same one that was registered. As a result, you should never perform pointer-level comparisons to determine equality. Instead, use the region&rsquo;s identifier string to determine if your delegate should respond.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTSecureBeaconManagerDelegate.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/beaconManager:didFailWithError:" title="beaconManager:didFailWithError:"></a>
+	<h3 class="subsubtitle method-title">beaconManager:didFailWithError:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The beacon manager calls this method when it encounters an error trying to get the beacons data. If the user denies your application’s use of the location service, this method reports a kCLErrorDenied error. Upon receiving such an error, you should stop the location service. This method is forwarding locationManager:didFailWithError: method of CLLocationManager.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)beaconManager:(id)<em>manager</em> didFailWithError:(NSError *)<em>error</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>manager</em></dt>
+			<dd><p>The beacon manager object reporting the event.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>error</em></dt>
+			<dd><p>If an error occurred, this error object describes the error.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTSecureBeaconManagerDelegate.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/beaconManager:didRangeBeacons:inRegion:" title="beaconManager:didRangeBeacons:inRegion:"></a>
+	<h3 class="subsubtitle method-title">beaconManager:didRangeBeacons:inRegion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Tells the delegate that one or more beacons are in range.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)beaconManager:(id)<em>manager</em> didRangeBeacons:(NSArray&lt;ESTBeacon*&gt; *)<em>beacons</em> inRegion:(CLBeaconRegion *)<em>region</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>manager</em></dt>
+			<dd><p>The beacon manager object reporting the event.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>beacons</em></dt>
+			<dd><p>An array of <a href="../Classes/ESTBeacon.html"><code>ESTBeacon</code></a> objects representing the beacons currently in range. You can use the information in these objects to determine the range of each beacon and its identifying information.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>region</em></dt>
+			<dd><p>The region that was used to range the beacons.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTSecureBeaconManagerDelegate.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/beaconManager:didStartMonitoringForRegion:" title="beaconManager:didStartMonitoringForRegion:"></a>
+	<h3 class="subsubtitle method-title">beaconManager:didStartMonitoringForRegion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Tells the delegate that a new region is being monitored.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)beaconManager:(id)<em>manager</em> didStartMonitoringForRegion:(CLBeaconRegion *)<em>region</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>manager</em></dt>
+			<dd><p>The beacon manager object reporting the event.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>region</em></dt>
+			<dd><p>The region that is being monitored.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTSecureBeaconManagerDelegate.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/beaconManager:monitoringDidFailForRegion:withError:" title="beaconManager:monitoringDidFailForRegion:withError:"></a>
+	<h3 class="subsubtitle method-title">beaconManager:monitoringDidFailForRegion:withError:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Tells the delegate that a region monitoring error occurred.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)beaconManager:(id)<em>manager</em> monitoringDidFailForRegion:(CLBeaconRegion *_Nullable)<em>region</em> withError:(NSError *)<em>error</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>manager</em></dt>
+			<dd><p>The beacon manager object reporting the event.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>region</em></dt>
+			<dd><p>The region for which the error occurred.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>error</em></dt>
+			<dd><p>An error object describing why monitoring failed.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTSecureBeaconManagerDelegate.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/beaconManager:rangingBeaconsDidFailForRegion:withError:" title="beaconManager:rangingBeaconsDidFailForRegion:withError:"></a>
+	<h3 class="subsubtitle method-title">beaconManager:rangingBeaconsDidFailForRegion:withError:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Tells the delegate that a region ranging error occurred.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)beaconManager:(id)<em>manager</em> rangingBeaconsDidFailForRegion:(CLBeaconRegion *_Nullable)<em>region</em> withError:(NSError *)<em>error</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>manager</em></dt>
+			<dd><p>The beacon manager object reporting the event.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>region</em></dt>
+			<dd><p>The region for which the error occurred.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>error</em></dt>
+			<dd><p>An error object describing why ranging failed.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTSecureBeaconManagerDelegate.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+                    
+                    
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2016 Estimote. All rights reserved. (Last updated: 2016-05-06)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

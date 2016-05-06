@@ -6,7 +6,7 @@
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		<meta name="generator" content="appledoc 2.2.1 (build 1334)" />
+		<meta name="generator" content="appledoc 2.2 (build 963)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -40,6 +40,8 @@
 	<option value="properties">Properties</option>
 	
 	<option value="//api/name/connectivity">&nbsp;&nbsp;&nbsp;&nbsp;connectivity</option>
+	
+	<option value="//api/name/eddystoneEID">&nbsp;&nbsp;&nbsp;&nbsp;eddystoneEID</option>
 	
 	<option value="//api/name/eddystoneTLM">&nbsp;&nbsp;&nbsp;&nbsp;eddystoneTLM</option>
 	
@@ -91,6 +93,8 @@
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/connectivity">connectivity</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/eddystoneEID">eddystoneEID</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/eddystoneTLM">eddystoneTLM</a></span></li>
 	
@@ -212,6 +216,12 @@
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/eddystoneEID">&nbsp;&nbsp;eddystoneEID</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/estimoteLocation">&nbsp;&nbsp;estimoteLocation</a></code>
 	</span>
 	<span class="task-item-suffix">property</span>
@@ -259,7 +269,43 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSArray *connectivity</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSArray&lt;ESTDeviceSettingsAdvertiser*&gt; *connectivity</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTDeviceSettings.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/eddystoneEID" title="eddystoneEID"></a>
+	<h3 class="subsubtitle method-title">eddystoneEID</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Advertiser settings for Eddystone EID packets.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSArray&lt;ESTDeviceSettingsAdvertiserEddystoneEID*&gt; *eddystoneEID</code></div>
 
     
 	
@@ -295,7 +341,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSArray *eddystoneTLM</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSArray&lt;ESTDeviceSettingsAdvertiserEddystoneTLM*&gt; *eddystoneTLM</code></div>
 
     
 	
@@ -331,7 +377,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSArray *eddystoneUID</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSArray&lt;ESTDeviceSettingsAdvertiserEddystoneUID*&gt; *eddystoneUID</code></div>
 
     
 	
@@ -367,7 +413,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSArray *eddystoneURL</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSArray&lt;ESTDeviceSettingsAdvertiserEddystoneURL*&gt; *eddystoneURL</code></div>
 
     
 	
@@ -403,7 +449,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSArray *estimoteLocation</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSArray&lt;ESTDeviceSettingsAdvertiserEstimoteLocation*&gt; *estimoteLocation</code></div>
 
     
 	
@@ -439,7 +485,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSArray *estimoteTLM</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSArray&lt;ESTDeviceSettingsAdvertiserEstimoteTLM*&gt; *estimoteTLM</code></div>
 
     
 	
@@ -511,7 +557,7 @@
 	
     
 
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSArray *iBeacon</code></div>
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSArray&lt;ESTDeviceSettingsAdvertiserIBeacon*&gt; *iBeacon</code></div>
 
     
 	
@@ -648,9 +694,6 @@ using provided device settings object.</p>
 					
                     
                     
-                    
-                    
-
 				</div>
 				<div class="main-navigation navigation-bottom">
 					<ul>
@@ -661,9 +704,9 @@ using provided device settings object.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2016 Estimote. All rights reserved. (Last updated: 2016-03-11)</span><br />
+						<p><span class="copyright">&copy; 2016 Estimote. All rights reserved. (Last updated: 2016-05-06)</span><br />
 						
-						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</span></p>
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						
 					</div>
 				</div>
