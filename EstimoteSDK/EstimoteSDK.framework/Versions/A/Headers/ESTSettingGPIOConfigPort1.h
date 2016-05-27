@@ -40,7 +40,7 @@ typedef void(^ESTSettingGPIOConfigPort1CompletionBlock)(ESTSettingGPIOConfigPort
  *
  *  @return Initialized object. Nil if validation fails.
  */
-- (instancetype)initWithValue:(ESTGPIOConfig)config;
+- (nullable instancetype)initWithValue:(ESTGPIOConfig)config;
 
 /**
  *  Returns current value of GPIO ConfigPort1 setting.

@@ -1,3 +1,14 @@
+## 4.4.0 (May 27, 2016)
+
+Features:
+
+- Google Eddystone Configuration Service support for Location Beacons.
+- GPIO UART protocol support for Location Beacons.
+
+Improvements:
+
+- Performance improvements to Analytics mechanism.
+
 ## 4.3.0 (May 6, 2016)
 
 Features:

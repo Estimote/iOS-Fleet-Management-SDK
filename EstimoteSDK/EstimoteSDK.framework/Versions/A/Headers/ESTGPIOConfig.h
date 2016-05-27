@@ -42,5 +42,10 @@ typedef NS_ENUM(uint8_t, ESTGPIOConfig)
     /**
      *  GPIO used as an output.
      */
-    ESTGPIOConfigOutput = 0x03
+    ESTGPIOConfigOutput = 0x03,
+    /**
+     *  GPIO used for UART. When applied Port 0 turns to Rx (Receiver) 
+     *  and Port 1 turns to Tx (Transmitter).
+     */
+    ESTGPIOConfigUART = 0x04
 };

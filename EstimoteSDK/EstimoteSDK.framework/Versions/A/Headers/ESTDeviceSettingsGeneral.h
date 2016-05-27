@@ -57,6 +57,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) ESTDeviceSchedule *schedule;
 
 /**
+ *  Indicates if Eddystone Configuration Service is enabled as BOOL value.
+ */
+@property (nonatomic, readonly) NSNumber *eddystoneConfigurationServiceEnabled;
+
+/**
  *  Designated initializer.
  *
  *  @param data Dictionary provided by the Estimote cloud.

@@ -25,6 +25,7 @@
 #import "ESTSettingConnectivityInterval.h"
 #import "ESTSettingsConnectivity.h"
 #import "ESTSettingsSensors.h"
+#import "ESTSettingsEddystoneConfigurationService.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -153,6 +154,12 @@ typedef NS_ENUM(NSInteger, ESTDeviceSettingsManagerError)
  *  Group of settings related to device sensors.
  */
 @property (nonatomic, strong, readonly) ESTSettingsSensors *sensors;
+
+/**
+ *  Group of settings related to Generic Attribute Profile.
+ */
+@property (nonatomic, readonly) ESTSettingsEddystoneConfigurationService *eddystoneConfigurationService;
+
 
 #pragma mark - Advanced Settings API
 ///--------------------------------------------------------------------

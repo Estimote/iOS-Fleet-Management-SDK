@@ -7,7 +7,7 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 4.3.0
+//  Version: 4.4.0
 //  Copyright (c) 2016 Estimote. All rights reserved.
 
 /**
@@ -247,6 +247,12 @@
 
 #import "ESTNotificationMotion.h"
 #import "ESTNotificationGPIOData.h"
+
+/**
+ *  Eddystone Configuration Service
+ */
+#import "ESTSettingsEddystoneConfigurationService.h"
+#import "ESTSettingEddystoneConfigurationServiceEnable.h"
 
 /**
  *  Nearables
