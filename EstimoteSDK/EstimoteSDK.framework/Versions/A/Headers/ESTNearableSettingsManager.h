@@ -23,6 +23,28 @@
 typedef NS_ENUM(NSUInteger, ESTNearableSettingsManagerError)
 {
     /**
+     *  Settings synchronization is already in progress for the device.
+     */
+    ESTNearableSettingsManagerErrorSynchronizationInProgress,
+    /**
+     *  Settings is not support by the device.
+     */
+    ESTNearableSettingsManagerErrorSettingNotSupported,
+    /**
+     *  Settings is not provided for write operation.
+     */
+    ESTNearableSettingsManagerErrorSettingNotProvidedForWrite,
+    /**
+     *  Validation failed for another setting provided in the group.
+     */
+    ESTNearableSettingsManagerErrorSettingValidationFailed,
+    
+    /**
+     *  Reading setting value from Estimote Cloud failed.
+     */
+    ESTNearableSettingsManagerErrorSettingCloudReadFailed,
+    
+    /**
      *  Could not save nearable settings in Cloud.
      */
     ESTNearableSettingsManagerErrorCloudSaveFailed
@@ -32,7 +54,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /**
- *  ESTDeviceSettingsManager allows to manage device settings interaction
+ *  ESTNearableSettingsManager allows to manage device settings interaction
  *  like writing to peripheral and saving to the Estimote Cloud.
  */
 @interface ESTNearableSettingsManager : NSObject <ESTPeripheralNearableDelegate>

@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /**
- *  ESTBeaconOperationDeviceInfoApplicationVersion allows to create read/write operations for Device Info ApplicationVersion setting of a device.
+ *  ESTBeaconOperationDeviceInfoApplicationVersion allows to create read operations for Device Info ApplicationVersion setting of a device.
  */
 @interface ESTBeaconOperationDeviceInfoApplicationVersion : ESTSettingOperation <ESTBeaconOperationProtocol>
 

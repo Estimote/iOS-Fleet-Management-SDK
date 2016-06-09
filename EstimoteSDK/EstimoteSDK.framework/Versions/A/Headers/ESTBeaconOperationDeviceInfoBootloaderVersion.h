@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /**
- *  ESTBeaconOperationDeviceInfoBootloaderVersion allows to create read/write operations for Device BootloaderVersion setting of a device.
+ *  ESTBeaconOperationDeviceInfoBootloaderVersion allows to create read operations for Device BootloaderVersion setting of a device.
  */
 @interface ESTBeaconOperationDeviceInfoBootloaderVersion : ESTSettingOperation <ESTBeaconOperationProtocol>
 

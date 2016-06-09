@@ -25,6 +25,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSNumber *power;
 @property (nonatomic) NSString *hardware;
 @property (nonatomic) NSString *firmware;
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSNumber *motionOnly;
 
 - (instancetype)initWithData:(NSDictionary *)data;
 

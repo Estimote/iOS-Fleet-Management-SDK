@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /**
- *  ESTBeaconOperationFirmwareVersion allows to create read/write operations for DeviceInfo FirmwareVersion setting of a device.
+ *  ESTBeaconOperationFirmwareVersion allows to create read operations for DeviceInfo FirmwareVersion setting of a device.
  */
 @interface ESTCloudOperationDeviceInfoFirmwareVersion : ESTSettingOperation <ESTBeaconOperationProtocol, ESTCloudOperationProtocol>
 

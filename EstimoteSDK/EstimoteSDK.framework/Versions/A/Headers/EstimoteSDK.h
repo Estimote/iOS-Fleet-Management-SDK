@@ -7,7 +7,7 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 4.4.0
+//  Version: 4.5.0
 //  Copyright (c) 2016 Estimote. All rights reserved.
 
 /**
@@ -269,7 +269,9 @@
 #import "ESTNearableOperationProtocol.h"
 #import "ESTNearableOperationNearableInterval.h"
 #import "ESTNearableOperationNearablePower.h"
+#import "ESTNearableOperationName.h"
 #import "ESTNearableOperationApplicationVersion.h"
+#import "ESTNearableOperationMotionOnly.h"
 
 /**
  *  Bulk updater
@@ -350,6 +352,7 @@
 #import "ESTDeviceSettingsAdvertiserEddystoneURL.h"
 #import "ESTDeviceSettingsAdvertiserEddystoneTLM.h"
 #import "ESTDeviceSettingsAdvertiserEddystoneEID.h"
+#import "ESTDeviceSettingsAdvertiserEstimoteTLM.h"
 #import "ESTDeviceStatusReport.h"
 #import "ESTDeviceGeoLocation.h"
 #import "ESTDeviceIndoorLocation.h"

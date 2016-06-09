@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /**
- *  ESTBeaconOperationPowerBatteryVoltage allows to create read/write operations for DeviceInfo BatteryVoltage setting of a device.
+ *  ESTBeaconOperationPowerBatteryVoltage allows to create read operations for DeviceInfo BatteryVoltage setting of a device.
  */
 @interface ESTBeaconOperationPowerBatteryVoltage : ESTSettingOperation <ESTBeaconOperationProtocol>
 

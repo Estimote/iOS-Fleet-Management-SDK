@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /**
- *  ESTCloudOperationPowerBatteryLifetime allows to create read/write operations for Power BatteryLifetime setting of a device.
+ *  ESTCloudOperationPowerBatteryLifetime allows to create read operations for Power BatteryLifetime setting of a device.
  */
 @interface ESTCloudOperationPowerBatteryLifetime : ESTSettingOperation <ESTBeaconOperationProtocol, ESTCloudOperationProtocol>
 

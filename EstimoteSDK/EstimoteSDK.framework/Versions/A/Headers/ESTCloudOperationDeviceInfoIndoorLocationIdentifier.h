@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /**
- *  ESTCloudOperationDeviceInfoIndoorLocationIdentifier allows to create read/write operations for DeviceInfo IndoorLocationIdentifier setting of a device.
+ *  ESTCloudOperationDeviceInfoIndoorLocationIdentifier allows to create read operations for DeviceInfo IndoorLocationIdentifier setting of a device.
  */
 @interface ESTCloudOperationDeviceInfoIndoorLocationIdentifier : ESTSettingOperation <ESTBeaconOperationProtocol, ESTCloudOperationProtocol>
 

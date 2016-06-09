@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /**
- *  ESTBeaconOperationSensorsAmbientLight allows to create read/write operations for Sensors AmbientLight setting of a device.
+ *  ESTBeaconOperationSensorsAmbientLight allows to create read operations for Sensors AmbientLight setting of a device.
  */
 @interface ESTBeaconOperationSensorsAmbientLight : ESTSettingOperation <ESTBeaconOperationProtocol>
 

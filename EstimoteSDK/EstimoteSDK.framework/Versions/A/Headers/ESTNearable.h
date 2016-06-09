@@ -134,6 +134,16 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (CLBeaconRegion *)beaconRegion;
 
+/**
+ *  Method indicating if motion sensor is working properly.
+ */
+- (BOOL)isMotionBroken;
+
+/**
+ *  Method indicating if temperature sensor is working properly.
+ */
+- (BOOL)isTemperatureBroken;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /**
- *  ESTBeaconOperationPowerBatteryPercentage allows to create read/write operations for Power BatteryPercentage setting of a device.
+ *  ESTBeaconOperationPowerBatteryPercentage allows to create read operations for Power BatteryPercentage setting of a device.
  */
 @interface ESTBeaconOperationPowerBatteryPercentage : ESTSettingOperation <ESTBeaconOperationProtocol>
 

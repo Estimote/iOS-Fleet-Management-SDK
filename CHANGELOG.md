@@ -1,3 +1,11 @@
+## 4.5.0 (June 9, 2016)
+
+Features:
+
+- Nearables motion only setting added
+- Nearable are fully synced upon connection with Estimote Cloud
+- Added fleet management for nearables
+
 ## 4.4.0 (May 27, 2016)
 
 Features:
