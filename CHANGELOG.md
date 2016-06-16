@@ -1,3 +1,9 @@
+## 4.5.1 (June 16, 2016)
+
+Bug fixes:
+
+- Fixed Basic and Smart Power Modes handling for Proximity beacons.
+
 ## 4.5.0 (June 9, 2016)
 
 Features:
