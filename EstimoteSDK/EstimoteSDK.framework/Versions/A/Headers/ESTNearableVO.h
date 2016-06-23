@@ -27,6 +27,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) NSString *firmware;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSNumber *motionOnly;
+@property (nonatomic, strong) NSNumber *broadcastingScheme;
+@property (nonatomic, strong) NSString *proximityUUID;
+@property (nonatomic, strong) NSNumber *major;
+@property (nonatomic, strong) NSNumber *minor;
+@property (nonatomic, strong) NSString *eddystoneURL;
 
 - (instancetype)initWithData:(NSDictionary *)data;
 

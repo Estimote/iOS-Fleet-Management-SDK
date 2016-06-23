@@ -1,3 +1,9 @@
+## 4.6.0 (June 23, 2016)
+
+Features:
+
+- Added Eddystone URL support for nearables. Three broadcasting schemes available: nearable, iBeacon and Eddystone URL.
+
 ## 4.5.1 (June 16, 2016)
 
 Bug fixes:

@@ -127,6 +127,31 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign, readonly) ESTNearableFirmwareState firmwareState;
 
 /**
+ *  Indicates which broadcasting mode is device currently using.
+ */
+@property (nonatomic, assign, readonly) ESTNearableBroadcastingScheme broadcastingScheme;
+
+/**
+ *  The URL address of Eddystone URL packet.
+ */
+@property (nonatomic, strong, readonly) NSString *eddystoneURL;
+
+/**
+ *  The proximity UUID of iBeacon packet.
+ */
+@property (nonatomic, strong, readonly) NSString *proximityUUID;
+
+/**
+ *  The major of iBeacon packet.
+ */
+@property (nonatomic, strong, readonly) NSNumber *major;
+
+/**
+ *  The minor of iBeacon packet.
+ */
+@property (nonatomic, strong, readonly) NSNumber *minor;
+
+/**
  *  Allows to get iBeacon region (Proximiy UUID, major, minor)
  *  broadcasted by the sticker as every third bluetooth packet.
  *

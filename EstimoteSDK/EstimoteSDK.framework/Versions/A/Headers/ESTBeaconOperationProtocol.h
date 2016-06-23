@@ -30,6 +30,9 @@ typedef NS_ENUM(NSInteger, ESTSettingOperationType)
     ESTSettingOperationTypeWrite
 };
 
+/**
+ *  Parameter describing source of operation.
+ */
 typedef NS_ENUM(NSUInteger, ESTSettingStorageType)
 {
     ESTSettingStorageTypeDeviceCloud,
@@ -53,6 +56,9 @@ typedef NS_ENUM(NSUInteger, ESTSettingStorageType)
  */
 - (ESTSettingOperationType)type;
 
+/**
+ *  Defines if operation comes only from Cloud, device or both.
+ */
 - (ESTSettingStorageType)storageType;
 
 /**

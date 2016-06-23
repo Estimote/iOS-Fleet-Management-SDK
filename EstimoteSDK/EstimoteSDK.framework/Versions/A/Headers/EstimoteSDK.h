@@ -7,7 +7,7 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 4.5.1
+//  Version: 4.6.0
 //  Copyright (c) 2016 Estimote. All rights reserved.
 
 /**
@@ -271,7 +271,12 @@
 #import "ESTNearableOperationNearablePower.h"
 #import "ESTNearableOperationName.h"
 #import "ESTNearableOperationApplicationVersion.h"
+#import "ESTNearableOperationHardware.h"
 #import "ESTNearableOperationMotionOnly.h"
+#import "ESTNearableOperationIBeaconProximityUUID.h"
+#import "ESTNearableOperationIBeaconMajor.h"
+#import "ESTNearableOperationIBeaconMinor.h"
+#import "ESTNearableOperationEddystoneURL.h"
 
 /**
  *  Bulk updater

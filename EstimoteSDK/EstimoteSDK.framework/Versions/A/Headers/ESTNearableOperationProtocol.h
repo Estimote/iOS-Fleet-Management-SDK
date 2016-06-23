@@ -29,6 +29,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (ESTSettingOperationType)type;
 
 /**
+ *  Defines if operation comes only from Cloud, device or both.
+ */
+- (ESTSettingStorageType)storageType;
+
+/**
  *  Device register identifier specified in the Nearable Bluetooth
  *  communication protocol.
  *
@@ -80,6 +85,14 @@ NS_ASSUME_NONNULL_BEGIN
  *  @return Setting class.
  */
 - (Class)settingClass;
+
+/**
+ *  Method indicates if particular operation should be synchronized
+ *  with Estimote Cloud while performing.
+ *
+ *  @return Flag indicating synchronization.
+ */
+- (BOOL)shouldSynchronize;
 
 /**
  *  Block to be invoked after the operation is executed successfully.

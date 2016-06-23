@@ -41,9 +41,13 @@
 	
 	<option value="//api/name/advInterval">&nbsp;&nbsp;&nbsp;&nbsp;advInterval</option>
 	
+	<option value="//api/name/broadcastingScheme">&nbsp;&nbsp;&nbsp;&nbsp;broadcastingScheme</option>
+	
 	<option value="//api/name/color">&nbsp;&nbsp;&nbsp;&nbsp;color</option>
 	
 	<option value="//api/name/currentMotionStateDuration">&nbsp;&nbsp;&nbsp;&nbsp;currentMotionStateDuration</option>
+	
+	<option value="//api/name/eddystoneURL">&nbsp;&nbsp;&nbsp;&nbsp;eddystoneURL</option>
 	
 	<option value="//api/name/firmwareState">&nbsp;&nbsp;&nbsp;&nbsp;firmwareState</option>
 	
@@ -57,11 +61,17 @@
 	
 	<option value="//api/name/isMoving">&nbsp;&nbsp;&nbsp;&nbsp;isMoving</option>
 	
+	<option value="//api/name/major">&nbsp;&nbsp;&nbsp;&nbsp;major</option>
+	
+	<option value="//api/name/minor">&nbsp;&nbsp;&nbsp;&nbsp;minor</option>
+	
 	<option value="//api/name/orientation">&nbsp;&nbsp;&nbsp;&nbsp;orientation</option>
 	
 	<option value="//api/name/power">&nbsp;&nbsp;&nbsp;&nbsp;power</option>
 	
 	<option value="//api/name/previousMotionStateDuration">&nbsp;&nbsp;&nbsp;&nbsp;previousMotionStateDuration</option>
+	
+	<option value="//api/name/proximityUUID">&nbsp;&nbsp;&nbsp;&nbsp;proximityUUID</option>
 	
 	<option value="//api/name/rssi">&nbsp;&nbsp;&nbsp;&nbsp;rssi</option>
 	
@@ -118,9 +128,13 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/advInterval">advInterval</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/broadcastingScheme">broadcastingScheme</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/color">color</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/currentMotionStateDuration">currentMotionStateDuration</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/eddystoneURL">eddystoneURL</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/firmwareState">firmwareState</a></span></li>
 	
@@ -134,11 +148,17 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isMoving">isMoving</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/major">major</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/minor">minor</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/orientation">orientation</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/power">power</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/previousMotionStateDuration">previousMotionStateDuration</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/proximityUUID">proximityUUID</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/rssi">rssi</a></span></li>
 	
@@ -350,6 +370,36 @@
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/broadcastingScheme">&nbsp;&nbsp;broadcastingScheme</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/eddystoneURL">&nbsp;&nbsp;eddystoneURL</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/proximityUUID">&nbsp;&nbsp;proximityUUID</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/major">&nbsp;&nbsp;major</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/minor">&nbsp;&nbsp;minor</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/beaconRegion">&ndash;&nbsp;beaconRegion</a></code>
 	</span>
 	
@@ -392,6 +442,42 @@
     
 
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSNumber *advInterval</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTNearable.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/broadcastingScheme" title="broadcastingScheme"></a>
+	<h3 class="subsubtitle method-title">broadcastingScheme</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Indicates which broadcasting mode is device currently using.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) ESTNearableBroadcastingScheme broadcastingScheme</code></div>
 
     
 	
@@ -464,6 +550,42 @@
     
 
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) unsigned long long currentMotionStateDuration</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTNearable.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/eddystoneURL" title="eddystoneURL"></a>
+	<h3 class="subsubtitle method-title">eddystoneURL</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The URL address of Eddystone URL packet.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSString *eddystoneURL</code></div>
 
     
 	
@@ -704,6 +826,78 @@
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/major" title="major"></a>
+	<h3 class="subsubtitle method-title">major</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The major of iBeacon packet.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSNumber *major</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTNearable.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/minor" title="minor"></a>
+	<h3 class="subsubtitle method-title">minor</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The minor of iBeacon packet.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSNumber *minor</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTNearable.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/orientation" title="orientation"></a>
 	<h3 class="subsubtitle method-title">orientation</h3>
 	
@@ -788,6 +982,42 @@
     
 
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) unsigned long long previousMotionStateDuration</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTNearable.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/proximityUUID" title="proximityUUID"></a>
+	<h3 class="subsubtitle method-title">proximityUUID</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The proximity UUID of iBeacon packet.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSString *proximityUUID</code></div>
 
     
 	
@@ -1238,7 +1468,7 @@ broadcasted by the sticker as every third bluetooth packet.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2016 Estimote. All rights reserved. (Last updated: 2016-06-09)</span><br />
+						<p><span class="copyright">&copy; 2016 Estimote. All rights reserved. (Last updated: 2016-06-23)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						

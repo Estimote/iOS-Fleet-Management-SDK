@@ -66,6 +66,33 @@ typedef NS_ENUM(NSInteger, ESTNearableFirmwareState)
     ESTNearableFirmwareStateApp
 };
 
+/**
+ *  Describes nearable broadcasting mode.
+ */
+
+typedef NS_ENUM(char, ESTNearableBroadcastingScheme)
+{
+    /**
+     *  Unkown broadcasting scheme.
+     */
+    ESTNearableBroadcastingSchemeUnknown = -1,
+    
+    /**
+     *  Connectable and non-connectable sticker’s packets mixed with iBeacon packet.
+     */
+    ESTNearableBroadcastingSchemeNearable,
+    
+    /**
+     *  Connectable sticker’s packets mixed with non-connectable iBeacon packet.
+     */
+    ESTNearableBroadcastingSchemeIBeacon,
+    
+    /**
+     *  Connectable sticker’s packet mixed with non-connectable Eddystone-URL packet.
+     */
+    ESTNearableBroadcastingSchemeEddystoneURL
+};
+
 @interface ESTNearableDefinitions : ESTDefinitions
 
 /**
