@@ -7,7 +7,7 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 4.6.0
+//  Version: 4.7.0
 //  Copyright (c) 2016 Estimote. All rights reserved.
 
 /**
@@ -342,6 +342,7 @@
  */
 #import "ESTRequestV2GetDeviceDetails.h"
 #import "ESTRequestV2GetDevices.h"
+#import "ESTRequestV2GetDevicesPending.h"
 
 /**
  *  Cloud API v2 value objects

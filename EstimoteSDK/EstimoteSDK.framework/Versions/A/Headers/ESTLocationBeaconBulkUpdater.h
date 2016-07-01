@@ -136,9 +136,14 @@ typedef NS_ENUM(NSInteger, ESTBulkUpdaterDeviceUpdateStatus)
 @property (nonatomic, assign, readonly) ESTBulkUpdaterStatus status;
 
 /**
- * Array of `ESTLocationBeaconBulkUpdateConfiguration` objects that were passed to bulk updater.
+ *  Array of `ESTLocationBeaconBulkUpdateConfiguration` objects that were passed to bulk updater.
  */
 @property (nonatomic, strong, readonly) NSArray <ESTLocationBeaconBulkUpdateConfiguration *> *updateConfigurations;
+
+/**
+ *  Starts `ESTLocationBeaconBulkUpdater` with current pending settings from Estimote Cloud.
+ */
+- (void)startCloudUpdate;
 
 /**
  * Starts the bulk update procedure.

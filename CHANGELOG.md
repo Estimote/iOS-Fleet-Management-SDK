@@ -1,3 +1,11 @@
+## 4.7.0 (July 1, 2016)
+
+Bug fixes:
+
+- Fixed Dark to Sleep
+- Remote edit of Flip to Sleep
+- Fixed Conditional broadcasting for Location Beacons
+
 ## 4.6.0 (June 23, 2016)
 
 Features:

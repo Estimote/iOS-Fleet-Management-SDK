@@ -37,9 +37,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) NSNumber *darkToSleepThresholdInLux;
 
 /**
- *  Conditional broadcasting mode (off, flip to sleep or motion only).
+ *  Flip to sleep broadcasting mode.
  */
-@property (nonatomic, strong, readonly) NSNumber *conditionalBroadcasting;
+@property (nonatomic, strong, readonly) NSNumber *flipToSleepEnabled;
 
 /**
  *  Temperature offset applied to sensor in celsius.
@@ -60,6 +60,11 @@ NS_ASSUME_NONNULL_BEGIN
  *  Indicates if Eddystone Configuration Service is enabled as BOOL value.
  */
 @property (nonatomic, readonly) NSNumber *eddystoneConfigurationServiceEnabled;
+
+/**
+ *  Indicates if Motion Only broadcasting mode is enabled.
+ */
+@property (nonatomic, readonly) NSNumber *motionOnlyEnabled;
 
 /**
  *  Designated initializer.

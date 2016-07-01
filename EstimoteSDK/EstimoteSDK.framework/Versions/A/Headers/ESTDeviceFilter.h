@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  Defines predicate to be evaluated on ESTDevice subclass objects resulting from scanning
  *  and scan classes to be used by a bluetooth scanner underneath the ESTDeviceManager.
  *
- *  @see ESTDeviceManager, ESTScanInfoIBeacon.
+ *  @see ESTDeviceManager, ECOScanInfoIBeacon.
  */
 @protocol ESTDeviceFilter <NSObject>
 
@@ -32,7 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  Method returns array of packet classes needed by bluetooth scanner.
  *
- *  @return Array of ESTScanInfo subclasses.
+ *  @return Array of ECOScanInfo subclasses.
  */
 - (NSArray<Class> *)getScanInfoClasses;
 
