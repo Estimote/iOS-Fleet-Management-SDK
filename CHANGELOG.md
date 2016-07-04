@@ -1,3 +1,9 @@
+## 4.7.1 (July 4, 2016)
+
+Features:
+
+- Estimote Analitycs are turned on for monitoring and ranging. 
+
 ## 4.7.0 (July 1, 2016)
 
 Bug fixes:

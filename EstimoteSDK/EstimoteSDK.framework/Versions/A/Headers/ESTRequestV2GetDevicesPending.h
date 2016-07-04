@@ -15,7 +15,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void(^ESTRequestV2GetDevicesPendingBlock)(NSArray * _Nullable result, NSError * _Nullable error);
+/**
+ *  Completion block fired when request is complete.
+ *
+ *  @param result   Array of user's devices identifiers, for which Cloud has pending changes.
+ *  @param error    Error of request. No error means success.
+ */
+typedef void(^ESTRequestV2GetDevicesPendingBlock)(NSArray <NSString *> * _Nullable result, NSError * _Nullable error);
 
 
 /**

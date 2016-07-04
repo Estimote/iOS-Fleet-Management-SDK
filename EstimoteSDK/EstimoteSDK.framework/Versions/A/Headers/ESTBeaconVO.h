@@ -38,19 +38,19 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, nullable) NSNumber *latitude;
 @property (nonatomic, strong, nullable) NSNumber *longitude;
 @property (nonatomic, strong, nullable) NSDictionary *location;
-@property (nonatomic, nullable) NSString *city;
-@property (nonatomic, nullable) NSString *country;
-@property (nonatomic, nullable) NSString *formattedAddress;
-@property (nonatomic, nullable) NSString *stateName;
-@property (nonatomic, nullable) NSString *stateCode;
-@property (nonatomic, nullable) NSString *streetName;
-@property (nonatomic, nullable) NSString *streetNumber;
-@property (nonatomic, nullable) NSString *zipCode;
+@property (nonatomic, strong, nullable) NSString *city;
+@property (nonatomic, strong, nullable) NSString *country;
+@property (nonatomic, strong, nullable) NSString *formattedAddress;
+@property (nonatomic, strong, nullable) NSString *stateName;
+@property (nonatomic, strong, nullable) NSString *stateCode;
+@property (nonatomic, strong, nullable) NSString *streetName;
+@property (nonatomic, strong, nullable) NSString *streetNumber;
+@property (nonatomic, strong, nullable) NSString *zipCode;
 
-@property (nonatomic, nullable) NSSet <NSString *> *tags;
+@property (nonatomic, strong, nullable) NSSet <NSString *> *tags;
 
-@property (nonatomic, nullable) NSString *indoorLocationIdentifier;
-@property (nonatomic, nullable) NSString *indoorLocationName;
+@property (nonatomic, strong, nullable) NSString *indoorLocationIdentifier;
+@property (nonatomic, strong, nullable) NSString *indoorLocationName;
 
 @property (nonatomic, strong, nullable) NSString *eddystoneNamespaceID;
 @property (nonatomic, strong, nullable) NSString *eddystoneInstanceID;
@@ -62,7 +62,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, nullable) NSNumber *security;
 @property (nonatomic, assign) BOOL isSecured __attribute__ ((deprecated(("Starting from SDK 3.7.0 use security property instead"))));
 
-@property (nonatomic) ESTColor color;
+@property (nonatomic, assign) ESTColor color;
 
 - (instancetype)initWithCloudData:(NSDictionary *)data;
 

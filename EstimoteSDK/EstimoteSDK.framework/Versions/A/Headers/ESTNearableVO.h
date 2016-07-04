@@ -23,8 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSString * _Nullable indoorLocationIdentifier;
 @property (nonatomic, strong) NSNumber *advInterval;
 @property (nonatomic, strong) NSNumber *power;
-@property (nonatomic) NSString *hardware;
-@property (nonatomic) NSString *firmware;
+@property (nonatomic, strong) NSString *hardware;
+@property (nonatomic, strong) NSString *firmware;
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSNumber *motionOnly;
 @property (nonatomic, strong) NSNumber *broadcastingScheme;
