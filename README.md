@@ -108,7 +108,7 @@ Following steps are required to connect to a device:
 
 4. Make sure your class conforms to `ESTDeviceConnectableDelegate` protocol and call `connect` on discovered `ESTDeviceConnectable` object. Now, the SDK verifies if the device is linked to account specified by AppID + AppToken pair, authorizes user, connects on the Bluetooth level and synchronizes settings by fetching their values from Cloud and writing to the device.
 
-In order to connect to Estimote Proximity Beacon (1 Battery Beacon), use  the [SDK 3 API](SDK_3_x_README.md).
+In order to connect to the first-generation Estimote Proximity Beacon (hardware revision "D"), use  the [SDK 3 API](SDK_3_x_README.md).
 
 #### Settings
 In SDK 4.0 each device setting is represented by an `ESTSettingBase` subclass. There are two ways of reading/writing settings - [Convenience API](#convenience-api) and [Advanced API](#advanced-api).
