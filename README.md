@@ -68,14 +68,22 @@ When *EstimoteTLM* packet is enabled (see `ESTSettingsEstimoteTLMEnable` class),
 
 **Usage**
 
-```objective-c
-ESTDeviceManager *manager = [[ESTDeviceManager alloc] init];
+```swift
+// remember to hold a strong reference to the device manager for as long as you
+// want to receive the telemetry notifications
+// e.g., make it a class property, and not a local variable, so that it won't get
+// prematurely deallocated
+let deviceManager = ESTDeviceManager()
 
-ESTTelemetryNotificationTemperature *temperatureNotification = [[ESTTelemetryNotificationTemperature alloc] initWithNotificationBlock:^(ESTTelemetryInfoTemperature *temperature) {
-    NSLog(@"Current temperature: %@ C", temperature.temperatureInCelsius);
-}];
-[manager registerForTelemetryNotification:temperatureNotification];
+// ...
+
+let temperatureNotification = ESTTelemetryNotificationTemperature { (temperature) in
+    print("Current temperature: \(temperature.temperatureInCelsius) C")
+}
+deviceManager.registerForTelemetryNotification(temperatureNotification)
 ```
+
+Make sure to check out the other `ESTTelemetryNotification` classes in the [SDK reference](http://estimote.github.io/iOS-SDK/) (e.g., [`ESTTelemetryNotificationMotion`](http://estimote.github.io/iOS-SDK/Classes/ESTTelemetryNotificationMotion.html))
 
 ### Utility
 
