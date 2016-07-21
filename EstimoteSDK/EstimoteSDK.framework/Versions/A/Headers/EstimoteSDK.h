@@ -7,7 +7,7 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 4.7.1
+//  Version: 4.7.2
 //  Copyright (c) 2016 Estimote. All rights reserved.
 
 /**
@@ -277,6 +277,7 @@
 #import "ESTNearableOperationIBeaconMajor.h"
 #import "ESTNearableOperationIBeaconMinor.h"
 #import "ESTNearableOperationEddystoneURL.h"
+#import "ESTNearableOperationBroadcastingScheme.h"
 
 /**
  *  Bulk updater

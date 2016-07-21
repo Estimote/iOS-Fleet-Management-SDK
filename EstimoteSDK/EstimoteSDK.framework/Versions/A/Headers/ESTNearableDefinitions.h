@@ -104,6 +104,15 @@ typedef NS_ENUM(char, ESTNearableBroadcastingScheme)
  */
 + (NSString *)nameForType:(ESTNearableType)type;
 
+/**
+ *  Returns NSString representation of nearable's broadcasting scheme name.
+ *
+ *  @param scheme nearable's broadcasting scheme
+ *
+ *  @return broadcasting scheme name
+ */
++ (NSString *)nameForNearableBroadcastingScheme:(ESTNearableBroadcastingScheme)scheme;
+
 @end
 
 NS_ASSUME_NONNULL_END

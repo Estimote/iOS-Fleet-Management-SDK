@@ -67,6 +67,11 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, strong) NSNumber * _Nullable estimoteSecureUUIDState;
 
+/**
+ *  Flag for switching conditional broadcasting mode.
+ */
+@property (nonatomic, strong) NSNumber * _Nullable conditionalBroadcasting;
+
 @end
 
 NS_ASSUME_NONNULL_END

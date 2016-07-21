@@ -1,3 +1,10 @@
+## 4.7.2 (July 21, 2016)
+
+Improvements:
+
+- ESTBulkUpdater applies Motion Only and Flip to Sleep broadcasting modes
+- Fixed synchronisation of nearables settings with Estimote Cloud
+
 ## 4.7.1 (July 4, 2016)
 
 Features:
