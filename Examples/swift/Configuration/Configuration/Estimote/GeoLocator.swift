@@ -45,7 +45,7 @@ class GeoLocator: NSObject, CLLocationManagerDelegate {
         case .AuthorizedWhenInUse, .AuthorizedAlways:
             locationUpdatesInProgress = true
             locationManager.startUpdatingLocation()
-            timeoutTimer = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: "finishWithCurrentLocation", userInfo: nil, repeats: false)
+            timeoutTimer = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: #selector(finishWithCurrentLocation), userInfo: nil, repeats: false)
         default:
             delegate.geoLocator(self, didFailWithError: .InsufficientPermissions)
         }

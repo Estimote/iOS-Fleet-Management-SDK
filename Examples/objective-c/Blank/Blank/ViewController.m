@@ -1,6 +1,5 @@
 //
-//  ViewController.m
-//  Blank
+// Please report any problems with this app template to contact@estimote.com
 //
 
 #import "ViewController.h"

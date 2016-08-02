@@ -1,6 +1,5 @@
 //
-//  HeroIconManager.swift
-//  HeroIcon
+// Please report any problems with this app template to contact@estimote.com
 //
 
 class HeroIconManager: NSObject, ESTBeaconManagerDelegate {

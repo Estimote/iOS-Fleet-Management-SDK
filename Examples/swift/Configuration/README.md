@@ -1,5 +1,7 @@
 ### Configuration app
 
+**IMPORTANT:** The Configuration app works only with [Location Beacons](http://blog.estimote.com/post/139902664710/launching-the-most-robust-location-beacons-on-the) (hardware revision "F") and [next-gen Proximity Beacons](http://blog.estimote.com/post/147038205465/announcing-next-gen-proximity-beacons-with) (hardware revision "G") at this time.
+
 This app uses a few external dependencies managed through [Carthage](https://github.com/Carthage/Carthage).
 
 You must install and run Carthage before building this app:

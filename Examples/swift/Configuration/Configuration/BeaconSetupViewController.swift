@@ -126,6 +126,7 @@ class BeaconSetupViewController: UIViewController, GeoLocatorDelegate {
 
         geoLocationLabel.text = String(format: "%.2f, %.2f, ± %.0f m", geoLocation!.coordinate.latitude, geoLocation!.coordinate.longitude, geoLocation!.horizontalAccuracy)
         geoLocationSpinner.stopAnimating()
+        validate()
     }
 
     func geoLocator(geoLocator: GeoLocator, didFailWithError error: GeoLocatorError) {

@@ -1,6 +1,5 @@
 //
-//  ShowroomManager.swift
-//  Showroom
+// Please report any problems with this app template to contact@estimote.com
 //
 
 protocol ShowroomManagerDelegate: class {
@@ -8,7 +7,7 @@ protocol ShowroomManagerDelegate: class {
     func showroomManager(showroomManager: ShowroomManager, didDetectPickupForProduct product: Product)
 
     func showroomManager(showroomManager: ShowroomManager, didDetectPutdownForProduct product: Product)
-    
+
 }
 
 class ShowroomManager: NSObject, ESTTriggerManagerDelegate {
