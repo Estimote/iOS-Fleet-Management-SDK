@@ -1,3 +1,10 @@
+## 4.7.3 (August 5, 2016)
+
+Bug fixes:
+- Fixed remaining battery lifetime issue for Proximity Beacons
+- Fixed ranging for connectivity packet for Proximity Beacons
+- Enhanced error validation for Proximity UUID setting
+
 ## 4.7.2 (July 21, 2016)
 
 Improvements:

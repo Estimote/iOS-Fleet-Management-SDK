@@ -36,7 +36,7 @@ typedef void(^ESTRequestGetBeaconsPublicDetailsBlock)(NSArray * _Nullable beacon
 @interface ESTRequestGetBeaconsPublicDetails : ESTRequestGetJSON
 
 /** Array of identifiers of beacons which details should be fetched.
- * Can be MAC addresses or Eddystone Identifiers or proximityUUID:major:minor strings
+ *  Can be MAC addresses or Eddystone Identifiers or proximityUUID:major:minor strings
  */
 @property (nonatomic, strong, readonly) NSArray<NSString *> *beaconIdentifiers;
 @property (nonatomic, assign, readonly) ESTBeaconPublicDetailsFields fields;

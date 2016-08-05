@@ -12,6 +12,19 @@
 #import <Foundation/Foundation.h>
 #import "ESTSettingReadWrite.h"
 
+#define ESTSettingIBeaconProximityUUIDErrorDomain @"ESTSettingIBeaconIntervalErrorDomain"
+
+/**
+ *  Describes iBeacon Advertising Interval validation error.
+ */
+typedef NS_ENUM(NSUInteger, ESTSettingIBeaconProximityUUIDError)
+{
+    /**
+     *  Provided value is either missing or is an invalid NSUUID.
+     */
+    ESTSettingIBeaconProximityUUIDErrorInvalidValue = 1
+};
+
 @class ESTSettingIBeaconProximityUUID;
 
 NS_ASSUME_NONNULL_BEGIN
