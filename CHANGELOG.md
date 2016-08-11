@@ -1,3 +1,13 @@
+## 4.7.4 (August 11, 2017)
+
+Features:
+
+- Added support for Telemetry v1.1 packet
+
+Improvements:
+
+- Fixed synchronising iBeacon packet's data for Location Beacons
+
 ## 4.7.3 (August 5, 2016)
 
 Bug fixes:

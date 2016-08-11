@@ -7,7 +7,7 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 4.7.3
+//  Version: 4.7.4
 //  Copyright (c) 2016 Estimote. All rights reserved.
 
 /**
@@ -376,4 +376,3 @@
 #import "ESTTelemetryNotificationSystemStatus.h"
 #import "ESTTelemetryNotificationMagnetometer.h"
 #import "ESTTelemetryNotificationGPIO.h"
-
