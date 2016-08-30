@@ -8,17 +8,7 @@ Bugfixes:
 
 - Fixed incorrect packet detection when scanning Telemetry v1.1.
 
-## 4.8.0 (August 25, 2016)
-
-Features:
-
-- Estimote Monitoring support. It allows apps to detect when somebody is entering and exiting the range of beacons. Compared to iOS Core Location Monitoring, it allows for more granular enters/exits without any region limit or exit timeout.
-
-Bugfixes:
-
-- Fixed incorrect packet detection when scanning Telemetry v1.1.
-
-## 4.7.4 (August 11, 2017)
+## 4.7.4 (August 11, 2016)
 
 Features:
 
