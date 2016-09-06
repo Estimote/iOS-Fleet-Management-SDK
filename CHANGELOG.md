@@ -8,7 +8,7 @@ Bugfixes:
 
 - Fixed incorrect packet detection when scanning Telemetry v1.1.
 
-## 4.7.4 (August 11, 2016)
+## 4.7.4 (August 11, 2017)
 
 Features:
 
