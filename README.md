@@ -59,23 +59,32 @@ Description of most important components are below:
 
 #### Telemetry
 
-When *EstimoteTLM* packet is enabled (see `ESTSettingsEstimoteTLMEnable` class), the Location Beacon broadcasts Estimote Telemetry packets. They contain information about current values read by beacon's sensors. Telemetry packet includes readings from:
-- Motion sensor (3-axis acceleration & more)
-- Ambient light sensor
-- Temperature sensor
-- Magnetometer sensor
-- GPIO Ports
+When *EstimoteTLM* packet is enabled (see `ESTSettingsEstimoteTLMEnable` class), beacons broadcast Estimote Telemetry packets. They contain information about current values read by beacon's sensors. Telemetry packet includes readings from:
+
+- Motion sensor (3-axis acceleration & more) [Proximity & Location Beacons]
+- Temperature sensor [Proximity & Location Beacons]
+- Ambient light sensor [Location Beacons only]
+- Magnetometer sensor [Location Beacons only]
+- GPIO Ports [Location Beacons only]
 
 **Usage**
 
-```objective-c
-ESTDeviceManager *manager = [[ESTDeviceManager alloc] init];
+```swift
+// remember to hold a strong reference to the device manager for as long as you
+// want to receive the telemetry notifications
+// e.g., make it a class property, and not a local variable, so that it won't get
+// prematurely deallocated
+let deviceManager = ESTDeviceManager()
 
-ESTTelemetryNotificationTemperature *temperatureNotification = [[ESTTelemetryNotificationTemperature alloc] initWithNotificationBlock:^(ESTTelemetryInfoTemperature *temperature) {
-    NSLog(@"Current temperature: %@ C", temperature.temperatureInCelsius);
-}];
-[manager registerForTelemetryNotification:temperatureNotification];
+// ...
+
+let temperatureNotification = ESTTelemetryNotificationTemperature { (temperature) in
+    print("Current temperature: \(temperature.temperatureInCelsius) C")
+}
+deviceManager.registerForTelemetryNotification(temperatureNotification)
 ```
+
+Make sure to check out the other `ESTTelemetryNotification` classes in the [SDK reference](http://estimote.github.io/iOS-SDK/) (e.g., [`ESTTelemetryNotificationMotion`](http://estimote.github.io/iOS-SDK/Classes/ESTTelemetryNotificationMotion.html))
 
 ### Utility
 
@@ -86,9 +95,8 @@ ESTTelemetryNotificationTemperature *temperatureNotification = [[ESTTelemetryNot
 Connecting to device lets you change its settings (broadcasting power, advertising interval etc.). You have to be the beacon's owner in Estimote Cloud; every attempt to connect with a device not linked to your Estimote account will fail.
 
 Connectivity packets are represented by `ESTDeviceConnectable` subclasses:
-- `ESTDeviceLocationBeacon` represents Estimote Location Beacon (4 Battery Beacon),
+- `ESTDeviceLocationBeacon` represents Estimote Location Beacon (hardware revision "F") and next-gen Proximity Beacon (hardware revision "G") … yes, we know it's a bit weird to use `ESTDeviceLocationBeacon` to connect to your next-gen Proximity Beacons, but you do have to trust us on this one ^\_^
 - `ESTDeviceNearable` represents Estimote Nearable.
-
 
 Following steps are required to connect to a device:
 
@@ -100,7 +108,7 @@ Following steps are required to connect to a device:
 
 4. Make sure your class conforms to `ESTDeviceConnectableDelegate` protocol and call `connect` on discovered `ESTDeviceConnectable` object. Now, the SDK verifies if the device is linked to account specified by AppID + AppToken pair, authorizes user, connects on the Bluetooth level and synchronizes settings by fetching their values from Cloud and writing to the device.
 
-In order to connect to Estimote Proximity Beacon (1 Battery Beacon), use  the [SDK 3 API](SDK_3_x_README.md).
+In order to connect to the first-generation Estimote Proximity Beacon (hardware revision "D"), use  the [SDK 3 API](SDK_3_x_README.md).
 
 #### Settings
 In SDK 4.0 each device setting is represented by an `ESTSettingBase` subclass. There are two ways of reading/writing settings - [Convenience API](#convenience-api) and [Advanced API](#advanced-api).
