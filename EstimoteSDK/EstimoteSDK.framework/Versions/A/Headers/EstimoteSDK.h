@@ -7,7 +7,7 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 4.8.0
+//  Version: 4.8.1
 //  Copyright (c) 2016 Estimote. All rights reserved.
 
 /**
@@ -359,6 +359,7 @@
 #import "ESTDeviceSettingsAdvertiserEddystoneURL.h"
 #import "ESTDeviceSettingsAdvertiserEddystoneTLM.h"
 #import "ESTDeviceSettingsAdvertiserEddystoneEID.h"
+#import "ESTDeviceSettingsAdvertiserEstimoteLocation.h"
 #import "ESTDeviceSettingsAdvertiserEstimoteTLM.h"
 #import "ESTDeviceStatusReport.h"
 #import "ESTDeviceGeoLocation.h"

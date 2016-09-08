@@ -43,13 +43,15 @@ typedef void(^ESTSettingEstimoteTLMPowerCompletionBlock)(ESTSettingEstimoteTLMPo
 typedef NS_ENUM(int8_t, ESTEstimoteTLMPower)
 {
     ESTEstimoteTLMPowerLevel1 = -30,
+    ESTEstimoteTLMPowerLevel1A = -40, // use this instead of -30 for nRF52-based beacons (e.g., G1.8 and later, F3.3 and later)
     ESTEstimoteTLMPowerLevel2 = -20,
     ESTEstimoteTLMPowerLevel3 = -16,
     ESTEstimoteTLMPowerLevel4 = -12,
     ESTEstimoteTLMPowerLevel5 = -8,
     ESTEstimoteTLMPowerLevel6 = -4,
     ESTEstimoteTLMPowerLevel7 = 0,
-    ESTEstimoteTLMPowerLevel8 = 4
+    ESTEstimoteTLMPowerLevel8 = 4,
+    ESTEstimoteTLMPowerLevel9 = 10 // for Location Beacons with long-range support (e.g., F3.3 and later)
 };
 
 

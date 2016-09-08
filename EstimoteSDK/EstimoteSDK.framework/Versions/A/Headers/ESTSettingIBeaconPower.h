@@ -44,13 +44,15 @@ typedef void(^ESTSettingIBeaconPowerCompletionBlock)(ESTSettingIBeaconPower * _N
 typedef NS_ENUM(int8_t, ESTIBeaconPower)
 {
     ESTIBeaconPowerLevel1 = -30,
+    ESTIBeaconPowerLevel1A = -40, // use this instead of -30 for nRF52-based beacons (e.g., G1.8 and later, F3.3 and later)
     ESTIBeaconPowerLevel2 = -20,
     ESTIBeaconPowerLevel3 = -16,
     ESTIBeaconPowerLevel4 = -12,
     ESTIBeaconPowerLevel5 = -8,
     ESTIBeaconPowerLevel6 = -4,
     ESTIBeaconPowerLevel7 = 0,
-    ESTIBeaconPowerLevel8 = 4
+    ESTIBeaconPowerLevel8 = 4,
+    ESTIBeaconPowerLevel9 = 10 // for Location Beacons with long-range support (e.g., F3.3 and later)
 };
 
 

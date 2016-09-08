@@ -43,13 +43,15 @@ typedef void(^ESTSettingEddystoneUIDPowerCompletionBlock)(ESTSettingEddystoneUID
 typedef NS_ENUM(int8_t, ESTEddystoneUIDPower)
 {
     ESTEddystoneUIDPowerLevel1 = -30,
+    ESTEddystoneUIDPowerLevel1A = -40, // use this instead of -30 for nRF52-based beacons (e.g., G1.8 and later, F3.3 and later)
     ESTEddystoneUIDPowerLevel2 = -20,
     ESTEddystoneUIDPowerLevel3 = -16,
     ESTEddystoneUIDPowerLevel4 = -12,
     ESTEddystoneUIDPowerLevel5 = -8,
     ESTEddystoneUIDPowerLevel6 = -4,
     ESTEddystoneUIDPowerLevel7 = 0,
-    ESTEddystoneUIDPowerLevel8 = 4
+    ESTEddystoneUIDPowerLevel8 = 4,
+    ESTEddystoneUIDPowerLevel9 = 10 // for Location Beacons with long-range support (e.g., F3.3 and later)
 };
 
 

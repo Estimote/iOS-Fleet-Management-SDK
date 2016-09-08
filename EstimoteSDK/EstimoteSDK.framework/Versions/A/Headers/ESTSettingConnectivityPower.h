@@ -28,13 +28,15 @@ typedef NS_ENUM(NSUInteger, ESTSettingConnectablePowerError)
 typedef NS_ENUM(int8_t, ESTConnectablePowerLevel)
 {
     ESTConnectablePowerLevel1 = -30,
+    ESTConnectablePowerLevel1A = -40, // use this instead of -30 for nRF52-based beacons (e.g., G1.8 and later, F3.3 and later)
     ESTConnectablePowerLevel2 = -20,
     ESTConnectablePowerLevel3 = -16,
     ESTConnectablePowerLevel4 = -12,
     ESTConnectablePowerLevel5 = -8,
     ESTConnectablePowerLevel6 = -4,
     ESTConnectablePowerLevel7 = 0,
-    ESTConnectablePowerLevel8 = 4
+    ESTConnectablePowerLevel8 = 4,
+    ESTConnectablePowerLevel9 = 10 // for Location Beacons with long-range support (e.g., F3.3 and later)
 };
 
 

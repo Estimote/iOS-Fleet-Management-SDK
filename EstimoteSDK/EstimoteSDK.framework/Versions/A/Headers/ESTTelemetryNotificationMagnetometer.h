@@ -10,9 +10,8 @@
 //  Copyright © 2015 Estimote. All rights reserved.
 
 #import <Foundation/Foundation.h>
+#import "ESTTelemetryInfoMagnetometer.h"
 #import "ESTTelemetryNotificationProtocol.h"
-
-@class ESTTelemetryInfoMagnetometer;
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -2,11 +2,11 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
-		<title></title>
+		<title>ESTEddystoneManager Class Reference</title>
 		<meta id="xcode-display" name="xcode-display" content="render"/>
 		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
 		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
-		
+		<meta name="generator" content="appledoc 2.2 (build 963)" />
 	</head>
 	<body>
 		<header id="top_header">
@@ -16,7 +16,7 @@
 			</div>
 			
 			<div id="title" role="banner">
-				<h1 class="hideInXcode"></h1>
+				<h1 class="hideInXcode">ESTEddystoneManager Class Reference</h1>
 			</div>
 			<ul id="headerButtons" role="toolbar">
 				<li id="toc_button">
@@ -26,7 +26,33 @@
 					<select id="jumpTo">
 	<option value="top">Jump To&#133;</option>
 	
+	<option value="overview">Overview</option>
 	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/delegate">&nbsp;&nbsp;&nbsp;&nbsp;delegate</option>
+	
+	<option value="//api/name/filtersInDiscovery">&nbsp;&nbsp;&nbsp;&nbsp;filtersInDiscovery</option>
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/startEddystoneDiscoveryWithFilter:">&nbsp;&nbsp;&nbsp;&nbsp;- startEddystoneDiscoveryWithFilter:</option>
+	
+	<option value="//api/name/stopEddystoneDiscoveryWithFilter:">&nbsp;&nbsp;&nbsp;&nbsp;- stopEddystoneDiscoveryWithFilter:</option>
 	
 	
 	
@@ -37,15 +63,45 @@
 		<nav id="tocContainer" class="isShowingTOC">
 			<ul id="toc" role="tree">
 				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
 
 
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/delegate">delegate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/filtersInDiscovery">filtersInDiscovery</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/startEddystoneDiscoveryWithFilter:">startEddystoneDiscoveryWithFilter:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/stopEddystoneDiscoveryWithFilter:">stopEddystoneDiscoveryWithFilter:</a></span></li>
+	
+</ul></li>
 
 
 			</ul>
 		</nav>
 		<article>
 			<div id="contents" class="isShowingTOC" role="main">
-				<a title="" name="top"></a>
+				<a title="ESTEddystoneManager Class Reference" name="top"></a>
 				<div class="main-navigation navigation-top">
 					<ul>
 	<li><a href="../index.html">Index</a></li>
@@ -54,22 +110,251 @@
 				</div>
 				<div id="header">
 					<div class="section-header">
-						<h1 class="title title-header"></h1>
+						<h1 class="title title-header">ESTEddystoneManager Class Reference</h1>
 					</div>		
 				</div>
 				<div id="container">	
 					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">ESTEddystoneManager.h</td>
+</tr>
+						</tbody></table></div>
+					
                     
                     
 					
-					
-					
-					
-                    
-                    
-                    
-                    
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>The <code>ESTEddystoneManager</code> class defines entry point to interact with Google Eddystones.
+As a core functionality it allows to discover Eddystone devices available in range.</p>
 
+<p>Discovery process is based on simple filtering mechanism. As Eddystone devices can
+advertise Eddystone-UID or Eddystone-URL packets, separate filters are available.
+Multiple filters can be used at the same time. When using more then one filter, manager
+will call <code>eddystoneManager:didDiscoverEddystones:withFilter</code> callback for each filter
+separately with corresponding filter provided.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/delegate">&nbsp;&nbsp;delegate</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/filtersInDiscovery">&nbsp;&nbsp;filtersInDiscovery</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/startEddystoneDiscoveryWithFilter:">&ndash;&nbsp;startEddystoneDiscoveryWithFilter:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/stopEddystoneDiscoveryWithFilter:">&ndash;&nbsp;stopEddystoneDiscoveryWithFilter:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/delegate" title="delegate"></a>
+	<h3 class="subsubtitle method-title">delegate</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Delegate object.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;ESTEddystoneManagerDelegate&gt; _Nullable delegate</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTEddystoneManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/filtersInDiscovery" title="filtersInDiscovery"></a>
+	<h3 class="subsubtitle method-title">filtersInDiscovery</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Array containg <code>ESTEddystoneFilter</code> objects for requested UUID discovery.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSArray&lt;ESTEddystoneFilter*&gt; *filtersInDiscovery</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTEddystoneManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/startEddystoneDiscoveryWithFilter:" title="startEddystoneDiscoveryWithFilter:"></a>
+	<h3 class="subsubtitle method-title">startEddystoneDiscoveryWithFilter:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Starts Eddystone discovery process. Filter param is optional.
+When not provided (nil) manager discovers all devices in range.
+Optional filters are:
+- UID identifier - consists of Namespace ID (10 bytes) and Instance ID (6 bytes).
+- URL - URL address eg. &lsquo;http://go.esti.be&rsquo;
+- URL Domain - URL domain eg. &lsquo;esti.be&rsquo;</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)startEddystoneDiscoveryWithFilter:(ESTEddystoneFilter *_Nullable)<em>eddystoneFilter</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTEddystoneManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/stopEddystoneDiscoveryWithFilter:" title="stopEddystoneDiscoveryWithFilter:"></a>
+	<h3 class="subsubtitle method-title">stopEddystoneDiscoveryWithFilter:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Stops discovery of Eddystones for particular filter.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)stopEddystoneDiscoveryWithFilter:(ESTEddystoneFilter *_Nullable)<em>eddystoneFilter</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTEddystoneManager.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+                    
+                    
 				</div>
 				<div class="main-navigation navigation-bottom">
 					<ul>
@@ -80,7 +365,9 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2016 Estimote. All rights reserved. (Last updated: 2016-09-06)</span><br />
+						<p><span class="copyright">&copy; 2016 Estimote. All rights reserved. (Last updated: 2016-09-08)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						
 					</div>
 				</div>

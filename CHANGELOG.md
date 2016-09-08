@@ -1,3 +1,35 @@
+## 4.8.1 (September 8, 2016)
+
+Features:
+
+- Added new power levels for Location and new Proximity Beacons
+
+Bugfixes:
+
+- Fixed bug with faulty Telemetry synchronisation with Cloud
+- Fixed synchronising Location Beacon settings with Cloud
+
+## 4.8.0 (August 25, 2016)
+
+Features:
+
+- Estimote Monitoring support. It allows apps to detect when somebody is entering and exiting the range of beacons. Compared to iOS Core Location Monitoring, it allows for more granular enters/exits without any region limit or exit timeout.
+
+Bugfixes:
+
+- Fixed incorrect packet detection when scanning Telemetry v1.1.
+
+## 4.8.1 (September 8, 2016)
+
+Features:
+
+- Added new power levels for Location and new Proximity Beacons
+
+Bugfixes:
+
+- Fixed bug with faulty Telemetry synchronisation with Cloud
+- Fixed synchronising Location Beacon settings with Cloud
+
 ## 4.8.0 (August 25, 2016)
 
 Features:
