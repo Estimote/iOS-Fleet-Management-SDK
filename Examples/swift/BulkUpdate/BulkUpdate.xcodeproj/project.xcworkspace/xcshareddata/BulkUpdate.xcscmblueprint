@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "5D932DB2FC41DC611DE35EE82FDAFDE418348704",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "72C133840430E7B244B2FA73989A816D2B4DA563" : 0,
+    "5D932DB2FC41DC611DE35EE82FDAFDE418348704" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "DBBF562F-2E95-4B85-93B1-6B432DC56C44",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "72C133840430E7B244B2FA73989A816D2B4DA563" : "..\/AppTemplate\/iOS-Deployment-App",
+    "5D932DB2FC41DC611DE35EE82FDAFDE418348704" : "iOS-SDK-Beta\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "BulkUpdate",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Templates\/swift\/BulkUpdate\/BulkUpdate.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:Estimote\/iOS-SDK-Beta.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5D932DB2FC41DC611DE35EE82FDAFDE418348704"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:Estimote\/iOS-Deployment-App.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "72C133840430E7B244B2FA73989A816D2B4DA563"
+    }
+  ]
+}
