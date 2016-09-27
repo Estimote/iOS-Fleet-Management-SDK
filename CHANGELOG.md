@@ -7,6 +7,27 @@ Features:
 - improved firmware update for Location Beacons
 - added automatic firmware update to Location Beacons bulk updater
 
+## 4.8.1 (September 8, 2016)
+
+Features:
+
+- Added new power levels for Location and new Proximity Beacons
+
+Bugfixes:
+
+- Fixed bug with faulty Telemetry synchronisation with Cloud
+- Fixed synchronising Location Beacon settings with Cloud
+
+## 4.8.0 (August 25, 2016)
+
+Features:
+
+- Estimote Monitoring support. It allows apps to detect when somebody is entering and exiting the range of beacons. Compared to iOS Core Location Monitoring, it allows for more granular enters/exits without any region limit or exit timeout.
+
+Bugfixes:
+
+- Fixed incorrect packet detection when scanning Telemetry v1.1.
+
 ## 4.7.4 (August 11, 2017)
 
 Features:
@@ -16,6 +37,95 @@ Features:
 Improvements:
 
 - Fixed synchronising iBeacon packet's data for Location Beacons
+
+## 4.7.3 (August 5, 2016)
+
+Bug fixes:
+- Fixed remaining battery lifetime issue for Proximity Beacons
+- Fixed ranging for connectivity packet for Proximity Beacons
+- Enhanced error validation for Proximity UUID setting
+
+## 4.7.2 (July 21, 2016)
+
+Improvements:
+
+- ESTBulkUpdater applies Motion Only and Flip to Sleep broadcasting modes
+- Fixed synchronisation of nearables settings with Estimote Cloud
+
+## 4.7.1 (July 4, 2016)
+
+Features:
+
+- Estimote Analitycs are turned on for monitoring and ranging. 
+
+## 4.7.0 (July 1, 2016)
+
+Bug fixes:
+
+- Fixed Dark to Sleep
+- Remote edit of Flip to Sleep
+- Fixed Conditional broadcasting for Location Beacons
+
+## 4.6.0 (June 23, 2016)
+
+Features:
+
+- Added Eddystone URL support for nearables. Three broadcasting schemes available: nearable, iBeacon and Eddystone URL.
+
+## 4.5.1 (June 16, 2016)
+
+Bug fixes:
+
+- Fixed Basic and Smart Power Modes handling for Proximity beacons.
+
+## 4.5.0 (June 9, 2016)
+
+Features:
+
+- Nearables motion only setting added
+- Nearable are fully synced upon connection with Estimote Cloud
+- Added fleet management for nearables
+
+## 4.4.0 (May 27, 2016)
+
+Features:
+
+- Google Eddystone Configuration Service support for Location Beacons.
+- GPIO UART protocol support for Location Beacons.
+
+Improvements:
+
+- Performance improvements to Analytics mechanism.
+
+## 4.3.0 (May 6, 2016)
+
+Features:
+
+- ESTLogger added to ease debugging. Can be set with different levels for printing and caching logs.
+- Added writing tags for Proximity Beacons.
+
+Improvements:
+
+- Fixed changing beacon's settings on firmware update completion.
+- Refactored logs with new ESTLogger.
+
+## 4.2.0 (May 5, 2016)
+
+Improvements:
+
+- ESTSecureBeaconManager now returns ESTBeacon objects instead of CLBeacon.
+
+
+## 4.1.0 (April 15, 2016)
+
+Features:
+
+- Support of Google Eddystone Ephemeral ID.
+
+Improvements:
+
+- Improved monitoring of firmware stability.
+- Missing ESTNearableProtocolDelegate warning fixed.
 
 ## 4.0.0 (March 3, 2016)
 
