@@ -6,14 +6,7 @@ Features:
 - Near to Connect broadcasting mode makes connecting to Location Beacon easier
 - improved firmware update for Location Beacons
 - added automatic firmware update to Location Beacons bulk updater
-## 4.9.0 (September 26, 2016)
 
-Features:
-
-- Shake to Connect broadcasting mode makes identifying Location Beacon easier
-- Near to Connect broadcasting mode makes connecting to Location Beacon easier
-- improved firmware update for Location Beacons
-- added automatic firmware update to Location Beacons bulk updater
 ## 4.7.4 (August 11, 2017)
 
 Features:
