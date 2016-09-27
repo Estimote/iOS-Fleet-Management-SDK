@@ -21,6 +21,16 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign, readonly) NSInteger rssi;
 @property (nonatomic, strong, readonly) NSDate *discoveryDate;
 
+/**
+ *  Method allows to initialize object.
+ *
+ *  @param identifier           device identifier
+ *  @param peripheralIdentifier CBPeripheral object's identifier
+ *  @param rssi                 CBPeripheral object's RSSI
+ *  @param discoveryDate        date of discovery
+ *
+ *  @return Initialized object.
+ */
 - (instancetype)initWithDeviceIdentifier:(NSString *)identifier
                     peripheralIdentifier:(NSUUID *)peripheralIdentifier
                                     rssi:(NSInteger)rssi

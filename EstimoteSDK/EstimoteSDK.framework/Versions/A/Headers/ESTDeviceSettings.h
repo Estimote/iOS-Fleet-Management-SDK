@@ -12,7 +12,7 @@
 #import "ESTBaseVO.h"
 
 @class ESTDeviceSettingsGeneral,
-ESTDeviceSettingsAdvertiser,
+ESTDeviceSettingsAdvertiserConnectivity,
 ESTDeviceSettingsAdvertiserIBeacon,
 ESTDeviceSettingsAdvertiserEddystoneUID,
 ESTDeviceSettingsAdvertiserEddystoneURL,
@@ -37,7 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  Advertiser settings for Estimote Service packets.
  */
-@property (nonatomic, strong, readonly) NSArray<ESTDeviceSettingsAdvertiser *> *connectivity;
+@property (nonatomic, strong, readonly) NSArray<ESTDeviceSettingsAdvertiserConnectivity *> *connectivity;
 
 /**
  *  Advertiser settings for iBeacon packets.

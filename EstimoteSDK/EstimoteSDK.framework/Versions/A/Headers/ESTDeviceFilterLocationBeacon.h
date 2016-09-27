@@ -42,6 +42,16 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (instancetype)initWithIdentifier:(NSString *)identifier;
 
+/**
+ *  Initializes ESTDeviceFilterTypeUtility object with a predicate for filtering by identifiers.
+ *  Use this method to find a particular devices with given identifiers that can be connected to, since the identifier is unique for Estimote devices.
+ *
+ *  @param identifiers Array of searched devices' identifiers.
+ *
+ *  @return Initialized filter object.
+ */
+- (instancetype)initWithIdentifiers:(NSArray <NSString *> *)identifiers;
+
 @end
 
 NS_ASSUME_NONNULL_END

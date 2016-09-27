@@ -1,24 +1,19 @@
-## 4.8.1 (September 8, 2016)
+## 4.9.0 (September 26, 2016)
 
 Features:
 
-- Added new power levels for Location and new Proximity Beacons
-
-Bugfixes:
-
-- Fixed bug with faulty Telemetry synchronisation with Cloud
-- Fixed synchronising Location Beacon settings with Cloud
-
-## 4.8.0 (August 25, 2016)
+- Shake to Connect broadcasting mode makes identifying Location Beacon easier
+- Near to Connect broadcasting mode makes connecting to Location Beacon easier
+- improved firmware update for Location Beacons
+- added automatic firmware update to Location Beacons bulk updater
+## 4.9.0 (September 26, 2016)
 
 Features:
 
-- Estimote Monitoring support. It allows apps to detect when somebody is entering and exiting the range of beacons. Compared to iOS Core Location Monitoring, it allows for more granular enters/exits without any region limit or exit timeout.
-
-Bugfixes:
-
-- Fixed incorrect packet detection when scanning Telemetry v1.1.
-
+- Shake to Connect broadcasting mode makes identifying Location Beacon easier
+- Near to Connect broadcasting mode makes connecting to Location Beacon easier
+- improved firmware update for Location Beacons
+- added automatic firmware update to Location Beacons bulk updater
 ## 4.7.4 (August 11, 2017)
 
 Features:

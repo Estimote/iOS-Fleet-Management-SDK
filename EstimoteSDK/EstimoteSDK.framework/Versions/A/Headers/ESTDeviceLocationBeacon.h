@@ -78,6 +78,28 @@ typedef NS_ENUM(NSInteger, ESTDeviceLocationBeaconError) {
  */
 @property (nullable, nonatomic, strong, readonly) ESTBeaconSettingsManager *settings;
 
+/**
+ *  Flag indicating if device is broadcasting in Shake to Connect mode.
+ */
+@property (nonatomic, strong, readonly) NSNumber *isShaken;
+
+/**
+ *  Method allows to initialize object.
+ *
+ *  @param identifier           device identifier
+ *  @param peripheralIdentifier CBPeripheral object's identifier
+ *  @param rssi                 CBPeripheral object's RSSI
+ *  @param discoveryDate        date of discovery
+ *  @param isShaken             flag indicating if Shake to Connect mode is on
+ *
+ *  @return Initialized object.
+ */
+- (instancetype)initWithDeviceIdentifier:(NSString *)identifier
+                    peripheralIdentifier:(NSUUID *)peripheralIdentifier
+                                    rssi:(NSInteger)rssi
+                           discoveryDate:(NSDate *)discoveryDate
+                                isShaken:(NSNumber *)isShaken;
+
 @end
 
 NS_ASSUME_NONNULL_END

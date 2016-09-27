@@ -32,7 +32,28 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, strong, readonly) NSArray <ESTSettingOperation *>*settingsOperations;
 
-- (id)initWithDeviceIdentifier:(NSString *)deviceIdentifier settingsOperations:(NSArray <ESTSettingOperation *> *)settingsOperations;
+/**
+ *  Flag indicating firmware updated is available.
+ */
+@property (nonatomic, assign, readonly) BOOL firmwareUpdateAvailable;
+
+/**
+ *  Date when update configuration object was initialized.
+ */
+@property (nonatomic, strong) NSDate *createdAt;
+
+/**
+ *  Method allows to initialize ESTLocationBeaconBulkUpdateConfiguration object.
+ *
+ *  @param deviceIdentifier        Identifier of the device.
+ *  @param settingsOperations      Array of operations to perform.
+ *  @param firmwareUpdateAvailable Flag indicating firmware update is available.
+ *
+ *  @return Initialized object.
+ */
+- (instancetype)initWithDeviceIdentifier:(NSString *)deviceIdentifier
+                      settingsOperations:(NSArray <ESTSettingOperation *> *)settingsOperations
+                 firmwareUpdateAvailable:(BOOL)firmwareUpdateAvailable;
 
 @end
 
