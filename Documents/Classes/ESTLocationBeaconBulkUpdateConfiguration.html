@@ -39,13 +39,22 @@
 	
 	<option value="properties">Properties</option>
 	
+	<option value="//api/name/createdAt">&nbsp;&nbsp;&nbsp;&nbsp;createdAt</option>
+	
 	<option value="//api/name/deviceIdentifier">&nbsp;&nbsp;&nbsp;&nbsp;deviceIdentifier</option>
+	
+	<option value="//api/name/firmwareUpdateAvailable">&nbsp;&nbsp;&nbsp;&nbsp;firmwareUpdateAvailable</option>
 	
 	<option value="//api/name/settingsOperations">&nbsp;&nbsp;&nbsp;&nbsp;settingsOperations</option>
 	
 	
 	
 	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/initWithDeviceIdentifier:settingsOperations:firmwareUpdateAvailable:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithDeviceIdentifier:settingsOperations:firmwareUpdateAvailable:</option>
 	
 	
 	
@@ -71,7 +80,11 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/createdAt">createdAt</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/deviceIdentifier">deviceIdentifier</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/firmwareUpdateAvailable">firmwareUpdateAvailable</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/settingsOperations">settingsOperations</a></span></li>
 	
@@ -80,6 +93,12 @@
 
 
 
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithDeviceIdentifier:settingsOperations:firmwareUpdateAvailable:">initWithDeviceIdentifier:settingsOperations:firmwareUpdateAvailable:</a></span></li>
+	
+</ul></li>
 
 
 			</ul>
@@ -146,6 +165,24 @@ that should be performed on that device after discovery and connection.</p>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/firmwareUpdateAvailable">&nbsp;&nbsp;firmwareUpdateAvailable</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/createdAt">&nbsp;&nbsp;createdAt</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithDeviceIdentifier:settingsOperations:firmwareUpdateAvailable:">&ndash;&nbsp;initWithDeviceIdentifier:settingsOperations:firmwareUpdateAvailable:</a></code>
+	</span>
+	
+	
 </li>
 						</ul>
 						
@@ -160,6 +197,42 @@ that should be performed on that device after discovery and connection.</p>
 						<h2 class="subtitle subtitle-methods">Properties</h2>
 						
 						<div class="section-method">
+	<a name="//api/name/createdAt" title="createdAt"></a>
+	<h3 class="subsubtitle method-title">createdAt</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Date when update configuration object was initialized.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSDate *createdAt</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTLocationBeaconBulkUpdateConfiguration.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/deviceIdentifier" title="deviceIdentifier"></a>
 	<h3 class="subsubtitle method-title">deviceIdentifier</h3>
 	
@@ -172,6 +245,42 @@ that should be performed on that device after discovery and connection.</p>
     
 
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSString *deviceIdentifier</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTLocationBeaconBulkUpdateConfiguration.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/firmwareUpdateAvailable" title="firmwareUpdateAvailable"></a>
+	<h3 class="subsubtitle method-title">firmwareUpdateAvailable</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Flag indicating firmware updated is available.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) BOOL firmwareUpdateAvailable</code></div>
 
     
 	
@@ -237,6 +346,73 @@ that should be performed on that device after discovery and connection.</p>
 					
 					
 					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithDeviceIdentifier:settingsOperations:firmwareUpdateAvailable:" title="initWithDeviceIdentifier:settingsOperations:firmwareUpdateAvailable:"></a>
+	<h3 class="subsubtitle method-title">initWithDeviceIdentifier:settingsOperations:firmwareUpdateAvailable:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Method allows to initialize ESTLocationBeaconBulkUpdateConfiguration object.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithDeviceIdentifier:(NSString *)<em>deviceIdentifier</em> settingsOperations:(NSArray&lt;ESTSettingOperation*&gt; *)<em>settingsOperations</em> firmwareUpdateAvailable:(BOOL)<em>firmwareUpdateAvailable</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>deviceIdentifier</em></dt>
+			<dd><p>Identifier of the device.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>settingsOperations</em></dt>
+			<dd><p>Array of operations to perform.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>firmwareUpdateAvailable</em></dt>
+			<dd><p>Flag indicating firmware update is available.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Initialized object.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTLocationBeaconBulkUpdateConfiguration.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
 					
                     
                     
@@ -250,7 +426,7 @@ that should be performed on that device after discovery and connection.</p>
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2016 Estimote. All rights reserved. (Last updated: 2016-09-08)</span><br />
+						<p><span class="copyright">&copy; 2016 Estimote. All rights reserved. (Last updated: 2016-09-27)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						

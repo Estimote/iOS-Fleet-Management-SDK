@@ -39,11 +39,18 @@
 	
 	<option value="properties">Properties</option>
 	
+	<option value="//api/name/isShaken">&nbsp;&nbsp;&nbsp;&nbsp;isShaken</option>
+	
 	<option value="//api/name/settings">&nbsp;&nbsp;&nbsp;&nbsp;settings</option>
 	
 	
 	
 	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/initWithDeviceIdentifier:peripheralIdentifier:rssi:discoveryDate:isShaken:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithDeviceIdentifier:peripheralIdentifier:rssi:discoveryDate:isShaken:</option>
 	
 	
 	
@@ -69,6 +76,8 @@
 
 <li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isShaken">isShaken</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/settings">settings</a></span></li>
 	
 </ul></li>
@@ -76,6 +85,12 @@
 
 
 
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithDeviceIdentifier:peripheralIdentifier:rssi:discoveryDate:isShaken:">initWithDeviceIdentifier:peripheralIdentifier:rssi:discoveryDate:isShaken:</a></span></li>
+	
+</ul></li>
 
 
 			</ul>
@@ -99,7 +114,7 @@
 					<div class="section section-specification"><table cellspacing="0"><tbody>
 						<tr>
 	<td class="specification-title">Inherits from</td>
-	<td class="specification-value"><a href="../Classes/ESTDeviceConnectable.html">ESTDeviceConnectable</a> : ESTDevice : NSObject</td>
+	<td class="specification-value"><a href="../Classes/ESTDeviceConnectable.html">ESTDeviceConnectable</a> : <a href="../Classes/ESTDevice.html">ESTDevice</a> : NSObject</td>
 </tr><tr>
 	<td class="specification-title">Declared in</td>
 	<td class="specification-value">ESTDeviceLocationBeacon.h</td>
@@ -138,6 +153,18 @@ It is not intended to be initialized manually.</p>
 	</span>
 	<span class="task-item-suffix">property</span>
 	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isShaken">&nbsp;&nbsp;isShaken</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithDeviceIdentifier:peripheralIdentifier:rssi:discoveryDate:isShaken:">&ndash;&nbsp;initWithDeviceIdentifier:peripheralIdentifier:rssi:discoveryDate:isShaken:</a></code>
+	</span>
+	
+	
 </li>
 						</ul>
 						
@@ -150,6 +177,42 @@ It is not intended to be initialized manually.</p>
 					<div class="section section-methods">
 						<a title="Properties" name="properties"></a>
 						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/isShaken" title="isShaken"></a>
+	<h3 class="subsubtitle method-title">isShaken</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Flag indicating if device is broadcasting in Shake to Connect mode.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSNumber *isShaken</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTDeviceLocationBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
 						
 						<div class="section-method">
 	<a name="//api/name/settings" title="settings"></a>
@@ -205,6 +268,83 @@ that should be performed on the device and then perform them using
 					
 					
 					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithDeviceIdentifier:peripheralIdentifier:rssi:discoveryDate:isShaken:" title="initWithDeviceIdentifier:peripheralIdentifier:rssi:discoveryDate:isShaken:"></a>
+	<h3 class="subsubtitle method-title">initWithDeviceIdentifier:peripheralIdentifier:rssi:discoveryDate:isShaken:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Method allows to initialize object.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (instancetype)initWithDeviceIdentifier:(NSString *)<em>identifier</em> peripheralIdentifier:(NSUUID *)<em>peripheralIdentifier</em> rssi:(NSInteger)<em>rssi</em> discoveryDate:(NSDate *)<em>discoveryDate</em> isShaken:(NSNumber *)<em>isShaken</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>identifier</em></dt>
+			<dd><p>device identifier</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>peripheralIdentifier</em></dt>
+			<dd><p>CBPeripheral object&rsquo;s identifier</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>rssi</em></dt>
+			<dd><p>CBPeripheral object&rsquo;s RSSI</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>discoveryDate</em></dt>
+			<dd><p>date of discovery</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>isShaken</em></dt>
+			<dd><p>flag indicating if Shake to Connect mode is on</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Initialized object.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTDeviceLocationBeacon.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
 					
                     
                     
@@ -218,7 +358,7 @@ that should be performed on the device and then perform them using
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2016 Estimote. All rights reserved. (Last updated: 2016-09-08)</span><br />
+						<p><span class="copyright">&copy; 2016 Estimote. All rights reserved. (Last updated: 2016-09-27)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						
