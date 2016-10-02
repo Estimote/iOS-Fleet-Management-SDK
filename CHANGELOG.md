@@ -1,3 +1,9 @@
+## 4.10.0 (October 2, 2016)
+
+Features:
+
+- Configurable delay for Motion Only Broadcasting. Thanks to this setting beacon is broadcasting for the while even if beacon stopped moving. Feature requires firmware 4.8.0 or newer.
+
 ## 4.9.0 (September 26, 2016)
 
 Features:
@@ -56,7 +62,7 @@ Improvements:
 
 Features:
 
-- Estimote Analitycs are turned on for monitoring and ranging. 
+- Estimote Analitycs are turned on for monitoring and ranging.
 
 ## 4.7.0 (July 1, 2016)
 

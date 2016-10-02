@@ -7,7 +7,7 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 4.9.0
+//  Version: 4.10.0
 //  Copyright (c) 2016 Estimote. All rights reserved.
 
 /**
@@ -61,12 +61,14 @@
 #import "ESTSettingPowerDarkToSleepEnable.h"
 #import "ESTSettingPowerBatteryLifetime.h"
 #import "ESTSettingPowerMotionOnlyBroadcastingEnable.h"
+#import "ESTSettingPowerMotionOnlyBroadcastingDelay.h"
 
 #import "ESTBeaconOperationPowerSmartPowerModeEnable.h"
 #import "ESTBeaconOperationPowerFlipToSleepEnable.h"
 #import "ESTBeaconOperationPowerDarkToSleepEnable.h"
 #import "ESTCloudOperationPowerBatteryLifetime.h"
 #import "ESTBeaconOperationPowerMotionOnlyBroadcastingEnable.h"
+#import "ESTBeaconOperationPowerMotionOnlyBroadcastingDelay.h"
 
 /**
  *  Settings Power
