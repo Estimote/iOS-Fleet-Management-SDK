@@ -1,4 +1,14 @@
-## 4.10.0 (October 2, 2016)
+## 4.11.0 (October 12, 2016)
+
+Features:
+
+- Location Beacon has Estimote Storage, a non-volatile data storage. Feature requires firmware 4.9.0 or newer.
+
+Bugfixes:
+
+- Fixed range of values for Motion Only Advertising Delay.
+ 
+## 4.10.0 (September 30, 2016)
 
 Features:
 
@@ -62,7 +72,7 @@ Improvements:
 
 Features:
 
-- Estimote Analitycs are turned on for monitoring and ranging.
+- Estimote Analitycs are turned on for monitoring and ranging. 
 
 ## 4.7.0 (July 1, 2016)
 
@@ -247,15 +257,15 @@ Improvements:
 Improvements:
 
 - Reduced frequency with which beacon cache is being written to disk, which
-  results in reduced recurring CPU utilization.
+results in reduced recurring CPU utilization.
 - Secure UUID performance improvements continue: in this episode, we sped up
-  ranging for secure beacons; noticeable especially when ranging for a large
-  amount of regions.
+ranging for secure beacons; noticeable especially when ranging for a large
+amount of regions.
 
 Bug fixes:
 
 - Eddystone-URL will now correctly handle printable characters appearing at the
-  very end of the URL.
+very end of the URL.
 
 ## 3.3.2 (July 24, 2015)
 
@@ -346,7 +356,7 @@ ESTCloudManager
 Bugfixes:
 
 - Fixed a crash that could sometimes occur when stopping monitoring of a secure
-  UUID region
+UUID region
 
 ## 3.2.3 (May 15, 2015)
 
@@ -368,19 +378,19 @@ Improvements:
 Features:
 
 - New `monitoredRegions` and `rangedRegions` properties
-  for ESTBeaconManager and ESTSecureBeaconManager
+for ESTBeaconManager and ESTSecureBeaconManager
 
 Bugfixes:
 
 - ESTSecureBeaconManager now reports the initial state of the
-  monitored region to the didDetermineState delegate method, just
-  like Core Location monitoring does
+monitored region to the didDetermineState delegate method, just
+like Core Location monitoring does
 - ESTSecureBeaconManager now responds correctly to the
-  `requestStateForRegion` method
+`requestStateForRegion` method
 - The `color` property is now properly filled in from the Estimote
-  Cloud during the process of connecting to the beacon
+Cloud during the process of connecting to the beacon
 - The `name` is now properly updated after changing it via the
-  `writeName` method
+`writeName` method
 
 ## 3.2.1 (April 24, 2015)
 
@@ -555,9 +565,9 @@ Improvements:
 
 Features:
 
- - Added support for the new CoreLocation authorization model introduced in iOS 8
+- Added support for the new CoreLocation authorization model introduced in iOS 8
 
-   You can read more about it in our [Estimote SDK and iOS 8 Location Services](https://community.estimote.com/hc/en-us/articles/203393036-Estimote-SDK-and-iOS-8-Location-Services) guide.
+You can read more about it in our [Estimote SDK and iOS 8 Location Services](https://community.estimote.com/hc/en-us/articles/203393036-Estimote-SDK-and-iOS-8-Location-Services) guide.
 
 Improvements:
 
@@ -565,89 +575,89 @@ Improvements:
 
 Features:
 
- - Added support for battery power modes
+- Added support for battery power modes
 
 Improvements:
 
- - Connection stability
- - Accelerometer support
- - Caching the beacon color information
- - Performance with high number of beacons
+- Connection stability
+- Accelerometer support
+- Caching the beacon color information
+- Performance with high number of beacons
 
 Bugfixes:
 
- - Fixed crashes when using CoreLocation's non-beacon monitoring (i.e. `CLCiruclarRegion`) and Estimote SDK in a single app
+- Fixed crashes when using CoreLocation's non-beacon monitoring (i.e. `CLCiruclarRegion`) and Estimote SDK in a single app
 
 ## 2.0.1 (July 15, 2014)
 
 Bugfixes:
 
- - Fixed 100% CPU usage when ranging beacons
+- Fixed 100% CPU usage when ranging beacons
 
 ## 2.0.0 (June 6, 2014)
 
 Features:
 
- - Added integration with the Estimote Cloud
- - Added support for temperature and accelerometer sensors
- - Added `motionProximityUUID` to `ESTBeacon`
- - Added support for firmware: Estimote OS 2.0 and up
+- Added integration with the Estimote Cloud
+- Added support for temperature and accelerometer sensors
+- Added `motionProximityUUID` to `ESTBeacon`
+- Added support for firmware: Estimote OS 2.0 and up
 
 Improvements:
 
- - Better connection status handling
- - Improved Examples app
+- Better connection status handling
+- Improved Examples app
 
 New `ESTBeacon` API:
 
- - The following methods have new names:
+- The following methods have new names:
 
-   - `connectToBeacon` is now `connect`
-   - `disconnectBeacon` is now `disconnect`
-   - `writeBeaconName:withCompletion:` is now `writeName:completion:`
-   - `writeBeaconProximityUUID:withCompletion:` is now `writeProximityUUID:completion:`
-   - `writeBeaconMajor:withCompletion:` is now `writeMajor:completion:`
-   - `writeBeaconMinor:withCompletion:` is now `writeMinor:completion`
-   - `writeBeaconAdvInterval:withCompletion:` is now `writeAdvInterval:completion:`
-   - `writeBeaconPower:withCompletion:` is now `writePower:completion:`
-   - `updateBeaconFirmwareWithProgress:andCompletion:` is now `updateFirmwareWithProgress:completion:`
+- `connectToBeacon` is now `connect`
+- `disconnectBeacon` is now `disconnect`
+- `writeBeaconName:withCompletion:` is now `writeName:completion:`
+- `writeBeaconProximityUUID:withCompletion:` is now `writeProximityUUID:completion:`
+- `writeBeaconMajor:withCompletion:` is now `writeMajor:completion:`
+- `writeBeaconMinor:withCompletion:` is now `writeMinor:completion`
+- `writeBeaconAdvInterval:withCompletion:` is now `writeAdvInterval:completion:`
+- `writeBeaconPower:withCompletion:` is now `writePower:completion:`
+- `updateBeaconFirmwareWithProgress:andCompletion:` is now `updateFirmwareWithProgress:completion:`
 
 ## 1.3.0 (January 25, 2014)
 
 Features:
 
-  - `proximityUUID` can now be changed
+- `proximityUUID` can now be changed
 
 ## 1.2.0 (December 9, 2013)
 
 Improvements:
 
-  - `ESTBeacon` class cleanup (flat structure with iBeacon property removed)
-  - Updated the EstimoteSDK Reference documentation
+- `ESTBeacon` class cleanup (flat structure with iBeacon property removed)
+- Updated the EstimoteSDK Reference documentation
 
 Bugfixes:
 
-  - Corrected the name of the DistanceDemo project
+- Corrected the name of the DistanceDemo project
 
 ## 1.1.0 (December 2, 2013)
 
 Features:
 
-  - Renamed the `frequency` property to `advInterval`
-  - Added support for checking for available firmware updates
-  - Renamed the library from *libEstimoteSDK7.a* to *libEstimoteSDK.a*
+- Renamed the `frequency` property to `advInterval`
+- Added support for checking for available firmware updates
+- Renamed the library from *libEstimoteSDK7.a* to *libEstimoteSDK.a*
 
 Bugfixes:
 
-  - Changed the type of `major`, `minor`, `power` and `advInterval` properties to unsigned short
-  - Fixed an issue with the `(NSArray *)beacons` parameter of `beaconManager:didDiscoverBeacons:inRegion`
+- Changed the type of `major`, `minor`, `power` and `advInterval` properties to unsigned short
+- Fixed an issue with the `(NSArray *)beacons` parameter of `beaconManager:didDiscoverBeacons:inRegion`
 
 ## 1.0.0 (November 7, 2013)
 
 Features:
 
-  - Ranging and monitoring of Estimote beacons
-  - Added support for connecting to Estimote beacons, which enables access to following properties:
-    - major, minor, power and frequency - read and write
-    - battery, firmware version and hardware version - readonly
-  - Added support for updating firmware
+- Ranging and monitoring of Estimote beacons
+- Added support for connecting to Estimote beacons, which enables access to following properties:
+- major, minor, power and frequency - read and write
+- battery, firmware version and hardware version - readonly
+- Added support for updating firmware

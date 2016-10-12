@@ -63,7 +63,7 @@ typedef void(^ESTSettingPowerMotionOnlyBroadcastingDelayCompletionBlock)(ESTSett
  *
  *  @return Power MotionOnlyBroadcastingDelay value.
  */
-- (unsigned short)getValue;
+- (unsigned int)getValue;
 
 /**
  *  Method allows to read value of initialized Power MotionOnlyBroadcastingDelay setting object.

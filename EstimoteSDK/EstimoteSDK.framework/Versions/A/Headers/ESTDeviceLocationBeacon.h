@@ -11,6 +11,7 @@
 #import <Foundation/Foundation.h>
 #import "ESTDeviceConnectable.h"
 #import "ESTBeaconSettingsManager.h"
+#import "ESTStorageManager.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -36,6 +37,10 @@ typedef NS_ENUM(NSInteger, ESTDeviceLocationBeaconError) {
      *  Estimote Cloud Authorization during connection failed.
      */
     ESTDeviceLocationBeaconErrorAuthorizationFailed,
+    /**
+     *  Settings synchronization during connection failed.
+     */
+    ESTDeviceLocationBeaconErrorSettingsSynchronizationFailed,
     /**
      *  Connection was not established before firmware update.
      */
@@ -79,9 +84,21 @@ typedef NS_ENUM(NSInteger, ESTDeviceLocationBeaconError) {
 @property (nullable, nonatomic, strong, readonly) ESTBeaconSettingsManager *settings;
 
 /**
+ *  Object enables access to device's non-volatile data storage.
+ */
+@property (nullable, nonatomic, strong) ESTStorageManager *storage;
+
+/**
  *  Flag indicating if device is broadcasting in Shake to Connect mode.
  */
 @property (nonatomic, strong, readonly) NSNumber *isShaken;
+
+/**
+ *  Method enabling connecting with device to read from Estimote Storage. Uses same callbacks as connect method.
+ *
+ *  @see ESTStorageManager to learn how to read from Estimote Storage.
+ */
+- (void)connectForStorageRead;
 
 /**
  *  Method allows to initialize object.
