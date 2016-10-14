@@ -60,7 +60,13 @@
 	
 	<option value="//api/name/startCloudUpdate">&nbsp;&nbsp;&nbsp;&nbsp;- startCloudUpdate</option>
 	
+	<option value="//api/name/startCloudUpdateWithTimeout:">&nbsp;&nbsp;&nbsp;&nbsp;- startCloudUpdateWithTimeout:</option>
+	
+	<option value="//api/name/startCloudUpdateWithTimeout:fetchInterval:">&nbsp;&nbsp;&nbsp;&nbsp;- startCloudUpdateWithTimeout:fetchInterval:</option>
+	
 	<option value="//api/name/startWithUpdateConfigurations:">&nbsp;&nbsp;&nbsp;&nbsp;- startWithUpdateConfigurations:</option>
+	
+	<option value="//api/name/startWithUpdateConfigurations:timeout:">&nbsp;&nbsp;&nbsp;&nbsp;- startWithUpdateConfigurations:timeout:</option>
 	
 	<option value="//api/name/statusForDeviceWithIdentifier:">&nbsp;&nbsp;&nbsp;&nbsp;- statusForDeviceWithIdentifier:</option>
 	
@@ -110,7 +116,13 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/startCloudUpdate">startCloudUpdate</a></span></li>
 	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/startCloudUpdateWithTimeout:">startCloudUpdateWithTimeout:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/startCloudUpdateWithTimeout:fetchInterval:">startCloudUpdateWithTimeout:fetchInterval:</a></span></li>
+	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/startWithUpdateConfigurations:">startWithUpdateConfigurations:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/startWithUpdateConfigurations:timeout:">startWithUpdateConfigurations:timeout:</a></span></li>
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/statusForDeviceWithIdentifier:">statusForDeviceWithIdentifier:</a></span></li>
 	
@@ -202,7 +214,25 @@ containing a device identifier and an array of <code>ESTSettingOperation</code> 
 	
 </li><li>
 	<span class="tooltip">
+		<code><a href="#//api/name/startCloudUpdateWithTimeout:">&ndash;&nbsp;startCloudUpdateWithTimeout:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/startCloudUpdateWithTimeout:fetchInterval:">&ndash;&nbsp;startCloudUpdateWithTimeout:fetchInterval:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
 		<code><a href="#//api/name/startWithUpdateConfigurations:">&ndash;&nbsp;startWithUpdateConfigurations:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/startWithUpdateConfigurations:timeout:">&ndash;&nbsp;startWithUpdateConfigurations:timeout:</a></code>
 	</span>
 	
 	
@@ -501,6 +531,103 @@ Note that, if update for a certain device has already started it might not be ca
 </div>
 						
 						<div class="section-method">
+	<a name="//api/name/startCloudUpdateWithTimeout:" title="startCloudUpdateWithTimeout:"></a>
+	<h3 class="subsubtitle method-title">startCloudUpdateWithTimeout:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Starts <code>ESTLocationBeaconBulkUpdater</code> with current pending settings from Estimote Cloud.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)startCloudUpdateWithTimeout:(NSTimeInterval)<em>timeout</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>timeout</em></dt>
+			<dd><p>Bulk Updater timeout. 0 means no timeout.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTLocationBeaconBulkUpdater.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/startCloudUpdateWithTimeout:fetchInterval:" title="startCloudUpdateWithTimeout:fetchInterval:"></a>
+	<h3 class="subsubtitle method-title">startCloudUpdateWithTimeout:fetchInterval:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Starts <code>ESTLocationBeaconBulkUpdater</code> with current pending settings from Estimote Cloud.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)startCloudUpdateWithTimeout:(NSTimeInterval)<em>timeout</em> fetchInterval:(NSTimeInterval)<em>fetchInterval</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>timeout</em></dt>
+			<dd><p>Bulk Updater timeout. 0 means no timeout.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>fetchInterval</em></dt>
+			<dd><p>Bulk Updater fetch interval. 0 represents default 5 min.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTLocationBeaconBulkUpdater.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
 	<a name="//api/name/startWithUpdateConfigurations:" title="startWithUpdateConfigurations:"></a>
 	<h3 class="subsubtitle method-title">startWithUpdateConfigurations:</h3>
 	
@@ -523,6 +650,67 @@ This method will not cause anything if bulk updater is currently performing upda
 		<dl class="argument-def parameter-def">
 			<dt><em>updateConfigurations</em></dt>
 			<dd><p>Array of <code>ESTLocationBeaconBulkUpdateConfiguration</code> objects.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection see-also-section">
+		<h4 class="method-subtitle">See Also</h4>
+		<ul>
+			
+			<li><code><p><a href="#//api/name/status">@property status</a></p></code></li>
+			
+		</ul>
+	</div>
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ESTLocationBeaconBulkUpdater.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/startWithUpdateConfigurations:timeout:" title="startWithUpdateConfigurations:timeout:"></a>
+	<h3 class="subsubtitle method-title">startWithUpdateConfigurations:timeout:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Starts the bulk update procedure.
+This method will not cause anything if bulk updater is currently performing updates.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)startWithUpdateConfigurations:(NSArray&lt;ESTLocationBeaconBulkUpdateConfiguration*&gt; *)<em>updateConfigurations</em> timeout:(NSTimeInterval)<em>timeout</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>updateConfigurations</em></dt>
+			<dd><p>Array of <code>ESTLocationBeaconBulkUpdateConfiguration</code> objects.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>timeout</em></dt>
+			<dd><p>Bulk Updater timeout. 0 means no timeout.</p></dd>
 		</dl>
 		
 	</div>
@@ -622,7 +810,7 @@ This method will not cause anything if bulk updater is currently performing upda
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2016 Estimote. All rights reserved. (Last updated: 2016-10-12)</span><br />
+						<p><span class="copyright">&copy; 2016 Estimote. All rights reserved. (Last updated: 2016-10-14)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
 						

@@ -7,7 +7,7 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 4.11.0
+//  Version: 4.12.0-beta1
 //  Copyright (c) 2016 Estimote. All rights reserved.
 
 /**

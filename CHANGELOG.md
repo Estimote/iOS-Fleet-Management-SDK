@@ -1,3 +1,9 @@
+## 4.12.0-beta1 (October 14, 2016)
+
+Improvements:
+
+- Bulk Updater for Location Beacons improved with Timeout and Fetch interval settings.
+
 ## 4.11.0 (October 12, 2016)
 
 Features:
@@ -7,7 +13,7 @@ Features:
 Bugfixes:
 
 - Fixed range of values for Motion Only Advertising Delay.
- 
+
 ## 4.10.0 (September 30, 2016)
 
 Features:

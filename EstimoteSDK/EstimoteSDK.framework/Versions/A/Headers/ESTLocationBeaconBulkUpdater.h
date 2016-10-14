@@ -168,6 +168,24 @@ typedef NS_ENUM(NSInteger, ESTBulkUpdaterDeviceUpdateStatus)
 - (void)startCloudUpdate;
 
 /**
+ *  Starts `ESTLocationBeaconBulkUpdater` with current pending settings from Estimote Cloud.
+ *
+ * @param timeout Bulk Updater timeout. 0 means no timeout.
+ *
+ */
+- (void)startCloudUpdateWithTimeout:(NSTimeInterval)timeout;
+
+/**
+ *  Starts `ESTLocationBeaconBulkUpdater` with current pending settings from Estimote Cloud.
+ *
+ * @param timeout Bulk Updater timeout. 0 means no timeout.
+ * @param fetchInterval Bulk Updater fetch interval. 0 represents default 5 min.
+ *
+ */
+- (void)startCloudUpdateWithTimeout:(NSTimeInterval)timeout
+                      fetchInterval:(NSTimeInterval)fetchInterval;
+
+/**
  * Starts the bulk update procedure.
  * This method will not cause anything if bulk updater is currently performing updates.
  *
@@ -176,6 +194,19 @@ typedef NS_ENUM(NSInteger, ESTBulkUpdaterDeviceUpdateStatus)
  * @param updateConfigurations Array of `ESTLocationBeaconBulkUpdateConfiguration` objects.
  */
 - (void)startWithUpdateConfigurations:(NSArray <ESTLocationBeaconBulkUpdateConfiguration *> *)updateConfigurations;
+
+/**
+ * Starts the bulk update procedure.
+ * This method will not cause anything if bulk updater is currently performing updates.
+ *
+ * @see status
+ *
+ * @param updateConfigurations Array of `ESTLocationBeaconBulkUpdateConfiguration` objects.
+ * @param timeout Bulk Updater timeout. 0 means no timeout.
+ *
+ */
+- (void)startWithUpdateConfigurations:(NSArray <ESTLocationBeaconBulkUpdateConfiguration *> *)updateConfigurations
+                              timeout:(NSTimeInterval)timeout;
 
 /**
  * Cancels the bulk update procedure.
