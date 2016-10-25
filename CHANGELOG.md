@@ -1,13 +1,15 @@
-## 4.11.0 (October 12, 2016)
+## 4.11.1 (October 25, 2016)
+
+Improvements:
+
+- Previously, Estimote Monitoring events could ring in some situations (enter-exit-enter-exit). This version diminishes the exit event ringing effect. 
+
+## 4.11.0 (October 11, 2016)
 
 Features:
 
-- Location Beacon has Estimote Storage, a non-volatile data storage. Feature requires firmware 4.9.0 or newer.
+- Location Beacon has Estimote Storage, a non-volatile data storage.  Feature requires firmware 4.9.0 or newer.
 
-Bugfixes:
-
-- Fixed range of values for Motion Only Advertising Delay.
- 
 ## 4.10.0 (September 30, 2016)
 
 Features:
