@@ -14,7 +14,7 @@ class ViewController: UIViewController, ShowroomManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        UIApplication.sharedApplication().registerUserNotificationSettings(UIUserNotificationSettings(forTypes: [.Sound, .Alert], categories: nil))
+        UIApplication.shared.registerUserNotificationSettings(UIUserNotificationSettings(types: [.sound, .alert], categories: nil))
 
         // TODO: replace with identifiers of your own nearables
         self.showroomManager = ShowroomManager(
@@ -29,24 +29,24 @@ class ViewController: UIViewController, ShowroomManagerDelegate {
         self.showroomManager.startUpdates()
     }
 
-    func showroomManager(showroomManager: ShowroomManager, didDetectPickupForProduct product: Product) {
+    func showroomManager(_ showroomManager: ShowroomManager, didDetectPickupForProduct product: Product) {
         self.titleLabel.text = product.name
         self.descriptionLabel.text = product.summary
-        self.descriptionLabel.hidden = false
+        self.descriptionLabel.isHidden = false
 
         // Nearable detection works even if the app is not running!
         // Try it: run the app, lock your phone, and pick up a nearable. You should see a notification show up on your lock screen.
-        if UIApplication.sharedApplication().applicationState != .Active {
+        if UIApplication.shared.applicationState != .active {
             let notification = UILocalNotification()
             notification.soundName = UILocalNotificationDefaultSoundName
             notification.alertBody = "It looks like you're interested in \(product.name). Swipe here to learn more."
-            UIApplication.sharedApplication().presentLocalNotificationNow(notification)
+            UIApplication.shared.presentLocalNotificationNow(notification)
         }
     }
 
-    func showroomManager(showroomManager: ShowroomManager, didDetectPutdownForProduct product: Product) {
+    func showroomManager(_ showroomManager: ShowroomManager, didDetectPutdownForProduct product: Product) {
         self.titleLabel.text = "Pick up an object to learn more about it"
-        self.descriptionLabel.hidden = true
+        self.descriptionLabel.isHidden = true
     }
 
     override func didReceiveMemoryWarning() {

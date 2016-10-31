@@ -10,14 +10,14 @@ class BeaconDetailsStaticFactory: BeaconContentFactory {
         self.staticContent = staticContent
     }
 
-    func contentForBeaconID(beaconID: BeaconID, completion: (content: AnyObject) -> ()) {
+    func requestContent(for beaconID: BeaconID, completion: @escaping (_ content: AnyObject) -> ()) {
         if let beaconDetails = self.staticContent[beaconID] {
-            completion(content: beaconDetails)
+            completion(beaconDetails)
         } else {
             NSLog("No static content found for beacon \(beaconID), will use default values instead. Make sure there's some content defined for this beacon.")
-            completion(content: BeaconDetails(
+            completion(BeaconDetails(
                 beaconName: "beacon",
-                beaconColor: .Unknown))
+                beaconColor: .unknown))
         }
     }
 

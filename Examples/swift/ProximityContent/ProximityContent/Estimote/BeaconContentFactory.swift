@@ -4,6 +4,6 @@
 
 protocol BeaconContentFactory {
 
-    func contentForBeaconID(beaconID: BeaconID, completion: (content: AnyObject) -> ())
+    func requestContent(for beaconID: BeaconID, completion: @escaping (_ content: AnyObject) -> ())
 
 }

@@ -4,9 +4,9 @@
 
 protocol ShowroomManagerDelegate: class {
 
-    func showroomManager(showroomManager: ShowroomManager, didDetectPickupForProduct product: Product)
+    func showroomManager(_ showroomManager: ShowroomManager, didDetectPickupForProduct product: Product)
 
-    func showroomManager(showroomManager: ShowroomManager, didDetectPutdownForProduct product: Product)
+    func showroomManager(_ showroomManager: ShowroomManager, didDetectPutdownForProduct product: Product)
 
 }
 
@@ -35,17 +35,17 @@ class ShowroomManager: NSObject, ESTTriggerManagerDelegate {
 
     func startUpdates() {
         for trigger in self.triggers {
-            self.triggerManager.startMonitoringForTrigger(trigger)
+            self.triggerManager.startMonitoring(for: trigger)
         }
     }
 
     func stoptUpdates() {
         for trigger in self.triggers {
-            self.triggerManager.stopMonitoringForTriggerWithIdentifier(trigger.identifier)
+            self.triggerManager.stopMonitoringForTrigger(withIdentifier: trigger.identifier)
         }
     }
 
-    func triggerManager(manager: ESTTriggerManager, triggerChangedState trigger: ESTTrigger) {
+    func triggerManager(_ manager: ESTTriggerManager, triggerChangedState trigger: ESTTrigger) {
         if let nearableID = NearableID(nearableIDString: trigger.identifier), let product = self.products[nearableID] {
             if trigger.state == true {
                 self.delegate?.showroomManager(self, didDetectPickupForProduct: product)

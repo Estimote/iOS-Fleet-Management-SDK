@@ -4,22 +4,22 @@
 
 struct BeaconID: Equatable, CustomStringConvertible, Hashable {
 
-    let proximityUUID: NSUUID
+    let proximityUUID: UUID
     let major: CLBeaconMajorValue
     let minor: CLBeaconMinorValue
 
-    init(proximityUUID: NSUUID, major: CLBeaconMajorValue, minor: CLBeaconMinorValue) {
+    init(proximityUUID: UUID, major: CLBeaconMajorValue, minor: CLBeaconMinorValue) {
         self.proximityUUID = proximityUUID
         self.major = major
         self.minor = minor
     }
 
     init(UUIDString: String, major: CLBeaconMajorValue, minor: CLBeaconMinorValue) {
-        self.init(proximityUUID: NSUUID(UUIDString: UUIDString)!, major: major, minor: minor)
+        self.init(proximityUUID: UUID(uuidString: UUIDString)!, major: major, minor: minor)
     }
 
     var asString: String {
-        get { return "\(proximityUUID.UUIDString):\(major):\(minor)" }
+        get { return "\(proximityUUID.uuidString):\(major):\(minor)" }
     }
 
     var asBeaconRegion: CLBeaconRegion {
@@ -49,8 +49,8 @@ extension CLBeacon {
     var beaconID: BeaconID {
         get { return BeaconID(
             proximityUUID: proximityUUID,
-            major: major.unsignedShortValue,
-            minor: minor.unsignedShortValue) }
+            major: major.uint16Value,
+            minor: minor.uint16Value) }
     }
 
 }

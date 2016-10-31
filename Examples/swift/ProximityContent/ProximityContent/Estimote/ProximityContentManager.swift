@@ -4,7 +4,7 @@
 
 protocol ProximityContentManagerDelegate: class {
 
-    func proximityContentManager(proximityContentManager: ProximityContentManager, didUpdateContent content: AnyObject?)
+    func proximityContentManager(_ proximityContentManager: ProximityContentManager, didUpdateContent content: AnyObject?)
 
 }
 
@@ -35,9 +35,9 @@ class ProximityContentManager: NearestBeaconManagerDelegate {
         self.nearestBeaconManager.stopNearestBeaconUpdates()
     }
 
-    func nearestBeaconManager(nearestBeaconManager: NearestBeaconManager, didUpdateNearestBeaconID nearestBeaconID: BeaconID?) {
+    func nearestBeaconManager(_ nearestBeaconManager: NearestBeaconManager, didUpdateNearestBeaconID nearestBeaconID: BeaconID?) {
         if let nearestBeaconID = nearestBeaconID {
-            self.beaconContentFactory.contentForBeaconID(nearestBeaconID) { (proximityContent) in
+            self.beaconContentFactory.requestContent(for: nearestBeaconID) { (proximityContent) in
                 self.delegate?.proximityContentManager(self, didUpdateContent: proximityContent)
             }
         } else {

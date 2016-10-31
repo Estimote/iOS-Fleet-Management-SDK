@@ -4,7 +4,7 @@
 
 protocol NearestBeaconManagerDelegate: class {
 
-    func nearestBeaconManager(nearestBeaconManager: NearestBeaconManager, didUpdateNearestBeaconID nearestBeaconID: BeaconID?)
+    func nearestBeaconManager(_ nearestBeaconManager: NearestBeaconManager, didUpdateNearestBeaconID nearestBeaconID: BeaconID?)
 
 }
 
@@ -31,17 +31,17 @@ class NearestBeaconManager: NSObject, ESTBeaconManagerDelegate {
 
     func startNearestBeaconUpdates() {
         for beaconRegion in self.beaconRegions {
-            self.beaconManager.startRangingBeaconsInRegion(beaconRegion)
+            self.beaconManager.startRangingBeacons(in: beaconRegion)
         }
     }
 
     func stopNearestBeaconUpdates() {
         for beaconRegion in self.beaconRegions {
-            self.beaconManager.stopRangingBeaconsInRegion(beaconRegion)
+            self.beaconManager.stopRangingBeacons(in: beaconRegion)
         }
     }
 
-    func beaconManager(manager: AnyObject, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {
+    func beaconManager(_ manager: Any, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
         let nearestBeacon = beacons.first
 
         if nearestBeacon?.beaconID != self.nearestBeaconID || !firstEventSent {
@@ -51,14 +51,14 @@ class NearestBeaconManager: NSObject, ESTBeaconManagerDelegate {
         }
     }
 
-    func beaconManager(manager: AnyObject, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-        if status == .Denied || status == .Restricted {
+    func beaconManager(_ manager: Any, didChange status: CLAuthorizationStatus) {
+        if status == .denied || status == .restricted {
             NSLog("Location Services are disabled for this app, which means it won't be able to detect beacons.")
         }
     }
 
-    func beaconManager(manager: AnyObject, rangingBeaconsDidFailForRegion region: CLBeaconRegion?, withError error: NSError) {
-        NSLog("Ranging failed for region: %@. Make sure that Bluetooth and Location Services are on, and that Location Services are allowed for this app. Beacons require a Bluetooth Low Energy compatible device: <http://www.bluetooth.com/Pages/Bluetooth-Smart-Devices-List.aspx>. Note that the iOS simulator doesn't support Bluetooth at all. The error was: %@", region?.identifier ?? "(unknown)", error);
+    func beaconManager(_ manager: Any, rangingBeaconsDidFailFor region: CLBeaconRegion?, withError error: Error) {
+        print("Ranging failed for region: \(region?.identifier ?? "(unknown)"). Make sure that Bluetooth and Location Services are on, and that Location Services are allowed for this app. Beacons require a Bluetooth Low Energy compatible device: <http://www.bluetooth.com/Pages/Bluetooth-Smart-Devices-List.aspx>. Note that the iOS simulator doesn't support Bluetooth at all. The error was: \(error)")
     }
 
 }

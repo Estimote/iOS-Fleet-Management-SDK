@@ -29,23 +29,23 @@ class ViewController: UIViewController, ProximityContentManagerDelegate {
         self.proximityContentManager.startContentUpdates()
     }
 
-    func proximityContentManager(proximityContentManager: ProximityContentManager, didUpdateContent content: AnyObject?) {
+    func proximityContentManager(_ proximityContentManager: ProximityContentManager, didUpdateContent content: AnyObject?) {
         self.activityIndicator?.stopAnimating()
         self.activityIndicator?.removeFromSuperview()
 
         if let beaconDetails = content as? BeaconDetails {
             self.view.backgroundColor = beaconDetails.backgroundColor
             self.label.text = "You're in \(beaconDetails.beaconName)'s range!"
-            self.image.hidden = false
+            self.image.isHidden = false
         } else {
             self.view.backgroundColor = BeaconDetails.neutralColor
             self.label.text = "No beacons in range."
-            self.image.hidden = true
+            self.image.isHidden = true
         }
     }
 
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .LightContent
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
     }
 
     override func didReceiveMemoryWarning() {
