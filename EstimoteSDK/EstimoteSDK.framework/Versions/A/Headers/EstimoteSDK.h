@@ -7,7 +7,7 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 4.11.1
+//  Version: 4.11.2
 //  Copyright (c) 2016 Estimote. All rights reserved.
 
 /**
@@ -392,3 +392,8 @@
  */
 #import "ESTStorageManager.h"
 
+
+/**
+ *  Featuresets
+ */
+#import "ESTFeaturesetEstimoteMonitoring.h"

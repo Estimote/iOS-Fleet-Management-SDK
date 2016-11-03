@@ -1,3 +1,13 @@
+## 4.11.2 (November 3, 2016)
+
+Features:
+
+- `ESTFeaturesetEstimoteMonitoring` - one class to read or write multiple beacon settings required by Estimote Monitoring.
+
+Bugfixes:
+
+- Fixed Estimote Monitoring issue where events could stop being reported when entering the beacon's range after long period of being outside the beacon's range.       
+
 ## 4.11.1 (October 25, 2016)
 
 Improvements:
