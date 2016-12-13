@@ -12,16 +12,14 @@
 #import <Foundation/Foundation.h>
 #include <string.h>
 
-#define FILENAME (strrchr(__FILE__, '/') ? strrchr(__FILE__, '/') + 1 : __FILE__)
-
 /**
  *  User friendly ready to use macros for logging with each `ESTLogLevel`.
  */
-#define ESTVerboseLog(fmt, ...) [ESTLogger log:[NSString stringWithFormat:(@"%s:%d " fmt), FILENAME, __LINE__, ##__VA_ARGS__] withLevel:ESTLogLevelVerbose]
-#define ESTInfoLog(fmt, ...) [ESTLogger log:[NSString stringWithFormat:(@"%s:%d " fmt), FILENAME, __LINE__, ##__VA_ARGS__] withLevel:ESTLogLevelInfo]
-#define ESTErrorLog(fmt, ...) [ESTLogger log:[NSString stringWithFormat:(@"%s:%d " fmt), FILENAME, __LINE__, ##__VA_ARGS__] withLevel:ESTLogLevelError]
-#define ESTWarningLog(fmt, ...) [ESTLogger log:[NSString stringWithFormat:(@"%s:%d " fmt), FILENAME, __LINE__, ##__VA_ARGS__] withLevel:ESTLogLevelWarning]
-#define ESTDebugLog(fmt, ...) [ESTLogger log:[NSString stringWithFormat:(@"%s:%d " fmt), FILENAME, __LINE__, ##__VA_ARGS__] withLevel:ESTLogLevelDebug]
+#define ESTVerboseLog(fmt, ...) [ESTLogger log:[NSString stringWithFormat:(@"%s:%d " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__] withLevel:ESTLogLevelVerbose]
+#define ESTInfoLog(fmt, ...) [ESTLogger log:[NSString stringWithFormat:(@"%s:%d " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__] withLevel:ESTLogLevelInfo]
+#define ESTErrorLog(fmt, ...) [ESTLogger log:[NSString stringWithFormat:(@"%s:%d " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__] withLevel:ESTLogLevelError]
+#define ESTWarningLog(fmt, ...) [ESTLogger log:[NSString stringWithFormat:(@"%s:%d " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__] withLevel:ESTLogLevelWarning]
+#define ESTDebugLog(fmt, ...) [ESTLogger log:[NSString stringWithFormat:(@"%s:%d " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__] withLevel:ESTLogLevelDebug]
 
 /**
  *  Log levels are used to filter out logs to print and cache.
@@ -62,11 +60,6 @@ typedef enum : int
 @interface ESTLogger : NSObject
 
 /**
- *  Method allows to enable logger with specific `ESTLogLevel`, below which logger will print logs.
- */
-+ (void)enableLogger:(BOOL)enabled withLevel:(ESTLogLevel)level;
-
-/**
  *  Method allows to set `ESTLogLevel` for console. Logs above given level will not be printed to console.
  */
 + (void)setConsoleLogLevel:(ESTLogLevel)level;
@@ -92,5 +85,12 @@ typedef enum : int
  */
 + (void)log:(NSString *)message
   withLevel:(ESTLogLevel)level;
+
+/**
+ *  Write cached logs to document file. To retrieve it use iTunes File Sharing. For more info visit: https://support.apple.com/en-us/HT201301 .
+ *
+ *  Remember to set UIFileSharingEnabled to YES (also known as "Application supports iTunes file sharing") in your app's Info.plist.
+ */
++ (void)dumpLogCacheToFile;
 
 @end
