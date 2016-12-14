@@ -4,12 +4,24 @@ Fixes:
 
 - Incorrect value occasionally returned for larger settings
 - Name and GPS Location settings fixed for multiple invocations in the row
-## 4.11.3 (December 13, 2016)
+- Disabled Automatic Firmware update for Location Beacons Bulk Updater
 
-Fixes:
+## 4.11.2 (November 3, 2016)
 
-- Incorrect value occasionally returned for larger settings
-- Name and GPS Location settings fixed for multiple invocations in the row
+Features:
+
+- `ESTFeaturesetEstimoteMonitoring` - one class to read or write multiple beacon settings required by Estimote Monitoring.
+
+Bugfixes:
+
+- Fixed Estimote Monitoring issue where events could stop being reported when entering the beacon's range after long period of being outside the beacon's range.       
+
+## 4.11.1 (October 25, 2016)
+
+Improvements:
+
+- Previously, Estimote Monitoring events could ring in some situations (enter-exit-enter-exit). This version diminishes the exit event ringing effect. 
+
 ## 4.11.0 (October 11, 2016)
 
 Features:
