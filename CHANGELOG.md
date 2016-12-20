@@ -1,3 +1,10 @@
+## 4.12.1 (December 20, 2016)
+
+Features:
+
+- introduced ESTMeshManager for creating Mesh networks (both types: cluster and standard) and fetching network's details from Cloud,
+- created ESTMesh class to handle adding Location Beacons to Mesh network.
+
 ## 4.11.3 (December 13, 2016)
 
 Fixes:
