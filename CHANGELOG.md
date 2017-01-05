@@ -1,3 +1,9 @@
+## 4.12.2 (January 5, 2017)
+
+Fixes:
+
+- Added missing `ESTDeviceSettingsAdvertiserConnectivity` class.
+
 ## 4.12.1 (December 20, 2016)
 
 Features:

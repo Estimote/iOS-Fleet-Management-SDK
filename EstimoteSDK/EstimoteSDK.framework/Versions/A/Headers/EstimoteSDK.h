@@ -7,7 +7,7 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 4.12.1
+//  Version: 4.12.2
 //  Copyright (c) 2016 Estimote. All rights reserved.
 
 /**
@@ -370,6 +370,7 @@
 #import "ESTDeviceShadow.h"
 #import "ESTDeviceSettings.h"
 #import "ESTDeviceSettingsGeneral.h"
+#import "ESTDeviceSettingsAdvertiserConnectivity.h"
 #import "ESTDeviceSettingsAdvertiser.h"
 #import "ESTDeviceSettingsAdvertiserIBeacon.h"
 #import "ESTDeviceSettingsAdvertiserEddystoneUID.h"
