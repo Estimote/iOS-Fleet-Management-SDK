@@ -90,11 +90,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)updateWithGeneralSettings:(ESTDeviceSettingsGeneral *)generalSettings;
 
-/**
- *  Method for returning dictionary represantation of general settings.
- */
-- (NSDictionary *)cloudDictionary;
-
 @end
 
 NS_ASSUME_NONNULL_END

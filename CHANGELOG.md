@@ -1,3 +1,15 @@
+## 4.13.0 (January 30, 2017)
+
+Features:
+
+- Propagating firmware update over a mesh network.
+- ESTMeshManager enables sending mesh settings confirmations for meshed beacons in range.
+- Removing a device from a mesh network.
+
+Improvements:
+
+- Improved firmware update for Location Beacons.
+
 ## 4.12.2 (January 5, 2017)
 
 Fixes:

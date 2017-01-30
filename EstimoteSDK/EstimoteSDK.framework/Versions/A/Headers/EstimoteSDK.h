@@ -7,7 +7,7 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 4.12.2
+//  Version: 4.11.1
 //  Copyright (c) 2016 Estimote. All rights reserved.
 
 /**
@@ -219,19 +219,6 @@
 #import "ESTBeaconOperationEddystoneEIDPower.h"
 
 /**
- *  Generic Advertisers
- */
-#import "ESTSettingGenericAdvertiserEnable.h"
-#import "ESTSettingGenericAdvertiserPower.h"
-#import "ESTSettingGenericAdvertiserInterval.h"
-#import "ESTSettingGenericAdvertiserData.h"
-
-#import "ESTBeaconOperationGenericAdvertiserEnable.h"
-#import "ESTBeaconOperationGenericAdvertiserPower.h"
-#import "ESTBeaconOperationGenericAdvertiserInterval.h"
-#import "ESTBeaconOperationGenericAdvertiserData.h"
-
-/**
  *  GPIO Support
  */
 #import "ESTSettingsGPIO.h"
@@ -370,7 +357,6 @@
 #import "ESTDeviceShadow.h"
 #import "ESTDeviceSettings.h"
 #import "ESTDeviceSettingsGeneral.h"
-#import "ESTDeviceSettingsAdvertiserConnectivity.h"
 #import "ESTDeviceSettingsAdvertiser.h"
 #import "ESTDeviceSettingsAdvertiserIBeacon.h"
 #import "ESTDeviceSettingsAdvertiserEddystoneUID.h"
@@ -384,7 +370,6 @@
 #import "ESTDeviceIndoorLocation.h"
 #import "ESTDeviceSchedule.h"
 #import "ESTFirmwareInfoV4VO.h"
-#import "ESTMesh.h"
 
 /**
  * Telemetry support
@@ -408,12 +393,8 @@
  */
 #import "ESTStorageManager.h"
 
+
 /**
  *  Featuresets
  */
 #import "ESTFeaturesetEstimoteMonitoring.h"
-
-/**
- *  Estimote Mesh
- */
-#import "ESTMeshManager.h"
