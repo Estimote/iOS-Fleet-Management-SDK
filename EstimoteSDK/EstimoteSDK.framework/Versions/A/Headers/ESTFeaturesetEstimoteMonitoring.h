@@ -19,8 +19,6 @@ NS_ASSUME_NONNULL_BEGIN
  *  ESTFeaturesetEstimoteMonitoring encapsulates operations required for Estimote Monitoring's functionality.
  *  The algorithm relies on Estimote Location being advertised, and this helper tool ensures that 
  *  the settings are set properly.
- *
- *  It doesn't modify settings of packets other than Estimote Location.
  */
 @interface ESTFeaturesetEstimoteMonitoring : NSObject
 
@@ -59,6 +57,14 @@ NS_ASSUME_NONNULL_BEGIN
  *  contains errors resulting from failed operations.
  */
 - (void)writeEnableSettings:(BOOL)enabled withCompletion:(void (^)(NSArray<NSError*> * _Nullable errors))completion;
+
+
+/**
+ *  Settings written when executing this featureset.
+ *
+ *  @return Dictionary with setting class names as keys, setting objects as values.
+ */
++ (NSDictionary<NSString*,ESTSettingBase*> *)classNamesToSettings;
 
 @end
 

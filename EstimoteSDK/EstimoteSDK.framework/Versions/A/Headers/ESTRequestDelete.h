@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ESTRequestDelete : ESTRequestBase
 
+- (void)setParams:(id)params forRequest:(NSMutableURLRequest *)request;
+
 @end
 
 NS_ASSUME_NONNULL_END

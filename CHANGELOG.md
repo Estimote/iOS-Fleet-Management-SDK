@@ -1,3 +1,10 @@
+## 4.13.1 (February 1, 2017)
+
+Bugfixes:
+
+- Before, apps running on iOS 10 could become unresponsive when scanning for multiple packets in an environment with a big number of beacons nearby the device.
+- Readded some missing headers related to Mesh and Generic Advertisers.
+
 ## 4.13.0 (January 30, 2017)
 
 Features:

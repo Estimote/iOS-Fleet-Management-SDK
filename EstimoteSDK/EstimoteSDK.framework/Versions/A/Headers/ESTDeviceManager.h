@@ -109,7 +109,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)unregisterForTelemetryNotification:(id <ESTTelemetryNotificationProtocol>)info;
 
-
 @end
 
 NS_ASSUME_NONNULL_END
