@@ -1,3 +1,9 @@
+## 4.13.2 (February 6, 2017)
+
+Bugfixes:
+
+- Fixed Eddystone URL encoding. Previously, URLs containing ".org", ".edu", ".info", ".biz", or ".gov" substrings could be serialized incorrectly, causing e.g. Physical Web to show broken links or no links at all.
+
 ## 4.13.1 (February 1, 2017)
 
 Bugfixes:
