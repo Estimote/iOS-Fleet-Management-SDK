@@ -1514,6 +1514,38 @@ containing a device identifier and an array of <code><a href="../Classes/ESTSett
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(cs)ESTLocationBeaconBulkUpdater(py)fetchInterval"></a>
+                    <a name="//apple_ref/objc/Property/fetchInterval" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)ESTLocationBeaconBulkUpdater(py)fetchInterval">fetchInterval</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Interval for device informations fetching from Estimote Cloud.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSTimeInterval</span> <span class="n">fetchInterval</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">fetchInterval</span><span class="p">:</span> <span class="kt">TimeInterval</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(cs)ESTLocationBeaconBulkUpdater(py)status"></a>
                     <a name="//apple_ref/objc/Property/status" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)ESTLocationBeaconBulkUpdater(py)status">status</a>
@@ -1556,20 +1588,20 @@ containing a device identifier and an array of <code><a href="../Classes/ESTSett
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Array of <code><a href="../Classes/ESTLocationBeaconBulkUpdateConfiguration.html">ESTLocationBeaconBulkUpdateConfiguration</a></code> objects that were passed to bulk updater.</p>
+                        <p>Represents a list of current update configurations.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
     <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/ESTLocationBeaconBulkUpdateConfiguration.html">ESTLocationBeaconBulkUpdateConfiguration</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">updateConfigurations</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">updateConfigurations</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/ESTLocationBeaconBulkUpdateConfiguration.html">ESTLocationBeaconBulkUpdateConfiguration</a></span><span class="p">]</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">unowned(unsafe)</span> <span class="k">var</span> <span class="nv">updateConfigurations</span><span class="p">:</span> <span class="kt">NSArray</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1579,9 +1611,44 @@ containing a device identifier and an array of <code><a href="../Classes/ESTSett
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)ESTLocationBeaconBulkUpdater(im)startCloudUpdate"></a>
-                    <a name="//apple_ref/objc/Method/-startCloudUpdate" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)ESTLocationBeaconBulkUpdater(im)startCloudUpdate">-startCloudUpdate</a>
+                    <a name="/c:objc(cs)ESTLocationBeaconBulkUpdater(py)skipsFirmwareUpdateStep"></a>
+                    <a name="//apple_ref/objc/Property/skipsFirmwareUpdateStep" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)ESTLocationBeaconBulkUpdater(py)skipsFirmwareUpdateStep">skipsFirmwareUpdateStep</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Flag controlling whether a firmware update step should be skipped during the Bulk Update process.
+If YES, then the step is skipped. 
+If NO, then the step is performed as usual.
+The default value is NO.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">skipsFirmwareUpdateStep</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">skipsFirmwareUpdateStep</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)ESTLocationBeaconBulkUpdater(im)start"></a>
+                    <a name="//apple_ref/objc/Method/-start" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)ESTLocationBeaconBulkUpdater(im)start">-start</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1596,14 +1663,132 @@ containing a device identifier and an array of <code><a href="../Classes/ESTSett
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">startCloudUpdate</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">start</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">startCloudUpdate</span><span class="p">()</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">start</span><span class="p">()</span></code></pre>
 
                         </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)ESTLocationBeaconBulkUpdater(im)startWithTimeout:"></a>
+                    <a name="//apple_ref/objc/Method/-startWithTimeout:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)ESTLocationBeaconBulkUpdater(im)startWithTimeout:">-startWithTimeout:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Starts <code>ESTLocationBeaconBulkUpdater</code> with current pending settings from Estimote Cloud.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">startWithTimeout</span><span class="p">:(</span><span class="n">NSTimeInterval</span><span class="p">)</span><span class="nv">timeout</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">start</span><span class="p">(</span><span class="n">withTimeout</span> <span class="nv">timeout</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>timeout</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Bulk Updater timeout. 0 means no timeout.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)ESTLocationBeaconBulkUpdater(im)startWithTimeout:fetchInterval:"></a>
+                    <a name="//apple_ref/objc/Method/-startWithTimeout:fetchInterval:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)ESTLocationBeaconBulkUpdater(im)startWithTimeout:fetchInterval:">-startWithTimeout:fetchInterval:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Starts <code>ESTLocationBeaconBulkUpdater</code> with current pending settings from Estimote Cloud.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">startWithTimeout</span><span class="p">:(</span><span class="n">NSTimeInterval</span><span class="p">)</span><span class="nv">timeout</span>
+           <span class="nf">fetchInterval</span><span class="p">:(</span><span class="n">NSTimeInterval</span><span class="p">)</span><span class="nv">fetchInterval</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">start</span><span class="p">(</span><span class="n">withTimeout</span> <span class="nv">timeout</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">,</span> <span class="nv">fetchInterval</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>timeout</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Bulk Updater timeout. 0 means no timeout.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fetchInterval</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Bulk Updater fetch interval. 0 represents default 5 min.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -1671,9 +1856,84 @@ containing a device identifier and an array of <code><a href="../Classes/ESTSett
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)ESTLocationBeaconBulkUpdater(im)cancelUpdate"></a>
-                    <a name="//apple_ref/objc/Method/-cancelUpdate" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)ESTLocationBeaconBulkUpdater(im)cancelUpdate">-cancelUpdate</a>
+                    <a name="/c:objc(cs)ESTLocationBeaconBulkUpdater(im)startWithUpdateConfigurations:timeout:"></a>
+                    <a name="//apple_ref/objc/Method/-startWithUpdateConfigurations:timeout:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)ESTLocationBeaconBulkUpdater(im)startWithUpdateConfigurations:timeout:">-startWithUpdateConfigurations:timeout:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Starts the bulk update procedure.
+ This method will not cause anything if bulk updater is currently performing updates.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <p>status</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">startWithUpdateConfigurations</span><span class="p">:</span>
+            <span class="p">(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/ESTLocationBeaconBulkUpdateConfiguration.html">ESTLocationBeaconBulkUpdateConfiguration</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span>
+                <span class="n"><a href="../Classes/ESTLocationBeaconBulkUpdater.html#/c:objc(cs)ESTLocationBeaconBulkUpdater(py)updateConfigurations">updateConfigurations</a></span>
+                              <span class="n"><a href="../Classes/ESTLocationBeaconBulkUpdater.html#/c:objc(cs)ESTLocationBeaconBulkUpdater(py)timeout">timeout</a></span><span class="o">:</span><span class="p">(</span><span class="n">NSTimeInterval</span><span class="p">)</span><span class="n"><a href="../Classes/ESTLocationBeaconBulkUpdater.html#/c:objc(cs)ESTLocationBeaconBulkUpdater(py)timeout">timeout</a></span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">start</span><span class="p">(</span><span class="n">with</span> <span class="nv">updateConfigurations</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/ESTLocationBeaconBulkUpdateConfiguration.html">ESTLocationBeaconBulkUpdateConfiguration</a></span><span class="p">]</span><span class="o">!</span><span class="p">,</span> <span class="nv">timeout</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>updateConfigurations</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Array of <code>ESTLocationBeaconBulkUpdateConfiguration</code> objects.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>timeout</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Bulk Updater timeout. 0 means no timeout.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)ESTLocationBeaconBulkUpdater(im)cancel"></a>
+                    <a name="//apple_ref/objc/Method/-cancel" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)ESTLocationBeaconBulkUpdater(im)cancel">-cancel</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1689,12 +1949,12 @@ Note that, if update for a certain device has already started it might not be ca
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">cancelUpdate</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">cancel</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">cancelUpdate</span><span class="p">()</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">cancel</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -1799,7 +2059,7 @@ Note that, if update for a certain device has already started it might not be ca
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-03-02)</p>
+      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-03-07)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
