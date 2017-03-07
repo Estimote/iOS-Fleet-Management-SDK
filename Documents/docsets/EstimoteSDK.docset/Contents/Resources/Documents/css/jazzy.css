@@ -109,10 +109,11 @@ pre code {
       flex-direction: row; } }
 
 .header {
+  background: transparent url("http://estimote.com/api/images/nav.png") no-repeat top right;
+  height: 145px;
   display: flex;
   padding: 8px;
   font-size: 0.875em;
-  background: #444;
   color: #999; }
 
 .header-col {
@@ -120,10 +121,16 @@ pre code {
   padding: 0 8px; }
 
 .header-col--primary {
+  background: url("http://estimote.com/api/images/branding.png") no-repeat;
+  margin-left: 30px;
   flex: 1; }
 
+.header-col--secondary {
+  margin-top: 100px; }
+
 .header-link {
-  color: #fff; }
+  color: #fff;
+  font-size: 0em; }
 
 .header-icon {
   padding-right: 6px;
@@ -134,7 +141,8 @@ pre code {
   font-size: 0.875em;
   padding: 8px 16px;
   margin: 0;
-  background: #fbfbfb;
+  color: #333132;
+  background: #6bbce8;
   border-bottom: 1px solid #ddd; }
 
 .carat {
@@ -314,8 +322,8 @@ pre code {
 
 .footer {
   padding: 8px 16px;
-  background: #444;
-  color: #ddd;
+  background: #759279;
+  color: #fff;
   font-size: 0.8em; }
   .footer p {
     margin: 8px 0; }
@@ -332,8 +340,9 @@ form[role=search] input {
   font-size: 14px;
   line-height: 24px;
   padding: 0 10px;
-  margin: 0;
-  border: none;
+  margin-top: 100px;
+  border-color: #111;
+  border-width: 1px;
   border-radius: 1em; }
   .loading form[role=search] input {
     background: white url(../img/spinner.gif) center right 4px no-repeat; }

@@ -1,64 +1,21 @@
-## 4.13.2 (February 6, 2017)
+## 4.14.0 (March 7, 2017)
+
+Features:
+- Bulk Updater now updates firmware of Location Beacons with Automatic Firmware Update enabled.
+
+Improvements:
+- Improved stability of settings management.
+- Improved Bulk Updater performance for big Deployments.
+- Improved Bulk Updater reliability in background mode.
 
 Bugfixes:
-
-- Fixed Eddystone URL encoding. Previously, URLs containing ".org", ".edu", ".info", ".biz", or ".gov" substrings could be serialized incorrectly, causing e.g. Physical Web to show broken links or no links at all.
-
+- Fixed issue when changes to a devices's name were not applied.
+ 
 ## 4.13.1 (February 1, 2017)
 
 Bugfixes:
 
 - Before, apps running on iOS 10 could become unresponsive when scanning for multiple packets in an environment with a big number of beacons nearby the device.
-- Readded some missing headers related to Mesh and Generic Advertisers.
-
-## 4.13.0 (January 30, 2017)
-
-Features:
-
-- Propagating firmware update over a mesh network.
-- ESTMeshManager enables sending mesh settings confirmations for meshed beacons in range.
-- Removing a device from a mesh network.
-
-Improvements:
-
-- Improved firmware update for Location Beacons.
-
-## 4.12.2 (January 5, 2017)
-
-Fixes:
-
-- Added missing `ESTDeviceSettingsAdvertiserConnectivity` class.
-
-## 4.12.1 (December 20, 2016)
-
-Features:
-
-- introduced ESTMeshManager for creating Mesh networks (both types: cluster and standard) and fetching network's details from Cloud,
-- created ESTMesh class to handle adding Location Beacons to Mesh network.
-
-## 4.11.3 (December 13, 2016)
-
-Fixes:
-
-- Incorrect value occasionally returned for larger settings
-- Name and GPS Location settings fixed for multiple invocations in the row
-- Disabled Automatic Firmware update for Location Beacons Bulk Updater
-
-## 4.11.2 (November 3, 2016)
-
-Features:
-
-- `ESTFeaturesetEstimoteMonitoring` - one class to read or write multiple beacon settings required by Estimote Monitoring.
-
-Bugfixes:
-
-- Fixed Estimote Monitoring issue where events could stop being reported when entering the beacon's range after long period of being outside the beacon's range.       
-
-## 4.11.1 (October 25, 2016)
-
-Improvements:
-
-- Previously, Estimote Monitoring events could ring in some situations (enter-exit-enter-exit). This version diminishes the exit event ringing effect. 
 
 ## 4.11.0 (October 11, 2016)
 

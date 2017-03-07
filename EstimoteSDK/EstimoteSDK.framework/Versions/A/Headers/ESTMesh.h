@@ -70,7 +70,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  List of devices that Mesh consists of. Each device has already applied Mesh network's settings.
  */
-@property (nonatomic, strong, readwrite) NSArray <ESTDeviceLocationBeacon *> *devices;
+@property (nonatomic, strong, readwrite) NSArray <NSString *> *devices;
 
 /**
  *  Mesh network's settings shared among all devices included in the Mesh.

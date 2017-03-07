@@ -73,6 +73,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) NSNumber *motionOnlyDelay;
 
 /**
+ *  Indicates if Automatic Firmware Update is enabled.
+ */
+@property (nonatomic, strong, readonly) NSNumber *automaticFirmwareUpdateEnabled;
+
+/**
  *  Designated initializer.
  *
  *  @param dictionary Dictionary provided by the Estimote cloud.

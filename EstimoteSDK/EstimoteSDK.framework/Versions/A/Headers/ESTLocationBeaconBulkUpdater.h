@@ -59,26 +59,32 @@ typedef NS_ENUM(NSInteger, ESTBulkUpdaterDeviceUpdateStatus)
      *  Not able to determine current update status.
      */
     ESTBulkUpdaterDeviceUpdateStatusUnknown,
+    
     /**
      *  Device not detected yet. Scanning in progress.
      */
     ESTBulkUpdaterDeviceUpdateStatusScanning,
+    
     /**
      *  Device detected. Waiting to connect and update settings.
      */
     ESTBulkUpdaterDeviceUpdateStatusPendingUpdate,
+    
     /**
      *  Device is beeing connected to and updated.
      */
     ESTBulkUpdaterDeviceUpdateStatusUpdating,
+    
     /**
      *  Device update succeeded.
      */
     ESTBulkUpdaterDeviceUpdateStatusSucceeded,
+    
     /**
      *  Device update failed.
      */
     ESTBulkUpdaterDeviceUpdateStatusFailed,
+    
     /**
      *  Device out of scanning range.
      */
@@ -153,19 +159,50 @@ typedef NS_ENUM(NSInteger, ESTBulkUpdaterDeviceUpdateStatus)
 @property (nonatomic, assign, readonly) NSTimeInterval timeout;
 
 /**
+ *  Interval for device informations fetching from Estimote Cloud.
+ */
+@property (nonatomic, assign, readonly) NSTimeInterval fetchInterval;
+
+/**
  *  Informs about the current status of bulk updater.
  */
 @property (nonatomic, assign, readonly) ESTBulkUpdaterStatus status;
 
 /**
- *  Array of `ESTLocationBeaconBulkUpdateConfiguration` objects that were passed to bulk updater.
+ *  Represents a list of current update configurations.
  */
-@property (nonatomic, strong, readonly) NSArray <ESTLocationBeaconBulkUpdateConfiguration *> *updateConfigurations;
+@property (nonatomic, assign, readonly) NSArray<ESTLocationBeaconBulkUpdateConfiguration *> *updateConfigurations;
+
+/**
+ *  Flag controlling whether a firmware update step should be skipped during the Bulk Update process.
+ *  If YES, then the step is skipped. 
+ *  If NO, then the step is performed as usual.
+ *  The default value is NO.
+ */
+@property (nonatomic, readwrite) BOOL skipsFirmwareUpdateStep;
 
 /**
  *  Starts `ESTLocationBeaconBulkUpdater` with current pending settings from Estimote Cloud.
  */
-- (void)startCloudUpdate;
+- (void)start;
+
+/**
+ *  Starts `ESTLocationBeaconBulkUpdater` with current pending settings from Estimote Cloud.
+ *
+ * @param timeout Bulk Updater timeout. 0 means no timeout.
+ *
+ */
+- (void)startWithTimeout:(NSTimeInterval)timeout;
+
+/**
+ *  Starts `ESTLocationBeaconBulkUpdater` with current pending settings from Estimote Cloud.
+ *
+ * @param timeout Bulk Updater timeout. 0 means no timeout.
+ * @param fetchInterval Bulk Updater fetch interval. 0 represents default 5 min.
+ *
+ */
+- (void)startWithTimeout:(NSTimeInterval)timeout
+           fetchInterval:(NSTimeInterval)fetchInterval;
 
 /**
  * Starts the bulk update procedure.
@@ -178,10 +215,23 @@ typedef NS_ENUM(NSInteger, ESTBulkUpdaterDeviceUpdateStatus)
 - (void)startWithUpdateConfigurations:(NSArray <ESTLocationBeaconBulkUpdateConfiguration *> *)updateConfigurations;
 
 /**
+ * Starts the bulk update procedure.
+ * This method will not cause anything if bulk updater is currently performing updates.
+ *
+ * @see status
+ *
+ * @param updateConfigurations Array of `ESTLocationBeaconBulkUpdateConfiguration` objects.
+ * @param timeout Bulk Updater timeout. 0 means no timeout.
+ *
+ */
+- (void)startWithUpdateConfigurations:(NSArray <ESTLocationBeaconBulkUpdateConfiguration *> *)updateConfigurations
+                              timeout:(NSTimeInterval)timeout;
+
+/**
  * Cancels the bulk update procedure.
  * Note that, if update for a certain device has already started it might not be canceled.
  */
-- (void)cancelUpdate;
+- (void)cancel;
 
 /**
  * Informs about the update status for a given device identifier.

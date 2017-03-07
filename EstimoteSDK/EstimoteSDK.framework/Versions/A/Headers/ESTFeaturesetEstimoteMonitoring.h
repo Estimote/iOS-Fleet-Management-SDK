@@ -40,7 +40,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  whether Estimote Monitoring prerequisites are met, <code>errors</code> is nil.
  *
  *  If any of underlying operation fails, <code>completion</code>'s <code>featuresetEnabled</code> 
- *  is set to <code>NO</code>, and <code>errors</code> array errors resulting from failed operations.
+ *  is set to <code>NO</code>, and <code>errors</code> array contains errors resulting from failed operations.
  */
 - (void)readSettingsWithCompletion:(void (^)(BOOL featuresetEnabled, NSArray<NSError*> * _Nullable errors))completion;
 

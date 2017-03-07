@@ -43,6 +43,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSDate *createdAt;
 
 /**
+ *  Date when the device was last detected.
+ */
+@property (nonatomic, strong) NSDate *lastDetectedAt;
+
+/**
  *  Method allows to initialize ESTLocationBeaconBulkUpdateConfiguration object.
  *
  *  @param deviceIdentifier        Identifier of the device.
