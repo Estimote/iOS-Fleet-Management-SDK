@@ -526,6 +526,9 @@
                 <a class="nav-group-task-link" href="Classes/ESTRequestV2GetDevices.html">ESTRequestV2GetDevices</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes.html#/c:objc(cs)ESTRequestV3GetFirmwares">ESTRequestV3GetFirmwares</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/ESTRule.html">ESTRule</a>
               </li>
               <li class="nav-group-task">
@@ -1114,6 +1117,9 @@
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums.html#/c:@E@ESTSettingStorageType">ESTSettingStorageType</a>
               </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/EStrequestV3GetFirmwresError.html">EStrequestV3GetFirmwresError</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -1254,7 +1260,7 @@
                 <a class="nav-group-task-link" href="Type Definitions.html#/c:ESTSettingEddystoneTLMInterval.h@T@ESTSettingEddystoneTLMIntervalCompletionBlock">ESTSettingEddystoneTLMIntervalCompletionBlock</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Type Definitions.html#/c:ESTSettingEddystoneTLMpower.h@T@ESTSettingEddystoneTLMPowerCompletionBlock">ESTSettingEddystoneTLMPowerCompletionBlock</a>
+                <a class="nav-group-task-link" href="Type Definitions.html#/c:ESTSettingEddystoneTLMPower.h@T@ESTSettingEddystoneTLMPowerCompletionBlock">ESTSettingEddystoneTLMPowerCompletionBlock</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Type Definitions.html#/c:ESTSettingEddystoneUIDEnable.h@T@ESTSettingEddystoneUIDEnableCompletionBlock">ESTSettingEddystoneUIDEnableCompletionBlock</a>
@@ -4023,7 +4029,8 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTCloudManager</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTCloudManager</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -7487,6 +7494,42 @@ List includes both settings and firmware update.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">class</span> <span class="kt">ESTRequestV2GetDevices</span> <span class="p">:</span> <span class="kt">ESTRequestGetJSON</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)ESTRequestV3GetFirmwares"></a>
+                    <a name="//apple_ref/objc/Class/ESTRequestV3GetFirmwares" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)ESTRequestV3GetFirmwares">ESTRequestV3GetFirmwares</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Request responsible for fetching dictionary of newest firmwares for each hardware revision.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTRequestV3GetFirmwares</span> <span class="p">:</span> <span class="nc">ESTRequestGetJSON</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">ESTRequestV3GetFirmwares</span> <span class="p">:</span> <span class="kt">ESTRequestGetJSON</span></code></pre>
 
                         </div>
                       </div>
@@ -11827,7 +11870,7 @@ allows to discover CoreBluetooth based representation of Estimote Beacon devices
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-03-07)</p>
+      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-04-12)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

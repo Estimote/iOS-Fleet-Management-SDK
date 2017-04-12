@@ -1,3 +1,12 @@
+## 4.14.1 (April 11, 2017)
+
+Improvements:
+
+- added convenience methods to ESTLocationBulkUpdater for calculating failed and successful updates
+
+Bugfixes:
+
+- added advertiser’s settings for Mesh and UWB to ESTDeviceSettings
 ## 4.14.0 (March 7, 2017)
 
 Features:

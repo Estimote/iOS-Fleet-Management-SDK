@@ -527,6 +527,9 @@
                 <a class="nav-group-task-link" href="../Classes/ESTRequestV2GetDevices.html">ESTRequestV2GetDevices</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes.html#/c:objc(cs)ESTRequestV3GetFirmwares">ESTRequestV3GetFirmwares</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ESTRule.html">ESTRule</a>
               </li>
               <li class="nav-group-task">
@@ -1115,6 +1118,9 @@
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums.html#/c:@E@ESTSettingStorageType">ESTSettingStorageType</a>
               </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/EStrequestV3GetFirmwresError.html">EStrequestV3GetFirmwresError</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -1255,7 +1261,7 @@
                 <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTSettingEddystoneTLMInterval.h@T@ESTSettingEddystoneTLMIntervalCompletionBlock">ESTSettingEddystoneTLMIntervalCompletionBlock</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTSettingEddystoneTLMpower.h@T@ESTSettingEddystoneTLMPowerCompletionBlock">ESTSettingEddystoneTLMPowerCompletionBlock</a>
+                <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTSettingEddystoneTLMPower.h@T@ESTSettingEddystoneTLMPowerCompletionBlock">ESTSettingEddystoneTLMPowerCompletionBlock</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTSettingEddystoneUIDEnable.h@T@ESTSettingEddystoneUIDEnableCompletionBlock">ESTSettingEddystoneUIDEnableCompletionBlock</a>
@@ -1465,12 +1471,12 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">readOperationWithCompletion</span><span class="p">:</span>
-    <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type Definitions.html#/c:ESTSettingEddystoneTLMpower.h@T@ESTSettingEddystoneTLMPowerCompletionBlock">ESTSettingEddystoneTLMPowerCompletionBlock</a></span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span></code></pre>
+    <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type Definitions.html#/c:ESTSettingEddystoneTLMPower.h@T@ESTSettingEddystoneTLMPowerCompletionBlock">ESTSettingEddystoneTLMPowerCompletionBlock</a></span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">readOperation</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Type Definitions.html#/c:ESTSettingEddystoneTLMpower.h@T@ESTSettingEddystoneTLMPowerCompletionBlock">ESTSettingEddystoneTLMPowerCompletionBlock</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">readOperation</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Type Definitions.html#/c:ESTSettingEddystoneTLMPower.h@T@ESTSettingEddystoneTLMPowerCompletionBlock">ESTSettingEddystoneTLMPowerCompletionBlock</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1524,13 +1530,13 @@
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span>
 <span class="nf">writeOperationWithSetting</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/ESTSettingEddystoneTLMPower.html">ESTSettingEddystoneTLMPower</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">setting</span>
-               <span class="nf">completion</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type Definitions.html#/c:ESTSettingEddystoneTLMpower.h@T@ESTSettingEddystoneTLMPowerCompletionBlock">ESTSettingEddystoneTLMPowerCompletionBlock</a></span><span class="p">)</span>
+               <span class="nf">completion</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type Definitions.html#/c:ESTSettingEddystoneTLMPower.h@T@ESTSettingEddystoneTLMPowerCompletionBlock">ESTSettingEddystoneTLMPowerCompletionBlock</a></span><span class="p">)</span>
                               <span class="n">completion</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">writeOperation</span><span class="p">(</span><span class="n">withSetting</span> <span class="nv">setting</span><span class="p">:</span> <span class="kt"><a href="../Classes/ESTSettingEddystoneTLMPower.html">ESTSettingEddystoneTLMPower</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Type Definitions.html#/c:ESTSettingEddystoneTLMpower.h@T@ESTSettingEddystoneTLMPowerCompletionBlock">ESTSettingEddystoneTLMPowerCompletionBlock</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">writeOperation</span><span class="p">(</span><span class="n">withSetting</span> <span class="nv">setting</span><span class="p">:</span> <span class="kt"><a href="../Classes/ESTSettingEddystoneTLMPower.html">ESTSettingEddystoneTLMPower</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Type Definitions.html#/c:ESTSettingEddystoneTLMPower.h@T@ESTSettingEddystoneTLMPowerCompletionBlock">ESTSettingEddystoneTLMPowerCompletionBlock</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1583,7 +1589,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-03-07)</p>
+      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-04-12)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
