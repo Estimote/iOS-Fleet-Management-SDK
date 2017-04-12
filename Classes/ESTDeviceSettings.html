@@ -527,6 +527,9 @@
                 <a class="nav-group-task-link" href="../Classes/ESTRequestV2GetDevices.html">ESTRequestV2GetDevices</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes.html#/c:objc(cs)ESTRequestV3GetFirmwares">ESTRequestV3GetFirmwares</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ESTRule.html">ESTRule</a>
               </li>
               <li class="nav-group-task">
@@ -1115,6 +1118,9 @@
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums.html#/c:@E@ESTSettingStorageType">ESTSettingStorageType</a>
               </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/EStrequestV3GetFirmwresError.html">EStrequestV3GetFirmwresError</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -1255,7 +1261,7 @@
                 <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTSettingEddystoneTLMInterval.h@T@ESTSettingEddystoneTLMIntervalCompletionBlock">ESTSettingEddystoneTLMIntervalCompletionBlock</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTSettingEddystoneTLMpower.h@T@ESTSettingEddystoneTLMPowerCompletionBlock">ESTSettingEddystoneTLMPowerCompletionBlock</a>
+                <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTSettingEddystoneTLMPower.h@T@ESTSettingEddystoneTLMPowerCompletionBlock">ESTSettingEddystoneTLMPowerCompletionBlock</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTSettingEddystoneUIDEnable.h@T@ESTSettingEddystoneUIDEnableCompletionBlock">ESTSettingEddystoneUIDEnableCompletionBlock</a>
@@ -1744,6 +1750,72 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(cs)ESTDeviceSettings(py)uwb"></a>
+                    <a name="//apple_ref/objc/Property/uwb" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)ESTDeviceSettings(py)uwb">uwb</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Advertiser settings for UWB packets.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">ESTDeviceSettingsAdvertiserUWB</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">uwb</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">uwb</span><span class="p">:</span> <span class="p">[</span><span class="kt">ESTDeviceSettingsAdvertiserUWB</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)ESTDeviceSettings(py)mesh"></a>
+                    <a name="//apple_ref/objc/Property/mesh" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)ESTDeviceSettings(py)mesh">mesh</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Advertiser settings for Mesh packets.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">ESTDeviceSettingsAdvertiserMesh</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">mesh</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">mesh</span><span class="p">:</span> <span class="p">[</span><span class="kt">ESTDeviceSettingsAdvertiserMesh</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(cs)ESTDeviceSettings(im)initWithCloudDictionary:"></a>
                     <a name="//apple_ref/objc/Method/-initWithCloudDictionary:" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)ESTDeviceSettings(im)initWithCloudDictionary:">-initWithCloudDictionary:</a>
@@ -1893,7 +1965,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-03-07)</p>
+      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-04-12)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
