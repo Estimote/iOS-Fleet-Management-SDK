@@ -7,6 +7,7 @@ Improvements:
 Bugfixes:
 
 - added advertiser’s settings for Mesh and UWB to ESTDeviceSettings
+
 ## 4.14.0 (March 7, 2017)
 
 Features:
