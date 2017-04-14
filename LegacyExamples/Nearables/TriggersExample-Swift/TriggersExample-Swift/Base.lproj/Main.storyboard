@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RK1-19-dNv">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="8Qp-D0-cXM">
+            <objects>
+                <viewController id="RK1-19-dNv" customClass="ViewController" customModule="TriggersExample_Swift" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="95h-zC-EDi"/>
+                        <viewControllerLayoutGuide type="bottom" id="RWe-vR-Hz6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="j7u-G6-kC2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6zi-sh-Lv3">
+                                <rect key="frame" x="263" y="219" width="60" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="HVy-nq-ELQ"/>
+                                    <constraint firstAttribute="width" constant="60" id="u2E-io-l2I"/>
+                                </constraints>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XdS-W3-a7F">
+                                <rect key="frame" x="374" y="219" width="60" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="3Rg-0A-TIc"/>
+                                    <constraint firstAttribute="width" constant="60" id="5fh-w1-ORW"/>
+                                </constraints>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Between" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MwL-gM-VxK">
+                                <rect key="frame" x="167" y="289" width="88" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="and" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KEg-P1-Tte">
+                                <rect key="frame" x="331" y="289" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remind me not to forget my bag" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HD0-Jd-O2B">
+                                <rect key="frame" x="147" y="394" width="249" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KzV-gs-wjt">
+                                <rect key="frame" x="404" y="389" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="What time do you leave for work?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ud3-Jf-13j">
+                                <rect key="frame" x="16" y="167" width="568" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KEg-P1-Tte" firstAttribute="leading" secondItem="6zi-sh-Lv3" secondAttribute="trailing" constant="8" id="2Pn-I5-a6S"/>
+                            <constraint firstItem="HD0-Jd-O2B" firstAttribute="top" secondItem="XdS-W3-a7F" secondAttribute="bottom" constant="13" id="AWB-ea-dH4"/>
+                            <constraint firstAttribute="centerX" secondItem="Ud3-Jf-13j" secondAttribute="centerX" id="G4F-zh-b0A"/>
+                            <constraint firstItem="XdS-W3-a7F" firstAttribute="top" secondItem="Ud3-Jf-13j" secondAttribute="bottom" constant="18" id="Gi7-kB-REQ"/>
+                            <constraint firstAttribute="centerY" secondItem="KEg-P1-Tte" secondAttribute="centerY" id="Ioh-q1-Or0"/>
+                            <constraint firstItem="XdS-W3-a7F" firstAttribute="leading" secondItem="KEg-P1-Tte" secondAttribute="trailing" constant="8" id="LY9-8j-9Pq"/>
+                            <constraint firstAttribute="centerX" secondItem="KEg-P1-Tte" secondAttribute="centerX" constant="-48.5" id="R4m-B2-LWx"/>
+                            <constraint firstAttribute="centerY" secondItem="MwL-gM-VxK" secondAttribute="centerY" id="RA8-bH-Y19"/>
+                            <constraint firstAttribute="centerY" secondItem="KzV-gs-wjt" secondAttribute="centerY" constant="-104.5" id="Rzr-eV-KG5"/>
+                            <constraint firstAttribute="centerY" secondItem="6zi-sh-Lv3" secondAttribute="centerY" id="X4L-Y6-e6p"/>
+                            <constraint firstAttribute="centerY" secondItem="XdS-W3-a7F" secondAttribute="centerY" id="jLT-4b-0P1"/>
+                            <constraint firstItem="KzV-gs-wjt" firstAttribute="leading" secondItem="HD0-Jd-O2B" secondAttribute="trailing" constant="8" id="sfA-58-zaA"/>
+                            <constraint firstItem="6zi-sh-Lv3" firstAttribute="leading" secondItem="MwL-gM-VxK" secondAttribute="trailing" constant="8" id="xwU-El-4Kf"/>
+                            <constraint firstAttribute="centerX" secondItem="HD0-Jd-O2B" secondAttribute="centerX" constant="28.5" id="yZP-hV-OYw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="firstHourPicker" destination="6zi-sh-Lv3" id="JdC-Mc-oH2"/>
+                        <outlet property="reminderSwitch" destination="KzV-gs-wjt" id="Yoo-wV-2Y6"/>
+                        <outlet property="secondHourPicker" destination="XdS-W3-a7F" id="fjx-ec-siQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TwF-ID-hQN" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="334" y="362"/>
+        </scene>
+    </scenes>
+</document>
