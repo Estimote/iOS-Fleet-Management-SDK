@@ -7,7 +7,7 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 4.14.1
+//  Version: 4.15.0
 //  Copyright (c) 2016 Estimote. All rights reserved.
 
 /**
@@ -99,6 +99,7 @@
 #import "ESTSettingDeviceInfoIndoorLocationIdentifier.h"
 #import "ESTSettingDeviceInfoIndoorLocationName.h"
 #import "ESTSettingDeviceInfoUptime.h"
+#import "ESTSettingDeviceInfoDevelopmentMode.h"
 
 #import "ESTCloudOperationDeviceInfoFirmwareVersion.h"
 #import "ESTBeaconOperationDeviceInfoApplicationVersion.h"
@@ -111,6 +112,7 @@
 #import "ESTCloudOperationDeviceInfoColor.h"
 #import "ESTCloudOperationDeviceInfoIndoorLocationIdentifier.h"
 #import "ESTBeaconOperationDeviceInfoUptime.h"
+#import "ESTCloudOperationDeviceInfoDevelopmentMode.h"
 
 /**
  *  Settings iBeacon Packet
@@ -417,6 +419,7 @@
  *  Featuresets
  */
 #import "ESTFeaturesetEstimoteMonitoring.h"
+#import "ESTFeaturesetBackgroundMode.h"
 
 /**
  *  Estimote Mesh

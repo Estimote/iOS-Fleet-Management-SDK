@@ -21,6 +21,7 @@
 @class ESTSettingDeviceInfoName;
 @class ESTSettingDeviceInfoIndoorLocationIdentifier;
 @class ESTSettingDeviceInfoIndoorLocationName;
+@class ESTSettingDeviceInfoDevelopmentMode;
 @class ESTSettingDeviceInfoUptime;
 
 NS_ASSUME_NONNULL_BEGIN
@@ -70,6 +71,11 @@ NS_ASSUME_NONNULL_BEGIN
  *  Device name setting.
  */
 @property (nonatomic, strong, readonly) ESTSettingDeviceInfoName *name;
+
+/**
+ *  Development mode setting.
+ */
+@property (nonatomic, strong, readonly) ESTSettingDeviceInfoDevelopmentMode *developmentMode;
 
 /**
  *  Indoor Location identifer, that this device is assigned to.

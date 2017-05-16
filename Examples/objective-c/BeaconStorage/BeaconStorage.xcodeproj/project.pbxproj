@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		95B911081ECB3B6B008B5052 /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95B911071ECB3B6B008B5052 /* EstimoteSDK.framework */; };
 		ECCBDC891DC0EAAA00556B72 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ECCBDC881DC0EAAA00556B72 /* main.m */; };
 		ECCBDC8C1DC0EAAA00556B72 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ECCBDC8B1DC0EAAA00556B72 /* AppDelegate.m */; };
 		ECCBDC921DC0EAAA00556B72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECCBDC901DC0EAAA00556B72 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		95B911071ECB3B6B008B5052 /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EstimoteSDK.framework; path = ../../../EstimoteSDK/EstimoteSDK.framework; sourceTree = "<group>"; };
 		ECCBDC841DC0EAAA00556B72 /* BeaconStorage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeaconStorage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECCBDC881DC0EAAA00556B72 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ECCBDC8A1DC0EAAA00556B72 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -42,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95B911081ECB3B6B008B5052 /* EstimoteSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +101,7 @@
 		ECCBDCAA1DC0F40200556B72 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				95B911071ECB3B6B008B5052 /* EstimoteSDK.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -300,6 +304,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/../../../EstimoteSDK",
 				);
 				INFOPLIST_FILE = BeaconStorage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -316,6 +321,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/../../../EstimoteSDK",
 				);
 				INFOPLIST_FILE = BeaconStorage/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

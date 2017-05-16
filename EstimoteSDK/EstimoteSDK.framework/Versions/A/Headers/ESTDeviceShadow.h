@@ -36,6 +36,12 @@
 @property (nonatomic, strong, readonly) NSArray<NSString *> *tags;
 
 /**
+ *  Development mode enables anyone to connect and configure 
+ *  devices without ownership verification.
+ */
+@property (nonatomic, strong, readonly) NSNumber *developmentMode;
+
+/**
  *  Physical location of the device.
  */
 @property (nonatomic, strong, readonly) ESTDeviceGeoLocation *geoLocation;
