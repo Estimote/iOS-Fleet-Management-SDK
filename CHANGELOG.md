@@ -1,3 +1,16 @@
+## 4.15.0 (May 15, 2017)
+
+Improvements:
+
+- Estimote background mode support. Enabling this mode allows to improve experience of using Estimote Indoor Location engine in the background.
+- Development mode support. When development mode is enabled anyone can connect and configure beacon’s settings. Configuration process stays secure using authorisation mechanism. Applied changes are reflected in the Estimote Cloud Dashboard.
+- Improvement of secure beacon manager monitoring. With these changes enter/exit events are delivered in more reliable way.
+
+Bugfixes:
+
+- Fixed monitoring of nearables when ESTNearableTypeAll type is used. Before no events were generated.
+- Fixed size of framework file. The size was tripled due to incorrectly generated symlinks.
+
 ## 4.14.1 (April 11, 2017)
 
 Improvements:
