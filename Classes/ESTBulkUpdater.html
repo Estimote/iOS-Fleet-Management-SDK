@@ -260,6 +260,9 @@
                 <a class="nav-group-task-link" href="../Classes/ESTCloudOperationDeviceInfoColor.html">ESTCloudOperationDeviceInfoColor</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ESTCloudOperationDeviceInfoDevelopmentMode.html">ESTCloudOperationDeviceInfoDevelopmentMode</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ESTCloudOperationDeviceInfoFirmwareVersion.html">ESTCloudOperationDeviceInfoFirmwareVersion</a>
               </li>
               <li class="nav-group-task">
@@ -347,6 +350,9 @@
                 <a class="nav-group-task-link" href="../Classes.html#/c:objc(cs)ESTDeviceSettingsAdvertiserEstimoteTLM">ESTDeviceSettingsAdvertiserEstimoteTLM</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes.html#/c:objc(cs)ESTDeviceSettingsAdvertiserGeneric">ESTDeviceSettingsAdvertiserGeneric</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ESTDeviceSettingsAdvertiserIBeacon.html">ESTDeviceSettingsAdvertiserIBeacon</a>
               </li>
               <li class="nav-group-task">
@@ -399,6 +405,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ESTEddystoneURL.html">ESTEddystoneURL</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ESTFeaturesetBackgroundMode.html">ESTFeaturesetBackgroundMode</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ESTFeaturesetEstimoteMonitoring.html">ESTFeaturesetEstimoteMonitoring</a>
@@ -549,6 +558,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ESTSettingDeviceInfoColor.html">ESTSettingDeviceInfoColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ESTSettingDeviceInfoDevelopmentMode.html">ESTSettingDeviceInfoDevelopmentMode</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ESTSettingDeviceInfoFirmwareVersion.html">ESTSettingDeviceInfoFirmwareVersion</a>
@@ -1216,6 +1228,9 @@
                 <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTSettingDeviceInfoColor.h@T@ESTSettingDeviceInfoColorCompletionBlock">ESTSettingDeviceInfoColorCompletionBlock</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTSettingDeviceInfoDevelopmentMode.h@T@ESTSettingDeviceInfoDevelopmentModeCompletionBlock">ESTSettingDeviceInfoDevelopmentModeCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTSettingDeviceInfoFirmwareVersion.h@T@ESTSettingDeviceInfoFirmwareVersionCompletionBlock">ESTSettingDeviceInfoFirmwareVersionCompletionBlock</a>
               </li>
               <li class="nav-group-task">
@@ -1585,7 +1600,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>Returns singleton instance of bulk updater.</p>
-
                       </div>
                     </section>
                   </div>
@@ -1633,7 +1647,6 @@
                               <td>
                                 <div>
                                   <p>userInfo field comming from application:didReceiveRemoteNotification:fetchCompletionHandler:</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1643,7 +1656,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>result of verification</p>
-
                       </div>
                     </section>
                   </div>
@@ -1690,7 +1702,6 @@
                               <td>
                                 <div>
                                   <p>Timeout for bulk update operation in seconds. 0 means no timeout.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1742,13 +1753,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Array with `
-&lt;ESBeaconUpdateInfo</p>
-
-<blockquote>
-<p>` objects, defining updates for beacons.</p>
-</blockquote>
-
+                                  <p>Array with <code>&lt;ESBeaconUpdateInfo&gt;</code> objects, defining updates for beacons.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1761,7 +1766,6 @@
                               <td>
                                 <div>
                                   <p>Timeout for bulk update operation in seconds. 0 means no timeout.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1814,7 +1818,6 @@
                               <td>
                                 <div>
                                   <p>Mac Address of device to verify</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1824,7 +1827,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>BOOL value indicating if beacon is waiting for update</p>
-
                       </div>
                     </section>
                   </div>
@@ -1871,7 +1873,6 @@
                               <td>
                                 <div>
                                   <p>Mac Address of device to verify</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1881,7 +1882,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>BOOL value indicating if beacon is waiting for update</p>
-
                       </div>
                     </section>
                   </div>
@@ -1929,7 +1929,6 @@
                               <td>
                                 <div>
                                   <p>Mac Address of device to get beacon infos for</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1939,7 +1938,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>NSArray containing all related beacon infos</p>
-
                       </div>
                     </section>
                   </div>
@@ -2016,8 +2014,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-04-12)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-06-05)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

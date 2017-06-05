@@ -259,6 +259,9 @@
                 <a class="nav-group-task-link" href="Classes/ESTCloudOperationDeviceInfoColor.html">ESTCloudOperationDeviceInfoColor</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/ESTCloudOperationDeviceInfoDevelopmentMode.html">ESTCloudOperationDeviceInfoDevelopmentMode</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/ESTCloudOperationDeviceInfoFirmwareVersion.html">ESTCloudOperationDeviceInfoFirmwareVersion</a>
               </li>
               <li class="nav-group-task">
@@ -346,6 +349,9 @@
                 <a class="nav-group-task-link" href="Classes.html#/c:objc(cs)ESTDeviceSettingsAdvertiserEstimoteTLM">ESTDeviceSettingsAdvertiserEstimoteTLM</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes.html#/c:objc(cs)ESTDeviceSettingsAdvertiserGeneric">ESTDeviceSettingsAdvertiserGeneric</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/ESTDeviceSettingsAdvertiserIBeacon.html">ESTDeviceSettingsAdvertiserIBeacon</a>
               </li>
               <li class="nav-group-task">
@@ -398,6 +404,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/ESTEddystoneURL.html">ESTEddystoneURL</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/ESTFeaturesetBackgroundMode.html">ESTFeaturesetBackgroundMode</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/ESTFeaturesetEstimoteMonitoring.html">ESTFeaturesetEstimoteMonitoring</a>
@@ -548,6 +557,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/ESTSettingDeviceInfoColor.html">ESTSettingDeviceInfoColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/ESTSettingDeviceInfoDevelopmentMode.html">ESTSettingDeviceInfoDevelopmentMode</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/ESTSettingDeviceInfoFirmwareVersion.html">ESTSettingDeviceInfoFirmwareVersion</a>
@@ -1215,6 +1227,9 @@
                 <a class="nav-group-task-link" href="Type Definitions.html#/c:ESTSettingDeviceInfoColor.h@T@ESTSettingDeviceInfoColorCompletionBlock">ESTSettingDeviceInfoColorCompletionBlock</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Type Definitions.html#/c:ESTSettingDeviceInfoDevelopmentMode.h@T@ESTSettingDeviceInfoDevelopmentModeCompletionBlock">ESTSettingDeviceInfoDevelopmentModeCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Type Definitions.html#/c:ESTSettingDeviceInfoFirmwareVersion.h@T@ESTSettingDeviceInfoFirmwareVersionCompletionBlock">ESTSettingDeviceInfoFirmwareVersionCompletionBlock</a>
               </li>
               <li class="nav-group-task">
@@ -1456,8 +1471,12 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>ESTAnalyticsManager class is responsible for registering analytics requests and events, triggered by ranging and monitoring <code>CLBeaconRegion</code>.
-Manager sends to Estimote Cloud up to 100 registered analytics events every 20 seconds.
-- warning: <em>Important:</em> works only with iBeacon devices returned by <code>ESTBeaconManager</code> and `ESTSecureBeaconManager.</p>
+Manager sends to Estimote Cloud up to 100 registered analytics events every 20 seconds.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <em>Important:</em> works only with iBeacon devices returned by <code>ESTBeaconManager</code> and `ESTSecureBeaconManager.
+
+</div>
 
                         <a href="Classes/ESTAnalyticsManager.html" class="slightly-smaller">See more</a>
                       </div>
@@ -4088,6 +4107,45 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(cs)ESTCloudOperationDeviceInfoDevelopmentMode"></a>
+                    <a name="//apple_ref/objc/Class/ESTCloudOperationDeviceInfoDevelopmentMode" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)ESTCloudOperationDeviceInfoDevelopmentMode">ESTCloudOperationDeviceInfoDevelopmentMode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>ESTCloudOperationDeviceInfoDevelopmentMode allows to create read/write operations for DeviceInfo DevelopmentMode setting of a device.</p>
+
+                        <a href="Classes/ESTCloudOperationDeviceInfoDevelopmentMode.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTCloudOperationDeviceInfoDevelopmentMode</span>
+    <span class="p">:</span> <span class="nc"><a href="Classes/ESTSettingOperation.html">ESTSettingOperation</a></span> <span class="o">&lt;</span><span class="n"><a href="Protocols/ESTBeaconOperationProtocol.html">ESTBeaconOperationProtocol</a></span><span class="p">,</span>
+                           <span class="n"><a href="Protocols/ESTCloudOperationProtocol.html">ESTCloudOperationProtocol</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">ESTCloudOperationDeviceInfoDevelopmentMode</span> <span class="p">:</span> <span class="kt"><a href="Classes/ESTSettingOperation.html">ESTSettingOperation</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/ESTBeaconOperationProtocol.html">ESTBeaconOperationProtocol</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/ESTCloudOperationProtocol.html">ESTCloudOperationProtocol</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(cs)ESTCloudOperationDeviceInfoFirmwareVersion"></a>
                     <a name="//apple_ref/objc/Class/ESTCloudOperationDeviceInfoFirmwareVersion" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)ESTCloudOperationDeviceInfoFirmwareVersion">ESTCloudOperationDeviceInfoFirmwareVersion</a>
@@ -4528,7 +4586,6 @@ beacon or nearable device including status, settings and pending settings.</p>
 <p>Note.
   For now, ESTDeviceManager cannot retrieve Proximity UUID of the scanned devices.
   To find a particular iBeacon device use -initWithIdentifier: (the identifier property is unique for Estimote devices).</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     -[ESTDeviceManager startDeviceDiscoveryWithFilter:].
@@ -4573,7 +4630,6 @@ beacon or nearable device including status, settings and pending settings.</p>
                         <p>Class defines scanning &amp; filtering attributes required by ESTDeviceManager to discover devices that can be connected to.
   Results in -[ESTDeviceManagerDelegate deviceManager:didDiscoverDevices:] being called with a collection of
   ESTDeviceLocationBeacon objects.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     -[ESTDeviceManager startDeviceDiscoveryWithFilter:].
@@ -4618,7 +4674,6 @@ beacon or nearable device including status, settings and pending settings.</p>
                         <p>Class defines scanning &amp; filtering attributes required by ESTDeviceManager to discover devices that can be connected to.
   Results in -[ESTDeviceManagerDelegate deviceManager:didDiscoverDevices:] being called with a collection of
   ESTDeviceNearable objects.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     -[ESTDeviceManager startDeviceDiscoveryWithFilter:].
@@ -5201,6 +5256,42 @@ beacon or nearable device including status, settings and pending settings.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">class</span> <span class="kt">ESTDeviceSettingsAdvertiserEstimoteTLM</span> <span class="p">:</span> <span class="kt"><a href="Classes/ESTDeviceSettingsAdvertiser.html">ESTDeviceSettingsAdvertiser</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)ESTDeviceSettingsAdvertiserGeneric"></a>
+                    <a name="//apple_ref/objc/Class/ESTDeviceSettingsAdvertiserGeneric" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)ESTDeviceSettingsAdvertiserGeneric">ESTDeviceSettingsAdvertiserGeneric</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This Value Object represents settings structure for generic advertiser.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTDeviceSettingsAdvertiserGeneric</span> <span class="p">:</span> <span class="nc"><a href="Classes/ESTDeviceSettingsAdvertiser.html">ESTDeviceSettingsAdvertiser</a></span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">ESTDeviceSettingsAdvertiserGeneric</span> <span class="p">:</span> <span class="kt"><a href="Classes/ESTDeviceSettingsAdvertiser.html">ESTDeviceSettingsAdvertiser</a></span></code></pre>
 
                         </div>
                       </div>
@@ -5894,6 +5985,45 @@ Instance ID can be provided optionally for better flexibility.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">class</span> <span class="kt">ESTEddystoneURL</span> <span class="p">:</span> <span class="kt"><a href="Classes/ESTEddystone.html">ESTEddystone</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)ESTFeaturesetBackgroundMode"></a>
+                    <a name="//apple_ref/objc/Class/ESTFeaturesetBackgroundMode" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)ESTFeaturesetBackgroundMode">ESTFeaturesetBackgroundMode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>ESTFeaturesetBackgroundMode encapsulates operations required for Background Mode&rsquo;s functionality.
+The algorithm relies on Generic Adevrtiser, and this helper tool ensures that
+the settings are set properly.</p>
+
+                        <a href="Classes/ESTFeaturesetBackgroundMode.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTFeaturesetBackgroundMode</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">ESTFeaturesetBackgroundMode</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                         </div>
                       </div>
@@ -7791,6 +7921,43 @@ List includes both settings and firmware update.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">class</span> <span class="kt">ESTSettingDeviceInfoColor</span> <span class="p">:</span> <span class="kt"><a href="Classes/ESTSettingReadOnly.html">ESTSettingReadOnly</a></span><span class="p">,</span> <span class="kt">NSCopying</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)ESTSettingDeviceInfoDevelopmentMode"></a>
+                    <a name="//apple_ref/objc/Class/ESTSettingDeviceInfoDevelopmentMode" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)ESTSettingDeviceInfoDevelopmentMode">ESTSettingDeviceInfoDevelopmentMode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>ESTSettingDeviceInfoDevelopmentMode represents Device DevelopmentMode value.</p>
+
+                        <a href="Classes/ESTSettingDeviceInfoDevelopmentMode.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTSettingDeviceInfoDevelopmentMode</span> <span class="p">:</span> <span class="nc"><a href="Classes/ESTSettingReadWrite.html">ESTSettingReadWrite</a></span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">ESTSettingDeviceInfoDevelopmentMode</span> <span class="p">:</span> <span class="kt"><a href="Classes/ESTSettingReadWrite.html">ESTSettingReadWrite</a></span><span class="p">,</span> <span class="kt">NSCopying</span></code></pre>
 
                         </div>
                       </div>
@@ -11870,8 +12037,8 @@ allows to discover CoreBluetooth based representation of Estimote Beacon devices
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-04-12)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-06-05)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>
