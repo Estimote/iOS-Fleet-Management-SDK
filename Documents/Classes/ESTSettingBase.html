@@ -260,6 +260,9 @@
                 <a class="nav-group-task-link" href="../Classes/ESTCloudOperationDeviceInfoColor.html">ESTCloudOperationDeviceInfoColor</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ESTCloudOperationDeviceInfoDevelopmentMode.html">ESTCloudOperationDeviceInfoDevelopmentMode</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ESTCloudOperationDeviceInfoFirmwareVersion.html">ESTCloudOperationDeviceInfoFirmwareVersion</a>
               </li>
               <li class="nav-group-task">
@@ -347,6 +350,9 @@
                 <a class="nav-group-task-link" href="../Classes.html#/c:objc(cs)ESTDeviceSettingsAdvertiserEstimoteTLM">ESTDeviceSettingsAdvertiserEstimoteTLM</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes.html#/c:objc(cs)ESTDeviceSettingsAdvertiserGeneric">ESTDeviceSettingsAdvertiserGeneric</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ESTDeviceSettingsAdvertiserIBeacon.html">ESTDeviceSettingsAdvertiserIBeacon</a>
               </li>
               <li class="nav-group-task">
@@ -399,6 +405,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ESTEddystoneURL.html">ESTEddystoneURL</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ESTFeaturesetBackgroundMode.html">ESTFeaturesetBackgroundMode</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ESTFeaturesetEstimoteMonitoring.html">ESTFeaturesetEstimoteMonitoring</a>
@@ -549,6 +558,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ESTSettingDeviceInfoColor.html">ESTSettingDeviceInfoColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ESTSettingDeviceInfoDevelopmentMode.html">ESTSettingDeviceInfoDevelopmentMode</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ESTSettingDeviceInfoFirmwareVersion.html">ESTSettingDeviceInfoFirmwareVersion</a>
@@ -1216,6 +1228,9 @@
                 <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTSettingDeviceInfoColor.h@T@ESTSettingDeviceInfoColorCompletionBlock">ESTSettingDeviceInfoColorCompletionBlock</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTSettingDeviceInfoDevelopmentMode.h@T@ESTSettingDeviceInfoDevelopmentModeCompletionBlock">ESTSettingDeviceInfoDevelopmentModeCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTSettingDeviceInfoFirmwareVersion.h@T@ESTSettingDeviceInfoFirmwareVersionCompletionBlock">ESTSettingDeviceInfoFirmwareVersionCompletionBlock</a>
               </li>
               <li class="nav-group-task">
@@ -1491,7 +1506,6 @@
                               <td>
                                 <div>
                                   <p>Data describing desired value of setting.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1501,7 +1515,68 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>Initialized object.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)ESTSettingBase(im)isDuplicateOfSetting:"></a>
+                    <a name="//apple_ref/objc/Method/-isDuplicateOfSetting:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)ESTSettingBase(im)isDuplicateOfSetting:">-isDuplicateOfSetting:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Method allows to verify if provided setting is not a duplicate 
+  of another one. Estimote SDK expects to have one setting 
+  of each kind for single device. It means that settings 
+  of the same class should not be duplicated in Setting Manager.
+  there are some exceptions though (like Generic Advertisers)
+  where next to the class another parameter is important
+  (Advertiser ID for example above). In that situation method should
+  be overridden in particular class.</p>
 
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">isDuplicateOfSetting</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">ESTSettingBase</span> <span class="o">*</span><span class="p">)</span><span class="nv">setting</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">isDuplicate</span><span class="p">(</span><span class="n">ofSetting</span> <span class="nv">setting</span><span class="p">:</span> <span class="kt">ESTSettingBase</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>setting</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Satting the comparison should be made to.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Result of duplicate validation.</p>
                       </div>
                     </section>
                   </div>
@@ -1514,8 +1589,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-04-12)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-06-05)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

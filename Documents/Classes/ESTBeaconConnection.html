@@ -260,6 +260,9 @@
                 <a class="nav-group-task-link" href="../Classes/ESTCloudOperationDeviceInfoColor.html">ESTCloudOperationDeviceInfoColor</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ESTCloudOperationDeviceInfoDevelopmentMode.html">ESTCloudOperationDeviceInfoDevelopmentMode</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ESTCloudOperationDeviceInfoFirmwareVersion.html">ESTCloudOperationDeviceInfoFirmwareVersion</a>
               </li>
               <li class="nav-group-task">
@@ -347,6 +350,9 @@
                 <a class="nav-group-task-link" href="../Classes.html#/c:objc(cs)ESTDeviceSettingsAdvertiserEstimoteTLM">ESTDeviceSettingsAdvertiserEstimoteTLM</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes.html#/c:objc(cs)ESTDeviceSettingsAdvertiserGeneric">ESTDeviceSettingsAdvertiserGeneric</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ESTDeviceSettingsAdvertiserIBeacon.html">ESTDeviceSettingsAdvertiserIBeacon</a>
               </li>
               <li class="nav-group-task">
@@ -399,6 +405,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ESTEddystoneURL.html">ESTEddystoneURL</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ESTFeaturesetBackgroundMode.html">ESTFeaturesetBackgroundMode</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ESTFeaturesetEstimoteMonitoring.html">ESTFeaturesetEstimoteMonitoring</a>
@@ -549,6 +558,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ESTSettingDeviceInfoColor.html">ESTSettingDeviceInfoColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ESTSettingDeviceInfoDevelopmentMode.html">ESTSettingDeviceInfoDevelopmentMode</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ESTSettingDeviceInfoFirmwareVersion.html">ESTSettingDeviceInfoFirmwareVersion</a>
@@ -1216,6 +1228,9 @@
                 <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTSettingDeviceInfoColor.h@T@ESTSettingDeviceInfoColorCompletionBlock">ESTSettingDeviceInfoColorCompletionBlock</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTSettingDeviceInfoDevelopmentMode.h@T@ESTSettingDeviceInfoDevelopmentModeCompletionBlock">ESTSettingDeviceInfoDevelopmentModeCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTSettingDeviceInfoFirmwareVersion.h@T@ESTSettingDeviceInfoFirmwareVersionCompletionBlock">ESTSettingDeviceInfoFirmwareVersionCompletionBlock</a>
               </li>
               <li class="nav-group-task">
@@ -1505,9 +1520,12 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Identifier of the device that you aim to connect.
- Based on the method you used to initialize it may contain:
- - Device Mac address
- - Device iBeacon properties formatted as follows: ProximityUUUID:Major:Minor</p>
+ Based on the method you used to initialize it may contain:</p>
+
+<ul>
+<li>Device Mac address</li>
+<li>Device iBeacon properties formatted as follows: ProximityUUUID:Major:Minor</li>
+</ul>
 
                       </div>
                       <div class="declaration">
@@ -1604,7 +1622,6 @@
                               <td>
                                 <div>
                                   <p>discovered beacons Proximity UUID</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1617,7 +1634,6 @@
                               <td>
                                 <div>
                                   <p>discovered beacons Major</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1630,7 +1646,6 @@
                               <td>
                                 <div>
                                   <p>discovered beacons Minor</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1643,7 +1658,6 @@
                               <td>
                                 <div>
                                   <p>delegate reference</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1653,7 +1667,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>beacon connection object</p>
-
                       </div>
                     </section>
                   </div>
@@ -1702,7 +1715,6 @@
                               <td>
                                 <div>
                                   <p>discovered beacon</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1715,7 +1727,6 @@
                               <td>
                                 <div>
                                   <p>delegate reference</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1725,7 +1736,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>beacon connection object</p>
-
                       </div>
                     </section>
                   </div>
@@ -1774,7 +1784,6 @@
                               <td>
                                 <div>
                                   <p>discovered beacon object MAC address</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1787,7 +1796,6 @@
                               <td>
                                 <div>
                                   <p>delegate reference</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1797,7 +1805,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>beacon connection object</p>
-
                       </div>
                     </section>
                   </div>
@@ -1846,7 +1853,6 @@
                               <td>
                                 <div>
                                   <p>discovered beacon object identifier</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1859,7 +1865,6 @@
                               <td>
                                 <div>
                                   <p>delegate reference</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1869,7 +1874,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>beacon connection object</p>
-
                       </div>
                     </section>
                   </div>
@@ -1922,7 +1926,6 @@
                               <td>
                                 <div>
                                   <p>discovered beacons Proximity UUID</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1935,7 +1938,6 @@
                               <td>
                                 <div>
                                   <p>discovered beacons Major</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1948,7 +1950,6 @@
                               <td>
                                 <div>
                                   <p>discovered beacons Minor</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1961,7 +1962,6 @@
                               <td>
                                 <div>
                                   <p>delegate to handle callbacks</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1974,7 +1974,6 @@
                               <td>
                                 <div>
                                   <p>indicates if created object should start connection immediately</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1984,7 +1983,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>beacon connection object</p>
-
                       </div>
                     </section>
                   </div>
@@ -2035,7 +2033,6 @@
                               <td>
                                 <div>
                                   <p>discovered beacon</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2048,7 +2045,6 @@
                               <td>
                                 <div>
                                   <p>delegate to handle callbacks</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2061,7 +2057,6 @@
                               <td>
                                 <div>
                                   <p>indicates if created object should start connection immediately</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2071,7 +2066,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>beacon connection object</p>
-
                       </div>
                     </section>
                   </div>
@@ -2122,7 +2116,6 @@
                               <td>
                                 <div>
                                   <p>discovered beacon object MAC address</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2135,7 +2128,6 @@
                               <td>
                                 <div>
                                   <p>delegate to handle callbacks</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2148,7 +2140,6 @@
                               <td>
                                 <div>
                                   <p>indicates if created object should start connection immediately</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2158,7 +2149,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>beacon connection object</p>
-
                       </div>
                     </section>
                   </div>
@@ -2209,7 +2199,6 @@
                               <td>
                                 <div>
                                   <p>discovered beacon object identifier</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2222,7 +2211,6 @@
                               <td>
                                 <div>
                                   <p>delegate to handle callbacks</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2235,7 +2223,6 @@
                               <td>
                                 <div>
                                   <p>indicates if created object should start connection immediately</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2245,7 +2232,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>beacon connection object</p>
-
                       </div>
                     </section>
                   </div>
@@ -2336,7 +2322,6 @@
                               <td>
                                 <div>
                                   <p>number of connection attempts</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2349,7 +2334,6 @@
                               <td>
                                 <div>
                                   <p>timeout of single connection</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2793,7 +2777,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The proximity ID of the beacon.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     writeProximityUUID:completion:
@@ -2838,7 +2821,6 @@
 <li><p>When ranging beacons - if the beacon is in motion, the <code><a href="../Classes/ESTBeaconConnection.html#/c:objc(cs)ESTBeaconConnection(py)proximityUUID">proximityUUID</a></code> property will be equal to the <code>motionProximityUUID</code>. Note that the <code>motionProximityUUID</code> property is not available unless connected to the beacon, so you need to know its value in advance.</p></li>
 <li><p>When monitoring regions - you can have two separate regions, one with the regular <code><a href="../Classes/ESTBeaconConnection.html#/c:objc(cs)ESTBeaconConnection(py)proximityUUID">proximityUUID</a></code> and one with the <code>motionProximityUUID</code>. Enter and exit notifications will then correspond to the beacon starting and stopping to move.</p></li>
 </ol>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     This feature is disabled by default. The option to enable it will be made available in an upcoming update to the SDK.
@@ -2878,7 +2860,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The most significant value in the beacon.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     writeMajor:completion:
@@ -2916,7 +2897,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The least significant value in the beacon.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     writeMinor:completion:
@@ -2956,7 +2936,6 @@
                         <p>The power of the beacon&rsquo;s radio signal in dBm.</p>
 
 <p>This is a <code>char</code> value, so the proper way to retrieve it is <code>[beacon.power charValue]</code>.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     writePower:completion:
@@ -2994,7 +2973,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The advertising interval of the beacon in ms.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     writeAdvInterval:completion:
@@ -3182,13 +3160,11 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The firmware version of the beacon.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     checkFirmwareUpdateWithCompletion:
 
 </div>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     updateFirmwareWithProgress:completion:
@@ -3303,7 +3279,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The battery model.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     ESTBeaconBatteryType
@@ -3375,7 +3350,6 @@
                         <p>A flag indicating availability and status of the Basic Power Mode.</p>
 
 <p>@since Estimote OS A2.1</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     ESTBeaconPowerSavingMode
@@ -3415,7 +3389,6 @@
                         <p>A flag indicating availability and status of the Smart Power Mode.</p>
 
 <p>@since Estimote OS A2.1</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     ESTBeaconPowerSavingMode
@@ -3454,8 +3427,12 @@
                       <div class="abstract">
                         <p>A flag indicating status of Estimote Secure UUID.</p>
 
-<p>@since Estimote OS 2.2
-  - see: ESTBeaconEstimoteSecureUUID</p>
+<p>@since Estimote OS 2.2</p>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    ESTBeaconEstimoteSecureUUID
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -3491,7 +3468,6 @@
                         <p>A flag indicating if motion UUID is enabled.</p>
 
 <p>@since Estimote OS A2.1</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     writeMotionUUIDEnabled:completion:
@@ -3613,7 +3589,6 @@
                         <p>A flag indicating which type of broadcasting is enabled</p>
 
 <p>@since Estimote OS A3.0.0</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     writeConditionalBroadcastingType:completion:
@@ -3654,7 +3629,6 @@
                         <p>A flag indicating if accelerometer is enabled.</p>
 
 <p>@since Estimote OS A2.1</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     writeMotionDetectionEnabled:completion:
@@ -3705,14 +3679,13 @@
                         <p>Retrieves the temperature of surrounding environment reported by the beacon.</p>
 
 <p>The completion block receives the following parameters:</p>
-
-<p><li><p><code>NSNumber *value</code> - The temperature in Celsius degrees.</p></li>
+<li><p><code>NSNumber *value</code> - The temperature in Celsius degrees.</p></li>
 <li><p><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</p></li>
 <div class="aside aside-see">
     <p class="aside-title">See</p>
-    <p>writeCalibratedTemperature:completion:</p></p>
+    <p>writeCalibratedTemperature:completion:</p>
 
-<p></div></p>
+</div>
 
                       </div>
                       <div class="declaration">
@@ -3742,7 +3715,6 @@
                               <td>
                                 <div>
                                   <p>A block that is called when the temperature has been retrieved from the beacon.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -3802,7 +3774,6 @@
                               <td>
                                 <div>
                                   <p>A block that is called when the counter has been retrieved.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -3862,7 +3833,6 @@
                               <td>
                                 <div>
                                   <p>A block that is called when the counter has been reset.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -3899,14 +3869,17 @@
                         <p>Changes broadcasting scheme for device. Broadcasting scheme describes set settings
   defining what kind of data and how often is broadcasting.</p>
 
-<p>Possible options are:
-  - ESTBroadcastingSchemeEstimote - broadcasts iBeacon packets with customizable Advertising interval.
-    Default advertising interval (950ms) value is set after method invocation.
-  - ESTBroadcastingSchemeIBeacon - broadcasts iBeacon packets with iBeacon Advertising interval.
-  - ESTBroadcastingSchemeEddystoneURL - broadcasts Eddystone-URL packets with customizable interval.
-    Default advertising interval (500ms) value is set after method invocation.
-  - ESTBroadcastingSchemeEddystoneUID - broadcasts Eddystone-UID packets with customizable interval.
-    Default advertising interval (500ms) value is set after method invocation.</p>
+<p>Possible options are:</p>
+
+<ul>
+<li>ESTBroadcastingSchemeEstimote - broadcasts iBeacon packets with customizable Advertising interval.
+Default advertising interval (950ms) value is set after method invocation.</li>
+<li>ESTBroadcastingSchemeIBeacon - broadcasts iBeacon packets with iBeacon Advertising interval.</li>
+<li>ESTBroadcastingSchemeEddystoneURL - broadcasts Eddystone-URL packets with customizable interval.
+Default advertising interval (500ms) value is set after method invocation.</li>
+<li>ESTBroadcastingSchemeEddystoneUID - broadcasts Eddystone-UID packets with customizable interval.
+Default advertising interval (500ms) value is set after method invocation.</li>
+</ul>
 
                       </div>
                       <div class="declaration">
@@ -3942,12 +3915,15 @@
                       <div class="abstract">
                         <p>Changes the conditional broadcasting type. Note that the accelerometer must be enabled for this feature to work
   i.e. you must set Motion Detection Flag in order to use this feature.
-  Possible options are:
-  - ESTBeaconConditionalBroadcastingOff - the default mode, beacon is broadcasting all the time
-  - ESTBeaconConditionalBroadcastingMotionOnly – beacon only advertises when it&rsquo;s in motion.
-    Note that UUID used in advertising packet depends on Motion UUID Flag state.
-  - ESTBeaconConditionalBroadcastingFlipToStop – beacon does not advertise when it&rsquo;s stationary and facing gecko pad up.
-    If the beacon is moving or oriented differently it acts normally.</p>
+  Possible options are:</p>
+
+<ul>
+<li>ESTBeaconConditionalBroadcastingOff - the default mode, beacon is broadcasting all the time</li>
+<li>ESTBeaconConditionalBroadcastingMotionOnly – beacon only advertises when it&rsquo;s in motion.
+Note that UUID used in advertising packet depends on Motion UUID Flag state.</li>
+<li>ESTBeaconConditionalBroadcastingFlipToStop – beacon does not advertise when it&rsquo;s stationary and facing gecko pad up.
+If the beacon is moving or oriented differently it acts normally.</li>
+</ul>
 
 <p>@since Estimote OS A3.0.0</p>
 
@@ -3981,7 +3957,6 @@
                               <td>
                                 <div>
                                   <p>Conditional broadcasting mode to be set in the beacon.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -3994,7 +3969,6 @@
                               <td>
                                 <div>
                                   <p>A block that is called when the belly mode has been enabled or disabled.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4065,7 +4039,6 @@
                               <td>
                                 <div>
                                   <p>The new name of the beacon.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4078,7 +4051,6 @@
                               <td>
                                 <div>
                                   <p>A block that is called when the new name has been set.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4104,14 +4076,13 @@
                         <p>Sets the <code>&lt;proximityUUID&gt;</code>.</p>
 
 <p>The completion block receives the following parameters:</p>
-
-<p><li><p><code>NSString *value</code> - The new <code><a href="../Classes/ESTBeaconConnection.html#/c:objc(cs)ESTBeaconConnection(py)proximityUUID">proximityUUID</a></code>.</p></li>
+<li><p><code>NSString *value</code> - The new <code><a href="../Classes/ESTBeaconConnection.html#/c:objc(cs)ESTBeaconConnection(py)proximityUUID">proximityUUID</a></code>.</p></li>
 <li><p><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</p></li>
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>If you change the <code><a href="../Classes/ESTBeaconConnection.html#/c:objc(cs)ESTBeaconConnection(py)proximityUUID">proximityUUID</a></code>, you might want to consider changing the <code>&lt;motionProximityUUID&gt;</code> as well. If you don&rsquo;t, the beacon will broadcast two different <code>proximityUUIDs</code> depending on whether its in motion or not!@</p></p>
+    <p>If you change the <code><a href="../Classes/ESTBeaconConnection.html#/c:objc(cs)ESTBeaconConnection(py)proximityUUID">proximityUUID</a></code>, you might want to consider changing the <code>&lt;motionProximityUUID&gt;</code> as well. If you don&rsquo;t, the beacon will broadcast two different <code>proximityUUIDs</code> depending on whether its in motion or not!@</p>
 
-<p></div></p>
+</div>
 
                       </div>
                       <div class="declaration">
@@ -4141,7 +4112,6 @@
                               <td>
                                 <div>
                                   <p>The new <code>proximityUUID</code>.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4154,7 +4124,6 @@
                               <td>
                                 <div>
                                   <p>A block that is called when the new <code>proximityUUID</code> has been set.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4214,7 +4183,6 @@
                               <td>
                                 <div>
                                   <p>The new <code>major</code> value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4227,7 +4195,6 @@
                               <td>
                                 <div>
                                   <p>A block that is called when the new <code>major</code> value has been set.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4287,7 +4254,6 @@
                               <td>
                                 <div>
                                   <p>The new <code>minor</code> value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4300,7 +4266,6 @@
                               <td>
                                 <div>
                                   <p>A block that is called when the new <code>minor</code> value has been set.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4360,7 +4325,6 @@
                               <td>
                                 <div>
                                   <p>The new <code>advInterval</code> in milliseconds. The value must be in range from 100 to 2000.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4373,7 +4337,6 @@
                               <td>
                                 <div>
                                   <p>A block that is called when the new <code>advInterval</code> has been set.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4432,13 +4395,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The new broadcasting <code>power</code>. Must be one of the 
-&lt;ESTBeaconPower</p>
-
-<blockquote>
-<p>values.</p>
-</blockquote>
-
+                                  <p>The new broadcasting <code>power</code>. Must be one of the <ESTBeaconPower> values.</p>
                                 </div>
                               </td>
                             </tr>
@@ -4451,7 +4408,6 @@
                               <td>
                                 <div>
                                   <p>A block that is called when the new broadcasting power has been set.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4518,7 +4474,6 @@
                               <td>
                                 <div>
                                   <p>Google beacon Namespace ID</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4531,7 +4486,6 @@
                               <td>
                                 <div>
                                   <p>A block that is called when the Namespace has been changed or error occurred.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4585,7 +4539,6 @@
                               <td>
                                 <div>
                                   <p>Google beacon Instance ID</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4598,7 +4551,6 @@
                               <td>
                                 <div>
                                   <p>A block that is called when the Instance ID has been changed or error occurred.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4652,7 +4604,6 @@
                               <td>
                                 <div>
                                   <p>Google beacon Instance ID</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4665,7 +4616,6 @@
                               <td>
                                 <div>
                                   <p>A block that is called when the Instance ID has been changed or error occurred.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4719,7 +4669,6 @@
                               <td>
                                 <div>
                                   <p>Eddystone URL</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4732,7 +4681,6 @@
                               <td>
                                 <div>
                                   <p>A block that is called when the URL has been changed or error occurred.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4803,7 +4751,6 @@
                               <td>
                                 <div>
                                   <p>YES to enable, NO to disable the Basic Power Mode.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4816,7 +4763,6 @@
                               <td>
                                 <div>
                                   <p>A block that is called when the Basic Power Mode has been enabled or disabled.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4876,7 +4822,6 @@
                               <td>
                                 <div>
                                   <p>YES to enable, NO to disable the Smart Power Mode.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4889,7 +4834,6 @@
                               <td>
                                 <div>
                                   <p>A block that is called when the Smart Power Mode has been enabled or disabled.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4954,7 +4898,6 @@
                               <td>
                                 <div>
                                   <p>Yes to enable, No to disable Estimote Secure UUID.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4967,7 +4910,6 @@
                               <td>
                                 <div>
                                   <p>Block with operation result.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5040,7 +4982,6 @@
                               <td>
                                 <div>
                                   <p>YES to enable, NO to disable the accelerometer.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5053,7 +4994,6 @@
                               <td>
                                 <div>
                                   <p>A block that is called when the accelerometer has been enabled or disabled.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5115,7 +5055,6 @@
                               <td>
                                 <div>
                                   <p>YES to enable, NO to disable the motion UUID.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5128,7 +5067,6 @@
                               <td>
                                 <div>
                                   <p>A block that is called when the motion UUID has been enabled or disabled.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5192,7 +5130,6 @@
                               <td>
                                 <div>
                                   <p>The reference temperature in Celsius degrees.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5205,7 +5142,6 @@
                               <td>
                                 <div>
                                   <p>A block that is called when the calibration has been completed.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5271,7 +5207,6 @@
                               <td>
                                 <div>
                                   <p>GPS latitude</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5284,7 +5219,6 @@
                               <td>
                                 <div>
                                   <p>GPS longitude</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5297,7 +5231,6 @@
                               <td>
                                 <div>
                                   <p>completion block fired on operation completion</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5361,7 +5294,6 @@
                               <td>
                                 <div>
                                   <p>Cloud Tags</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5374,7 +5306,6 @@
                               <td>
                                 <div>
                                   <p>completion block fired on operation completion</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5411,13 +5342,12 @@
                         <p>Resets the beacon&rsquo;s <code>&lt;major&gt;</code>, <code>&lt;minor&gt;</code>, <code>&lt;proximityUUID&gt;</code>, broadcasting <code>&lt;power&gt;</code> and <code>&lt;advInterval&gt;</code> to factory settings.</p>
 
 <p>The completion block receives the following parameters:</p>
-
-<p><li><p><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</p></li>
+<li><p><code>NSError *error</code> - If an error occurred, this error object describes the error. If the operation completed successfully, the value is <code>nil</code>.</p></li>
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>This method does not reset the <code>&lt;motionProximityUUID&gt;</code>. You can reset it yourself to the default value of <code>ESTIMOTE_PROXIMITY_UUID</code> using the <code>&lt;writeMotionProximityUUID:completion:&gt;</code> method.</p></p>
+    <p>This method does not reset the <code>&lt;motionProximityUUID&gt;</code>. You can reset it yourself to the default value of <code>ESTIMOTE_PROXIMITY_UUID</code> using the <code>&lt;writeMotionProximityUUID:completion:&gt;</code> method.</p>
 
-<p></div></p>
+</div>
 
                       </div>
                       <div class="declaration">
@@ -5447,7 +5377,6 @@
                               <td>
                                 <div>
                                   <p>A block that is called when the settings have been reset.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5511,7 +5440,6 @@
                               <td>
                                 <div>
                                   <p>completion block returning reference to ESTBeaconConnection object performing operation.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5565,7 +5493,6 @@
                               <td>
                                 <div>
                                   <p>timeout of scan operation</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5578,7 +5505,6 @@
                               <td>
                                 <div>
                                   <p>completion block returning reference to ESTBeaconConnection object performing operation.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5658,7 +5584,6 @@
                               <td>
                                 <div>
                                   <p>A block that is called when the check has been completed.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5725,7 +5650,6 @@
                               <td>
                                 <div>
                                   <p>A block that is called throughout the update process to report on the progress.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5738,7 +5662,6 @@
                               <td>
                                 <div>
                                   <p>A block that is called when the update has been completed.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5788,8 +5711,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-04-12)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-06-05)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>
