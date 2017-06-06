@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="PND-2H-wBP">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="dqe-bi-0EM">
+            <objects>
+                <navigationController id="PND-2H-wBP" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yR9-Hz-Pel">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="wKI-2U-lCO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Crn-3n-fX1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-927" y="511"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="GqH-Ec-BoH"/>
+                    <connections>
+                        <segue destination="2Qv-kv-M6K" kind="show" identifier="details" id="cT7-ht-UYI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-226" y="511"/>
+        </scene>
+        <!--Monitoring Details View Controller-->
+        <scene sceneID="78X-lj-shn">
+            <objects>
+                <viewController id="2Qv-kv-M6K" customClass="MonitoringDetailsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aOP-3f-Omm"/>
+                        <viewControllerLayoutGuide type="bottom" id="zaz-4P-elx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Bc8-t3-g9H">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oCU-z5-e05">
+                                <rect key="frame" x="140" y="130" width="320" height="352"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oDV-yV-8lZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="35"/>
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ENABLE NOTIFICATIONS:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YI3-Bq-FAt">
+                                                <rect key="frame" x="20" y="7" width="182" height="21"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.94193892050000005" green="0.94193892050000005" blue="0.94193892050000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="Myz-gF-NUl"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter region notification:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CEt-5A-qMK">
+                                        <rect key="frame" x="20" y="73" width="211" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Exit region notification:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5rY-FX-I83">
+                                        <rect key="frame" x="20" y="112" width="211" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z3r-50-ov4">
+                                        <rect key="frame" x="251" y="68" width="51" height="31"/>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8U7-Sg-li1">
+                                        <rect key="frame" x="251" y="107" width="51" height="31"/>
+                                    </switch>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="clI-mc-7of">
+                                        <rect key="frame" x="0.0" y="179" width="320" height="173"/>
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Co-QW-M80">
+                                                <rect key="frame" x="20" y="43" width="280" height="118"/>
+                                                <string key="text">Lock the screen and go far away from the beacon until you get the exit region notification. If you come back, you will see an enter region notification.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="INFORMATION" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ufH-eA-npf">
+                                                <rect key="frame" x="20" y="22" width="116" height="21"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.94193892050000005" green="0.94193892050000005" blue="0.94193892050000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="1Co-QW-M80" secondAttribute="trailing" constant="20" id="95t-aG-Mi6"/>
+                                            <constraint firstItem="1Co-QW-M80" firstAttribute="leading" secondItem="clI-mc-7of" secondAttribute="leading" constant="20" id="EKs-Du-8dx"/>
+                                            <constraint firstItem="1Co-QW-M80" firstAttribute="top" secondItem="ufH-eA-npf" secondAttribute="bottom" constant="10" id="HoQ-s2-Ou1"/>
+                                            <constraint firstItem="ufH-eA-npf" firstAttribute="leading" secondItem="clI-mc-7of" secondAttribute="leading" constant="20" id="eAV-wW-usX"/>
+                                            <constraint firstItem="ufH-eA-npf" firstAttribute="top" secondItem="clI-mc-7of" secondAttribute="top" constant="22" id="uYT-5Z-hu6"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="clI-mc-7of" firstAttribute="leading" secondItem="oCU-z5-e05" secondAttribute="leading" id="88N-ep-Epm"/>
+                                    <constraint firstAttribute="bottom" secondItem="clI-mc-7of" secondAttribute="bottom" id="ATu-aE-rK5"/>
+                                    <constraint firstAttribute="trailing" secondItem="clI-mc-7of" secondAttribute="trailing" id="BJU-Oc-WWv"/>
+                                    <constraint firstItem="oDV-yV-8lZ" firstAttribute="leading" secondItem="oCU-z5-e05" secondAttribute="leading" id="JLE-pd-pbm"/>
+                                    <constraint firstItem="oDV-yV-8lZ" firstAttribute="top" secondItem="oCU-z5-e05" secondAttribute="top" id="Jj7-V7-Ivj"/>
+                                    <constraint firstAttribute="trailing" secondItem="z3r-50-ov4" secondAttribute="trailing" constant="20" id="OtF-cE-gzz"/>
+                                    <constraint firstItem="8U7-Sg-li1" firstAttribute="top" secondItem="z3r-50-ov4" secondAttribute="bottom" constant="8" id="Ssr-Er-h3f"/>
+                                    <constraint firstItem="z3r-50-ov4" firstAttribute="top" secondItem="oDV-yV-8lZ" secondAttribute="bottom" constant="33" id="UuJ-qU-9eS"/>
+                                    <constraint firstItem="clI-mc-7of" firstAttribute="top" secondItem="8U7-Sg-li1" secondAttribute="bottom" constant="41" id="dhe-Hb-YHL"/>
+                                    <constraint firstAttribute="trailing" secondItem="oDV-yV-8lZ" secondAttribute="trailing" id="l36-kw-702"/>
+                                    <constraint firstItem="oDV-yV-8lZ" firstAttribute="leading" secondItem="oCU-z5-e05" secondAttribute="leading" id="r8x-ga-5kI"/>
+                                    <constraint firstAttribute="trailing" secondItem="oDV-yV-8lZ" secondAttribute="trailing" id="y2D-Z1-UOO"/>
+                                    <constraint firstAttribute="trailing" secondItem="8U7-Sg-li1" secondAttribute="trailing" constant="20" id="zeJ-DE-w7V"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="JLE-pd-pbm"/>
+                                        <exclude reference="l36-kw-702"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zaz-4P-elx" firstAttribute="top" secondItem="oCU-z5-e05" secondAttribute="bottom" id="3jV-As-p5J"/>
+                            <constraint firstItem="oCU-z5-e05" firstAttribute="top" secondItem="aOP-3f-Omm" secondAttribute="bottom" id="4Tw-Ev-TLL"/>
+                            <constraint firstItem="oCU-z5-e05" firstAttribute="leading" secondItem="Bc8-t3-g9H" secondAttribute="leading" id="6Te-bA-AuF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oCU-z5-e05" secondAttribute="trailing" id="Ews-Qd-gcw"/>
+                            <constraint firstItem="oCU-z5-e05" firstAttribute="leading" secondItem="Bc8-t3-g9H" secondAttribute="leading" id="Rei-zc-swZ"/>
+                            <constraint firstAttribute="trailing" secondItem="oCU-z5-e05" secondAttribute="trailing" id="bq8-Hn-lS4"/>
+                            <constraint firstAttribute="centerX" secondItem="oCU-z5-e05" secondAttribute="centerX" id="daB-f3-BnO"/>
+                            <constraint firstItem="oCU-z5-e05" firstAttribute="leading" secondItem="Bc8-t3-g9H" secondAttribute="leadingMargin" id="rpg-cf-b6g"/>
+                            <constraint firstAttribute="trailing" secondItem="oCU-z5-e05" secondAttribute="trailing" id="s7Q-9m-qgu"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Ews-Qd-gcw"/>
+                                <exclude reference="Rei-zc-swZ"/>
+                                <exclude reference="rpg-cf-b6g"/>
+                                <exclude reference="s7Q-9m-qgu"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="enterSwitch" destination="z3r-50-ov4" id="DEM-8i-uVH"/>
+                        <outlet property="exitSwitch" destination="8U7-Sg-li1" id="5at-im-umL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ysS-5K-kVo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="526" y="511"/>
+        </scene>
+    </scenes>
+</document>

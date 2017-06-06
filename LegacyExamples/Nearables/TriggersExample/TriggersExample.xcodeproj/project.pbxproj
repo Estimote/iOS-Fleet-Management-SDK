@@ -1,0 +1,541 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9556D49B1A9F976800465B61 /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9556D49A1A9F976800465B61 /* EstimoteSDK.framework */; };
+		AC72C4BB1A498CB200C72132 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC72C4BA1A498CB200C72132 /* main.m */; };
+		AC72C4BE1A498CB200C72132 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC72C4BD1A498CB200C72132 /* AppDelegate.m */; };
+		AC72C4C11A498CB200C72132 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC72C4C01A498CB200C72132 /* ViewController.m */; };
+		AC72C4C41A498CB200C72132 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC72C4C21A498CB200C72132 /* Main.storyboard */; };
+		AC72C4C61A498CB200C72132 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC72C4C51A498CB200C72132 /* Images.xcassets */; };
+		AC72C4C91A498CB200C72132 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC72C4C71A498CB200C72132 /* LaunchScreen.xib */; };
+		AC72C4D51A498CB200C72132 /* TriggersExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC72C4D41A498CB200C72132 /* TriggersExampleTests.m */; };
+		AC72C5041A498EE200C72132 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC72C5031A498EE200C72132 /* CoreLocation.framework */; };
+		AC72C5061A498EE700C72132 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC72C5051A498EE700C72132 /* CoreBluetooth.framework */; };
+		AC72C5081A498EF400C72132 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC72C5071A498EF400C72132 /* SystemConfiguration.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AC72C4CF1A498CB200C72132 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC72C4AD1A498CB100C72132 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC72C4B41A498CB100C72132;
+			remoteInfo = TriggersExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9556D49A1A9F976800465B61 /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EstimoteSDK.framework; path = ../../../EstimoteSDK/EstimoteSDK.framework; sourceTree = "<group>"; };
+		AC72C4B51A498CB200C72132 /* TriggersExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TriggersExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC72C4B91A498CB200C72132 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC72C4BA1A498CB200C72132 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AC72C4BC1A498CB200C72132 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AC72C4BD1A498CB200C72132 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AC72C4BF1A498CB200C72132 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AC72C4C01A498CB200C72132 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AC72C4C31A498CB200C72132 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AC72C4C51A498CB200C72132 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AC72C4C81A498CB200C72132 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		AC72C4CE1A498CB200C72132 /* TriggersExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TriggersExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC72C4D31A498CB200C72132 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC72C4D41A498CB200C72132 /* TriggersExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TriggersExampleTests.m; sourceTree = "<group>"; };
+		AC72C5031A498EE200C72132 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AC72C5051A498EE700C72132 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		AC72C5071A498EF400C72132 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		AC72C5221A49A42B00C72132 /* libEstimoteSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libEstimoteSDK.a; sourceTree = "<group>"; };
+		AC72C5271A49A54100C72132 /* ESTBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeacon.h; sourceTree = "<group>"; };
+		AC72C5281A49A54100C72132 /* ESTBeaconDefinitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconDefinitions.h; sourceTree = "<group>"; };
+		AC72C5291A49A54100C72132 /* ESTBeaconFirmwareVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconFirmwareVO.h; sourceTree = "<group>"; };
+		AC72C52A1A49A54100C72132 /* ESTBeaconManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconManager.h; sourceTree = "<group>"; };
+		AC72C52B1A49A54100C72132 /* ESTBeaconRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconRegion.h; sourceTree = "<group>"; };
+		AC72C52C1A49A54100C72132 /* ESTBeaconUpdateConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconUpdateConfig.h; sourceTree = "<group>"; };
+		AC72C52D1A49A54100C72132 /* ESTBeaconUpdateInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconUpdateInfo.h; sourceTree = "<group>"; };
+		AC72C52E1A49A54100C72132 /* ESTBeaconVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBeaconVO.h; sourceTree = "<group>"; };
+		AC72C52F1A49A54100C72132 /* ESTBulkUpdater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTBulkUpdater.h; sourceTree = "<group>"; };
+		AC72C5301A49A54100C72132 /* ESTConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTConfig.h; sourceTree = "<group>"; };
+		AC72C5311A49A54100C72132 /* ESTDateRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTDateRule.h; sourceTree = "<group>"; };
+		AC72C5321A49A54100C72132 /* ESTFirmwareInfoVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTFirmwareInfoVO.h; sourceTree = "<group>"; };
+		AC72C5331A49A54100C72132 /* ESTMotionRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTMotionRule.h; sourceTree = "<group>"; };
+		AC72C5341A49A54100C72132 /* ESTNearable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTNearable.h; sourceTree = "<group>"; };
+		AC72C5351A49A54100C72132 /* ESTNearableConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTNearableConnection.h; sourceTree = "<group>"; };
+		AC72C5361A49A54100C72132 /* ESTNearableManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTNearableManager.h; sourceTree = "<group>"; };
+		AC72C5371A49A54100C72132 /* ESTNearableRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTNearableRule.h; sourceTree = "<group>"; };
+		AC72C5381A49A54100C72132 /* ESTOrientationRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTOrientationRule.h; sourceTree = "<group>"; };
+		AC72C5391A49A54100C72132 /* ESTProximityRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTProximityRule.h; sourceTree = "<group>"; };
+		AC72C53A1A49A54100C72132 /* ESTRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTRule.h; sourceTree = "<group>"; };
+		AC72C53B1A49A54100C72132 /* ESTTemperatureRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTTemperatureRule.h; sourceTree = "<group>"; };
+		AC72C53C1A49A54100C72132 /* ESTTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTTrigger.h; sourceTree = "<group>"; };
+		AC72C53D1A49A54100C72132 /* ESTTriggerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ESTTriggerManager.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC72C4B21A498CB100C72132 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC72C5081A498EF400C72132 /* SystemConfiguration.framework in Frameworks */,
+				9556D49B1A9F976800465B61 /* EstimoteSDK.framework in Frameworks */,
+				AC72C5061A498EE700C72132 /* CoreBluetooth.framework in Frameworks */,
+				AC72C5041A498EE200C72132 /* CoreLocation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC72C4CB1A498CB200C72132 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AC72C4AC1A498CB100C72132 = {
+			isa = PBXGroup;
+			children = (
+				9556D49A1A9F976800465B61 /* EstimoteSDK.framework */,
+				AC72C5071A498EF400C72132 /* SystemConfiguration.framework */,
+				AC72C5051A498EE700C72132 /* CoreBluetooth.framework */,
+				AC72C5031A498EE200C72132 /* CoreLocation.framework */,
+				AC72C4B71A498CB200C72132 /* TriggersExample */,
+				AC72C4D11A498CB200C72132 /* TriggersExampleTests */,
+				AC72C4B61A498CB200C72132 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AC72C4B61A498CB200C72132 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC72C4B51A498CB200C72132 /* TriggersExample.app */,
+				AC72C4CE1A498CB200C72132 /* TriggersExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC72C4B71A498CB200C72132 /* TriggersExample */ = {
+			isa = PBXGroup;
+			children = (
+				AC72C4BC1A498CB200C72132 /* AppDelegate.h */,
+				AC72C4BD1A498CB200C72132 /* AppDelegate.m */,
+				AC72C4BF1A498CB200C72132 /* ViewController.h */,
+				AC72C4C01A498CB200C72132 /* ViewController.m */,
+				AC72C4C21A498CB200C72132 /* Main.storyboard */,
+				AC72C4C51A498CB200C72132 /* Images.xcassets */,
+				AC72C4C71A498CB200C72132 /* LaunchScreen.xib */,
+				AC72C5091A49A42B00C72132 /* EstimoteSDK */,
+				AC72C4B81A498CB200C72132 /* Supporting Files */,
+			);
+			path = TriggersExample;
+			sourceTree = "<group>";
+		};
+		AC72C4B81A498CB200C72132 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AC72C4B91A498CB200C72132 /* Info.plist */,
+				AC72C4BA1A498CB200C72132 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AC72C4D11A498CB200C72132 /* TriggersExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				AC72C4D41A498CB200C72132 /* TriggersExampleTests.m */,
+				AC72C4D21A498CB200C72132 /* Supporting Files */,
+			);
+			path = TriggersExampleTests;
+			sourceTree = "<group>";
+		};
+		AC72C4D21A498CB200C72132 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AC72C4D31A498CB200C72132 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AC72C5091A49A42B00C72132 /* EstimoteSDK */ = {
+			isa = PBXGroup;
+			children = (
+				AC72C5261A49A54100C72132 /* Headers */,
+				AC72C5221A49A42B00C72132 /* libEstimoteSDK.a */,
+			);
+			name = EstimoteSDK;
+			path = ../../EstimoteSDK;
+			sourceTree = "<group>";
+		};
+		AC72C5261A49A54100C72132 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				AC72C5271A49A54100C72132 /* ESTBeacon.h */,
+				AC72C5281A49A54100C72132 /* ESTBeaconDefinitions.h */,
+				AC72C5291A49A54100C72132 /* ESTBeaconFirmwareVO.h */,
+				AC72C52A1A49A54100C72132 /* ESTBeaconManager.h */,
+				AC72C52B1A49A54100C72132 /* ESTBeaconRegion.h */,
+				AC72C52C1A49A54100C72132 /* ESTBeaconUpdateConfig.h */,
+				AC72C52D1A49A54100C72132 /* ESTBeaconUpdateInfo.h */,
+				AC72C52E1A49A54100C72132 /* ESTBeaconVO.h */,
+				AC72C52F1A49A54100C72132 /* ESTBulkUpdater.h */,
+				AC72C5301A49A54100C72132 /* ESTConfig.h */,
+				AC72C5311A49A54100C72132 /* ESTDateRule.h */,
+				AC72C5321A49A54100C72132 /* ESTFirmwareInfoVO.h */,
+				AC72C5331A49A54100C72132 /* ESTMotionRule.h */,
+				AC72C5341A49A54100C72132 /* ESTNearable.h */,
+				AC72C5351A49A54100C72132 /* ESTNearableConnection.h */,
+				AC72C5361A49A54100C72132 /* ESTNearableManager.h */,
+				AC72C5371A49A54100C72132 /* ESTNearableRule.h */,
+				AC72C5381A49A54100C72132 /* ESTOrientationRule.h */,
+				AC72C5391A49A54100C72132 /* ESTProximityRule.h */,
+				AC72C53A1A49A54100C72132 /* ESTRule.h */,
+				AC72C53B1A49A54100C72132 /* ESTTemperatureRule.h */,
+				AC72C53C1A49A54100C72132 /* ESTTrigger.h */,
+				AC72C53D1A49A54100C72132 /* ESTTriggerManager.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AC72C4B41A498CB100C72132 /* TriggersExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC72C4D81A498CB200C72132 /* Build configuration list for PBXNativeTarget "TriggersExample" */;
+			buildPhases = (
+				AC72C4B11A498CB100C72132 /* Sources */,
+				AC72C4B21A498CB100C72132 /* Frameworks */,
+				AC72C4B31A498CB100C72132 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TriggersExample;
+			productName = TriggersExample;
+			productReference = AC72C4B51A498CB200C72132 /* TriggersExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AC72C4CD1A498CB200C72132 /* TriggersExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC72C4DB1A498CB200C72132 /* Build configuration list for PBXNativeTarget "TriggersExampleTests" */;
+			buildPhases = (
+				AC72C4CA1A498CB200C72132 /* Sources */,
+				AC72C4CB1A498CB200C72132 /* Frameworks */,
+				AC72C4CC1A498CB200C72132 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC72C4D01A498CB200C72132 /* PBXTargetDependency */,
+			);
+			name = TriggersExampleTests;
+			productName = TriggersExampleTests;
+			productReference = AC72C4CE1A498CB200C72132 /* TriggersExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC72C4AD1A498CB100C72132 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Estimote Inc.";
+				TargetAttributes = {
+					AC72C4B41A498CB100C72132 = {
+						CreatedOnToolsVersion = 6.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					AC72C4CD1A498CB200C72132 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = AC72C4B41A498CB100C72132;
+					};
+				};
+			};
+			buildConfigurationList = AC72C4B01A498CB100C72132 /* Build configuration list for PBXProject "TriggersExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AC72C4AC1A498CB100C72132;
+			productRefGroup = AC72C4B61A498CB200C72132 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC72C4B41A498CB100C72132 /* TriggersExample */,
+				AC72C4CD1A498CB200C72132 /* TriggersExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AC72C4B31A498CB100C72132 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC72C4C41A498CB200C72132 /* Main.storyboard in Resources */,
+				AC72C4C91A498CB200C72132 /* LaunchScreen.xib in Resources */,
+				AC72C4C61A498CB200C72132 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC72C4CC1A498CB200C72132 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC72C4B11A498CB100C72132 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC72C4C11A498CB200C72132 /* ViewController.m in Sources */,
+				AC72C4BE1A498CB200C72132 /* AppDelegate.m in Sources */,
+				AC72C4BB1A498CB200C72132 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC72C4CA1A498CB200C72132 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC72C4D51A498CB200C72132 /* TriggersExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AC72C4D01A498CB200C72132 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC72C4B41A498CB100C72132 /* TriggersExample */;
+			targetProxy = AC72C4CF1A498CB200C72132 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AC72C4C21A498CB200C72132 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC72C4C31A498CB200C72132 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AC72C4C71A498CB200C72132 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC72C4C81A498CB200C72132 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AC72C4D61A498CB200C72132 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AC72C4D71A498CB200C72132 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AC72C4D91A498CB200C72132 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../../../EstimoteSDK",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../../../EstimoteSDK/Headers,
+				);
+				INFOPLIST_FILE = TriggersExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					../../../EstimoteSDK,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AC72C4DA1A498CB200C72132 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../../../EstimoteSDK",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../../../EstimoteSDK/Headers,
+				);
+				INFOPLIST_FILE = TriggersExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					../../../EstimoteSDK,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		AC72C4DC1A498CB200C72132 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TriggersExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TriggersExample.app/TriggersExample";
+			};
+			name = Debug;
+		};
+		AC72C4DD1A498CB200C72132 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TriggersExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TriggersExample.app/TriggersExample";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC72C4B01A498CB100C72132 /* Build configuration list for PBXProject "TriggersExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC72C4D61A498CB200C72132 /* Debug */,
+				AC72C4D71A498CB200C72132 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC72C4D81A498CB200C72132 /* Build configuration list for PBXNativeTarget "TriggersExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC72C4D91A498CB200C72132 /* Debug */,
+				AC72C4DA1A498CB200C72132 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC72C4DB1A498CB200C72132 /* Build configuration list for PBXNativeTarget "TriggersExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC72C4DC1A498CB200C72132 /* Debug */,
+				AC72C4DD1A498CB200C72132 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AC72C4AD1A498CB100C72132 /* Project object */;
+}
