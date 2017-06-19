@@ -1,7 +1,7 @@
 ## Estimote SDK example apps
 
 **Hint:**  
-You can generate yourself a ready-made project from one of these templates on https://cloud.estimote.com/#/apps/add. It will be automatically renamed for you, and have your App Token and beacon UUIDs already put in.
+You can generate yourself a ready-made project from most of these templates on https://cloud.estimote.com/#/apps/add. It will be automatically renamed for you, and have your App Token and beacon UUIDs already put in.
 
 - **Blank**
 
@@ -21,12 +21,18 @@ You can generate yourself a ready-made project from one of these templates on ht
 
 - **Showroom**
 
-  > Uses: [sticker beacons](http://developer.estimote.com/nearables/stickers-vs-beacons/), Nearable packet, trigger engine
+  > Uses: [sticker beacons](http://estimote.com/#products), Nearable packet, trigger engine
 
   Change the text on screen when user picks up a nearable (motion detection). Imagine, e.g., an iPad mounted in a showroom, and products with Estimote Stickers attached to them. Whenever a visitor picks an item up, the iPad shows information about the product.
 
-- **Configuration** (available in Swift only; works with Location Beacons and next-gen Proximity Beacons)
+- **Configuration** (Swift only, requires Estimote Beacons with the 4th-gen firmware, 4.x+)
 
   > Uses: SDK 4.0's configuration API, Estimote Cloud: tags & geolocation
 
   Configure and tag your beacons for deployment. _(See the README.md file in this project's directory for more info.)_
+  
+- **GPIO** (Swift only, requires Estimote Beacons with the 4th-gen firmware, 4.x+)
+
+  > Uses: SDK 4.0's configuration API … and, well, GPIO (:
+  
+  Wirelessly access external devices connected to the beacons' GPIO ports. _(See the README.md file in this project's directory for more info.)_
