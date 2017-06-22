@@ -515,6 +515,9 @@
                 <a class="nav-group-task-link" href="../Classes/ESTRequestGetBeaconsDetails.html">ESTRequestGetBeaconsDetails</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ESTRequestGetDeviceDetails.html">ESTRequestGetDeviceDetails</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ESTRequestGetNearables.html">ESTRequestGetNearables</a>
               </li>
               <li class="nav-group-task">
@@ -534,6 +537,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ESTRequestV2GetDevices.html">ESTRequestV2GetDevices</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ESTRequestV3GetDeviceOwner.html">ESTRequestV3GetDeviceOwner</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes.html#/c:objc(cs)ESTRequestV3GetFirmwares">ESTRequestV3GetFirmwares</a>
@@ -1204,10 +1210,16 @@
                 <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTNotificationGPIOData.h@T@ESTNotificationGPIODataBlock">ESTNotificationGPIODataBlock</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTRequestGetDeviceDetails.h@T@ESTRequestGetDeviceDetailsBlock">ESTRequestGetDeviceDetailsBlock</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTRequestV2GetDeviceDetails.h@T@ESTRequestV2GetDeviceDetailsBlock">ESTRequestV2GetDeviceDetailsBlock</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTRequestV2GetDevices.h@T@ESTRequestV2GetDevicesBlock">ESTRequestV2GetDevicesBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTRequestV3GetDeviceOwner.h@T@ESTRequestV3GetDeviceOwnerBlock">ESTRequestV3GetDeviceOwnerBlock</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTSettingBase.h@T@ESTSettingCompletionBlock">ESTSettingCompletionBlock</a>
@@ -1487,6 +1499,7 @@
                         <p>Starts monitoring for nearable with specified identifier.</p>
 
 <p>Events are delivered to the <code>&lt;[ESTNearableManagerDelegate nearableManager:didEnterIdentifierRegion:]&gt;</code> and <code>&lt;[ESTNearableManagerDelegate nearableManager:didExitIdentifierRegion:]&gt;</code> methods of your <code>&lt;delegate&gt;</code>. If there is an error, the nearable manager calls the <code>&lt;[ESTNearableManagerDelegate nearableManager:monitoringFailedWithError:]&gt;</code> method of your <code>delegate</code> instead.</p>
+
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <p>nearableManager:stopMonitoringForIdentifier:</p>
@@ -1520,6 +1533,7 @@
                               <td>
                                 <div>
                                   <p>Nearable unique identifier that you want to monitor for. This parameter must not be <code>nil.</code></p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1545,6 +1559,7 @@
                         <p>Stops monitoring for nearable with specified identifier.</p>
 
 <p>If object with specified identifier is not currently being monitored, this method has no effect.</p>
+
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <p>nearableManager:startMonitoringForIdentifier:</p>
@@ -1578,6 +1593,7 @@
                               <td>
                                 <div>
                                   <p>The object&rsquo;s identifier currently being monitored. This parameter must not be <code>nil</code>.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1603,6 +1619,7 @@
                         <p>Starts monitoring for nearables with specified type.</p>
 
 <p>Events are delivered to the <code>&lt;[ESTNearableManagerDelegate nearableManager:didEnterTypeRegion:]&gt;</code> and <code>&lt;[ESTNearableManagerDelegate nearableManager:didExitTypeRegion:]&gt;</code> methods of your <code>&lt;delegate&gt;</code>. If there is an error, the nearable manager calls the <code>&lt;[ESTNearableManagerDelegate nearableManager:monitoringFailedWithError:]&gt;</code> method of your <code>delegate</code> instead.</p>
+
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <p>nearableManager:stopMonitoringForIdentifier:</p>
@@ -1636,6 +1653,7 @@
                               <td>
                                 <div>
                                   <p>Nearable type that you want to monitor for. This parameter must not be <code>nil.</code></p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1661,6 +1679,7 @@
                         <p>Stops monitoring for nearables with specified type.</p>
 
 <p>If objects with specified type are not currently being monitored, this method has no effect.</p>
+
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <p>nearableManager:startMonitoringForType:</p>
@@ -1694,6 +1713,7 @@
                               <td>
                                 <div>
                                   <p>The nearable type currently being monitored. This parameter must not be <code>nil</code>.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1719,11 +1739,13 @@
                         <p>Stops monitoring for all types and identifiers that were monitored.</p>
 
 <p>If there is nothing currently being monitored, this method has no effect.</p>
+
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     nearableManager:stopMonitoringForIdentifier:
 
 </div>
+
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     nearableManager:stopMonitoringForType:
@@ -1774,6 +1796,7 @@
                         <p>Starts the delivery of notifications for nearables with specified identifier.</p>
 
 <p>Once registered, the nearable manager reports any encountered nearable to its delegate by calling the <code>&lt;[ESTNearableManagerDelegate nearableManager:didRangeNearable:]&gt;</code> method. If there is an error registering the specified nearable type, the nearable manager calls its delegate&rsquo;s <code>&lt;[ESTNearableManagerDelegate nearableManager:rangingFailedWithError:]&gt;</code> method and provides the appropriate error information.</p>
+
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <p>stopRangingForType:</p>
@@ -1807,6 +1830,7 @@
                               <td>
                                 <div>
                                   <p>The identifier of nearables. This parameter must not be <code>nil</code></p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1830,6 +1854,7 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Stops the delivery of notifications for the specified nearable identifier.</p>
+
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <p>nearableManager:startRangingForType:</p>
@@ -1863,6 +1888,7 @@
                               <td>
                                 <div>
                                   <p>The identifier of nearables. This parameter must not be <code>nil</code></p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1888,6 +1914,7 @@
                         <p>Starts the delivery of notifications for nearables with specified type.</p>
 
 <p>Once registered, the nearable manager reports any encountered nearable to its delegate by calling the <code>&lt;[ESTNearableManagerDelegate nearableManager:didRangeNearables:withType:]&gt;</code> method. If there is an error registering the specified nearable type, the nearable manager calls its delegate&rsquo;s <code>&lt;[ESTNearableManagerDelegate nearableManager:rangingFailedWithError:]&gt;</code> method and provides the appropriate error information.</p>
+
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <p>stopRangingForType:</p>
@@ -1921,6 +1948,7 @@
                               <td>
                                 <div>
                                   <p>The type of nearables. This parameter must not be <code>nil</code></p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1944,6 +1972,7 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Stops the delivery of notifications for the specified nearable type.</p>
+
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <p>startRangingForType:</p>
@@ -1977,6 +2006,7 @@
                               <td>
                                 <div>
                                   <p>The type of nearables. This parameter must not be <code>nil</code></p>
+
                                 </div>
                               </td>
                             </tr>
@@ -2002,11 +2032,13 @@
                         <p>Stops ranging all types and identifiers that were ranged.</p>
 
 <p>If there is nothing currently being ranged, this method has no effect.</p>
+
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     stopRangingForIdentifier:
 
 </div>
+
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     stopRangingForType:
@@ -2038,8 +2070,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-06-05)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-06-22)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

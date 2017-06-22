@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>ESTSettingSensorsAmbientLight Class Reference</title>
+    <title>ESTRequestV3GetDeviceOwner Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/objc/Class/ESTSettingSensorsAmbientLight" class="dashAnchor"></a>
+    <a name="//apple_ref/objc/Class/ESTRequestV3GetDeviceOwner" class="dashAnchor"></a>
 
-    <a title="ESTSettingSensorsAmbientLight Class Reference"></a>
+    <a title="ESTRequestV3GetDeviceOwner Class Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -43,7 +43,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">EstimoteSDK Reference</a>
       <img class="carat" src="../img/carat.png" />
-      ESTSettingSensorsAmbientLight Class Reference
+      ESTRequestV3GetDeviceOwner Class Reference
     </p>
 
     <div class="content-wrapper">
@@ -1460,14 +1460,14 @@
 
         <section class="section">
           <div class="section-content">
-            <h1>ESTSettingSensorsAmbientLight</h1>
+            <h1>ESTRequestV3GetDeviceOwner</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTSettingSensorsAmbientLight</span> <span class="p">:</span> <span class="nc"><a href="../Classes/ESTSettingReadOnly.html">ESTSettingReadOnly</a></span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="o">&gt;</span></code></pre>
+                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTRequestV3GetDeviceOwner</span> <span class="p">:</span> <span class="nc">ESTRequestGetJSON</span></code></pre>
 
                 </div>
               </div>
-            <p>ESTSettingSensorsAmbientLight represents Sensors AmbientLight value.</p>
+            <p>Allows to get email address of device&rsquo;s owner from the Estimote Cloud.</p>
 
           </div>
         </section>
@@ -1479,9 +1479,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)ESTSettingSensorsAmbientLight(im)initWithValue:"></a>
-                    <a name="//apple_ref/objc/Method/-initWithValue:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)ESTSettingSensorsAmbientLight(im)initWithValue:">-initWithValue:</a>
+                    <a name="/c:objc(cs)ESTRequestV3GetDeviceOwner(im)initWithDeviceIdentifier:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithDeviceIdentifier:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)ESTRequestV3GetDeviceOwner(im)initWithDeviceIdentifier:">-initWithDeviceIdentifier:</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1489,19 +1489,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Designated initializer.</p>
+                        <p>Designated initializer of the class.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithValue</span><span class="p">:(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">ambientLight</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithDeviceIdentifier</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">deviceIdentifier</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="nf">init</span><span class="p">(</span><span class="n">value</span> <span class="nv">ambientLight</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="nf">init</span><span class="p">(</span><span class="nv">deviceIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1512,12 +1513,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>ambientLight</em>
+                                <em>deviceIdentifier</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>Sensors AmbientLight value.</p>
+                                  <p>Device identifier.</p>
 
                                 </div>
                               </td>
@@ -1536,9 +1537,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)ESTSettingSensorsAmbientLight(im)getValue"></a>
-                    <a name="//apple_ref/objc/Method/-getValue" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)ESTSettingSensorsAmbientLight(im)getValue">-getValue</a>
+                    <a name="/c:objc(cs)ESTRequestV3GetDeviceOwner(im)sendRequestWithCompletion:"></a>
+                    <a name="//apple_ref/objc/Method/-sendRequestWithCompletion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)ESTRequestV3GetDeviceOwner(im)sendRequestWithCompletion:">-sendRequestWithCompletion:</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1546,57 +1547,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns current value of Sensors AmbientLight setting.</p>
+                        <p>Sends a request to the Estimote Cloud.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="n">getValue</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sendRequestWithCompletion</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type Definitions.html#/c:ESTRequestV3GetDeviceOwner.h@T@ESTRequestV3GetDeviceOwnerBlock">ESTRequestV3GetDeviceOwnerBlock</a></span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">getValue</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">UInt</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>Sensors AmbientLight value.</p>
-
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)ESTSettingSensorsAmbientLight(im)readValueWithCompletion:"></a>
-                    <a name="//apple_ref/objc/Method/-readValueWithCompletion:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)ESTSettingSensorsAmbientLight(im)readValueWithCompletion:">-readValueWithCompletion:</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Method allows to read value of initialized Sensors AmbientLight setting object.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">readValueWithCompletion</span><span class="p">:</span>
-    <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type Definitions.html#/c:ESTSettingSensorsAmbientLight.h@T@ESTSettingSensorsAmbientLightCompletionBlock">ESTSettingSensorsAmbientLightCompletionBlock</a></span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">readValue</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Type Definitions.html#/c:ESTSettingSensorsAmbientLight.h@T@ESTSettingSensorsAmbientLightCompletionBlock">ESTSettingSensorsAmbientLightCompletionBlock</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">sendRequest</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Type Definitions.html#/c:ESTRequestV3GetDeviceOwner.h@T@ESTRequestV3GetDeviceOwnerBlock">ESTRequestV3GetDeviceOwnerBlock</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1612,18 +1576,13 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Block to be invoked when the operation is complete.</p>
+                                  <p>Request completion block with response and error information. No error means request was successful.</p>
 
                                 </div>
                               </td>
                             </tr>
                           </tbody>
                         </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>Initialized operation object.</p>
-
                       </div>
                     </section>
                   </div>
