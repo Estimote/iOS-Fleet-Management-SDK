@@ -75,7 +75,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  *  Method allows to initialize value object with data
- *  coming from Estimote Cloud request ESTRequestV2GetDeviceDetails.
+ *  coming from Estimote Cloud request ESTRequestGetDeviceDetails.
  *
  *  @param dictionary Dictionary containing parsed JSON data coming from cloud.
  *

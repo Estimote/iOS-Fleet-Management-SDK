@@ -7,7 +7,7 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 4.16.0
+//  Version: 4.16.1
 //  Copyright (c) 2016 Estimote. All rights reserved.
 
 /**
@@ -393,6 +393,9 @@
  *  Cloud API v3 requests
  */
 #import "ESTRequestV3GetFirmwares.h"
+#import "ESTRequestV3GetDeviceOwner.h"
+
+#import "ESTRequestGetDeviceDetails.h"
 
 /**
  * Telemetry support

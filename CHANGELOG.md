@@ -1,3 +1,15 @@
+## 4.16.1 (June 22, 2017)
+
+Improvements:
+
+- deprecated ESTRequestV2GetDeviceDetails, now ESTRequestGetDeviceDetails should be used for fetching device's details from Estimote Cloud
+
+Bugfixes:
+
+- corrected symlinks in EstimoteSDK.framework (previously they made framework file excessively large)
+- fixed not synchronizing properly Here & Now advertiser
+  
+
 ## 4.16.0 (June 5, 2017)
 
 Features:

@@ -515,6 +515,9 @@
                 <a class="nav-group-task-link" href="../Classes/ESTRequestGetBeaconsDetails.html">ESTRequestGetBeaconsDetails</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ESTRequestGetDeviceDetails.html">ESTRequestGetDeviceDetails</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ESTRequestGetNearables.html">ESTRequestGetNearables</a>
               </li>
               <li class="nav-group-task">
@@ -534,6 +537,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ESTRequestV2GetDevices.html">ESTRequestV2GetDevices</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ESTRequestV3GetDeviceOwner.html">ESTRequestV3GetDeviceOwner</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes.html#/c:objc(cs)ESTRequestV3GetFirmwares">ESTRequestV3GetFirmwares</a>
@@ -1204,10 +1210,16 @@
                 <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTNotificationGPIOData.h@T@ESTNotificationGPIODataBlock">ESTNotificationGPIODataBlock</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTRequestGetDeviceDetails.h@T@ESTRequestGetDeviceDetailsBlock">ESTRequestGetDeviceDetailsBlock</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTRequestV2GetDeviceDetails.h@T@ESTRequestV2GetDeviceDetailsBlock">ESTRequestV2GetDeviceDetailsBlock</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTRequestV2GetDevices.h@T@ESTRequestV2GetDevicesBlock">ESTRequestV2GetDevicesBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTRequestV3GetDeviceOwner.h@T@ESTRequestV3GetDeviceOwnerBlock">ESTRequestV3GetDeviceOwnerBlock</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTSettingBase.h@T@ESTSettingCompletionBlock">ESTSettingCompletionBlock</a>
@@ -1515,6 +1527,7 @@
                               <td>
                                 <div>
                                   <p>The nearable manager object reporting the event.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1526,7 +1539,13 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>An array of <code>&lt;ESTNearable&gt;</code> objects representing the nearables currently in range. You can use the information in these objects to determine the range of each nearables and its identifying information.</p>
+                                  <p>An array of `
+&lt;ESTNearable</p>
+
+<blockquote>
+<p>` objects representing the nearables currently in range. You can use the information in these objects to determine the range of each nearables and its identifying information.</p>
+</blockquote>
+
                                 </div>
                               </td>
                             </tr>
@@ -1539,6 +1558,7 @@
                               <td>
                                 <div>
                                   <p>The nearable type that was used to range the nearables.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1591,6 +1611,7 @@
                               <td>
                                 <div>
                                   <p>The nearable manager object reporting the event.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1602,7 +1623,13 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>An <code>&lt;ESTNearable&gt;</code> object representing the nearables currently in range. You can use the information in these objects to determine the range of nearable and its identifying information.</p>
+                                  <p>An `
+&lt;ESTNearable</p>
+
+<blockquote>
+<p>` object representing the nearables currently in range. You can use the information in these objects to determine the range of nearable and its identifying information.</p>
+</blockquote>
+
                                 </div>
                               </td>
                             </tr>
@@ -1655,6 +1682,7 @@
                               <td>
                                 <div>
                                   <p>The nearable manager object reporting the event.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1667,6 +1695,7 @@
                               <td>
                                 <div>
                                   <p>An error object describing why monitoring failed.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1730,6 +1759,7 @@
                               <td>
                                 <div>
                                   <p>The nearable manager object reporting the event.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1742,6 +1772,7 @@
                               <td>
                                 <div>
                                   <p>The nearable type region that was entered.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1794,6 +1825,7 @@
                               <td>
                                 <div>
                                   <p>The nearable manager object reporting the event.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1806,6 +1838,7 @@
                               <td>
                                 <div>
                                   <p>The nearable type region that was exited.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1858,6 +1891,7 @@
                               <td>
                                 <div>
                                   <p>The nearable manager object reporting the event.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1870,6 +1904,7 @@
                               <td>
                                 <div>
                                   <p>The nearable identifier region that was entered.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1922,6 +1957,7 @@
                               <td>
                                 <div>
                                   <p>The nearable manager object reporting the event.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1934,6 +1970,7 @@
                               <td>
                                 <div>
                                   <p>The nearable identifier region that was exited.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1986,6 +2023,7 @@
                               <td>
                                 <div>
                                   <p>The beacon manager object reporting the event.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1998,6 +2036,7 @@
                               <td>
                                 <div>
                                   <p>An error object describing why monitoring failed.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -2015,8 +2054,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-06-05)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-06-22)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>
