@@ -1,3 +1,10 @@
+## 4.16.2 (June 23, 2017)
+
+Bugfixes:
+
+- further framework size optimization
+  
+
 ## 4.16.1 (June 22, 2017)
 
 Improvements:
