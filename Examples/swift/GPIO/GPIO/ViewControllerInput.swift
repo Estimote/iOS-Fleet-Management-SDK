@@ -16,6 +16,7 @@ class ViewControllerInput: UIViewController, ESTDeviceManagerDelegate, ESTDevice
     
     var checkPortZeroStateTimer: Timer?
     var portZeroStateCheckInterval: TimeInterval = 0.02
+    // TODO: put input beacon's identifier here
     let deviceUsedForInputIdentifier: String = <#Identifier of your input beacon#>
     var deviceUsedForInput: ESTDeviceLocationBeacon?
     lazy var deviceManagerForInput: ESTDeviceManager = {

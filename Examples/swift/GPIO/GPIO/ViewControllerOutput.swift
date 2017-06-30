@@ -16,6 +16,7 @@ class ViewControllerOutput: UIViewController, ESTDeviceManagerDelegate, ESTDevic
     @IBOutlet weak var lightbulbSwitch: UIButton!
     
     var deviceUsedForOutput: ESTDeviceLocationBeacon?
+    // TODO: put output beacon's identifier here
     let deviceUsedForOutputIdentifier: String = <#Identifier of your output beacon#>
     lazy var deviceManagerForOutput: ESTDeviceManager = {
         let manager = ESTDeviceManager()
