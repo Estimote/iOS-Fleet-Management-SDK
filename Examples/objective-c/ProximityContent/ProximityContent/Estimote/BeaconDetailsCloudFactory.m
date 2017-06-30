@@ -10,19 +10,17 @@
 
 @implementation BeaconDetailsCloudFactory
 
-- (void)contentForBeaconID:(BeaconID *)beaconID completion:(void (^)(id))completion {
-    ESTRequestBeaconDetails *beaconDetailsRequest = [[ESTRequestBeaconDetails alloc] initWithProximityUUID:beaconID.proximityUUID major:beaconID.major minor:beaconID.minor];
+- (void)contentForBeacon:(CLBeacon *)beacon completion:(void (^)(id))completion {
+    ESTRequestGetBeaconsDetails *beaconDetailsRequest = [[ESTRequestGetBeaconsDetails alloc] initWithBeacons:@[beacon] andFields:ESTBeaconDetailsAllFields];
 
-    [beaconDetailsRequest sendRequestWithCompletion:^(ESTBeaconVO *beaconVO, NSError *error) {
+    [beaconDetailsRequest sendRequestWithCompletion:^(NSArray <ESTBeaconVO *> *beaconVO, NSError *error) {
         if (!error) {
-            completion([[BeaconDetails alloc] initWithBeaconName:beaconVO.name beaconColor:beaconVO.color]);
+            completion([[BeaconDetails alloc] initWithBeaconName:beaconVO.firstObject.name beaconColor:beaconVO.firstObject.color]);
         } else {
-            NSLog(@"Couldn't fetch data from Estimote Cloud for beacon %@, will use default values instead. Double-check if the app ID and app token provided in the AppDelegate are correct, and if the beacon with such ID is assigned to your Estimote Account. The error was: %@", beaconID, error);
+            NSLog(@"Couldn't fetch data from Estimote Cloud for beacon %@, will use default values instead. Double-check if the app ID and app token provided in the AppDelegate are correct, and if the beacon with such ID is assigned to your Estimote Account. The error was: %@", beacon.beaconID, error);
             completion([[BeaconDetails alloc] initWithBeaconName:@"beacon" beaconColor:ESTColorUnknown]);
         }
     }];
 }
-
-
 
 @end

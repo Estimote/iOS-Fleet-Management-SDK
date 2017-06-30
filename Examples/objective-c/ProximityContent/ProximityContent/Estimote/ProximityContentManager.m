@@ -42,9 +42,9 @@
     [self.nearestBeaconManager stopNearestBeaconUpdates];
 }
 
-- (void)nearestBeaconManager:(NearestBeaconManager *)nearestBeaconManager didUpdateNearestBeaconID:(BeaconID *)beaconID {
-    if (beaconID) {
-        [self.beaconContentFactory contentForBeaconID:beaconID completion:^(id content) {
+- (void)nearestBeaconManager:(NearestBeaconManager *)nearestBeaconManager didUpdateNearestBeacon:(CLBeacon *)beacon {
+    if (beacon) {
+        [self.beaconContentFactory contentForBeacon:beacon completion:^(id content) {
             [self.delegate proximityContentManager:self didUpdateContent:content];
         }];
     } else {

@@ -6,6 +6,6 @@
 
 @protocol BeaconContentFactory <NSObject>
 
-- (void)contentForBeaconID:(BeaconID *)beaconID completion:(void (^)(id content))completion;
+- (void)contentForBeacon:(CLBeacon *)beacon completion:(void (^)(id content))completion;
 
 @end

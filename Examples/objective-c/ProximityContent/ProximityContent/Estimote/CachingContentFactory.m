@@ -23,13 +23,13 @@
     return self;
 }
 
-- (void)contentForBeaconID:(BeaconID *)beaconID completion:(void (^)(id))completion {
-    id content = [self.cachedContent objectForKey:beaconID];
+- (void)contentForBeacon:(CLBeacon *)beacon completion:(void (^)(id content))completion {
+    id content = [self.cachedContent objectForKey:beacon.beaconID];
     if (content) {
         completion(content);
     } else {
-        [self.beaconContentFactory contentForBeaconID:beaconID completion:^(id content) {
-            self.cachedContent[beaconID] = content;
+        [self.beaconContentFactory contentForBeacon:beacon completion:^(id content) {
+            self.cachedContent[beacon.beaconID] = content;
             completion(content);
         }];
     }

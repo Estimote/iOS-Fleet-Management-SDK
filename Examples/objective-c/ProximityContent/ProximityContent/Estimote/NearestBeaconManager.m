@@ -10,7 +10,7 @@
 
 @property (nonatomic) ESTBeaconManager *beaconManager;
 
-@property (nonatomic) BeaconID *nearestBeaconID;
+@property (nonatomic) CLBeacon *nearestBeacon;
 @property (nonatomic) BOOL firstEventSent;
 
 @end
@@ -47,11 +47,11 @@
 - (void)beaconManager:(id)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region {
     CLBeacon *nearestBeacon = beacons.firstObject;
 
-    if (!(nearestBeacon.beaconID == nil && self.nearestBeaconID == nil)
-            || ![nearestBeacon.beaconID isEqual:self.nearestBeaconID]
+    if (!(nearestBeacon.beaconID == nil && self.nearestBeacon == nil)
+            || ![nearestBeacon.beaconID isEqual:self.nearestBeacon.beaconID]
             || !self.firstEventSent) {
-        self.nearestBeaconID = nearestBeacon.beaconID;
-        [self.delegate nearestBeaconManager:self didUpdateNearestBeaconID:self.nearestBeaconID];
+        self.nearestBeacon = nearestBeacon;
+        [self.delegate nearestBeaconManager:self didUpdateNearestBeacon:self.nearestBeacon];
         self.firstEventSent = true;
     }
 }

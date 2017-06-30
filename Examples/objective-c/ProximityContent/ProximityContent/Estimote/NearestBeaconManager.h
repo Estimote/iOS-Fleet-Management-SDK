@@ -10,7 +10,7 @@
 
 @protocol NearestBeaconManagerDelegate <NSObject>
 
-- (void)nearestBeaconManager:(NearestBeaconManager *)nearestBeaconManager didUpdateNearestBeaconID:(BeaconID *)beaconID;
+- (void)nearestBeaconManager:(NearestBeaconManager *)nearestBeaconManager didUpdateNearestBeacon:(CLBeacon *)beacon;
 
 @end
 
