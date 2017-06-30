@@ -36,7 +36,7 @@ class ViewController: UIViewController, ESTLocationBeaconBulkUpdaterDelegate, UI
         bulkUpdater = ESTLocationBeaconBulkUpdater.init()
         bulkUpdater.delegate = self
   
-        bulkUpdater.startCloudUpdate()
+        bulkUpdater.start()
     }
     
     // MARK: - Bulk Updater
@@ -44,7 +44,7 @@ class ViewController: UIViewController, ESTLocationBeaconBulkUpdaterDelegate, UI
     /**
      *  bulk bulkUpdaterDidFinish informs that update of beacons was successfull
      */
-    func bulkUpdaterDidFinish(bulkUpdater: ESTLocationBeaconBulkUpdater!) {
+    func bulkUpdaterDidFinish(_ bulkUpdater: ESTLocationBeaconBulkUpdater!) {
         
         self.updateStatusLabel.text = "Beacons update finished."
         self.activityIndicator.stopAnimating()
@@ -54,7 +54,7 @@ class ViewController: UIViewController, ESTLocationBeaconBulkUpdaterDelegate, UI
      *  bulkUpdater:didUpdateStatus:forDeviceWithIdentifier
      *  Informs bulkUpdater delegate about a change of status for certain device.
      */
-    func bulkUpdater(bulkUpdater: ESTLocationBeaconBulkUpdater!, didUpdateStatus updateStatus: ESTBulkUpdaterDeviceUpdateStatus, forDeviceWithIdentifier deviceIdentifier: String!) {
+    func bulkUpdater(_ bulkUpdater: ESTLocationBeaconBulkUpdater!, didUpdateStatus updateStatus: ESTBulkUpdaterDeviceUpdateStatus, forDeviceWithIdentifier deviceIdentifier: String!) {
         
         /**
          *  Setting up allCount variable as the number of elements in array updateConfigurations
@@ -77,24 +77,24 @@ class ViewController: UIViewController, ESTLocationBeaconBulkUpdaterDelegate, UI
          *
          *  Saving update status for each identifier in dictionary to show it later in UITableView
          */
-        case .Failed:
+        case .failed:
             failuresCount = failuresCount + 1
             statusesDictionary[deviceIdentifier] = "Failed"
             break;
-        case.Succeeded:
+        case.succeeded:
             successCount = successCount + 1
             statusesDictionary[deviceIdentifier] = "Succeded"
             break
-        case.Scanning:
+        case.scanning:
             statusesDictionary[deviceIdentifier] = "Scanning"
             break
-        case.PendingUpdate:
+        case.pendingUpdate:
             statusesDictionary[deviceIdentifier] = "Pending update"
             break
-        case.Updating:
+        case.updating:
             statusesDictionary[deviceIdentifier] = "Updating"
             break
-        case.OutOfRange:
+        case.outOfRange:
             statusesDictionary[deviceIdentifier] = "Out of range"
             break
         default:
@@ -105,33 +105,34 @@ class ViewController: UIViewController, ESTLocationBeaconBulkUpdaterDelegate, UI
         /**
          *  Updating Status and Count labels and varibles after status update
          */
-        dispatch_async(dispatch_get_main_queue(), {
-            
+        DispatchQueue.main.async {
             self.beaconListTableView.reloadData()
             self.updateCountLabel.text = "\(self.successCount + self.failuresCount)/\(self.allCount)"
             self.sessionProgressLabel.text = "During this session: \(self.failuresCount) fails, \(self.successCount) successes."
             self.updateStatusLabel.text = "Beacons update in progrss"
-        })
+        }
     }
     
     // MARK: - UITableViewDelegate
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = self.beaconListTableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
+        let cell = self.beaconListTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        cell.textLabel?.text = bulkUpdater.updateConfigurations[indexPath.row].deviceIdentifier
-        cell.detailTextLabel?.text = statusesDictionary[bulkUpdater.updateConfigurations[indexPath.row].deviceIdentifier]
+        if let configuration = bulkUpdater.updateConfigurations[indexPath.row] as? ESTLocationBeaconBulkUpdateConfiguration {
+            cell.textLabel?.text = configuration.deviceIdentifier
+            cell.detailTextLabel?.text = statusesDictionary[configuration.deviceIdentifier]
+        }
         
         return cell
     }
-    
+
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
         return 1
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if self.bulkUpdater.updateConfigurations != nil {
             return self.bulkUpdater.updateConfigurations.count
@@ -139,11 +140,6 @@ class ViewController: UIViewController, ESTLocationBeaconBulkUpdaterDelegate, UI
         else {
             return 0
         }
-    }
- 
-    override func didReceiveMemoryWarning() {
-        
-        super.didReceiveMemoryWarning()
     }
     
 }
