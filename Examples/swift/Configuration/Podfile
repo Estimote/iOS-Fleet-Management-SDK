@@ -1,11 +1,4 @@
-# Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
-
-target 'Configuration' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-  use_frameworks!
-
-  # Pods for Configuration
-  pod 'SwiftState', '~> 4.1'
-
+use_frameworks!
+target "Configuration" do
+	pod 'SwiftState', :git => 'https://github.com/ReactKit/SwiftState.git', :branch => 'swift/3.0'
 end

@@ -41,7 +41,7 @@ func normalizedRSSIForBeaconWithIdentifier(_ identifier: String, RSSI: Int) -> I
         // ban this identifier for the duration of the request, so that we don't send out another request
         bannedIdentifiers.insert(identifier)
 
-        let request = ESTRequestV2GetDeviceDetails(deviceIdentifier: identifier)
+        let request = ESTRequestGetDeviceDetails(deviceIdentifier: identifier)
         NSLog("requesting Tx power info for \(identifier)")
         request.sendRequest { deviceDetails, error in
             if let deviceDetails = deviceDetails {
