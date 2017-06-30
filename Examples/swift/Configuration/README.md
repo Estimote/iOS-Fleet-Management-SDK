@@ -2,11 +2,11 @@
 
 **IMPORTANT:** The Configuration app works only with [Location Beacons](http://blog.estimote.com/post/139902664710/launching-the-most-robust-location-beacons-on-the) (hardware revision "F") and [next-gen Proximity Beacons](http://blog.estimote.com/post/147038205465/announcing-next-gen-proximity-beacons-with) (hardware revision "G") at this time.
 
-This app uses a few external dependencies managed through [Carthage](https://github.com/Carthage/Carthage).
+This app uses a few external dependencies managed through [CocoaPods](https://github.com/CocoaPods/CocoaPods).
 
-You must install and run Carthage before building this app:
+You must install and run CocoaPods before building this app:
 
-1.  Follow [Carthage installation instructions](https://github.com/Carthage/Carthage#installing-carthage).
+1.  Follow [CocoaPods installation instructions](http://guides.cocoapods.org/using/getting-started.html#installation).
 
 2.  Open Terminal and navigate to this directory.
 
@@ -17,8 +17,11 @@ You must install and run Carthage before building this app:
 3.  Run Carthage.
 
    ```
-   $ carthage bootstrap --platform iOS
+   $ pod install
    ```
+
+ 4.  Open Configuration.xcworkspace.
+
 
 #### Extras
 
