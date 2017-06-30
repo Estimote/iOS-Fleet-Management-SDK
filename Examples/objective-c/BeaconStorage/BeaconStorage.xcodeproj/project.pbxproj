@@ -56,7 +56,6 @@
 			children = (
 				ECCBDC861DC0EAAA00556B72 /* BeaconStorage */,
 				ECCBDC851DC0EAAA00556B72 /* Products */,
-				ECCBDCAA1DC0F40200556B72 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +85,7 @@
 				ECCBDC951DC0EAAA00556B72 /* LaunchScreen.storyboard */,
 				ECCBDC981DC0EAAA00556B72 /* Info.plist */,
 				ECCBDC871DC0EAAA00556B72 /* Supporting Files */,
+				ECCBDCAA1DC0F40200556B72 /* Estimote */,
 			);
 			path = BeaconStorage;
 			sourceTree = "<group>";
@@ -98,12 +98,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		ECCBDCAA1DC0F40200556B72 /* Frameworks */ = {
+		ECCBDCAA1DC0F40200556B72 /* Estimote */ = {
 			isa = PBXGroup;
 			children = (
 				95B911071ECB3B6B008B5052 /* EstimoteSDK.framework */,
 			);
-			name = Frameworks;
+			name = Estimote;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,7 +133,7 @@
 		ECCBDC7C1DC0EAAA00556B72 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = Estimote;
 				TargetAttributes = {
 					ECCBDC831DC0EAAA00556B72 = {
@@ -220,12 +221,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -267,12 +269,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -300,7 +303,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -317,6 +320,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
 				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

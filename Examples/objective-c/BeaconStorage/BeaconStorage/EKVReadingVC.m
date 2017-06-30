@@ -79,7 +79,7 @@
         self.textView.hidden = NO;
         self.textView.alpha = 0.5;
     } else {
-        NSLog(@"Found devices: %d", devices.count);
+        NSLog(@"Found devices: %lu", (unsigned long)devices.count);
     }
 }
 
