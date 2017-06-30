@@ -2,15 +2,15 @@
 // Please report any problems with this app template to contact@estimote.com
 //
 
-enum GeoLocatorError: ErrorType {
-    case InsufficientPermissions, NoLocationFound
+enum GeoLocatorError: Error {
+    case insufficientPermissions, noLocationFound
 }
 
 protocol GeoLocatorDelegate: class {
 
-    func geoLocator(geoLocator: GeoLocator, didDetermineLocation location: CLLocation)
+    func geoLocator(_ geoLocator: GeoLocator, didDetermineLocation location: CLLocation)
 
-    func geoLocator(geoLocator: GeoLocator, didFailWithError error: GeoLocatorError)
+    func geoLocator(_ geoLocator: GeoLocator, didFailWithError error: GeoLocatorError)
 
 }
 
@@ -21,12 +21,12 @@ class GeoLocator: NSObject, CLLocationManagerDelegate {
         return authRequestInProgress || locationUpdatesInProgress
     }
 
-    private let locationManager = CLLocationManager()
-    private var currentLocation: CLLocation?
-    private var timeoutTimer: NSTimer!
+    fileprivate let locationManager = CLLocationManager()
+    fileprivate var currentLocation: CLLocation?
+    fileprivate var timeoutTimer: Timer!
 
-    private var authRequestInProgress = false
-    private var locationUpdatesInProgress = false
+    fileprivate var authRequestInProgress = false
+    fileprivate var locationUpdatesInProgress = false
 
     init(delegate: GeoLocatorDelegate) {
         self.delegate = delegate
@@ -39,20 +39,20 @@ class GeoLocator: NSObject, CLLocationManagerDelegate {
 
     func requestLocation() {
         switch CLLocationManager.authorizationStatus() {
-        case .NotDetermined:
+        case .notDetermined:
             authRequestInProgress = true
             locationManager.requestWhenInUseAuthorization()
-        case .AuthorizedWhenInUse, .AuthorizedAlways:
+        case .authorizedWhenInUse, .authorizedAlways:
             locationUpdatesInProgress = true
             locationManager.startUpdatingLocation()
-            timeoutTimer = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: #selector(finishWithCurrentLocation), userInfo: nil, repeats: false)
+            timeoutTimer = Timer.scheduledTimer(timeInterval: 10, target: self, selector: #selector(finishWithCurrentLocation), userInfo: nil, repeats: false)
         default:
-            delegate.geoLocator(self, didFailWithError: .InsufficientPermissions)
+            delegate.geoLocator(self, didFailWithError: .insufficientPermissions)
         }
     }
 
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.filter({ $0.horizontalAccuracy >= 0 }).minElement({ $0.horizontalAccuracy < $1.horizontalAccuracy }) else { return }
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.filter({ $0.horizontalAccuracy >= 0 }).min(by: { $0.horizontalAccuracy < $1.horizontalAccuracy }) else { return }
         NSLog(location.debugDescription)
         if currentLocation == nil || currentLocation!.horizontalAccuracy > location.horizontalAccuracy {
             currentLocation = location
@@ -63,18 +63,18 @@ class GeoLocator: NSObject, CLLocationManagerDelegate {
         }
     }
 
-    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         if authRequestInProgress {
             authRequestInProgress = false
             requestLocation()
         }
     }
 
-    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         locationUpdatesInProgress = false
     }
 
-    @objc private func finishWithCurrentLocation() {
+    @objc fileprivate func finishWithCurrentLocation() {
         timeoutTimer.invalidate()
 
         locationUpdatesInProgress = false
@@ -83,7 +83,7 @@ class GeoLocator: NSObject, CLLocationManagerDelegate {
         if let location = currentLocation {
             delegate.geoLocator(self, didDetermineLocation: location)
         } else {
-            delegate.geoLocator(self, didFailWithError: .NoLocationFound)
+            delegate.geoLocator(self, didFailWithError: .noLocationFound)
         }
     }
 

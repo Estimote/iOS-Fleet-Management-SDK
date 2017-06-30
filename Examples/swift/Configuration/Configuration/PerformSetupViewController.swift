@@ -41,12 +41,12 @@ class PerformSetupViewController: UIViewController, MFMailComposeViewControllerD
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let blurView = UIVisualEffectView(effect: UIBlurEffect(style: .Dark))
+        let blurView = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
         blurView.frame = view.bounds
-        view.insertSubview(blurView, atIndex: 0)
+        view.insertSubview(blurView, at: 0)
     }
 
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
         // quick hack to make it so that when after a failed setup the MailComposeVC is invoked, and then dismissed, and this VC appears again, it won't automatically re-trigger the setup process
@@ -56,7 +56,7 @@ class PerformSetupViewController: UIViewController, MFMailComposeViewControllerD
         }
     }
 
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "NextBeacon" {
             beacon.disconnect()
         }
@@ -64,20 +64,20 @@ class PerformSetupViewController: UIViewController, MFMailComposeViewControllerD
 
     // MARK: Setup flow
 
-    private func startSetup() {
+    fileprivate func startSetup() {
         activityIndicator.startAnimating()
 
         mainStatusLabel.text = "Starting setup"
         detailStatusLabel.text = "..."
-        statusIconLabel.hidden = true
+        statusIconLabel.isHidden = true
 
-        errorActionsView.hidden = true
-        actionsView.hidden = true
+        errorActionsView.isHidden = true
+        actionsView.isHidden = true
 
         updateFirmware()
     }
 
-    private func updateFirmware() {
+    fileprivate func updateFirmware() {
         self.mainStatusLabel.text = "Checking for firmware update"
         self.detailStatusLabel.text = "..."
 
@@ -96,15 +96,15 @@ class PerformSetupViewController: UIViewController, MFMailComposeViewControllerD
         )
     }
 
-    private func writeSettings() {
+    fileprivate func writeSettings() {
         self.mainStatusLabel.text = "Writing settings"
         self.detailStatusLabel.text = "..."
 
         let beaconSettings = beaconSettingsForConfig(beaconConfig)
 
         // if changing the power level of the connectivity packet, invalidate the entry in the global cache
-        if let newPowerLevel = beaconSettings.filter({ $0 is ESTSettingConnectivityPower }).first as? ESTSettingConnectivityPower where newPowerLevel.getValue() != beacon.settings!.connectivity.power.getValue() {
-            cachedTxPowers.removeValueForKey(beacon.identifier)
+        if let newPowerLevel = beaconSettings.filter({ $0 is ESTSettingConnectivityPower }).first as? ESTSettingConnectivityPower, newPowerLevel.getValue() != beacon.settings!.connectivity.power.getValue() {
+            cachedTxPowers.removeValue(forKey: beacon.identifier)
         }
 
         writeSettingsToBeacon(beacon,
@@ -115,7 +115,7 @@ class PerformSetupViewController: UIViewController, MFMailComposeViewControllerD
             }, completion: { failedOperations in
                 if failedOperations.count > 0 {
                     self.onSetupError("Writing settings failed",
-                        errorLog: failedOperations.map { "===> \($0.operationIdentifier)\n\($0.error)" }.joinWithSeparator("\n\n"))
+                        errorLog: failedOperations.map { "===> \($0.operationIdentifier)\n\($0.error)" }.joined(separator: "\n\n"))
                 } else {
                     self.onSetupSuccess()
                 }
@@ -123,7 +123,7 @@ class PerformSetupViewController: UIViewController, MFMailComposeViewControllerD
         )
     }
 
-    private func saveToCustomBackend() {
+    fileprivate func saveToCustomBackend() {
 //        self.mainStatusLabel.text = "Saving data in ACME backend"
 //        self.detailStatusLabel.text = "..."
 
@@ -132,38 +132,38 @@ class PerformSetupViewController: UIViewController, MFMailComposeViewControllerD
 
     // MARK: Setup completion
 
-    private func onSetupError(shortDescription: String, errorLog: String) {
+    fileprivate func onSetupError(_ shortDescription: String, errorLog: String) {
         activityIndicator.stopAnimating()
 
         mainStatusLabel.text = shortDescription
         detailStatusLabel.text = "Try again, or try another beacon"
 
-        statusIconLabel.hidden = false
+        statusIconLabel.isHidden = false
         statusIconLabel.text = "✗"
 
-        errorActionsView.hidden = false
-        actionsView.hidden = false
+        errorActionsView.isHidden = false
+        actionsView.isHidden = false
 
         lastErrorLog = errorLog
     }
 
-    private func onSetupSuccess() {
+    fileprivate func onSetupSuccess() {
         activityIndicator.stopAnimating()
 
         mainStatusLabel.text = "Done!"
         detailStatusLabel.text = "You can install the beacon now"
 
-        statusIconLabel.hidden = false
+        statusIconLabel.isHidden = false
         statusIconLabel.text = "✔"
 
-        actionsView.hidden = false
+        actionsView.isHidden = false
 
         beacon.disconnect()
     }
 
     // MARK: UI handling
 
-    @IBAction func emailErrorLogTapped(sender: AnyObject) {
+    @IBAction func emailErrorLogTapped(_ sender: AnyObject) {
         let recipientEmail = "piotr@estimote.com"
 
         if MFMailComposeViewController.canSendMail() {
@@ -172,22 +172,22 @@ class PerformSetupViewController: UIViewController, MFMailComposeViewControllerD
             mailComposeVC.setSubject("Setup problem for beacon \(beacon.identifier)")
             mailComposeVC.setToRecipients([recipientEmail])
             mailComposeVC.setMessageBody(lastErrorLog, isHTML: false)
-            presentViewController(mailComposeVC, animated: true, completion: nil)
+            present(mailComposeVC, animated: true, completion: nil)
         } else {
-            UIPasteboard.generalPasteboard().string = lastErrorLog
-            let alert = UIAlertController(title: "Can't email the error log", message: "This device is not configured for sending email. The error log was copied to the clipboard instead—please send it to \(recipientEmail) yourself.", preferredStyle: .Alert)
-            let action = UIAlertAction(title: "OK", style: .Default, handler: nil)
+            UIPasteboard.general.string = lastErrorLog
+            let alert = UIAlertController(title: "Can't email the error log", message: "This device is not configured for sending email. The error log was copied to the clipboard instead—please send it to \(recipientEmail) yourself.", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
             alert.addAction(action)
-            presentViewController(alert, animated: true, completion: nil)
+            present(alert, animated: true, completion: nil)
         }
     }
 
-    @IBAction func retryTapped(sender: AnyObject) {
+    @IBAction func retryTapped(_ sender: AnyObject) {
         startSetup()
     }
 
-    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
-        dismissViewControllerAnimated(true, completion: nil)
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        dismiss(animated: true, completion: nil)
     }
 
 }

@@ -45,15 +45,15 @@ class BeaconSetupViewController: UIViewController, GeoLocatorDelegate {
     @IBOutlet weak var geoLocationLabel: UILabel!
     @IBOutlet weak var geoLocationSpinner: UIActivityIndicatorView!
 
-    @IBAction func handleTapGesture(sender: UITapGestureRecognizer) {
+    @IBAction func handleTapGesture(_ sender: UITapGestureRecognizer) {
         view.endEditing(true)
     }
 
-    @IBAction func handleAisleNumberChanged(sender: UITextField) {
+    @IBAction func handleAisleNumberChanged(_ sender: UITextField) {
         validate()
     }
 
-    @IBAction func handlePlacementChanged(sender: UISegmentedControl) {
+    @IBAction func handlePlacementChanged(_ sender: UISegmentedControl) {
         validate()
     }
 
@@ -63,7 +63,7 @@ class BeaconSetupViewController: UIViewController, GeoLocatorDelegate {
         geoLocator = GeoLocator(delegate: self)
         geoLocator.requestLocation()
 
-        appBecomeActiveObserver = NSNotificationCenter.defaultCenter().addObserverForName(UIApplicationDidBecomeActiveNotification, object: nil, queue: nil) { notification in
+        appBecomeActiveObserver = NotificationCenter.default.addObserver(forName: NSNotification.Name.UIApplicationDidBecomeActive, object: nil, queue: nil) { notification in
             // when we're coming back from the Settings app (because we asked the user to allow Location Services access), let's retry obtaining geolocation
             if self.geoLocation == nil && !self.geoLocator.requestInProgress {
                 self.geoLocator.requestLocation()
@@ -72,10 +72,10 @@ class BeaconSetupViewController: UIViewController, GeoLocatorDelegate {
     }
 
     deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(appBecomeActiveObserver)
+        NotificationCenter.default.removeObserver(appBecomeActiveObserver)
     }
 
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
         beaconIDLabel.text = beacon.identifier
@@ -85,7 +85,7 @@ class BeaconSetupViewController: UIViewController, GeoLocatorDelegate {
     // MARK: Config validation & creation
 
     func validate() {
-        saveButton.enabled = selectedTag != nil && geoLocation != nil && placementSegmentedControl.selectedSegmentIndex != UISegmentedControlNoSegment
+        saveButton.isEnabled = selectedTag != nil && geoLocation != nil && placementSegmentedControl.selectedSegmentIndex != UISegmentedControlNoSegment
     }
 
     func createConfig() -> BeaconConfig {
@@ -99,29 +99,29 @@ class BeaconSetupViewController: UIViewController, GeoLocatorDelegate {
 
     // MARK: Navigation
 
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "PerformSetup" {
-            let setupVC = segue.destinationViewController as! PerformSetupViewController
+            let setupVC = segue.destination as! PerformSetupViewController
             setupVC.beacon = beacon
             setupVC.beaconConfig = createConfig()
         } else if segue.identifier == "ShowTagsPicker" {
-            let tagsVC = (segue.destinationViewController as! UINavigationController).topViewController as! TagsViewController
+            let tagsVC = (segue.destination as! UINavigationController).topViewController as! TagsViewController
             tagsVC.selectedTag = selectedTag
         } else if segue.identifier == "CancelSetup" {
             beacon.disconnect()
         }
     }
 
-    @IBAction func backToBeaconSetup(segue: UIStoryboardSegue) {
+    @IBAction func backToBeaconSetup(_ segue: UIStoryboardSegue) {
         if segue.identifier == "SaveTags" {
-            let tagsVC = segue.sourceViewController as! TagsViewController
+            let tagsVC = segue.source as! TagsViewController
             selectedTag = tagsVC.selectedTag
         }
     }
 
     // MARK: GeoLocator delegate
 
-    func geoLocator(geoLocator: GeoLocator, didDetermineLocation location: CLLocation) {
+    func geoLocator(_ geoLocator: GeoLocator, didDetermineLocation location: CLLocation) {
         geoLocation = location
 
         geoLocationLabel.text = String(format: "%.2f, %.2f, ± %.0f m", geoLocation!.coordinate.latitude, geoLocation!.coordinate.longitude, geoLocation!.horizontalAccuracy)
@@ -129,23 +129,23 @@ class BeaconSetupViewController: UIViewController, GeoLocatorDelegate {
         validate()
     }
 
-    func geoLocator(geoLocator: GeoLocator, didFailWithError error: GeoLocatorError) {
+    func geoLocator(_ geoLocator: GeoLocator, didFailWithError error: GeoLocatorError) {
         switch error {
-        case .NoLocationFound:
-            let alert = UIAlertController(title: "Couldn't obtain geolocation", message: "Try moving to a slightly different spot, for better GPS or WiFi coverage.", preferredStyle: .Alert)
-            let action = UIAlertAction(title: "Retry", style: .Default) { action in
+        case .noLocationFound:
+            let alert = UIAlertController(title: "Couldn't obtain geolocation", message: "Try moving to a slightly different spot, for better GPS or WiFi coverage.", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Retry", style: .default) { action in
                 geoLocator.requestLocation()
             }
             alert.addAction(action)
-            self.presentViewController(alert, animated: true, completion: nil)
+            self.present(alert, animated: true, completion: nil)
 
-        case .InsufficientPermissions:
-            let alert = UIAlertController(title: "Couldn't obtain geolocation", message: "This app is not authorized to access Location Services. Go to Settings and set Location access to While Using the App.", preferredStyle: .Alert)
-            let action = UIAlertAction(title: "Go to Settings", style: .Default) { action in
-                UIApplication.sharedApplication().openURL(NSURL(string: UIApplicationOpenSettingsURLString)!)
+        case .insufficientPermissions:
+            let alert = UIAlertController(title: "Couldn't obtain geolocation", message: "This app is not authorized to access Location Services. Go to Settings and set Location access to While Using the App.", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Go to Settings", style: .default) { action in
+                UIApplication.shared.openURL(URL(string: UIApplicationOpenSettingsURLString)!)
             }
             alert.addAction(action)
-            self.presentViewController(alert, animated: true, completion: nil)
+            self.present(alert, animated: true, completion: nil)
         }
     }
 

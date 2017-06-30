@@ -13,25 +13,25 @@ class TagsViewController: UITableViewController {
 
     var selectedTag: String?
 
-    let sortedTags = Array(tagsAndMajorsMapping.keys).sort()
+    let sortedTags = Array(tagsAndMajorsMapping.keys).sorted()
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sortedTags.count
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Tag", forIndexPath: indexPath)
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Tag", for: indexPath)
         let tag = sortedTags[indexPath.row]
         cell.textLabel!.text = tag
         if tag == selectedTag {
-            cell.accessoryType = .Checkmark
+            cell.accessoryType = .checkmark
         } else {
-            cell.accessoryType = .None
+            cell.accessoryType = .none
         }
         return cell
     }
 
-    override func tableView(tableView:  UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView:  UITableView, didSelectRowAt indexPath: IndexPath) {
         let tag = sortedTags[indexPath.row]
         selectedTag = tag
         tableView.reloadData()

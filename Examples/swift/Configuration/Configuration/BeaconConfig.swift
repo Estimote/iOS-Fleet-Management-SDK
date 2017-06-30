@@ -25,13 +25,13 @@ struct BeaconConfig {
 }
 
 enum Placement: Int {
-    case OpenArea, ShortAisle, LongAisle
+    case openArea, shortAisle, longAisle
 
     var powerLevel: ESTIBeaconPower {
         switch self {
-        case .OpenArea:   return .Level2
-        case .ShortAisle: return .Level2
-        case .LongAisle:  return .Level3
+        case .openArea:   return .level2
+        case .shortAisle: return .level2
+        case .longAisle:  return .level3
         }
     }
 }
@@ -50,7 +50,7 @@ let tagsAndMajorsMapping: [String: UInt16] = [
 /**
  This function is meant to return an array of settings to write to the beacon. It takes `BeaconConfig` as its input parameter to allow customizing some hardware settings in response to the beacon configuration. For example, you might want all your beacons to be set to a certain UUID, but vary their major number based on the tag picked by the user.
  */
-func beaconSettingsForConfig(config: BeaconConfig) -> [ESTSettingReadWrite] {
+func beaconSettingsForConfig(_ config: BeaconConfig) -> [ESTSettingReadWrite] {
     var tagsToSave = Set<String>([config.tag])
     if let aisleNumber = config.aisleNumber {
         tagsToSave.insert("aisle \(aisleNumber)")
@@ -58,7 +58,7 @@ func beaconSettingsForConfig(config: BeaconConfig) -> [ESTSettingReadWrite] {
 
     return [
         ESTSettingDeviceInfoTags(value: tagsToSave),
-        ESTSettingDeviceInfoGeoLocation(value: ESTDeviceGeoLocation(latitude: config.geoLocation.latitude, longitude: config.geoLocation.longitude)),
+        ESTSettingDeviceInfoGeoLocation(value: ESTDeviceGeoLocation(latitude: NSNumber(config.geoLocation.latitude), longitude: config.geoLocation.longitude)),
 
         ESTSettingPowerSmartPowerModeEnable(value: true),
 
@@ -67,13 +67,13 @@ func beaconSettingsForConfig(config: BeaconConfig) -> [ESTSettingReadWrite] {
         ESTSettingIBeaconInterval(value: 250)!,
         ESTSettingIBeaconPower(value: config.placement.powerLevel)!,
         ESTSettingIBeaconMajor(value: tagsAndMajorsMapping[config.tag]!)!,
-        ESTSettingIBeaconProximityUUID(value: NSUUID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!),
+        ESTSettingIBeaconProximityUUID(value: UUID(uuidString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!),
 
         ESTSettingConnectivityInterval(value: 1285),
-        ESTSettingConnectivityPower(value: .Level8),
+        ESTSettingConnectivityPower(value: .level8),
 
         ESTSettingEstimoteTLMEnable(value: true),
         ESTSettingEstimoteTLMInterval(value: 2570)!,
-        ESTSettingEstimoteTLMPower(value: .Level8)!,
+        ESTSettingEstimoteTLMPower(value: .level8)!,
     ]
 }

@@ -24,7 +24,7 @@ class BeaconPlaceholderView: UILabel {
 
     func initialize() {
         border = CAShapeLayer()
-        border.strokeColor = UIColor(white: 0.5, alpha: 1.0).CGColor
+        border.strokeColor = UIColor(white: 0.5, alpha: 1.0).cgColor
         border.fillColor = nil
         border.lineWidth = 5
         border.lineDashPattern = [10, 10]
@@ -35,7 +35,7 @@ class BeaconPlaceholderView: UILabel {
     override func layoutSubviews() {
         super.layoutSubviews()
 
-        border.path = UIBezierPath(rect: bounds).CGPath
+        border.path = UIBezierPath(rect: bounds).cgPath
         border.frame = bounds;
     }
 
