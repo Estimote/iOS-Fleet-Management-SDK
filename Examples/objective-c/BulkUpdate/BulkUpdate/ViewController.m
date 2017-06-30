@@ -34,7 +34,7 @@
     self.bulkUpdater = [[ESTLocationBeaconBulkUpdater alloc] init];
     self.bulkUpdater.delegate = self;
 
-    [self.bulkUpdater startCloudUpdate];
+    [self.bulkUpdater start];
 }
 
 #pragma mark - Bulk Updater
