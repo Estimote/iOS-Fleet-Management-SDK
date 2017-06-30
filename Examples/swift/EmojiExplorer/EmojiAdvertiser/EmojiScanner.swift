@@ -25,7 +25,7 @@ class EmojiScanner: NSObject {
     var delegate: EmojiScannerDelegate?
     var nearestEmoji: String? = nil {
         didSet {
-            print("Updated Emoji ~ \(self.nearestEmoji)")
+            print("Updated Emoji ~ \(String(describing: self.nearestEmoji))")
             self.delegate?.emojiScanner(self, didUpdateNearestEmoji: self.nearestEmoji)
         }
     }
@@ -126,7 +126,7 @@ extension EmojiScanner: CBCentralManagerDelegate {
         
         // Remove out-of-range devices
         print("Emoji measurements: \(self.emojiMeasurements)")
-        print("Nearest: \(nearest)")
+        print("Nearest: \(String(describing: nearest))")
     }
     
     func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
