@@ -1,0 +1,396 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AE090D321C747B85009C8468 /* GeoLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE090D311C747B85009C8468 /* GeoLocator.swift */; };
+		AE41A6031C3FEBC000DA4533 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE41A6021C3FEBC000DA4533 /* Utilities.swift */; };
+		AE41A6051C44034000DA4533 /* BeaconConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE41A6041C44034000DA4533 /* BeaconConfig.swift */; };
+		AE5AC2521C29610600158445 /* BeaconPlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5AC2511C29610600158445 /* BeaconPlaceholderView.swift */; };
+		AE677F291C35191300836B41 /* PerformSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE677F281C35191300836B41 /* PerformSetupViewController.swift */; };
+		AE677F2B1C351CA000836B41 /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE677F2A1C351CA000836B41 /* EstimoteSDK.framework */; };
+		AE97648D1C22C1BF0058A4DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE97648C1C22C1BF0058A4DC /* AppDelegate.swift */; };
+		AE97648F1C22C1BF0058A4DC /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE97648E1C22C1BF0058A4DC /* RootViewController.swift */; };
+		AE9764921C22C1BF0058A4DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE9764901C22C1BF0058A4DC /* Main.storyboard */; };
+		AE9764941C22C1BF0058A4DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE9764931C22C1BF0058A4DC /* Assets.xcassets */; };
+		AE9764971C22C1BF0058A4DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE9764951C22C1BF0058A4DC /* LaunchScreen.storyboard */; };
+		AEBAC5B11C34302200FB5566 /* TagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBAC5B01C34302200FB5566 /* TagsViewController.swift */; };
+		AED961761C71EBA000697B6D /* RSSINormalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED961751C71EBA000697B6D /* RSSINormalization.swift */; };
+		AEEA894D1C32C90D006378F4 /* ImmediateBeaconDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEEA894C1C32C90D006378F4 /* ImmediateBeaconDetector.swift */; };
+		AEF5B0DD1C29AC7300C90621 /* BeaconSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEF5B0DC1C29AC7300C90621 /* BeaconSetupViewController.swift */; };
+		AEFCFAD81C3FBE780036EAB7 /* SwiftState.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEFCFAD71C3FBE780036EAB7 /* SwiftState.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AE090D311C747B85009C8468 /* GeoLocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoLocator.swift; sourceTree = "<group>"; };
+		AE41A6021C3FEBC000DA4533 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		AE41A6041C44034000DA4533 /* BeaconConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconConfig.swift; sourceTree = "<group>"; };
+		AE5AC2511C29610600158445 /* BeaconPlaceholderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconPlaceholderView.swift; sourceTree = "<group>"; };
+		AE677F281C35191300836B41 /* PerformSetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformSetupViewController.swift; sourceTree = "<group>"; };
+		AE677F2A1C351CA000836B41 /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EstimoteSDK.framework; path = ../../../../../EstimoteSDK/EstimoteSDK.framework; sourceTree = "<group>"; };
+		AE9764891C22C1BF0058A4DC /* Configuration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Configuration.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE97648C1C22C1BF0058A4DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AE97648E1C22C1BF0058A4DC /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		AE9764911C22C1BF0058A4DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AE9764931C22C1BF0058A4DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AE9764961C22C1BF0058A4DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AE9764981C22C1BF0058A4DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE9764BC1C22F4B80058A4DC /* ObjCBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCBridge.h; sourceTree = "<group>"; };
+		AEBAC5B01C34302200FB5566 /* TagsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagsViewController.swift; sourceTree = "<group>"; };
+		AED961751C71EBA000697B6D /* RSSINormalization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSINormalization.swift; sourceTree = "<group>"; };
+		AEEA894C1C32C90D006378F4 /* ImmediateBeaconDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImmediateBeaconDetector.swift; sourceTree = "<group>"; };
+		AEF5B0DC1C29AC7300C90621 /* BeaconSetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconSetupViewController.swift; sourceTree = "<group>"; };
+		AEFCFAD71C3FBE780036EAB7 /* SwiftState.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftState.framework; path = ../../Carthage/Build/iOS/SwiftState.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AE9764861C22C1BF0058A4DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE677F2B1C351CA000836B41 /* EstimoteSDK.framework in Frameworks */,
+				AEFCFAD81C3FBE780036EAB7 /* SwiftState.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AE9764801C22C1BF0058A4DC = {
+			isa = PBXGroup;
+			children = (
+				AE97648B1C22C1BF0058A4DC /* Configuration */,
+				AE97648A1C22C1BF0058A4DC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AE97648A1C22C1BF0058A4DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AE9764891C22C1BF0058A4DC /* Configuration.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AE97648B1C22C1BF0058A4DC /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				AE97648C1C22C1BF0058A4DC /* AppDelegate.swift */,
+				AE97648E1C22C1BF0058A4DC /* RootViewController.swift */,
+				AEF5B0DC1C29AC7300C90621 /* BeaconSetupViewController.swift */,
+				AEBAC5B01C34302200FB5566 /* TagsViewController.swift */,
+				AE677F281C35191300836B41 /* PerformSetupViewController.swift */,
+				AE9764901C22C1BF0058A4DC /* Main.storyboard */,
+				AE9764931C22C1BF0058A4DC /* Assets.xcassets */,
+				AE9764951C22C1BF0058A4DC /* LaunchScreen.storyboard */,
+				AE9764981C22C1BF0058A4DC /* Info.plist */,
+				AE9764BC1C22F4B80058A4DC /* ObjCBridge.h */,
+				AE41A6041C44034000DA4533 /* BeaconConfig.swift */,
+				AEC0A9391C86F6C700F88936 /* Estimote */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		AEC0A9391C86F6C700F88936 /* Estimote */ = {
+			isa = PBXGroup;
+			children = (
+				AE41A6021C3FEBC000DA4533 /* Utilities.swift */,
+				AED961751C71EBA000697B6D /* RSSINormalization.swift */,
+				AE5AC2511C29610600158445 /* BeaconPlaceholderView.swift */,
+				AEEA894C1C32C90D006378F4 /* ImmediateBeaconDetector.swift */,
+				AE090D311C747B85009C8468 /* GeoLocator.swift */,
+				AEFCFAD71C3FBE780036EAB7 /* SwiftState.framework */,
+				AE677F2A1C351CA000836B41 /* EstimoteSDK.framework */,
+			);
+			path = Estimote;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AE9764881C22C1BF0058A4DC /* Configuration */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE97649B1C22C1BF0058A4DC /* Build configuration list for PBXNativeTarget "Configuration" */;
+			buildPhases = (
+				AEC0A93B1C870F5400F88936 /* Check TODOs */,
+				AE9764851C22C1BF0058A4DC /* Sources */,
+				AE9764861C22C1BF0058A4DC /* Frameworks */,
+				AE9764871C22C1BF0058A4DC /* Resources */,
+				AEFCFADA1C3FBEA90036EAB7 /* Carthage copy-frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Configuration;
+			productName = Configuration;
+			productReference = AE9764891C22C1BF0058A4DC /* Configuration.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AE9764811C22C1BF0058A4DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Estimote, Inc.";
+				TargetAttributes = {
+					AE9764881C22C1BF0058A4DC = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = AE9764841C22C1BF0058A4DC /* Build configuration list for PBXProject "Configuration" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AE9764801C22C1BF0058A4DC;
+			productRefGroup = AE97648A1C22C1BF0058A4DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AE9764881C22C1BF0058A4DC /* Configuration */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AE9764871C22C1BF0058A4DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE9764971C22C1BF0058A4DC /* LaunchScreen.storyboard in Resources */,
+				AE9764941C22C1BF0058A4DC /* Assets.xcassets in Resources */,
+				AE9764921C22C1BF0058A4DC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AEC0A93B1C870F5400F88936 /* Check TODOs */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check TODOs";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "tags=\"TODO:\"\nmatches=`find \"${SRCROOT}\" -name \"*.swift\" -not -path \"*/Extras/*\" -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($tags).*\\$\"`\necho \"$matches\" | perl -p -e \"s/($tags)/ error: \\$1/\"\n[ -z \"$matches\" ] || exit 1";
+		};
+		AEFCFADA1C3FBEA90036EAB7 /* Carthage copy-frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftState.framework",
+			);
+			name = "Carthage copy-frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AE9764851C22C1BF0058A4DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEF5B0DD1C29AC7300C90621 /* BeaconSetupViewController.swift in Sources */,
+				AE5AC2521C29610600158445 /* BeaconPlaceholderView.swift in Sources */,
+				AE97648F1C22C1BF0058A4DC /* RootViewController.swift in Sources */,
+				AE677F291C35191300836B41 /* PerformSetupViewController.swift in Sources */,
+				AE97648D1C22C1BF0058A4DC /* AppDelegate.swift in Sources */,
+				AEEA894D1C32C90D006378F4 /* ImmediateBeaconDetector.swift in Sources */,
+				AE090D321C747B85009C8468 /* GeoLocator.swift in Sources */,
+				AE41A6031C3FEBC000DA4533 /* Utilities.swift in Sources */,
+				AEBAC5B11C34302200FB5566 /* TagsViewController.swift in Sources */,
+				AED961761C71EBA000697B6D /* RSSINormalization.swift in Sources */,
+				AE41A6051C44034000DA4533 /* BeaconConfig.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AE9764901C22C1BF0058A4DC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE9764911C22C1BF0058A4DC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AE9764951C22C1BF0058A4DC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE9764961C22C1BF0058A4DC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AE9764991C22C1BF0058A4DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AE97649A1C22C1BF0058A4DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AE97649C1C22C1BF0058A4DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../../../EstimoteSDK",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = Configuration/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.estimote.Configuration;
+				PRODUCT_NAME = Configuration;
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = Configuration/ObjCBridge.h;
+			};
+			name = Debug;
+		};
+		AE97649D1C22C1BF0058A4DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../../../EstimoteSDK",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = Configuration/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.estimote.Configuration;
+				PRODUCT_NAME = Configuration;
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = Configuration/ObjCBridge.h;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AE9764841C22C1BF0058A4DC /* Build configuration list for PBXProject "Configuration" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE9764991C22C1BF0058A4DC /* Debug */,
+				AE97649A1C22C1BF0058A4DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE97649B1C22C1BF0058A4DC /* Build configuration list for PBXNativeTarget "Configuration" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE97649C1C22C1BF0058A4DC /* Debug */,
+				AE97649D1C22C1BF0058A4DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AE9764811C22C1BF0058A4DC /* Project object */;
+}
