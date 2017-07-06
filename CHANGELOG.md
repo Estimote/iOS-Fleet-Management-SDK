@@ -1,3 +1,10 @@
+## 4.17.0 (July 6, 2017)
+
+Features:
+
+- Estimote Routed Mesh support added.
+  
+
 ## 4.16.2 (June 23, 2017)
 
 Bugfixes:
