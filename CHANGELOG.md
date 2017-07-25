@@ -1,3 +1,10 @@
+## 4.18.0 (July 25, 2017)
+
+Features:
+
+- Cloud support and synchronization of GPIO settings.
+- GPIO Config Port 0 state can be reflected on LED
+
 ## 4.17.0 (July 6, 2017)
 
 Features:

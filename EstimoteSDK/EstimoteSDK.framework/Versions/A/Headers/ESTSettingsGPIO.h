@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @class ESTSettingGPIOConfigPort1;
 @class ESTSettingGPIOPortsData;
 @class ESTDeviceSettingsCollection;
+@class ESTSettingGPIO0StateReflectingOnLEDEnable;
 
 
 /**
@@ -44,6 +45,14 @@ NS_ASSUME_NONNULL_BEGIN
  *  Current GPIO ports state.
  */
 @property (nonatomic, strong, readonly) ESTSettingGPIOPortsData *portsData;
+
+/**
+ *  Setting for GPIO config port 0 reflecting its state on LED.
+ *
+ *  If this is enabled, LED on the beacon will show the state of GPIO port 0. 
+ *  If this is disabled, LED will blink during the connection and will be off otherwise.
+ */
+@property (nonatomic, strong, readonly) ESTSettingGPIO0StateReflectingOnLEDEnable *gpio0StateReflectingOnLEDEnable;
 
 /**
  *  Designated initializer

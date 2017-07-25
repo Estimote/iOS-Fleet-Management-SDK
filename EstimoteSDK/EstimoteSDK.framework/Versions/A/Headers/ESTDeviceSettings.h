@@ -22,7 +22,8 @@ ESTDeviceSettingsAdvertiserEstimoteTLM,
 ESTDeviceSettingsAdvertiserEddystoneEID,
 ESTDeviceSettingsAdvertiserMesh,
 ESTDeviceSettingsAdvertiserUWB,
-ESTDeviceSettingsAdvertiserGeneric;
+ESTDeviceSettingsAdvertiserGeneric,
+ESTDeviceSettingsGPIO;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -92,6 +93,11 @@ NS_ASSUME_NONNULL_BEGIN
  *  Advertiser settings for Mesh packets.
  */
 @property (nonatomic, strong, readonly) NSArray<ESTDeviceSettingsAdvertiserMesh *> *mesh;
+
+/**
+ *  Settings related to GPIO.
+ */
+@property (nonatomic, strong, readonly) ESTDeviceSettingsGPIO *gpio;
 
 /**
  *  Designated initializer.

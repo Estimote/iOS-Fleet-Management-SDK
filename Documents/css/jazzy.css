@@ -126,7 +126,7 @@ pre code {
   flex: 1; }
   @media (max-width: 540px) {
     .header-col--primary {
-      background: transparent; } }
+      background: rgba(0, 0, 0, 0); } }
 
 .header-col--secondary {
   margin-top: 100px; }
