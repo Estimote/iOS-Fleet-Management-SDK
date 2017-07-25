@@ -145,6 +145,9 @@
                 <a class="nav-group-task-link" href="Classes/ESTBeaconOperationEstimoteTLMPower.html">ESTBeaconOperationEstimoteTLMPower</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/ESTBeaconOperationGPIO0StateReflectingOnLEDEnable.html">ESTBeaconOperationGPIO0StateReflectingOnLEDEnable</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/ESTBeaconOperationGPIOConfigPort0.html">ESTBeaconOperationGPIOConfigPort0</a>
               </li>
               <li class="nav-group-task">
@@ -659,6 +662,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/ESTSettingEstimoteTLMPower.html">ESTSettingEstimoteTLMPower</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/ESTSettingGPIO0StateReflectingOnLEDEnable.html">ESTSettingGPIO0StateReflectingOnLEDEnable</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/ESTSettingGPIOConfigPort0.html">ESTSettingGPIOConfigPort0</a>
@@ -1333,6 +1339,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Type Definitions.html#/c:ESTSettingEstimoteTLMPower.h@T@ESTSettingEstimoteTLMPowerCompletionBlock">ESTSettingEstimoteTLMPowerCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Type Definitions.html#/c:ESTSettingGPIO0StateReflectingOnLEDEnable.h@T@ESTSettingGPIO0StateReflectingOnLEDCompletionBlock">ESTSettingGPIO0StateReflectingOnLEDCompletionBlock</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Type Definitions.html#/c:ESTSettingGPIOConfigPort0.h@T@ESTSettingGPIOConfigPort0CompletionBlock">ESTSettingGPIOConfigPort0CompletionBlock</a>
@@ -2647,6 +2656,44 @@ should not be created manually. Objects of this class are returning from <code>E
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">class</span> <span class="kt">ESTBeaconOperationEstimoteTLMPower</span> <span class="p">:</span> <span class="kt"><a href="Classes/ESTSettingOperation.html">ESTSettingOperation</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/ESTBeaconOperationProtocol.html">ESTBeaconOperationProtocol</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)ESTBeaconOperationGPIO0StateReflectingOnLEDEnable"></a>
+                    <a name="//apple_ref/objc/Class/ESTBeaconOperationGPIO0StateReflectingOnLEDEnable" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)ESTBeaconOperationGPIO0StateReflectingOnLEDEnable">ESTBeaconOperationGPIO0StateReflectingOnLEDEnable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>ESTBeaconOperationGPIO0StateReflectingOnLEDEnable allows to create read/write operations for GPIO0StateReflectingOnLEDEnable setting of a device.</p>
+
+                        <a href="Classes/ESTBeaconOperationGPIO0StateReflectingOnLEDEnable.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTBeaconOperationGPIO0StateReflectingOnLEDEnable</span>
+    <span class="p">:</span> <span class="nc"><a href="Classes/ESTSettingOperation.html">ESTSettingOperation</a></span> <span class="o">&lt;</span><span class="n"><a href="Protocols/ESTBeaconOperationProtocol.html">ESTBeaconOperationProtocol</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">ESTBeaconOperationGPIO0StateReflectingOnLEDEnable</span> <span class="p">:</span> <span class="kt"><a href="Classes/ESTSettingOperation.html">ESTSettingOperation</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/ESTBeaconOperationProtocol.html">ESTBeaconOperationProtocol</a></span></code></pre>
 
                         </div>
                       </div>
@@ -4056,7 +4103,8 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTCloudManager</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTCloudManager</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -7628,7 +7676,8 @@ List includes both settings and firmware update.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTRequestV2GetDeviceDetails</span> <span class="p">:</span> <span class="nc">ESTRequestGetJSON</span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTRequestV2GetDeviceDetails</span> <span class="p">:</span> <span class="nc">ESTRequestGetJSON</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -9192,6 +9241,44 @@ List includes both settings and firmware update.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">class</span> <span class="kt">ESTSettingEstimoteTLMPower</span> <span class="p">:</span> <span class="kt"><a href="Classes/ESTSettingReadWrite.html">ESTSettingReadWrite</a></span><span class="p">,</span> <span class="kt">NSCopying</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)ESTSettingGPIO0StateReflectingOnLEDEnable"></a>
+                    <a name="//apple_ref/objc/Class/ESTSettingGPIO0StateReflectingOnLEDEnable" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)ESTSettingGPIO0StateReflectingOnLEDEnable">ESTSettingGPIO0StateReflectingOnLEDEnable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>ESTSettingGPIO0StateReflectingOnLED represents GPIO0StateReflectingOnLEDEnable value.</p>
+
+                        <a href="Classes/ESTSettingGPIO0StateReflectingOnLEDEnable.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTSettingGPIO0StateReflectingOnLEDEnable</span>
+    <span class="p">:</span> <span class="nc"><a href="Classes/ESTSettingReadWrite.html">ESTSettingReadWrite</a></span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">ESTSettingGPIO0StateReflectingOnLEDEnable</span> <span class="p">:</span> <span class="kt"><a href="Classes/ESTSettingReadWrite.html">ESTSettingReadWrite</a></span><span class="p">,</span> <span class="kt">NSCopying</span></code></pre>
 
                         </div>
                       </div>
@@ -12121,7 +12208,7 @@ allows to discover CoreBluetooth based representation of Estimote Beacon devices
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-07-06)</p>
+      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-07-25)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
