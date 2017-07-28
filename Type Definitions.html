@@ -436,6 +436,9 @@
                 <a class="nav-group-task-link" href="Classes/ESTMonitoringManager.html">ESTMonitoringManager</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/ESTMonitoringV2Manager.html">ESTMonitoringV2Manager</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes.html#/c:objc(cs)ESTMotionRule">ESTMotionRule</a>
               </li>
               <li class="nav-group-task">
@@ -989,6 +992,9 @@
                 <a class="nav-group-task-link" href="Enums/ESTMonitoringProximity.html">ESTMonitoringProximity</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums.html#/c:@E@ESTMonitoringV2ManagerError">ESTMonitoringV2ManagerError</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/ESTNearableBroadcastingScheme.html">ESTNearableBroadcastingScheme</a>
               </li>
               <li class="nav-group-task">
@@ -1181,6 +1187,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols.html#/c:objc(pl)ESTMonitoringManagerDelegate">ESTMonitoringManagerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/ESTMonitoringV2ManagerDelegate.html">ESTMonitoringV2ManagerDelegate</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/ESTNearableManagerDelegate.html">ESTNearableManagerDelegate</a>
@@ -1492,7 +1501,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Block used as a result of all operation success or failure of one of them.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <p>performOperationsFromArray:completion:</p>
@@ -1527,7 +1535,6 @@
                               <td>
                                 <div>
                                   <p>Error of operation. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1583,7 +1590,6 @@
                               <td>
                                 <div>
                                   <p>current state of all GPIO ports.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1640,7 +1646,6 @@
                               <td>
                                 <div>
                                   <p>Details of the device wrapped in ESTDeviceDetails class object.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1653,7 +1658,6 @@
                               <td>
                                 <div>
                                   <p>Error of request. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1710,7 +1714,6 @@
                               <td>
                                 <div>
                                   <p>Details of the device wrapped in ESTDeviceDetails class object.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1723,7 +1726,6 @@
                               <td>
                                 <div>
                                   <p>Error of request. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1774,13 +1776,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>deviceDetails</em>
+                                <em>devicesDetails</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>Array of user&rsquo;s devices details, each wrapped in ESTDeviceDetails class object.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1793,7 +1794,6 @@
                               <td>
                                 <div>
                                   <p>Error of request. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1850,7 +1850,6 @@
                               <td>
                                 <div>
                                   <p>Email address of the device&rsquo;s owner.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1863,7 +1862,6 @@
                               <td>
                                 <div>
                                   <p>Request error object. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1920,7 +1918,6 @@
                               <td>
                                 <div>
                                   <p>Current setting.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1933,7 +1930,6 @@
                               <td>
                                 <div>
                                   <p>Error of operation. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1984,13 +1980,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>interval</em>
+                                <em>intervalSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>Interval setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2003,7 +1998,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2054,13 +2048,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>power</em>
+                                <em>powerSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>Power setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2073,7 +2066,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2124,13 +2116,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>applicationVersion</em>
+                                <em>applicationVersionSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>ApplicationVersion setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2143,7 +2134,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2194,13 +2184,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>version</em>
+                                <em>bootloaderVersionSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>BootloaderVersion setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2213,7 +2202,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2264,13 +2252,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>Color</em>
+                                <em>colorSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>Color setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2283,7 +2270,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2340,7 +2326,6 @@
                               <td>
                                 <div>
                                   <p>developmentMode setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2353,7 +2338,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2404,13 +2388,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>version</em>
+                                <em>versionSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>FirmwareVersion setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2423,7 +2406,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2474,13 +2456,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>geoLocation</em>
+                                <em>geoLocationSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>GeoLocation setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2493,7 +2474,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2544,13 +2524,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>version</em>
+                                <em>versionSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>HardwareVersion setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2563,7 +2542,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2614,13 +2592,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>indoorLocationIdentifier</em>
+                                <em>indoorLocationIdentifierSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>IndoorLocationIdentifier setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2633,7 +2610,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2684,13 +2660,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>name</em>
+                                <em>nameSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>IndoorLocationName setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2703,7 +2678,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2754,13 +2728,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>name</em>
+                                <em>nameSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>Name setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2773,7 +2746,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2824,13 +2796,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>tags</em>
+                                <em>tagsSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>Tags setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2843,7 +2814,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2894,13 +2864,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>UTCTime</em>
+                                <em>utcTimeSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>UTCTime setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2913,7 +2882,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2964,13 +2932,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>uptime</em>
+                                <em>uptimeSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>Uptime setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2983,7 +2950,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -3035,13 +3001,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>eddystoneConfigurationServiceEnable</em>
+                                <em>eddystoneConfigurationServiceEnableSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>EddystoneConfigurationServiceEnable setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -3054,7 +3019,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -3105,13 +3069,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>enable</em>
+                                <em>enableSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>Enable setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -3124,7 +3087,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -3175,13 +3137,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>interval</em>
+                                <em>intervalSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>Interval setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -3194,7 +3155,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -3245,13 +3205,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>power</em>
+                                <em>powerSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>Power setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -3264,7 +3223,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -3315,13 +3273,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>enabled</em>
+                                <em>enabledSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>Enable setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -3334,7 +3291,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -3385,13 +3341,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>advertisingInterval</em>
+                                <em>advertisingIntervalSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>Advertising Interval setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -3404,7 +3359,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -3455,13 +3409,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>power</em>
+                                <em>powerSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>Power setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -3474,7 +3427,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -3525,13 +3477,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>enabled</em>
+                                <em>enabledSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>Enable setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -3544,7 +3495,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -3595,13 +3545,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>instanceID</em>
+                                <em>instanceIDSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>Instance ID setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -3614,7 +3563,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -3665,13 +3613,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>advertisingInterval</em>
+                                <em>advertisingIntervalSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>AdvertisingInterval setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -3684,7 +3631,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -3735,13 +3681,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>namespace</em>
+                                <em>namespaceSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>Namespace setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -3754,7 +3699,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -3805,13 +3749,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>power</em>
+                                <em>powerSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>Power setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -3824,7 +3767,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -3875,13 +3817,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>eddystoneURL</em>
+                                <em>eddystoneURLSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>URL Data setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -3894,7 +3835,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -3945,13 +3885,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>enabled</em>
+                                <em>enabledSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>Enable setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -3964,7 +3903,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4015,13 +3953,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>advertisingInterval</em>
+                                <em>advertisingIntervalSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>Interval setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4034,7 +3971,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4085,13 +4021,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>power</em>
+                                <em>powerSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>Power setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4104,7 +4039,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4155,13 +4089,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>enabled</em>
+                                <em>enabledSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>Enable setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4174,7 +4107,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4225,13 +4157,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>advertisingInterval</em>
+                                <em>advertisingIntervalSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>Advertising Interval setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4244,7 +4175,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4295,13 +4225,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>power</em>
+                                <em>powerSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>Broadcasting Power setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4314,7 +4243,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4365,13 +4293,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>enabled</em>
+                                <em>enabledSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>Enable setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4384,7 +4311,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4435,13 +4361,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>advertisingInterval</em>
+                                <em>advertisingIntervalSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>Advertising Interval setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4454,7 +4379,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4505,13 +4429,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>power</em>
+                                <em>powerSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>Power setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4524,7 +4447,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4581,7 +4503,6 @@
                               <td>
                                 <div>
                                   <p>GPIO Config 0 state reflecting on LED setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4594,7 +4515,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4651,7 +4571,6 @@
                               <td>
                                 <div>
                                   <p>ConfigPort0 setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4664,7 +4583,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4721,7 +4639,6 @@
                               <td>
                                 <div>
                                   <p>ConfigPort1 setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4734,7 +4651,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4791,7 +4707,6 @@
                               <td>
                                 <div>
                                   <p>NotificationEnable setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4804,7 +4719,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4861,7 +4775,6 @@
                               <td>
                                 <div>
                                   <p>PortsData setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4874,7 +4787,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4931,7 +4843,6 @@
                               <td>
                                 <div>
                                   <p>GenericAdvertiserData setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -4944,7 +4855,6 @@
                               <td>
                                 <div>
                                   <p>Operation error.       No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5001,7 +4911,6 @@
                               <td>
                                 <div>
                                   <p>GenericAdvertiserEnabled setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5014,7 +4923,6 @@
                               <td>
                                 <div>
                                   <p>Operation error.          No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5071,7 +4979,6 @@
                               <td>
                                 <div>
                                   <p>GenericAdvertiserInterval setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5084,7 +4991,6 @@
                               <td>
                                 <div>
                                   <p>Operation error.           No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5141,7 +5047,6 @@
                               <td>
                                 <div>
                                   <p>GenericAdvertiserPower setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5154,7 +5059,6 @@
                               <td>
                                 <div>
                                   <p>Operation error.        No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5205,13 +5109,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>iBeaconEnable</em>
+                                <em>iBeaconEnableSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>IBeaconEnable setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5224,7 +5127,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5275,13 +5177,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>advertisingInterval</em>
+                                <em>advertisingIntervalSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>Advertising Interval setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5294,7 +5195,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5351,7 +5251,6 @@
                               <td>
                                 <div>
                                   <p>Major setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5364,7 +5263,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5421,7 +5319,6 @@
                               <td>
                                 <div>
                                   <p>Minor setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5434,7 +5331,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5485,13 +5381,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>motionUUID</em>
+                                <em>motionUUIDSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>MotionUUID setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5504,7 +5399,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5555,13 +5449,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>enabled</em>
+                                <em>enabledSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>MotionUUIDEnable setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5574,7 +5467,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5625,13 +5517,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>nonStrictMode</em>
+                                <em>nonStrictModeSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>NonStrictMode setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5644,7 +5535,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5695,13 +5585,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>power</em>
+                                <em>powerSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>Power setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5714,7 +5603,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5765,13 +5653,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>proximityUUID</em>
+                                <em>proximityUUIDSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>ProximityUUID setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5784,7 +5671,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5835,13 +5721,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>enabled</em>
+                                <em>enabledSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>SecureUUIDEnable setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5854,7 +5739,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5906,13 +5790,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>scaler</em>
+                                <em>scalerSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>SecureUUIDPeriodScaler setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5925,7 +5808,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5976,13 +5858,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>broadcastingScheme</em>
+                                <em>broadcastingSchemeSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>BroadcastingScheme setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -5995,7 +5876,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -6046,13 +5926,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>eddystoneURL</em>
+                                <em>eddystoneURLSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>EddystoneURL setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -6065,7 +5944,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -6116,13 +5994,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>interval</em>
+                                <em>intervalSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>Interval setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -6135,7 +6012,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -6192,7 +6068,6 @@
                               <td>
                                 <div>
                                   <p>Power setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -6205,7 +6080,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -6256,13 +6130,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>batteryLifetime</em>
+                                <em>batteryLifetimeSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>BatteryLifetime setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -6275,7 +6148,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -6326,13 +6198,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>batteryPercentage</em>
+                                <em>batteryPercentageSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>BatteryPercentage setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -6345,7 +6216,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -6396,13 +6266,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>voltage</em>
+                                <em>voltageSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>BatteryVoltage setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -6415,7 +6284,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -6466,13 +6334,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>enabled</em>
+                                <em>enabledSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>DarkToSleepEnable setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -6485,7 +6352,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -6536,13 +6402,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>enabled</em>
+                                <em>enabledSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>FlipToSleepEnable setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -6555,7 +6420,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -6606,13 +6470,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>motionOnlyBroadcastingDelay</em>
+                                <em>motionOnlyBroadcastingDelaySetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>MotionOnlyBroadcastingDelay setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -6625,7 +6488,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -6676,13 +6538,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>enabled</em>
+                                <em>enabledSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>MotionOnlyBroadcastingEnable setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -6695,7 +6556,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -6746,13 +6606,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>enable</em>
+                                <em>enableSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>ScheduledAdvertisingEnable setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -6765,7 +6624,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -6816,13 +6674,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>period</em>
+                                <em>periodSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>ScheduledAdvertisingPeriod setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -6835,7 +6692,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -6886,13 +6742,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>smartPowerModeEnable</em>
+                                <em>smartPowerModeEnableSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>SmartPowerModeEnable setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -6905,7 +6760,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -6956,13 +6810,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>ambientLight</em>
+                                <em>ambientLightSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>AmbientLight setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -6975,7 +6828,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -7026,13 +6878,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>enabled</em>
+                                <em>enabledSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>MotionNotificationEnable setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -7045,7 +6896,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -7102,7 +6952,6 @@
                               <td>
                                 <div>
                                   <p>Pressure setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -7115,7 +6964,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -7166,13 +7014,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>temperature</em>
+                                <em>temperatureSetting</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>Temperature setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -7185,7 +7032,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -7242,7 +7088,6 @@
                               <td>
                                 <div>
                                   <p>ShakeToConnectEnable setting carrying value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -7255,7 +7100,6 @@
                               <td>
                                 <div>
                                   <p>Operation error. No error means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -7312,7 +7156,6 @@
                               <td>
                                 <div>
                                   <p>Info object with GPIO ports values.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -7330,8 +7173,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-07-25)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-07-31)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>
