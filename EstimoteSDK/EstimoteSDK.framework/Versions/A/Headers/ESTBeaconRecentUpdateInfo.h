@@ -41,7 +41,7 @@
  *  Method initializing recent change's info object.
  *
  *  @param data Cloud data parsed from request response
- *  @param config Recent change's config object
+ *  @param mac Mac address.
  *
  *  @return recent change's info object
  */

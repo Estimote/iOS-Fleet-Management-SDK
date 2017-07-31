@@ -1,3 +1,17 @@
+## 4.19.0 (July 28, 2017)
+
+Features:
+
+- ESTMonitoringV2Manager - it contains Estimote Monitoring v2.0 algorithm with more accurate monitoring events, better exit reliability, software-defined monitoring range, and more efficient monitoring for multiple beacons.
+
+Bugfixes:
+
+- Fixed a bug where Firmware Update would report progress even after cancelling the update process.
+
+Improvements:
+
+- Mesh message buffer sync is faster now.
+
 ## 4.18.0 (July 25, 2017)
 
 Features:

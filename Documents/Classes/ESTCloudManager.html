@@ -437,6 +437,9 @@
                 <a class="nav-group-task-link" href="../Classes/ESTMonitoringManager.html">ESTMonitoringManager</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ESTMonitoringV2Manager.html">ESTMonitoringV2Manager</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes.html#/c:objc(cs)ESTMotionRule">ESTMotionRule</a>
               </li>
               <li class="nav-group-task">
@@ -990,6 +993,9 @@
                 <a class="nav-group-task-link" href="../Enums/ESTMonitoringProximity.html">ESTMonitoringProximity</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums.html#/c:@E@ESTMonitoringV2ManagerError">ESTMonitoringV2ManagerError</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/ESTNearableBroadcastingScheme.html">ESTNearableBroadcastingScheme</a>
               </li>
               <li class="nav-group-task">
@@ -1182,6 +1188,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols.html#/c:objc(pl)ESTMonitoringManagerDelegate">ESTMonitoringManagerDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ESTMonitoringV2ManagerDelegate.html">ESTMonitoringV2ManagerDelegate</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/ESTNearableManagerDelegate.html">ESTNearableManagerDelegate</a>
@@ -1539,7 +1548,6 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                               <td>
                                 <div>
                                   <p>The API App ID.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1552,7 +1560,6 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                               <td>
                                 <div>
                                   <p>The API App Token.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1594,7 +1601,6 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                       <div>
                         <h4>Return Value</h4>
                         <p>currently used App ID.</p>
-
                       </div>
                     </section>
                   </div>
@@ -1631,7 +1637,6 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                       <div>
                         <h4>Return Value</h4>
                         <p>currently used App Token.</p>
-
                       </div>
                     </section>
                   </div>
@@ -1711,7 +1716,6 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                               <td>
                                 <div>
                                   <p>flag indicating if analytics should be enabled</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1764,7 +1768,6 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                               <td>
                                 <div>
                                   <p>flag indicating if analytics for monitoring should be enabled</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1818,7 +1821,6 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                               <td>
                                 <div>
                                   <p>flag indicating if analytics for ranging should be enabled</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1871,7 +1873,6 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                               <td>
                                 <div>
                                   <p>flag indicating if GPS Positioning should be enabled</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1913,7 +1914,6 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                       <div>
                         <h4>Return Value</h4>
                         <p>flag that indicates if analytics is enabled</p>
-
                       </div>
                     </section>
                   </div>
@@ -1950,7 +1950,6 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                       <div>
                         <h4>Return Value</h4>
                         <p>flag that indicates if analytics is enabled</p>
-
                       </div>
                     </section>
                   </div>
@@ -1987,7 +1986,6 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                       <div>
                         <h4>Return Value</h4>
                         <p>flag that indicates if analytics is enabled</p>
-
                       </div>
                     </section>
                   </div>
@@ -2047,7 +2045,6 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                               <td>
                                 <div>
                                   <p>completion block invoked with fetching is done</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2101,7 +2098,6 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                               <td>
                                 <div>
                                   <p>completion block invoked with fetching is done</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2155,7 +2151,6 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                               <td>
                                 <div>
                                   <p>Identifier of particular device</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2168,7 +2163,6 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                               <td>
                                 <div>
                                   <p>completion block invoked with fetching is done</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2221,17 +2215,7 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                               <td>
                                 <div>
                                   <p>A nearable identifier, as broadcast in the Nearable packet;
-         or a “
-&lt;UUID</p>
-
-<blockquote>
-<p>:
-&lt;major
-:
-&lt;minor
-” string with nearable’s iBeacon identifier, as broadcast in the iBeacon packet.</p>
-</blockquote>
-
+     or a “<UUID>:<major>:<minor>” string with nearable’s iBeacon identifier, as broadcast in the iBeacon packet.</p>
                                 </div>
                               </td>
                             </tr>
@@ -2244,9 +2228,8 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                               <td>
                                 <div>
                                   <p>A block to call upon completion of the request.
-        If successful, first argument will be an ESTNearableVO object.
-        If not, first argument will be nil, and second argument will be the error object.</p>
-
+     If successful, first argument will be an ESTNearableVO object.
+     If not, first argument will be nil, and second argument will be the error object.</p>
                                 </div>
                               </td>
                             </tr>
@@ -2300,7 +2283,6 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                               <td>
                                 <div>
                                   <p>iBeacon device</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2313,7 +2295,6 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                               <td>
                                 <div>
                                   <p>completion block with NSNumber class object containing ESTColor value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2370,7 +2351,6 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                               <td>
                                 <div>
                                   <p>iBeacon ProximityUUID of the device</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2383,7 +2363,6 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                               <td>
                                 <div>
                                   <p>iBeacon Major of the device</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2396,7 +2375,6 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                               <td>
                                 <div>
                                   <p>iBeacon Minor of the device</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2409,7 +2387,6 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                               <td>
                                 <div>
                                   <p>completion block with NSNumber class object containing ESTColor value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2464,7 +2441,6 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                               <td>
                                 <div>
                                   <p>Mac Address of the device</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2477,7 +2453,6 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                               <td>
                                 <div>
                                   <p>completion block with NSNumber class object containing ESTColor value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2530,7 +2505,6 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                               <td>
                                 <div>
                                   <p>iBeacon device</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2543,7 +2517,6 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                               <td>
                                 <div>
                                   <p>completion block with NSString class object containing the MAC address.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2608,7 +2581,6 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                               <td>
                                 <div>
                                   <p>the location (lat/lng) to assign to the beacon</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2621,7 +2593,6 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                               <td>
                                 <div>
                                   <p>the beacon to assign the location to</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2634,7 +2605,6 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                               <td>
                                 <div>
                                   <p>completion callback; first param is the CLLocation just assigned (or nil if there was an error); second param is an NSError object (or nil if assigned successfully)</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2688,7 +2658,6 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                               <td>
                                 <div>
                                   <p>CLLocation object with latitude and longitude included</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2701,7 +2670,6 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                               <td>
                                 <div>
                                   <p>macAddress of beacon to which location should be assigned</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2714,7 +2682,6 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                               <td>
                                 <div>
                                   <p>result information with assigned location provided</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2770,7 +2737,6 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                               <td>
                                 <div>
                                   <p>the beacon to assign the location to</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2783,7 +2749,6 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                               <td>
                                 <div>
                                   <p>completion callback; first param is the CLLocation just assigned (or nil if there was an error); second param is an NSError object (or nil if assigned successfully)</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2839,7 +2804,6 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                               <td>
                                 <div>
                                   <p>macAddress of beacon to which location should be assigned</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2852,7 +2816,6 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                               <td>
                                 <div>
                                   <p>completion block with assigned location provided</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2910,7 +2873,6 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                               <td>
                                 <div>
                                   <p>UUID of the beacon to assign the location to</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2923,7 +2885,6 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                               <td>
                                 <div>
                                   <p>major of the beacon to assign the location to</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2936,7 +2897,6 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                               <td>
                                 <div>
                                   <p>minor of the beacon to assign the location to</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2949,7 +2909,6 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                               <td>
                                 <div>
                                   <p>completion callback; first param is the CLLocation just assigned (or nil if there was an error); second param is an NSError object (or nil if assigned successfully)</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -3014,7 +2973,6 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                               <td>
                                 <div>
                                   <p>token of the device received from iOS</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -3027,7 +2985,6 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                               <td>
                                 <div>
                                   <p>completion block</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -3081,7 +3038,6 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                               <td>
                                 <div>
                                   <p>completion block returning Array of ESTBeaconUpdateInfo object</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -3099,8 +3055,8 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-07-25)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-07-31)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

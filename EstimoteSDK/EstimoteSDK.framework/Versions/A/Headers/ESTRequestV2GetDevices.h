@@ -19,10 +19,10 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  Completion block fired when request is complete.
  *
- *  @param deviceDetails  Array of user's devices details, each wrapped in ESTDeviceDetails class object.
- *  @param error          Error of request. No error means success.
+ *  @param devicesDetails  Array of user's devices details, each wrapped in ESTDeviceDetails class object.
+ *  @param error    Error of request. No error means success.
  */
-typedef void(^ESTRequestV2GetDevicesBlock)(NSArray <ESTDeviceDetails *> *_Nullable devices, NSError * _Nullable error);
+typedef void(^ESTRequestV2GetDevicesBlock)(NSArray <ESTDeviceDetails *> *_Nullable devicesDetails, NSError * _Nullable error);
 
 
 /**

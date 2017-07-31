@@ -48,7 +48,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  Block used as a result of read/write setting Power operation for Connectivity packet.
  *
- *  @param power Power setting carrying value.
+ *  @param powerSetting Power setting carrying value.
  *  @param error Operation error. No error means success.
  */
 typedef void(^ESTSettingConnectivityPowerCompletionBlock)(ESTSettingConnectivityPower * _Nullable powerSetting, NSError * _Nullable error);
@@ -81,8 +81,6 @@ typedef void(^ESTSettingConnectivityPowerCompletionBlock)(ESTSettingConnectivity
  *  Method allows to read value of initialized Connectivity Power setting object.
  *
  *  @param completion Block to be invoked when operation is complete.
- *
- *  @return Initialized operation object.
  */
 - (void)readValueWithCompletion:(ESTSettingConnectivityPowerCompletionBlock)completion;
 
@@ -92,8 +90,6 @@ typedef void(^ESTSettingConnectivityPowerCompletionBlock)(ESTSettingConnectivity
  *
  *  @param power Power value to be written to the device.
  *  @param completion Block to be invoked when operation is complete.
- *
- *  @return Initialized operation object.
  */
 - (void)writeValue:(ESTConnectablePowerLevel)power completion:(ESTSettingConnectivityPowerCompletionBlock)completion;
 
