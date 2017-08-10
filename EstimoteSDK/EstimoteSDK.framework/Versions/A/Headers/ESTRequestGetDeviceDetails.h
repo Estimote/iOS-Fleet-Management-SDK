@@ -30,6 +30,8 @@ typedef void(^ESTRequestGetDeviceDetailsBlock)(ESTDeviceDetails * _Nullable devi
  */
 @interface ESTRequestGetDeviceDetails : ESTRequestGetJSON
 
+- (instancetype)init NS_UNAVAILABLE;
+
 /**
  *  Designated initializer of the class.
  *
@@ -37,7 +39,7 @@ typedef void(^ESTRequestGetDeviceDetailsBlock)(ESTDeviceDetails * _Nullable devi
  *
  *  @return Initialized object.
  */
-- (instancetype)initWithDeviceIdentifier:(NSString *)deviceIdentifier;
+- (instancetype)initWithDeviceIdentifier:(NSString *)deviceIdentifier NS_DESIGNATED_INITIALIZER;
 
 /**
  *  Sends a request to the Estimote Cloud.

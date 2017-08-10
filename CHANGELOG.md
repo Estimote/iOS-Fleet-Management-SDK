@@ -1,3 +1,16 @@
+## 4.20.0 (August 10, 2017)
+
+Bugfixes:
+
+- Fixed duplicated symbols issues when using Estimote iOS SDK and Estimote Indoor SDK in the same project.
+- Fixed "Download ZIP" button not working (see: https://github.com/git-lfs/git-lfs/issues/903)
+
+Improvements:
+
+- Contrary to the previous version (4.19.0), this one doesn't require git-lfs to run.
+- Dropped support for armv7s architecture.
+- Reduced framework size.
+
 ## 4.19.0 (July 28, 2017)
 
 Features:
