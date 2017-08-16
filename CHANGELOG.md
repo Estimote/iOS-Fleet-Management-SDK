@@ -1,3 +1,9 @@
+## 4.20.1 (August 16, 2017)
+
+Bugfixes:
+
+- Fixed a bug where ESTBeaconManager would not send messages to its delegate (i.e. `beaconManager:didRangeBeacons:inRegion:`).
+
 ## 4.20.0 (August 10, 2017)
 
 Bugfixes:
