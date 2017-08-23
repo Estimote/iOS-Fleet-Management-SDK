@@ -523,6 +523,9 @@
                 <a class="nav-group-task-link" href="Classes/ESTRequestGetDeviceDetails.html">ESTRequestGetDeviceDetails</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/ESTRequestGetDevices.html">ESTRequestGetDevices</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/ESTRequestGetNearables.html">ESTRequestGetNearables</a>
               </li>
               <li class="nav-group-task">
@@ -992,6 +995,9 @@
                 <a class="nav-group-task-link" href="Enums/ESTMonitoringProximity.html">ESTMonitoringProximity</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums.html#/c:@E@ESTMonitoringState">ESTMonitoringState</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums.html#/c:@E@ESTMonitoringV2ManagerError">ESTMonitoringV2ManagerError</a>
               </li>
               <li class="nav-group-task">
@@ -1225,6 +1231,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Type Definitions.html#/c:ESTRequestGetDeviceDetails.h@T@ESTRequestGetDeviceDetailsBlock">ESTRequestGetDeviceDetailsBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Type Definitions.html#/c:ESTRequestGetDevices.h@T@ESTRequestGetDevicesBlock">ESTRequestGetDevicesBlock</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Type Definitions.html#/c:ESTRequestV2GetDeviceDetails.h@T@ESTRequestV2GetDeviceDetailsBlock">ESTRequestV2GetDeviceDetailsBlock</a>
@@ -2081,6 +2090,44 @@
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@ESTMonitoringState"></a>
+                    <a name="//apple_ref/objc/Enum/ESTMonitoringState" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@ESTMonitoringState">ESTMonitoringState</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Represents possible monitoring states for a user in relation to a proximity zone.</p>
+
+<ul>
+<li>ESTMonitoringStateUnknown: It&rsquo;s unkown whether the user is inside or outside the zone.</li>
+<li>ESTMonitoringStateInside: The user is inside the zone.</li>
+<li>ESTMonitoringStateOutside: The user is outside the zone.</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTMonitoringState</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">enum</span> <span class="kt">ESTMonitoringState</span> <span class="p">:</span> <span class="kt">UInt</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
             <div class="task-group">
@@ -2846,12 +2893,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Available Tx Power levels for Eddystone UID packet.</p>
-<div class="aside aside-see">
-    <p class="aside-title">See</p>
-    ESTBeaconPower
-
-</div>
+                        <p>Available Tx Power levels for Eddystone UID packet.
+- see: ESTBeaconPower</p>
 
                       </div>
                       <div class="declaration">
@@ -2957,12 +3000,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Available Tx Power levels for Eddystone TLM packet.</p>
-<div class="aside aside-see">
-    <p class="aside-title">See</p>
-    ESTBeaconPower
-
-</div>
+                        <p>Available Tx Power levels for Eddystone TLM packet.
+- see: ESTBeaconPower</p>
 
                       </div>
                       <div class="declaration">
@@ -3142,12 +3181,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Available Tx Power levels for Eddystone UID packet.</p>
-<div class="aside aside-see">
-    <p class="aside-title">See</p>
-    ESTBeaconPower
-
-</div>
+                        <p>Available Tx Power levels for Eddystone UID packet.
+- see: ESTBeaconPower</p>
 
                       </div>
                       <div class="declaration">
@@ -3290,12 +3325,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Available Tx Power levels for Eddystone URL packet.</p>
-<div class="aside aside-see">
-    <p class="aside-title">See</p>
-    ESTBeaconPower
-
-</div>
+                        <p>Available Tx Power levels for Eddystone URL packet.
+- see: ESTBeaconPower</p>
 
                       </div>
                       <div class="declaration">
@@ -3401,12 +3432,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Available Tx Power levels for Estimote Location packet.</p>
-<div class="aside aside-see">
-    <p class="aside-title">See</p>
-    ESTBeaconPower
-
-</div>
+                        <p>Available Tx Power levels for Estimote Location packet.
+- see: ESTBeaconPower</p>
 
                       </div>
                       <div class="declaration">
@@ -3512,12 +3539,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Available Tx Power levels for Estimote Telemetry packet.</p>
-<div class="aside aside-see">
-    <p class="aside-title">See</p>
-    ESTBeaconPower
-
-</div>
+                        <p>Available Tx Power levels for Estimote Telemetry packet.
+- see: ESTBeaconPower</p>
 
                       </div>
                       <div class="declaration">
@@ -3845,12 +3868,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Available Tx Power levels for iBeacon packet.</p>
-<div class="aside aside-see">
-    <p class="aside-title">See</p>
-    ESTBeaconPower
-
-</div>
+                        <p>Available Tx Power levels for iBeacon packet.
+- see: ESTBeaconPower</p>
 
                       </div>
                       <div class="declaration">
@@ -4067,12 +4086,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Available Tx Power levels for Nearable packet.</p>
-<div class="aside aside-see">
-    <p class="aside-title">See</p>
-    ESTBeaconPower
-
-</div>
+                        <p>Available Tx Power levels for Nearable packet.
+- see: ESTBeaconPower</p>
 
                       </div>
                       <div class="declaration">
@@ -4210,8 +4225,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-07-31)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-08-23)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

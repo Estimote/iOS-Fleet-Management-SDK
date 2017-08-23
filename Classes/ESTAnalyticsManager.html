@@ -524,6 +524,9 @@
                 <a class="nav-group-task-link" href="../Classes/ESTRequestGetDeviceDetails.html">ESTRequestGetDeviceDetails</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ESTRequestGetDevices.html">ESTRequestGetDevices</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ESTRequestGetNearables.html">ESTRequestGetNearables</a>
               </li>
               <li class="nav-group-task">
@@ -993,6 +996,9 @@
                 <a class="nav-group-task-link" href="../Enums/ESTMonitoringProximity.html">ESTMonitoringProximity</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums.html#/c:@E@ESTMonitoringState">ESTMonitoringState</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums.html#/c:@E@ESTMonitoringV2ManagerError">ESTMonitoringV2ManagerError</a>
               </li>
               <li class="nav-group-task">
@@ -1226,6 +1232,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTRequestGetDeviceDetails.h@T@ESTRequestGetDeviceDetailsBlock">ESTRequestGetDeviceDetailsBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTRequestGetDevices.h@T@ESTRequestGetDevicesBlock">ESTRequestGetDevicesBlock</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTRequestV2GetDeviceDetails.h@T@ESTRequestV2GetDeviceDetailsBlock">ESTRequestV2GetDeviceDetailsBlock</a>
@@ -1486,12 +1495,8 @@
                 </div>
               </div>
             <p>ESTAnalyticsManager class is responsible for registering analytics requests and events, triggered by ranging and monitoring <code>CLBeaconRegion</code>.
-Manager sends to Estimote Cloud up to 100 registered analytics events every 20 seconds.</p>
-<div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <em>Important:</em> works only with iBeacon devices returned by <code>ESTBeaconManager</code> and `ESTSecureBeaconManager.
-
-</div>
+Manager sends to Estimote Cloud up to 100 registered analytics events every 20 seconds.
+- warning: <em>Important:</em> works only with iBeacon devices returned by <code>ESTBeaconManager</code> and `ESTSecureBeaconManager.</p>
 
           </div>
         </section>
@@ -1513,12 +1518,8 @@ Manager sends to Estimote Cloud up to 100 registered analytics events every 20 s
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Method allows to track analytics event for given region. Analytics events will be cached and sent to Estimote Cloud.</p>
-<div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>If <code>ESTGPSPositionManager</code> is enabled then <code>ESTAnalyticsManager</code> will create analytic event with GPS location assigned.</p>
-
-</div>
+                        <p>Method allows to track analytics event for given region. Analytics events will be cached and sent to Estimote Cloud.
+  - warning: If <code>ESTGPSPositionManager</code> is enabled then <code>ESTAnalyticsManager</code> will create analytic event with GPS location assigned.</p>
 
                       </div>
                       <div class="declaration">
@@ -1548,6 +1549,7 @@ Manager sends to Estimote Cloud up to 100 registered analytics events every 20 s
                               <td>
                                 <div>
                                   <p><code>CLBeaconRegion</code> object, for which analytics events will be tracked</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1560,6 +1562,7 @@ Manager sends to Estimote Cloud up to 100 registered analytics events every 20 s
                               <td>
                                 <div>
                                   <p><code>ESTAnalyticsEventType</code> enum of tracked analytics events</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1687,6 +1690,7 @@ Manager sends to Estimote Cloud up to 100 registered analytics events every 20 s
                               <td>
                                 <div>
                                   <p>flag indicating if analytics for monitoring should be enabled</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1740,6 +1744,7 @@ Manager sends to Estimote Cloud up to 100 registered analytics events every 20 s
                               <td>
                                 <div>
                                   <p>flag indicating if analytics for ranging should be enabled</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1792,6 +1797,7 @@ Manager sends to Estimote Cloud up to 100 registered analytics events every 20 s
                               <td>
                                 <div>
                                   <p>flag indicating if GPS Positioning should be enabled</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1833,6 +1839,7 @@ Manager sends to Estimote Cloud up to 100 registered analytics events every 20 s
                       <div>
                         <h4>Return Value</h4>
                         <p>flag that indicates if analytics is enabled</p>
+
                       </div>
                     </section>
                   </div>
@@ -1869,6 +1876,7 @@ Manager sends to Estimote Cloud up to 100 registered analytics events every 20 s
                       <div>
                         <h4>Return Value</h4>
                         <p>flag that indicates if analytics is enabled</p>
+
                       </div>
                     </section>
                   </div>
@@ -1881,8 +1889,8 @@ Manager sends to Estimote Cloud up to 100 registered analytics events every 20 s
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-07-31)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-08-23)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

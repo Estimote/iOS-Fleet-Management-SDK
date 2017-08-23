@@ -523,6 +523,9 @@
                 <a class="nav-group-task-link" href="Classes/ESTRequestGetDeviceDetails.html">ESTRequestGetDeviceDetails</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/ESTRequestGetDevices.html">ESTRequestGetDevices</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/ESTRequestGetNearables.html">ESTRequestGetNearables</a>
               </li>
               <li class="nav-group-task">
@@ -992,6 +995,9 @@
                 <a class="nav-group-task-link" href="Enums/ESTMonitoringProximity.html">ESTMonitoringProximity</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums.html#/c:@E@ESTMonitoringState">ESTMonitoringState</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums.html#/c:@E@ESTMonitoringV2ManagerError">ESTMonitoringV2ManagerError</a>
               </li>
               <li class="nav-group-task">
@@ -1225,6 +1231,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Type Definitions.html#/c:ESTRequestGetDeviceDetails.h@T@ESTRequestGetDeviceDetailsBlock">ESTRequestGetDeviceDetailsBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Type Definitions.html#/c:ESTRequestGetDevices.h@T@ESTRequestGetDevicesBlock">ESTRequestGetDevicesBlock</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Type Definitions.html#/c:ESTRequestV2GetDeviceDetails.h@T@ESTRequestV2GetDeviceDetailsBlock">ESTRequestV2GetDeviceDetailsBlock</a>
@@ -1501,12 +1510,8 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>ESTAnalyticsManager class is responsible for registering analytics requests and events, triggered by ranging and monitoring <code>CLBeaconRegion</code>.
-Manager sends to Estimote Cloud up to 100 registered analytics events every 20 seconds.</p>
-<div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <em>Important:</em> works only with iBeacon devices returned by <code>ESTBeaconManager</code> and `ESTSecureBeaconManager.
-
-</div>
+Manager sends to Estimote Cloud up to 100 registered analytics events every 20 seconds.
+- warning: <em>Important:</em> works only with iBeacon devices returned by <code>ESTBeaconManager</code> and `ESTSecureBeaconManager.</p>
 
                         <a href="Classes/ESTAnalyticsManager.html" class="slightly-smaller">See more</a>
                       </div>
@@ -4116,8 +4121,7 @@ available Estimote Cloud API methods using block pattern to handle result.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code>
-<span class="k">@interface</span> <span class="nc">ESTCloudManager</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTCloudManager</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -4654,6 +4658,7 @@ beacon or nearable device including status, settings and pending settings.</p>
 <p>Note.
   For now, ESTDeviceManager cannot retrieve Proximity UUID of the scanned devices.
   To find a particular iBeacon device use -initWithIdentifier: (the identifier property is unique for Estimote devices).</p>
+
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     -[ESTDeviceManager startDeviceDiscoveryWithFilter:].
@@ -4698,6 +4703,7 @@ beacon or nearable device including status, settings and pending settings.</p>
                         <p>Class defines scanning &amp; filtering attributes required by ESTDeviceManager to discover devices that can be connected to.
   Results in -[ESTDeviceManagerDelegate deviceManager:didDiscoverDevices:] being called with a collection of
   ESTDeviceLocationBeacon objects.</p>
+
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     -[ESTDeviceManager startDeviceDiscoveryWithFilter:].
@@ -4742,6 +4748,7 @@ beacon or nearable device including status, settings and pending settings.</p>
                         <p>Class defines scanning &amp; filtering attributes required by ESTDeviceManager to discover devices that can be connected to.
   Results in -[ESTDeviceManagerDelegate deviceManager:didDiscoverDevices:] being called with a collection of
   ESTDeviceNearable objects.</p>
+
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     -[ESTDeviceManager startDeviceDiscoveryWithFilter:].
@@ -6403,8 +6410,7 @@ containing a device identifier and an array of <code><a href="Classes/ESTSetting
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code>
-<span class="k">@interface</span> <span class="nc">ESTMonitoringManager</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTMonitoringManager</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -7530,6 +7536,43 @@ with identifiers provided during initialization.</p>
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(cs)ESTRequestGetDevices"></a>
+                    <a name="//apple_ref/objc/Class/ESTRequestGetDevices" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)ESTRequestGetDevices">ESTRequestGetDevices</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Allows to get user&rsquo;s devices details from the Estimote Cloud API.</p>
+
+                        <a href="Classes/ESTRequestGetDevices.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTRequestGetDevices</span> <span class="p">:</span> <span class="nc">ESTRequestGetJSON</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">ESTRequestGetDevices</span> <span class="p">:</span> <span class="kt">ESTRequestGetJSON</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(cs)ESTRequestGetNearables"></a>
                     <a name="//apple_ref/objc/Class/ESTRequestGetNearables" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)ESTRequestGetNearables">ESTRequestGetNearables</a>
@@ -7735,8 +7778,7 @@ List includes both settings and firmware update.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code>
-<span class="k">@interface</span> <span class="nc">ESTRequestV2GetDeviceDetails</span> <span class="p">:</span> <span class="nc">ESTRequestGetJSON</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTRequestV2GetDeviceDetails</span> <span class="p">:</span> <span class="nc">ESTRequestGetJSON</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -12267,8 +12309,8 @@ allows to discover CoreBluetooth based representation of Estimote Beacon devices
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-07-31)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-08-23)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>
