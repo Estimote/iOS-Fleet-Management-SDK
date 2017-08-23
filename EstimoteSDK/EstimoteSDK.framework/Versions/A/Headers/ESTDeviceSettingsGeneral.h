@@ -78,6 +78,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) NSNumber *automaticFirmwareUpdateEnabled;
 
 /**
+ *  Vector used for magnetometer calibration.
+ */
+@property (nonatomic, strong, readonly) NSArray <NSNumber *>*magnetometerCalibrationData;
+
+/**
  *  Designated initializer.
  *
  *  @param dictionary Dictionary provided by the Estimote cloud.

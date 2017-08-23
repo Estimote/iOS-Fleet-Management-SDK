@@ -524,6 +524,9 @@
                 <a class="nav-group-task-link" href="../Classes/ESTRequestGetDeviceDetails.html">ESTRequestGetDeviceDetails</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ESTRequestGetDevices.html">ESTRequestGetDevices</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ESTRequestGetNearables.html">ESTRequestGetNearables</a>
               </li>
               <li class="nav-group-task">
@@ -993,6 +996,9 @@
                 <a class="nav-group-task-link" href="../Enums/ESTMonitoringProximity.html">ESTMonitoringProximity</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums.html#/c:@E@ESTMonitoringState">ESTMonitoringState</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums.html#/c:@E@ESTMonitoringV2ManagerError">ESTMonitoringV2ManagerError</a>
               </li>
               <li class="nav-group-task">
@@ -1226,6 +1232,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTRequestGetDeviceDetails.h@T@ESTRequestGetDeviceDetailsBlock">ESTRequestGetDeviceDetailsBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTRequestGetDevices.h@T@ESTRequestGetDevicesBlock">ESTRequestGetDevicesBlock</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTRequestV2GetDeviceDetails.h@T@ESTRequestV2GetDeviceDetailsBlock">ESTRequestV2GetDeviceDetailsBlock</a>
@@ -1497,6 +1506,58 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(pl)ESTMonitoringV2ManagerDelegate(im)monitoringManagerDidStart:"></a>
+                    <a name="//apple_ref/objc/Method/-monitoringManagerDidStart:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)ESTMonitoringV2ManagerDelegate(im)monitoringManagerDidStart:">-monitoringManagerDidStart:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Monitoring has started successfully.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">monitoringManagerDidStart</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/ESTMonitoringV2Manager.html">ESTMonitoringV2Manager</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">manager</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">monitoringManagerDidStart</span><span class="p">(</span><span class="n">_</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt"><a href="../Classes/ESTMonitoringV2Manager.html">ESTMonitoringV2Manager</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>manager</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Monitoring manager.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(pl)ESTMonitoringV2ManagerDelegate(im)monitoringManager:didFailWithError:"></a>
                     <a name="//apple_ref/objc/Method/-monitoringManager:didFailWithError:" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(pl)ESTMonitoringV2ManagerDelegate(im)monitoringManager:didFailWithError:">-monitoringManager:didFailWithError:</a>
@@ -1507,7 +1568,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Monitoring failed because of configuration, permissions or Bluetooth problems.
+                        <p>Monitoring has failed because of configuration, permissions or Bluetooth problems.
 The error object&rsquo;s <code>code</code> is a case of <code><a href="../Enums.html#/c:@E@ESTMonitoringV2ManagerError">ESTMonitoringV2ManagerError</a></code> enum.
 The error object&rsquo;s <code>domain</code> is <code>ESTMonitoringV2ManagerErrorDomain</code>.</p>
 
@@ -1539,6 +1600,7 @@ The error object&rsquo;s <code>domain</code> is <code>ESTMonitoringV2ManagerErro
                               <td>
                                 <div>
                                   <p>Monitoring manager reporting the error.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1551,6 +1613,7 @@ The error object&rsquo;s <code>domain</code> is <code>ESTMonitoringV2ManagerErro
                               <td>
                                 <div>
                                   <p>Error object.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1573,7 +1636,7 @@ The error object&rsquo;s <code>domain</code> is <code>ESTMonitoringV2ManagerErro
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Called when user entered proximity defined by <code>meanTriggerDistance</code> of the monitoring device.</p>
+                        <p>Called when user entered proximity defined by <code>meanTriggerDistance</code> of the monitored device.</p>
 
                       </div>
                       <div class="declaration">
@@ -1603,6 +1666,7 @@ The error object&rsquo;s <code>domain</code> is <code>ESTMonitoringV2ManagerErro
                               <td>
                                 <div>
                                   <p>Monitoring manager reporting the event</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1615,6 +1679,7 @@ The error object&rsquo;s <code>domain</code> is <code>ESTMonitoringV2ManagerErro
                               <td>
                                 <div>
                                   <p>Device identifier broadcasted in the Estimote Location packet that triggered the enter event.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1637,7 +1702,7 @@ The error object&rsquo;s <code>domain</code> is <code>ESTMonitoringV2ManagerErro
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Called when user exited proximity defined by <code>meanTriggerDistance</code> of the monitoring device.</p>
+                        <p>Called when user exited proximity defined by <code>meanTriggerDistance</code> of the monitored device.</p>
 
                       </div>
                       <div class="declaration">
@@ -1667,6 +1732,7 @@ The error object&rsquo;s <code>domain</code> is <code>ESTMonitoringV2ManagerErro
                               <td>
                                 <div>
                                   <p>Monitoring manager reporting the event</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1679,6 +1745,7 @@ The error object&rsquo;s <code>domain</code> is <code>ESTMonitoringV2ManagerErro
                               <td>
                                 <div>
                                   <p>Device identifier broadcasted in the Estimote Location packet that triggered the enter event.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1696,8 +1763,8 @@ The error object&rsquo;s <code>domain</code> is <code>ESTMonitoringV2ManagerErro
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-07-31)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-08-23)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

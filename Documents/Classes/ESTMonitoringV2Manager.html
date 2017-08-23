@@ -524,6 +524,9 @@
                 <a class="nav-group-task-link" href="../Classes/ESTRequestGetDeviceDetails.html">ESTRequestGetDeviceDetails</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ESTRequestGetDevices.html">ESTRequestGetDevices</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ESTRequestGetNearables.html">ESTRequestGetNearables</a>
               </li>
               <li class="nav-group-task">
@@ -993,6 +996,9 @@
                 <a class="nav-group-task-link" href="../Enums/ESTMonitoringProximity.html">ESTMonitoringProximity</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums.html#/c:@E@ESTMonitoringState">ESTMonitoringState</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums.html#/c:@E@ESTMonitoringV2ManagerError">ESTMonitoringV2ManagerError</a>
               </li>
               <li class="nav-group-task">
@@ -1226,6 +1232,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTRequestGetDeviceDetails.h@T@ESTRequestGetDeviceDetailsBlock">ESTRequestGetDeviceDetailsBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTRequestGetDevices.h@T@ESTRequestGetDevicesBlock">ESTRequestGetDevicesBlock</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTRequestV2GetDeviceDetails.h@T@ESTRequestV2GetDeviceDetailsBlock">ESTRequestV2GetDeviceDetailsBlock</a>
@@ -1662,7 +1671,8 @@ from the beacon where events should happen.</p>
                               <td>
                                 <div>
                                   <p>Distance boundary between inside and outside states.
-                       Enter/exit events are reported when crossing these states.</p>
+                           Enter/exit events are reported when crossing these states.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1675,6 +1685,7 @@ from the beacon where events should happen.</p>
                               <td>
                                 <div>
                                   <p>Delegate object to invoke callbacks on.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1684,6 +1695,7 @@ from the beacon where events should happen.</p>
                       <div>
                         <h4>Return Value</h4>
                         <p>Initialized object.</p>
+
                       </div>
                     </section>
                   </div>
@@ -1739,7 +1751,8 @@ start Core Location beacon monitoring for <code>-backgroundSupportRegion</code>.
                               <td>
                                 <div>
                                   <p>Identifiers of beacons to be monitored. Device identifer can be read 
-               by visiting <a href="https://cloud.estimote.com/#/">https://cloud.estimote.com/#/</a></p>
+                   by visiting <a href="https://cloud.estimote.com/#/">https://cloud.estimote.com/#/</a></p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1783,6 +1796,64 @@ start Core Location beacon monitoring for <code>-backgroundSupportRegion</code>.
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)ESTMonitoringV2Manager(im)stateForBeaconWithIdentifier:"></a>
+                    <a name="//apple_ref/objc/Method/-stateForBeaconWithIdentifier:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)ESTMonitoringV2Manager(im)stateForBeaconWithIdentifier:">-stateForBeaconWithIdentifier:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Informs about the current monitoring state of a proximity zone defined by a beacon.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Enums.html#/c:@E@ESTMonitoringState">ESTMonitoringState</a></span><span class="p">)</span><span class="nf">stateForBeaconWithIdentifier</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">identifier</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">stateForBeacon</span><span class="p">(</span><span class="n">withIdentifier</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Enums.html#/c:@E@ESTMonitoringState">ESTMonitoringState</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>identifier</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Identifier of the beacon.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Current monitoring state.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
@@ -1791,8 +1862,8 @@ start Core Location beacon monitoring for <code>-backgroundSupportRegion</code>.
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-07-31)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-08-23)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

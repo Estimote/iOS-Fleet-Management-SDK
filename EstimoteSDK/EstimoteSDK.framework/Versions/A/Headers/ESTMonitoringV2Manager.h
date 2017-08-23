@@ -40,7 +40,14 @@ typedef NS_ENUM(NSInteger, ESTMonitoringV2ManagerError)
 @protocol ESTMonitoringV2ManagerDelegate <NSObject>
 
 /**
- Monitoring failed because of configuration, permissions or Bluetooth problems.
+ Monitoring has started successfully.
+
+ @param manager Monitoring manager.
+ */
+- (void)monitoringManagerDidStart:(ESTMonitoringV2Manager *)manager;
+
+/**
+ Monitoring has failed because of configuration, permissions or Bluetooth problems.
  The error object's <code>code</code> is a case of <code>ESTMonitoringV2ManagerError</code> enum.
  The error object's <code>domain</code> is <code>ESTMonitoringV2ManagerErrorDomain</code>.
 
@@ -52,7 +59,7 @@ typedef NS_ENUM(NSInteger, ESTMonitoringV2ManagerError)
 @optional
 
 /**
- Called when user entered proximity defined by <code>meanTriggerDistance</code> of the monitoring device.
+ Called when user entered proximity defined by <code>meanTriggerDistance</code> of the monitored device.
 
  @param manager    Monitoring manager reporting the event
  @param identifier Device identifier broadcasted in the Estimote Location packet that triggered the enter event.
@@ -60,7 +67,7 @@ typedef NS_ENUM(NSInteger, ESTMonitoringV2ManagerError)
 - (void)monitoringManager:(ESTMonitoringV2Manager *)manager didEnterDesiredRangeOfBeaconWithIdentifier:(NSString *)identifier;
 
 /**
- Called when user exited proximity defined by <code>meanTriggerDistance</code> of the monitoring device.
+ Called when user exited proximity defined by <code>meanTriggerDistance</code> of the monitored device.
 
  @param manager    Monitoring manager reporting the event
  @param identifier Device identifier broadcasted in the Estimote Location packet that triggered the enter event.
@@ -69,6 +76,19 @@ typedef NS_ENUM(NSInteger, ESTMonitoringV2ManagerError)
 
 @end
 
+
+/**
+ Represents possible monitoring states for a user in relation to a proximity zone.
+ 
+ - ESTMonitoringStateUnknown: It's unkown whether the user is inside or outside the zone.
+ - ESTMonitoringStateInside: The user is inside the zone.
+ - ESTMonitoringStateOutside: The user is outside the zone.
+ */
+typedef NS_ENUM(NSUInteger, ESTMonitoringState) {
+    ESTMonitoringStateUnknown = 0,
+    ESTMonitoringStateInsideZone,
+    ESTMonitoringStateOutsideZone
+};
 
 /**
  Handles beacon enter/exit events using Estimote Monitoring v2.0 algorithm.
@@ -151,6 +171,14 @@ typedef NS_ENUM(NSInteger, ESTMonitoringV2ManagerError)
  Additionally, stop Core Location beacon monitoring for <code>-backgroundSupportRegion</code>.
  */
 - (void)stopMonitoring;
+
+/**
+ Informs about the current monitoring state of a proximity zone defined by a beacon.
+ 
+ @param identifier Identifier of the beacon.
+ @return Current monitoring state.
+ */
+- (ESTMonitoringState)stateForBeaconWithIdentifier:(NSString *)identifier;
 
 @end
 

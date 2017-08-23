@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>ESTUtilityManager Class Reference</title>
+    <title>ESTRequestGetDevices Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/objc/Class/ESTUtilityManager" class="dashAnchor"></a>
+    <a name="//apple_ref/objc/Class/ESTRequestGetDevices" class="dashAnchor"></a>
 
-    <a title="ESTUtilityManager Class Reference"></a>
+    <a title="ESTRequestGetDevices Class Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -43,7 +43,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">EstimoteSDK Reference</a>
       <img class="carat" src="../img/carat.png" />
-      ESTUtilityManager Class Reference
+      ESTRequestGetDevices Class Reference
     </p>
 
     <div class="content-wrapper">
@@ -1487,15 +1487,14 @@
 
         <section class="section">
           <div class="section-content">
-            <h1>ESTUtilityManager</h1>
+            <h1>ESTRequestGetDevices</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTUtilityManager</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTRequestGetDevices</span> <span class="p">:</span> <span class="nc">ESTRequestGetJSON</span></code></pre>
 
                 </div>
               </div>
-            <p>The <code>ESTUtilityManager</code> class defines the interface for utility methods related to Estimote Beacons. The main functionality
-allows to discover CoreBluetooth based representation of Estimote Beacon devices.</p>
+            <p>Allows to get user&rsquo;s devices details from the Estimote Cloud API.</p>
 
           </div>
         </section>
@@ -1507,9 +1506,9 @@ allows to discover CoreBluetooth based representation of Estimote Beacon devices
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)ESTUtilityManager(py)state"></a>
-                    <a name="//apple_ref/objc/Property/state" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)ESTUtilityManager(py)state">state</a>
+                    <a name="/c:objc(cs)ESTRequestGetDevices(im)sendRequestWithCompletion:"></a>
+                    <a name="//apple_ref/objc/Method/-sendRequestWithCompletion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)ESTRequestGetDevices(im)sendRequestWithCompletion:">-sendRequestWithCompletion:</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1517,121 +1516,19 @@ allows to discover CoreBluetooth based representation of Estimote Beacon devices
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Current state of Utility manager</p>
+                        <p>Methods allows to send request with completion block invoked as a result.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">ESTUtilityManagerState</span> <span class="n">state</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sendRequestWithCompletion</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type Definitions.html#/c:ESTRequestGetDevices.h@T@ESTRequestGetDevicesBlock">ESTRequestGetDevicesBlock</a></span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">state</span><span class="p">:</span> <span class="kt">ESTUtilityManagerState</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)ESTUtilityManager(py)delegate"></a>
-                    <a name="//apple_ref/objc/Property/delegate" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)ESTUtilityManager(py)delegate">delegate</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Delegate object.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
-    <span class="n">id</span><span class="o">&lt;</span><span class="n">ESTUtilityManagerDelegate</span><span class="o">&gt;</span> <span class="n">_Nullable</span> <span class="n">delegate</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">weak</span> <span class="k">var</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt">ESTUtilityManagerDelegate</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)ESTUtilityManager(im)startEstimoteBeaconDiscovery"></a>
-                    <a name="//apple_ref/objc/Method/-startEstimoteBeaconDiscovery" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)ESTUtilityManager(im)startEstimoteBeaconDiscovery">-startEstimoteBeaconDiscovery</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Starts a CoreBluetooth scan in search for all Estimote Beacons in range.
- Related <code>utilityManager:didDiscoverBeacons:</code> is fired every 0.2 sec until
- stopEstimoteBeaconDiscovery method invocation.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">startEstimoteBeaconDiscovery</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">startEstimoteBeaconDiscovery</span><span class="p">()</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)ESTUtilityManager(im)startEstimoteBeaconDiscoveryWithUpdateInterval:"></a>
-                    <a name="//apple_ref/objc/Method/-startEstimoteBeaconDiscoveryWithUpdateInterval:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)ESTUtilityManager(im)startEstimoteBeaconDiscoveryWithUpdateInterval:">-startEstimoteBeaconDiscoveryWithUpdateInterval:</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Starts a CoreBluetooth scan in search for all Estimote Beacons in range.
- Related <code>utilityManager:didDiscoverBeacons:</code> is fired until
- stopEstimoteBeaconDiscovery method invocation. Delegate method interval
- is provided as a method param.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">startEstimoteBeaconDiscoveryWithUpdateInterval</span><span class="p">:(</span><span class="n">NSTimeInterval</span><span class="p">)</span><span class="nv">interval</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">startEstimoteBeaconDiscovery</span><span class="p">(</span><span class="n">withUpdateInterval</span> <span class="nv">interval</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">sendRequest</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Type Definitions.html#/c:ESTRequestGetDevices.h@T@ESTRequestGetDevicesBlock">ESTRequestGetDevicesBlock</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1642,172 +1539,18 @@ allows to discover CoreBluetooth based representation of Estimote Beacon devices
                             <tr>
                               <td>
                                 <code>
-                                <em>interval</em>
+                                <em>completion</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>Interval, in seconds, for updates from delegate method.</p>
+                                  <p>Request completion block. No error means request was successful.</p>
 
                                 </div>
                               </td>
                             </tr>
                           </tbody>
                         </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)ESTUtilityManager(im)stopEstimoteBeaconDiscovery"></a>
-                    <a name="//apple_ref/objc/Method/-stopEstimoteBeaconDiscovery" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)ESTUtilityManager(im)stopEstimoteBeaconDiscovery">-stopEstimoteBeaconDiscovery</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Stops the CoreBluetooth based beacon discovery.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">stopEstimoteBeaconDiscovery</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">stopEstimoteBeaconDiscovery</span><span class="p">()</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)ESTUtilityManager(im)startEstimoteNearableDiscovery"></a>
-                    <a name="//apple_ref/objc/Method/-startEstimoteNearableDiscovery" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)ESTUtilityManager(im)startEstimoteNearableDiscovery">-startEstimoteNearableDiscovery</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Starts a CoreBluetooth scan in search for all Estimote Nearables in range.
- Related <code>utilityManager:didDiscoverNearables:</code> is fired every 0.2 sec until
- stopEstimoteNearablesDiscovery method invocation.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">startEstimoteNearableDiscovery</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">startEstimoteNearableDiscovery</span><span class="p">()</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)ESTUtilityManager(im)startEstimoteNearableDiscoveryWithUpdateInterval:"></a>
-                    <a name="//apple_ref/objc/Method/-startEstimoteNearableDiscoveryWithUpdateInterval:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)ESTUtilityManager(im)startEstimoteNearableDiscoveryWithUpdateInterval:">-startEstimoteNearableDiscoveryWithUpdateInterval:</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Starts a CoreBluetooth scan in search for all Estimote Nearables in range.
- Related <code>utilityManager:didDiscoverNearables:</code> is fired until
- stopEstimoteNearablesDiscovery method invocation. Delegate method interval
- is provided as a method param.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">startEstimoteNearableDiscoveryWithUpdateInterval</span><span class="p">:</span>
-    <span class="p">(</span><span class="n">NSTimeInterval</span><span class="p">)</span><span class="nv">interval</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">startEstimoteNearableDiscovery</span><span class="p">(</span><span class="n">withUpdateInterval</span> <span class="nv">interval</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>interval</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Interval, in seconds, for updates from delegate method.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)ESTUtilityManager(im)stopEstimoteNearableDiscovery"></a>
-                    <a name="//apple_ref/objc/Method/-stopEstimoteNearableDiscovery" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)ESTUtilityManager(im)stopEstimoteNearableDiscovery">-stopEstimoteNearableDiscovery</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Stops the CoreBluetooth based nearables discovery.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">stopEstimoteNearableDiscovery</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">stopEstimoteNearableDiscovery</span><span class="p">()</span></code></pre>
-
-                        </div>
                       </div>
                     </section>
                   </div>

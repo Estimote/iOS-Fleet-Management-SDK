@@ -1,3 +1,12 @@
+## 4.21.0 (August 22, 2017)
+
+Features:
+- Location (hardware revision “F”) support calibrating magnetometers via Cloud.
+
+Bugfixes:
+- Fixed building dictionary for GPIO settings confirmation.
+- Fix for Here & Now support on UWB beacons.
+
 ## 4.20.1 (August 16, 2017)
 
 Bugfixes:
@@ -113,7 +122,7 @@ Improvements:
 
 Bugfixes:
 - Fixed issue when changes to a devices's name were not applied.
- 
+
 ## 4.13.1 (February 1, 2017)
 
 Bugfixes:
@@ -190,7 +199,7 @@ Improvements:
 
 Features:
 
-- Estimote Analitycs are turned on for monitoring and ranging. 
+- Estimote Analitycs are turned on for monitoring and ranging.
 
 ## 4.7.0 (July 1, 2016)
 
