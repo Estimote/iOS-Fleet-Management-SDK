@@ -1,3 +1,9 @@
+## 4.22.0 (August 28, 2017)
+
+Improvements:
+* Added a method to `ESTMonitoringV2Manager` for checking current monitoring state.
+* `ESTMonitoringV2ManagerDelegate` now also delegates successful start of monitoring and when monitoring state for a zone is first determined.
+
 ## 4.21.0 (August 22, 2017)
 
 Features:

@@ -1506,58 +1506,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(pl)ESTMonitoringV2ManagerDelegate(im)monitoringManagerDidStart:"></a>
-                    <a name="//apple_ref/objc/Method/-monitoringManagerDidStart:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(pl)ESTMonitoringV2ManagerDelegate(im)monitoringManagerDidStart:">-monitoringManagerDidStart:</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Monitoring has started successfully.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">monitoringManagerDidStart</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/ESTMonitoringV2Manager.html">ESTMonitoringV2Manager</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">manager</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">monitoringManagerDidStart</span><span class="p">(</span><span class="n">_</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt"><a href="../Classes/ESTMonitoringV2Manager.html">ESTMonitoringV2Manager</a></span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>manager</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Monitoring manager.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/c:objc(pl)ESTMonitoringV2ManagerDelegate(im)monitoringManager:didFailWithError:"></a>
                     <a name="//apple_ref/objc/Method/-monitoringManager:didFailWithError:" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(pl)ESTMonitoringV2ManagerDelegate(im)monitoringManager:didFailWithError:">-monitoringManager:didFailWithError:</a>
@@ -1568,7 +1516,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Monitoring has failed because of configuration, permissions or Bluetooth problems.
+                        <p>Called when monitoring has failed because of invalid configuration, permissions or Bluetooth problems.
 The error object&rsquo;s <code>code</code> is a case of <code><a href="../Enums.html#/c:@E@ESTMonitoringV2ManagerError">ESTMonitoringV2ManagerError</a></code> enum.
 The error object&rsquo;s <code>domain</code> is <code>ESTMonitoringV2ManagerErrorDomain</code>.</p>
 
@@ -1626,6 +1574,138 @@ The error object&rsquo;s <code>domain</code> is <code>ESTMonitoringV2ManagerErro
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(pl)ESTMonitoringV2ManagerDelegate(im)monitoringManagerDidStart:"></a>
+                    <a name="//apple_ref/objc/Method/-monitoringManagerDidStart:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)ESTMonitoringV2ManagerDelegate(im)monitoringManagerDidStart:">-monitoringManagerDidStart:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called when monitoring has started successfully.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">monitoringManagerDidStart</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/ESTMonitoringV2Manager.html">ESTMonitoringV2Manager</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">manager</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">monitoringManagerDidStart</span><span class="p">(</span><span class="n">_</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt"><a href="../Classes/ESTMonitoringV2Manager.html">ESTMonitoringV2Manager</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>manager</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Monitoring manager.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(pl)ESTMonitoringV2ManagerDelegate(im)monitoringManager:didDetermineInitialState:forBeaconWithIdentifier:"></a>
+                    <a name="//apple_ref/objc/Method/-monitoringManager:didDetermineInitialState:forBeaconWithIdentifier:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(pl)ESTMonitoringV2ManagerDelegate(im)monitoringManager:didDetermineInitialState:forBeaconWithIdentifier:">-monitoringManager:didDetermineInitialState:forBeaconWithIdentifier:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called when a monitoring state for a proximity zone defined by a beacon was first determined.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">monitoringManager</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/ESTMonitoringV2Manager.html">ESTMonitoringV2Manager</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">manager</span>
+    <span class="nf">didDetermineInitialState</span><span class="p">:(</span><span class="n"><a href="../Enums.html#/c:@E@ESTMonitoringState">ESTMonitoringState</a></span><span class="p">)</span><span class="nv">state</span>
+     <span class="nf">forBeaconWithIdentifier</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">identifier</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">monitoringManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt"><a href="../Classes/ESTMonitoringV2Manager.html">ESTMonitoringV2Manager</a></span><span class="p">,</span> <span class="n">didDetermineInitialState</span> <span class="nv">state</span><span class="p">:</span> <span class="kt"><a href="../Enums.html#/c:@E@ESTMonitoringState">ESTMonitoringState</a></span><span class="p">,</span> <span class="n">forBeaconWithIdentifier</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>manager</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Monitoring manager reporting the event.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>state</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Monitoring state for the zone.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>identifier</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Identifier of the beacon defining the zone.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(pl)ESTMonitoringV2ManagerDelegate(im)monitoringManager:didEnterDesiredRangeOfBeaconWithIdentifier:"></a>
                     <a name="//apple_ref/objc/Method/-monitoringManager:didEnterDesiredRangeOfBeaconWithIdentifier:" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(pl)ESTMonitoringV2ManagerDelegate(im)monitoringManager:didEnterDesiredRangeOfBeaconWithIdentifier:">-monitoringManager:didEnterDesiredRangeOfBeaconWithIdentifier:</a>
@@ -1665,7 +1745,7 @@ The error object&rsquo;s <code>domain</code> is <code>ESTMonitoringV2ManagerErro
                               </td>
                               <td>
                                 <div>
-                                  <p>Monitoring manager reporting the event</p>
+                                  <p>Monitoring manager reporting the event.</p>
 
                                 </div>
                               </td>
@@ -1731,7 +1811,7 @@ The error object&rsquo;s <code>domain</code> is <code>ESTMonitoringV2ManagerErro
                               </td>
                               <td>
                                 <div>
-                                  <p>Monitoring manager reporting the event</p>
+                                  <p>Monitoring manager reporting the event.</p>
 
                                 </div>
                               </td>
@@ -1763,7 +1843,7 @@ The error object&rsquo;s <code>domain</code> is <code>ESTMonitoringV2ManagerErro
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-08-23)</p>
+      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-08-28)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
