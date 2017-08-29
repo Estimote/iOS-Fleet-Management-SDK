@@ -20,12 +20,12 @@
     return self;
 }
 
-- (void)contentForBeaconID:(BeaconID *)beaconID completion:(void (^)(id))completion {
-    BeaconDetails *beaconDetails = [self.staticContent objectForKey:beaconID];
+- (void)contentForBeacon:(CLBeacon *)beacon completion:(void (^)(id))completion {
+    BeaconDetails *beaconDetails = [self.staticContent objectForKey:beacon.beaconID];
     if (beaconDetails) {
         completion(beaconDetails);
     } else {
-        NSLog(@"No static content found for beacon %@, will use default values instead. Make sure there's some content defined for this beacon.", beaconID);
+        NSLog(@"No static content found for beacon %@, will use default values instead. Make sure there's some content defined for this beacon.", beacon.beaconID);
         completion([[BeaconDetails alloc] initWithBeaconName:@"beacon" beaconColor:ESTColorUnknown]);
     }
 }

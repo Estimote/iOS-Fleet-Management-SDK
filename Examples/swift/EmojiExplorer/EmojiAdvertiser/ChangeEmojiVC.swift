@@ -213,7 +213,7 @@ extension ChangeEmojiVC: ESTDeviceManagerDelegate {
                 self.nearestDevice!.delegate = self
                 self.nearestDevice!.connect()
                 
-                print("Connecting ☝️ to  \(self.nearestDevice?.identifier)")
+                print("Connecting ☝️ to  \(String(describing: self.nearestDevice?.identifier))")
             }
         }
     }
@@ -237,7 +237,7 @@ extension ChangeEmojiVC: ESTDeviceManagerDelegate {
     
     func estDevice(_ device: ESTDeviceConnectable, didDisconnectWithError error: Error?) {
         if error != nil {
-            print("Disconnected with error 🤔\n\(error)")
+            print("Disconnected with error 🤔\n\(String(describing: error))")
         } else {
             print("Disconnected 🛰")
         }

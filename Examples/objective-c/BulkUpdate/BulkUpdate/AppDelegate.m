@@ -19,8 +19,7 @@
    
     // TODO: put your App ID and App Token here
     // You can get them by adding your app on https://cloud.estimote.com/#/apps
-    
-    //[ESTConfig setupAppID:@"<#App ID#>" andAppToken:@"<#App Token#>"];
+    [ESTConfig setupAppID:@"<#App ID#>" andAppToken:@"<#App Token#>"];
 
     return YES;
 }

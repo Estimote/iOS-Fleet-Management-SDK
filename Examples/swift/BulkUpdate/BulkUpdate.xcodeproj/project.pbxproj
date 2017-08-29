@@ -24,7 +24,7 @@
 		05CD58591D79BC7C009D43E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05CD585B1D79BC7C009D43E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05CD58701D7D8F29009D43E2 /* ObjCBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCBridge.h; sourceTree = "<group>"; };
-		05CEF8521D99439000808465 /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EstimoteSDK.framework; path = ../../../EstimoteSDK/EstimoteSDK.framework; sourceTree = "<group>"; };
+		05CEF8521D99439000808465 /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EstimoteSDK.framework; path = ../../../../EstimoteSDK/EstimoteSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,7 +44,6 @@
 			children = (
 				05CD584E1D79BC7C009D43E2 /* BulkUpdate */,
 				05CD584D1D79BC7C009D43E2 /* Products */,
-				05CEF8521D99439000808465 /* EstimoteSDK.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,22 +59,23 @@
 			isa = PBXGroup;
 			children = (
 				05CD584F1D79BC7C009D43E2 /* AppDelegate.swift */,
-				05CD58631D79C0BD009D43E2 /* ViewControllers */,
+				05CD58511D79BC7C009D43E2 /* ViewController.swift */,
 				05CD58531D79BC7C009D43E2 /* Main.storyboard */,
 				05CD58561D79BC7C009D43E2 /* Assets.xcassets */,
 				05CD58581D79BC7C009D43E2 /* LaunchScreen.storyboard */,
 				05CD585B1D79BC7C009D43E2 /* Info.plist */,
 				05CD58701D7D8F29009D43E2 /* ObjCBridge.h */,
+				BEDA810B1F0652190076F73A /* Estimote */,
 			);
 			path = BulkUpdate;
 			sourceTree = "<group>";
 		};
-		05CD58631D79C0BD009D43E2 /* ViewControllers */ = {
+		BEDA810B1F0652190076F73A /* Estimote */ = {
 			isa = PBXGroup;
 			children = (
-				05CD58511D79BC7C009D43E2 /* ViewController.swift */,
+				05CEF8521D99439000808465 /* EstimoteSDK.framework */,
 			);
-			name = ViewControllers;
+			name = Estimote;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +274,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.estimote.BulkUpdate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_NAME}/ObjCBridge.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -290,6 +291,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.estimote.BulkUpdate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_NAME}/ObjCBridge.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

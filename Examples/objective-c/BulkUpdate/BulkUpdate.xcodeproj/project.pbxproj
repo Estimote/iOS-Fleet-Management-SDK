@@ -30,7 +30,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		05CEF84F1D99414200808465 /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EstimoteSDK.framework; path = ../../../EstimoteSDK/EstimoteSDK.framework; sourceTree = "<group>"; };
+		05CEF84F1D99414200808465 /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EstimoteSDK.framework; path = ../../../../EstimoteSDK/EstimoteSDK.framework; sourceTree = "<group>"; };
 		05E9916C1D802E5F00473644 /* BulkUpdate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BulkUpdate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05E991701D802E6000473644 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		05E991721D802E6000473644 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -69,7 +69,6 @@
 			children = (
 				05E9916E1D802E6000473644 /* BulkUpdate */,
 				05E9916D1D802E5F00473644 /* Products */,
-				05CEF84F1D99414200808465 /* EstimoteSDK.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,6 +90,7 @@
 				05E9917B1D802E6000473644 /* Assets.xcassets */,
 				05E9917D1D802E6000473644 /* LaunchScreen.storyboard */,
 				05E991801D802E6000473644 /* Info.plist */,
+				BE5B6C461F0662210058577C /* Estimote */,
 				05E9916F1D802E6000473644 /* Supporting Files */,
 			);
 			path = BulkUpdate;
@@ -102,6 +102,14 @@
 				05E991701D802E6000473644 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BE5B6C461F0662210058577C /* Estimote */ = {
+			isa = PBXGroup;
+			children = (
+				05CEF84F1D99414200808465 /* EstimoteSDK.framework */,
+			);
+			name = Estimote;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,7 +139,7 @@
 		05E991641D802E5F00473644 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Dawid Rączka";
 				TargetAttributes = {
 					05E9916B1D802E5F00473644 = {
@@ -217,8 +225,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -262,8 +272,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

@@ -60,14 +60,14 @@
 		716690A81EDEB2350068A029 /* GPIO */ = {
 			isa = PBXGroup;
 			children = (
-				716690BC1EDEB37A0068A029 /* ViewControllers */,
-				716690C51EDEB52C0068A029 /* HeaderFiles */,
 				716690A91EDEB2350068A029 /* AppDelegate.swift */,
+				716690BC1EDEB37A0068A029 /* ViewControllers */,
 				716690AD1EDEB2350068A029 /* Main.storyboard */,
 				716690B01EDEB2350068A029 /* Assets.xcassets */,
 				716690B21EDEB2350068A029 /* LaunchScreen.storyboard */,
 				716690B51EDEB2350068A029 /* Info.plist */,
-				716690C21EDEB4E90068A029 /* EstimoteSDK.framework */,
+				716690C41EDEB5060068A029 /* ObjCBridge.h */,
+				BEDA810C1F065D5E0076F73A /* Estimote */,
 			);
 			path = GPIO;
 			sourceTree = "<group>";
@@ -81,12 +81,12 @@
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
-		716690C51EDEB52C0068A029 /* HeaderFiles */ = {
+		BEDA810C1F065D5E0076F73A /* Estimote */ = {
 			isa = PBXGroup;
 			children = (
-				716690C41EDEB5060068A029 /* ObjCBridge.h */,
+				716690C21EDEB4E90068A029 /* EstimoteSDK.framework */,
 			);
-			name = HeaderFiles;
+			name = Estimote;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +96,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 716690B81EDEB2350068A029 /* Build configuration list for PBXNativeTarget "GPIO" */;
 			buildPhases = (
+				BEDA810D1F065D9F0076F73A /* Check TODOs */,
 				716690A21EDEB2350068A029 /* Sources */,
 				716690A31EDEB2350068A029 /* Frameworks */,
 				716690A41EDEB2350068A029 /* Resources */,
@@ -155,6 +156,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BEDA810D1F065D9F0076F73A /* Check TODOs */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check TODOs";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "tags=\"TODO:\"\nmatches=`find \"${SRCROOT}\" \\( -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($tags).*\\$\"`\necho \"$matches\" | perl -p -e \"s/($tags)/ error: \\$1/\"\n[ -z \"$matches\" ] || exit 1\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		716690A21EDEB2350068A029 /* Sources */ = {

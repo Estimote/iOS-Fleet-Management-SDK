@@ -53,7 +53,7 @@ class PacketConfigurator {
             case is ESTBeaconOperationGenericAdvertiserEnable.Type:
                 ongoingOperations.append(
                     ESTBeaconOperationGenericAdvertiserEnable.writeOperation(forAdvertiser: .ID0, setting: ESTSettingGenericAdvertiserEnable(value: true)) { operation, error in
-                        print("1️⃣ ", operation?.description ?? "OperationGenericAdvertiserEnable", " finished with error: \(error)")
+                        print("1️⃣ ", operation?.description ?? "OperationGenericAdvertiserEnable", " finished with error: \(String(describing: error))")
                         completion?(error)
                 })
                 
@@ -61,7 +61,7 @@ class PacketConfigurator {
             case is ESTBeaconOperationGenericAdvertiserInterval.Type:
                 ongoingOperations.append(
                     ESTBeaconOperationGenericAdvertiserInterval.writeOperation(forAdvertiser: .ID0, setting: ESTSettingGenericAdvertiserInterval(value: packet.interval)) { operation, error in
-                        print("2️⃣ ", operation?.description ?? "OperationGenericAdvertiserInterval", " finished with error: \(error)")
+                        print("2️⃣ ", operation?.description ?? "OperationGenericAdvertiserInterval", " finished with error: \(String(describing: error))")
                         completion?(error)
                 })
                 
@@ -69,7 +69,7 @@ class PacketConfigurator {
             case is ESTBeaconOperationGenericAdvertiserPower.Type:
                 ongoingOperations.append(
                     ESTBeaconOperationGenericAdvertiserPower.writeOperation(forAdvertiser: .ID0, setting: ESTSettingGenericAdvertiserPower(value: .level6)) { operation, error in
-                        print("3️⃣ ", operation?.description ?? "OperationGenericAdvertiserPower", " finished with error: \(error)")
+                        print("3️⃣ ", operation?.description ?? "OperationGenericAdvertiserPower", " finished with error: \(String(describing: error))")
                         completion?(error)
 
                 })
@@ -78,7 +78,7 @@ class PacketConfigurator {
             case is ESTBeaconOperationGenericAdvertiserData.Type:
                 ongoingOperations.append(
                     ESTBeaconOperationGenericAdvertiserData.writeOperation(forAdvertiser: .ID0, setting: ESTSettingGenericAdvertiserData(value: packet.📦)) { operation, error in
-                        print("4️⃣ ", operation?.description ?? "OperationGenericAdvertiserData", " finished with error: \(error)")
+                        print("4️⃣ ", operation?.description ?? "OperationGenericAdvertiserData", " finished with error: \(String(describing: error))")
                         completion?(error)
 
                 })

@@ -14,6 +14,6 @@
 
 - (instancetype)initWithBeaconContentFactory:(id<BeaconContentFactory>)beaconContentFactory NS_DESIGNATED_INITIALIZER;
 
-- (void)contentForBeaconID:(BeaconID *)beaconID completion:(void (^)(id content))completion;
+- (void)contentForBeacon:(CLBeacon *)beacon completion:(void (^)(id content))completion;
 
 @end
