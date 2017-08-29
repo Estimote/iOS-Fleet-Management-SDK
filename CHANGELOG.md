@@ -1,3 +1,8 @@
+## 4.22.1 (August 29, 2017)
+
+Bugfixes:
+- Corrected converting values of battery percentage
+
 ## 4.22.0 (August 28, 2017)
 
 Improvements:

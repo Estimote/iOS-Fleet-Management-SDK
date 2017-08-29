@@ -37,14 +37,14 @@ typedef void(^ESTSettingPowerBatteryPercentageCompletionBlock)(ESTSettingPowerBa
  *
  *  @return Initialized object.
  */
-- (instancetype)initWithValue:(NSUInteger)batteryPercentage;
+- (instancetype)initWithValue:(uint8_t)batteryPercentage;
 
 /**
  *  Returns current value of Power BatteryPercentage setting.
  *
  *  @return Power BatteryPercentage value.
  */
-- (NSUInteger)getValue;
+- (uint8_t)getValue;
 
 /**
  *  Method allows to read value of initialized Power BatteryPercentage setting object.
