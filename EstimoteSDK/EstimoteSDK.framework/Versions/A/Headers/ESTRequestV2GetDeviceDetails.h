@@ -28,7 +28,7 @@ typedef void(^ESTRequestV2GetDeviceDetailsBlock)(ESTDeviceDetails * _Nullable de
 /**
  *  ESTRequestV2GetDeviceDetails allows to get device details from the Estimote Cloud API v2.
  */
-DEPRECATED_MSG_ATTRIBUTE("This class is deprecated. Please use ESTRequestGetDeviceDetails class for fetching device's details from Estimote Cloud.")
+DEPRECATED_MSG_ATTRIBUTE("Please use `ESTRequestGetDeviceDetails` class for fetching device's details from Estimote Cloud.")
 @interface ESTRequestV2GetDeviceDetails : ESTRequestGetJSON
 
 /**

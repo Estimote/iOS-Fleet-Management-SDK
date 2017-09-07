@@ -81,7 +81,7 @@ typedef NS_ENUM(NSInteger, ESTMonitoringManagerError)
 - (void)monitoringManager:(ESTMonitoringManager *)manager didEnterRangeOfIdentifier:(NSString *)identifier;
 
 /**
- *  Tells the delegate that the user entered proximity of monitored device.
+ *  Tells the delegate that the user exited proximity of monitored device.
  *
  *  @param manager    The monitoring manager reporting the event
  *  @param identifier Device identifier broadcasted in the Estimote Location packet that triggered the exit event.
@@ -128,6 +128,9 @@ typedef NS_ENUM(NSInteger, ESTMonitoringManagerError)
  *  - <code>NSLocationAlwaysUsageDescription</code>
  *
  */
+
+
+DEPRECATED_MSG_ATTRIBUTE("Use ESTMonitoringV2Manager instead.")
 @interface ESTMonitoringManager : NSObject
 
 /**

@@ -73,7 +73,7 @@ typedef void(^ESTSettingNearablePowerCompletionBlock)(ESTSettingNearablePower * 
  *
  *  @return Initialized object. Nil if validation fails.
  */
-- (instancetype)initWithValue:(ESTNearablePower)ower;
+- (instancetype)initWithValue:(ESTNearablePower)power;
 
 /**
  *  Returns current value of Nearable Power setting.
@@ -86,8 +86,6 @@ typedef void(^ESTSettingNearablePowerCompletionBlock)(ESTSettingNearablePower * 
  *  Method allows to read value of initialized Nearable Power setting object.
  *
  *  @param completion Block to be invoked when operation is complete.
- *
- *  @return Initialized operation object.
  */
 - (void)readValueWithCompletion:(ESTSettingNearablePowerCompletionBlock)completion;
 
@@ -97,8 +95,6 @@ typedef void(^ESTSettingNearablePowerCompletionBlock)(ESTSettingNearablePower * 
  *
  *  @param power Power value to be written to the device.
  *  @param completion Block to be invoked when operation is complete.
- *
- *  @return Initialized operation object.
  */
 - (void)writeValue:(ESTNearablePower)power completion:(ESTSettingNearablePowerCompletionBlock)completion;
 

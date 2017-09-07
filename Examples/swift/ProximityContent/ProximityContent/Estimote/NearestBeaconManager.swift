@@ -4,7 +4,7 @@
 
 protocol NearestBeaconManagerDelegate: class {
 
-    func nearestBeaconManager(_ nearestBeaconManager: NearestBeaconManager, didUpdateNearestBeaconID nearestBeaconID: BeaconID?)
+    func nearestBeaconManager(_ nearestBeaconManager: NearestBeaconManager, didUpdateNearestBeacon nearestBeacon: CLBeacon?)
 
 }
 
@@ -46,7 +46,7 @@ class NearestBeaconManager: NSObject, ESTBeaconManagerDelegate {
 
         if nearestBeacon?.beaconID != self.nearestBeaconID || !firstEventSent {
             self.nearestBeaconID = nearestBeacon?.beaconID
-            self.delegate?.nearestBeaconManager(self, didUpdateNearestBeaconID: self.nearestBeaconID)
+            self.delegate?.nearestBeaconManager(self, didUpdateNearestBeacon: nearestBeacon)
             self.firstEventSent = true
         }
     }

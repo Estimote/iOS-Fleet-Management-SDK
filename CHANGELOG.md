@@ -1,3 +1,70 @@
+## 4.22.1 (August 29, 2017)
+
+Bugfixes:
+- Corrected converting values of battery percentage
+
+## 4.22.0 (August 28, 2017)
+
+Improvements:
+* Added a method to `ESTMonitoringV2Manager` for checking current monitoring state.
+* `ESTMonitoringV2ManagerDelegate` now also delegates successful start of monitoring and when monitoring state for a zone is first determined.
+
+## 4.21.0 (August 22, 2017)
+
+Features:
+- Location (hardware revision “F”) support calibrating magnetometers via Cloud.
+
+Bugfixes:
+- Fixed building dictionary for GPIO settings confirmation.
+- Fix for Here & Now support on UWB beacons.
+
+## 4.20.1 (August 16, 2017)
+
+Bugfixes:
+
+- Fixed a bug where ESTBeaconManager would not send messages to its delegate (i.e. `beaconManager:didRangeBeacons:inRegion:`).
+
+## 4.20.0 (August 10, 2017)
+
+Bugfixes:
+
+- Fixed duplicated symbols issues when using Estimote iOS SDK and Estimote Indoor SDK in the same project.
+- Fixed "Download ZIP" button not working (see: https://github.com/git-lfs/git-lfs/issues/903)
+
+Improvements:
+
+- Contrary to the previous version (4.19.0), this one doesn't require git-lfs to run.
+- Dropped support for armv7s architecture.
+- Reduced framework size.
+
+## 4.19.0 (July 28, 2017)
+
+Features:
+
+- ESTMonitoringV2Manager - it contains Estimote Monitoring v2.0 algorithm with more accurate monitoring events, better exit reliability, software-defined monitoring range, and more efficient monitoring for multiple beacons.
+
+Bugfixes:
+
+- Fixed a bug where Firmware Update would report progress even after cancelling the update process.
+
+Improvements:
+
+- Mesh message buffer sync is faster now.
+
+## 4.18.0 (July 25, 2017)
+
+Features:
+
+- Cloud support and synchronization of GPIO settings.
+- GPIO Config Port 0 state can be reflected on LED
+
+## 4.17.0 (July 6, 2017)
+
+Features:
+
+- Estimote Routed Mesh support added.
+  
+
 ## 4.16.2 (June 23, 2017)
 
 Bugfixes:
@@ -66,7 +133,7 @@ Improvements:
 
 Bugfixes:
 - Fixed issue when changes to a devices's name were not applied.
- 
+
 ## 4.13.1 (February 1, 2017)
 
 Bugfixes:
@@ -143,7 +210,7 @@ Improvements:
 
 Features:
 
-- Estimote Analitycs are turned on for monitoring and ranging. 
+- Estimote Analitycs are turned on for monitoring and ranging.
 
 ## 4.7.0 (July 1, 2016)
 
