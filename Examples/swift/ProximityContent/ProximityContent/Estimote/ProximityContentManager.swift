@@ -35,9 +35,9 @@ class ProximityContentManager: NearestBeaconManagerDelegate {
         self.nearestBeaconManager.stopNearestBeaconUpdates()
     }
 
-    func nearestBeaconManager(_ nearestBeaconManager: NearestBeaconManager, didUpdateNearestBeaconID nearestBeaconID: BeaconID?) {
-        if let nearestBeaconID = nearestBeaconID {
-            self.beaconContentFactory.requestContent(for: nearestBeaconID) { (proximityContent) in
+    func nearestBeaconManager(_ nearestBeaconManager: NearestBeaconManager, didUpdateNearestBeacon nearestBeacon: CLBeacon?) {
+        if let nearestBeacon = nearestBeacon {
+            self.beaconContentFactory.requestContent(for: nearestBeacon) { (proximityContent) in
                 self.delegate?.proximityContentManager(self, didUpdateContent: proximityContent)
             }
         } else {
