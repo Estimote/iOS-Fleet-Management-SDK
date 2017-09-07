@@ -16,7 +16,7 @@ class NearestBeaconManager: NSObject, ESTBeaconManagerDelegate {
 
     private let beaconManager = ESTBeaconManager()
 
-    private var nearestBeaconID: BeaconID?
+    private var nearestBeacon: CLBeacon?
     private var firstEventSent = false
 
     init(beaconRegions: [CLBeaconRegion]) {
@@ -44,9 +44,11 @@ class NearestBeaconManager: NSObject, ESTBeaconManagerDelegate {
     func beaconManager(_ manager: Any, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
         let nearestBeacon = beacons.first
 
-        if nearestBeacon?.beaconID != self.nearestBeaconID || !firstEventSent {
-            self.nearestBeaconID = nearestBeacon?.beaconID
-            self.delegate?.nearestBeaconManager(self, didUpdateNearestBeacon: nearestBeacon)
+        if !(nearestBeacon?.beaconID == nil && self.nearestBeacon == nil) ||
+            !(nearestBeacon?.beaconID == self.nearestBeacon?.beaconID) ||
+            !firstEventSent {
+            self.nearestBeacon = nearestBeacon
+            self.delegate?.nearestBeaconManager(self, didUpdateNearestBeacon: self.nearestBeacon)
             self.firstEventSent = true
         }
     }
