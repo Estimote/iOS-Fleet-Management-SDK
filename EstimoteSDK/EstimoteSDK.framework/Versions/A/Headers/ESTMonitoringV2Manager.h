@@ -11,6 +11,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
+#import "ESTMonitoringState.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -34,20 +35,6 @@ typedef NS_ENUM(NSInteger, ESTMonitoringV2ManagerError)
     ESTMonitoringV2ManagerErrorBluetoothOff = 3,
     ESTMonitoringV2ManagerErrorDesiredDistanceTooLow = 4,
 };
-
-/**
- Represents possible monitoring states for a user in relation to a proximity zone.
- 
- - ESTMonitoringStateUnknown: It's unkown whether the user is inside or outside the zone.
- - ESTMonitoringStateInside: The user is inside the zone.
- - ESTMonitoringStateOutside: The user is outside the zone.
- */
-typedef NS_ENUM(NSUInteger, ESTMonitoringState) {
-    ESTMonitoringStateUnknown = 0,
-    ESTMonitoringStateInsideZone,
-    ESTMonitoringStateOutsideZone
-};
-
 
 /**
  Describes messages sent from Monitoring Manager to its delegate object.
@@ -119,6 +106,10 @@ typedef NS_ENUM(NSUInteger, ESTMonitoringState) {
  */
 @interface ESTMonitoringV2Manager : NSObject
 
+/**
+ Distance boundary between inside and outside states passed in initializer.
+ */
+@property (nonatomic, assign, readonly) double desiredMeanTriggerDistance;
 
 /**
  Delegate object that monitoring methods will be sent to.

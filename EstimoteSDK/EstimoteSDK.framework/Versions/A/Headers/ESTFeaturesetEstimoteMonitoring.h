@@ -42,7 +42,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  If any of underlying operation fails, <code>completion</code>'s <code>featuresetEnabled</code> 
  *  is set to <code>NO</code>, and <code>errors</code> array contains errors resulting from failed operations.
  */
-- (void)readSettingsWithCompletion:(void (^)(BOOL featuresetEnabled, NSArray<NSError*> * _Nullable errors))completion;
+- (void)readSettingsWithCompletion:(void (^)(BOOL featuresetEnabled, NSArray<NSError *> * _Nullable errors))completion;
 
 /**
  *  Write Estimote Monitoring values for settings related to EM algorithms.
@@ -56,22 +56,62 @@ NS_ASSUME_NONNULL_BEGIN
  *  If any of underlying operation fails, <code>completion</code>'s <code>errors</code> array
  *  contains errors resulting from failed operations.
  */
-- (void)writeEnableSettings:(BOOL)enabled withCompletion:(void (^)(NSArray<NSError*> * _Nullable errors))completion;
-
+- (void)writeEnableSettings:(BOOL)enabled withCompletion:(void (^)(NSArray<NSError *> * _Nullable errors))completion;
 
 /**
- *  Settings written when executing this featureset.
+ *  Settings that were written when executing this featureset, for Estimote SDK versions <= 4.22.1.
+ *  Calls +classNamesToSettingsForDeviceIdentifier: with nil.
  *
  *  @return Dictionary with setting class names as keys, setting objects as values.
  */
-+ (NSDictionary<NSString*,ESTSettingBase*> *)classNamesToSettings;
++ (NSDictionary<NSString *, ESTSettingBase *> *)classNamesToSettings
+DEPRECATED_MSG_ATTRIBUTE("Use +classNamesToSettingsForDeviceIdentifier: instead");
 
 /**
- *  Return an array containing write operations from given featureset
+ *  Settings written when executing this featureset. 
+ *  This method requires passing device identifier, because Generic Advertiser data setting 
+ *  (in particular: its MAC address) depends on the identifier.
+ *  If a nil value is passed, MAC address in Generic Advertiser data setting is set to 6 bytes of 0xFF.
+ *
+ *  @param deviceIdentifier Identifier of the device that should have the settings applied.
+ *
+ *  @return Dictionary with setting class names as keys, setting objects as values.
  */
++ (NSDictionary<NSString *, ESTSettingBase *> *)classNamesToSettingsForDeviceIdentifier:(nullable NSString *)deviceIdentifier;
 
-+ (NSArray <id<ESTBeaconOperationProtocol>> *) getWriteOperations;
+/**
+ *  Write operations for this featureset, for Estimote SDK versions <= 4.22.1.
+ *  Calls +getWriteOperationsForDeviceIdentifier: with nil.
+ */
++ (NSArray <id<ESTBeaconOperationProtocol>> *)getWriteOperations
+DEPRECATED_MSG_ATTRIBUTE("Use +getWriteOperationsForDeviceIdentifier: instead");
 
+/**
+ *  An array containing write operations from given featureset.
+ *  This method requires passing device identifier, because Generic Advertiser data setting
+ *  (in particular: its MAC address) depends on the identifier.
+ *  If a nil value is passed, MAC address in Generic Advertiser data setting is set to 6 bytes of 0xFF.
+ */
++ (NSArray <id<ESTBeaconOperationProtocol>> *)getWriteOperationsForDeviceIdentifier:(nullable NSString *)deviceIdentifier;
+
+/**
+ *  Determine whether the provided settings represent a proper configuration for Estimote Monitoring.
+ *  Supports providing more settings than required specifically for the check.
+ *
+ *  This method requires passing device identifier, because Generic Advertiser data setting
+ *  (in particular: its MAC address) depends on the identifier.
+ *
+ *  For backwards compatibility, this method ignores MAC address part of Generic Advertiser data setting.
+ *
+ *  @param settingsToTest Array with setting objects to check.
+ *  @param deviceIdentifier Identifier of the device that should have the settings applied.
+ *
+ *  @return YES if the array contains all the settings required for Estimote Monitoring and the setting values
+ *          are correct for Estimote Monitoring. NO if the array doesn't contain all the settings required
+ *          for Estimote Monitoring or any of the setting values is incorrect Estimote Monitoring.
+ */
++ (BOOL)featuresetEnabledForSettings:(NSArray<ESTSettingBase *> *)settingsToTest
+                 forDeviceIdentifier:(nullable NSString *)deviceIdentifier;
 
 @end
 

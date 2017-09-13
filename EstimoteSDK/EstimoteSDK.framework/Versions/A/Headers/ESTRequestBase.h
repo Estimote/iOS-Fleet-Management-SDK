@@ -71,6 +71,7 @@ typedef void(^ESTRequestBlock)(id _Nullable result, NSError * _Nullable error);
 @interface ESTRequestBase : NSObject <NSURLConnectionDelegate, NSURLConnectionDataDelegate>
 
 @property (nonatomic, weak) id<ESTRequestBaseDelegate> _Nullable delegate;
+@property (nonatomic, copy, nullable) ESTRequestBlock completionBlock;
 
 @property (nonatomic, assign) NSInteger code;
 @property (nonatomic, strong) NSURLConnection * _Nullable connection;

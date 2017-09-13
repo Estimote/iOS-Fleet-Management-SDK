@@ -1,3 +1,8 @@
+## 4.23.0 (September 13, 2017)
+
+Features:
+- ESTMeshManager now supports triggering automapping commands in Cloud. Connect with any meshed device to start automapping across UWB Mesh network.
+
 ## 4.22.1 (August 29, 2017)
 
 Bugfixes:

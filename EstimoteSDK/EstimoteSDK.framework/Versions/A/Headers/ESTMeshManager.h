@@ -36,6 +36,9 @@ typedef NS_ENUM(NSInteger, ESTMeshManagerError) {
     
     /// Bluetooth is currently powered off.
     ESTMeshManagerBluetoothOff,
+    
+    /// Failed to trigger automapping. See error's description for more information.
+    ESTMeshManagerErrorAutomappingFailed
 };
 
 /**
@@ -135,6 +138,14 @@ typedef NS_ENUM(NSInteger, ESTMeshManagerError) {
  *  Stops sending mesh settings confirmation requests to Estimote Cloud.
  */
 - (void)stopConfirmingMeshSettings;
+
+/**
+ *  Method triggering automapping commands in Cloud. Note it needs physical connection with any of meshed beacons in order to synchronize them with Cloud.
+ *
+ *  @param  networkIdentifier    Identifier of Mesh network, that automapping will be triggered for.
+ *  @param  completion  Completion block with operation's error. Nil value means success.
+ */
+- (void)createAutomapingCommandForNetworkIdentifier:(uint32_t)networkIdentifier completion:(ESTCompletionBlock)completion;
 
 @end
 
