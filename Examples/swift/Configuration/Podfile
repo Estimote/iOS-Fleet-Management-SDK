@@ -1,4 +1,0 @@
-use_frameworks!
-target "Configuration" do
-	pod 'SwiftState', :git => 'https://github.com/ReactKit/SwiftState.git', :branch => 'swift/3.0'
-end
