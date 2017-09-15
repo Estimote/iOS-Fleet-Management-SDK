@@ -1,0 +1,358 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		17233B5A1F6976320040C5DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17233B591F6976320040C5DC /* AppDelegate.swift */; };
+		17233B5C1F6976320040C5DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17233B5B1F6976320040C5DC /* ViewController.swift */; };
+		17233B5F1F6976320040C5DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17233B5D1F6976320040C5DC /* Main.storyboard */; };
+		17233B611F6976320040C5DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17233B601F6976320040C5DC /* Assets.xcassets */; };
+		17233B641F6976320040C5DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17233B621F6976320040C5DC /* LaunchScreen.storyboard */; };
+		17233B731F6976760040C5DC /* EstimoteSDKv5.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17233B721F6976760040C5DC /* EstimoteSDKv5.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		17233B561F6976320040C5DC /* DeskObserver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeskObserver.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		17233B591F6976320040C5DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		17233B5B1F6976320040C5DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		17233B5E1F6976320040C5DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		17233B601F6976320040C5DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		17233B631F6976320040C5DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		17233B651F6976320040C5DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17233B6E1F6976680040C5DC /* DeskObserver-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DeskObserver-Bridging-Header.h"; sourceTree = "<group>"; };
+		17233B721F6976760040C5DC /* EstimoteSDKv5.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EstimoteSDKv5.framework; path = ../../../EstimoteSDKv5/EstimoteSDKv5.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		17233B531F6976320040C5DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17233B731F6976760040C5DC /* EstimoteSDKv5.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		17233B4D1F6976320040C5DC = {
+			isa = PBXGroup;
+			children = (
+				17233B581F6976320040C5DC /* DeskObserver */,
+				17233B6B1F69764A0040C5DC /* Estimote */,
+				17233B571F6976320040C5DC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		17233B571F6976320040C5DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				17233B561F6976320040C5DC /* DeskObserver.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		17233B581F6976320040C5DC /* DeskObserver */ = {
+			isa = PBXGroup;
+			children = (
+				17233B591F6976320040C5DC /* AppDelegate.swift */,
+				17233B5B1F6976320040C5DC /* ViewController.swift */,
+				17233B5D1F6976320040C5DC /* Main.storyboard */,
+				17233B601F6976320040C5DC /* Assets.xcassets */,
+				17233B621F6976320040C5DC /* LaunchScreen.storyboard */,
+				17233B651F6976320040C5DC /* Info.plist */,
+				17233B6E1F6976680040C5DC /* DeskObserver-Bridging-Header.h */,
+			);
+			path = DeskObserver;
+			sourceTree = "<group>";
+		};
+		17233B6B1F69764A0040C5DC /* Estimote */ = {
+			isa = PBXGroup;
+			children = (
+				17233B721F6976760040C5DC /* EstimoteSDKv5.framework */,
+			);
+			name = Estimote;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		17233B551F6976320040C5DC /* DeskObserver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17233B681F6976320040C5DC /* Build configuration list for PBXNativeTarget "DeskObserver" */;
+			buildPhases = (
+				1758FB621F6BBCB100F25C61 /* Check TODOs */,
+				17233B521F6976320040C5DC /* Sources */,
+				17233B531F6976320040C5DC /* Frameworks */,
+				17233B541F6976320040C5DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DeskObserver;
+			productName = DeskObserver;
+			productReference = 17233B561F6976320040C5DC /* DeskObserver.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		17233B4E1F6976320040C5DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Estimote;
+				TargetAttributes = {
+					17233B551F6976320040C5DC = {
+						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 17233B511F6976320040C5DC /* Build configuration list for PBXProject "DeskObserver" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 17233B4D1F6976320040C5DC;
+			productRefGroup = 17233B571F6976320040C5DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				17233B551F6976320040C5DC /* DeskObserver */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		17233B541F6976320040C5DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17233B641F6976320040C5DC /* LaunchScreen.storyboard in Resources */,
+				17233B611F6976320040C5DC /* Assets.xcassets in Resources */,
+				17233B5F1F6976320040C5DC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1758FB621F6BBCB100F25C61 /* Check TODOs */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check TODOs";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "tags=\"TODO:\"\nmatches=`find \"${SRCROOT}\" \\( -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($tags).*\\$\"`\necho \"$matches\" | perl -p -e \"s/($tags)/ error: \\$1/\"\n[ -z \"$matches\" ] || exit 1";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		17233B521F6976320040C5DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17233B5C1F6976320040C5DC /* ViewController.swift in Sources */,
+				17233B5A1F6976320040C5DC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		17233B5D1F6976320040C5DC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17233B5E1F6976320040C5DC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		17233B621F6976320040C5DC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17233B631F6976320040C5DC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		17233B661F6976320040C5DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		17233B671F6976320040C5DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		17233B691F6976320040C5DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../../../EstimoteSDKv5";
+				INFOPLIST_FILE = DeskObserver/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.DeskObserver;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "DeskObserver/DeskObserver-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		17233B6A1F6976320040C5DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../../../EstimoteSDKv5";
+				INFOPLIST_FILE = DeskObserver/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.DeskObserver;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "DeskObserver/DeskObserver-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		17233B511F6976320040C5DC /* Build configuration list for PBXProject "DeskObserver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17233B661F6976320040C5DC /* Debug */,
+				17233B671F6976320040C5DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17233B681F6976320040C5DC /* Build configuration list for PBXNativeTarget "DeskObserver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17233B691F6976320040C5DC /* Debug */,
+				17233B6A1F6976320040C5DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 17233B4E1F6976320040C5DC /* Project object */;
+}
