@@ -1,3 +1,16 @@
+## 4.24.0 (September 26, 2017)
+
+Features:
+- introduced ESTMeshGateway - newest tool for controlling Mesh networks. ESTMeshGateway serves two purposes:
+  - confirming received Mesh packets in Estimote Cloud, so Cloud can track changes instantly,
+  - periodical polling Cloud for pending changes within Mesh network and applying them right away.
+- connecting to Location Beacon applies Mesh buffer and locks pending changes within Mesh network (until they are applied across whole network)
+
+Bugfixes:
+- not connecting to old beacons (D3.x),
+- synchronizing commands with Location Beacon,
+- sending empty settings to Cloud.
+
 ## 4.23.0 (September 13, 2017)
 
 Features:

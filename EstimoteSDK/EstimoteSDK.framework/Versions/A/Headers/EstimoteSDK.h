@@ -7,7 +7,7 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 4.23.0
+//  Version: 4.24.0
 //  Copyright (c) 2016 Estimote. All rights reserved.
 
 /**
@@ -433,3 +433,4 @@
  *  Estimote Mesh
  */
 #import "ESTMeshManager.h"
+#import "ESTMeshGateway.h"

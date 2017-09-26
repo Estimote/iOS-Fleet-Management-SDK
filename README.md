@@ -32,12 +32,6 @@ To learn more, read the [API section on our website](http://estimote.com/api/ind
 
 ## Installation
 
-### CocoaPods
-
-Add `pod EstimoteSDK` to your Podfile and run `pod install`. More on [CocoaPods here](https://cocoapods.org/).
-
-### Manual
-
 Estimote SDK 4.0 comes to you as a **framework**. To setup, you only need to include a single *EstimoteSDK.framework* file in your project to get started:
 
 1. Drag and drop EstimoteSDK.framework file into your Xcode project. It will automatically show up in your project navigator and will be added to *"Linked Frameworks and Libraries"* section in project settings.
