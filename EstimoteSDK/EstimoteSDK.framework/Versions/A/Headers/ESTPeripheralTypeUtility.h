@@ -17,11 +17,76 @@
 
 #define ESTPeripheralTypeUtilityErrorDomain @"ESTPeripheralTypeUtilityErrorDomain"
 
-typedef NS_ENUM(NSInteger, ESTPeripheralTypeUtilityError)
-{
+/**
+ Possible operations errors while handling sending to and recieving data from peripheral.
+ */
+typedef NS_ENUM(NSInteger, ESTPeripheralTypeUtilityError) {
+    /**
+     Operation failed.
+     */
     ESTPeripheralTypeUtilityErrorReadWriteOperationFailed,
-    ESTPeripheralTypeUtilityErrorPacketGenerationFailed,
-    ESTPeripheralTypeUtilityErrorPacketError
+    /**
+     Generating packets failed.
+     */
+    ESTPeripheralTypeUtilityErrorPacketGenerationFailed
+};
+
+/**
+ Errors when handling peripheral packets.
+ */
+typedef NS_ENUM(NSInteger, ESTPeripheralTypeUtilityErrorCode) {
+    /**
+     Unknown error.
+     */
+    ESTPeripheralTypeUtilityErrorCodeUnknown,
+    /**
+     Packet has invalid CRC checksum.
+     */
+    ESTPeripheralTypeUtilityErrorCodeInvalidCRC,
+    /**
+     Register identifier changed.
+     */
+    ESTPeripheralTypeUtilityErrorCodeRegisterIDChanged,
+    /**
+     Index of the chunk is invalid.
+     */
+    ESTPeripheralTypeUtilityErrorCodeInvalidChunkIndex,
+    /**
+     Packet has invalid length.
+     */
+    ESTPeripheralTypeUtilityErrorCodeInvalidLength,
+    /**
+     Packet has invalid size.
+     */
+    ESTPeripheralTypeUtilityErrorCodeInvalidValueSize,
+    /**
+     Packet has invalid value.
+     */
+    ESTPeripheralTypeUtilityErrorCodeInvalidValue,
+    /**
+     Register identifier is invalid.
+     */
+    ESTPeripheralTypeUtilityErrorCodeInvalidRegisterID,
+    /**
+     Operation is not allowed.
+     */
+    ESTPeripheralTypeUtilityErrorCodeInvalidOperation,
+    /**
+     Authorization level is insufficient.
+     */
+    ESTPeripheralTypeUtilityErrorCodeTooLowAuthLevel,
+    /**
+     Operation is blocked.
+     */
+    ESTPeripheralTypeUtilityErrorCodeOperationBlocked,
+    /**
+     Request was correct, but there is no more data to be read.
+     */
+    ESTPeripheralTypeUtilityErrorCodeNoDataReturned,
+    /**
+     Waiting for more data.
+     */
+    ESTPeripheralTypeUtilityErrorCodeWaitingForMore
 };
 
 /**
@@ -112,6 +177,9 @@ typedef NS_ENUM(NSInteger, ESTPeripheralFirmwareState) {
  */
 - (void)registerNotification:(id<ESTDeviceNotificationProtocol>)notification;
 
+/**
+ Unregister all notificaitons from device.
+ */
 - (void)unregisterAllNotifications;
 
 @end

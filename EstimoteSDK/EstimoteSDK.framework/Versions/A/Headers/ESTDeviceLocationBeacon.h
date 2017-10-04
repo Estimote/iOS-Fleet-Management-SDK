@@ -12,6 +12,7 @@
 #import "ESTDeviceConnectable.h"
 #import "ESTBeaconSettingsManager.h"
 #import "ESTStorageManager.h"
+#import "ESTMeshScanReportsManager.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -87,6 +88,11 @@ typedef NS_ENUM(NSInteger, ESTDeviceLocationBeaconError) {
  *  Object enables access to device's non-volatile data storage.
  */
 @property (nullable, nonatomic, strong) ESTStorageManager *storage;
+
+/**
+ Manager responsible for reading scan reports from the device.
+ */
+@property (nullable, nonatomic, strong) ESTMeshScanReportsManager *scanReports;
 
 /**
  *  Flag indicating if device is broadcasting in Shake to Connect mode.

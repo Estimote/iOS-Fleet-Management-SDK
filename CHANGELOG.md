@@ -1,3 +1,10 @@
+## 4.25.0 (October 4, 2017)
+
+Features:
+- ESTMeshManager is now supporting triggering scanning for nearables within Mesh network and generating scan report,
+- ESTDeviceLocationBeacon has a new member (`ESTMeshScanReportsManager`) responsible for reading nearables scan reports from Mesh network.
+- Added request wrapper for delete pending settings
+
 ## 4.24.0 (September 26, 2017)
 
 Features:

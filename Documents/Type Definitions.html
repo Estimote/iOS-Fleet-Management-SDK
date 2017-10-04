@@ -436,6 +436,15 @@
                 <a class="nav-group-task-link" href="Classes/ESTMeshManager.html">ESTMeshManager</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/ESTMeshNearablesScanReportVO.html">ESTMeshNearablesScanReportVO</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/ESTMeshNearablesScanResultVO.html">ESTMeshNearablesScanResultVO</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/ESTMeshScanReportsManager.html">ESTMeshScanReportsManager</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/ESTMonitoringManager.html">ESTMonitoringManager</a>
               </li>
               <li class="nav-group-task">
@@ -539,6 +548,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/ESTRequestRegisterDevice.html">ESTRequestRegisterDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/ESTRequestV2DeletePendingSettings.html">ESTRequestV2DeletePendingSettings</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/ESTRequestV2DevicesUpdate.html">ESTRequestV2DevicesUpdate</a>
@@ -1025,6 +1037,12 @@
                 <a class="nav-group-task-link" href="Enums/ESTPeripheralFirmwareState.html">ESTPeripheralFirmwareState</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/ESTPeripheralTypeUtilityError.html">ESTPeripheralTypeUtilityError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/ESTPeripheralTypeUtilityErrorCode.html">ESTPeripheralTypeUtilityErrorCode</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/ESTRequestAssignGPSLocationError.html">ESTRequestAssignGPSLocationError</a>
               </li>
               <li class="nav-group-task">
@@ -1233,10 +1251,16 @@
                 <a class="nav-group-task-link" href="Type Definitions.html#/c:ESTNotificationGPIOData.h@T@ESTNotificationGPIODataBlock">ESTNotificationGPIODataBlock</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Type Definitions.html#/c:ESTMeshScanReportsManager.h@T@ESTReportScanVOCompletionBlock">ESTReportScanVOCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Type Definitions.html#/c:ESTRequestGetDeviceDetails.h@T@ESTRequestGetDeviceDetailsBlock">ESTRequestGetDeviceDetailsBlock</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Type Definitions.html#/c:ESTRequestGetDevices.h@T@ESTRequestGetDevicesBlock">ESTRequestGetDevicesBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Type Definitions.html#/c:ESTRequestV2DeletePendingSettings.h@T@ESTRequestV2DeletePendingSettingsBlock">ESTRequestV2DeletePendingSettingsBlock</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Type Definitions.html#/c:ESTRequestV2GetDeviceDetails.h@T@ESTRequestV2GetDeviceDetailsBlock">ESTRequestV2GetDeviceDetailsBlock</a>
@@ -1565,6 +1589,76 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:ESTMeshScanReportsManager.h@T@ESTReportScanVOCompletionBlock"></a>
+                    <a name="//apple_ref/objc/Type/ESTReportScanVOCompletionBlock" class="dashAnchor"></a>
+                    <a class="token" href="#/c:ESTMeshScanReportsManager.h@T@ESTReportScanVOCompletionBlock">ESTReportScanVOCompletionBlock</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Completion block.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">ESTReportScanVOCompletionBlock</span><span class="p">)(</span>
+    <span class="n"><a href="Classes/ESTMeshNearablesScanReportVO.html">ESTMeshNearablesScanReportVO</a></span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">typealias</span> <span class="kt">ESTReportScanVOCompletionBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt"><a href="Classes/ESTMeshNearablesScanReportVO.html">ESTMeshNearablesScanReportVO</a></span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>scanReportVO</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Value object of scan report.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Error, if reading scan report failed.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:ESTNotificationGPIOData.h@T@ESTNotificationGPIODataBlock"></a>
                     <a name="//apple_ref/objc/Type/ESTNotificationGPIODataBlock" class="dashAnchor"></a>
                     <a class="token" href="#/c:ESTNotificationGPIOData.h@T@ESTNotificationGPIODataBlock">ESTNotificationGPIODataBlock</a>
@@ -1731,6 +1825,76 @@
                               <td>
                                 <div>
                                   <p>Details of the devices wrapped in an array of ESTDeviceDetails class objects.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Error of request. No error means success.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:ESTRequestV2DeletePendingSettings.h@T@ESTRequestV2DeletePendingSettingsBlock"></a>
+                    <a name="//apple_ref/objc/Type/ESTRequestV2DeletePendingSettingsBlock" class="dashAnchor"></a>
+                    <a class="token" href="#/c:ESTRequestV2DeletePendingSettings.h@T@ESTRequestV2DeletePendingSettingsBlock">ESTRequestV2DeletePendingSettingsBlock</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Completion block fired when request is complete.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">ESTRequestV2DeletePendingSettingsBlock</span><span class="p">)(</span><span class="n">id</span> <span class="n">_Nullable</span><span class="p">,</span>
+                                                       <span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">typealias</span> <span class="kt">ESTRequestV2DeletePendingSettingsBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Any</span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>result</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Array of user&rsquo;s devices identifiers, for which Cloud has pending changes.</p>
 
                                 </div>
                               </td>
@@ -7421,7 +7585,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-09-26)</p>
+      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-10-04)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

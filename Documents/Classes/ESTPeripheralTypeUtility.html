@@ -437,6 +437,15 @@
                 <a class="nav-group-task-link" href="../Classes/ESTMeshManager.html">ESTMeshManager</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ESTMeshNearablesScanReportVO.html">ESTMeshNearablesScanReportVO</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ESTMeshNearablesScanResultVO.html">ESTMeshNearablesScanResultVO</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ESTMeshScanReportsManager.html">ESTMeshScanReportsManager</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ESTMonitoringManager.html">ESTMonitoringManager</a>
               </li>
               <li class="nav-group-task">
@@ -540,6 +549,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ESTRequestRegisterDevice.html">ESTRequestRegisterDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ESTRequestV2DeletePendingSettings.html">ESTRequestV2DeletePendingSettings</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ESTRequestV2DevicesUpdate.html">ESTRequestV2DevicesUpdate</a>
@@ -1026,6 +1038,12 @@
                 <a class="nav-group-task-link" href="../Enums/ESTPeripheralFirmwareState.html">ESTPeripheralFirmwareState</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/ESTPeripheralTypeUtilityError.html">ESTPeripheralTypeUtilityError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/ESTPeripheralTypeUtilityErrorCode.html">ESTPeripheralTypeUtilityErrorCode</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/ESTRequestAssignGPSLocationError.html">ESTRequestAssignGPSLocationError</a>
               </li>
               <li class="nav-group-task">
@@ -1234,10 +1252,16 @@
                 <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTNotificationGPIOData.h@T@ESTNotificationGPIODataBlock">ESTNotificationGPIODataBlock</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTMeshScanReportsManager.h@T@ESTReportScanVOCompletionBlock">ESTReportScanVOCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTRequestGetDeviceDetails.h@T@ESTRequestGetDeviceDetailsBlock">ESTRequestGetDeviceDetailsBlock</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTRequestGetDevices.h@T@ESTRequestGetDevicesBlock">ESTRequestGetDevicesBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTRequestV2DeletePendingSettings.h@T@ESTRequestV2DeletePendingSettingsBlock">ESTRequestV2DeletePendingSettingsBlock</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTRequestV2GetDeviceDetails.h@T@ESTRequestV2GetDeviceDetailsBlock">ESTRequestV2GetDeviceDetailsBlock</a>
@@ -1762,6 +1786,38 @@ It allows to perform bluetooth only read/write operation on the device and reboo
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)ESTPeripheralTypeUtility(im)unregisterAllNotifications"></a>
+                    <a name="//apple_ref/objc/Method/-unregisterAllNotifications" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)ESTPeripheralTypeUtility(im)unregisterAllNotifications">-unregisterAllNotifications</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Unregister all notificaitons from device.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">unregisterAllNotifications</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">unregisterAllNotifications</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
@@ -1770,7 +1826,7 @@ It allows to perform bluetooth only read/write operation on the device and reboo
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-09-26)</p>
+      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-10-04)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

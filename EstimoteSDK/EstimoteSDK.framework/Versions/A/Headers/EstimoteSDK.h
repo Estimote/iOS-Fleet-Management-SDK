@@ -7,7 +7,7 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 4.24.0
+//  Version: 4.25.0
 //  Copyright (c) 2016 Estimote. All rights reserved.
 
 /**
@@ -341,6 +341,7 @@
 
 #import "ESTRequestRegisterDevice.h"
 #import "ESTRequestGetPendingSettings.h"
+#import "ESTRequestV2DeletePendingSettings.h"
 #import "ESTRequestCancelPendingSettings.h"
 #import "ESTRequestGetSettingsHistory.h"
 
@@ -434,3 +435,6 @@
  */
 #import "ESTMeshManager.h"
 #import "ESTMeshGateway.h"
+#import "ESTMeshNearablesScanReportVO.h"
+#import "ESTMeshNearablesScanResultVO.h"
+#import "ESTMeshScanReportsManager.h"
