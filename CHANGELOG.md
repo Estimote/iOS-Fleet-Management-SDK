@@ -1,9 +1,7 @@
-## 4.25.0 (October 4, 2017)
+## 4.25.1 (October 5, 2017)
 
-Features:
-- ESTMeshManager is now supporting triggering scanning for nearables within Mesh network and generating scan report,
-- ESTDeviceLocationBeacon has a new member (`ESTMeshScanReportsManager`) responsible for reading nearables scan reports from Mesh network.
-- Added request wrapper for delete pending settings
+Bugfixes:
+- We’ve fixed crash on CBPeripheral delegate observer removal. Crash was showing up on  iOS 11 only mainly when using ESTBulkUpdater class.
 
 ## 4.24.0 (September 26, 2017)
 
