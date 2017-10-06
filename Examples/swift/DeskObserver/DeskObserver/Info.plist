@@ -20,10 +20,10 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>We&apos;ll show you different content based on which beacon you&apos;re in range of. (You can change this message in the Info.plist file.)</string>
 	<key>NSLocationAlwaysAndWhenInUsageDescription</key>
-	<string>We&apos;ll show you different content based on which beacon you&apos;re in range of. (You can change this message in the Info.plist file.)</string>
+	<string>We'll show you different content based on which beacon you're in range of. (You can change this message in the Info.plist file.)</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>We'll show you different content based on which beacon you're in range of. (You can change this message in the Info.plist file.)</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>bluetooth-central</string>

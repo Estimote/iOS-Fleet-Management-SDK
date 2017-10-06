@@ -29,15 +29,19 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Distance in meters where enter/exit events should occur passed in initializer rounded to decimeters (to 0.1).
  */
-@property (nonatomic, assign, readonly) double meanTriggerDistance;
+@property (nonatomic, assign, readonly) double desiredMeanTriggerDistance;
 
 /**
- Convenience factory for near range. It's a class property instead of class method to enable good-looking Swift code.
+ Convenience factory for near range. Returns range with meanTriggerDistance set to 1m.
+ 
+ It's a class property instead of class method to enable good-looking Swift code.
  */
 @property (nonatomic, copy, readonly, class) ESTProximityRange *nearRange;
 
 /**
- Convenience factory for far range. It's a class property instead of class method to enable good-looking Swift code.
+ Convenience factory for far range. Returns range with meanTriggerDistance set to 5m.
+ 
+ It's a class property instead of class method to enable good-looking Swift code.
  */
 @property (nonatomic, copy, readonly, class) ESTProximityRange *farRange;
 
@@ -54,17 +58,17 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Designated initializer.
 
- @param meanTriggerDistance Distance in meters where enter/exit events should occur rounded to decimeters (to 0.1)
+ @param desiredMeanTriggerDistance Distance in meters where enter/exit events should occur rounded to decimeters (to 0.1)
  */
-- (nullable instancetype)initWithMeanTriggerDistance:(double)meanTriggerDistance NS_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithDesiredMeanTriggerDistance:(double)desiredMeanTriggerDistance NS_DESIGNATED_INITIALIZER;
 
 /**
  Convenience factory method. Calls `-initWithMeanTriggerDistance:`.
 
- @param meanTriggerDistance Distance in meters where enter/exit events should occur rounded to decimeters (to 0.1)
+ @param desiredMeanTriggerDistance Distance in meters where enter/exit events should occur rounded to decimeters (to 0.1)
  */
-+ (nullable instancetype)customRangeWithMeanTriggerDistance:(double)meanTriggerDistance
-NS_SWIFT_NAME(custom(meanTriggerDistance:));
++ (nullable instancetype)customRangeWithDesiredMeanTriggerDistance:(double)desiredMeanTriggerDistance
+NS_SWIFT_NAME(custom(desiredMeanTriggerDistance:));
 
 #pragma mark isEqual overrides
 - (BOOL)isEqualToRange:(ESTProximityRange *)otherRange;

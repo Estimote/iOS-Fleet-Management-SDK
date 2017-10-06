@@ -55,61 +55,57 @@ class ViewController: UIViewController {
         // - one of the beacons has a tag `{"attachment":{"blueberry_desk":true,"venue":"office"}}`
         // - another beacon has a tag `{"attachment":{"mint_desk":true,"venue":"office"}}`
         
-        self.proximityObserver = ESTProximityObserver(credentials: ESTCloudCredentials.shared!, errorHandler: { (error) in
+        self.proximityObserver = ESTProximityObserver(credentials: ESTCloudCredentials.shared!, errorBlock: { error in
             print("Ooops! \(error.localizedDescription)")
-        }, didStartHandler: { 
-            print("Proximity observer did start")
         })
         
-        // Enters handling
-        
-        self.proximityObserver.onEnter(range: ESTProximityRange.custom(meanTriggerDistance: 0.5)!, ofBeaconsWithAttachmentKey: "blueberry_desk") { _attachment in
+        let blueberryZone = ESTProximityZone(range: ESTProximityRange.custom(desiredMeanTriggerDistance: 0.5)!,
+                                             attachmentKey: "blueberry_desk")
+        blueberryZone.onEnterBlock = { attachment in
             self.blueberryDeskLabel.backgroundColor = self.blueberryColor
             self.blueberryDeskLabel.textColor = UIColor.white
         }
-        
-        self.proximityObserver.onEnter(range: ESTProximityRange.custom(meanTriggerDistance: 0.5)!, ofBeaconsWithAttachmentKey: "mint_desk") { _attachment in
-            self.mintDeskLabel.backgroundColor = self.mintColor
-            self.mintDeskLabel.textColor = UIColor.white
-        }
-        
-        self.proximityObserver.onEnter(range: ESTProximityRange.custom(meanTriggerDistance: 1.5)!, ofBeaconsWithAttachmentKey: "venue") { attachment in
-            self.venueLabel.backgroundColor = self.venueColor
-            self.venueLabel.textColor = UIColor.white
-        }
-        
-        // Exits handling
-        
-        self.proximityObserver.onExit(range: ESTProximityRange.custom(meanTriggerDistance: 0.5)!, ofBeaconsWithAttachmentKey: "blueberry_desk") { _attachment in
+        blueberryZone.onExitBlock = { attachment in
             self.blueberryDeskLabel.backgroundColor = UIColor.white
             self.blueberryDeskLabel.textColor = self.blueberryColor
         }
         
-        self.proximityObserver.onExit(range: ESTProximityRange.custom(meanTriggerDistance: 0.5)!, ofBeaconsWithAttachmentKey: "mint_desk") { _attachment in
+        let mintZone = ESTProximityZone(range: ESTProximityRange.custom(desiredMeanTriggerDistance: 0.5)!,
+                                                 attachmentKey: "mint_desk")
+        mintZone.onEnterBlock = { attachment in
+            self.mintDeskLabel.backgroundColor = self.mintColor
+            self.mintDeskLabel.textColor = UIColor.white
+        }
+        mintZone.onExitBlock = { attachment in
             self.mintDeskLabel.backgroundColor = UIColor.white
             self.mintDeskLabel.textColor = self.mintColor
         }
         
-        self.proximityObserver.onExit(range: ESTProximityRange.custom(meanTriggerDistance: 1.5)!, ofBeaconsWithAttachmentKey: "venue") { _attachment in
+        let closeVenueZone = ESTProximityZone(range: ESTProximityRange.custom(desiredMeanTriggerDistance: 0.5)!,
+                                              attachmentKey: "venue")
+        closeVenueZone.onChangeBlock = { attachmentsInside in
+            print("Currently, there are \(attachmentsInside.count) attachments in ~0.5m range:")
+            print("\(attachmentsInside.map({ $0.json.description }).joined(separator: "\n"))")
+            print("")
+        }
+        
+        let midVenueZone = ESTProximityZone(range: ESTProximityRange.custom(desiredMeanTriggerDistance: 1.5)!,
+                                            attachmentKey: "venue")
+        midVenueZone.onEnterBlock = { attachment in
+            self.venueLabel.backgroundColor = self.venueColor
+            self.venueLabel.textColor = UIColor.white
+        }
+        midVenueZone.onExitBlock = { attachment in
             self.venueLabel.backgroundColor = UIColor.white
             self.venueLabel.textColor = self.venueColor
         }
-        
-        // Beacons in range change handling - for debug purposes
-        
-        self.proximityObserver.onBeaconsInRangeChange(range: ESTProximityRange.custom(meanTriggerDistance: 0.5)!, attachmentKey: "venue") { (attachments) in
-            print("Currently, there are \(attachments.count) attachments in ~0.5m range:")
-            print("\(attachments.map({ $0.attachmentJSON.description }).joined(separator: "\n"))")
+        midVenueZone.onChangeBlock = { attachmentsInside in
+            print("Currently, there are \(attachmentsInside.count) attachments in ~1.5m range:")
+            print("\(attachmentsInside.map({ $0.json.description }).joined(separator: "\n"))")
             print("")
         }
         
-        self.proximityObserver.onBeaconsInRangeChange(range: ESTProximityRange.custom(meanTriggerDistance: 1.5)!, attachmentKey: "venue") { (attachments) in
-            print("Currently, there are \(attachments.count) attachments in ~1.5m range:")
-            print("\(attachments.map({ $0.attachmentJSON.description }).joined(separator: "\n"))")
-            print("")
-        }
-        
-        self.proximityObserver.start()
+        self.proximityObserver.startObserving([mintZone, blueberryZone, closeVenueZone, midVenueZone])
     }
 }
 

@@ -108,25 +108,25 @@ Then, configure proximity discovery with `ESTProximityObserver`. For more info o
 
 ```swift
 // Create observer instance
-self.observer = ESTProximityObserver(credentials: ESTCloudCredentials.shared!, errorHandler: { error in
-    print("Oops! \(error.localizedDescription)")
-}, didStartHandler: nil)
+self.proximityObserver = ESTProximityObserver(credentials: ESTCloudCredentials.shared!, errorBlock: { error in
+    print("Ooops! \(error.localizedDescription)")
+})
 
 
-// Define enter/exit rules
-self.observer.onEnter(range: .near, ofBeaconsWithAttachmentKey: "blueberry-desk") { attachment in
-    print("Entered near range of 'blueberry-desk'. Full beacon attachment: (attachment.attachmentJSON)")
+// Define zones
+let blueberryZone = ESTProximityZone(range: ESTProximityRange.custom(meanTriggerDistance: 0.5)!,
+                                     attachmentKey: "blueberry_desk")
+blueberryZone.onEnterBlock = { attachment in
+    print("Entered near range of 'blueberry_desk'. Full beacon attachment: (attachment.attachmentJSON)")
+}
+blueberryZone.onExitBlock = { (attachment) in
+    print("Exited near range of 'blueberry_desk'. Full beacon attachment: (attachment.attachmentJSON)")
 }
 
-self.observer.onExit(range: .near, ofBeaconsWithAttachmentKey: "blueberry-desk") { attachment in
-    print("Exited near range of 'blueberry-desk'. Full beacon attachment: (attachment.attachmentJSON)")
-}
+// ... etc. You can define as many zones as you need.
 
-// ... etc. You can define as many rules as you need.
-
-
-// Start proximity detection
-self.observer.start()
+// Start proximity observation
+self.observer.startObserving([blueberryZone])
 ```
 
 ### Background support

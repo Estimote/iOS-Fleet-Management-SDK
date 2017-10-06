@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  JSON attached to the device (tag parsed to JSON).
  */
-@property (nonatomic, strong, readonly) NSDictionary<NSString *, id> *attachmentJSON;
+@property (nonatomic, strong, readonly) NSDictionary<NSString *, id> *json;
 
 /**
  Init is disabled for this class.
@@ -46,10 +46,10 @@ NS_ASSUME_NONNULL_BEGIN
  Designated initializer.
 
  @param deviceIdentifier Device identifier that has the attachment.
- @param attachmentJSON JSON attached to the device (tag parsed to JSON).
+ @param json JSON attached to the device (tag parsed to JSON).
  */
 - (instancetype)initWithDeviceIdentifier:(NSString *)deviceIdentifier
-                          attachmentJSON:(NSDictionary<NSString *, id> *)attachmentJSON NS_DESIGNATED_INITIALIZER;
+                                    json:(NSDictionary<NSString *, id> *)json NS_DESIGNATED_INITIALIZER;
 
 #pragma mark Equality
 
