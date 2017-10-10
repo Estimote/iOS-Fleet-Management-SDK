@@ -1058,6 +1058,9 @@
                 <a class="nav-group-task-link" href="Enums/ESTRequestGetBeaconsError.html">ESTRequestGetBeaconsError</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums.html#/c:@E@ESTRequestGetDevicesTypeMask">ESTRequestGetDevicesTypeMask</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/ESTRequestGetNearablesError.html">ESTRequestGetNearablesError</a>
               </li>
               <li class="nav-group-task">
@@ -1803,12 +1806,13 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">ESTRequestGetDevicesBlock</span><span class="p">)(</span>
-    <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="Classes/ESTDeviceDetails.html">ESTDeviceDetails</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span></code></pre>
+    <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="Classes/ESTDeviceDetails.html">ESTDeviceDetails</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">,</span> <span class="n">NSNumber</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">,</span>
+    <span class="n">NSNumber</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">typealias</span> <span class="kt">ESTRequestGetDevicesBlock</span> <span class="o">=</span> <span class="p">([</span><span class="kt"><a href="Classes/ESTDeviceDetails.html">ESTDeviceDetails</a></span><span class="p">]?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">typealias</span> <span class="kt">ESTRequestGetDevicesBlock</span> <span class="o">=</span> <span class="p">([</span><span class="kt"><a href="Classes/ESTDeviceDetails.html">ESTDeviceDetails</a></span><span class="p">]?,</span> <span class="kt">NSNumber</span><span class="p">?,</span> <span class="kt">NSNumber</span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
 
                         </div>
                       </div>
@@ -1819,12 +1823,38 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>deviceDetails</em>
+                                <em>devicesDetails</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
                                   <p>Details of the devices wrapped in an array of ESTDeviceDetails class objects.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>totalCount</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Total count of devices assigned in Cloud.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>nextPage</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Index of the next available page of devices details. Nil value means there are no more details to fetch.</p>
 
                                 </div>
                               </td>
@@ -7585,7 +7615,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-10-05)</p>
+      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-10-10)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
