@@ -1,3 +1,8 @@
+## 4.25.2 (October 10, 2017)
+
+Bugfixes:
+- We added pagination to the request for fetching user's devices. Now you can filter by identifiers, device types and result page of devices you want to retrieve from Cloud.
+
 ## 4.25.1 (October 5, 2017)
 
 Bugfixes:
