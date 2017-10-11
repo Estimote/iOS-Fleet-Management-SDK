@@ -1,3 +1,8 @@
+## 4.25.3 (October 11, 2017)
+
+Improvements:
+- Update related to change of AppStore submission guidelines
+
 ## 4.25.2 (October 10, 2017)
 
 Bugfixes:
