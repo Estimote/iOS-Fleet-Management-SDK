@@ -7,7 +7,7 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 5.0.0-alpha.2
+//  Version: 5.0.0-alpha.3
 //  Copyright (c) 2017 Estimote. All rights reserved.
 
 #import "ESTCloudCredentials.h"

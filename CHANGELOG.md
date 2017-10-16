@@ -1,3 +1,9 @@
+## 5.0.0-alpha.3 (October 13, 2017)
+
+Bugfixes: 
+
+- Fixed issue with CoreBluetooth scanning that caused occasional crashes on iOS 11.
+
 ## 5.0.0-alpha.2 (October 6, 2017)
 
 Features: 
