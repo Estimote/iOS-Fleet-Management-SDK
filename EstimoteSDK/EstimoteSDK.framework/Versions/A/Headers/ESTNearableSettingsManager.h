@@ -100,7 +100,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param firmwareVersion Device firmware version used to ignore unsupported setting operations.
  *  @param completion      Synchronization completion block.
  */
-- (void)synchronizeUsingNearableVO:(ESTNearableVO *)nearableVO forFirmwareVersion:(NSString *)firmwareVersion completion:(void(^)())completion;
+- (void)synchronizeUsingNearableVO:(ESTNearableVO *)nearableVO forFirmwareVersion:(NSString *)firmwareVersion completion:(void(^)(void))completion;
 
 @end
 
