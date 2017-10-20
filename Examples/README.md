@@ -1,7 +1,30 @@
-## Estimote SDK example apps
+# Estimote SDK example apps
+
+## General Info
 
 **Hint:**
-You can generate yourself a ready-made project from most of these templates on https://cloud.estimote.com/#/apps/add. It will be automatically renamed for you, and have your App Token and beacon UUIDs already put in. Some of the following projects may require updating pods.
+You can generate yourself a ready-made project from most of these templates on https://cloud.estimote.com/#/apps/add. It will be automatically renamed for you, and have your App Token and beacon UUIDs already put in.
+
+**Pods update**
+
+Some of the following apps uses a few external dependencies managed through [CocoaPods](https://cocoapods.org).
+
+You can check if you have CocoaPods installed by running:
+```
+$ pod --version
+```
+
+If you don't have CocoaPods installed you must install them before building this app. You can follow [CocoaPods getting started instructions](https://guides.cocoapods.org/using/getting-started.html).
+
+In the project folder run:
+```
+$ pod update
+```
+to add pods to your project.
+
+Make sure you open the project using .xcworkspace file instead of .xcodeproj file.
+
+## Examples
 
 - **Blank**
 
@@ -39,6 +62,7 @@ Wirelessly access external devices connected to the beacons' GPIO ports. _(See t
 
 - **Loyalty** (Swift only, requires Estimote Beacons with the 4th-gen firmware, 4.x+)
 
-> Uses: Proximity beacons, beacon monitoring
+> Uses: Estimote Proximity Beacons, Estimote monitoring
 
-Cashier-customer app that allows cashiers to see customers at checkout in their iPad app and grant them their bonus points for their shopping. Completely new experience of earning points without carrying loyalty cards or scanning barcodes.
+Cashier-customer app that allows cashiers to see customers at checkout in their iPad app and grant them bonus points for their shopping. Completely new experience of earning points without carrying loyalty cards or scanning barcodes.
+
