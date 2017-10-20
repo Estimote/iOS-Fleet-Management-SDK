@@ -22,8 +22,18 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Our Estimote Monitoring works in background, so we need you to select &quot;Always Allow&quot; so as to fully experience all possibilities of this template. (You can change this message in the Info.plist file.)</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>We'll show a notification when you enter beacon's range. (You can change this message in the Info.plist file.)</string>
+	<string>Our Estimote Monitoring works in background, so we need you to select &quot;Always Allow&quot; so as to fully experience all possibilities of this template. (You can change this message in the Info.plist file.)</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Our Estimote Monitoring works in background, so we need you to select &quot;Always Allow&quot; so as to fully experience all possibilities of this template. (You can change this message in the Info.plist file.)</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Our Estimote Monitoring works in background, so we need you to select &quot;Always Allow&quot; so as to fully experience all possibilities of this template. (You can change this message in the Info.plist file.)</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>bluetooth-central</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -37,8 +47,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>

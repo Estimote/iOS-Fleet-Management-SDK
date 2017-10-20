@@ -8,7 +8,7 @@ import MessageUI
 /**
  This view controller takes the `BeaconConfig` prepared by the `BeaconSetupViewController` and performs the setup by going through these steps:
 
-   1. Update beacon's firmware, if there's an update available.
+   1. [optional] Update beacon's firmware, if there's an update available. Controlled by shouldUpdateFirmware constant.
    2. Use `beaconSettingsForConfig:` and the `BeaconConfig` object passed by the `BeaconSetupViewController` to determine what settings to write to the beacon and Estimote Cloud, and do write them.
    3. [optional integration point] Save custom beacon data in your own backend. (See: `saveToCustomBackend` method below.)
 
@@ -18,7 +18,10 @@ import MessageUI
  */
 class PerformSetupViewController: UIViewController, MFMailComposeViewControllerDelegate {
 
-    var beacon: ESTDeviceLocationBeacon!
+    // If true the app will check for firmware updates and then update beacon's firmware, if there's an update available
+    @objc let shouldUpdateFirmware = false
+    
+    @objc var beacon: ESTDeviceLocationBeacon!
     var beaconConfig: BeaconConfig!
 
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -34,9 +37,9 @@ class PerformSetupViewController: UIViewController, MFMailComposeViewControllerD
     @IBOutlet weak var actionsView: UIView!
     @IBOutlet weak var nextBeaconButton: UIButton!
 
-    var lastErrorLog: String!
+    @objc var lastErrorLog: String!
 
-    var initialAppeareance = true
+    @objc var initialAppeareance = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,8 +76,13 @@ class PerformSetupViewController: UIViewController, MFMailComposeViewControllerD
 
         errorActionsView.isHidden = true
         actionsView.isHidden = true
-
-        updateFirmware()
+        
+        if self.shouldUpdateFirmware{
+            updateFirmware()
+        }
+        else{
+            self.writeSettings()
+        }
     }
 
     fileprivate func updateFirmware() {

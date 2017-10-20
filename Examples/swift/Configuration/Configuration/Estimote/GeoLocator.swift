@@ -17,7 +17,7 @@ protocol GeoLocatorDelegate: class {
 class GeoLocator: NSObject, CLLocationManagerDelegate {
 
     unowned var delegate: GeoLocatorDelegate
-    var requestInProgress: Bool {
+    @objc var requestInProgress: Bool {
         return authRequestInProgress || locationUpdatesInProgress
     }
 
@@ -37,7 +37,7 @@ class GeoLocator: NSObject, CLLocationManagerDelegate {
         locationManager.delegate = self
     }
 
-    func requestLocation() {
+    @objc func requestLocation() {
         switch CLLocationManager.authorizationStatus() {
         case .notDetermined:
             authRequestInProgress = true

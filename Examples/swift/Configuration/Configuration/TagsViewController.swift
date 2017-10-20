@@ -11,9 +11,9 @@ import UIKit
  */
 class TagsViewController: UITableViewController {
 
-    var selectedTag: String?
+    @objc var selectedTag: String?
 
-    let sortedTags = Array(tagsAndMajorsMapping.keys).sorted()
+    @objc let sortedTags = Array(tagsAndMajorsMapping.keys).sorted()
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sortedTags.count

@@ -49,10 +49,10 @@ class ViewController: UIViewController, UITableViewDataSource, ESTBeaconManagerD
         beaconManager.requestAlwaysAuthorization()
 
         loadCloudData()
-        beaconManager.startRangingBeaconsInRegion(CLBeaconRegion(proximityUUID: NSUUID(UUIDString: yourUUID)!, identifier: "all beacons"))
+        beaconManager.startRangingBeacons(in: CLBeaconRegion(proximityUUID: UUID(uuidString: yourUUID)!, identifier: "all beacons"))
     }
 
-    @IBAction func reloadTags(sender: UIBarButtonItem) {
+    @IBAction func reloadTags(_ sender: UIBarButtonItem) {
         loadCloudData()
     }
 
@@ -60,14 +60,14 @@ class ViewController: UIViewController, UITableViewDataSource, ESTBeaconManagerD
         let originalTitle = title
 
         title = "Loading tags…"
-        reloadTagsButton.enabled = false
+        reloadTagsButton.isEnabled = false
 
-        cloudData.removeAll(keepCapacity: true)
+        cloudData.removeAll(keepingCapacity: true)
 
-        ESTRequestV2GetDevices().sendRequestWithCompletion { devices, error in
+        ESTRequestV2GetDevices().sendRequest { devices, error in
             guard let devices = devices else {
                 self.title = "Failed loading tags"
-                self.reloadTagsButton.enabled = true
+                self.reloadTagsButton.isEnabled = true
                 return
             }
 
@@ -75,8 +75,8 @@ class ViewController: UIViewController, UITableViewDataSource, ESTBeaconManagerD
                 /* ==> MODIFY THIS ==> */
                 let aisle = device.shadow.tags.map({ tag -> String? in
                     let entireTagRange = NSMakeRange(0, tag.utf16.count)
-                    if let aisleRange = aisleRegex.firstMatchInString(tag, options: [], range: entireTagRange)?.rangeAtIndex(1) {
-                        return (tag as NSString).substringWithRange(aisleRange)
+                    if let aisleRange = aisleRegex.firstMatch(in: tag, options: [], range: entireTagRange)?.rangeAt(1) {
+                        return (tag as NSString).substring(with: aisleRange)
                     } else {
                         return nil
                     }
@@ -84,28 +84,28 @@ class ViewController: UIViewController, UITableViewDataSource, ESTBeaconManagerD
 
                 let firstNonAisleTag = device.shadow.tags.filter({ tag in
                     let entireTagRange = NSMakeRange(0, tag.utf16.count)
-                    return aisleRegex.firstMatchInString(tag, options: [], range: entireTagRange) == nil // include tags which DON'T match the aisle regex
+                    return aisleRegex.firstMatch(in: tag, options: [], range: entireTagRange) == nil // include tags which DON'T match the aisle regex
                 }).first
 
                 let iBeacon = device.settings.iBeacon.first!
-                let majorMinorID = MajorMinorID(major: iBeacon.major.unsignedShortValue, minor: iBeacon.minor.unsignedShortValue)
+                let majorMinorID = MajorMinorID(major: iBeacon.major.uint16Value, minor: iBeacon.minor.uint16Value)
                 self.cloudData[majorMinorID] = BeaconCloudData(tag: firstNonAisleTag, aisle: aisle)
                 /* <== MODIFY THIS <== */
             }
 
             self.title = originalTitle
-            self.reloadTagsButton.enabled = true
+            self.reloadTagsButton.isEnabled = true
         }
     }
 
     // MARK: Table View
 
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableRows.count
     }
 
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Beacon", forIndexPath: indexPath)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Beacon", for: indexPath)
 
         let aisleLabel = tableView.viewWithTag(1) as! UILabel
         let tagLabel = tableView.viewWithTag(2) as! UILabel
@@ -124,25 +124,25 @@ class ViewController: UIViewController, UITableViewDataSource, ESTBeaconManagerD
         rssiLabel.text = "\(row.rangedBeacon.rssi) dBm"
 
         if majorMonitor.isInsideMajor(row.majorMinorID.major) {
-            didEnterLabel.hidden = false
+            didEnterLabel.isHidden = false
         } else {
-            didEnterLabel.hidden = true
+            didEnterLabel.isHidden = true
         }
 
         if indexPath.row == nearestIndex {
             cell.backgroundColor = UIColor(red: 0.9, green: 1.0, blue: 0.9, alpha: 1.0)
         } else {
-            cell.backgroundColor = UIColor.whiteColor()
+            cell.backgroundColor = UIColor.white
         }
 
         if row.rangedBeacon.accuracy == -1 {
-            majorMinorLabel.textColor = UIColor.grayColor()
-            proximityLabel.textColor = UIColor.grayColor()
-            rssiLabel.textColor = UIColor.grayColor()
+            majorMinorLabel.textColor = UIColor.gray
+            proximityLabel.textColor = UIColor.gray
+            rssiLabel.textColor = UIColor.gray
         } else {
-            majorMinorLabel.textColor = UIColor.blackColor()
-            proximityLabel.textColor = UIColor.blackColor()
-            rssiLabel.textColor = UIColor.blackColor()
+            majorMinorLabel.textColor = UIColor.black
+            proximityLabel.textColor = UIColor.black
+            rssiLabel.textColor = UIColor.black
         }
 
         return cell
@@ -150,35 +150,35 @@ class ViewController: UIViewController, UITableViewDataSource, ESTBeaconManagerD
 
     // MARK: Ranging delegate
 
-    func beaconManager(manager: AnyObject, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {
+    func beaconManager(_ manager: Any, didRangeBeacons beacons: [CLBeacon], in region: CLBeaconRegion) {
         // ensure we're monitoring for the majors of beacons in range
         for beacon in beacons {
-            majorMonitor.ensureMonitoringForMajor(beacon.major.unsignedShortValue)
+            majorMonitor.ensureMonitoringForMajor(beacon.major.uint16Value)
         }
-
+        
         // map ranging data to table rows, including corss-referencing with the cloud data
         tableRows = beacons.map({
-            let majorMinorID = MajorMinorID(major: $0.major.unsignedShortValue, minor: $0.minor.unsignedShortValue)
+            let majorMinorID = MajorMinorID(major: $0.major.uint16Value, minor: $0.minor.uint16Value)
             return TableRowModel(
                 majorMinorID: majorMinorID,
                 rangedBeacon: $0,
                 cloudData: cloudData[majorMinorID]
             )
-        }).sort({
+        }).sorted(by: {
             let aisle1 = $0.0.cloudData?.aisle
             let aisle2 = $0.1.cloudData?.aisle
-
+            
             if aisle1 == aisle2 {
                 return $0.0.majorMinorID.description < $0.1.majorMinorID.description
             } else {
-                return aisle1 < aisle2
+                return aisle1! < aisle2!
             }
         })
-
+        
         // find the row index of the nearest beacon, so that we can highlight that table row
         var nearestIndex: Int?
-        var nearestDistance = DBL_MAX
-        for (index, row) in tableRows.enumerate() {
+        var nearestDistance = Double.greatestFiniteMagnitude
+        for (index, row) in tableRows.enumerated() {
             let distance = row.rangedBeacon.accuracy
             if distance != -1 && distance < nearestDistance {
                 nearestIndex = index
@@ -186,7 +186,7 @@ class ViewController: UIViewController, UITableViewDataSource, ESTBeaconManagerD
             }
         }
         self.nearestIndex = nearestIndex
-
+        
         // reload the table
         tableView.reloadData()
     }

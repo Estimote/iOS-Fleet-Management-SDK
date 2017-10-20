@@ -7,23 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AECA38A81B971E12009A9324 /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AECA38A51B971E12009A9324 /* EstimoteSDK.framework */; };
-		AECA38A91B971E12009A9324 /* BeaconNotificationsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AECA38A71B971E12009A9324 /* BeaconNotificationsManager.m */; };
-		AECA38AC1B971FDD009A9324 /* BeaconID.m in Sources */ = {isa = PBXBuildFile; fileRef = AECA38AB1B971FDD009A9324 /* BeaconID.m */; };
+		AECA387F1B97144B009A9324 /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AECA387E1B97144B009A9324 /* EstimoteSDK.framework */; };
 		AECF16921B0E0C0200CC83B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AECF16911B0E0C0200CC83B2 /* main.m */; };
 		AECF16951B0E0C0200CC83B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AECF16941B0E0C0200CC83B2 /* AppDelegate.m */; };
 		AECF16981B0E0C0200CC83B2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AECF16971B0E0C0200CC83B2 /* ViewController.m */; };
 		AECF169B1B0E0C0200CC83B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AECF16991B0E0C0200CC83B2 /* Main.storyboard */; };
 		AECF169D1B0E0C0200CC83B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AECF169C1B0E0C0200CC83B2 /* Assets.xcassets */; };
-		AEFD995D1BC5990400BC1771 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEFD995B1BC5990400BC1771 /* LaunchScreen.storyboard */; };
+		AEFD99571BC5975100BC1771 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEFD99551BC5975100BC1771 /* LaunchScreen.storyboard */; };
+		FA5FE87F1D6F336100AEE1D4 /* NotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FA5FE87E1D6F336100AEE1D4 /* NotificationManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AECA38A51B971E12009A9324 /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EstimoteSDK.framework; path = ../../../../../EstimoteSDK/EstimoteSDK.framework; sourceTree = "<group>"; };
-		AECA38A61B971E12009A9324 /* BeaconNotificationsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconNotificationsManager.h; sourceTree = "<group>"; };
-		AECA38A71B971E12009A9324 /* BeaconNotificationsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconNotificationsManager.m; sourceTree = "<group>"; };
-		AECA38AA1B971FDD009A9324 /* BeaconID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeaconID.h; sourceTree = "<group>"; };
-		AECA38AB1B971FDD009A9324 /* BeaconID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeaconID.m; sourceTree = "<group>"; };
+		AECA387E1B97144B009A9324 /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EstimoteSDK.framework; path = ../../../../../EstimoteSDK/EstimoteSDK.framework; sourceTree = "<group>"; };
 		AECF168C1B0E0C0200CC83B2 /* Notification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Notification.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AECF16901B0E0C0200CC83B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AECF16911B0E0C0200CC83B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -33,7 +28,9 @@
 		AECF16971B0E0C0200CC83B2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		AECF169A1B0E0C0200CC83B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AECF169C1B0E0C0200CC83B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AEFD995C1BC5990400BC1771 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AEFD99561BC5975100BC1771 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FA5FE87D1D6F336100AEE1D4 /* NotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationManager.h; sourceTree = "<group>"; };
+		FA5FE87E1D6F336100AEE1D4 /* NotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,21 +38,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AECA38A81B971E12009A9324 /* EstimoteSDK.framework in Frameworks */,
+				AECA387F1B97144B009A9324 /* EstimoteSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AECA38A41B971E12009A9324 /* Estimote */ = {
+		AECA387D1B97144B009A9324 /* Estimote */ = {
 			isa = PBXGroup;
 			children = (
-				AECA38A51B971E12009A9324 /* EstimoteSDK.framework */,
-				AECA38AA1B971FDD009A9324 /* BeaconID.h */,
-				AECA38AB1B971FDD009A9324 /* BeaconID.m */,
-				AECA38A61B971E12009A9324 /* BeaconNotificationsManager.h */,
-				AECA38A71B971E12009A9324 /* BeaconNotificationsManager.m */,
+				FA5FE87D1D6F336100AEE1D4 /* NotificationManager.h */,
+				FA5FE87E1D6F336100AEE1D4 /* NotificationManager.m */,
+				AECA387E1B97144B009A9324 /* EstimoteSDK.framework */,
 			);
 			path = Estimote;
 			sourceTree = "<group>";
@@ -85,10 +80,10 @@
 				AECF16971B0E0C0200CC83B2 /* ViewController.m */,
 				AECF16991B0E0C0200CC83B2 /* Main.storyboard */,
 				AECF169C1B0E0C0200CC83B2 /* Assets.xcassets */,
-				AEFD995B1BC5990400BC1771 /* LaunchScreen.storyboard */,
+				AEFD99551BC5975100BC1771 /* LaunchScreen.storyboard */,
 				AECF16901B0E0C0200CC83B2 /* Info.plist */,
 				AECF168F1B0E0C0200CC83B2 /* Supporting Files */,
-				AECA38A41B971E12009A9324 /* Estimote */,
+				AECA387D1B97144B009A9324 /* Estimote */,
 			);
 			path = Notification;
 			sourceTree = "<group>";
@@ -108,7 +103,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AECF16AF1B0E0C0200CC83B2 /* Build configuration list for PBXNativeTarget "Notification" */;
 			buildPhases = (
-				AED499A91BDA5E3D00445E08 /* Check TODOs */,
+				AED499AB1BDA5F5000445E08 /* Check TODOs */,
 				AECF16881B0E0C0200CC83B2 /* Sources */,
 				AECF16891B0E0C0200CC83B2 /* Frameworks */,
 				AECF168A1B0E0C0200CC83B2 /* Resources */,
@@ -128,11 +123,16 @@
 		AECF16841B0E0C0200CC83B2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Estimote, Inc.";
 				TargetAttributes = {
 					AECF168B1B0E0C0200CC83B2 = {
 						CreatedOnToolsVersion = 6.3.2;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -159,7 +159,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEFD995D1BC5990400BC1771 /* LaunchScreen.storyboard in Resources */,
+				AEFD99571BC5975100BC1771 /* LaunchScreen.storyboard in Resources */,
 				AECF169B1B0E0C0200CC83B2 /* Main.storyboard in Resources */,
 				AECF169D1B0E0C0200CC83B2 /* Assets.xcassets in Resources */,
 			);
@@ -168,7 +168,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		AED499A91BDA5E3D00445E08 /* Check TODOs */ = {
+		AED499AB1BDA5F5000445E08 /* Check TODOs */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -191,8 +191,7 @@
 			files = (
 				AECF16981B0E0C0200CC83B2 /* ViewController.m in Sources */,
 				AECF16951B0E0C0200CC83B2 /* AppDelegate.m in Sources */,
-				AECA38A91B971E12009A9324 /* BeaconNotificationsManager.m in Sources */,
-				AECA38AC1B971FDD009A9324 /* BeaconID.m in Sources */,
+				FA5FE87F1D6F336100AEE1D4 /* NotificationManager.m in Sources */,
 				AECF16921B0E0C0200CC83B2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,10 +207,10 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		AEFD995B1BC5990400BC1771 /* LaunchScreen.storyboard */ = {
+		AEFD99551BC5975100BC1771 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AEFD995C1BC5990400BC1771 /* Base */,
+				AEFD99561BC5975100BC1771 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -227,14 +226,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -273,14 +278,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -309,11 +320,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/../../../EstimoteSDK",
 				);
 				INFOPLIST_FILE = Notification/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.estimote.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -324,11 +337,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/../../../EstimoteSDK",
 				);
 				INFOPLIST_FILE = Notification/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.estimote.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";

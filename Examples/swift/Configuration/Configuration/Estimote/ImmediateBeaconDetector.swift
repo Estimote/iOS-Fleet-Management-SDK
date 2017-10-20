@@ -3,30 +3,6 @@
 //
 
 import Foundation
-// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
-// Consider refactoring the code to use the non-optional operators.
-fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
-  switch (lhs, rhs) {
-  case let (l?, r?):
-    return l < r
-  case (nil, _?):
-    return true
-  default:
-    return false
-  }
-}
-
-// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
-// Consider refactoring the code to use the non-optional operators.
-fileprivate func >= <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
-  switch (lhs, rhs) {
-  case let (l?, r?):
-    return l >= r
-  default:
-    return !(lhs < rhs)
-  }
-}
-
 
 enum ImmediateBeaconDetectorError: Error {
     case bluetoothDisabled, unknown
@@ -45,8 +21,8 @@ protocol ImmediateBeaconDetectorDelegate: class {
  */
 class ImmediateBeaconDetector: NSObject, ESTDeviceManagerDelegate, CBCentralManagerDelegate {
 
-    let deviceManager = ESTDeviceManager()
-    var bluetoothManager: CBCentralManager!
+    @objc let deviceManager = ESTDeviceManager()
+    @objc var bluetoothManager: CBCentralManager!
 
     unowned var delegate: ImmediateBeaconDetectorDelegate
 
@@ -60,11 +36,11 @@ class ImmediateBeaconDetector: NSObject, ESTDeviceManagerDelegate, CBCentralMana
         bluetoothManager = CBCentralManager(delegate: self, queue: nil)
     }
 
-    func start() {
+    @objc func start() {
         deviceManager.startDeviceDiscovery(with: ESTDeviceFilterLocationBeacon())
     }
 
-    func stop() {
+    @objc func stop() {
         deviceManager.stopDeviceDiscovery()
     }
 
@@ -72,15 +48,14 @@ class ImmediateBeaconDetector: NSObject, ESTDeviceManagerDelegate, CBCentralMana
 
     func deviceManager(_ manager: ESTDeviceManager, didDiscover devices: [ESTDevice]) {
         let nextGenBeacons = devices as! [ESTDeviceLocationBeacon]
-        let nearestBeacon = nextGenBeacons
-            .map { ($0, normalizedRSSIForBeaconWithIdentifier($0.identifier, RSSI: $0.rssi)) }
-            .filter { $0.1 != nil && $0.1 >= 0 }
-            .max { $0.1 < $1.1 }?.0
+        let beaconsWithNormalizedRSSI = nextGenBeacons.map { ($0, normalizedRSSIForBeaconWithIdentifier($0.identifier, RSSI: $0.rssi)) }.filter { $0.1 != nil && $0.1! >= 0 }
+        let nearestBeacon = beaconsWithNormalizedRSSI.max { $0.1! < $1.1! }?.0
+        
         if let nearestBeacon = nearestBeacon {
             delegate.immediateBeaconDetector(self, didDiscoverBeacon: nearestBeacon)
         }
     }
-
+    
     func deviceManagerDidFailDiscovery(_ manager: ESTDeviceManager) {
         if bluetoothManager.state != .poweredOn {
             delegate.immediateBeaconDetector(self, didFailDiscovery: .bluetoothDisabled)

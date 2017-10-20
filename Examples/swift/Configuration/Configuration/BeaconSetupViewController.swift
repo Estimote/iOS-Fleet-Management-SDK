@@ -19,17 +19,17 @@ import UIKit
  */
 class BeaconSetupViewController: UIViewController, GeoLocatorDelegate {
 
-    var beacon: ESTDeviceLocationBeacon!
+    @objc var beacon: ESTDeviceLocationBeacon!
 
-    var selectedTag: String? {
+    @objc var selectedTag: String? {
         didSet {
             validate()
         }
     }
 
-    var geoLocator: GeoLocator!
-    var geoLocation: CLLocation?
-    var appBecomeActiveObserver: AnyObject!
+    @objc var geoLocator: GeoLocator!
+    @objc var geoLocation: CLLocation?
+    @objc var appBecomeActiveObserver: AnyObject!
 
     // MARK: User Interface
 
@@ -84,7 +84,7 @@ class BeaconSetupViewController: UIViewController, GeoLocatorDelegate {
 
     // MARK: Config validation & creation
 
-    func validate() {
+    @objc func validate() {
         saveButton.isEnabled = selectedTag != nil && geoLocation != nil && placementSegmentedControl.selectedSegmentIndex != UISegmentedControlNoSegment
     }
 
@@ -121,7 +121,7 @@ class BeaconSetupViewController: UIViewController, GeoLocatorDelegate {
 
     // MARK: GeoLocator delegate
 
-    func geoLocator(_ geoLocator: GeoLocator, didDetermineLocation location: CLLocation) {
+    @objc func geoLocator(_ geoLocator: GeoLocator, didDetermineLocation location: CLLocation) {
         geoLocation = location
 
         geoLocationLabel.text = String(format: "%.2f, %.2f, ± %.0f m", geoLocation!.coordinate.latitude, geoLocation!.coordinate.longitude, geoLocation!.horizontalAccuracy)

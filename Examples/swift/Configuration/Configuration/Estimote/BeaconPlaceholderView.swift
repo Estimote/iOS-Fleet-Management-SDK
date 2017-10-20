@@ -10,7 +10,7 @@ import UIKit
 @IBDesignable
 class BeaconPlaceholderView: UILabel {
 
-    var border: CAShapeLayer!
+    @objc var border: CAShapeLayer!
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -22,7 +22,7 @@ class BeaconPlaceholderView: UILabel {
         initialize()
     }
 
-    func initialize() {
+    @objc func initialize() {
         border = CAShapeLayer()
         border.strokeColor = UIColor(white: 0.5, alpha: 1.0).cgColor
         border.fillColor = nil

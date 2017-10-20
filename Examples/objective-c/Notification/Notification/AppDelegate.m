@@ -4,30 +4,36 @@
 
 #import "AppDelegate.h"
 
-#import "BeaconNotificationsManager.h"
+#import <EstimoteSDK/EstimoteSDK.h>
+#import "NotificationManager.h"
 
 @interface AppDelegate ()
 
-@property (nonatomic) BeaconNotificationsManager *beaconNotificationsManager;
+@property (nonatomic) NotificationManager *notificationManager;
 
 @end
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // TODO: put your App ID and App Token here
-    // You can get them by adding your app on https://cloud.estimote.com/#/apps
+    
+    /** TODO: Replace with your App ID and App Token.
+     You can get them by adding a new app at https://cloud.estimote.com/#/apps
+     */
     [ESTConfig setupAppID:@"<#App ID#>" andAppToken:@"<#App Token#>"];
 
-    self.beaconNotificationsManager = [BeaconNotificationsManager new];
-    [self.beaconNotificationsManager enableNotificationsForBeaconID:
-     // TODO: replace with UUID, major and minor of your own beacon
-     [[BeaconID alloc] initWithUUIDString:@"B9407F30-F5F8-466E-AFF9-25556B57FE6D" major:1 minor:1]
-     enterMessage:@"Hello, world!"
-     exitMessage:@"Goodbye, world."
-     ];
-
-    // NOTE: "exit" event has a built-in delay of 30 seconds, to make sure that the user has really exited the beacon's range. The delay is imposed by iOS and is non-adjustable.
+    /** TODO: Make sure your beacons have Estimote Monitoring feature set enabled:
+     https://community.estimote.com/hc/en-us/articles/226144728
+     */
+    
+    self.notificationManager = [[NotificationManager alloc] init];
+    
+    /** TODO: Replace with an identifier of your beacon.
+     You can find identifiers of your beacons at https://cloud.estimote.com/#/beacons
+     */
+    [self.notificationManager enableNotificationsForDeviceIdentifier:@"B34C0N-1-CL0UD-1D3NT1F13R"
+                                                         enterMessage:@"Hello, world!"
+                                                          exitMessage:@"Goodbye, world."];
 
     return YES;
 }

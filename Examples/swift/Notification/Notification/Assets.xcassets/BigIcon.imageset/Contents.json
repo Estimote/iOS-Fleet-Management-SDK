@@ -10,8 +10,8 @@
     },
     {
       "idiom" : "universal",
-      "scale" : "3x",
-      "filename" : "Notification.png"
+      "filename" : "Notification.png",
+      "scale" : "3x"
     }
   ],
   "info" : {

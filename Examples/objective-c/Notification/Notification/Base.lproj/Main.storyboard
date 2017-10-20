@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,58 +22,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BigIcon" translatesAutoresizingMaskIntoConstraints="NO" id="2wr-cX-kZQ">
-                                <rect key="frame" x="87.5" y="313.5" width="200" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="CVH-Ft-La8"/>
-                                    <constraint firstAttribute="height" constant="200" id="J2f-Oq-xOa"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lock the phone, and move in or out of range of the beacon. A notification will pop up on the screen." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMU-Me-7zp">
-                                <rect key="frame" x="16" y="128.5" width="343" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="x1H-Yd-cg2"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lock your phone, then approach and leave range of your beacon" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTR-I2-wfJ">
+                                <rect key="frame" x="36" y="323" width="303" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check the Xcode's console for errors if it doesn't." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EWy-dA-yg3">
-                                <rect key="frame" x="16" y="243.5" width="343" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="pio-ca-jG5"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="EWy-dA-yg3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="2GT-I3-wrU"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="EWy-dA-yg3" secondAttribute="trailing" id="A23-BP-F3z"/>
-                            <constraint firstAttribute="centerX" secondItem="JMU-Me-7zp" secondAttribute="centerX" id="Gmv-cV-1B4"/>
-                            <constraint firstAttribute="centerX" secondItem="2wr-cX-kZQ" secondAttribute="centerX" id="R8c-F3-3fs"/>
-                            <constraint firstAttribute="centerX" secondItem="EWy-dA-yg3" secondAttribute="centerX" id="X8s-rd-UmT"/>
-                            <constraint firstItem="2wr-cX-kZQ" firstAttribute="top" secondItem="EWy-dA-yg3" secondAttribute="bottom" constant="30" id="egE-2i-46B"/>
-                            <constraint firstAttribute="centerY" secondItem="2wr-cX-kZQ" secondAttribute="centerY" constant="-80" id="gCi-56-Sm1"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="JMU-Me-7zp" secondAttribute="trailing" id="jaZ-Tc-h6Q"/>
-                            <constraint firstItem="EWy-dA-yg3" firstAttribute="top" secondItem="JMU-Me-7zp" secondAttribute="bottom" constant="15" id="uld-fv-aSy"/>
-                            <constraint firstItem="JMU-Me-7zp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="zUZ-8a-sgA"/>
+                            <constraint firstItem="gTR-I2-wfJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="Aoo-nG-6wj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gTR-I2-wfJ" secondAttribute="trailing" constant="20" id="a0X-RV-Pcv"/>
+                            <constraint firstItem="gTR-I2-wfJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gHt-hN-UdI"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="Gmv-cV-1B4"/>
-                                <exclude reference="X8s-rd-UmT"/>
-                            </mask>
-                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
-    <resources>
-        <image name="BigIcon" width="341" height="341"/>
-    </resources>
 </document>

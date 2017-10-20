@@ -13,8 +13,10 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // TODO: put your App ID and App Token here
-    // You can get them by adding your app on https://cloud.estimote.com/#/apps
+    
+    /** TODO: Replace with your App ID and App Token.
+     You can get them by adding a new app at https://cloud.estimote.com/#/apps
+     */
     [ESTConfig setupAppID:@"<#App ID#>" andAppToken:@"<#App Token#>"];
 
     // Override point for customization after application launch.

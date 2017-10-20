@@ -3,7 +3,7 @@ struct MajorMinorID: Equatable, Hashable, CustomStringConvertible {
     let major: CLBeaconMajorValue
     let minor: CLBeaconMinorValue
 
-    private let majorMinorString: String
+    fileprivate let majorMinorString: String
 
     init(major: CLBeaconMajorValue, minor: CLBeaconMinorValue) {
         self.major = major

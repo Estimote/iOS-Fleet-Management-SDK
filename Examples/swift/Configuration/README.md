@@ -1,27 +1,23 @@
 ### Configuration app
 
-**IMPORTANT:** The Configuration app works only with [Location Beacons](http://blog.estimote.com/post/139902664710/launching-the-most-robust-location-beacons-on-the) (hardware revision "F") and [next-gen Proximity Beacons](http://blog.estimote.com/post/147038205465/announcing-next-gen-proximity-beacons-with) (hardware revision "G") at this time.
+**IMPORTANT:** The Configuration app works only with [Location Beacons](http://blog.estimote.com/post/139902664710/launching-the-most-robust-location-beacons-on-the) and [Proximity Beacons with NFC](http://blog.estimote.com/post/147038205465/announcing-next-gen-proximity-beacons-with) at this time.
 
-This app uses a few external dependencies managed through [CocoaPods](https://github.com/CocoaPods/CocoaPods).
+This app uses a few external dependencies managed through [CocoaPods](https://cocoapods.org).
 
-You must install and run CocoaPods before building this app:
+You can check if you have CocoaPods installed by running:
+```
+$ pod --version
+```
 
-1.  Follow [CocoaPods installation instructions](http://guides.cocoapods.org/using/getting-started.html#installation).
+If you don't have CocoaPods installed you must install them before building this app. You can follow [CocoaPods getting started instructions](https://guides.cocoapods.org/using/getting-started.html).
 
-2.  Open Terminal and navigate to this directory.
+In the project folder run:
+```
+$ pod update
+```
+to add pods to your project.
 
-    ```
-    $ cd ~/path/to/Configuration
-    ```
-
-3.  Run Carthage.
-
-   ```
-   $ pod install
-   ```
-
- 4.  Open Configuration.xcworkspace.
-
+Make sure you open the project using .xcworkspace file instead of .xcodeproj file.
 
 #### Extras
 
