@@ -62,21 +62,25 @@ class ViewController: UIViewController {
         let blueberryZone = ESTProximityZone(range: ESTProximityRange.custom(desiredMeanTriggerDistance: 0.5)!,
                                              attachmentKey: "blueberry_desk")
         blueberryZone.onEnterBlock = { attachment in
+            print("Enter blueberry 0.5")
             self.blueberryDeskLabel.backgroundColor = self.blueberryColor
             self.blueberryDeskLabel.textColor = UIColor.white
         }
         blueberryZone.onExitBlock = { attachment in
+            print("Exit blueberry 0.5")
             self.blueberryDeskLabel.backgroundColor = UIColor.white
             self.blueberryDeskLabel.textColor = self.blueberryColor
         }
         
         let mintZone = ESTProximityZone(range: ESTProximityRange.custom(desiredMeanTriggerDistance: 0.5)!,
-                                                 attachmentKey: "mint_desk")
+                                        attachmentKey: "mint_desk")
         mintZone.onEnterBlock = { attachment in
+            print("Enter mint 0.5")
             self.mintDeskLabel.backgroundColor = self.mintColor
             self.mintDeskLabel.textColor = UIColor.white
         }
         mintZone.onExitBlock = { attachment in
+            print("Exit mint 0.5")
             self.mintDeskLabel.backgroundColor = UIColor.white
             self.mintDeskLabel.textColor = self.mintColor
         }
@@ -92,10 +96,12 @@ class ViewController: UIViewController {
         let midVenueZone = ESTProximityZone(range: ESTProximityRange.custom(desiredMeanTriggerDistance: 1.5)!,
                                             attachmentKey: "venue")
         midVenueZone.onEnterBlock = { attachment in
+            print("Enter venue 1.5")
             self.venueLabel.backgroundColor = self.venueColor
             self.venueLabel.textColor = UIColor.white
         }
         midVenueZone.onExitBlock = { attachment in
+            print("Exit venue 1.5")
             self.venueLabel.backgroundColor = UIColor.white
             self.venueLabel.textColor = self.venueColor
         }

@@ -1,3 +1,10 @@
+## 5.0.0-alpha.4 (October 20, 2017)
+
+Improvements:
+
+- Estimote Monitoring algorithm that powers Proximity Observer now uses device motion to improve experience.
+- Optimized CPU and RAM usage when observing multiple zones.
+
 ## 5.0.0-alpha.3 (October 13, 2017)
 
 Bugfixes: 

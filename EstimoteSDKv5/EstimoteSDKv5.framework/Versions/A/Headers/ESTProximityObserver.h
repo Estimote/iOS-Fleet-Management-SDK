@@ -16,7 +16,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-
 /**
  Observes and reports proximity of Estimote devices. 
  Uses Estimote Monitoring under the hood. Encapsulates it under tag-based beacon identification and callback blocks.
