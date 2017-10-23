@@ -44,7 +44,10 @@ typedef NS_ENUM(NSInteger, ESTMeshManagerError) {
     ESTMeshManagerErrorAssetTrackingFailed,
     
     /// Failed to trigger reading scan reports command in Cloud.
-    ESTMeshManagerErrorPrepareNearablesScanReportFailed
+    ESTMeshManagerErrorPrepareNearablesScanReportFailed,
+    
+    /// Failed to perform configuration of devices in mesh.
+    ESTMeshManagerErrorConfigurationFailed
 };
 
 /**
@@ -153,6 +156,17 @@ typedef NS_ENUM(NSInteger, ESTMeshManagerError) {
  @param completion Completion block with operation's error. Nil value means success.
  */
 - (void)createAutomappingCommandForNetworkIdentifier:(uint32_t)networkIdentifier completion:(ESTCompletionBlock)completion;
+
+/**
+ Method allows to prepare pending settings for all beacons in the mesh network.
+
+ @param networkIdentifier Identifier of mesh network.
+ @param deviceSettings Group of settings that should be applied.
+ @param completion Completion block with operation's error. Nil value means success.
+ */
+- (void)configureNetwork:(uint32_t)networkIdentifier
+                settings:(ESTDeviceSettingsCollection *)deviceSettings
+              completion:(ESTCompletionBlock)completion;
 
 /**
  Enables tracking nearables command in Cloud.

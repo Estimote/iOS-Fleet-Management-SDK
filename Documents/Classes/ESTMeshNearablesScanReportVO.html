@@ -1538,9 +1538,41 @@ for stickers. Single record is represented by <code>ESTMeshScanResultVO</code>.<
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)ESTMeshNearablesScanReportVO(im)initWithData:"></a>
-                    <a name="//apple_ref/objc/Method/-initWithData:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)ESTMeshNearablesScanReportVO(im)initWithData:">-initWithData:</a>
+                    <a name="/c:objc(cs)ESTMeshNearablesScanReportVO(py)collectedAt"></a>
+                    <a name="//apple_ref/objc/Property/collectedAt" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)ESTMeshNearablesScanReportVO(py)collectedAt">collectedAt</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Date of collecting the scan report.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSDate</span> <span class="o">*</span><span class="n">collectedAt</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">collectedAt</span><span class="p">:</span> <span class="kt">Date</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)ESTMeshNearablesScanReportVO(im)initWithData:collectedAt:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithData:collectedAt:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)ESTMeshNearablesScanReportVO(im)initWithData:collectedAt:">-initWithData:collectedAt:</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1556,12 +1588,13 @@ into value objects.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithData</span><span class="p">:(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSData</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">data</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithData</span><span class="p">:(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSData</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">data</span>
+                 <span class="nf">collectedAt</span><span class="p">:(</span><span class="n">NSDate</span> <span class="o">*</span><span class="p">)</span><span class="nv">collectedAt</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="nf">init</span><span class="o">!</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="p">[</span><span class="kt">Data</span><span class="p">]</span><span class="o">!</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="nf">init</span><span class="o">!</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="p">[</span><span class="kt">Data</span><span class="p">]</span><span class="o">!</span><span class="p">,</span> <span class="nv">collectedAt</span><span class="p">:</span> <span class="kt">Date</span><span class="o">!</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1596,9 +1629,9 @@ into value objects.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)ESTMeshNearablesScanReportVO(im)scanResultsForDeviceIdentifier:"></a>
-                    <a name="//apple_ref/objc/Method/-scanResultsForDeviceIdentifier:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)ESTMeshNearablesScanReportVO(im)scanResultsForDeviceIdentifier:">-scanResultsForDeviceIdentifier:</a>
+                    <a name="/c:objc(cs)ESTMeshNearablesScanReportVO(im)scanResultsForShortDeviceIdentifier:"></a>
+                    <a name="//apple_ref/objc/Method/-scanResultsForShortDeviceIdentifier:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)ESTMeshNearablesScanReportVO(im)scanResultsForShortDeviceIdentifier:">-scanResultsForShortDeviceIdentifier:</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1606,20 +1639,21 @@ into value objects.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns array of scan results for given device identifier.</p>
+                        <p>Returns array of scan results for given device identifier.
+Note these identifiers are eight characters long!</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/ESTMeshNearablesScanResultVO.html">ESTMeshNearablesScanResultVO</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nf">scanResultsForDeviceIdentifier</span><span class="p">:</span>
-    <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">deviceIdentifier</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/ESTMeshNearablesScanResultVO.html">ESTMeshNearablesScanResultVO</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span>
+<span class="nf">scanResultsForShortDeviceIdentifier</span><span class="p">:(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">deviceIdentifier</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">scanResults</span><span class="p">(</span><span class="n">forDeviceIdentifier</span> <span class="nv">deviceIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Classes/ESTMeshNearablesScanResultVO.html">ESTMeshNearablesScanResultVO</a></span><span class="p">]</span><span class="o">!</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">scanResults</span><span class="p">(</span><span class="n">forShortDeviceIdentifier</span> <span class="nv">deviceIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Classes/ESTMeshNearablesScanResultVO.html">ESTMeshNearablesScanResultVO</a></span><span class="p">]</span><span class="o">!</span></code></pre>
 
                         </div>
                       </div>
@@ -1651,6 +1685,43 @@ into value objects.</p>
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)ESTMeshNearablesScanReportVO(im)cloudDictionary"></a>
+                    <a name="//apple_ref/objc/Method/-cloudDictionary" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)ESTMeshNearablesScanReportVO(im)cloudDictionary">-cloudDictionary</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Cloud dictionary of scan report. See <code>ESTRequestSetScanReport</code> for usage.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="n">cloudDictionary</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">cloudDictionary</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An array of NSString objects.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
@@ -1659,7 +1730,7 @@ into value objects.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-10-16)</p>
+      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-10-23)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

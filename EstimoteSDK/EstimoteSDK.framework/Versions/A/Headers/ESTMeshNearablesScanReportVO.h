@@ -19,20 +19,36 @@
 @interface ESTMeshNearablesScanReportVO : NSObject
 
 /**
+ Date of collecting the scan report.
+ */
+@property(nonatomic) NSDate *collectedAt;
+
+- (instancetype)init NS_UNAVAILABLE;
++ (instancetype)new NS_UNAVAILABLE;
+
+/**
  Designated initialiser convering provided data (taken from device)
  into value objects.
 
  @param data Scan report data taken from the device.
  @return Initialised report object.
  */
-- (instancetype)initWithData:(NSArray<NSData *> *)data;
+- (instancetype)initWithData:(NSArray<NSData *> *)data collectedAt:(NSDate *)collectedAt NS_DESIGNATED_INITIALIZER;
 
 /**
  Returns array of scan results for given device identifier.
+ Note these identifiers are eight characters long!
 
  @param deviceIdentifier Identifier of the device.
  @return Array of ESTMeshScanResultVO objects.
  */
-- (NSArray<ESTMeshNearablesScanResultVO *> *)scanResultsForDeviceIdentifier:(NSString *)deviceIdentifier;
+- (NSArray<ESTMeshNearablesScanResultVO *> *)scanResultsForShortDeviceIdentifier:(NSString *)deviceIdentifier;
+
+/**
+ Cloud dictionary of scan report. See `ESTRequestSetScanReport` for usage.
+
+ @return An array of NSString objects.
+ */
+- (NSDictionary *)cloudDictionary;
 
 @end

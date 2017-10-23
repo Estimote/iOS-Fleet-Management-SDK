@@ -1,8 +1,13 @@
-## 4.25.4 (October 16, 2017)
+## 4.26.0 (October 23, 2017)
 
-Improvements:
-- Fixes for CoreBluetooth crash on iOS 11 devices. Multiple serial queues for CBCentralManager replaced with single one.
-- Mesh Advertiser power settings synchronised with Estimote Cloud.
+Features:
+- Gateway can track changes in Mesh network and periodicaly gather scan results, which are sent to Estimote Cloud
+- Mesh network's settings can be set through `ESTMeshManager`
+- connecting with Location Beacon confirms applying commands to Mesh network
+
+Bugfixes:
+- geolocation setting synchronises properly with Cloud
+- incorrect comparing firmware revisions during the OTA update process
 
 ## 4.25.3 (October 11, 2017)
 

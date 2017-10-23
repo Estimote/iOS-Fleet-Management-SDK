@@ -11,17 +11,18 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
- ESTMeshNearablesScanResultVO represents single sticker discovery
- recored delivered in mesh scan report.
+ ESTMeshNearablesScanResultVO represents single sticker discovery recorded in delivered Mesh scan report.
  */
 @interface ESTMeshNearablesScanResultVO : NSObject
 
 
 /**
- Identifier of discovered device.
+ Identifier of discovered nearable.
  */
-@property (nonatomic, strong, readonly) NSString *deviceIdentifier;
+@property (nonatomic, strong, readonly) NSString *nearableIdentifier;
 
 /**
  RSSI (Strength of the signal) of discovered device.
@@ -57,4 +58,13 @@
 - (instancetype)initWithIdentifier:(NSString *)deviceIdentifier
                               rssi:(NSNumber *)rssi;
 
+/**
+ Raw scan report's result reading from device.
+
+ @return NSData object.
+ */
+- (NSData *)data;
+
 @end
+
+NS_ASSUME_NONNULL_END
