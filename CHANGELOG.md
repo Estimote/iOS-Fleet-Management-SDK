@@ -9,6 +9,12 @@ Bugfixes:
 - geolocation setting synchronises properly with Cloud
 - incorrect comparing firmware revisions during the OTA update process
 
+## 4.25.4 (October 16, 2017)
+
+Improvements:
+- Fixes for CoreBluetooth crash on iOS 11 devices. Multiple serial queues for CBCentralManager replaced with single one.
+- Mesh Advertiser power settings synchronised with Estimote Cloud.
+
 ## 4.25.3 (October 11, 2017)
 
 Improvements:
