@@ -2057,6 +2057,86 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(cs)ESTMeshManager(im)configureNetwork:settings:completion:"></a>
+                    <a name="//apple_ref/objc/Method/-configureNetwork:settings:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)ESTMeshManager(im)configureNetwork:settings:completion:">-configureNetwork:settings:completion:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Method allows to prepare pending settings for all beacons in the mesh network.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">configureNetwork</span><span class="p">:(</span><span class="kt">uint32_t</span><span class="p">)</span><span class="nv">networkIdentifier</span>
+                <span class="nf">settings</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/ESTDeviceSettingsCollection.html">ESTDeviceSettingsCollection</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">deviceSettings</span>
+              <span class="nf">completion</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">ESTCompletionBlock</span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">configureNetwork</span><span class="p">(</span><span class="n">_</span> <span class="nv">networkIdentifier</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">,</span> <span class="n">settings</span> <span class="nv">deviceSettings</span><span class="p">:</span> <span class="kt"><a href="../Classes/ESTDeviceSettingsCollection.html">ESTDeviceSettingsCollection</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">ESTCompletionBlock</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>networkIdentifier</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Identifier of mesh network.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>deviceSettings</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Group of settings that should be applied.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Completion block with operation&rsquo;s error. Nil value means success.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(cs)ESTMeshManager(im)enableAssetTrackingForNetworkIdentifier:completion:"></a>
                     <a name="//apple_ref/objc/Method/-enableAssetTrackingForNetworkIdentifier:completion:" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)ESTMeshManager(im)enableAssetTrackingForNetworkIdentifier:completion:">-enableAssetTrackingForNetworkIdentifier:completion:</a>
@@ -2202,7 +2282,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-10-11)</p>
+      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-10-23)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
