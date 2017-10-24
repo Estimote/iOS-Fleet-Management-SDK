@@ -1,3 +1,9 @@
+## 4.26.1 (October 24, 2017)
+
+Bugfixes:
+- Fix for ESTBeaconDevice crash when using ESTBulkUpdater update functionality.
+- Fix for broken save of name, tags and location in Estimote Cloud using operation based mechanism.
+
 ## 4.26.0 (October 23, 2017)
 
 Features:
