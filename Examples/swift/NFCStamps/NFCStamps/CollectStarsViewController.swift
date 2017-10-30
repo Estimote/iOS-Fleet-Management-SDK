@@ -5,6 +5,7 @@
 import UIKit
 import CoreNFC
 
+// TODO: Go to README.md file before launching the app.
 
 class CollectStarsViewController: UIViewController {
     

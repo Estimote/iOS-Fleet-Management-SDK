@@ -11,7 +11,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
-        ESTConfig.setupAppID("nfctest-j3c", andAppToken:"8d5763373ff3b914df47049311ed859b");
+        /** TODO: Replace with your App ID and App Token.
+         You can get them by adding a new app at https://cloud.estimote.com/#/apps
+         */
+        ESTConfig.setupAppID("<#App ID#>", andAppToken:"<#App Token#>");
         
         self.setupNavigationBarAppearance()
         
