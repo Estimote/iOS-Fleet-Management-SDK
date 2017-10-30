@@ -66,3 +66,8 @@ Wirelessly access external devices connected to the beacons' GPIO ports. _(See t
 
 Cashier-customer app that allows cashiers to see customers at checkout in their iPad app and grant them bonus points for their shopping. Completely new experience of earning points without carrying loyalty cards or scanning barcodes.
 
+- **NFCStamps** (Swift only, requires Estimote Beacons with the 4th-gen firmware, 4.x+)
+
+> Uses: Estimote Beacons NFC chips, CoreNFC
+
+Build NFC-powered use cases with CoreNFC framework from Apple and NFC chips inside our beacons.

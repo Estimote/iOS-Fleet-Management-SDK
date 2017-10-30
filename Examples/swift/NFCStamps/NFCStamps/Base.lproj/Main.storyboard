@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="10U-P3-F3u">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HVD Fonts - BrandonText-Medium.otf">
+            <string>BrandonText-Medium</string>
+        </array>
+        <array key="Monotype Imaging - SlateStd-Bk.otf">
+            <string>SlateStd-Bk</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--NFC template-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="NFCTouch" id="BYZ-38-t0r" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2aE-gn-nz0">
+                                <rect key="frame" x="50" y="392" width="275" height="235"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NFC template" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78K-Xm-TG0">
+                                        <rect key="frame" x="0.0" y="0.0" width="275" height="29.5"/>
+                                        <fontDescription key="fontDescription" name="BrandonText-Medium" family="Brandon Text" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="For the best experience, tap the beacon with the top right corner of your phone" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bU8-65-0pD">
+                                        <rect key="frame" x="0.0" y="29.5" width="275" height="71"/>
+                                        <fontDescription key="fontDescription" name="BrandonText-Medium" family="Brandon Text" pointSize="17"/>
+                                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="200" translatesAutoresizingMaskIntoConstraints="NO" id="Qpq-I7-eZf">
+                                        <rect key="frame" x="0.0" y="100.5" width="275" height="94.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ql-Sl-Skz">
+                                        <rect key="frame" x="0.0" y="195" width="275" height="40"/>
+                                        <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Iwr-7d-skI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="BrandonText-Medium" family="Brandon Text" pointSize="17"/>
+                                        <state key="normal" title="Okay, let's start">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="bTg-sm-eXj" kind="show" id="Mio-4l-VQc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" image="TouchNFC" translatesAutoresizingMaskIntoConstraints="NO" id="dAR-Fn-pzp">
+                                <rect key="frame" x="0.0" y="64" width="375" height="328"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dAR-Fn-pzp" secondAttribute="height" multiplier="375:328" id="8VN-Jo-IYO"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="2aE-gn-nz0" secondAttribute="trailing" constant="50" id="8AH-LR-DYa"/>
+                            <constraint firstItem="dAR-Fn-pzp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="9Ax-W0-ynf"/>
+                            <constraint firstItem="2aE-gn-nz0" firstAttribute="top" secondItem="dAR-Fn-pzp" secondAttribute="bottom" id="9yf-xP-AJG"/>
+                            <constraint firstItem="dAR-Fn-pzp" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Air-yb-OHS"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2aE-gn-nz0" secondAttribute="bottom" constant="40" id="HHM-FO-bo6"/>
+                            <constraint firstItem="2aE-gn-nz0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="wU6-rK-MoJ"/>
+                            <constraint firstItem="dAR-Fn-pzp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zqO-dU-aHJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="NFC template" id="n80-rW-ZB9">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="eqZ-Qa-ZGX"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1607.2" y="91.304347826086968"/>
+        </scene>
+        <!--NFC template-->
+        <scene sceneID="idX-0S-h8c">
+            <objects>
+                <viewController storyboardIdentifier="CollectStars" title="NFC template" id="bTg-sm-eXj" customClass="CollectStarsViewController" customModule="NFCStamps" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tBe-zO-MmS"/>
+                        <viewControllerLayoutGuide type="bottom" id="Su7-XU-x8W"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Wjh-vK-wbe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJY-pr-ehE">
+                                <rect key="frame" x="50" y="591" width="275" height="36"/>
+                                <fontDescription key="fontDescription" name="BrandonText-Medium" family="Brandon Text" pointSize="17"/>
+                                <state key="normal" title="Collect stars">
+                                    <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="collectStarsTapped:" destination="bTg-sm-eXj" eventType="touchUpInside" id="Po2-S3-1nx"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zYL-ZC-eOi">
+                                <rect key="frame" x="99" y="478" width="177" height="27"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FullStar" translatesAutoresizingMaskIntoConstraints="NO" id="Tey-Bk-00j">
+                                        <rect key="frame" x="0.0" y="0.0" width="29" height="27"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FullStar" translatesAutoresizingMaskIntoConstraints="NO" id="hYC-Ra-U4v">
+                                        <rect key="frame" x="37" y="0.0" width="29" height="27"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FullStar" translatesAutoresizingMaskIntoConstraints="NO" id="ATF-TC-nxY">
+                                        <rect key="frame" x="74" y="0.0" width="29" height="27"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FullStar" translatesAutoresizingMaskIntoConstraints="NO" id="dsb-N9-qGa">
+                                        <rect key="frame" x="111" y="0.0" width="29" height="27"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FullStar" translatesAutoresizingMaskIntoConstraints="NO" id="u3a-i7-oMg">
+                                        <rect key="frame" x="148" y="0.0" width="29" height="27"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Coffee" translatesAutoresizingMaskIntoConstraints="NO" id="cBz-f4-6Ki">
+                                <rect key="frame" x="0.0" y="64" width="375" height="328"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cBz-f4-6Ki" secondAttribute="height" multiplier="375:328" id="83L-hu-UfL"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Collect 5 stars to grab a free coffee" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="66i-7U-mTc">
+                                <rect key="frame" x="50" y="438" width="275" height="17"/>
+                                <fontDescription key="fontDescription" name="SlateStd-Bk" family="Slate Std" pointSize="17"/>
+                                <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="hJY-pr-ehE" secondAttribute="trailing" constant="50" id="07R-Qc-Zjs"/>
+                            <constraint firstItem="hJY-pr-ehE" firstAttribute="centerX" secondItem="Wjh-vK-wbe" secondAttribute="centerX" id="24l-ml-L2d"/>
+                            <constraint firstItem="zYL-ZC-eOi" firstAttribute="centerX" secondItem="Wjh-vK-wbe" secondAttribute="centerX" id="7dQ-Tr-hWZ"/>
+                            <constraint firstItem="hJY-pr-ehE" firstAttribute="width" secondItem="66i-7U-mTc" secondAttribute="width" id="Ojo-Fl-A8b"/>
+                            <constraint firstItem="hJY-pr-ehE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Wjh-vK-wbe" secondAttribute="leading" constant="50" id="R9m-jv-IYU"/>
+                            <constraint firstItem="zYL-ZC-eOi" firstAttribute="top" secondItem="66i-7U-mTc" secondAttribute="bottom" constant="23" id="RBo-hv-qGf"/>
+                            <constraint firstItem="66i-7U-mTc" firstAttribute="top" secondItem="cBz-f4-6Ki" secondAttribute="bottom" constant="46" id="Zai-5u-tJ4"/>
+                            <constraint firstItem="cBz-f4-6Ki" firstAttribute="centerX" secondItem="Wjh-vK-wbe" secondAttribute="centerX" id="axD-DQ-uIr"/>
+                            <constraint firstItem="cBz-f4-6Ki" firstAttribute="top" secondItem="tBe-zO-MmS" secondAttribute="bottom" id="dmh-xT-9na"/>
+                            <constraint firstItem="Su7-XU-x8W" firstAttribute="top" secondItem="hJY-pr-ehE" secondAttribute="bottom" constant="40" id="hlJ-OO-2TR"/>
+                            <constraint firstItem="66i-7U-mTc" firstAttribute="centerX" secondItem="Wjh-vK-wbe" secondAttribute="centerX" id="rxv-Ab-1Ur"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectStarsButton" destination="hJY-pr-ehE" id="r6g-e1-Gu4"/>
+                        <outlet property="starStackView" destination="zYL-ZC-eOi" id="NNf-fU-dtN"/>
+                        <segue destination="5j4-bR-kLU" kind="show" identifier="ExtraCoffee" id="PzC-fi-iCY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5hS-Pa-CPl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2385" y="90.845070422535215"/>
+        </scene>
+        <!--NFC template-->
+        <scene sceneID="Otq-ge-Iie">
+            <objects>
+                <viewController storyboardIdentifier="ExtraCoffee" title="NFC template" id="5j4-bR-kLU" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7TM-ER-Msy"/>
+                        <viewControllerLayoutGuide type="bottom" id="s0r-sa-pAv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mzY-je-6Lf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ExtraCoffee" translatesAutoresizingMaskIntoConstraints="NO" id="iji-vC-t6N">
+                                <rect key="frame" x="0.0" y="64" width="375" height="328"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="iji-vC-t6N" secondAttribute="height" multiplier="375:328" id="Jm8-LR-Vng"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Free coffee is yours!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uuw-tg-nll">
+                                <rect key="frame" x="42" y="460" width="291" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="291" id="9sA-0T-CSA"/>
+                                    <constraint firstAttribute="height" constant="32" id="psw-QE-B73"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BrandonText-Medium" family="Brandon Text" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iji-vC-t6N" firstAttribute="centerX" secondItem="mzY-je-6Lf" secondAttribute="centerX" id="0ur-Wu-0Ll"/>
+                            <constraint firstItem="uuw-tg-nll" firstAttribute="centerX" secondItem="mzY-je-6Lf" secondAttribute="centerX" id="RqT-xE-rye"/>
+                            <constraint firstItem="uuw-tg-nll" firstAttribute="top" secondItem="iji-vC-t6N" secondAttribute="bottom" constant="68" id="ZYc-du-reW"/>
+                            <constraint firstItem="iji-vC-t6N" firstAttribute="top" secondItem="7TM-ER-Msy" secondAttribute="bottom" id="kwz-7u-4F4"/>
+                            <constraint firstItem="iji-vC-t6N" firstAttribute="width" secondItem="mzY-je-6Lf" secondAttribute="height" multiplier="375:667" id="tnD-h5-fn9"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PKd-dA-6Di" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3162.4000000000001" y="90.404797601199405"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="84D-sm-eQc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="10U-P3-F3u" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="d40-rR-Onm">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="BrandonText-Medium" family="Brandon Text" pointSize="19"/>
+                            <color key="textColor" red="0.60777515172958374" green="0.60788232088088989" blue="0.60776835680007935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ocA-tb-ECn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6DC-Fh-pvq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="823" y="91"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Coffee" width="375" height="328"/>
+        <image name="ExtraCoffee" width="375" height="328"/>
+        <image name="FullStar" width="29" height="27"/>
+        <image name="TouchNFC" width="375" height="328"/>
+    </resources>
+</document>
