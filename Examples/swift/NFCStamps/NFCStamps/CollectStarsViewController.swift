@@ -71,8 +71,6 @@ class CollectStarsViewController: UIViewController {
 
 extension CollectStarsViewController: NFCNDEFReaderSessionDelegate {
     
-    // MARK: NFCNDEFReaderSessionDelegate methods
-    
     func readerSession(_ session: NFCNDEFReaderSession, didDetectNDEFs messages: [NFCNDEFMessage]) {
         
         // Step 2 - Read information that beacon carries
