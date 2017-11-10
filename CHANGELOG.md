@@ -1,7 +1,21 @@
+## 4.26.2 (November 10, 2017)
+
+Features:
+- `ESTMeshGateway` implements `ESTMeshGatewayDelegate` protocol. It will make tracking assets easier, as you can retrieve all necessary data from delegate's method.
+
+Improvements:
+- Simplified `ESTMeshManager` documentation, so it should be easier to grasp Mesh related concepts.
+- Better granulation of asking for permissions when using Estimote Monitoring.
+
+Bugfixes:
+- Simplified and cleared confirming Mesh Buffer during connecting with Location Beacon,
+- Confirming commands when connecting with Location Beacon,
+- Minor cleaning and code improvements.
+
 ## 4.26.1 (October 24, 2017)
 
 Bugfixes:
-- Fix for ESTBeaconDevice crash when using ESTBulkUpdater update functionality.
+- Fix for `ESTBeaconDevice` crash when using `ESTBulkUpdater` update functionality.
 - Fix for broken save of name, tags and location in Estimote Cloud using operation based mechanism.
 
 ## 4.26.0 (October 23, 2017)

@@ -34,6 +34,7 @@ typedef NS_ENUM(NSInteger, ESTMonitoringV2ManagerError)
     ESTMonitoringV2ManagerErrorUnauthorizedToUseBluetooth = 2,
     ESTMonitoringV2ManagerErrorBluetoothOff = 3,
     ESTMonitoringV2ManagerErrorDesiredDistanceTooLow = 4,
+    ESTMonitoringV2ManagerErrorUnauthorizedToMonitorBeacons = 5
 };
 
 /**
@@ -87,6 +88,14 @@ typedef NS_ENUM(NSInteger, ESTMonitoringV2ManagerError)
  */
 - (void)monitoringManager:(ESTMonitoringV2Manager *)manager didExitDesiredRangeOfBeaconWithIdentifier:(NSString *)identifier;
 
+/**
+ Called when the authorization status for the application related to beacon monitoring has changed.
+
+ @param manager Monitoring manager reporting the event.
+ @param authorizationStatus New authorization status for the application.
+ */
+- (void)monitoringManager:(ESTMonitoringV2Manager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)authorizationStatus;
+
 @end
 
 
@@ -134,6 +143,13 @@ typedef NS_ENUM(NSInteger, ESTMonitoringV2ManagerError)
  */
 @property (nonatomic, strong, readonly) NSSet<NSString *> *monitoredIdentifiers;
 
+/**
+ App’s authorization status for beacon monitoring.
+ 
+ @return Authorization status.
+ */
+@property (nonatomic, assign, readonly) CLAuthorizationStatus authorizationStatus;
+
 - (instancetype)init NS_UNAVAILABLE;
 
 /**
@@ -160,9 +176,9 @@ typedef NS_ENUM(NSInteger, ESTMonitoringV2ManagerError)
  Overwrite the previously monitored identifiers when called multiple times.
  
  Note:
- Additionally, request Core Location "always" permission,
- send config request to Estimote Cloud,
- start Core Location beacon monitoring for <code>-backgroundSupportRegion</code>.
+ In order to work, beacon monitoring requires an "Always" or "WhenInUse" authorization to use Core Location services.
+ See <code>requestWhenInUseAuthorization</code> and <code>requestAlwaysAuthorization</code> methods.
+ In case of insufficient authorization status <code>monitoringManager:didFailWithError:</code> method is called on a delegate.
  
  @param identifiers Identifiers of beacons to be monitored. Device identifer can be read
  by visiting https://cloud.estimote.com/#/
@@ -183,6 +199,16 @@ typedef NS_ENUM(NSInteger, ESTMonitoringV2ManagerError)
  @return Current monitoring state for the zone.
  */
 - (ESTMonitoringState)stateForBeaconWithIdentifier:(NSString *)identifier;
+
+/**
+ Requests permission for monitoring beacons while the app is in the foreground.
+ */
+- (void)requestWhenInUseAuthorization;
+
+/**
+ Requests permission for monitoring beacons whenever the app is running.
+ */
+- (void)requestAlwaysAuthorization;
 
 @end
 

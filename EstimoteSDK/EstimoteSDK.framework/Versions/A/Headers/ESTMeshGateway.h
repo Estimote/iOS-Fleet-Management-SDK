@@ -13,6 +13,20 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class ESTMeshGateway, ESTMeshNearablesScanReportVO;
+
+@protocol ESTMeshGatewayDelegate <NSObject>
+@optional
+/**
+ Called when Mesh Gateway read scan report.
+
+ @param gateway Gateway instance that gathered report.
+ @param scanReport Value object of scan report.
+ @param settingsVersion Settings version of Mesh network.
+ @param networkIdentifier Mesh network identifier.
+ */
+- (void)gateway:(ESTMeshGateway *)gateway didReadScanReport:(ESTMeshNearablesScanReportVO *)scanReport withSettingsVersion:(NSNumber *)settingsVersion forNetwork:(NSNumber *)networkIdentifier;
+@end
 
 /**
  Responsible for two way communication between Mesh network and Cloud. ESTMeshGateway serves two purposes:
@@ -20,9 +34,13 @@ NS_ASSUME_NONNULL_BEGIN
  - periodically fetch pending Mesh buffers for user's Mesh networks and apply them.
  Note that ESTMeshGateway requires appID and appToken (), which you can obtain via www.cloud.estimote.com
  See: + (void)setupAppID:(NSString *)appID andAppToken:(NSString *)appToken
- 
  */
 @interface ESTMeshGateway : NSObject
+
+/**
+ Delegate's object.
+ */
+@property (nonatomic, weak) id<ESTMeshGatewayDelegate> delegate;
 
 /**
  Triggers applying newest Mesh buffers to nearest devices, and confirming ranged Mesh packets to Cloud.

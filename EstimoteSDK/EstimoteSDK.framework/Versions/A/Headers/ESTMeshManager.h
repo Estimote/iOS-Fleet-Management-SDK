@@ -149,13 +149,14 @@ typedef NS_ENUM(NSInteger, ESTMeshManagerError) {
 - (void)stopConfirmingMeshSettings;
 
 /**
- Method triggering automapping commands in Cloud.
- @warning Physical connection with any of meshed beacons is required.
+ Queues UWB ranging command in the Cloud.
+ @warning The comand is synchronized upon device connection.
+ @warning The comamnd is executed upon device disconnection.
 
  @param networkIdentifier Identifier of Mesh network, that automapping will be triggered for.
  @param completion Completion block with operation's error. Nil value means success.
  */
-- (void)createAutomappingCommandForNetworkIdentifier:(uint32_t)networkIdentifier completion:(ESTCompletionBlock)completion;
+- (void)queueAutomappingCommandInCloudForNetworkIdentifier:(uint32_t)networkIdentifier completion:(ESTCompletionBlock)completion;
 
 /**
  Method allows to prepare pending settings for all beacons in the mesh network.
@@ -169,8 +170,8 @@ typedef NS_ENUM(NSInteger, ESTMeshManagerError) {
               completion:(ESTCompletionBlock)completion;
 
 /**
- Enables tracking nearables command in Cloud.
- @warning Physical connection with any of meshed beacons is required.
+ Sets a pending setting in the Cloud; this setting causes beacons in this mesh network to start scanning for nearables.
+ @warning The beacon synchronizes pending settings upon connection and executes them upon disconnection.
 
  @param networkIdentifier Identifier of Mesh network, that tracking nearables will be enabled for.
  @param completion Completion block with operation's error. Nil value means success.
@@ -178,9 +179,11 @@ typedef NS_ENUM(NSInteger, ESTMeshManagerError) {
 - (void)enableAssetTrackingForNetworkIdentifier:(uint32_t)networkIdentifier completion:(ESTCompletionBlock)completion;
 
 /**
- Triggers reading scan reports command in Cloud.
- @warning Physical connection with any of meshed beacons is required. Also note that there is no use in reading reports if
- `createAssetTrackingCommandForNetworkIdentifier:completion:` wasn't called in advance.
+ Creates a pending command to prepare (merge) scan reports with nearables' signal readings across the mesh network and queues this command in the Cloud.
+ 
+ @warning The comand is synchronized upon device connection.
+ @warning The comamnd is executed upon device disconnection.
+ @warning Only works if `enableAssetTrackingForNetworkIdentifier:completion:` was executed in advance.
 
  @param networkIdentifier Identifier of Mesh network, that reading scan reports will be triggered for.
  @param completion Completion block with operation's error. Nil value means success.
