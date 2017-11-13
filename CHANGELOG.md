@@ -1,3 +1,8 @@
+## 4.26.3 (November 13, 2017)
+
+Bugfixes:
+- Fixed not connecting with Location Beacons.
+
 ## 4.26.2 (November 10, 2017)
 
 Features:
