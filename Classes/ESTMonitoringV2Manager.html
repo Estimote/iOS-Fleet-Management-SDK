@@ -1686,6 +1686,44 @@ of Core Location regions visit:
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(cs)ESTMonitoringV2Manager(py)authorizationStatus"></a>
+                    <a name="//apple_ref/objc/Property/authorizationStatus" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)ESTMonitoringV2Manager(py)authorizationStatus">authorizationStatus</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>App’s authorization status for beacon monitoring.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n">CLAuthorizationStatus</span> <span class="n">authorizationStatus</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">authorizationStatus</span><span class="p">:</span> <span class="kt">CLAuthorizationStatus</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Authorization status.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(cs)ESTMonitoringV2Manager(im)initWithDesiredMeanTriggerDistance:delegate:"></a>
                     <a name="//apple_ref/objc/Method/-initWithDesiredMeanTriggerDistance:delegate:" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)ESTMonitoringV2Manager(im)initWithDesiredMeanTriggerDistance:delegate:">-initWithDesiredMeanTriggerDistance:delegate:</a>
@@ -1781,9 +1819,9 @@ for these beacons to <code><a href="../Classes/ESTMonitoringV2Manager.html#/c:ob
 <p>Overwrite the previously monitored identifiers when called multiple times.</p>
 
 <p>Note:
-Additionally, request Core Location <q>always</q> permission,
-send config request to Estimote Cloud,
-start Core Location beacon monitoring for <code>-backgroundSupportRegion</code>.</p>
+In order to work, beacon monitoring requires an <q>Always</q> or <q>WhenInUse</q> authorization to use Core Location services.
+See <code>requestWhenInUseAuthorization</code> and <code>requestAlwaysAuthorization</code> methods.
+In case of insufficient authorization status <code>monitoringManager:didFailWithError:</code> method is called on a delegate.</p>
 
                       </div>
                       <div class="declaration">
@@ -1916,6 +1954,70 @@ by visiting <a href="https://cloud.estimote.com/#/">https://cloud.estimote.com/#
                     </section>
                   </div>
                 </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)ESTMonitoringV2Manager(im)requestWhenInUseAuthorization"></a>
+                    <a name="//apple_ref/objc/Method/-requestWhenInUseAuthorization" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)ESTMonitoringV2Manager(im)requestWhenInUseAuthorization">-requestWhenInUseAuthorization</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Requests permission for monitoring beacons while the app is in the foreground.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">requestWhenInUseAuthorization</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">requestWhenInUseAuthorization</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)ESTMonitoringV2Manager(im)requestAlwaysAuthorization"></a>
+                    <a name="//apple_ref/objc/Method/-requestAlwaysAuthorization" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)ESTMonitoringV2Manager(im)requestAlwaysAuthorization">-requestAlwaysAuthorization</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Requests permission for monitoring beacons whenever the app is running.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">requestAlwaysAuthorization</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">requestAlwaysAuthorization</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
@@ -1924,7 +2026,7 @@ by visiting <a href="https://cloud.estimote.com/#/">https://cloud.estimote.com/#
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-10-23)</p>
+      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-11-13)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

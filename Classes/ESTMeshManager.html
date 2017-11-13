@@ -1988,9 +1988,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)ESTMeshManager(im)createAutomappingCommandForNetworkIdentifier:completion:"></a>
-                    <a name="//apple_ref/objc/Method/-createAutomappingCommandForNetworkIdentifier:completion:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)ESTMeshManager(im)createAutomappingCommandForNetworkIdentifier:completion:">-createAutomappingCommandForNetworkIdentifier:completion:</a>
+                    <a name="/c:objc(cs)ESTMeshManager(im)queueAutomappingCommandInCloudForNetworkIdentifier:completion:"></a>
+                    <a name="//apple_ref/objc/Method/-queueAutomappingCommandInCloudForNetworkIdentifier:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)ESTMeshManager(im)queueAutomappingCommandInCloudForNetworkIdentifier:completion:">-queueAutomappingCommandInCloudForNetworkIdentifier:completion:</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1998,23 +1998,24 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Method triggering automapping commands in Cloud.
-- warning: Physical connection with any of meshed beacons is required.</p>
+                        <p>Queues UWB ranging command in the Cloud.
+- warning: The comand is synchronized upon device connection.
+- warning: The comamnd is executed upon device disconnection.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">createAutomappingCommandForNetworkIdentifier</span><span class="p">:(</span><span class="kt">uint32_t</span><span class="p">)</span><span class="nv">networkIdentifier</span>
-                                          <span class="nf">completion</span><span class="p">:</span>
-                                              <span class="p">(</span><span class="n">nonnull</span> <span class="n">ESTCompletionBlock</span><span class="p">)</span>
-                                                  <span class="n">completion</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="nf">queueAutomappingCommandInCloudForNetworkIdentifier</span><span class="p">:(</span><span class="kt">uint32_t</span><span class="p">)</span><span class="nv">networkIdentifier</span>
+                                        <span class="nf">completion</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">ESTCompletionBlock</span><span class="p">)</span>
+                                                       <span class="n">completion</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">createAutomappingCommand</span><span class="p">(</span><span class="n">forNetworkIdentifier</span> <span class="nv">networkIdentifier</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">ESTCompletionBlock</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">queueAutomappingCommandInCloud</span><span class="p">(</span><span class="n">forNetworkIdentifier</span> <span class="nv">networkIdentifier</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">ESTCompletionBlock</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2147,8 +2148,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Enables tracking nearables command in Cloud.
-- warning: Physical connection with any of meshed beacons is required.</p>
+                        <p>Sets a pending setting in the Cloud; this setting causes beacons in this mesh network to start scanning for nearables.
+- warning: The beacon synchronizes pending settings upon connection and executes them upon disconnection.</p>
 
                       </div>
                       <div class="declaration">
@@ -2215,9 +2216,25 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Triggers reading scan reports command in Cloud.
-- warning: Physical connection with any of meshed beacons is required. Also note that there is no use in reading reports if
-<code>createAssetTrackingCommandForNetworkIdentifier:completion:</code> wasn&rsquo;t called in advance.</p>
+                        <p>Creates a pending command to prepare (merge) scan reports with nearables&rsquo; signal readings across the mesh network and queues this command in the Cloud.</p>
+
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    The comand is synchronized upon device connection.
+
+</div>
+
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    The comamnd is executed upon device disconnection.
+
+</div>
+
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>Only works if <code>enableAssetTrackingForNetworkIdentifier:completion:</code> was executed in advance.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -2282,7 +2299,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-10-23)</p>
+      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-11-13)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
