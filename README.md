@@ -66,8 +66,8 @@ To get a working prototype, check out the [Desk Observer](Examples/swift/DeskObs
 The demo requires at least two Proximity or Location beacons configured for Estimote Monitoring. It's enabled by default in dev kits shipped after mid-September 2017; to enable it on your own check out the [instructions](https://community.estimote.com/hc/en-us/articles/226144728-How-to-enable-Estimote-Monitoring-).
 
 The demo expects beacons having specific tags assigned:
-- `{"attachment":{"blueberry_desk":true,"venue":"office"}}` for the first one,
-- `{"attachment":{"mint_desk":true,"venue":"office"}}` for the second one.
+- `{"attachment":{"desk":"blueberry","venue":"office"}}` for the first one,
+- `{"attachment":{"desk":"mint","venue":"office"}}` for the second one.
 
 These attachments can be used to define the zones presented below:
 
@@ -98,29 +98,30 @@ Tags are Cloud-only settings — no additional connecting to the beacons with th
 
 To use the SDK within your app, go to the [apps section](https://cloud.estimote.com/#/apps) in Estimote Cloud. Register a new app or use one of the available templates to obtain App ID & App Token credentials pair.
 
-In your app (i.e. in AppDelegate), set up the credentials using `ESTCloudCredentials`:
+In your app, set up the credentials using `ESTCloudCredentials`:
 
 ```swift
-ESTCloudCredentials.setUpSharedInstance(appID: "your-app-id", appToken: "your-app-token")
+let credentials = ESTCloudCredentials(appID: "your-app-id", appToken: "your-app-token")
 ```
 
 Then, configure proximity discovery with `ESTProximityObserver`. For more info on attachments, see [this section](#attachment-based-identification).
 
 ```swift
 // Create observer instance
-self.proximityObserver = ESTProximityObserver(credentials: ESTCloudCredentials.shared!, errorBlock: { error in
-    print("Ooops! \(error.localizedDescription)")
+self.proximityObserver = ESTProximityObserver(credentials: credentials, errorBlock: { error in
+    print("Ooops! \(error)")
 })
 
 
 // Define zones
 let blueberryZone = ESTProximityZone(range: ESTProximityRange.custom(meanTriggerDistance: 0.5)!,
-                                     attachmentKey: "blueberry_desk")
-blueberryZone.onEnterBlock = { attachment in
-    print("Entered near range of 'blueberry_desk'. Full beacon attachment: (attachment.attachmentJSON)")
+                                     attachmentKey: "desk",
+                                     attachmentValue: "blueberry")
+blueberryZone.onEnterAction = { attachment in
+    print("Entered near range of 'desk':'blueberry'. Full beacon attachment: (attachment.attachmentJSON)")
 }
-blueberryZone.onExitBlock = { (attachment) in
-    print("Exited near range of 'blueberry_desk'. Full beacon attachment: (attachment.attachmentJSON)")
+blueberryZone.onExitAction = { (attachment) in
+    print("Exited near range of 'desk':'blueberry'. Full beacon attachment: (attachment.attachmentJSON)")
 }
 
 // ... etc. You can define as many zones as you need.

@@ -41,6 +41,10 @@ class ViewController: UIViewController {
         self.venueLabel.textColor = self.venueColor
         
         // ---- Proximity config ----
+
+        // TODO: put your App ID and App Token here
+        // You can get them by adding your app on https://cloud.estimote.com/#/apps
+        let credentials = ESTCloudCredentials(appID: <#your-app-id#>, appToken: <#your-app-token#>)
         
         // There's just a one Proximity Observer object used to configure reactions to proximity changes.
         // The configuration of a zone consists of defining a desired approximate range (0.5m or 1.5m in this example), 
@@ -55,57 +59,61 @@ class ViewController: UIViewController {
         // - one of the beacons has a tag `{"attachment":{"blueberry_desk":true,"venue":"office"}}`
         // - another beacon has a tag `{"attachment":{"mint_desk":true,"venue":"office"}}`
         
-        self.proximityObserver = ESTProximityObserver(credentials: ESTCloudCredentials.shared!, errorBlock: { error in
-            print("Ooops! \(error.localizedDescription)")
+        self.proximityObserver = ESTProximityObserver(credentials: credentials, errorBlock: { error in
+            print("Ooops! \(error)")
         })
         
         let blueberryZone = ESTProximityZone(range: ESTProximityRange.custom(desiredMeanTriggerDistance: 0.5)!,
-                                             attachmentKey: "blueberry_desk")
-        blueberryZone.onEnterBlock = { attachment in
+                                             attachmentKey: "desk",
+                                             attachmentValue: "blueberry")
+        blueberryZone.onEnterAction = { attachment in
             print("Enter blueberry 0.5")
             self.blueberryDeskLabel.backgroundColor = self.blueberryColor
             self.blueberryDeskLabel.textColor = UIColor.white
         }
-        blueberryZone.onExitBlock = { attachment in
+        blueberryZone.onExitAction = { attachment in
             print("Exit blueberry 0.5")
             self.blueberryDeskLabel.backgroundColor = UIColor.white
             self.blueberryDeskLabel.textColor = self.blueberryColor
         }
         
         let mintZone = ESTProximityZone(range: ESTProximityRange.custom(desiredMeanTriggerDistance: 0.5)!,
-                                        attachmentKey: "mint_desk")
-        mintZone.onEnterBlock = { attachment in
+                                        attachmentKey: "desk",
+                                        attachmentValue: "mint")
+        mintZone.onEnterAction = { attachment in
             print("Enter mint 0.5")
             self.mintDeskLabel.backgroundColor = self.mintColor
             self.mintDeskLabel.textColor = UIColor.white
         }
-        mintZone.onExitBlock = { attachment in
+        mintZone.onExitAction = { attachment in
             print("Exit mint 0.5")
             self.mintDeskLabel.backgroundColor = UIColor.white
             self.mintDeskLabel.textColor = self.mintColor
         }
         
         let closeVenueZone = ESTProximityZone(range: ESTProximityRange.custom(desiredMeanTriggerDistance: 0.5)!,
-                                              attachmentKey: "venue")
-        closeVenueZone.onChangeBlock = { attachmentsInside in
+                                              attachmentKey: "venue",
+                                              attachmentValue: "office")
+        closeVenueZone.onChangeAction = { attachmentsInside in
             print("Currently, there are \(attachmentsInside.count) attachments in ~0.5m range:")
             print("\(attachmentsInside.map({ $0.json.description }).joined(separator: "\n"))")
             print("")
         }
         
         let midVenueZone = ESTProximityZone(range: ESTProximityRange.custom(desiredMeanTriggerDistance: 1.5)!,
-                                            attachmentKey: "venue")
-        midVenueZone.onEnterBlock = { attachment in
+                                            attachmentKey: "venue",
+                                            attachmentValue: "office")
+        midVenueZone.onEnterAction = { attachment in
             print("Enter venue 1.5")
             self.venueLabel.backgroundColor = self.venueColor
             self.venueLabel.textColor = UIColor.white
         }
-        midVenueZone.onExitBlock = { attachment in
+        midVenueZone.onExitAction = { attachment in
             print("Exit venue 1.5")
             self.venueLabel.backgroundColor = UIColor.white
             self.venueLabel.textColor = self.venueColor
         }
-        midVenueZone.onChangeBlock = { attachmentsInside in
+        midVenueZone.onChangeAction = { attachmentsInside in
             print("Currently, there are \(attachmentsInside.count) attachments in ~1.5m range:")
             print("\(attachmentsInside.map({ $0.json.description }).joined(separator: "\n"))")
             print("")

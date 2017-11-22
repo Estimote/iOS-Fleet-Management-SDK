@@ -15,11 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /**
- Estimote Cloud credentials available as a singleton.
- Go to https://cloud.estimote.com/#/apps to acquire them.
- 
- You should call `+setUpSharedInstanceWithAppID:appToken:` and `+sharedInstance` to get an instance of this class.
- However, if you really need a non-singleton instance, use `-initWithAppID:appToken`.
+ Estimote Cloud credentials encapsulated in a value object. To acquire App ID & App Token go to
+ https://cloud.estimote.com/#/apps.
  */
 @interface ESTCloudCredentials : NSObject
 
@@ -32,14 +29,6 @@ NS_ASSUME_NONNULL_BEGIN
  App Token generated in Estimote Cloud.
  */
 @property (nonatomic, strong, readonly) NSString *appToken;
-
-/**
- Cloud credentials singleton.
- 
- Note: this property is set by `+setUpSharedInstanceWithAppID:appToken:`. If the method wasn't called yet, or
- after `+removeSharedInstance` was called, this property is nil.
- */
-@property (nonatomic, strong, readonly, class, nullable) ESTCloudCredentials *sharedInstance NS_SWIFT_NAME(shared);
 
 /**
  Init is disabled for this class.
@@ -58,21 +47,6 @@ NS_ASSUME_NONNULL_BEGIN
  @param appToken App Token generated in Estimote Cloud.
  */
 - (instancetype)initWithAppID:(NSString *)appID appToken:(NSString *)appToken NS_DESIGNATED_INITIALIZER;
-
-/**
- Create a shared instance and store it globally. Calling this method causes +sharedInstance 
- to return an object instead of nil.
-
- @param appID App ID generated in Estimote Cloud.
- @param appToken App Token generated in Estimote Cloud.
- */
-+ (void)setUpSharedInstanceWithAppID:(NSString *)appID
-                            appToken:(NSString *)appToken NS_SWIFT_NAME(setUpSharedInstance(appID:appToken:));
-
-/**
- Remove shared instance. Calling this method causes `+sharedInstance` to return nil.
- */
-+ (void)removeSharedInstance;
 
 @end
 

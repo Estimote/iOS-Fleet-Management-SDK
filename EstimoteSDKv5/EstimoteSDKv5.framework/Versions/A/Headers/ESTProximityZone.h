@@ -41,19 +41,19 @@ NS_ASSUME_NONNULL_BEGIN
  Register block to be called when user enters proximity of Estimote devices with matching attachment.
  Beacon identification is attachment-based (see https://github.com/Estimote/iOS-SDK/blob/sdk_5/README.md for more info).
  */
-@property (nonatomic, copy, readwrite, nullable) void (^onEnterBlock)(ESTProximityDeviceAttachment *triggeringDeviceAttachment);
+@property (nonatomic, copy, readwrite, nullable) void (^onEnterAction)(ESTProximityDeviceAttachment *triggeringDeviceAttachment);
 
 /**
  Block to be called when user exits proximity of Estimote devices with matching attachment.
  Beacon identification is attachment-based (see https://github.com/Estimote/iOS-SDK/blob/sdk_5/README.md for more info).
  */
-@property (nonatomic, copy, readwrite, nullable) void (^onExitBlock)(ESTProximityDeviceAttachment *triggeringDeviceAttachment);
+@property (nonatomic, copy, readwrite, nullable) void (^onExitAction)(ESTProximityDeviceAttachment *triggeringDeviceAttachment);
 
 /**
  Block to be called each time a new beacon is detected in user's range and each time a beacon disappears
  from user's range.
  */
-@property (nonatomic, copy, readwrite, nullable) void (^onChangeBlock)(NSSet<ESTProximityDeviceAttachment *> *attachmentsCurrentlyInside);
+@property (nonatomic, copy, readwrite, nullable) void (^onChangeAction)(NSSet<ESTProximityDeviceAttachment *> *attachmentsCurrentlyInside);
 
 /**
  Init is unavailable.

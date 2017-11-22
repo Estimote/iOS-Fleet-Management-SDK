@@ -1,3 +1,15 @@
+## 5.0.0-alpha.5 (November 22, 2017)
+
+Improvements:
+
+- Estimote Cloud's Analytics events are cached and sent in batches.
+- `ESTProximityObserver`'s error block is invoked with error object having domain & error codes defined in `ESTProximityObserver.h`.
+- Renamed `ESTProximityZone`'s `onEnterBlock`, `onExitBlock`, `onChangeBlock` to `onEnterAction`, `onExitAction`, `onChangeAction` for better compatibility with Android Proximity SDK.
+
+Bugfixes:
+
+- Fixed a bug where Estimote Monitoring would ignore use motion detection.
+
 ## 5.0.0-alpha.4 (October 20, 2017)
 
 Improvements:
