@@ -107,6 +107,16 @@ typedef NS_ENUM(NSInteger, ESTMeshManagerError) {
 - (instancetype)initWithDelegate:(id<ESTMeshManagerDelegate> _Nullable)delegate;
 
 /**
+ * Designated initializer with the ability to set a delegate object and specify a queue that Bluetooth events are dispatched on.
+ *
+ * @param queue A queue used for dispatching events of a `CBCentralManager` instance used for device discovery.
+ * @param delegate Delegate object.
+ *
+ * @return Initialized object or nil if it couldn't be created.
+ */
+- (instancetype)initWithDelegate:(id<ESTMeshManagerDelegate> _Nullable)delegate cbCentralManagerQueue:(dispatch_queue_t)queue NS_DESIGNATED_INITIALIZER;
+
+/**
  *  Method allowing to create Mesh network in Cloud with provided details. Connection with Location Beacon is required to apply Mesh network's settings to the device.
  *  @see ESTDeviceLocationBeacon connect
  *

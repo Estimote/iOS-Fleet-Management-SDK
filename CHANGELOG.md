@@ -1,3 +1,12 @@
+## 4.27.0 (December 18, 2017)
+
+Features:
+-  Some classes have new initializers with queue for dispatching events of a `CBCentralManager`, see: `ESTDeviceManager`, `ESTMeshManager`.
+- `ESTDeviceManager` has a new delegate's method returning error for device discovery failure (see: `- (void)deviceManager:(ESTDeviceManager *)manager didFailDiscoveryWithError:(NSError *)error;`. Previous callback is deprecated since 4.27.0).
+
+Bugfixes:
+- Issue with overwriting generic advertisers' indexes is a thing of the past.
+
 ## 4.26.3 (November 13, 2017)
 
 Bugfixes:
@@ -56,7 +65,7 @@ Bugfixes:
 - We’ve fixed crash on CBPeripheral delegate observer removal. Crash was showing up on  iOS 11 only mainly when using ESTBulkUpdater class.
 
 ## 4.25.0 (October 4, 2017)
-  		  
+
  Features:
  - ESTMeshManager is now supporting triggering scanning for nearables within Mesh network and generating scan report.
  - ESTDeviceLocationBeacon has a new member (`ESTMeshScanReportsManager`) responsible for reading nearables scan reports from Mesh network.		

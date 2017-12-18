@@ -41,7 +41,15 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * @param manager The utility manager object reporting the event.
  */
-- (void)deviceManagerDidFailDiscovery:(ESTDeviceManager *)manager;
+- (void)deviceManagerDidFailDiscovery:(ESTDeviceManager *)manager DEPRECATED_MSG_ATTRIBUTE("Since 4.27.0 please use deviceManager:didFailWithError:");
+
+/**
+ Tells the delegate the exact reason of discovery failure.
+
+ @param manager The utility manager object reporting the event.
+ @param error Failure error.
+ */
+- (void)deviceManager:(ESTDeviceManager *)manager didFailDiscoveryWithError:(NSError *)error;
 
 @end
 
@@ -65,6 +73,21 @@ NS_ASSUME_NONNULL_BEGIN
  *  Delegate to be informed about scan results every 1 sec.
  */
 @property (nonatomic, weak) id<ESTDeviceManagerDelegate> delegate;
+
+/**
+ Designated initializer.
+
+ @param queue A queue used for dispatching events of a `CBCentralManager` instance used for device discovery.
+ @return Initialized object.
+ */
+- (instancetype)initWithCBCentralManagerQueue:(dispatch_queue_t)queue NS_DESIGNATED_INITIALIZER;
+
+/**
+ Convenience initializer.
+
+ @return Initialized object.
+ */
+- (instancetype)init;
 
 /**
  *  Start discovering Estimote devices determined by the filter, using CoreBluetooth. 
