@@ -2,7 +2,7 @@
 
 Features:
 -  Some classes have new initializers with queue for dispatching events of a `CBCentralManager`, see: `ESTDeviceManager`, `ESTMeshManager`.
-- `ESTDeviceManager` has a new delegate's method returning error for device discovery failure (see: `- (void)deviceManager:(ESTDeviceManager *)manager didFailDiscoveryWithError:(NSError *)error;`. Previous callback is deprecated since 4.27.0).
+- `ESTDeviceManager` has a new delegate method returning error for device discovery failure (see: `- (void)deviceManager:(ESTDeviceManager *)manager didFailDiscoveryWithError:(NSError *)error;`. Previous callback is deprecated since 4.27.0).
 
 Bugfixes:
 - Issue with overwriting generic advertisers' indexes is a thing of the past.
