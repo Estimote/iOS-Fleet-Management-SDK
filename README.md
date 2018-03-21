@@ -1,5 +1,7 @@
 # Estimote SDK for Apple iOS
 
+**Note: Proximity detection features in this SDK are being deprecated in favor of our new [iOS Proximity SDK](https://github.com/Estimote/iOS-Proximity-SDK), powered by [Estimote Monitoring](http://blog.estimote.com/post/166007374930/the-most-reliable-proximity-tech-now-with-a). If you're starting a new Proximity app or integration, we recommend to use the new SDK.**
+
 ## Table of Contents
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
