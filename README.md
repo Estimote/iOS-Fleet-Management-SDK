@@ -75,7 +75,7 @@ To perform bulk update operations on devices represented by *ESTDeviceLocationBe
 
 I have an array of identifiers for my Location Beacons that should have their iBeacon packet on and major value set to 200.
 
-```
+```objective-c
 NSMutableArray *bulkUpdateConfigurations = [NSMutableArray new];
 
 NSArray *identifiers = @[@"identifier1", @"identifier2", @"identifier3"];
@@ -158,7 +158,7 @@ To read/write a device setting value call *readValueWithCompletion*: or *writeVa
 
 I have an Estimote Location Beacon and I want to turn iBeacon packet on, change its Major value to 500, and read its Proximity UUID.
 
-```
+```objective-c
 [device.settings.iBeacon.enable writeValue:YES completion:^(ESTSettingIBeaconEnable *enableSetting, NSError *error) {
   NSLog(@"iBeacon packet enabled");
 }];
@@ -183,7 +183,7 @@ To speed up interacting with multiple settings at once you can use the Advanced 
 
 I have an Estimote Location Beacon and I want to turn iBeacon packet on, change its Major value to 200, read its Proximity UUID, perform many other operations and want to do this as fast as possible.
 
-``` 
+```objective-c
 ESTSettingIBeaconEnable *enableSetting = [[ESTSettingIBeaconEnable alloc] initWithValue:YES];
 ESTBeaconOperationIBeaconEnable *enableOperation = [ESTBeaconOperationIBeaconEnable writeOperationWithSetting:enableSetting completion:^(ESTSettingIBeaconEnable *setting, NSError *error)
   NSLog(@"iBeacon packet enabled");
