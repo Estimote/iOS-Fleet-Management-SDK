@@ -242,6 +242,9 @@
                 <a class="nav-group-task-link" href="../Classes/ESTBeaconOperationSensorsTemperature.html">ESTBeaconOperationSensorsTemperature</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ESTBeaconOperationSensorsTemperatureOffset.html">ESTBeaconOperationSensorsTemperatureOffset</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ESTBeaconOperationShakeToConnectEnable.html">ESTBeaconOperationShakeToConnectEnable</a>
               </li>
               <li class="nav-group-task">
@@ -809,6 +812,9 @@
                 <a class="nav-group-task-link" href="../Classes/ESTSettingSensorsTemperature.html">ESTSettingSensorsTemperature</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ESTSettingSensorsTemperatureOffset.html">ESTSettingSensorsTemperatureOffset</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ESTSettingShakeToConnectEnable.html">ESTSettingShakeToConnectEnable</a>
               </li>
               <li class="nav-group-task">
@@ -1176,6 +1182,9 @@
                 <a class="nav-group-task-link" href="../Enums/ESTSettingPowerScheduledAdvertisingPeriodError.html">ESTSettingPowerScheduledAdvertisingPeriodError</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/ESTSettingSensorsTemperatureOffsetError.html">ESTSettingSensorsTemperatureOffsetError</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums.html#/c:@E@ESTSettingStorageType">ESTSettingStorageType</a>
               </li>
               <li class="nav-group-task">
@@ -1504,6 +1513,9 @@
                 <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTSettingSensorsTemperature.h@T@ESTSettingSensorsTemperatureCompletionBlock">ESTSettingSensorsTemperatureCompletionBlock</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTSettingSensorsTemperatureOffset.h@T@ESTSettingSensorsTemperatureOffsetCompletionBlock">ESTSettingSensorsTemperatureOffsetCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTSettingShakeToConnectEnable.h@T@ESTSettingShakeToConnectEnableCompletionBlock">ESTSettingShakeToConnectEnableCompletionBlock</a>
               </li>
               <li class="nav-group-task">
@@ -1729,6 +1741,100 @@ The default value is NO.</p>
                           <pre class="highlight"><code><span class="k">var</span> <span class="nv">skipsFirmwareUpdateStep</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)ESTLocationBeaconBulkUpdater(im)initWithCBCentralManagerQueue:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithCBCentralManagerQueue:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)ESTLocationBeaconBulkUpdater(im)initWithCBCentralManagerQueue:">-initWithCBCentralManagerQueue:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Designated initializer.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithCBCentralManagerQueue</span><span class="p">:(</span><span class="n">dispatch_queue_t</span><span class="p">)</span><span class="nv">queue</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="nf">init</span><span class="o">!</span><span class="p">(</span><span class="n">cbCentralManagerQueue</span> <span class="nv">queue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>queue</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A queue used for dispatching events of a <code>CBCentralManager</code> instance used for device discovery.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Initialized object.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)ESTLocationBeaconBulkUpdater(im)init"></a>
+                    <a name="//apple_ref/objc/Method/-init" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)ESTLocationBeaconBulkUpdater(im)init">-init</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Convenience initializer.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="n">init</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">convenience</span> <span class="nf">init</span><span class="o">!</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Initialized object.</p>
+
                       </div>
                     </section>
                   </div>
@@ -2181,7 +2287,7 @@ Note that, if update for a certain device has already started it might not be ca
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-12-18)</p>
+      <p>&copy; 2019 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2019-03-21)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

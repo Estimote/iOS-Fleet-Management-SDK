@@ -16,8 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  Type of the device marked on enclosure.
  */
-typedef NS_ENUM(NSInteger, ESTNearableType)
-{
+typedef NS_ENUM(NSInteger, ESTNearableType) {
     ESTNearableTypeUnknown = 0,
     ESTNearableTypeDog,
     ESTNearableTypeCar,
@@ -35,8 +34,7 @@ typedef NS_ENUM(NSInteger, ESTNearableType)
 /**
  *  Physical orientation of the device in 3D space.
  */
-typedef NS_ENUM(NSInteger, ESTNearableOrientation)
-{
+typedef NS_ENUM(NSInteger, ESTNearableOrientation) {
     ESTNearableOrientationUnknown = 0,
     ESTNearableOrientationHorizontal,
     ESTNearableOrientationHorizontalUpsideDown,
@@ -49,8 +47,7 @@ typedef NS_ENUM(NSInteger, ESTNearableOrientation)
 /**
  *  Proximity zone related to distance from the device.
  */
-typedef NS_ENUM(NSInteger, ESTNearableZone)
-{
+typedef NS_ENUM(NSInteger, ESTNearableZone) {
     ESTNearableZoneUnknown = 0,
     ESTNearableZoneImmediate,
     ESTNearableZoneNear,
@@ -60,8 +57,7 @@ typedef NS_ENUM(NSInteger, ESTNearableZone)
 /**
  *  Type of firmware running on the device.
  */
-typedef NS_ENUM(NSInteger, ESTNearableFirmwareState)
-{
+typedef NS_ENUM(NSInteger, ESTNearableFirmwareState) {
     ESTNearableFirmwareStateBoot = 0,
     ESTNearableFirmwareStateApp
 };
@@ -70,23 +66,22 @@ typedef NS_ENUM(NSInteger, ESTNearableFirmwareState)
  *  Describes nearable broadcasting mode.
  */
 
-typedef NS_ENUM(char, ESTNearableBroadcastingScheme)
-{
+typedef NS_ENUM(char, ESTNearableBroadcastingScheme) {
     /**
      *  Unkown broadcasting scheme.
      */
     ESTNearableBroadcastingSchemeUnknown = -1,
-    
+
     /**
      *  Connectable and non-connectable sticker’s packets mixed with iBeacon packet.
      */
     ESTNearableBroadcastingSchemeNearable,
-    
+
     /**
      *  Connectable sticker’s packets mixed with non-connectable iBeacon packet.
      */
     ESTNearableBroadcastingSchemeIBeacon,
-    
+
     /**
      *  Connectable sticker’s packet mixed with non-connectable Eddystone-URL packet.
      */

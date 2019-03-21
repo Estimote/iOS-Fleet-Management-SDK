@@ -182,6 +182,21 @@ typedef NS_ENUM(NSInteger, ESTBulkUpdaterDeviceUpdateStatus)
 @property (nonatomic, readwrite) BOOL skipsFirmwareUpdateStep;
 
 /**
+ * Designated initializer.
+ *
+ * @param queue A queue used for dispatching events of a `CBCentralManager` instance used for device discovery.
+ * @return Initialized object.
+ */
+- (instancetype)initWithCBCentralManagerQueue:(dispatch_queue_t)queue NS_DESIGNATED_INITIALIZER;
+
+/**
+ * Convenience initializer.
+ *
+ * @return Initialized object.
+ */
+- (instancetype)init;
+
+/**
  *  Starts `ESTLocationBeaconBulkUpdater` with current pending settings from Estimote Cloud.
  */
 - (void)start;

@@ -7,7 +7,7 @@
 //  |______|___/\__|_|_| |_| |_|\___/ \__\___| |_____/|_____/|_|\_\
 //
 //
-//  Version: 4.27.0
+//  Version: 4.28.0
 //  Copyright (c) 2016 Estimote. All rights reserved.
 
 /**
@@ -259,11 +259,13 @@
 #import "ESTSettingSensorsAmbientLight.h"
 #import "ESTSettingSensorsMotionNotificationEnable.h"
 #import "ESTSettingSensorsTemperature.h"
+#import "ESTSettingSensorsTemperatureOffset.h"
 #import "ESTSettingSensorsPressure.h"
 
 #import "ESTBeaconOperationSensorsAmbientLight.h"
 #import "ESTBeaconOperationSensorsMotionNotificationEnable.h"
 #import "ESTBeaconOperationSensorsTemperature.h"
+#import "ESTBeaconOperationSensorsTemperatureOffset.h"
 #import "ESTBeaconOperationSensorsPressure.h"
 
 #import "ESTNotificationMotion.h"

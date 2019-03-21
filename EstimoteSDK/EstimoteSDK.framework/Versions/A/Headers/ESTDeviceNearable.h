@@ -34,7 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 /**
- *  ESTDeviceNearable represents Nearable device. It allows to to establish
+ *  ESTDeviceNearable represents Nearable device. It allows to establish
  *  connection to the device and change its settings.
  *
  *  Object of this class is returned as a result of ESTUtilityManager scanning.

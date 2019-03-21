@@ -242,6 +242,9 @@
                 <a class="nav-group-task-link" href="../Classes/ESTBeaconOperationSensorsTemperature.html">ESTBeaconOperationSensorsTemperature</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ESTBeaconOperationSensorsTemperatureOffset.html">ESTBeaconOperationSensorsTemperatureOffset</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ESTBeaconOperationShakeToConnectEnable.html">ESTBeaconOperationShakeToConnectEnable</a>
               </li>
               <li class="nav-group-task">
@@ -809,6 +812,9 @@
                 <a class="nav-group-task-link" href="../Classes/ESTSettingSensorsTemperature.html">ESTSettingSensorsTemperature</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ESTSettingSensorsTemperatureOffset.html">ESTSettingSensorsTemperatureOffset</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ESTSettingShakeToConnectEnable.html">ESTSettingShakeToConnectEnable</a>
               </li>
               <li class="nav-group-task">
@@ -1176,6 +1182,9 @@
                 <a class="nav-group-task-link" href="../Enums/ESTSettingPowerScheduledAdvertisingPeriodError.html">ESTSettingPowerScheduledAdvertisingPeriodError</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/ESTSettingSensorsTemperatureOffsetError.html">ESTSettingSensorsTemperatureOffsetError</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums.html#/c:@E@ESTSettingStorageType">ESTSettingStorageType</a>
               </li>
               <li class="nav-group-task">
@@ -1502,6 +1511,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTSettingSensorsTemperature.h@T@ESTSettingSensorsTemperatureCompletionBlock">ESTSettingSensorsTemperatureCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTSettingSensorsTemperatureOffset.h@T@ESTSettingSensorsTemperatureOffsetCompletionBlock">ESTSettingSensorsTemperatureOffsetCompletionBlock</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTSettingShakeToConnectEnable.h@T@ESTSettingShakeToConnectEnableCompletionBlock">ESTSettingShakeToConnectEnableCompletionBlock</a>
@@ -2070,7 +2082,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Queues UWB ranging command in the Cloud.
+                        <p>Queues start UWB ranging command in the Cloud with a default timeout.
 - warning: The comand is synchronized upon device connection.
 - warning: The comamnd is executed upon device disconnection.</p>
 
@@ -2104,6 +2116,76 @@
                               <td>
                                 <div>
                                   <p>Identifier of Mesh network, that automapping will be triggered for.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Completion block with operation&rsquo;s error. Nil value means success.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)ESTMeshManager(im)cancelAutomappingCommandInCloudForNetworkIdentifier:completion:"></a>
+                    <a name="//apple_ref/objc/Method/-cancelAutomappingCommandInCloudForNetworkIdentifier:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)ESTMeshManager(im)cancelAutomappingCommandInCloudForNetworkIdentifier:completion:">-cancelAutomappingCommandInCloudForNetworkIdentifier:completion:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Queues stop UWB ranging command in the Cloud.
+- warning: The comand is synchronized upon device connection.
+- warning: The comamnd is executed upon device disconnection.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="nf">cancelAutomappingCommandInCloudForNetworkIdentifier</span><span class="p">:(</span><span class="kt">uint32_t</span><span class="p">)</span><span class="nv">networkIdentifier</span>
+                                         <span class="nf">completion</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">ESTCompletionBlock</span><span class="p">)</span>
+                                                        <span class="n">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">cancelAutomappingCommandInCloud</span><span class="p">(</span><span class="n">forNetworkIdentifier</span> <span class="nv">networkIdentifier</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">ESTCompletionBlock</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>networkIdentifier</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Identifier of Mesh network, that automapping will be canceled for.</p>
 
                                 </div>
                               </td>
@@ -2371,7 +2453,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-12-18)</p>
+      <p>&copy; 2019 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2019-03-21)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

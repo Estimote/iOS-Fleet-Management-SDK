@@ -241,6 +241,9 @@
                 <a class="nav-group-task-link" href="Classes/ESTBeaconOperationSensorsTemperature.html">ESTBeaconOperationSensorsTemperature</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/ESTBeaconOperationSensorsTemperatureOffset.html">ESTBeaconOperationSensorsTemperatureOffset</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/ESTBeaconOperationShakeToConnectEnable.html">ESTBeaconOperationShakeToConnectEnable</a>
               </li>
               <li class="nav-group-task">
@@ -808,6 +811,9 @@
                 <a class="nav-group-task-link" href="Classes/ESTSettingSensorsTemperature.html">ESTSettingSensorsTemperature</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/ESTSettingSensorsTemperatureOffset.html">ESTSettingSensorsTemperatureOffset</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/ESTSettingShakeToConnectEnable.html">ESTSettingShakeToConnectEnable</a>
               </li>
               <li class="nav-group-task">
@@ -1175,6 +1181,9 @@
                 <a class="nav-group-task-link" href="Enums/ESTSettingPowerScheduledAdvertisingPeriodError.html">ESTSettingPowerScheduledAdvertisingPeriodError</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/ESTSettingSensorsTemperatureOffsetError.html">ESTSettingSensorsTemperatureOffsetError</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums.html#/c:@E@ESTSettingStorageType">ESTSettingStorageType</a>
               </li>
               <li class="nav-group-task">
@@ -1503,6 +1512,9 @@
                 <a class="nav-group-task-link" href="Type Definitions.html#/c:ESTSettingSensorsTemperature.h@T@ESTSettingSensorsTemperatureCompletionBlock">ESTSettingSensorsTemperatureCompletionBlock</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Type Definitions.html#/c:ESTSettingSensorsTemperatureOffset.h@T@ESTSettingSensorsTemperatureOffsetCompletionBlock">ESTSettingSensorsTemperatureOffsetCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Type Definitions.html#/c:ESTSettingShakeToConnectEnable.h@T@ESTSettingShakeToConnectEnableCompletionBlock">ESTSettingShakeToConnectEnableCompletionBlock</a>
               </li>
               <li class="nav-group-task">
@@ -1546,7 +1558,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTBeaconPower</span> <span class="o">:</span> <span class="kt">char</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTBeaconPower</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -1583,7 +1595,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingOperationType</span> <span class="o">:</span> <span class="n">NSInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingOperationType</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -1615,7 +1627,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingStorageType</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingStorageType</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -1652,7 +1664,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTDeviceSettingsManagerError</span> <span class="o">:</span> <span class="n">NSInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTDeviceSettingsManagerError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -1689,7 +1701,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTDeviceLocationBeaconError</span> <span class="o">:</span> <span class="n">NSInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTDeviceLocationBeaconError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -1726,7 +1738,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTEddystoneProximity</span> <span class="o">:</span> <span class="n">NSInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTEddystoneProximity</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -1763,7 +1775,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTGPIOConfigError</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTGPIOConfigError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                       </div>
@@ -1791,7 +1803,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTGPIOConfig</span> <span class="o">:</span> <span class="kt">uint8_t</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTGPIOConfig</span> <span class="p">{}</span></code></pre>
 
                         </div>
                       </div>
@@ -1823,7 +1835,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTGPIOPort</span> <span class="o">:</span> <span class="n">NSInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTGPIOPort</span> <span class="p">{}</span></code></pre>
 
                         </div>
                       </div>
@@ -1855,7 +1867,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTGPIOPortsDataError</span> <span class="o">:</span> <span class="n">NSInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTGPIOPortsDataError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -1888,7 +1900,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTGPIOPortValue</span> <span class="o">:</span> <span class="n">NSInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTGPIOPortValue</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -1925,7 +1937,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTGenericAdvertiserID</span> <span class="o">:</span> <span class="n">NSInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTGenericAdvertiserID</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -1962,7 +1974,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTLocationBeaconBulkUpdaterError</span> <span class="o">:</span> <span class="n">NSInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTLocationBeaconBulkUpdaterError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -1995,7 +2007,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTBulkUpdaterStatus</span> <span class="o">:</span> <span class="n">NSInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTBulkUpdaterStatus</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -2028,7 +2040,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTBulkUpdaterDeviceUpdateStatus</span> <span class="o">:</span> <span class="n">NSInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTBulkUpdaterDeviceUpdateStatus</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -2065,7 +2077,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTMonitoringManagerError</span> <span class="o">:</span> <span class="n">NSInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTMonitoringManagerError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -2107,7 +2119,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTMonitoringState</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTMonitoringState</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -2150,7 +2162,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTMonitoringV2ManagerError</span> <span class="o">:</span> <span class="n">NSInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTMonitoringV2ManagerError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -2187,7 +2199,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTMonitoringProximity</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTMonitoringProximity</span> <span class="p">{}</span></code></pre>
 
                         </div>
                       </div>
@@ -2218,7 +2230,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTNearableType</span> <span class="o">:</span> <span class="n">NSInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTNearableType</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -2250,7 +2262,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTNearableOrientation</span> <span class="o">:</span> <span class="n">NSInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTNearableOrientation</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -2282,7 +2294,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTNearableZone</span> <span class="o">:</span> <span class="n">NSInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTNearableZone</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -2314,7 +2326,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTNearableFirmwareState</span> <span class="o">:</span> <span class="n">NSInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTNearableFirmwareState</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -2347,7 +2359,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTNearableBroadcastingScheme</span> <span class="o">:</span> <span class="kt">char</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTNearableBroadcastingScheme</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -2384,7 +2396,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTPeripheralTypeUtilityError</span> <span class="o">:</span> <span class="n">NSInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTPeripheralTypeUtilityError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -2417,7 +2429,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTPeripheralTypeUtilityErrorCode</span> <span class="o">:</span> <span class="n">NSInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTPeripheralTypeUtilityErrorCode</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -2450,7 +2462,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTPeripheralFirmwareState</span> <span class="o">:</span> <span class="n">NSInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTPeripheralFirmwareState</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -2487,7 +2499,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTRequestAssignGPSLocationError</span> <span class="o">:</span> <span class="n">NSInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTRequestAssignGPSLocationError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -2524,7 +2536,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTRequestBaseError</span> <span class="o">:</span> <span class="n">NSInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTRequestBaseError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -2561,7 +2573,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTRequestBeaconColorError</span> <span class="o">:</span> <span class="n">NSInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTRequestBeaconColorError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -2598,7 +2610,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTRequestBeaconMacError</span> <span class="o">:</span> <span class="n">NSInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTRequestBeaconMacError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -2635,7 +2647,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTRequestGetBeaconsError</span> <span class="o">:</span> <span class="n">NSInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTRequestGetBeaconsError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -2671,7 +2683,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTRequestGetDevicesTypeMask</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTRequestGetDevicesTypeMask</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -2708,7 +2720,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTRequestGetNearablesError</span> <span class="o">:</span> <span class="n">NSInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTRequestGetNearablesError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -2745,7 +2757,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">EStrequestV3GetFirmwresError</span> <span class="o">:</span> <span class="n">NSInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">EStrequestV3GetFirmwresError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -2782,7 +2794,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingConnectableIntervalError</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingConnectableIntervalError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -2819,7 +2831,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingConnectablePowerError</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingConnectablePowerError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -2856,7 +2868,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingDeviceInfoApplicationVersionError</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingDeviceInfoApplicationVersionError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -2893,7 +2905,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingDeviceInfoBootloaderVersionError</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingDeviceInfoBootloaderVersionError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -2930,7 +2942,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingDeviceInfoHardwareVersionError</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingDeviceInfoHardwareVersionError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -2967,7 +2979,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingEddystoneEIDIntervalError</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingEddystoneEIDIntervalError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -3004,7 +3016,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingEddystoneEIDPowerError</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingEddystoneEIDPowerError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -3037,7 +3049,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTEddystoneEIDPower</span> <span class="o">:</span> <span class="kt">int8_t</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTEddystoneEIDPower</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -3074,7 +3086,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingEddystoneTLMIntervalError</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingEddystoneTLMIntervalError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -3111,7 +3123,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingEddystoneTLMPowerError</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingEddystoneTLMPowerError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -3144,7 +3156,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTEddystoneTLMPower</span> <span class="o">:</span> <span class="kt">int8_t</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTEddystoneTLMPower</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -3181,7 +3193,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingEddystoneUIDInstanceError</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingEddystoneUIDInstanceError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -3218,7 +3230,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingEddystoneUIDIntervalError</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingEddystoneUIDIntervalError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -3255,7 +3267,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingEddystoneUIDNamespaceError</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingEddystoneUIDNamespaceError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -3292,7 +3304,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingEddystoneUIDPowerError</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingEddystoneUIDPowerError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -3325,7 +3337,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTEddystoneUIDPower</span> <span class="o">:</span> <span class="kt">int8_t</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTEddystoneUIDPower</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -3362,7 +3374,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingEddystoneURLNamespaceError</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingEddystoneURLNamespaceError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -3399,7 +3411,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingEddystoneURLIntervalError</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingEddystoneURLIntervalError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -3436,7 +3448,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingEddystoneURLPowerError</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingEddystoneURLPowerError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -3469,7 +3481,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTEddystoneURLPower</span> <span class="o">:</span> <span class="kt">int8_t</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTEddystoneURLPower</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -3506,7 +3518,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingEstimoteLocationIntervalError</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingEstimoteLocationIntervalError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -3543,7 +3555,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingEstimoteLocationPowerError</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingEstimoteLocationPowerError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -3576,7 +3588,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTEstimoteLocationPower</span> <span class="o">:</span> <span class="kt">int8_t</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTEstimoteLocationPower</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -3613,7 +3625,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingEstimoteTLMIntervalError</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingEstimoteTLMIntervalError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -3650,7 +3662,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingEstimoteTLMPowerError</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingEstimoteTLMPowerError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -3683,7 +3695,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTEstimoteTLMPower</span> <span class="o">:</span> <span class="kt">int8_t</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTEstimoteTLMPower</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -3720,7 +3732,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingGenericAdvertiserDataError</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingGenericAdvertiserDataError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -3757,7 +3769,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingGenericAdvertiserEnableError</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingGenericAdvertiserEnableError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -3794,7 +3806,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingGenericAdvertiserIntervalError</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingGenericAdvertiserIntervalError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -3831,7 +3843,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingGenericAdvertiserPowerError</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingGenericAdvertiserPowerError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -3868,7 +3880,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingIBeaconIntervalError</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingIBeaconIntervalError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -3905,7 +3917,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingIBeaconMajorError</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingIBeaconMajorError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -3942,7 +3954,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingIBeaconMinorError</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingIBeaconMinorError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -3979,7 +3991,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingIBeaconPowerError</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingIBeaconPowerError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -4012,7 +4024,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTIBeaconPower</span> <span class="o">:</span> <span class="kt">int8_t</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTIBeaconPower</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -4049,7 +4061,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingIBeaconProximityUUIDError</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingIBeaconProximityUUIDError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -4086,7 +4098,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingNearableBroadcastingSchemeError</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingNearableBroadcastingSchemeError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -4123,7 +4135,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingNearableEddystoneURLError</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingNearableEddystoneURLError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -4160,7 +4172,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingNearableIntervalError</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingNearableIntervalError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -4197,7 +4209,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingNearablePowerError</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingNearablePowerError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -4230,7 +4242,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTNearablePower</span> <span class="o">:</span> <span class="kt">int8_t</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTNearablePower</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -4267,7 +4279,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingOperationStatus</span> <span class="o">:</span> <span class="n">NSInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingOperationStatus</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -4304,7 +4316,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingPowerMotionOnlyBroadcastingDelayError</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingPowerMotionOnlyBroadcastingDelayError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -4341,12 +4353,49 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingPowerScheduledAdvertisingPeriodError</span> <span class="o">:</span> <span class="n">NSUInteger</span> <span class="p">{}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingPowerScheduledAdvertisingPeriodError</span> <span class="p">{}</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">enum</span> <span class="kt">ESTSettingPowerScheduledAdvertisingPeriodError</span> <span class="p">:</span> <span class="kt">UInt</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@E@ESTSettingSensorsTemperatureOffsetError"></a>
+                    <a name="//apple_ref/objc/Enum/ESTSettingSensorsTemperatureOffsetError" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@E@ESTSettingSensorsTemperatureOffsetError">ESTSettingSensorsTemperatureOffsetError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Describes Sensors TemperatureOffset validation error.</p>
+
+                        <a href="Enums/ESTSettingSensorsTemperatureOffsetError.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTSettingSensorsTemperatureOffsetError</span> <span class="p">{}</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">enum</span> <span class="kt">ESTSettingSensorsTemperatureOffsetError</span> <span class="p">:</span> <span class="kt">UInt</span></code></pre>
 
                         </div>
                       </div>
@@ -4361,7 +4410,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-12-18)</p>
+      <p>&copy; 2019 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2019-03-21)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

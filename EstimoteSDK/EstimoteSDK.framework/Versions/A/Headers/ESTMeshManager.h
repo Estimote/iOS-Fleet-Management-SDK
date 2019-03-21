@@ -159,7 +159,7 @@ typedef NS_ENUM(NSInteger, ESTMeshManagerError) {
 - (void)stopConfirmingMeshSettings;
 
 /**
- Queues UWB ranging command in the Cloud.
+ Queues start UWB ranging command in the Cloud with a default timeout.
  @warning The comand is synchronized upon device connection.
  @warning The comamnd is executed upon device disconnection.
 
@@ -167,6 +167,16 @@ typedef NS_ENUM(NSInteger, ESTMeshManagerError) {
  @param completion Completion block with operation's error. Nil value means success.
  */
 - (void)queueAutomappingCommandInCloudForNetworkIdentifier:(uint32_t)networkIdentifier completion:(ESTCompletionBlock)completion;
+
+/**
+ Queues stop UWB ranging command in the Cloud.
+ @warning The comand is synchronized upon device connection.
+ @warning The comamnd is executed upon device disconnection.
+ 
+ @param networkIdentifier Identifier of Mesh network, that automapping will be canceled for.
+ @param completion Completion block with operation's error. Nil value means success.
+ */
+- (void)cancelAutomappingCommandInCloudForNetworkIdentifier:(uint32_t)networkIdentifier completion:(ESTCompletionBlock)completion;
 
 /**
  Method allows to prepare pending settings for all beacons in the mesh network.

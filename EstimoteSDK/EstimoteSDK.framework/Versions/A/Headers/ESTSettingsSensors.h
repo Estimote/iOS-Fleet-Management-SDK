@@ -15,6 +15,7 @@
 @class ESTSettingSensorsAmbientLight;
 @class ESTSettingSensorsMotionNotificationEnable;
 @class ESTSettingSensorsTemperature;
+@class ESTSettingSensorsTemperatureOffset;
 @class ESTSettingSensorsPressure;
 
 NS_ASSUME_NONNULL_BEGIN
@@ -34,6 +35,15 @@ NS_ASSUME_NONNULL_BEGIN
  *  Ambient temperature setting.
  */
 @property (nonatomic, strong, readonly) ESTSettingSensorsTemperature *temperature;
+
+/**
+ *  Ambient temperature offset setting.
+ *
+ *  You can use this setting to calibrate the beacon's temperature sensor.
+ *
+ *  For example, if you measure that the sensor in the beacon is off by 1.2 degree C (shows 21.2 instead of 20.0), set the temperature offset to -1.2.
+ */
+@property (nonatomic, strong, readonly) ESTSettingSensorsTemperatureOffset *temperatureOffset;
 
 /**
  *  Atmospheric pressure setting.
