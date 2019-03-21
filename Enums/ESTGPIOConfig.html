@@ -242,6 +242,9 @@
                 <a class="nav-group-task-link" href="../Classes/ESTBeaconOperationSensorsTemperature.html">ESTBeaconOperationSensorsTemperature</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ESTBeaconOperationSensorsTemperatureOffset.html">ESTBeaconOperationSensorsTemperatureOffset</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ESTBeaconOperationShakeToConnectEnable.html">ESTBeaconOperationShakeToConnectEnable</a>
               </li>
               <li class="nav-group-task">
@@ -809,6 +812,9 @@
                 <a class="nav-group-task-link" href="../Classes/ESTSettingSensorsTemperature.html">ESTSettingSensorsTemperature</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ESTSettingSensorsTemperatureOffset.html">ESTSettingSensorsTemperatureOffset</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ESTSettingShakeToConnectEnable.html">ESTSettingShakeToConnectEnable</a>
               </li>
               <li class="nav-group-task">
@@ -1176,6 +1182,9 @@
                 <a class="nav-group-task-link" href="../Enums/ESTSettingPowerScheduledAdvertisingPeriodError.html">ESTSettingPowerScheduledAdvertisingPeriodError</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/ESTSettingSensorsTemperatureOffsetError.html">ESTSettingSensorsTemperatureOffsetError</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums.html#/c:@E@ESTSettingStorageType">ESTSettingStorageType</a>
               </li>
               <li class="nav-group-task">
@@ -1504,6 +1513,9 @@
                 <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTSettingSensorsTemperature.h@T@ESTSettingSensorsTemperatureCompletionBlock">ESTSettingSensorsTemperatureCompletionBlock</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTSettingSensorsTemperatureOffset.h@T@ESTSettingSensorsTemperatureOffsetCompletionBlock">ESTSettingSensorsTemperatureOffsetCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTSettingShakeToConnectEnable.h@T@ESTSettingShakeToConnectEnableCompletionBlock">ESTSettingShakeToConnectEnableCompletionBlock</a>
               </li>
               <li class="nav-group-task">
@@ -1520,7 +1532,7 @@
             <h1>ESTGPIOConfig</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTGPIOConfig</span> <span class="o">:</span> <span class="kt">uint8_t</span> <span class="p">{}</span></code></pre>
+                  <pre class="highlight"><code><span class="k">enum</span> <span class="n">ESTGPIOConfig</span> <span class="p">{}</span></code></pre>
 
                 </div>
               </div>
@@ -1553,7 +1565,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="n">ESTGPIOConfigInputNoPull</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+                          <pre class="highlight"><code><span class="n">ESTGPIOConfigInputNoPull</span> <span class="o">=</span> <span class="mh">0x00</span></code></pre>
 
                         </div>
                       </div>
@@ -1580,7 +1592,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="n">ESTGPIOConfigInputPullDown</span> <span class="o">=</span> <span class="mi">1</span></code></pre>
+                          <pre class="highlight"><code><span class="n">ESTGPIOConfigInputPullDown</span> <span class="o">=</span> <span class="mh">0x01</span></code></pre>
 
                         </div>
                       </div>
@@ -1607,7 +1619,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="n">ESTGPIOConfigInputPullUp</span> <span class="o">=</span> <span class="mi">2</span></code></pre>
+                          <pre class="highlight"><code><span class="n">ESTGPIOConfigInputPullUp</span> <span class="o">=</span> <span class="mh">0x02</span></code></pre>
 
                         </div>
                       </div>
@@ -1634,7 +1646,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="n">ESTGPIOConfigOutput</span> <span class="o">=</span> <span class="mi">3</span></code></pre>
+                          <pre class="highlight"><code><span class="n">ESTGPIOConfigOutput</span> <span class="o">=</span> <span class="mh">0x03</span></code></pre>
 
                         </div>
                       </div>
@@ -1662,7 +1674,7 @@ and Port 1 turns to Tx (Transmitter).</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="n">ESTGPIOConfigUART</span> <span class="o">=</span> <span class="mi">4</span></code></pre>
+                          <pre class="highlight"><code><span class="n">ESTGPIOConfigUART</span> <span class="o">=</span> <span class="mh">0x04</span></code></pre>
 
                         </div>
                       </div>
@@ -1677,7 +1689,7 @@ and Port 1 turns to Tx (Transmitter).</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-12-18)</p>
+      <p>&copy; 2019 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2019-03-21)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

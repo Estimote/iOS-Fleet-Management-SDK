@@ -241,6 +241,9 @@
                 <a class="nav-group-task-link" href="Classes/ESTBeaconOperationSensorsTemperature.html">ESTBeaconOperationSensorsTemperature</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/ESTBeaconOperationSensorsTemperatureOffset.html">ESTBeaconOperationSensorsTemperatureOffset</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/ESTBeaconOperationShakeToConnectEnable.html">ESTBeaconOperationShakeToConnectEnable</a>
               </li>
               <li class="nav-group-task">
@@ -808,6 +811,9 @@
                 <a class="nav-group-task-link" href="Classes/ESTSettingSensorsTemperature.html">ESTSettingSensorsTemperature</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/ESTSettingSensorsTemperatureOffset.html">ESTSettingSensorsTemperatureOffset</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/ESTSettingShakeToConnectEnable.html">ESTSettingShakeToConnectEnable</a>
               </li>
               <li class="nav-group-task">
@@ -1175,6 +1181,9 @@
                 <a class="nav-group-task-link" href="Enums/ESTSettingPowerScheduledAdvertisingPeriodError.html">ESTSettingPowerScheduledAdvertisingPeriodError</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/ESTSettingSensorsTemperatureOffsetError.html">ESTSettingSensorsTemperatureOffsetError</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums.html#/c:@E@ESTSettingStorageType">ESTSettingStorageType</a>
               </li>
               <li class="nav-group-task">
@@ -1501,6 +1510,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Type Definitions.html#/c:ESTSettingSensorsTemperature.h@T@ESTSettingSensorsTemperatureCompletionBlock">ESTSettingSensorsTemperatureCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Type Definitions.html#/c:ESTSettingSensorsTemperatureOffset.h@T@ESTSettingSensorsTemperatureOffsetCompletionBlock">ESTSettingSensorsTemperatureOffsetCompletionBlock</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Type Definitions.html#/c:ESTSettingShakeToConnectEnable.h@T@ESTSettingShakeToConnectEnableCompletionBlock">ESTSettingShakeToConnectEnableCompletionBlock</a>
@@ -3937,6 +3949,44 @@ for Sensors MotionNotificationEnable (AKA MotionDetectionEnable) setting of a de
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(cs)ESTBeaconOperationSensorsTemperatureOffset"></a>
+                    <a name="//apple_ref/objc/Class/ESTBeaconOperationSensorsTemperatureOffset" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)ESTBeaconOperationSensorsTemperatureOffset">ESTBeaconOperationSensorsTemperatureOffset</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>ESTBeaconOperationSensorsTemperatureOffset allows to create read/write operations for Sensors TemperatureOffset setting of a device.</p>
+
+                        <a href="Classes/ESTBeaconOperationSensorsTemperatureOffset.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTBeaconOperationSensorsTemperatureOffset</span>
+    <span class="p">:</span> <span class="nc"><a href="Classes/ESTSettingOperation.html">ESTSettingOperation</a></span> <span class="o">&lt;</span><span class="n"><a href="Protocols/ESTBeaconOperationProtocol.html">ESTBeaconOperationProtocol</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">ESTBeaconOperationSensorsTemperatureOffset</span> <span class="p">:</span> <span class="kt"><a href="Classes/ESTSettingOperation.html">ESTSettingOperation</a></span><span class="p">,</span> <span class="kt"><a href="Protocols/ESTBeaconOperationProtocol.html">ESTBeaconOperationProtocol</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(cs)ESTBeaconOperationShakeToConnectEnable"></a>
                     <a name="//apple_ref/objc/Class/ESTBeaconOperationShakeToConnectEnable" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)ESTBeaconOperationShakeToConnectEnable">ESTBeaconOperationShakeToConnectEnable</a>
@@ -4976,7 +5026,7 @@ beacon or nearable device including status, settings and pending settings.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>ESTDeviceNearable represents Nearable device. It allows to to establish
+                        <p>ESTDeviceNearable represents Nearable device. It allows to establish
   connection to the device and change its settings.</p>
 
 <p>Object of this class is returned as a result of ESTUtilityManager scanning.
@@ -11109,6 +11159,47 @@ set of methods required to create read and write operations.</p>
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:objc(cs)ESTSettingSensorsTemperatureOffset"></a>
+                    <a name="//apple_ref/objc/Class/ESTSettingSensorsTemperatureOffset" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)ESTSettingSensorsTemperatureOffset">ESTSettingSensorsTemperatureOffset</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>ESTSettingSensorsTemperatureOffset represents Sensors TemperatureOffset value.</p>
+
+<p>You can use this setting to calibrate the beacon&rsquo;s temperature sensor.</p>
+
+<p>For example, if you measure that the sensor in the beacon is off by 1.2 degree C (shows 21.2 instead of 20.0), set the temperature offset to -1.2.</p>
+
+                        <a href="Classes/ESTSettingSensorsTemperatureOffset.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTSettingSensorsTemperatureOffset</span> <span class="p">:</span> <span class="nc"><a href="Classes/ESTSettingReadWrite.html">ESTSettingReadWrite</a></span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">ESTSettingSensorsTemperatureOffset</span> <span class="p">:</span> <span class="kt"><a href="Classes/ESTSettingReadWrite.html">ESTSettingReadWrite</a></span><span class="p">,</span> <span class="kt">NSCopying</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:objc(cs)ESTSettingShakeToConnectEnable"></a>
                     <a name="//apple_ref/objc/Class/ESTSettingShakeToConnectEnable" class="dashAnchor"></a>
                     <a class="token" href="#/c:objc(cs)ESTSettingShakeToConnectEnable">ESTSettingShakeToConnectEnable</a>
@@ -12534,7 +12625,7 @@ allows to discover CoreBluetooth based representation of Estimote Beacon devices
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2017 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2017-12-18)</p>
+      <p>&copy; 2019 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2019-03-21)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
