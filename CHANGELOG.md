@@ -1,12 +1,20 @@
 ## 4.28.0 (March 21, 2019)
 
 Features:
-
 - Added "TemperatureOffset" setting.
 
   You can use this setting to calibrate the beacon's temperature sensor.
 
   For example, if you measure that the sensor in the beacon is off by 1.2 degree C (shows 21.2 instead of 20.0), set the temperature offset to -1.2.
+
+## 4.27.0 (December 18, 2017)
+
+Features:
+-  Some classes have new initializers with queue for dispatching events of a `CBCentralManager`, see: `ESTDeviceManager`, `ESTMeshManager`.
+- `ESTDeviceManager` has a new delegate method returning error for device discovery failure (see: `- (void)deviceManager:(ESTDeviceManager *)manager didFailDiscoveryWithError:(NSError *)error;`. Previous callback is deprecated since 4.27.0).
+
+Bugfixes:
+- Issue with overwriting generic advertisers' indexes is a thing of the past.
 
 ## 4.26.3 (November 13, 2017)
 
@@ -69,7 +77,7 @@ Bugfixes:
 
  Features:
  - ESTMeshManager is now supporting triggering scanning for nearables within Mesh network and generating scan report.
- - ESTDeviceLocationBeacon has a new member (`ESTMeshScanReportsManager`) responsible for reading nearables scan reports from Mesh network.		
+ - ESTDeviceLocationBeacon has a new member (`ESTMeshScanReportsManager`) responsible for reading nearables scan reports from Mesh network.
  - Added request wrapper for delete pending settings.
 
 ## 4.24.0 (September 26, 2017)
