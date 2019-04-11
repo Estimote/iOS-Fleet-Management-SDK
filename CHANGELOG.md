@@ -1,3 +1,8 @@
+## 4.29.0 (Apirl 4, 2019)
+
+### Renaming!
+Starting with version 4.29.0 this SDK will be named `Estimote FleetManagement SDK`, but don't worry - no API changes!
+We've updated the name of the SDK to better reflect its purpose.
 ## 4.28.0 (March 21, 2019)
 
 Features:
@@ -12,9 +17,6 @@ Features:
 Features:
 -  Some classes have new initializers with queue for dispatching events of a `CBCentralManager`, see: `ESTDeviceManager`, `ESTMeshManager`.
 - `ESTDeviceManager` has a new delegate method returning error for device discovery failure (see: `- (void)deviceManager:(ESTDeviceManager *)manager didFailDiscoveryWithError:(NSError *)error;`. Previous callback is deprecated since 4.27.0).
-
-Bugfixes:
-- Issue with overwriting generic advertisers' indexes is a thing of the past.
 
 ## 4.26.3 (November 13, 2017)
 
