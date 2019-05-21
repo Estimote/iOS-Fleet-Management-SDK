@@ -31,7 +31,7 @@
 
 ## Introduction
 
-This iOS SDK can be used to update the settings of multiple Estimote beacons at once. You no longer need to connect to each beacon individually. Instead, you use Estimote Cloud to queue ‘pending settings’ on your beacons. Then, your iOS app equipped with this SDK ( see [Bulk Updater](#bulk-updater) section) can propagate those settings the moment it encounters the beacons. This also means that, once you deploy the beacons, users of your app can propagate the settings by simply being around the beacons.
+This iOS SDK can be used to update the settings of multiple Estimote beacons at once. You no longer need to connect to each beacon individually. Instead, you use Estimote Cloud to queue ‘pending settings’ on your beacons. Then, your iOS app equipped with this SDK (see [Bulk Updater](#bulk-updater) section) can propagate those settings the moment it encounters the beacons. This also means that, once you deploy the beacons, users of your app can propagate the settings by simply being around the beacons.
 
 If you simply need to change the settings (or apply ‘pending settings’) of the nearby Estimote beacons, get [Estimote iOS app](https://itunes.apple.com/us/app/estimote/id686915066?mt=8). For a single beacon or a few of them, this will be the fastest method.
 
