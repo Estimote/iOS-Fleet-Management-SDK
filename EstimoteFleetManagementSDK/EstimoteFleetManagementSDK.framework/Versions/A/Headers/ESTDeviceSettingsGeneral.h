@@ -1,9 +1,11 @@
-//  FleetManagementSDK
+//  Estimote Fleet Management SDK
 //  Copyright © 2015 Estimote. All rights reserved.
 
 #import "ESTBaseVO.h"
 
 @class ESTDeviceSchedule;
+@class ESTNDEFRecord;
+@class ESTDeviceEstimoteSecureMonitoring;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -73,6 +75,16 @@ NS_ASSUME_NONNULL_BEGIN
  *  Vector used for magnetometer calibration.
  */
 @property (nonatomic, strong, readonly) NSArray <NSNumber *>*magnetometerCalibrationData;
+
+/**
+ Custom NFC records.
+ */
+@property (nonatomic, strong, readonly) NSArray<ESTNDEFRecord *> *nfcRecords;
+
+/**
+ Estimote Secure Monitoring settings group value object.
+ */
+@property (nonatomic, strong, readonly) ESTDeviceEstimoteSecureMonitoring *estimoteSecureMonitoring;
 
 /**
  *  Designated initializer.

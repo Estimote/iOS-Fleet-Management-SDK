@@ -1,13 +1,12 @@
-//  FleetManagementSDK
+//  Estimote Fleet Management SDK
 //  Copyright © 2015 Estimote. All rights reserved.
 
 #import "ESTBaseVO.h"
 #import "ESTDefinitions.h"
 
-@class ESTDeviceShadow, ESTDeviceSettings, ESTDeviceStatusReport;
+@class ESTDeviceShadow, ESTDeviceSettings, ESTDeviceStatusReport, ESTDeviceDetailsMeta;
 
 NS_ASSUME_NONNULL_BEGIN
-
 
 /**
  *  This Value Object represents complete information about particular
@@ -55,7 +54,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) ESTDeviceSettings *settings;
 
 /**
- *  Object containing all pending settings of the device applied from both 
+ *  Object containing all pending settings of the device applied from both
  *  Estimote Cloud and SDK.
  */
 @property (nonatomic, strong, readonly) ESTDeviceSettings *pendingSettings;
@@ -66,6 +65,15 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) ESTDeviceStatusReport *statusReport;
 
 /**
+ *  Metadata returned by Estimote Cloud together with this device's details JSON.
+ *  Nil if metadata wasn't present in the parsed response.
+ */
+@property (nonatomic, strong, readonly, nullable) ESTDeviceDetailsMeta *meta;
+
+- (instancetype)init NS_UNAVAILABLE;
++ (instancetype)new NS_UNAVAILABLE;
+
+/**
  *  Method allows to initialize value object with data
  *  coming from Estimote Cloud request ESTRequestGetDeviceDetails.
  *
@@ -73,7 +81,16 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @return Initialized object.
  */
-- (instancetype)initWithCloudDictionary:(NSDictionary *)dictionary;
+- (instancetype)initWithCloudDictionary:(NSDictionary *) dictionary DEPRECATED_MSG_ATTRIBUTE("Use initWithDataDictionary:metaDictionary;");
+
+/**
+ Designated initializer.
+
+ @param dataDictionary Dictionary stored usually under "data" key in response returned by Estimote Cloud.
+ @param metaDictionary Metadata stored usually under "meta" key in response returned by Estimote Cloud.
+ @return Initialized value object of device's details.
+ */
+- (instancetype)initWithDataDictionary:(NSDictionary *)dataDictionary metaDictionary:(NSDictionary *)metaDictionary NS_DESIGNATED_INITIALIZER;
 
 @end
 

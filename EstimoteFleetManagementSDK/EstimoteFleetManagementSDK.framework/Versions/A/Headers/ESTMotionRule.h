@@ -1,4 +1,4 @@
-//  FleetManagementSDK
+//  Estimote Fleet Management SDK
 //  Copyright (c) 2015 Estimote. All rights reserved.
 
 #import "ESTNearableRule.h"

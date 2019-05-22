@@ -1,7 +1,4 @@
-# Estimote iOS Fleet Management SDK
-
-
->Important note: we changed naming of this SDK to Estimote Fleet Management SDK so it reflects better its purpose.
+# Estimote SDK for Apple iOS
 
 ## Table of Contents
 
@@ -31,7 +28,7 @@
 
 ## Introduction
 
-This iOS SDK can be used to update the settings of multiple Estimote beacons at once. You no longer need to connect to each beacon individually. Instead, you use Estimote Cloud to queue ‘pending settings’ on your beacons. Then, your iOS app equipped with this SDK (see [Bulk Updater](#bulk-updater) section) can propagate those settings the moment it encounters the beacons. This also means that, once you deploy the beacons, users of your app can propagate the settings by simply being around the beacons.
+This iOS SDK can be used to update the settings of multiple Estimote beacons at once. You no longer need to connect to each beacon individually. Instead, you use Estimote Cloud to queue ‘pending settings’ on your beacons. Then, your iOS app equipped with this SDK ( see [Bulk Updater](#bulk-updater) section) can propagate those settings the moment it encounters the beacons. This also means that, once you deploy the beacons, users of your app can propagate the settings by simply being around the beacons.
 
 If you simply need to change the settings (or apply ‘pending settings’) of the nearby Estimote beacons, get [Estimote iOS app](https://itunes.apple.com/us/app/estimote/id686915066?mt=8). For a single beacon or a few of them, this will be the fastest method.
 
@@ -45,22 +42,22 @@ To learn more about this iOS SDK, review the [SDK documentation](http://estimote
 
 ### CocoaPods 
 [CocoaPods](https://cocoapods.org/) is an easy way to add external libraries. To use it to fetch Estimote SDK:
-1. Add `pod 'EstimoteFleetManagementSDK'` to your Podfile
+1. Add `pod 'EstimoteSDK'` to your Podfile
 1. Run `pod install --repo-update`
-1. For Swift project: you will need a *bridging header*, so just add a new file with Objective-C, confirm you want to a create a bridging header and just remove the not needed Objective-C file. In the bridging header, add: `#import <EstimoteFleetManagementSDK/EstimoteFleetManagementSDK.h>`
-For Objective-c project: add to your code `#import <EstimoteFleetManagementSDK/EstimoteFleetManagementSDK.h>`
+1. For Swift project: you will need a *bridging header*, so just add a new file with Objective-C, confirm you want to a create a bridging header and just remove the not needed Objective-C file. In the bridging header, add: `#import <EstimoteSDK/EstimoteSDK.h>`
+For Objective-c project: add to your code `#import <EstimoteSDK/EstimoteSDK.h>`
 1. You're ready to rock!
 
 ### Manual
-Alternatively, include a single *EstimoteFleetManagementSDK.framework* file in your project to get started:
+Alternatively, include a single *EstimoteSDK.framework* file in your project to get started:
 
-1. Drag and drop *EstimoteFleetManagementSDK.framework* file into your Xcode project. It will automatically show up in your project navigator and will be added to *Linked Frameworks and Libraries* section in project settings.
+1. Drag and drop *EstimoteSDK.framework* file into your Xcode project. It will automatically show up in your project navigator and will be added to *Linked Frameworks and Libraries* section in project settings.
 1. That's it, congratulations and happy hacking!
 
 
 ## Requirements
 
-The SDK - starting with version 4.29.0 - requires iOS 10.0+.
+The SDK requires iOS 7+, as it depends on the CoreLocation's support for iBeacon which was first introduced in iOS 7. 
 
 ## Fleet Management
 

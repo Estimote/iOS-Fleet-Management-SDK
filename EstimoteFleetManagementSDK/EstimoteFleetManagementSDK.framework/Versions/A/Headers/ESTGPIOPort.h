@@ -1,4 +1,4 @@
-//  FleetManagementSDK
+//  Estimote Fleet Management SDK
 //  Copyright © 2015 Estimote. All rights reserved.
 
 /**

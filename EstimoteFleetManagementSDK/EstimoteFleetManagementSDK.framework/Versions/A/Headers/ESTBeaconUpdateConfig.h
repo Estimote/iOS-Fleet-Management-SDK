@@ -1,4 +1,4 @@
-//  FleetManagementSDK
+//  Estimote Fleet Management SDK
 //  Copyright (c) 2015 Estimote. All rights reserved.
 
 //  Config object for |ESBulkUpdater|. It describes what needs to be updated

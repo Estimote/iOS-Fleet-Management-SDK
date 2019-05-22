@@ -1,8 +1,14 @@
+## 4.30.0 (May 22, 2019)
+
+### Features
+- Connecting to a device will synchronize NFC and Estimote Secure Monitoring (ESM) related settings.
+- `ESTDeviceManager` will detect and decrypt ESM enabled devices.
 ## 4.29.0 (Apirl 4, 2019)
 
 ### Renaming!
 Starting with version 4.29.0 this SDK will be named `Estimote FleetManagement SDK`, but don't worry - no API changes!
 We've updated the name of the SDK to better reflect its purpose.
+
 ## 4.28.0 (March 21, 2019)
 
 Features:

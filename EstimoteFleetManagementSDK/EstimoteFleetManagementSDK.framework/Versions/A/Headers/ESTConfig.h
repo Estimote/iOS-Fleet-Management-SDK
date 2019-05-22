@@ -1,4 +1,4 @@
-//  FleetManagementSDK
+//  Estimote Fleet Management SDK
 //  Copyright (c) 2015 Estimote. All rights reserved.
 
 #import <Foundation/Foundation.h>
@@ -43,6 +43,12 @@ NS_ASSUME_NONNULL_BEGIN
  * Checks if App ID and App Token were set.
  */
 + (BOOL)isAuthorized;
+
+/**
+ Conveniece for current framework's version.
+ @return Framework's version.
+ */
++ (NSString *)currentFrameworkVersion;
 
 #pragma mark - Google API Credentials
 

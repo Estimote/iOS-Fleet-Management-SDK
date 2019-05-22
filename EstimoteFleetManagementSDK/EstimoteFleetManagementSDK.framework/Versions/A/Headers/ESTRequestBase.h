@@ -1,4 +1,4 @@
-//  FleetManagementSDK  Copyright (c) 2015 Estimote. All rights reserved.
+//  Estimote Fleet Management SDK  Copyright (c) 2015 Estimote. All rights reserved.
 
 #import <Foundation/Foundation.h>
 

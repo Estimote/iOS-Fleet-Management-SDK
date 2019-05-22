@@ -1,5 +1,5 @@
-//  FleetManagementSDK
-//  Version: 4.29.0
+//  Estimote Fleet Management SDK
+//  Version: 4.30.0
 //  Copyright (c) 2016 Estimote. All rights reserved.
 
 /**

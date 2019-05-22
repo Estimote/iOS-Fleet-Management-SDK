@@ -1,4 +1,4 @@
-//  FleetManagementSDK
+//  Estimote Fleet Management SDK
 //  Copyright (c) 2015 Estimote. All rights reserved.
 
 #import <Foundation/Foundation.h>
@@ -25,8 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * @see ESTDeviceFilterIBeacon, ESTDeviceFilterTypeUtility.
  */
-- (void)deviceManager:(ESTDeviceManager *)manager
-    didDiscoverDevices:(NSArray<ESTDevice *> *)devices;
+- (void)deviceManager:(ESTDeviceManager *)manager didDiscoverDevices:(NSArray<ESTDevice *> *)devices;
 
 /**
  * Tells the delegate that a discovery error occurred.
