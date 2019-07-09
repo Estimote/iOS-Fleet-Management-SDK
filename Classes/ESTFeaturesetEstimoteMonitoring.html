@@ -530,6 +530,9 @@
                 <a class="nav-group-task-link" href="../Classes/ESTRequestCancelPendingSettings.html">ESTRequestCancelPendingSettings</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ESTRequestDeletePendingSettings.html">ESTRequestDeletePendingSettings</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ESTRequestGetBeacons.html">ESTRequestGetBeacons</a>
               </li>
               <li class="nav-group-task">
@@ -1062,6 +1065,9 @@
                 <a class="nav-group-task-link" href="../Enums/ESTRequestBeaconMacError.html">ESTRequestBeaconMacError</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums.html#/c:@E@ESTRequestDeletePendingSettingsError">ESTRequestDeletePendingSettingsError</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/ESTRequestGetBeaconsError.html">ESTRequestGetBeaconsError</a>
               </li>
               <li class="nav-group-task">
@@ -1265,6 +1271,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTMeshScanReportsManager.h@T@ESTReportScanVOCompletionBlock">ESTReportScanVOCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTRequestDeletePendingSettings.h@T@ESTRequestDeletePendingSettingsBlock">ESTRequestDeletePendingSettingsBlock</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTRequestGetDeviceDetails.h@T@ESTRequestGetDeviceDetailsBlock">ESTRequestGetDeviceDetailsBlock</a>
@@ -1532,12 +1541,13 @@
             <h1>ESTFeaturesetEstimoteMonitoring</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTFeaturesetEstimoteMonitoring</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+                  <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTFeaturesetEstimoteMonitoring</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
 
                 </div>
               </div>
             <p>ESTFeaturesetEstimoteMonitoring encapsulates operations required for Estimote Monitoring&rsquo;s functionality.
-The algorithm relies on Estimote Location being advertised, and this helper tool ensures that 
+The algorithm relies on Estimote Location being advertised, and this helper tool ensures that
 the settings are set properly.</p>
 
           </div>
@@ -1617,10 +1627,10 @@ the settings are set properly.</p>
   prerequisites for Estimote Monitoring and call <code>completion</code> when all are done.</p>
 
 <p>@discussion
-  If all underlying operations succeed, <code>completion</code>&lsquo;s <code>featuresetEnabled</code> tells 
+  If all underlying operations succeed, <code>completion</code>&lsquo;s <code>featuresetEnabled</code> tells
   whether Estimote Monitoring prerequisites are met, <code>errors</code> is nil.</p>
 
-<p>If any of underlying operation fails, <code>completion</code>&rsquo;s <code>featuresetEnabled</code> 
+<p>If any of underlying operation fails, <code>completion</code>&rsquo;s <code>featuresetEnabled</code>
   is set to <code>NO</code>, and <code>errors</code> array contains errors resulting from failed operations.</p>
 
                       </div>
@@ -1773,8 +1783,8 @@ the settings are set properly.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Settings written when executing this featureset. 
-  This method requires passing device identifier, because Generic Advertiser data setting 
+                        <p>Settings written when executing this featureset.
+  This method requires passing device identifier, because Generic Advertiser data setting
   (in particular: its MAC address) depends on the identifier.
   If a nil value is passed, MAC address in Generic Advertiser data setting is set to 6 bytes of 0xFF.</p>
 
@@ -1979,7 +1989,7 @@ If a nil value is passed, MAC address in Generic Advertiser data setting is set 
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2019-05-22)</p>
+      <p>&copy; 2019 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2019-07-09)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

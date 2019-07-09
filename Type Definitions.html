@@ -529,6 +529,9 @@
                 <a class="nav-group-task-link" href="Classes/ESTRequestCancelPendingSettings.html">ESTRequestCancelPendingSettings</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/ESTRequestDeletePendingSettings.html">ESTRequestDeletePendingSettings</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/ESTRequestGetBeacons.html">ESTRequestGetBeacons</a>
               </li>
               <li class="nav-group-task">
@@ -1061,6 +1064,9 @@
                 <a class="nav-group-task-link" href="Enums/ESTRequestBeaconMacError.html">ESTRequestBeaconMacError</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums.html#/c:@E@ESTRequestDeletePendingSettingsError">ESTRequestDeletePendingSettingsError</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/ESTRequestGetBeaconsError.html">ESTRequestGetBeaconsError</a>
               </li>
               <li class="nav-group-task">
@@ -1264,6 +1270,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Type Definitions.html#/c:ESTMeshScanReportsManager.h@T@ESTReportScanVOCompletionBlock">ESTReportScanVOCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Type Definitions.html#/c:ESTRequestDeletePendingSettings.h@T@ESTRequestDeletePendingSettingsBlock">ESTRequestDeletePendingSettingsBlock</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Type Definitions.html#/c:ESTRequestGetDeviceDetails.h@T@ESTRequestGetDeviceDetailsBlock">ESTRequestGetDeviceDetailsBlock</a>
@@ -1713,6 +1722,76 @@
                               <td>
                                 <div>
                                   <p>current state of all GPIO ports.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:ESTRequestDeletePendingSettings.h@T@ESTRequestDeletePendingSettingsBlock"></a>
+                    <a name="//apple_ref/objc/Type/ESTRequestDeletePendingSettingsBlock" class="dashAnchor"></a>
+                    <a class="token" href="#/c:ESTRequestDeletePendingSettings.h@T@ESTRequestDeletePendingSettingsBlock">ESTRequestDeletePendingSettingsBlock</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Completion block fired when request is complete.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">ESTRequestDeletePendingSettingsBlock</span><span class="p">)(</span>
+    <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">typealias</span> <span class="kt">ESTRequestDeletePendingSettingsBlock</span> <span class="o">=</span> <span class="p">([</span><span class="kt">String</span><span class="p">]?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>devices</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Array of user&rsquo;s devices identifiers, for which Cloud has pending changes.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Error of request. No error means success.</p>
 
                                 </div>
                               </td>
@@ -7697,7 +7776,7 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2019-05-22)</p>
+      <p>&copy; 2019 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2019-07-09)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

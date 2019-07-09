@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>ESTSettingsEddystoneConfigurationService Class Reference</title>
+    <title>ESTRequestDeletePendingSettings Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/objc/Class/ESTSettingsEddystoneConfigurationService" class="dashAnchor"></a>
+    <a name="//apple_ref/objc/Class/ESTRequestDeletePendingSettings" class="dashAnchor"></a>
 
-    <a title="ESTSettingsEddystoneConfigurationService Class Reference"></a>
+    <a title="ESTRequestDeletePendingSettings Class Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -43,7 +43,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">EstimoteFleetManagementSDK Reference</a>
       <img class="carat" src="../img/carat.png" />
-      ESTSettingsEddystoneConfigurationService Class Reference
+      ESTRequestDeletePendingSettings Class Reference
     </p>
 
     <div class="content-wrapper">
@@ -1538,14 +1538,14 @@
 
         <section class="section">
           <div class="section-content">
-            <h1>ESTSettingsEddystoneConfigurationService</h1>
+            <h1>ESTRequestDeletePendingSettings</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTSettingsEddystoneConfigurationService</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTRequestDeletePendingSettings</span> <span class="p">:</span> <span class="nc">ESTRequestPostJSON</span></code></pre>
 
                 </div>
               </div>
-            <p>ESTSettingsEddystoneConfigurationService represents settings group related to Eddystone Configuration Service.</p>
+            <p>ESTRequestDeletePendingSettings allows to delete all pending settings for provided list of devices.</p>
 
           </div>
         </section>
@@ -1557,9 +1557,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)ESTSettingsEddystoneConfigurationService(py)enabled"></a>
-                    <a name="//apple_ref/objc/Property/enabled" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)ESTSettingsEddystoneConfigurationService(py)enabled">enabled</a>
+                    <a name="/c:objc(cs)ESTRequestDeletePendingSettings(py)deviceIdentifiers"></a>
+                    <a name="//apple_ref/objc/Property/deviceIdentifiers" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)ESTRequestDeletePendingSettings(py)deviceIdentifiers">deviceIdentifiers</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1567,20 +1567,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Eddystone Configuration Service enable setting.</p>
+                        <p>Identifiers of a devices for whom pending settings should be removed.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
-    <span class="n"><a href="../Classes/ESTSettingEddystoneConfigurationServiceEnable.html">ESTSettingEddystoneConfigurationServiceEnable</a></span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">enabled</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">deviceIdentifiers</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">enabled</span><span class="p">:</span> <span class="kt"><a href="../Classes/ESTSettingEddystoneConfigurationServiceEnable.html">ESTSettingEddystoneConfigurationServiceEnable</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">deviceIdentifiers</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1590,9 +1590,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)ESTSettingsEddystoneConfigurationService(im)initWithSettingsCollection:"></a>
-                    <a name="//apple_ref/objc/Method/-initWithSettingsCollection:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)ESTSettingsEddystoneConfigurationService(im)initWithSettingsCollection:">-initWithSettingsCollection:</a>
+                    <a name="/c:objc(cs)ESTRequestDeletePendingSettings(im)initWithDeviceIdentifiers:"></a>
+                    <a name="//apple_ref/objc/Method/-initWithDeviceIdentifiers:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)ESTRequestDeletePendingSettings(im)initWithDeviceIdentifiers:">-initWithDeviceIdentifiers:</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1600,20 +1600,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Designated initializer.</p>
+                        <p>Initialize request with device&rsquo;s identifiers.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithSettingsCollection</span><span class="p">:</span>
-    <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/ESTDeviceSettingsCollection.html">ESTDeviceSettingsCollection</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">settingsCollection</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithDeviceIdentifiers</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">deviceIdentifiers</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="nf">init</span><span class="p">(</span><span class="nv">settingsCollection</span><span class="p">:</span> <span class="kt"><a href="../Classes/ESTDeviceSettingsCollection.html">ESTDeviceSettingsCollection</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="nf">init</span><span class="p">(</span><span class="nv">deviceIdentifiers</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">])</span></code></pre>
 
                         </div>
                       </div>
@@ -1624,12 +1624,12 @@
                             <tr>
                               <td>
                                 <code>
-                                <em>settingsCollection</em>
+                                <em>deviceIdentifiers</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>Collection of settings containing sensors related settings.</p>
+                                  <p>Device&rsquo;s identifier for which pending settings will be deleted.</p>
 
                                 </div>
                               </td>
@@ -1639,8 +1639,61 @@
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>Initialized object.</p>
+                        <p>Initialized request.</p>
 
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)ESTRequestDeletePendingSettings(im)sendRequestWithCompletion:"></a>
+                    <a name="//apple_ref/objc/Method/-sendRequestWithCompletion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)ESTRequestDeletePendingSettings(im)sendRequestWithCompletion:">-sendRequestWithCompletion:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Methods allows to send request with completion block invoked as a result.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sendRequestWithCompletion</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type Definitions.html#/c:ESTRequestDeletePendingSettings.h@T@ESTRequestDeletePendingSettingsBlock">ESTRequestDeletePendingSettingsBlock</a></span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">sendRequest</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Type Definitions.html#/c:ESTRequestDeletePendingSettings.h@T@ESTRequestDeletePendingSettingsBlock">ESTRequestDeletePendingSettingsBlock</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Request completion block. No error means request was successful.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
