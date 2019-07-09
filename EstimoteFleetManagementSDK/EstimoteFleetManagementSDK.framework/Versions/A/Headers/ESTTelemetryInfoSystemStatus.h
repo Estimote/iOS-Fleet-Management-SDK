@@ -5,10 +5,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-
 /**
  * This class contains data read from telemetry packet from beacon device.
  */
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @interface ESTTelemetryInfoSystemStatus : ESTTelemetryInfo
 
 /**

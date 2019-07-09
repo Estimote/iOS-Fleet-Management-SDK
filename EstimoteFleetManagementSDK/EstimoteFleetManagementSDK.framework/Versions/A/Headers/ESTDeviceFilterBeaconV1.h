@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @see -[ESTDeviceManager startDeviceDiscoveryWithFilter:].
  */
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @interface ESTDeviceFilterBeaconV1 : NSObject <ESTDeviceFilter>
 
 /**

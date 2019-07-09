@@ -13,21 +13,20 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  Errors occurring for request.
  */
-typedef NS_ENUM(NSInteger, ESTRequestBeaconDetailsError)
-{
+typedef NS_ENUM (NSInteger, ESTRequestBeaconDetailsError) {
     /**
      *  Error returned when Estimote Cloud failed to find details for beacon with provided ID.
      */
     ESTRequestBeaconDetailsErrorDetailsNotAvailable
 };
 
-typedef void(^ESTRequestBeaconDetailsBlock)(ESTBeaconVO * _Nullable beaconVO, NSError * _Nullable error);
+typedef void (^ESTRequestBeaconDetailsBlock)(ESTBeaconVO *_Nullable beaconVO, NSError *_Nullable error);
 
 /**
  *  ESTRequestBeaconDetails is used to fetch details of single beacon device.
  */
 
-__attribute__ ((deprecated(("Starting from SDK 3.6.0 use ESTRequestGetBeaconsDetails class instead."))))
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 3.6.0 Please use ESTRequestGetDeviceDetails instead.")
 @interface ESTRequestBeaconDetails : ESTRequestGetJSON
 
 @property (nonatomic, strong, readonly) NSString *beaconUID;

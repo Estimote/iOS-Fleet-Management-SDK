@@ -10,7 +10,7 @@
  *  Manager sends to Estimote Cloud up to 100 registered analytics events every 20 seconds.
  *  @warning *Important:* works only with iBeacon devices returned by `ESTBeaconManager` and `ESTSecureBeaconManager.
  */
-
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @interface ESTAnalyticsManager : NSObject
 
 + (instancetype)sharedInstance;

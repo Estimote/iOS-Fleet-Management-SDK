@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-
 @interface ESTNearableFirmwareVO : NSObject
 
 @property (nonatomic, strong) NSNumber *firmwareId;

@@ -6,6 +6,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @interface ESTSecureBeaconManager : NSObject
 
 /**
@@ -52,7 +53,6 @@ NS_ASSUME_NONNULL_BEGIN
  * @see -[CLLocationManager requestWhenInUseAuthorization]
  */
 - (void)requestAlwaysAuthorization;
-
 
 #pragma mark CoreLocation
 ///--------------------------------------------------------------------

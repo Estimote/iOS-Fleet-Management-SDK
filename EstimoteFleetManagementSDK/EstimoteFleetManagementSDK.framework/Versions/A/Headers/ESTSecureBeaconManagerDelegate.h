@@ -6,6 +6,7 @@ NS_ASSUME_NONNULL_BEGIN
 @class ESTBeaconManager;
 @class ESTBeacon;
 
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @protocol ESTSecureBeaconManagerDelegate <NSObject>
 
 @optional

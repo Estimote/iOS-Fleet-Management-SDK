@@ -7,11 +7,12 @@
 
 #define ESTLocationBeaconBulkUpdaterErrorDomain @"ESTLocationBeaconBulkUpdaterErrorDomain"
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  *  Defines types of errors that can occur inside the bulk updater mechanis.
  */
-typedef NS_ENUM(NSInteger, ESTLocationBeaconBulkUpdaterError)
-{
+typedef NS_ENUM (NSInteger, ESTLocationBeaconBulkUpdaterError) {
     /**
      *  Device passed as a part of bulk update was not in range.
      */
@@ -29,13 +30,12 @@ typedef NS_ENUM(NSInteger, ESTLocationBeaconBulkUpdaterError)
 /**
  *  Defines the possible statuses of the whole bulk updater mechanism.
  */
-typedef NS_ENUM(NSInteger, ESTBulkUpdaterStatus)
-{
+typedef NS_ENUM (NSInteger, ESTBulkUpdaterStatus) {
     /**
      * Bulk updater is ready to `startWithUpdateConfigurations:`.
      */
     ESTBulkUpdaterStatusIdle = 0,
-    
+
     /**
      *  Bulk updater is performing bulk update actions. Cancel bulk before using `startWithUpdateConfigurations:` again.
      */
@@ -45,38 +45,37 @@ typedef NS_ENUM(NSInteger, ESTBulkUpdaterStatus)
 /**
  *  Possible update statuses of a device contained in `ESTLocationBeaconBulkUpdateConfiguration`.
  */
-typedef NS_ENUM(NSInteger, ESTBulkUpdaterDeviceUpdateStatus)
-{
+typedef NS_ENUM (NSInteger, ESTBulkUpdaterDeviceUpdateStatus) {
     /**
      *  Not able to determine current update status.
      */
     ESTBulkUpdaterDeviceUpdateStatusUnknown,
-    
+
     /**
      *  Device not detected yet. Scanning in progress.
      */
     ESTBulkUpdaterDeviceUpdateStatusScanning,
-    
+
     /**
      *  Device detected. Waiting to connect and update settings.
      */
     ESTBulkUpdaterDeviceUpdateStatusPendingUpdate,
-    
+
     /**
      *  Device is beeing connected to and updated.
      */
     ESTBulkUpdaterDeviceUpdateStatusUpdating,
-    
+
     /**
      *  Device update succeeded.
      */
     ESTBulkUpdaterDeviceUpdateStatusSucceeded,
-    
+
     /**
      *  Device update failed.
      */
     ESTBulkUpdaterDeviceUpdateStatusFailed,
-    
+
     /**
      *  Device out of scanning range.
      */
@@ -132,7 +131,7 @@ typedef NS_ENUM(NSInteger, ESTBulkUpdaterDeviceUpdateStatus)
 @end
 
 /**
- * Class that can be used to perform bulk updates on new generation Estimote beacons. 
+ * Class that can be used to perform bulk updates on new generation Estimote beacons.
  * To start bulk update you need to prepare an array of `ESTLocationBeaconBulkUpdateConfiguration` objects
  * containing a device identifier and an array of `ESTSettingOperation` objects that will be initialized with
  * `ESTSettingReadWrite' subclass objects designed for specific settings.
@@ -167,7 +166,7 @@ typedef NS_ENUM(NSInteger, ESTBulkUpdaterDeviceUpdateStatus)
 
 /**
  *  Flag controlling whether a firmware update step should be skipped during the Bulk Update process.
- *  If YES, then the step is skipped. 
+ *  If YES, then the step is skipped.
  *  If NO, then the step is performed as usual.
  *  The default value is NO.
  */
@@ -260,3 +259,5 @@ typedef NS_ENUM(NSInteger, ESTBulkUpdaterDeviceUpdateStatus)
 - (NSInteger)numberOfFailedUpdates;
 
 @end
+
+NS_ASSUME_NONNULL_END

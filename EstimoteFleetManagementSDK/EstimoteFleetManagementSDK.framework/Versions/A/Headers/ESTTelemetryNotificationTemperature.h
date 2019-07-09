@@ -9,7 +9,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 typedef void (^ESTTelemetryNotificationTemperatureNotificationBlock)(ESTTelemetryInfoTemperature *temperature);
 
-
 /**
  * ESTTelemetryNotificationTemperature class is used to
  * initialize block that will be fired everytime
@@ -18,6 +17,7 @@ typedef void (^ESTTelemetryNotificationTemperatureNotificationBlock)(ESTTelemetr
  * expect ESTTelemetryInfoTemperature object that transmits
  * current temperature readings from beacon.
  */
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @interface ESTTelemetryNotificationTemperature : NSObject <ESTTelemetryNotificationProtocol>
 
 /**

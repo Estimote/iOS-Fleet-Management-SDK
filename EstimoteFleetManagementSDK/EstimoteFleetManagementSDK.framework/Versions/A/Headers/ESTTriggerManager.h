@@ -14,12 +14,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class ESTTriggerManager;
 
-
 /**
  *  The `ESTTriggerManagerDelegate` protocol defines the delegate methods used to receive trigger state change events from an `<ESTTriggerManager>` object. Trigger manager engine allows to introduce higher level of abstraction and let developer focus on the acctual logic their application should follow. Each trigger is defined by set of rules that should be fulfilled to change make trigger state to positive. Change of trigger state is reported using `<[ESTTriggerManagerDelegate triggerManager:triggerChangedState:]>` method of your `<delegate>`. Out of the box trigger manager supports rules related to nearable proximity, motion and orientation, ambient nearable temperature as well as time and date.
  *
  *  In addition you can create your own rule definition related to parameters you are interested in (eg. weather information, GPS postion). To create new rule just create class that inherits from `<ESTRule>` class.
  */
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @protocol ESTTriggerManagerDelegate <NSObject>
 
 @optional
@@ -37,7 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * The `ESTTriggerManager` class defines the interface for defining real life rules based triggers.
  */
-
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @interface ESTTriggerManager : NSObject <ESTTriggerDelegate>
 
 @property (nonatomic, weak) id<ESTTriggerManagerDelegate> _Nullable delegate;

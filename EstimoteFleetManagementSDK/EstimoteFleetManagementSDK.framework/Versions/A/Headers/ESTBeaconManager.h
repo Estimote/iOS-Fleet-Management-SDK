@@ -8,18 +8,18 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-#define ESTIMOTE_PROXIMITY_UUID             [[NSUUID alloc] initWithUUIDString:@"B9407F30-F5F8-466E-AFF9-25556B57FE6D"]
-#define ESTIMOTE_MACBEACON_PROXIMITY_UUID   [[NSUUID alloc] initWithUUIDString:@"08D4A950-80F0-4D42-A14B-D53E063516E6"]
-#define ESTIMOTE_IOSBEACON_PROXIMITY_UUID   [[NSUUID alloc] initWithUUIDString:@"8492E75F-4FD6-469D-B132-043FE94921D8"]
+#define ESTIMOTE_PROXIMITY_UUID           [[NSUUID alloc] initWithUUIDString:@"B9407F30-F5F8-466E-AFF9-25556B57FE6D"]
+#define ESTIMOTE_MACBEACON_PROXIMITY_UUID [[NSUUID alloc] initWithUUIDString:@"08D4A950-80F0-4D42-A14B-D53E063516E6"]
+#define ESTIMOTE_IOSBEACON_PROXIMITY_UUID [[NSUUID alloc] initWithUUIDString:@"8492E75F-4FD6-469D-B132-043FE94921D8"]
 
-#define ESTBeaconManagerErrorDomain @"ESTBeaconManagerErrorDomain"
+#define ESTBeaconManagerErrorDomain       @"ESTBeaconManagerErrorDomain"
 
-typedef NS_ENUM(NSInteger, ESTBeaconManagerError)
-{
+typedef NS_ENUM (NSInteger, ESTBeaconManagerError) {
     ESTBeaconManagerErrorInvalidRegion = 1,
     ESTBeaconManagerErrorLocationServicesUnauthorized
 };
 
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @interface ESTBeaconManager : NSObject
 
 /**
@@ -43,7 +43,6 @@ typedef NS_ENUM(NSInteger, ESTBeaconManagerError)
  */
 @property (nonatomic) NSInteger preventUnknownUpdateCount;
 
-
 /**
  * When set to YES, ranging will skip all the beacons with `proximity` equal to `CLProximityUnknown`.
  */
@@ -60,7 +59,6 @@ typedef NS_ENUM(NSInteger, ESTBeaconManagerError)
  * @param limit number of beacons that should be returned
  */
 - (void)updateRangeLimit:(NSInteger)limit;
-
 
 #pragma mark Advertising as iBeacon
 ///--------------------------------------------------------------------
@@ -129,7 +127,6 @@ typedef NS_ENUM(NSInteger, ESTBeaconManagerError)
  * Checks if the current Location Services authorization is enough to do monitoring (i.e., 'always').
  */
 - (BOOL)isAuthorizedForMonitoring;
-
 
 #pragma mark CoreLocation Based Scanning
 ///--------------------------------------------------------------------

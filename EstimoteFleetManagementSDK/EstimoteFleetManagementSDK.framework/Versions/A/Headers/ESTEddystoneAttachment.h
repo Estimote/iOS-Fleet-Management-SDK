@@ -5,21 +5,21 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-
 /**
  *  ESTEddystoneAttachment class represents attachments from resolving EID.
  */
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @interface ESTEddystoneAttachment : NSObject <NSCopying>
 
 /*
  *  Specifies what kind of attachment this is and how to interpret data. Format is namespace/type.
  */
-@property (nonatomic, readonly) NSString * _Nullable namespacedType;
+@property (nonatomic, readonly) NSString *_Nullable namespacedType;
 
 /**
  *  Opaque data container for client-provided data.
  */
-@property (nonatomic, readonly) NSString * _Nullable data;
+@property (nonatomic, readonly) NSString *_Nullable data;
 
 /**
  *  Initialize object with specified namespacedType and data.

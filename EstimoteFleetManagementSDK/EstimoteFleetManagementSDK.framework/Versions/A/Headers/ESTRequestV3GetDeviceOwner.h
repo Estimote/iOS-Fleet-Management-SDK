@@ -12,11 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param emailAddress Email address of the device's owner.
  *  @param error Request error object. No error means success.
  */
-typedef void(^ESTRequestV3GetDeviceOwnerBlock)(NSString * _Nullable emailAddress, NSError * _Nullable error);
+typedef void (^ESTRequestV3GetDeviceOwnerBlock)(NSString *_Nullable emailAddress, NSError *_Nullable error);
 
 /**
  *  Allows to get email address of device's owner from the Estimote Cloud.
  */
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0. Will be renamed to ESTRequestGetDeviceOwner")
 @interface ESTRequestV3GetDeviceOwner : ESTRequestGetJSON
 
 /**

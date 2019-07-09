@@ -8,12 +8,12 @@
 @class ESTPeripheralNearable;
 @class ESTDeviceSettingsCollection;
 @class ESTDeviceNearable;
-@class ESTNearableVO;
+@class ESTDeviceDetails;
+@class ESTSemverString;
 
-#define ESTNearableSettingsManagerErrorDomain @"ESTNearableSettingsManagerErrorDomain" 
+#define ESTNearableSettingsManagerErrorDomain @"ESTNearableSettingsManagerErrorDomain"
 
-typedef NS_ENUM(NSUInteger, ESTNearableSettingsManagerError)
-{
+typedef NS_ENUM (NSUInteger, ESTNearableSettingsManagerError) {
     /**
      *  Settings synchronization is already in progress for the device.
      */
@@ -30,12 +30,12 @@ typedef NS_ENUM(NSUInteger, ESTNearableSettingsManagerError)
      *  Validation failed for another setting provided in the group.
      */
     ESTNearableSettingsManagerErrorSettingValidationFailed,
-    
+
     /**
      *  Reading setting value from Estimote Cloud failed.
      */
     ESTNearableSettingsManagerErrorSettingCloudReadFailed,
-    
+
     /**
      *  Could not save nearable settings in Cloud.
      */
@@ -43,7 +43,6 @@ typedef NS_ENUM(NSUInteger, ESTNearableSettingsManagerError)
 };
 
 NS_ASSUME_NONNULL_BEGIN
-
 
 /**
  *  ESTNearableSettingsManager allows to manage device settings interaction
@@ -68,10 +67,9 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param operations Nearable Operations to be performed.
  */
-- (void)performOperationsFromArray:(NSArray<id<ESTNearableOperationProtocol>> *)operations;
+- (void)performOperationsFromArray:(NSArray<id<ESTNearableOperationProtocol> > *)operations;
 
 @end
-
 
 @interface ESTNearableSettingsManager (Internal)
 
@@ -92,7 +90,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param firmwareVersion Device firmware version used to ignore unsupported setting operations.
  *  @param completion      Synchronization completion block.
  */
-- (void)synchronizeUsingNearableVO:(ESTNearableVO *)nearableVO forFirmwareVersion:(NSString *)firmwareVersion completion:(void(^)(void))completion;
+- (void)synchronizeUsingNearableVO:(ESTDeviceDetails *)nearableVO forFirmwareVersion:(ESTSemverString *)firmwareVersion completion:(void(^)(NSError *))completion;
 
 @end
 

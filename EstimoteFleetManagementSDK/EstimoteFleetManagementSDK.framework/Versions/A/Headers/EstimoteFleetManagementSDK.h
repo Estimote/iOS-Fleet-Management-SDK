@@ -1,5 +1,5 @@
 //  Estimote Fleet Management SDK
-//  Version: 4.30.0
+//  Version: 4.31.0
 //  Copyright (c) 2016 Estimote. All rights reserved.
 
 /**
@@ -12,10 +12,7 @@
 /**
  *  Utility tools
  */
-#import "ESTUtilityManager.h"
-#import "ESTBluetoothBeacon.h"
 #import "ESTDeviceManager.h"
-#import "ESTDeviceFilterBeaconV1.h"
 #import "ESTDeviceFilterLocationBeacon.h"
 #import "ESTDeviceFilterNearable.h"
 #import "ESTLogger.h"
@@ -23,10 +20,6 @@
 /**
  *  Beacons
  */
-#import "ESTBeacon.h"
-#import "ESTBeaconManager.h"
-#import "ESTSecureBeaconManager.h"
-#import "ESTBeaconConnection.h"
 #import "ESTBeaconDefinitions.h"
 #import "ESTDeviceLocationBeacon.h"
 #import "ESTDeviceNearable.h"
@@ -272,9 +265,6 @@
 /**
  *  Nearables
  */
-#import "ESTNearable.h"
-#import "ESTNearableManager.h"
-#import "ESTSimulatedNearableManager.h"
 #import "ESTNearableDefinitions.h"
 #import "ESTNearableSettingsManager.h"
 
@@ -297,9 +287,77 @@
 /**
  *  Bulk updater
  */
-#import "ESTBulkUpdater.h"
 #import "ESTLocationBeaconBulkUpdater.h"
 #import "ESTLocationBeaconBulkUpdateConfiguration.h"
+
+/**
+ *  Cloud API handling
+ */
+#import "ESTConfig.h"
+#import "ESTRequestV3GetFirmwares.h"
+#import "ESTRequestV3GetDeviceOwner.h"
+#import "ESTRequestGetDeviceDetails.h"
+#import "ESTRequestGetDevices.h"
+#import "ESTRequestDeletePendingSettings.h"
+
+/**
+ *  Cloud value objects
+ */
+#import "ESTBaseVO.h"
+#import "ESTDeviceDetails.h"
+#import "ESTDeviceShadow.h"
+#import "ESTDeviceSettings.h"
+#import "ESTDeviceSettingsGeneral.h"
+#import "ESTDeviceSettingsAdvertiserConnectivity.h"
+#import "ESTDeviceSettingsAdvertiser.h"
+#import "ESTDeviceSettingsAdvertiserIBeacon.h"
+#import "ESTDeviceSettingsAdvertiserEddystoneUID.h"
+#import "ESTDeviceSettingsAdvertiserEddystoneURL.h"
+#import "ESTDeviceSettingsAdvertiserEddystoneTLM.h"
+#import "ESTDeviceSettingsAdvertiserEddystoneEID.h"
+#import "ESTDeviceSettingsAdvertiserEstimoteLocation.h"
+#import "ESTDeviceSettingsAdvertiserEstimoteTLM.h"
+#import "ESTDeviceSettingsAdvertiserGeneric.h"
+#import "ESTDeviceStatusReport.h"
+#import "ESTDeviceGeoLocation.h"
+#import "ESTDeviceIndoorLocation.h"
+#import "ESTDeviceSchedule.h"
+#import "ESTFirmwareInfoV4VO.h"
+#import "ESTMesh.h"
+#import "ESTNearableFirmwareVO.h"
+#import "ESTNearableFirmwareUpdateVO.h"
+
+
+/**
+ *  Estimote Storage
+ */
+#import "ESTStorageManager.h"
+
+/**
+ *  Estimote Mesh
+ */
+#import "ESTMeshManager.h"
+#import "ESTMeshGateway.h"
+#import "ESTMeshNearablesScanReportVO.h"
+#import "ESTMeshNearablesScanResultVO.h"
+#import "ESTMeshScanReportsManager.h"
+
+
+/* ----------------- DEPRECATED ----------------- */
+#import "ESTUtilityManager.h"
+#import "ESTBluetoothBeacon.h"
+#import "ESTDeviceFilterBeaconV1.h"
+
+#import "ESTBeacon.h"
+#import "ESTBeaconManager.h"
+#import "ESTSecureBeaconManager.h"
+#import "ESTBeaconConnection.h"
+
+#import "ESTNearable.h"
+#import "ESTNearableManager.h"
+#import "ESTSimulatedNearableManager.h"
+
+#import "ESTBulkUpdater.h"
 
 /**
  *  Trigger engine
@@ -323,9 +381,7 @@
 /**
  *  Cloud API handling
  */
-#import "ESTConfig.h"
 #import "ESTCloudManager.h"
-
 #import "ESTRequestGetBeacons.h"
 #import "ESTRequestGetBeaconsDetails.h"
 #import "ESTRequestGetBeaconsPublicDetails.h"
@@ -335,17 +391,17 @@
 
 #import "ESTRequestRegisterDevice.h"
 #import "ESTRequestGetPendingSettings.h"
-#import "ESTRequestV2DeletePendingSettings.h"
 #import "ESTRequestCancelPendingSettings.h"
 #import "ESTRequestGetSettingsHistory.h"
-
-#import "ESTRequestGetNearables.h"
 
 #import "ESTBeaconVO.h"
 #import "ESTNearableVO.h"
 
-#import "ESTNearableFirmwareVO.h"
-#import "ESTNearableFirmwareUpdateVO.h"
+#import "ESTRequestV2DeletePendingSettings.h"
+#import "ESTRequestV2GetDeviceDetails.h"
+#import "ESTRequestV2GetDevices.h"
+#import "ESTRequestV2DevicesUpdate.h"
+#import "ESTRequestGetNearables.h"
 
 /**
  *  Analytics handling
@@ -355,45 +411,10 @@
 #import "ESTAnalyticsEventVO.h"
 
 /**
- *  Cloud API v2 requests
+ * Monitoring
  */
-#import "ESTRequestV2GetDeviceDetails.h"
-#import "ESTRequestV2GetDevices.h"
-#import "ESTRequestV2DevicesUpdate.h"
-
-/**
- *  Cloud API v2 value objects
- */
-#import "ESTBaseVO.h"
-#import "ESTDeviceDetails.h"
-#import "ESTDeviceShadow.h"
-#import "ESTDeviceSettings.h"
-#import "ESTDeviceSettingsGeneral.h"
-#import "ESTDeviceSettingsAdvertiserConnectivity.h"
-#import "ESTDeviceSettingsAdvertiser.h"
-#import "ESTDeviceSettingsAdvertiserIBeacon.h"
-#import "ESTDeviceSettingsAdvertiserEddystoneUID.h"
-#import "ESTDeviceSettingsAdvertiserEddystoneURL.h"
-#import "ESTDeviceSettingsAdvertiserEddystoneTLM.h"
-#import "ESTDeviceSettingsAdvertiserEddystoneEID.h"
-#import "ESTDeviceSettingsAdvertiserEstimoteLocation.h"
-#import "ESTDeviceSettingsAdvertiserEstimoteTLM.h"
-#import "ESTDeviceSettingsAdvertiserGeneric.h"
-#import "ESTDeviceStatusReport.h"
-#import "ESTDeviceGeoLocation.h"
-#import "ESTDeviceIndoorLocation.h"
-#import "ESTDeviceSchedule.h"
-#import "ESTFirmwareInfoV4VO.h"
-#import "ESTMesh.h"
-
-/**
- *  Cloud API v3 requests
- */
-#import "ESTRequestV3GetFirmwares.h"
-#import "ESTRequestV3GetDeviceOwner.h"
-
-#import "ESTRequestGetDeviceDetails.h"
-#import "ESTRequestGetDevices.h"
+#import "ESTMonitoringManager.h"
+#import "ESTMonitoringV2Manager.h"
 
 /**
  * Telemetry support
@@ -408,27 +429,7 @@
 #import "ESTTelemetryNotificationPressure.h"
 
 /**
- * Monitoring
- */
-#import "ESTMonitoringManager.h"
-#import "ESTMonitoringV2Manager.h"
-
-/**
- *  Estimote Storage
- */
-#import "ESTStorageManager.h"
-
-/**
  *  Featuresets
  */
 #import "ESTFeaturesetEstimoteMonitoring.h"
 #import "ESTFeaturesetBackgroundMode.h"
-
-/**
- *  Estimote Mesh
- */
-#import "ESTMeshManager.h"
-#import "ESTMeshGateway.h"
-#import "ESTMeshNearablesScanReportVO.h"
-#import "ESTMeshNearablesScanResultVO.h"
-#import "ESTMeshScanReportsManager.h"

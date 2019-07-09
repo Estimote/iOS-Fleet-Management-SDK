@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
  * The identity of a nearable is defined by its `<identifier>`` property. Identifier of the device is unique among all the Estimote nearables and can not be changed.
  *
  */
-
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @interface ESTNearable : NSObject <NSCopying, NSCoding>
 
 /**
@@ -55,12 +55,12 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  Battery voltage when nearable is in idle state defined in Volts.
  */
-@property (nonatomic, strong, readonly) NSNumber * _Nullable idleBatteryVoltage;
+@property (nonatomic, strong, readonly) NSNumber *_Nullable idleBatteryVoltage;
 
 /**
  *  Battery voltage when nearable is under stress (sending packet) defined in Volts.
  */
-@property (nonatomic, strong, readonly) NSNumber * _Nullable stressBatteryVoltage;
+@property (nonatomic, strong, readonly) NSNumber *_Nullable stressBatteryVoltage;
 
 /**
  *  Time since last change of motion state (isMoving value change) returned in seconds.

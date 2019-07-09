@@ -6,12 +6,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void(^ESTRequestGetPendingSettingsBlock)(NSArray<ESTBeaconUpdateInfo *> * _Nullable beaconUpdateInfos, NSError * _Nullable error);
+typedef void (^ESTRequestGetPendingSettingsBlock)(NSArray<ESTBeaconUpdateInfo *> *_Nullable beaconUpdateInfos, NSError *_Nullable error);
 
 /**
  *  This request is fetching all the pending settings from the Estimote Cloud for authorized user.
  */
-
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0. Please use ESTRequestGetDeviceDetails instead.")
 @interface ESTRequestGetPendingSettings : ESTRequestGetJSON
 
 /**

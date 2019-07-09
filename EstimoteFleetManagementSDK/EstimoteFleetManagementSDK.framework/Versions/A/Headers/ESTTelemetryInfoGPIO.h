@@ -7,16 +7,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-
 /**
  *  ESTTelemetryInfoGPIO contains information about GPIO ports value
- *  delivered from telemetry packet. 
- 
+ *  delivered from telemetry packet.
+
  *  Instance of this class is created automatically by `ESTUtilityManager`
  *  when new telemetry packet containing GPIO information is ranged. Object
- *  is delivered in `ESTTelemetryNotificationGPIONotificationBlock` 
+ *  is delivered in `ESTTelemetryNotificationGPIONotificationBlock`
  *  provided using `ESTTelemetryNotificationGPIO` class.
  */
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @interface ESTTelemetryInfoGPIO : ESTTelemetryInfo
 
 /**

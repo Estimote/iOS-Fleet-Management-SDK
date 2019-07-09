@@ -8,11 +8,11 @@
 /**
  *  Describes errors related to `ESTRequestV3GetFirmwares`.
  */
-typedef NS_ENUM(NSInteger, EStrequestV3GetFirmwresError) {
+typedef NS_ENUM (NSInteger, EStrequestV3GetFirmwresError) {
     /**
      *  Error for invalid response from Cloud, taht cannot be properly parsed.
      */
-     EStrequestV3GetFirmwresErrorIvalidValue = 1
+    EStrequestV3GetFirmwresErrorIvalidValue = 1
 };
 
 /**

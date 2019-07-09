@@ -13,14 +13,14 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Possible errors generated while using Monitoring Manager related to Bluetooth or Estimote Cloud.
  */
-typedef NS_ENUM(NSInteger, ESTMonitoringManagerError)
-{
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
+typedef NS_ENUM (NSInteger, ESTMonitoringManagerError) {
     /**
-     * The platform does not support Bluetooth low energy. 
+     * The platform does not support Bluetooth low energy.
      */
     ESTMonitoringManagerErrorBluetoothNotSupported = 1,
     /**
-     * The app is not authorized to use Bluetooth low energy. 
+     * The app is not authorized to use Bluetooth low energy.
      */
     ESTMonitoringManagerErrorUnauthorizedToUseBluetooth = 2,
     /**
@@ -57,10 +57,10 @@ typedef NS_ENUM(NSInteger, ESTMonitoringManagerError)
     ESTMonitoringManagerErrorInternalServerError = 500,
 };
 
-
 /**
  *  Describes messages sent from Monitoring Manager to its delegate object.
  */
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @protocol ESTMonitoringManagerDelegate <NSObject>
 
 /**
@@ -102,25 +102,23 @@ typedef NS_ENUM(NSInteger, ESTMonitoringManagerError)
 
 @end
 
-
 /**
  *  ESTMonitoringManager handles monitoring Location Beacons on top of Estimote Location packet.
  *
  *  In order to monitor multiple devices a separate instance of Monitoring Manager should be created
  *  for each monitored device.
  *
- *  Estimote Monitoring uses Core Bluetooth and Core Location frameworks underneath. 
- *  To make it work when the app is in background, make sure following entries 
+ *  Estimote Monitoring uses Core Bluetooth and Core Location frameworks underneath.
+ *  To make it work when the app is in background, make sure following entries
  *  are present in <code>Info.plist</code> file:
- 
+
  *  - <code>bluetooth-central</code>
- 
+
  *  - <code>NSBluetoothPeripheralUsageDescription</code>
- 
+
  *  - <code>NSLocationAlwaysUsageDescription</code>
  *
  */
-
 
 DEPRECATED_MSG_ATTRIBUTE("Use ESTMonitoringV2Manager instead.")
 @interface ESTMonitoringManager : NSObject
@@ -136,7 +134,7 @@ DEPRECATED_MSG_ATTRIBUTE("Use ESTMonitoringV2Manager instead.")
  *  calls <code>monitoringManagerdidStart</code> and starts reporting monitoring events.
  *
  *  If the fetch failed, starts reporting monitoring events using default parameters.
- *  
+ *
  *  Requests Core Location's Always Usage authorization.
  *
  *  Forgets previously monitored identifier if called multiple times on the same Monitoring Manager object.
@@ -167,7 +165,7 @@ DEPRECATED_MSG_ATTRIBUTE("Use ESTMonitoringV2Manager instead.")
 - (void)startTurboMode;
 
 /**
- *  Stop increasing responsiveness in background. Battery performance returns to normal.  
+ *  Stop increasing responsiveness in background. Battery performance returns to normal.
  */
 - (void)stopTurboMode;
 

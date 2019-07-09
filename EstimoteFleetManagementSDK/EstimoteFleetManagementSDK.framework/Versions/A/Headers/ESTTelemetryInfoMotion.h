@@ -1,15 +1,14 @@
 //  Estimote Fleet Management SDK
 //  Copyright © 2015 Estimote. All rights reserved.
 
-
 #import "ESTTelemetryInfo.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-
 /**
  * This class contains data read from telemetry packet from beacon device.
  */
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @interface ESTTelemetryInfoMotion : ESTTelemetryInfo
 
 /**
@@ -55,13 +54,13 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * @return Instance of this class.
  */
-- (instancetype)initWithAccelerationX:(NSNumber *)accelerationX
-                        accelerationY:(NSNumber *)accelerationY
-                        accelerationZ:(NSNumber *)accelerationZ
- previousMotionStateDurationInSeconds:(NSNumber *)previousMotionStateDurationInSeconds
-  currentMotionStateDurationInSeconds:(NSNumber *)currentMotionStateDurationInSeconds
-                          motionState:(NSNumber *)motionState
-                      shortIdentifier:(NSString *)shortIdentifier;
+- (instancetype)   initWithAccelerationX:(NSNumber *)accelerationX
+                           accelerationY:(NSNumber *)accelerationY
+                           accelerationZ:(NSNumber *)accelerationZ
+    previousMotionStateDurationInSeconds:(NSNumber *)previousMotionStateDurationInSeconds
+     currentMotionStateDurationInSeconds:(NSNumber *)currentMotionStateDurationInSeconds
+                             motionState:(NSNumber *)motionState
+                         shortIdentifier:(NSString *)shortIdentifier;
 
 @end
 

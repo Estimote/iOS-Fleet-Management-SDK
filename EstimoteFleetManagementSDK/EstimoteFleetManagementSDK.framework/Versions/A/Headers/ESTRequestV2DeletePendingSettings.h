@@ -12,12 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param result   Array of user's devices identifiers, for which Cloud has pending changes.
  *  @param error    Error of request. No error means success.
  */
-typedef void(^ESTRequestV2DeletePendingSettingsBlock)(id _Nullable result, NSError * _Nullable error);
-
+typedef void (^ESTRequestV2DeletePendingSettingsBlock)(id _Nullable result, NSError *_Nullable error);
 
 /**
  *  ESTRequestV2DeletePendingSettings allows to delete all pending settings for provided list of devices.
  */
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0. Please use ESTRequestDeletePendingSettings.")
 @interface ESTRequestV2DeletePendingSettings : ESTRequestPostJSON
 
 /**

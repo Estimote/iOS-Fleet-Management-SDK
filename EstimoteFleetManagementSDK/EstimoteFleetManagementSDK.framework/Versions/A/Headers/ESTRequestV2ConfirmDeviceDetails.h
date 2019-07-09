@@ -19,6 +19,7 @@ typedef void(^ESTRequestV2ConfirmDeviceDetailsBlock)(NSError * _Nullable error);
  *  ESTRequestV2ConfirmDeviceDetails allows to confirm in Estimote Cloud 
  *  that settings were applied.
  */
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0. Please use ESTRequestConfirmDeviceDetails instead.")
 @interface ESTRequestV2ConfirmDeviceDetails : ESTRequestPostJSON
 
 /**

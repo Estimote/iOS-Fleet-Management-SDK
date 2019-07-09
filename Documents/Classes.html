@@ -529,6 +529,9 @@
                 <a class="nav-group-task-link" href="Classes/ESTRequestCancelPendingSettings.html">ESTRequestCancelPendingSettings</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/ESTRequestDeletePendingSettings.html">ESTRequestDeletePendingSettings</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/ESTRequestGetBeacons.html">ESTRequestGetBeacons</a>
               </li>
               <li class="nav-group-task">
@@ -1061,6 +1064,9 @@
                 <a class="nav-group-task-link" href="Enums/ESTRequestBeaconMacError.html">ESTRequestBeaconMacError</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums.html#/c:@E@ESTRequestDeletePendingSettingsError">ESTRequestDeletePendingSettingsError</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/ESTRequestGetBeaconsError.html">ESTRequestGetBeaconsError</a>
               </li>
               <li class="nav-group-task">
@@ -1264,6 +1270,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Type Definitions.html#/c:ESTMeshScanReportsManager.h@T@ESTReportScanVOCompletionBlock">ESTReportScanVOCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Type Definitions.html#/c:ESTRequestDeletePendingSettings.h@T@ESTRequestDeletePendingSettingsBlock">ESTRequestDeletePendingSettingsBlock</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Type Definitions.html#/c:ESTRequestGetDeviceDetails.h@T@ESTRequestGetDeviceDetailsBlock">ESTRequestGetDeviceDetailsBlock</a>
@@ -1561,7 +1570,8 @@ Manager sends to Estimote Cloud up to 100 registered analytics events every 20 s
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTAnalyticsManager</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTAnalyticsManager</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -1600,7 +1610,8 @@ should not be created manually. Objects of this class are returning from <code>E
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTBeacon</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="p">,</span> <span class="n">NSSecureCoding</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTBeacon</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="p">,</span> <span class="n">NSSecureCoding</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -1646,7 +1657,8 @@ should not be created manually. Objects of this class are returning from <code>E
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTBeaconConnection</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTBeaconConnection</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -4073,7 +4085,7 @@ like writing to peripheral and saving to the Estimote Cloud.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Object of this class contains all settings that should be applied to the Estimote beacon device. 
+                        <p>Object of this class contains all settings that should be applied to the Estimote beacon device.
 It&rsquo;s used by <code><a href="Classes/ESTBulkUpdater.html">ESTBulkUpdater</a></code> class as a part of <code><a href="Classes/ESTBeaconUpdateInfo.html">ESTBeaconUpdateInfo</a></code> object.</p>
 
                         <a href="Classes/ESTBeaconUpdateConfig.html" class="slightly-smaller">See more</a>
@@ -4082,7 +4094,8 @@ It&rsquo;s used by <code><a href="Classes/ESTBulkUpdater.html">ESTBulkUpdater</a
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTBeaconUpdateConfig</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n">NSCoding</span><span class="p">,</span> <span class="n">NSCopying</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTBeaconUpdateConfig</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n">NSCoding</span><span class="p">,</span> <span class="n">NSCopying</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -4119,7 +4132,8 @@ It&rsquo;s used by <code><a href="Classes/ESTBulkUpdater.html">ESTBulkUpdater</a
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTBeaconUpdateInfo</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n">NSCoding</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTBeaconUpdateInfo</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n">NSCoding</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -4163,7 +4177,8 @@ It&rsquo;s used by <code><a href="Classes/ESTBulkUpdater.html">ESTBulkUpdater</a
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTBulkUpdater</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTBulkUpdater</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -4192,7 +4207,7 @@ It&rsquo;s used by <code><a href="Classes/ESTBulkUpdater.html">ESTBulkUpdater</a
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>ESTCloudManager class is responsible for Estimote Cloud integration. It allows you to invoke 
+                        <p>ESTCloudManager class is responsible for Estimote Cloud integration. It allows you to invoke
 available Estimote Cloud API methods using block pattern to handle result.</p>
 
                         <a href="Classes/ESTCloudManager.html" class="slightly-smaller">See more</a>
@@ -4628,7 +4643,8 @@ and configure Estimote Analytics settings.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTDateRule</span> <span class="p">:</span> <span class="nc"><a href="Classes/ESTRule.html">ESTRule</a></span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTDateRule</span> <span class="p">:</span> <span class="nc"><a href="Classes/ESTRule.html">ESTRule</a></span></code></pre>
 
                         </div>
                         <div class="language">
@@ -4752,7 +4768,8 @@ beacon or nearable device including status, settings and pending settings.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTDeviceFilterBeaconV1</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/ESTDeviceFilter.html">ESTDeviceFilter</a></span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTDeviceFilterBeaconV1</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/ESTDeviceFilter.html">ESTDeviceFilter</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -4986,7 +5003,7 @@ beacon or nearable device including status, settings and pending settings.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The <code>ESTDeviceManager</code> class defines the interface for utility methods related to Estimote devices. 
+                        <p>The <code>ESTDeviceManager</code> class defines the interface for utility methods related to Estimote devices.
  The main functionality allows to discover CoreBluetooth based representation of Estimote Beacon devices.</p>
 
 <p>One device manager instance can discover devices only with one filter at a time.</p>
@@ -5705,7 +5722,8 @@ with discovery process and return in <code>eddystoneManager:didDiscoverEddystone
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTEddystone</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTEddystone</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -5742,7 +5760,8 @@ with discovery process and return in <code>eddystoneManager:didDiscoverEddystone
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTEddystoneAttachment</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTEddystoneAttachment</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -5771,7 +5790,7 @@ with discovery process and return in <code>eddystoneManager:didDiscoverEddystone
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>ESTEddystoneEID represents Eddystone Ephemeral ID packet coming from <code><a href="Classes/ESTEddystoneManager.html">ESTEddystoneManager</a></code> class. When device is registered 
+                        <p>ESTEddystoneEID represents Eddystone Ephemeral ID packet coming from <code><a href="Classes/ESTEddystoneManager.html">ESTEddystoneManager</a></code> class. When device is registered
 packet will contain Namespace ID and Instance ID resolved from secure payload.</p>
 
                         <a href="Classes/ESTEddystoneEID.html" class="slightly-smaller">See more</a>
@@ -5780,7 +5799,8 @@ packet will contain Namespace ID and Instance ID resolved from secure payload.</
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTEddystoneEID</span> <span class="p">:</span> <span class="nc"><a href="Classes/ESTEddystone.html">ESTEddystone</a></span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTEddystoneEID</span> <span class="p">:</span> <span class="nc"><a href="Classes/ESTEddystone.html">ESTEddystone</a></span></code></pre>
 
                         </div>
                         <div class="language">
@@ -5818,7 +5838,8 @@ Instance of <code>ESTEddystoneFilter</code> can be used as a base for other filt
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTEddystoneFilter</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTEddystoneFilter</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -5855,7 +5876,8 @@ Instance of <code>ESTEddystoneFilter</code> can be used as a base for other filt
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTEddystoneFilterEID</span> <span class="p">:</span> <span class="nc"><a href="Classes/ESTEddystoneFilter.html">ESTEddystoneFilter</a></span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTEddystoneFilterEID</span> <span class="p">:</span> <span class="nc"><a href="Classes/ESTEddystoneFilter.html">ESTEddystoneFilter</a></span></code></pre>
 
                         </div>
                         <div class="language">
@@ -5885,7 +5907,7 @@ Instance of <code>ESTEddystoneFilter</code> can be used as a base for other filt
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Eddystone-UID based filter used by <code><a href="Classes/ESTEddystoneManager.html">ESTEddystoneManager</a></code> in discovery process.
-Filter should be initialized with namespaceID and instanceID 
+Filter should be initialized with namespaceID and instanceID
 that is matching device(s) should be discovered. Only Namespace ID is required,
 Instance ID can be provided optionally for better flexibility.</p>
 
@@ -5895,7 +5917,8 @@ Instance ID can be provided optionally for better flexibility.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTEddystoneFilterUID</span> <span class="p">:</span> <span class="nc"><a href="Classes/ESTEddystoneFilter.html">ESTEddystoneFilter</a></span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTEddystoneFilterUID</span> <span class="p">:</span> <span class="nc"><a href="Classes/ESTEddystoneFilter.html">ESTEddystoneFilter</a></span></code></pre>
 
                         </div>
                         <div class="language">
@@ -5936,7 +5959,8 @@ Instance ID can be provided optionally for better flexibility.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTEddystoneFilterURL</span> <span class="p">:</span> <span class="nc"><a href="Classes/ESTEddystoneFilter.html">ESTEddystoneFilter</a></span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTEddystoneFilterURL</span> <span class="p">:</span> <span class="nc"><a href="Classes/ESTEddystoneFilter.html">ESTEddystoneFilter</a></span></code></pre>
 
                         </div>
                         <div class="language">
@@ -5980,7 +6004,8 @@ Instance ID can be provided optionally for better flexibility.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTEddystoneFilterURLDomain</span> <span class="p">:</span> <span class="nc"><a href="Classes/ESTEddystoneFilter.html">ESTEddystoneFilter</a></span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTEddystoneFilterURLDomain</span> <span class="p">:</span> <span class="nc"><a href="Classes/ESTEddystoneFilter.html">ESTEddystoneFilter</a></span></code></pre>
 
                         </div>
                         <div class="language">
@@ -6024,7 +6049,8 @@ Instance ID can be provided optionally for better flexibility.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTEddystoneManager</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTEddystoneManager</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -6061,7 +6087,8 @@ Instance ID can be provided optionally for better flexibility.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTEddystoneTLM</span> <span class="p">:</span> <span class="nc"><a href="Classes/ESTEddystone.html">ESTEddystone</a></span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTEddystoneTLM</span> <span class="p">:</span> <span class="nc"><a href="Classes/ESTEddystone.html">ESTEddystone</a></span></code></pre>
 
                         </div>
                         <div class="language">
@@ -6098,7 +6125,8 @@ Instance ID can be provided optionally for better flexibility.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTEddystoneUID</span> <span class="p">:</span> <span class="nc"><a href="Classes/ESTEddystone.html">ESTEddystone</a></span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTEddystoneUID</span> <span class="p">:</span> <span class="nc"><a href="Classes/ESTEddystone.html">ESTEddystone</a></span></code></pre>
 
                         </div>
                         <div class="language">
@@ -6135,7 +6163,8 @@ Instance ID can be provided optionally for better flexibility.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTEddystoneURL</span> <span class="p">:</span> <span class="nc"><a href="Classes/ESTEddystone.html">ESTEddystone</a></span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTEddystoneURL</span> <span class="p">:</span> <span class="nc"><a href="Classes/ESTEddystone.html">ESTEddystone</a></span></code></pre>
 
                         </div>
                         <div class="language">
@@ -6174,7 +6203,8 @@ the settings are set properly.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTFeaturesetBackgroundMode</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTFeaturesetBackgroundMode</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -6204,7 +6234,7 @@ the settings are set properly.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>ESTFeaturesetEstimoteMonitoring encapsulates operations required for Estimote Monitoring&rsquo;s functionality.
-The algorithm relies on Estimote Location being advertised, and this helper tool ensures that 
+The algorithm relies on Estimote Location being advertised, and this helper tool ensures that
 the settings are set properly.</p>
 
                         <a href="Classes/ESTFeaturesetEstimoteMonitoring.html" class="slightly-smaller">See more</a>
@@ -6213,7 +6243,8 @@ the settings are set properly.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTFeaturesetEstimoteMonitoring</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTFeaturesetEstimoteMonitoring</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -6319,7 +6350,7 @@ that should be performed on that device after discovery and connection.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Class that can be used to perform bulk updates on new generation Estimote beacons. 
+                        <p>Class that can be used to perform bulk updates on new generation Estimote beacons.
 To start bulk update you need to prepare an array of <code><a href="Classes/ESTLocationBeaconBulkUpdateConfiguration.html">ESTLocationBeaconBulkUpdateConfiguration</a></code> objects
 containing a device identifier and an array of <code><a href="Classes/ESTSettingOperation.html">ESTSettingOperation</a></code> objects that will be initialized with
 `ESTSettingReadWrite&rsquo; subclass objects designed for specific settings.</p>
@@ -6629,8 +6660,8 @@ for stickers. Single record is represented by <code>ESTMeshScanResultVO</code>.<
 <p>In order to monitor multiple devices a separate instance of Monitoring Manager should be created
   for each monitored device.</p>
 
-<p>Estimote Monitoring uses Core Bluetooth and Core Location frameworks underneath. 
-  To make it work when the app is in background, make sure following entries 
+<p>Estimote Monitoring uses Core Bluetooth and Core Location frameworks underneath.
+  To make it work when the app is in background, make sure following entries
   are present in <code>Info.plist</code> file:</p>
 
 <ul>
@@ -6694,7 +6725,8 @@ operation in background.</p></li>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTMonitoringV2Manager</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTMonitoringV2Manager</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -6730,7 +6762,8 @@ operation in background.</p></li>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTMotionRule</span> <span class="p">:</span> <span class="nc"><a href="Classes/ESTNearableRule.html">ESTNearableRule</a></span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTMotionRule</span> <span class="p">:</span> <span class="nc"><a href="Classes/ESTNearableRule.html">ESTNearableRule</a></span></code></pre>
 
                         </div>
                         <div class="language">
@@ -6769,7 +6802,8 @@ operation in background.</p></li>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTNearable</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="p">,</span> <span class="n">NSCoding</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTNearable</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="p">,</span> <span class="n">NSCoding</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -6806,7 +6840,8 @@ operation in background.</p></li>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTNearableManager</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTNearableManager</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -7265,7 +7300,8 @@ defining any conditions.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTNearableRule</span> <span class="p">:</span> <span class="nc"><a href="Classes/ESTRule.html">ESTRule</a></span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTNearableRule</span> <span class="p">:</span> <span class="nc"><a href="Classes/ESTRule.html">ESTRule</a></span></code></pre>
 
                         </div>
                         <div class="language">
@@ -7414,7 +7450,8 @@ like writing to peripheral and saving to the Estimote Cloud.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTOrientationRule</span> <span class="p">:</span> <span class="nc"><a href="Classes/ESTNearableRule.html">ESTNearableRule</a></span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTOrientationRule</span> <span class="p">:</span> <span class="nc"><a href="Classes/ESTNearableRule.html">ESTNearableRule</a></span></code></pre>
 
                         </div>
                         <div class="language">
@@ -7488,7 +7525,8 @@ It allows to perform bluetooth only read/write operation on the device and reboo
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTProximityRule</span> <span class="p">:</span> <span class="nc"><a href="Classes/ESTNearableRule.html">ESTNearableRule</a></span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTProximityRule</span> <span class="p">:</span> <span class="nc"><a href="Classes/ESTNearableRule.html">ESTNearableRule</a></span></code></pre>
 
                         </div>
                         <div class="language">
@@ -7517,7 +7555,7 @@ It allows to perform bluetooth only read/write operation on the device and reboo
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>ESTRequestBeaconColor is used to assign GPS location to single beacon device. 
+                        <p>ESTRequestBeaconColor is used to assign GPS location to single beacon device.
 GPS Location can be provided during initialisation or taken automatically when nil provided.</p>
 
                         <a href="Classes/ESTRequestAssignGPSLocation.html" class="slightly-smaller">See more</a>
@@ -7526,7 +7564,8 @@ GPS Location can be provided during initialisation or taken automatically when n
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTRequestAssignGPSLocation</span> <span class="p">:</span> <span class="nc">ESTRequestPutJSON</span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTRequestAssignGPSLocation</span> <span class="p">:</span> <span class="nc">ESTRequestPutJSON</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -7563,7 +7602,8 @@ GPS Location can be provided during initialisation or taken automatically when n
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTRequestBeaconColor</span> <span class="p">:</span> <span class="nc">ESTRequestGetJSON</span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTRequestBeaconColor</span> <span class="p">:</span> <span class="nc">ESTRequestGetJSON</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -7602,7 +7642,8 @@ for all beacons.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTRequestBeaconMac</span> <span class="p">:</span> <span class="nc">ESTRequestGetJSON</span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTRequestBeaconMac</span> <span class="p">:</span> <span class="nc">ESTRequestGetJSON</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -7639,12 +7680,50 @@ for all beacons.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTRequestCancelPendingSettings</span> <span class="p">:</span> <span class="nc">ESTRequestDelete</span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTRequestCancelPendingSettings</span> <span class="p">:</span> <span class="nc">ESTRequestDelete</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">class</span> <span class="kt">ESTRequestCancelPendingSettings</span> <span class="p">:</span> <span class="kt">ESTRequestDelete</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)ESTRequestDeletePendingSettings"></a>
+                    <a name="//apple_ref/objc/Class/ESTRequestDeletePendingSettings" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)ESTRequestDeletePendingSettings">ESTRequestDeletePendingSettings</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>ESTRequestDeletePendingSettings allows to delete all pending settings for provided list of devices.</p>
+
+                        <a href="Classes/ESTRequestDeletePendingSettings.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTRequestDeletePendingSettings</span> <span class="p">:</span> <span class="nc">ESTRequestPostJSON</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">ESTRequestDeletePendingSettings</span> <span class="p">:</span> <span class="kt">ESTRequestPostJSON</span></code></pre>
 
                         </div>
                       </div>
@@ -7668,7 +7747,7 @@ for all beacons.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>ESTRequestGetBeacons is used to fetch list of all beacons 
+                        <p>ESTRequestGetBeacons is used to fetch list of all beacons
 that belongs to currently authorised user. All details are provided
 including beacon&rsquo;s settings.</p>
 
@@ -7678,7 +7757,8 @@ including beacon&rsquo;s settings.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTRequestGetBeacons</span> <span class="p">:</span> <span class="nc">ESTRequestGetJSON</span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTRequestGetBeacons</span> <span class="p">:</span> <span class="nc">ESTRequestGetJSON</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -7716,7 +7796,8 @@ with identifiers provided during initialization.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTRequestGetBeaconsDetails</span> <span class="p">:</span> <span class="nc">ESTRequestGetJSON</span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTRequestGetBeaconsDetails</span> <span class="p">:</span> <span class="nc">ESTRequestGetJSON</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -7827,7 +7908,8 @@ with identifiers provided during initialization.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTRequestGetNearables</span> <span class="p">:</span> <span class="nc">ESTRequestGetJSON</span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTRequestGetNearables</span> <span class="p">:</span> <span class="nc">ESTRequestGetJSON</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -7864,7 +7946,8 @@ with identifiers provided during initialization.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTRequestGetPendingSettings</span> <span class="p">:</span> <span class="nc">ESTRequestGetJSON</span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTRequestGetPendingSettings</span> <span class="p">:</span> <span class="nc">ESTRequestGetJSON</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -7901,7 +7984,8 @@ with identifiers provided during initialization.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTRequestGetSettingsHistory</span> <span class="p">:</span> <span class="nc">ESTRequestGetJSON</span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTRequestGetSettingsHistory</span> <span class="p">:</span> <span class="nc">ESTRequestGetJSON</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -7939,7 +8023,8 @@ about pending settings.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTRequestRegisterDevice</span> <span class="p">:</span> <span class="nc">ESTRequestPostJSON</span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTRequestRegisterDevice</span> <span class="p">:</span> <span class="nc">ESTRequestPostJSON</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -7976,7 +8061,8 @@ about pending settings.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTRequestV2DeletePendingSettings</span> <span class="p">:</span> <span class="nc">ESTRequestPostJSON</span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTRequestV2DeletePendingSettings</span> <span class="p">:</span> <span class="nc">ESTRequestPostJSON</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -8014,7 +8100,8 @@ List includes both settings and firmware update.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTRequestV2DevicesUpdate</span> <span class="p">:</span> <span class="nc">ESTRequestGetJSON</span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTRequestV2DevicesUpdate</span> <span class="p">:</span> <span class="nc">ESTRequestGetJSON</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -8127,7 +8214,8 @@ List includes both settings and firmware update.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTRequestV3GetDeviceOwner</span> <span class="p">:</span> <span class="nc">ESTRequestGetJSON</span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTRequestV3GetDeviceOwner</span> <span class="p">:</span> <span class="nc">ESTRequestGetJSON</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -8200,7 +8288,8 @@ List includes both settings and firmware update.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTRule</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTRule</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -11736,7 +11825,8 @@ set of methods required to create read and write operations.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTSimulatedNearableManager</span>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTSimulatedNearableManager</span>
     <span class="p">:</span> <span class="nc"><a href="Classes/ESTNearableManager.html">ESTNearableManager</a></span> <span class="o">&lt;</span><span class="n"><a href="Protocols/ESTNearableManagerDelegate.html">ESTNearableManagerDelegate</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
@@ -11811,7 +11901,8 @@ set of methods required to create read and write operations.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTTelemetryInfo</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTTelemetryInfo</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -11848,7 +11939,8 @@ set of methods required to create read and write operations.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTTelemetryInfoAmbientLight</span> <span class="p">:</span> <span class="nc"><a href="Classes/ESTTelemetryInfo.html">ESTTelemetryInfo</a></span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTTelemetryInfoAmbientLight</span> <span class="p">:</span> <span class="nc"><a href="Classes/ESTTelemetryInfo.html">ESTTelemetryInfo</a></span></code></pre>
 
                         </div>
                         <div class="language">
@@ -11878,11 +11970,11 @@ set of methods required to create read and write operations.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>ESTTelemetryInfoGPIO contains information about GPIO ports value
-delivered from telemetry packet. </p>
+delivered from telemetry packet.</p>
 
 <p>Instance of this class is created automatically by <code><a href="Classes/ESTUtilityManager.html">ESTUtilityManager</a></code>
 when new telemetry packet containing GPIO information is ranged. Object
-is delivered in <code><a href="Type Definitions.html#/c:ESTTelemetryNotificationGPIO.h@T@ESTTelemetryNotificationGPIONotificationBlock">ESTTelemetryNotificationGPIONotificationBlock</a></code> 
+is delivered in <code><a href="Type Definitions.html#/c:ESTTelemetryNotificationGPIO.h@T@ESTTelemetryNotificationGPIONotificationBlock">ESTTelemetryNotificationGPIONotificationBlock</a></code>
 provided using <code><a href="Classes/ESTTelemetryNotificationGPIO.html">ESTTelemetryNotificationGPIO</a></code> class.</p>
 
                         <a href="Classes/ESTTelemetryInfoGPIO.html" class="slightly-smaller">See more</a>
@@ -11891,7 +11983,8 @@ provided using <code><a href="Classes/ESTTelemetryNotificationGPIO.html">ESTTele
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTTelemetryInfoGPIO</span> <span class="p">:</span> <span class="nc"><a href="Classes/ESTTelemetryInfo.html">ESTTelemetryInfo</a></span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTTelemetryInfoGPIO</span> <span class="p">:</span> <span class="nc"><a href="Classes/ESTTelemetryInfo.html">ESTTelemetryInfo</a></span></code></pre>
 
                         </div>
                         <div class="language">
@@ -11928,7 +12021,8 @@ provided using <code><a href="Classes/ESTTelemetryNotificationGPIO.html">ESTTele
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTTelemetryInfoMagnetometer</span> <span class="p">:</span> <span class="nc"><a href="Classes/ESTTelemetryInfo.html">ESTTelemetryInfo</a></span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTTelemetryInfoMagnetometer</span> <span class="p">:</span> <span class="nc"><a href="Classes/ESTTelemetryInfo.html">ESTTelemetryInfo</a></span></code></pre>
 
                         </div>
                         <div class="language">
@@ -11965,7 +12059,8 @@ provided using <code><a href="Classes/ESTTelemetryNotificationGPIO.html">ESTTele
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTTelemetryInfoMotion</span> <span class="p">:</span> <span class="nc"><a href="Classes/ESTTelemetryInfo.html">ESTTelemetryInfo</a></span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTTelemetryInfoMotion</span> <span class="p">:</span> <span class="nc"><a href="Classes/ESTTelemetryInfo.html">ESTTelemetryInfo</a></span></code></pre>
 
                         </div>
                         <div class="language">
@@ -12002,7 +12097,8 @@ provided using <code><a href="Classes/ESTTelemetryNotificationGPIO.html">ESTTele
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTTelemetryInfoPressure</span> <span class="p">:</span> <span class="nc"><a href="Classes/ESTTelemetryInfo.html">ESTTelemetryInfo</a></span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTTelemetryInfoPressure</span> <span class="p">:</span> <span class="nc"><a href="Classes/ESTTelemetryInfo.html">ESTTelemetryInfo</a></span></code></pre>
 
                         </div>
                         <div class="language">
@@ -12039,7 +12135,8 @@ provided using <code><a href="Classes/ESTTelemetryNotificationGPIO.html">ESTTele
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTTelemetryInfoSystemStatus</span> <span class="p">:</span> <span class="nc"><a href="Classes/ESTTelemetryInfo.html">ESTTelemetryInfo</a></span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTTelemetryInfoSystemStatus</span> <span class="p">:</span> <span class="nc"><a href="Classes/ESTTelemetryInfo.html">ESTTelemetryInfo</a></span></code></pre>
 
                         </div>
                         <div class="language">
@@ -12076,7 +12173,8 @@ provided using <code><a href="Classes/ESTTelemetryNotificationGPIO.html">ESTTele
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTTelemetryInfoTemperature</span> <span class="p">:</span> <span class="nc"><a href="Classes/ESTTelemetryInfo.html">ESTTelemetryInfo</a></span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTTelemetryInfoTemperature</span> <span class="p">:</span> <span class="nc"><a href="Classes/ESTTelemetryInfo.html">ESTTelemetryInfo</a></span></code></pre>
 
                         </div>
                         <div class="language">
@@ -12118,7 +12216,8 @@ ambient light value (in lux) read by beacon.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTTelemetryNotificationAmbientLight</span>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTTelemetryNotificationAmbientLight</span>
     <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/ESTTelemetryNotificationProtocol.html">ESTTelemetryNotificationProtocol</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
@@ -12149,7 +12248,7 @@ ambient light value (in lux) read by beacon.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>ESTTelemetryNotificationGPIO allows to register for GPIO related telemetry information
-  in <code><a href="Classes/ESTUtilityManager.html">ESTUtilityManager</a></code> using <code>registerForTelemetryNotifications:</code> method. </p>
+  in <code><a href="Classes/ESTUtilityManager.html">ESTUtilityManager</a></code> using <code>registerForTelemetryNotifications:</code> method.</p>
 
 <p>As a result of registration each time telemetry packet is ranged provided notification
   block is fired providing <code><a href="Classes/ESTTelemetryInfoGPIO.html">ESTTelemetryInfoGPIO</a></code> object with current GPIO ports values.</p>
@@ -12160,7 +12259,8 @@ ambient light value (in lux) read by beacon.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTTelemetryNotificationGPIO</span>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTTelemetryNotificationGPIO</span>
     <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/ESTTelemetryNotificationProtocol.html">ESTTelemetryNotificationProtocol</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
@@ -12203,7 +12303,8 @@ magnetometer values in X, Y, Z axises, read by beacon device.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTTelemetryNotificationMagnetometer</span>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTTelemetryNotificationMagnetometer</span>
     <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/ESTTelemetryNotificationProtocol.html">ESTTelemetryNotificationProtocol</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
@@ -12233,12 +12334,12 @@ magnetometer values in X, Y, Z axises, read by beacon device.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>ESTTelemetryNotificationMotion class is used to 
-initialize block that will be fired everytime 
+                        <p>ESTTelemetryNotificationMotion class is used to
+initialize block that will be fired everytime
 new telemetry packet was ranged.
 As a parameter of ESTTelemetryNotificationMotionCompletionBlock
 expect ESTTelemetryInfoMotion object that transmits
-axises X,Y,Z of beacon position and 
+axises X,Y,Z of beacon position and
 current and previous motion state duration.</p>
 
                         <a href="Classes/ESTTelemetryNotificationMotion.html" class="slightly-smaller">See more</a>
@@ -12247,7 +12348,8 @@ current and previous motion state duration.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTTelemetryNotificationMotion</span>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTTelemetryNotificationMotion</span>
     <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/ESTTelemetryNotificationProtocol.html">ESTTelemetryNotificationProtocol</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
@@ -12290,7 +12392,8 @@ atmospheric pressure value (in pascals) read by beacon.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTTelemetryNotificationPressure</span>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTTelemetryNotificationPressure</span>
     <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/ESTTelemetryNotificationProtocol.html">ESTTelemetryNotificationProtocol</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
@@ -12333,7 +12436,8 @@ system status information (battery voltage and OS uptime)</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTTelemetryNotificationSystemStatus</span>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTTelemetryNotificationSystemStatus</span>
     <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/ESTTelemetryNotificationProtocol.html">ESTTelemetryNotificationProtocol</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
@@ -12376,7 +12480,8 @@ current temperature readings from beacon.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTTelemetryNotificationTemperature</span>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTTelemetryNotificationTemperature</span>
     <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="Protocols/ESTTelemetryNotificationProtocol.html">ESTTelemetryNotificationProtocol</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
@@ -12413,7 +12518,8 @@ current temperature readings from beacon.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTTemperatureRule</span> <span class="p">:</span> <span class="nc"><a href="Classes/ESTNearableRule.html">ESTNearableRule</a></span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTTemperatureRule</span> <span class="p">:</span> <span class="nc"><a href="Classes/ESTNearableRule.html">ESTNearableRule</a></span></code></pre>
 
                         </div>
                         <div class="language">
@@ -12530,7 +12636,8 @@ Useful for representing time relative to midnight.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTTrigger</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTTrigger</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -12567,7 +12674,8 @@ Useful for representing time relative to midnight.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTTriggerManager</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n">ESTTriggerDelegate</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTTriggerManager</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n">ESTTriggerDelegate</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -12605,7 +12713,8 @@ allows to discover CoreBluetooth based representation of Estimote Beacon devices
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTUtilityManager</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+                          <pre class="highlight"><code>
+<span class="k">@interface</span> <span class="nc">ESTUtilityManager</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -12625,7 +12734,7 @@ allows to discover CoreBluetooth based representation of Estimote Beacon devices
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2019-05-22)</p>
+      <p>&copy; 2019 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2019-07-09)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

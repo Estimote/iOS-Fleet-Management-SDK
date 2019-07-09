@@ -5,12 +5,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void(^ESTRequestCancelPendingSettingsBlock)(NSError * _Nullable error);
+typedef void (^ESTRequestCancelPendingSettingsBlock)(NSError *_Nullable error);
 
 /**
  *  This request is deleting the device's pending settings from the Estimote Cloud for authorized user.
  */
 
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0. Please use ESTRequestDeletePendingSettings.")
 @interface ESTRequestCancelPendingSettings : ESTRequestDelete
 
 @property (nonatomic, readonly) NSString *macAddress;

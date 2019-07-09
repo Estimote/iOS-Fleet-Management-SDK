@@ -7,9 +7,9 @@
 #import "ESTBeaconDefinitions.h"
 #import "ESTAnalyticsEventVO.h"
 
-typedef void(^ESTRequestAnalyticsGroupTrackBlock)(NSError *error);
+typedef void (^ESTRequestAnalyticsGroupTrackBlock)(NSError *error);
 
-
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @interface ESTRequestAnalyticsTrack : ESTRequestPostJSON
 
 - (instancetype)initWithEvents:(NSArray *)events;

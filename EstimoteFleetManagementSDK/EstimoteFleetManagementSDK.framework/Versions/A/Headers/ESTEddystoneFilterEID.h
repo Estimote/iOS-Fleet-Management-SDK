@@ -6,10 +6,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-
 /**
  *  Eddystone-EID based filter used by `ESTEddystoneManager` in discovery process.
  */
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @interface ESTEddystoneFilterEID : ESTEddystoneFilter
 
 /**

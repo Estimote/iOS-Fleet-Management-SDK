@@ -4,8 +4,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 
-typedef NS_ENUM(NSInteger, ESTAnalyticsEventType)
-{
+typedef NS_ENUM (NSInteger, ESTAnalyticsEventType) {
     ESTAnalyticsEventTypeEnterRegion,
     ESTAnalyticsEventTypeExitRegion,
     ESTAnalyticsEventTypeInFar,
@@ -14,7 +13,7 @@ typedef NS_ENUM(NSInteger, ESTAnalyticsEventType)
     ESTAnalyticsEventTypeInUnknown
 };
 
-
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @interface ESTAnalyticsEventVO : NSObject <NSCoding, NSCopying>
 
 @property (nonatomic, strong, readonly) CLBeaconRegion *region;

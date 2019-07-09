@@ -14,6 +14,7 @@ typedef void(^ESTRequestV2DevicesUpdateBlock)(NSArray<ESTDeviceUpdateInfo *> * _
  *  ESTRequestV2DevicesUpdate allows to fetch information about all devices having pending changes to be applied. 
  *  List includes both settings and firmware update.
  */
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0. Will be removed with next major release.")
 @interface ESTRequestV2DevicesUpdate : ESTRequestGetJSON
 
 /**

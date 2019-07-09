@@ -11,6 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * The `ESTNearableManagerDelegate` protocol defines the delegate methods used to receive nearable ranging and monitoring events from an `<ESTNearableManager>` object.
  */
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @protocol ESTNearableManagerDelegate <NSObject>
 
 @optional
@@ -45,12 +46,10 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)nearableManager:(ESTNearableManager *)manager rangingFailedWithError:(NSError *)error;
 
-
 #pragma mark Monitoring delegate methods
 ///--------------------------------------------------------------------
 /// @name Monitoring delegate methods
 ///--------------------------------------------------------------------
-
 
 /**
  * Tells the delegate that the user entered region of specified nearable type.
@@ -98,6 +97,7 @@ NS_ASSUME_NONNULL_BEGIN
  * The `ESTNearableManager` class defines the interface for ranging and monitoring nearables.
  */
 
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @interface ESTNearableManager : NSObject
 
 @property (nonatomic, weak) id <ESTNearableManagerDelegate> _Nullable delegate;

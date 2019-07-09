@@ -8,11 +8,11 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * The `ESTDateRule` class defines single rule related to time during the day.
  */
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
+@interface ESTDateRule : ESTRule
 
-@interface ESTDateRule : ESTRule 
-
-@property (nonatomic, strong) NSNumber * _Nullable afterHour;
-@property (nonatomic, strong) NSNumber * _Nullable beforeHour;
+@property (nonatomic, strong) NSNumber *_Nullable afterHour;
+@property (nonatomic, strong) NSNumber *_Nullable beforeHour;
 
 /**
  *  Initialization method creating rule when targeted hour is later then.

@@ -12,8 +12,8 @@
 #import <Foundation/Foundation.h>
 #import "ESTNearable.h"
 
-typedef NS_ENUM(NSInteger, ESTNotification)
-{
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
+typedef NS_ENUM (NSInteger, ESTNotification) {
     ESTNotificationDidSaveNearableZoneDescription,
     ESTNotificationDidSaveNearable,
     ESTNotificationDidBeaconEnterRegion,
@@ -25,7 +25,7 @@ typedef NS_ENUM(NSInteger, ESTNotification)
 
 #define BEACON_REGION_KEY @"beaconRegionKey"
 
-
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @interface ESTNotificationTransporter : NSObject
 
 @property (nonatomic, readonly) NSString *currentAppGroupIdentifier;
@@ -113,7 +113,7 @@ typedef NS_ENUM(NSInteger, ESTNotification)
  *  Use this method for iBeacon and Nearables devices.
  *  In order to get CLBeaconRegion for Nearable use
  *  - (CLBeaconRegion *)beaconRegion method of ESTNearable class.
- * 
+ *
  *  You can get CLBeaconRegion object from NSNotification.userInfo object
  *  under BEACON_REGION_KEY key.
  *

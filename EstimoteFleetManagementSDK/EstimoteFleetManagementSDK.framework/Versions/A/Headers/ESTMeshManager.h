@@ -109,6 +109,16 @@ typedef NS_ENUM(NSInteger, ESTMeshManagerError) {
 - (instancetype)initWithDelegate:(id<ESTMeshManagerDelegate> _Nullable)delegate cbCentralManagerQueue:(dispatch_queue_t)queue NS_DESIGNATED_INITIALIZER;
 
 /**
+ *  Starts sending mesh settings confirmation requests to Estimote Cloud for every meshed device in range.
+ */
+- (void)startConfirmingMeshSettings;
+
+/**
+ *  Stops sending mesh settings confirmation requests to Estimote Cloud.
+ */
+- (void)stopConfirmingMeshSettings;
+
+/**
  *  Method allowing to create Mesh network in Cloud with provided details. Connection with Location Beacon is required to apply Mesh network's settings to the device.
  *  @see ESTDeviceLocationBeacon connect
  *
@@ -141,38 +151,8 @@ typedef NS_ENUM(NSInteger, ESTMeshManagerError) {
 - (void)fetchMeshDetailsWithIdentifier:(NSNumber *)identifier completion:(ESTMeshCompletionBlock)completion;
 
 /**
- *  Starts sending mesh settings confirmation requests to Estimote Cloud for every meshed device in range.
- */
-- (void)startConfirmingMeshSettings;
-
-/**
- *  Stops sending mesh settings confirmation requests to Estimote Cloud.
- */
-- (void)stopConfirmingMeshSettings;
-
-/**
- Queues start UWB ranging command in the Cloud with a default timeout.
- @warning The comand is synchronized upon device connection.
- @warning The comamnd is executed upon device disconnection.
-
- @param networkIdentifier Identifier of Mesh network, that automapping will be triggered for.
- @param completion Completion block with operation's error. Nil value means success.
- */
-- (void)queueAutomappingCommandInCloudForNetworkIdentifier:(uint32_t)networkIdentifier completion:(ESTCompletionBlock)completion;
-
-/**
- Queues stop UWB ranging command in the Cloud.
- @warning The comand is synchronized upon device connection.
- @warning The comamnd is executed upon device disconnection.
- 
- @param networkIdentifier Identifier of Mesh network, that automapping will be canceled for.
- @param completion Completion block with operation's error. Nil value means success.
- */
-- (void)cancelAutomappingCommandInCloudForNetworkIdentifier:(uint32_t)networkIdentifier completion:(ESTCompletionBlock)completion;
-
-/**
  Method allows to prepare pending settings for all beacons in the mesh network.
-
+ 
  @param networkIdentifier Identifier of mesh network.
  @param deviceSettings Group of settings that should be applied.
  @param completion Completion block with operation's error. Nil value means success.
@@ -182,13 +162,33 @@ typedef NS_ENUM(NSInteger, ESTMeshManagerError) {
               completion:(ESTCompletionBlock)completion;
 
 /**
+ Queues start UWB ranging command in the Cloud with a default timeout.
+ @warning The comand is synchronized upon device connection.
+ @warning The comamnd is executed upon device disconnection.
+
+ @param networkIdentifier Identifier of Mesh network, that automapping will be triggered for.
+ @param completion Completion block with operation's error. Nil value means success.
+ */
+- (void)queueAutomappingCommandInCloudForNetworkIdentifier:(uint32_t)networkIdentifier completion:(ESTCompletionBlock)completion DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.");
+
+/**
+ Queues stop UWB ranging command in the Cloud.
+ @warning The comand is synchronized upon device connection.
+ @warning The comamnd is executed upon device disconnection.
+ 
+ @param networkIdentifier Identifier of Mesh network, that automapping will be canceled for.
+ @param completion Completion block with operation's error. Nil value means success.
+ */
+- (void)cancelAutomappingCommandInCloudForNetworkIdentifier:(uint32_t)networkIdentifier completion:(ESTCompletionBlock)completion DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.");
+
+/**
  Sets a pending setting in the Cloud; this setting causes beacons in this mesh network to start scanning for nearables.
  @warning The beacon synchronizes pending settings upon connection and executes them upon disconnection.
 
  @param networkIdentifier Identifier of Mesh network, that tracking nearables will be enabled for.
  @param completion Completion block with operation's error. Nil value means success.
  */
-- (void)enableAssetTrackingForNetworkIdentifier:(uint32_t)networkIdentifier completion:(ESTCompletionBlock)completion;
+- (void)enableAssetTrackingForNetworkIdentifier:(uint32_t)networkIdentifier completion:(ESTCompletionBlock)completion DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.");
 
 /**
  Creates a pending command to prepare (merge) scan reports with nearables' signal readings across the mesh network and queues this command in the Cloud.
@@ -200,7 +200,7 @@ typedef NS_ENUM(NSInteger, ESTMeshManagerError) {
  @param networkIdentifier Identifier of Mesh network, that reading scan reports will be triggered for.
  @param completion Completion block with operation's error. Nil value means success.
  */
-- (void)prepareNearablesScanReportCommandForNetworkIdentifier:(uint32_t)networkIdentifier completion:(ESTCompletionBlock)completion;
+- (void)prepareNearablesScanReportCommandForNetworkIdentifier:(uint32_t)networkIdentifier completion:(ESTCompletionBlock)completion DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.");
 
 @end
 

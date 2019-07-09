@@ -7,6 +7,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @interface ESTBluetoothBeacon : ESTDevice
 
 @property (nonatomic, strong) NSNumber *major;

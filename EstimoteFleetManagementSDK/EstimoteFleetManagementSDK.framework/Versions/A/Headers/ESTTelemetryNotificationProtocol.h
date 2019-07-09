@@ -11,6 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
  * for implementation by classes that
  * want to read telemetry settings from device.
  */
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @protocol ESTTelemetryNotificationProtocol <NSObject>
 
 @required

@@ -6,12 +6,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void(^ESTRequestGetSettingsHistoryBlock)(NSArray<ESTBeaconUpdateInfo *> * _Nullable beaconUpdateInfos, NSError * _Nullable error);
+typedef void (^ESTRequestGetSettingsHistoryBlock)(NSArray<ESTBeaconUpdateInfo *> *_Nullable beaconUpdateInfos, NSError *_Nullable error);
 
 /**
  *  This request is fetching all device's settings changes from the Estimote Cloud for authorized user.
  */
-
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @interface ESTRequestGetSettingsHistory : ESTRequestGetJSON
 
 @property (nonatomic, readonly) NSString *macAddress;

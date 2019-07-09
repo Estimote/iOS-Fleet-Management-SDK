@@ -17,6 +17,7 @@ typedef void (^ESTTelemetryNotificationSystemStatusNotificationBlock)(ESTTelemet
  * expect ESTTelemetryInfoSystemStatus object that transmits
  * system status information (battery voltage and OS uptime)
  */
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @interface ESTTelemetryNotificationSystemStatus : NSObject <ESTTelemetryNotificationProtocol>
 
 /**

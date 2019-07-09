@@ -13,27 +13,26 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  Errors occurring for request.
  */
-typedef NS_ENUM(NSInteger, ESTRequestBeaconColorError)
-{
+typedef NS_ENUM (NSInteger, ESTRequestBeaconColorError) {
     /**
      *  Error returned when Estimote Cloud failed to find color for beacon with provided ID.
      */
     ESTRequestBeaconColorErrorColorNotAvailable
 };
 
-typedef void(^ESTRequestBeaconColorBlock)(ESTColor beaconColor, NSError * _Nullable error);
+typedef void (^ESTRequestBeaconColorBlock)(ESTColor beaconColor, NSError *_Nullable error);
 
 /**
  *  ESTRequestBeaconColor is used to fetch color of single beacon device.
  */
-
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0. Please use ESTRequestGetDeviceDetails instead.")
 @interface ESTRequestBeaconColor : ESTRequestGetJSON
 
-@property (nonatomic, strong, readonly) NSString * _Nullable macAddress;
+@property (nonatomic, strong, readonly) NSString *_Nullable macAddress;
 
-@property (nonatomic, strong, readonly) NSUUID * _Nullable proximityUUID;
-@property (nonatomic, strong, readonly) NSNumber * _Nullable major;
-@property (nonatomic, strong, readonly) NSNumber * _Nullable minor;
+@property (nonatomic, strong, readonly) NSUUID *_Nullable proximityUUID;
+@property (nonatomic, strong, readonly) NSNumber *_Nullable major;
+@property (nonatomic, strong, readonly) NSNumber *_Nullable minor;
 
 /**
  *  Initialise request with MAC address.

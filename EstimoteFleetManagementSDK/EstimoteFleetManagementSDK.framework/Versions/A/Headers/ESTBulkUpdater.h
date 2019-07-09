@@ -6,15 +6,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef NS_ENUM(NSInteger, ESBulkUpdaterStatus)
-{
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
+typedef NS_ENUM (NSInteger, ESBulkUpdaterStatus) {
     ESBulkUpdaterStatusIdle,
     ESBulkUpdaterStatusUpdating,
     ESBulkUpdaterStatusCompleted
 };
 
-typedef NS_ENUM(NSInteger, ESTBulkUpdaterMode)
-{
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
+typedef NS_ENUM (NSInteger, ESTBulkUpdaterMode) {
     ESTBulkUpdaterModeForeground,
     ESTBulkUpdaterModeBackground
 };
@@ -22,28 +22,28 @@ typedef NS_ENUM(NSInteger, ESTBulkUpdaterMode)
 /**
  *  Notification used when Bulk updater starts
  */
-extern NSString * const ESTBulkUpdaterBeginNotification;
+extern NSString *const ESTBulkUpdaterBeginNotification DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.");
 
 /**
  *  The object associated with the notification is the bulk updater.
  *  User info dictionary contains progress (float value) under progress key.
  */
-extern NSString * const ESTBulkUpdaterProgressNotification;
+extern NSString *const ESTBulkUpdaterProgressNotification DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.");
 
 /**
  *  The object associated with the notification is the bulk updater.
  */
-extern NSString * const ESTBulkUpdaterCompleteNotification;
+extern NSString *const ESTBulkUpdaterCompleteNotification DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.");
 
 /**
  *  The object associated with the notification is the bulk updater.
  */
-extern NSString * const ESTBulkUpdaterFailNotification;
+extern NSString *const ESTBulkUpdaterFailNotification DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.");
 
 /**
  *  Notification used to inform user about timeout.
  */
-extern NSString * const ESTBulkUpdaterTimeoutNotification;
+extern NSString *const ESTBulkUpdaterTimeoutNotification DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.");
 
 /**
  *  Main class of the bulk updater that performs all update operations
@@ -55,13 +55,13 @@ extern NSString * const ESTBulkUpdaterTimeoutNotification;
  *  to start update procedure. This class defines notifications that can be used to get progress
  *  of update procedure state.
  */
-
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @interface ESTBulkUpdater : NSObject
 
 /**
  *  Array with information about beacons update status. Contains objects of ESBeaconUpdateInfo.
  */
-@property (nonatomic, strong) NSArray<ESTBeaconUpdateInfo *> * _Nullable beaconInfos;
+@property (nonatomic, strong) NSArray<ESTBeaconUpdateInfo *> *_Nullable beaconInfos;
 
 /**
  *  Indicating what mode is bulk updater currently running.

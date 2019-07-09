@@ -530,6 +530,9 @@
                 <a class="nav-group-task-link" href="../Classes/ESTRequestCancelPendingSettings.html">ESTRequestCancelPendingSettings</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ESTRequestDeletePendingSettings.html">ESTRequestDeletePendingSettings</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ESTRequestGetBeacons.html">ESTRequestGetBeacons</a>
               </li>
               <li class="nav-group-task">
@@ -1062,6 +1065,9 @@
                 <a class="nav-group-task-link" href="../Enums/ESTRequestBeaconMacError.html">ESTRequestBeaconMacError</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums.html#/c:@E@ESTRequestDeletePendingSettingsError">ESTRequestDeletePendingSettingsError</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/ESTRequestGetBeaconsError.html">ESTRequestGetBeaconsError</a>
               </li>
               <li class="nav-group-task">
@@ -1265,6 +1271,9 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTMeshScanReportsManager.h@T@ESTReportScanVOCompletionBlock">ESTReportScanVOCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTRequestDeletePendingSettings.h@T@ESTRequestDeletePendingSettingsBlock">ESTRequestDeletePendingSettingsBlock</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Type Definitions.html#/c:ESTRequestGetDeviceDetails.h@T@ESTRequestGetDeviceDetailsBlock">ESTRequestGetDeviceDetailsBlock</a>
@@ -1536,7 +1545,7 @@
 
                 </div>
               </div>
-            <p>Class that can be used to perform bulk updates on new generation Estimote beacons. 
+            <p>Class that can be used to perform bulk updates on new generation Estimote beacons.
 To start bulk update you need to prepare an array of <code><a href="../Classes/ESTLocationBeaconBulkUpdateConfiguration.html">ESTLocationBeaconBulkUpdateConfiguration</a></code> objects
 containing a device identifier and an array of <code><a href="../Classes/ESTSettingOperation.html">ESTSettingOperation</a></code> objects that will be initialized with
 `ESTSettingReadWrite&rsquo; subclass objects designed for specific settings.</p>
@@ -1568,13 +1577,13 @@ containing a device identifier and an array of <code><a href="../Classes/ESTSett
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/ESTLocationBeaconBulkUpdaterDelegate.html">ESTLocationBeaconBulkUpdaterDelegate</a></span><span class="o">&gt;</span>
-    <span class="n">delegate</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+    <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/ESTLocationBeaconBulkUpdaterDelegate.html">ESTLocationBeaconBulkUpdaterDelegate</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span> <span class="n">delegate</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">weak</span> <span class="k">var</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ESTLocationBeaconBulkUpdaterDelegate.html">ESTLocationBeaconBulkUpdaterDelegate</a></span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">weak</span> <span class="k">var</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ESTLocationBeaconBulkUpdaterDelegate.html">ESTLocationBeaconBulkUpdaterDelegate</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1698,12 +1707,13 @@ containing a device identifier and an array of <code><a href="../Classes/ESTSett
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
-    <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/ESTLocationBeaconBulkUpdateConfiguration.html">ESTLocationBeaconBulkUpdateConfiguration</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">updateConfigurations</span><span class="p">;</span></code></pre>
+    <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/ESTLocationBeaconBulkUpdateConfiguration.html">ESTLocationBeaconBulkUpdateConfiguration</a></span> <span class="o">*&gt;</span>
+        <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">updateConfigurations</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">unowned(unsafe)</span> <span class="k">var</span> <span class="nv">updateConfigurations</span><span class="p">:</span> <span class="kt">NSArray</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">unowned(unsafe)</span> <span class="k">var</span> <span class="nv">updateConfigurations</span><span class="p">:</span> <span class="kt">NSArray</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1724,7 +1734,7 @@ containing a device identifier and an array of <code><a href="../Classes/ESTSett
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Flag controlling whether a firmware update step should be skipped during the Bulk Update process.
-If YES, then the step is skipped. 
+If YES, then the step is skipped.
 If NO, then the step is performed as usual.
 The default value is NO.</p>
 
@@ -1765,12 +1775,13 @@ The default value is NO.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithCBCentralManagerQueue</span><span class="p">:(</span><span class="n">dispatch_queue_t</span><span class="p">)</span><span class="nv">queue</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithCBCentralManagerQueue</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">nonnull</span> <span class="n">dispatch_queue_t</span><span class="p">)</span><span class="nv">queue</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="nf">init</span><span class="o">!</span><span class="p">(</span><span class="n">cbCentralManagerQueue</span> <span class="nv">queue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="o">!</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="nf">init</span><span class="p">(</span><span class="n">cbCentralManagerQueue</span> <span class="nv">queue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1822,12 +1833,12 @@ The default value is NO.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="n">init</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="n">init</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">convenience</span> <span class="nf">init</span><span class="o">!</span><span class="p">()</span></code></pre>
+                          <pre class="highlight"><code><span class="n">convenience</span> <span class="nf">init</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -2017,12 +2028,13 @@ The default value is NO.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">startWithUpdateConfigurations</span><span class="p">:</span>
-    <span class="p">(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/ESTLocationBeaconBulkUpdateConfiguration.html">ESTLocationBeaconBulkUpdateConfiguration</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">updateConfigurations</span><span class="p">;</span></code></pre>
+    <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/ESTLocationBeaconBulkUpdateConfiguration.html">ESTLocationBeaconBulkUpdateConfiguration</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span>
+        <span class="n"><a href="../Classes/ESTLocationBeaconBulkUpdater.html#/c:objc(cs)ESTLocationBeaconBulkUpdater(py)updateConfigurations">updateConfigurations</a></span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">start</span><span class="p">(</span><span class="n">with</span> <span class="nv">updateConfigurations</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/ESTLocationBeaconBulkUpdateConfiguration.html">ESTLocationBeaconBulkUpdateConfiguration</a></span><span class="p">]</span><span class="o">!</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">start</span><span class="p">(</span><span class="n">with</span> <span class="nv">updateConfigurations</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/ESTLocationBeaconBulkUpdateConfiguration.html">ESTLocationBeaconBulkUpdateConfiguration</a></span><span class="p">])</span></code></pre>
 
                         </div>
                       </div>
@@ -2077,14 +2089,14 @@ The default value is NO.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">startWithUpdateConfigurations</span><span class="p">:</span>
-            <span class="p">(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/ESTLocationBeaconBulkUpdateConfiguration.html">ESTLocationBeaconBulkUpdateConfiguration</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span>
+            <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/ESTLocationBeaconBulkUpdateConfiguration.html">ESTLocationBeaconBulkUpdateConfiguration</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span>
                 <span class="n"><a href="../Classes/ESTLocationBeaconBulkUpdater.html#/c:objc(cs)ESTLocationBeaconBulkUpdater(py)updateConfigurations">updateConfigurations</a></span>
                               <span class="n"><a href="../Classes/ESTLocationBeaconBulkUpdater.html#/c:objc(cs)ESTLocationBeaconBulkUpdater(py)timeout">timeout</a></span><span class="o">:</span><span class="p">(</span><span class="n">NSTimeInterval</span><span class="p">)</span><span class="n"><a href="../Classes/ESTLocationBeaconBulkUpdater.html#/c:objc(cs)ESTLocationBeaconBulkUpdater(py)timeout">timeout</a></span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">start</span><span class="p">(</span><span class="n">with</span> <span class="nv">updateConfigurations</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/ESTLocationBeaconBulkUpdateConfiguration.html">ESTLocationBeaconBulkUpdateConfiguration</a></span><span class="p">]</span><span class="o">!</span><span class="p">,</span> <span class="nv">timeout</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">start</span><span class="p">(</span><span class="n">with</span> <span class="nv">updateConfigurations</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/ESTLocationBeaconBulkUpdateConfiguration.html">ESTLocationBeaconBulkUpdateConfiguration</a></span><span class="p">],</span> <span class="nv">timeout</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2178,12 +2190,12 @@ Note that, if update for a certain device has already started it might not be ca
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Enums/ESTBulkUpdaterDeviceUpdateStatus.html">ESTBulkUpdaterDeviceUpdateStatus</a></span><span class="p">)</span><span class="nf">statusForDeviceWithIdentifier</span><span class="p">:</span>
-    <span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">deviceIdentifier</span><span class="p">;</span></code></pre>
+    <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">deviceIdentifier</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">statusForDevice</span><span class="p">(</span><span class="n">withIdentifier</span> <span class="nv">deviceIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Enums/ESTBulkUpdaterDeviceUpdateStatus.html">ESTBulkUpdaterDeviceUpdateStatus</a></span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">statusForDevice</span><span class="p">(</span><span class="n">withIdentifier</span> <span class="nv">deviceIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Enums/ESTBulkUpdaterDeviceUpdateStatus.html">ESTBulkUpdaterDeviceUpdateStatus</a></span></code></pre>
 
                         </div>
                       </div>
@@ -2287,7 +2299,7 @@ Note that, if update for a certain device has already started it might not be ca
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2019-05-22)</p>
+      <p>&copy; 2019 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2019-07-09)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

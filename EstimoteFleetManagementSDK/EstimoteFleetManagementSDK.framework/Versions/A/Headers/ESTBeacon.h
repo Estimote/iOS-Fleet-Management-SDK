@@ -6,12 +6,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-
 /**
  *  ESTSecureBeacon represents single Estimote Beacon broadcasting iBeacon packet with Secure UUID feature enabled.
  *  Provided Proximity UUID, Major and Minor values represent actual beacon values, not randomised ones. `ESTSecureBeacon`
  *  should not be created manually. Objects of this class are returning from `ESTSecureBeaconManager` class during ranging.
  */
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @interface ESTBeacon : NSObject <NSCopying, NSSecureCoding>
 
 /**

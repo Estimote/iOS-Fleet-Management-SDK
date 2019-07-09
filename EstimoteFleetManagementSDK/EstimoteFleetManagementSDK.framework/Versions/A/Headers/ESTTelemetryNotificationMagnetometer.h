@@ -9,7 +9,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 typedef void (^ESTTelemetryNotificationMagnetometerNotificationBlock)(ESTTelemetryInfoMagnetometer *magnetometer);
 
-
 /**
  * ESTTelemetryNotificationMagnetometer class is used to
  * initialize block that will be fired everytime
@@ -18,6 +17,7 @@ typedef void (^ESTTelemetryNotificationMagnetometerNotificationBlock)(ESTTelemet
  * expect ESTTelemetryInfoMagnetometer object that transmits
  * magnetometer values in X, Y, Z axises, read by beacon device.
  */
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @interface ESTTelemetryNotificationMagnetometer : NSObject <ESTTelemetryNotificationProtocol>
 
 /**

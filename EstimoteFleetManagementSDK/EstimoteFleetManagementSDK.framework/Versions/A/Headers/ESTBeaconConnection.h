@@ -10,25 +10,23 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-#define CONNECTION_ERROR_UID_MISSING    400
-#define CONNECTION_ERROR_AUTHORIZATION  401
-#define CONNECTION_ERROR_TIMEOUT        402
-#define CONNECTION_ERROR_NOT_LOGGED_IN  403
+#define CONNECTION_ERROR_UID_MISSING         400
+#define CONNECTION_ERROR_AUTHORIZATION       401
+#define CONNECTION_ERROR_TIMEOUT             402
+#define CONNECTION_ERROR_NOT_LOGGED_IN       403
 
-#define CHARACTERISTIC_ERROR            410
-#define SAME_VALUE_ERROR                411
+#define CHARACTERISTIC_ERROR                 410
+#define SAME_VALUE_ERROR                     411
 
-
-#define AUTHORIZATION_ERROR_DIFFERENT_USER      601
-#define AUTHORIZATION_ERROR_NO_CLOUD_ACCOUNT    602
-#define AUTHORIZATION_ERROR_NOT_ASSIGNED        603
-#define AUTHORIZATION_ERROR_NOT_REGISTERED      604
-#define AUTHORIZATION_ERROR_SERVER              605
+#define AUTHORIZATION_ERROR_DIFFERENT_USER   601
+#define AUTHORIZATION_ERROR_NO_CLOUD_ACCOUNT 602
+#define AUTHORIZATION_ERROR_NOT_ASSIGNED     603
+#define AUTHORIZATION_ERROR_NOT_REGISTERED   604
+#define AUTHORIZATION_ERROR_SERVER           605
 
 @class ESTBeaconConnection;
 
-enum
-{
+enum {
     ESTConnectionInternetConnectionError,
     ESTConnectionIdentifierMissingError,
     ESTConnectionNotAuthorizedError,
@@ -38,7 +36,7 @@ enum
 /**
  * The `ESTBeaconConnectionDelegate` protocol defines the delegate methods used to receive updates about `<ESTBeaconConnection>` connection status, as well as sensor related updates once a connection to the beacon has been established.
  */
-
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @protocol ESTBeaconConnectionDelegate <NSObject>
 
 @optional
@@ -50,7 +48,7 @@ enum
  * @param data Information about the device stored in the Estimote Cloud.
  * @param error An error object containing the error code that indicates why connection failed.
  */
-- (void)beaconConnection:(ESTBeaconConnection *)connection didVerifyWithData:(ESTBeaconVO * _Nullable)data error:(NSError * _Nullable)error;
+- (void)beaconConnection:(ESTBeaconConnection *)connection didVerifyWithData:(ESTBeaconVO *_Nullable)data error:(NSError *_Nullable)error;
 
 /**
  * Tells the delegate that an attempt to connect to a beacon succeeded and the connection has been established.
@@ -73,7 +71,7 @@ enum
  * @param connection The beacon connection object reporting the event.
  * @param error An error object containing the error code that indicates why the beacon disconnected.
  */
-- (void)beaconConnection:(ESTBeaconConnection *)connection didDisconnectWithError:(NSError * _Nullable)error;
+- (void)beaconConnection:(ESTBeaconConnection *)connection didDisconnectWithError:(NSError *_Nullable)error;
 
 /**
  * Tells the delegate that a beacon's `<[ESTBeaconConnection motionState]>` value has changed.
@@ -104,7 +102,7 @@ enum
  *
  * Properties become editable once connected to the beacon. See connect for more details about connecting to the beacon. You will also need to assign a delegate to be notified about connection and disconnection events. The delegate needs to conform to the `<ESTBeaconConnectionDelegate>` protocol.
  */
-
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @interface ESTBeaconConnection : NSObject
 
 /**
@@ -245,7 +243,6 @@ enum
  */
 - (void)startConnection;
 
-
 /**
  *  Initiates connection procedure with additional params
  *
@@ -265,7 +262,6 @@ enum
  */
 - (void)disconnect;
 
-
 #pragma mark - Device identification
 ///--------------------------------------------------------------------
 /// @name Device identification
@@ -274,49 +270,49 @@ enum
 /**
  * The MAC address of the beacon.
  */
-@property (readonly, nonatomic) NSString * _Nullable macAddress;
+@property (readonly, nonatomic) NSString *_Nullable macAddress;
 
 /**
  * The name of the beacon.
  *
  * This value is stored and retrieved from the Estimote Cloud.
  */
-@property (readonly, nonatomic) NSString * _Nullable name;
+@property (readonly, nonatomic) NSString *_Nullable name;
 
 /**
  * The dictionary containing geocoding data for beacon's GPS location.
  *
  * This value is stored and retrieved from the Estimote Cloud.
  */
-@property (readonly, nonatomic) NSDictionary * _Nullable location;
+@property (readonly, nonatomic) NSDictionary *_Nullable location;
 
 /**
  * The latitude of beacon's GPS location.
  *
  * This value is stored and retrieved from the Estimote Cloud.
  */
-@property (readonly, nonatomic) NSNumber * _Nullable latitude;
+@property (readonly, nonatomic) NSNumber *_Nullable latitude;
 
 /**
  * The longitude of beacon's GPS location.
  *
  * This value is stored and retrieved from the Estimote Cloud.
  */
-@property (readonly, nonatomic) NSNumber * _Nullable longitude;
+@property (readonly, nonatomic) NSNumber *_Nullable longitude;
 
 /**
  * The identifier of indoor location beacon belongs to.
  *
  * This value is stored and retrieved from the Estimote Cloud.
  */
-@property (readonly, nonatomic) NSString * _Nullable indoorLocationIdentifier;
+@property (readonly, nonatomic) NSString *_Nullable indoorLocationIdentifier;
 
 /**
  * The name of indoor location beacon belongs to.
  *
  * This value is stored and retrieved from the Estimote Cloud.
  */
-@property (readonly, nonatomic) NSString * _Nullable indoorLocationName;
+@property (readonly, nonatomic) NSString *_Nullable indoorLocationName;
 
 /**
  * The color of the beacon.
@@ -329,7 +325,7 @@ enum
 /**
  *  The underlying Bluetooth peripheral device.
  */
-@property (readonly, nonatomic) CBPeripheral * _Nullable peripheral __attribute__((deprecated("CBPeripheral peripheral property is deprecated since 3.7.0 version")));
+@property (readonly, nonatomic) CBPeripheral *_Nullable peripheral __attribute__((deprecated("CBPeripheral peripheral property is deprecated since 3.7.0 version")));
 
 /**
  *  Broadcasting scheme of device.
@@ -346,7 +342,7 @@ enum
  *
  * @see writeProximityUUID:completion:
  */
-@property (readonly, nonatomic) NSUUID * _Nullable proximityUUID;
+@property (readonly, nonatomic) NSUUID *_Nullable proximityUUID;
 
 /**
  * The proximity ID of the beacon when it's in motion.
@@ -362,21 +358,21 @@ enum
  * @since Estimote OS 2.0
  *
  */
-@property (readonly, nonatomic) NSUUID * _Nullable motionProximityUUID;
+@property (readonly, nonatomic) NSUUID *_Nullable motionProximityUUID;
 
 /**
  * The most significant value in the beacon.
  *
  * @see writeMajor:completion:
  */
-@property (readonly, nonatomic) NSNumber * _Nullable major;
+@property (readonly, nonatomic) NSNumber *_Nullable major;
 
 /**
  * The least significant value in the beacon.
  *
  * @see writeMinor:completion:
  */
-@property (readonly, nonatomic) NSNumber * _Nullable minor;
+@property (readonly, nonatomic) NSNumber *_Nullable minor;
 
 /**
  * The power of the beacon's radio signal in dBm.
@@ -385,38 +381,38 @@ enum
  *
  * @see writePower:completion:
  */
-@property (readonly, nonatomic) NSNumber * _Nullable power;
+@property (readonly, nonatomic) NSNumber *_Nullable power;
 
 /**
  * The advertising interval of the beacon in ms.
  *
  * @see writeAdvInterval:completion:
  */
-@property (readonly, nonatomic) NSNumber * _Nullable advInterval;
+@property (readonly, nonatomic) NSNumber *_Nullable advInterval;
 
 #pragma mark - Google Eddystone
 
 /**
  * Namespace ID of Google Eddystone - part of device identification.
  */
-@property (readonly, nonatomic) NSString * _Nullable eddystoneNamespace;
+@property (readonly, nonatomic) NSString *_Nullable eddystoneNamespace;
 
 /**
  * Instance ID of Google Eddystone - part of device identification.
  */
-@property (readonly, nonatomic) NSString * _Nullable eddystoneInstance;
+@property (readonly, nonatomic) NSString *_Nullable eddystoneInstance;
 
 /**
  * URL advertised by Google Eddystone device in URL mode.
  */
-@property (readonly, nonatomic) NSString * _Nullable eddystoneURL;
+@property (readonly, nonatomic) NSString *_Nullable eddystoneURL;
 
 #pragma mark - Hardware and software information
 
 /**
  * The hardware version of the beacon.
  */
-@property (readonly, nonatomic) NSString * _Nullable hardwareVersion;
+@property (readonly, nonatomic) NSString *_Nullable hardwareVersion;
 
 /**
  * The firmware version of the beacon.
@@ -424,12 +420,12 @@ enum
  * @see checkFirmwareUpdateWithCompletion:
  * @see updateFirmwareWithProgress:completion:
  */
-@property (readonly, nonatomic) NSString * _Nullable firmwareVersion;
+@property (readonly, nonatomic) NSString *_Nullable firmwareVersion;
 
 /**
  * The received signal strength of the beacon, measured in decibels.
  */
-@property (readonly, nonatomic) NSNumber * _Nullable rssi;
+@property (readonly, nonatomic) NSNumber *_Nullable rssi;
 
 #pragma mark - Power management
 ///--------------------------------------------------------------------
@@ -441,7 +437,7 @@ enum
  *
  * Battery level ranges from 0 (fully discharged) to 100 (fully charged).
  */
-@property (readonly, nonatomic) NSNumber * _Nullable batteryLevel;
+@property (readonly, nonatomic) NSNumber *_Nullable batteryLevel;
 
 /**
  * The battery model.
@@ -453,7 +449,7 @@ enum
 /**
  *    Remaining lifetime in days, based on current battery level, advertising interval and broadcasting power values
  */
-@property (readonly, nonatomic) NSNumber * _Nullable remainingLifetime;
+@property (readonly, nonatomic) NSNumber *_Nullable remainingLifetime;
 
 /**
  * A flag indicating availability and status of the Basic Power Mode.
@@ -782,7 +778,6 @@ enum
 - (void)writeSmartPowerModeEnabled:(BOOL)enable
                         completion:(ESTBoolCompletionBlock)completion;
 
-
 #pragma mark - Writing methods for security features
 ///--------------------------------------------------------------------
 /// @name Writing methods for security features
@@ -885,8 +880,8 @@ enum
   *  @param tags       Cloud Tags
   *  @param completion completion block fired on operation completion
   */
--  (void)writeTags:(NSSet <NSString *> *)tags
-        completion:(ESTCompletionBlock)completion;
+- (void)writeTags:(NSSet <NSString *> *)tags
+       completion:(ESTCompletionBlock)completion;
 
 #pragma mark - Reset to factory settings
 ///--------------------------------------------------------------------

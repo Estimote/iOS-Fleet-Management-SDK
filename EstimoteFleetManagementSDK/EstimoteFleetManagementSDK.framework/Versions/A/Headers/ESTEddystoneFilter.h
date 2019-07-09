@@ -6,11 +6,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-
 /**
  *  Generic Eddystone based filter used by `ESTEddystoneManager` in discovery process.
  *  Instance of `ESTEddystoneFilter` can be used as a base for other filters.
  */
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @interface ESTEddystoneFilter : NSObject
 
 /**

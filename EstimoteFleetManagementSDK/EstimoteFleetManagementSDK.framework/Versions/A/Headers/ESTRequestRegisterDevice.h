@@ -11,7 +11,7 @@ typedef void(^ESTRequestRegisterDeviceBlock)(NSError * _Nullable error);
  *  Request allows to register device in Estimote Cloud. After registration device can remotely receive information
  *  about pending settings.
  */
-
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @interface ESTRequestRegisterDevice : ESTRequestPostJSON
 
 @property (nonatomic, strong, readonly) NSData *deviceToken;

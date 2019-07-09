@@ -6,8 +6,7 @@
 
 @class ESTDeviceSettings;
 
-typedef NS_ENUM(NSInteger, ESTMeshNetworkType)
-{
+typedef NS_ENUM (NSInteger, ESTMeshNetworkType) {
     /**
      *  Standard Mesh network.
      */
@@ -20,8 +19,7 @@ typedef NS_ENUM(NSInteger, ESTMeshNetworkType)
 
 #define ESTMeshErrorDomain @"ESTMeshErrorDomain"
 
-typedef NS_ENUM(NSInteger, ESTMeshError)
-{
+typedef NS_ENUM (NSInteger, ESTMeshError) {
     /**
      *  Provided arguments are invalid.
      */
@@ -37,7 +35,6 @@ typedef NS_ENUM(NSInteger, ESTMeshError)
 };
 
 NS_ASSUME_NONNULL_BEGIN
-
 
 /**
  *  ESTMesh represents object of Mesh network's details stored in Estimote Cloud.
@@ -65,11 +62,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readwrite) NSArray <NSString *> *devices;
 
 /**
- *  Mesh network's settings shared among all devices included in the Mesh.
- */
-@property (nonatomic, strong, readonly) ESTDeviceSettings *settings;
-
-/**
  *  Method allows to initialize Mesh network object.
  *
  *  @param  cloudData   Data fetched from Estimote Cloud.
@@ -86,7 +78,6 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param  completion  Completion block with operation result. Nil error means success.
  */
 - (void)addDevice:(ESTDeviceLocationBeacon *)device completion:(ESTCompletionBlock)completion;
-
 
 /**
  *  Removes device from Mesh network.

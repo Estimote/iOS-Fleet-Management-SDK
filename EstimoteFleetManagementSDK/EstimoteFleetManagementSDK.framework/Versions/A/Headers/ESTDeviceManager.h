@@ -6,9 +6,7 @@
 #import "ESTDeviceNearable.h"
 #import "ESTTelemetryNotificationProtocol.h"
 
-
 NS_ASSUME_NONNULL_BEGIN
-
 
 @class ESTDeviceManager;
 
@@ -32,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * @param manager The utility manager object reporting the event.
  */
-- (void)deviceManagerDidFailDiscovery:(ESTDeviceManager *)manager DEPRECATED_MSG_ATTRIBUTE("Since 4.27.0 please use deviceManager:didFailWithError:");
+- (void)deviceManagerDidFailDiscovery:(ESTDeviceManager *) manager DEPRECATED_MSG_ATTRIBUTE("Since 4.27.0 please use deviceManager:didFailWithError:");
 
 /**
  Tells the delegate the exact reason of discovery failure.
@@ -47,7 +45,7 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol ESTDeviceFilter;
 
 /**
- * The `ESTDeviceManager` class defines the interface for utility methods related to Estimote devices. 
+ * The `ESTDeviceManager` class defines the interface for utility methods related to Estimote devices.
  * The main functionality allows to discover CoreBluetooth based representation of Estimote Beacon devices.
  *
  * One device manager instance can discover devices only with one filter at a time.
@@ -81,7 +79,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)init;
 
 /**
- *  Start discovering Estimote devices determined by the filter, using CoreBluetooth. 
+ *  Start discovering Estimote devices determined by the filter, using CoreBluetooth.
  *  One filter can be active per a ESTDeviceManager instance.
  *  If called multiple times only the last provided filter is active.
  *
@@ -103,7 +101,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param infos Array of objects conforming to ESTTelemetryNotificationProtocol.
  */
-- (void)registerForTelemetryNotifications:(NSArray <ESTTelemetryNotificationProtocol> *)infos;
+- (void)registerForTelemetryNotifications:(NSArray <ESTTelemetryNotificationProtocol> *) infos DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.");
 
 /**
  *  Use this method to register object that implements
@@ -112,7 +110,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param info Single object conforming to ESTTelemetryNotificationProtocol.
  */
-- (void)registerForTelemetryNotification:(id <ESTTelemetryNotificationProtocol>)info;
+- (void)registerForTelemetryNotification:(id <ESTTelemetryNotificationProtocol>) info DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.");
 
 /**
  *  Use this method to unregister object that implements
@@ -121,7 +119,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param info Single object conforming to ESTTelemetryNotificationProtocol.
  */
-- (void)unregisterForTelemetryNotification:(id <ESTTelemetryNotificationProtocol>)info;
+- (void)unregisterForTelemetryNotification:(id <ESTTelemetryNotificationProtocol>) info DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.");
 
 @end
 

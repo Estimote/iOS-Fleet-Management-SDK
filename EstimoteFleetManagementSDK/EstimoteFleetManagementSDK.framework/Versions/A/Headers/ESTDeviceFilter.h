@@ -5,7 +5,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-
 /**
  *  Protocol that every filter class used by ESTDeviceManager should conform to.
  *

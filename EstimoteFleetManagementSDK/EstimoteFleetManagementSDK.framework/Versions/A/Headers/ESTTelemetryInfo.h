@@ -6,6 +6,7 @@
 /**
  * Class for objects carying data from telemetry packet.
  */
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @interface ESTTelemetryInfo : NSObject
 
 /**

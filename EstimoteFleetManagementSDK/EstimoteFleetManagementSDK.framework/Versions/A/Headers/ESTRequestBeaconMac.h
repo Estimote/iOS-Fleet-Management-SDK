@@ -11,15 +11,14 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  Errors occurring for request.
  */
-typedef NS_ENUM(NSInteger, ESTRequestBeaconMacError)
-{
+typedef NS_ENUM (NSInteger, ESTRequestBeaconMacError) {
     /**
      *  Unknown error occurred.
      */
     ESTRequestBeaconMacErrorUnknown
 };
 
-typedef void(^ESTRequestBeaconMacBlock)(NSString * _Nullable macAddress, NSError * _Nullable error);
+typedef void (^ESTRequestBeaconMacBlock)(NSString *_Nullable macAddress, NSError *_Nullable error);
 
 /**
  *  ESTRequestBeaconMac allows to get MAC address for beacon based on CLBeacon
@@ -27,6 +26,7 @@ typedef void(^ESTRequestBeaconMacBlock)(NSString * _Nullable macAddress, NSError
  *  for all beacons.
  */
 
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @interface ESTRequestBeaconMac : ESTRequestGetJSON
 
 @property (nonatomic, strong, readonly) NSUUID *beaconProximityUUID;

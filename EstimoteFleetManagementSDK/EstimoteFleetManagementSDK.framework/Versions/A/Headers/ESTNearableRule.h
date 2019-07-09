@@ -10,13 +10,13 @@ NS_ASSUME_NONNULL_BEGIN
  * The `ESTNearableRule` is abstract class defining base methods for all Estimote nearable related rules. It should not be used itself as it is not
  * defining any conditions.
  */
-
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @interface ESTNearableRule : ESTRule
 
 /**
  *  Identifier of nearable that is going to be associated with this rule.
  */
-@property (nonatomic, strong, readonly) NSString * _Nullable nearableIdentifier;
+@property (nonatomic, strong, readonly) NSString *_Nullable nearableIdentifier;
 
 /**
  *  Type of nearable that is going to be associated with this rule.

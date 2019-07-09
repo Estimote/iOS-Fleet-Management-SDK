@@ -9,7 +9,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 typedef void (^ESTTelemetryNotificationPressureNotificationBlock)(ESTTelemetryInfoPressure *pressure);
 
-
 /**
  * ESTTelemetryNotificationPressure class is used to
  * initialize block that will be fired everytime
@@ -18,6 +17,7 @@ typedef void (^ESTTelemetryNotificationPressureNotificationBlock)(ESTTelemetryIn
  * expect ESTTelemetryInfoPressure object that transmits
  * atmospheric pressure value (in pascals) read by beacon.
  */
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @interface ESTTelemetryNotificationPressure : NSObject <ESTTelemetryNotificationProtocol>
 
 /**

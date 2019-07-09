@@ -4,14 +4,14 @@
 #import <Foundation/Foundation.h>
 #import "ESTDeviceLocationBeacon.h"
 
-
 NS_ASSUME_NONNULL_BEGIN
 
 /**
  *  ESTFeaturesetEstimoteMonitoring encapsulates operations required for Estimote Monitoring's functionality.
- *  The algorithm relies on Estimote Location being advertised, and this helper tool ensures that 
+ *  The algorithm relies on Estimote Location being advertised, and this helper tool ensures that
  *  the settings are set properly.
  */
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @interface ESTFeaturesetEstimoteMonitoring : NSObject
 
 /**
@@ -28,13 +28,13 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param completion Completion block invoked after all operations are done (either successfully or not).
  *
  *  @discussion
- *  If all underlying operations succeed, <code>completion</code>'s <code>featuresetEnabled</code> tells 
+ *  If all underlying operations succeed, <code>completion</code>'s <code>featuresetEnabled</code> tells
  *  whether Estimote Monitoring prerequisites are met, <code>errors</code> is nil.
  *
- *  If any of underlying operation fails, <code>completion</code>'s <code>featuresetEnabled</code> 
+ *  If any of underlying operation fails, <code>completion</code>'s <code>featuresetEnabled</code>
  *  is set to <code>NO</code>, and <code>errors</code> array contains errors resulting from failed operations.
  */
-- (void)readSettingsWithCompletion:(void (^)(BOOL featuresetEnabled, NSArray<NSError *> * _Nullable errors))completion;
+- (void)readSettingsWithCompletion:(void (^)(BOOL featuresetEnabled, NSArray<NSError *> *_Nullable errors))completion;
 
 /**
  *  Write Estimote Monitoring values for settings related to EM algorithms.
@@ -48,7 +48,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  If any of underlying operation fails, <code>completion</code>'s <code>errors</code> array
  *  contains errors resulting from failed operations.
  */
-- (void)writeEnableSettings:(BOOL)enabled withCompletion:(void (^)(NSArray<NSError *> * _Nullable errors))completion;
+- (void)writeEnableSettings:(BOOL)enabled withCompletion:(void (^)(NSArray<NSError *> *_Nullable errors))completion;
 
 /**
  *  Settings that were written when executing this featureset, for Estimote SDK versions <= 4.22.1.
@@ -56,12 +56,12 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @return Dictionary with setting class names as keys, setting objects as values.
  */
-+ (NSDictionary<NSString *, ESTSettingBase *> *)classNamesToSettings
-DEPRECATED_MSG_ATTRIBUTE("Use +classNamesToSettingsForDeviceIdentifier: instead");
++ (NSDictionary<NSString *, ESTSettingBase *> *) classNamesToSettings
+    DEPRECATED_MSG_ATTRIBUTE("Use +classNamesToSettingsForDeviceIdentifier: instead");
 
 /**
- *  Settings written when executing this featureset. 
- *  This method requires passing device identifier, because Generic Advertiser data setting 
+ *  Settings written when executing this featureset.
+ *  This method requires passing device identifier, because Generic Advertiser data setting
  *  (in particular: its MAC address) depends on the identifier.
  *  If a nil value is passed, MAC address in Generic Advertiser data setting is set to 6 bytes of 0xFF.
  *
@@ -75,8 +75,8 @@ DEPRECATED_MSG_ATTRIBUTE("Use +classNamesToSettingsForDeviceIdentifier: instead"
  *  Write operations for this featureset, for Estimote SDK versions <= 4.22.1.
  *  Calls +getWriteOperationsForDeviceIdentifier: with nil.
  */
-+ (NSArray <id<ESTBeaconOperationProtocol>> *)getWriteOperations
-DEPRECATED_MSG_ATTRIBUTE("Use +getWriteOperationsForDeviceIdentifier: instead");
++ (NSArray <id<ESTBeaconOperationProtocol> > *) getWriteOperations
+    DEPRECATED_MSG_ATTRIBUTE("Use +getWriteOperationsForDeviceIdentifier: instead");
 
 /**
  *  An array containing write operations from given featureset.
@@ -84,7 +84,7 @@ DEPRECATED_MSG_ATTRIBUTE("Use +getWriteOperationsForDeviceIdentifier: instead");
  *  (in particular: its MAC address) depends on the identifier.
  *  If a nil value is passed, MAC address in Generic Advertiser data setting is set to 6 bytes of 0xFF.
  */
-+ (NSArray <id<ESTBeaconOperationProtocol>> *)getWriteOperationsForDeviceIdentifier:(nullable NSString *)deviceIdentifier;
++ (NSArray <id<ESTBeaconOperationProtocol> > *)getWriteOperationsForDeviceIdentifier:(nullable NSString *)deviceIdentifier;
 
 /**
  *  Determine whether the provided settings represent a proper configuration for Estimote Monitoring.

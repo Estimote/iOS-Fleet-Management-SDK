@@ -8,7 +8,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * The `ESTMotionRule` class defines single rule related to motion state of the Estimote nearable device.
  */
-
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @interface ESTMotionRule : ESTNearableRule
 
 @property (nonatomic, assign) BOOL motionState;

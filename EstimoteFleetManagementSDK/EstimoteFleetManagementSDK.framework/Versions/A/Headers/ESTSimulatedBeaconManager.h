@@ -1,13 +1,12 @@
 //  Estimote Fleet Management SDK
 //  Copyright (c) 2015 Estimote. All rights reserved.
 
-
 #import <CoreLocation/CoreLocation.h>
 
 /**
  *  Use this class to simulate beacons.
  */
-
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @interface ESTSimulatedBeaconManager : CLLocationManager <CLLocationManagerDelegate>
 
 /**

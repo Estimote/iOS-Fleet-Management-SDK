@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "ESTRequestGetJSON.h"
 
-
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0. Please use ESTRequestGetDeviceDetails instead.")
 @interface ESTRequestNearableDetails : ESTRequestGetJSON
 
 @property (nonatomic, strong, readonly) NSString *nearableUID; // mac or proximityUUID:major:minor

@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 *  http://go.esti.be/bedroom urls. In that case scanning with URL Domain defined as 'go.esti.be'
 *  will provided both devices as discovery process result.
 */
-
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @interface ESTEddystoneFilterURLDomain : ESTEddystoneFilter
 
 /**

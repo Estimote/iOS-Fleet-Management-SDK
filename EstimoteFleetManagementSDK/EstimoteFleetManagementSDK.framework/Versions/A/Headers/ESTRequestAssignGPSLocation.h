@@ -12,8 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  Errors occurring for request.
  */
-typedef NS_ENUM(NSInteger, ESTRequestAssignGPSLocationError)
-{
+typedef NS_ENUM (NSInteger, ESTRequestAssignGPSLocationError) {
     /**
      *  Error returned when request failed to obtain current GPS Location.
      *  It can occurs only when location was not provided during initialisation.
@@ -21,13 +20,13 @@ typedef NS_ENUM(NSInteger, ESTRequestAssignGPSLocationError)
     ESTRequestAssignGPSLocationErrorGPSLocationNotAvailable
 };
 
-typedef void(^ESTRequestAssignGPSLocationBlock)(CLLocation * _Nullable result, NSError * _Nullable error);
+typedef void (^ESTRequestAssignGPSLocationBlock)(CLLocation *_Nullable result, NSError *_Nullable error);
 
 /**
- *  ESTRequestBeaconColor is used to assign GPS location to single beacon device. 
+ *  ESTRequestBeaconColor is used to assign GPS location to single beacon device.
  *  GPS Location can be provided during initialisation or taken automatically when nil provided.
  */
-
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @interface ESTRequestAssignGPSLocation : ESTRequestPutJSON
 
 /**

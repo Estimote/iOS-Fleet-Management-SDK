@@ -8,7 +8,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
 * ESTSimulatedNearableManager is a class for simulating Nearables (ESTNearable) objects.
 */
-
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @interface ESTSimulatedNearableManager : ESTNearableManager <ESTNearableManagerDelegate>
 
 /**

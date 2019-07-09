@@ -4,7 +4,6 @@
 #import <Foundation/Foundation.h>
 #import "ESTDeviceLocationBeacon.h"
 
-
 NS_ASSUME_NONNULL_BEGIN
 
 /**
@@ -12,6 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  The algorithm relies on Generic Adevrtiser, and this helper tool ensures that
  *  the settings are set properly.
  */
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @interface ESTFeaturesetBackgroundMode : NSObject
 
 /**
@@ -34,7 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  If any of underlying operation fails, <code>completion</code>'s <code>featuresetEnabled</code>
  *  is set to <code>NO</code>, and <code>errors</code> array contains errors resulting from failed operations.
  */
-- (void)readSettingsWithCompletion:(void (^)(BOOL featuresetEnabled, NSArray<NSError *> * _Nullable errors))completion;
+- (void)readSettingsWithCompletion:(void (^)(BOOL featuresetEnabled, NSArray<NSError *> *_Nullable errors))completion;
 
 /**
  *  Write Background Mode values for settings related to EM algorithms.
@@ -48,8 +48,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  If any of underlying operation fails, <code>completion</code>'s <code>errors</code> array
  *  contains errors resulting from failed operations.
  */
-- (void)writeEnableSettings:(BOOL)enabled withCompletion:(void (^)(NSArray<NSError *> * _Nullable errors))completion;
-
+- (void)writeEnableSettings:(BOOL)enabled withCompletion:(void (^)(NSArray<NSError *> *_Nullable errors))completion;
 
 /**
  *  Settings that were written when executing this featureset, for Estimote SDK versions <= 4.22.1.
@@ -57,8 +56,8 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @return Dictionary with setting class names as keys, setting objects as values.
  */
-+ (NSDictionary<NSString *, ESTSettingBase *> *)classNamesToSettings
-DEPRECATED_MSG_ATTRIBUTE("Use +classNamesToSettingsForDeviceIdentifier: instead");
++ (NSDictionary<NSString *, ESTSettingBase *> *) classNamesToSettings
+    DEPRECATED_MSG_ATTRIBUTE("Use +classNamesToSettingsForDeviceIdentifier: instead");
 
 /**
  *  Settings written when executing this featureset. This method requires passing device identifier,
@@ -73,16 +72,16 @@ DEPRECATED_MSG_ATTRIBUTE("Use +classNamesToSettingsForDeviceIdentifier: instead"
 /**
  *  Write operations for this featureset, for Estimote SDK versions <= 4.22.1.
  *  Calls +classNamesToSettingsForDeviceIdentifier: with nil.
- 
+
  */
-+ (NSArray <id<ESTBeaconOperationProtocol>> *)getWriteOperations
-DEPRECATED_MSG_ATTRIBUTE("Use +getWriteOperationsForDeviceIdentifier: instead");
++ (NSArray <id<ESTBeaconOperationProtocol> > *) getWriteOperations
+    DEPRECATED_MSG_ATTRIBUTE("Use +getWriteOperationsForDeviceIdentifier: instead");
 
 /**
  *  An array containing write operations from given featureset.
  *  This method requires passing device identifier, because Generic Advertiser data setting value depends on it.
  */
-+ (NSArray <id<ESTBeaconOperationProtocol>> *)getWriteOperationsForDeviceIdentifier:(nullable NSString *)deviceIdentifier;
++ (NSArray <id<ESTBeaconOperationProtocol> > *)getWriteOperationsForDeviceIdentifier:(nullable NSString *)deviceIdentifier;
 
 /**
  *  Determine whether the provided settings represent a proper configuration for Estimote Monitoring.

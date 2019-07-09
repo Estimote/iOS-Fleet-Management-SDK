@@ -9,7 +9,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- *  ESTCloudManager class is responsible for Estimote Cloud integration. It allows you to invoke 
+ *  ESTCloudManager class is responsible for Estimote Cloud integration. It allows you to invoke
  *  available Estimote Cloud API methods using block pattern to handle result.
  */
 
@@ -33,14 +33,14 @@ __attribute__ ((deprecated(("Starting from SDK 3.5.0 use ESTConfig class and par
  *
  * @return currently used App ID.
  */
-+ (NSString * _Nullable)appID;
++ (NSString *_Nullable)appID;
 
 /**
  * Returns currently used App Token.
  *
  * @return currently used App Token.
  */
-+ (NSString * _Nullable)appToken;
++ (NSString *_Nullable)appToken;
 
 /**
  * Checks if App ID and App Token were set.
@@ -53,7 +53,7 @@ __attribute__ ((deprecated(("Starting from SDK 3.5.0 use ESTConfig class and par
  *
  *  @param enable flag indicating if analytics should be enabled
  */
-+ (void)enableAnalytics:(BOOL)enable __attribute ((deprecated(("Starting from SDK 3.2.0 use enableMonitoringAnalytics: or enableRangingAnalytics: instead."))));
++ (void)enableAnalytics:(BOOL) enable __attribute((deprecated(("Starting from SDK 3.2.0 use enableMonitoringAnalytics: or enableRangingAnalytics: instead."))));
 
 /**
  *  Enables analytics requests on Enter/Exit monitoring events. Analytics data
@@ -64,7 +64,7 @@ __attribute__ ((deprecated(("Starting from SDK 3.5.0 use ESTConfig class and par
 + (void)enableMonitoringAnalytics:(BOOL)enable;
 
 /**
- *  Enables analytics requests for ranging events. 
+ *  Enables analytics requests for ranging events.
  *  Information about beacons and their Proximity is collected
  *  in the Estimote Cloud.
  *
@@ -164,14 +164,14 @@ __attribute__ ((deprecated(("Starting from SDK 3.5.0 use ESTConfig class and par
                                   completion:(ESTObjectCompletionBlock)completion;
 
 /**
- *  Collects color of particular beacon device stored in Estimote Cloud. 
+ *  Collects color of particular beacon device stored in Estimote Cloud.
  *  Authorization is not required to access device color.
  *
  *  @param macAddress Mac Address of the device
  *  @param completion completion block with NSNumber class object containing ESTColor value.
  */
 - (void)fetchColorForBeaconWithMacAddress:(NSString *)macAddress
-                                completion:(ESTObjectCompletionBlock)completion;
+                               completion:(ESTObjectCompletionBlock)completion;
 
 /**
  *  Collects MAC address of particular beacon device stored in Estimote Cloud.
@@ -224,8 +224,7 @@ __attribute__ ((deprecated(("Starting from SDK 3.5.0 use ESTConfig class and par
  *  @param completion completion block with assigned location provided
  */
 - (void)assignCurrentGPSLocationToBeaconWithMac:(NSString *)macAddress
-                              completion:(ESTObjectCompletionBlock)completion;
-
+                                     completion:(ESTObjectCompletionBlock)completion;
 
 /**
  *  Location is obtained internally using a single CLLocation manger scan.

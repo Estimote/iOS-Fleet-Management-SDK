@@ -10,6 +10,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  ESTEddystoneTLM represents Eddystone Telemetry packet coming from `ESTEddystoneManager` class.
  */
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @interface ESTEddystoneTLM : ESTEddystone
 
 /**

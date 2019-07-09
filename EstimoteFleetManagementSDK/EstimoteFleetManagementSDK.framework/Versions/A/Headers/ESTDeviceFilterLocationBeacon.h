@@ -6,7 +6,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-
 /**
  *  Class defines scanning & filtering attributes required by ESTDeviceManager to discover devices that can be connected to.
  *  Results in -[ESTDeviceManagerDelegate deviceManager:didDiscoverDevices:] being called with a collection of

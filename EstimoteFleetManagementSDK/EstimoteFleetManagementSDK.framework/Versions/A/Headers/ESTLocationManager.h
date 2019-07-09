@@ -8,10 +8,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-
 /**
  *  ESTLocationManagerDelegateProtocol defines delegate protocol for `ESTLocationManager` class objects.
  */
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @protocol ESTLocationManagerDelegateProtocol <NSObject>
 
 @optional
@@ -26,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)locationManager:(ESTLocationManager *)locationManager didDiscoverLocations:(NSArray<ESTLocation *> *)locations;
 
 /**
- *  Methods invoked when Discovery process failed. The reason of failure 
+ *  Methods invoked when Discovery process failed. The reason of failure
  *  Is provided in Error message.
  *
  *  @param locationManager Manager that was used for discovery.
@@ -36,12 +36,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-
 /**
  *  ESTLocationManager allows to scan for all Estimote Location Packets.
  *  Location packets can be broadcasted among other packets by Estimote
  *  Location Beacons.
  */
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @interface ESTLocationManager : NSObject
 
 /**

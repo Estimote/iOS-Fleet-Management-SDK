@@ -14,8 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param deviceDetails Details of the device wrapped in ESTDeviceDetails class object.
  *  @param error Error of request. No error means success.
  */
-typedef void(^ESTRequestGetDeviceDetailsBlock)(ESTDeviceDetails * _Nullable deviceDetails, NSError * _Nullable error);
-
+typedef void (^ESTRequestGetDeviceDetailsBlock)(ESTDeviceDetails *_Nullable deviceDetails, NSError *_Nullable error);
 
 /**
  *  Allows to get device details from the Estimote Cloud.

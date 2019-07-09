@@ -7,14 +7,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef NS_ENUM(NSInteger, ESTUtilityManagerState)
-{
+typedef NS_ENUM (NSInteger, ESTUtilityManagerState) {
     ESTUtilityManagerStateIdle,
     ESTUtilityManagerStateScanning
 };
 
 @class ESTUtilityManager;
-
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @protocol ESTUtilityManagerDelegate <NSObject>
 
 @optional
@@ -34,7 +33,7 @@ typedef NS_ENUM(NSInteger, ESTUtilityManagerState)
  * @param manager The utility manager object reporting the event.
  * @param nearables An array of `<ESTDeviceNearable>` objects representing the nearables discovered.
  */
-- (void)utilityManager:(ESTUtilityManager *)manager
+- (void)  utilityManager:(ESTUtilityManager *)manager
     didDiscoverNearables:(NSArray<ESTDeviceNearable *> *)nearables;
 
 /**
@@ -50,12 +49,12 @@ typedef NS_ENUM(NSInteger, ESTUtilityManagerState)
  * The `ESTUtilityManager` class defines the interface for utility methods related to Estimote Beacons. The main functionality
  * allows to discover CoreBluetooth based representation of Estimote Beacon devices.
  */
-
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @interface ESTUtilityManager : NSObject
 
- /**
- *  Current state of Utility manager
- */
+/**
+*  Current state of Utility manager
+*/
 @property (nonatomic, assign, readonly) ESTUtilityManagerState state;
 
 /**

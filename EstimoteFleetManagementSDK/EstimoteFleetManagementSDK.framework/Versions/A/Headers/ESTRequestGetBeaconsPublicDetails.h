@@ -7,24 +7,23 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef NS_OPTIONS(NSUInteger, ESTBeaconPublicDetailsFields)
-{
-    ESTBeaconPublicDetailsAllFields                        = 1 << 0,
-    ESTBeaconPublicDetailsFieldMac                         = 1 << 1,
-    ESTBeaconPublicDetailsFieldColor                       = 1 << 2,
-    ESTBeaconPublicDetailsFieldPublicIdentifier            = 1 << 3,
-    
-    ESTBeaconPublicDetailsAllSettings                      = 1 << 4,
-    ESTBeaconPublicDetailsFieldPower                       = 1 << 5,
-    ESTBeaconPublicDetailsFieldSecurity                    = 1 << 6,
-    ESTBeaconPublicDetailsFieldBroadcastingScheme          = 1 << 7,
-    ESTBeaconPublicDetailsFieldUUIDMajorMinor              = 1 << 8,
-    ESTBeaconPublicDetailsFieldEddystoneNamespaceID        = 1 << 9,
-    ESTBeaconPublicDetailsFieldEddystoneInstanceID         = 1 << 10
+typedef NS_OPTIONS (NSUInteger, ESTBeaconPublicDetailsFields) {
+    ESTBeaconPublicDetailsAllFields                 = 1 << 0,
+    ESTBeaconPublicDetailsFieldMac                  = 1 << 1,
+    ESTBeaconPublicDetailsFieldColor                = 1 << 2,
+    ESTBeaconPublicDetailsFieldPublicIdentifier     = 1 << 3,
+
+    ESTBeaconPublicDetailsAllSettings               = 1 << 4,
+    ESTBeaconPublicDetailsFieldPower                = 1 << 5,
+    ESTBeaconPublicDetailsFieldSecurity             = 1 << 6,
+    ESTBeaconPublicDetailsFieldBroadcastingScheme   = 1 << 7,
+    ESTBeaconPublicDetailsFieldUUIDMajorMinor       = 1 << 8,
+    ESTBeaconPublicDetailsFieldEddystoneNamespaceID = 1 << 9,
+    ESTBeaconPublicDetailsFieldEddystoneInstanceID  = 1 << 10
 };
 
-typedef void(^ESTRequestGetBeaconsPublicDetailsBlock)(NSArray * _Nullable beaconVOArray, NSError * _Nullable error);
-
+typedef void (^ESTRequestGetBeaconsPublicDetailsBlock)(NSArray *_Nullable beaconVOArray, NSError *_Nullable error);
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0. Please use ESTRequestGetDevices instead.")
 @interface ESTRequestGetBeaconsPublicDetails : ESTRequestGetJSON
 
 /** Array of identifiers of beacons which details should be fetched.
@@ -65,4 +64,3 @@ typedef void(^ESTRequestGetBeaconsPublicDetailsBlock)(NSArray * _Nullable beacon
 @end
 
 NS_ASSUME_NONNULL_END
-

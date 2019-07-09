@@ -9,7 +9,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 typedef void (^ESTTelemetryNotificationAmbientLightNotificationBlock)(ESTTelemetryInfoAmbientLight *ambientLight);
 
-
 /**
  * ESTTelemetryNotificationAmbientLight class is used to
  * initialize block that will be fired everytime
@@ -18,6 +17,7 @@ typedef void (^ESTTelemetryNotificationAmbientLightNotificationBlock)(ESTTelemet
  * expect ESTTelemetryInfoAmbientLight object that transmits
  * ambient light value (in lux) read by beacon.
  */
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @interface ESTTelemetryNotificationAmbientLight : NSObject <ESTTelemetryNotificationProtocol>
 
 /**

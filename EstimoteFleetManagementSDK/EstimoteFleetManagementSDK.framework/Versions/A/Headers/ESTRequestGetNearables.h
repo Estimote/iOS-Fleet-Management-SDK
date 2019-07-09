@@ -25,7 +25,7 @@ typedef void(^ESTRequestGetNearablesBlock)(NSArray<ESTNearable *> * _Nullable ne
 /**
  *  ESTRequestGetNearables is used to fetch details about all user nearables.
  */
-
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0. Please use ESTGetDevices instead.")
 @interface ESTRequestGetNearables : ESTRequestGetJSON
 
 /**

@@ -6,6 +6,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @interface ESTBeaconVO : NSObject <NSCoding>
 
 @property (nonatomic, strong) NSString *proximityUUID;

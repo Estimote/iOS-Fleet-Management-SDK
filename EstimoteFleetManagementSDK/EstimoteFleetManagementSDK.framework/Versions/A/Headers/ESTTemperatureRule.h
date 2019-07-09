@@ -8,11 +8,11 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * The `ESTTemperatureRule` class defines single rule related to ambient temperature of the Estimote nearable device.
  */
-
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @interface ESTTemperatureRule : ESTNearableRule
 
-@property (nonatomic, strong) NSNumber * _Nullable maxValue;
-@property (nonatomic, strong) NSNumber * _Nullable minValue;
+@property (nonatomic, strong) NSNumber *_Nullable maxValue;
+@property (nonatomic, strong) NSNumber *_Nullable minValue;
 
 + (instancetype)temperatureGraterThan:(double)value forNearableIdentifier:(NSString *)identifier;
 + (instancetype)temperatureLowerThan:(double)value forNearableIdentifier:(NSString *)identifier;

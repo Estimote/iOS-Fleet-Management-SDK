@@ -11,8 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef NS_ENUM(NSInteger, ESTEddystoneManagerState)
-{
+typedef NS_ENUM (NSInteger, ESTEddystoneManagerState) {
     ESTEddystoneManagerStateIdle,
     ESTEddystoneManagerStateScanning
 };
@@ -23,7 +22,7 @@ typedef NS_ENUM(NSInteger, ESTEddystoneManagerState)
 * Protocol for `ESTEddystoneManager` delegate object. Allows to handle callbacks
 * from Eddystone devices discovery process.
 */
-
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @protocol ESTEddystoneManagerDelegate <NSObject>
 
 @optional
@@ -35,9 +34,9 @@ typedef NS_ENUM(NSInteger, ESTEddystoneManagerState)
  * @param eddystones An array of `<ESTEddystone>` objects representing the beacons discovered.
  * @param eddystoneFilter Filter represented by subclass of `<ESTEddystoneFilter>` applied to discovery.
  */
-- (void)eddystoneManager:(ESTEddystoneManager *)manager
-   didDiscoverEddystones:(NSArray<ESTEddystone *> *)eddystones
-              withFilter:(ESTEddystoneFilter * _Nullable)eddystoneFilter;
+- (void) eddystoneManager:(ESTEddystoneManager *)manager
+    didDiscoverEddystones:(NSArray<ESTEddystone *> *)eddystones
+               withFilter:(ESTEddystoneFilter *_Nullable)eddystoneFilter;
 
 /**
  * Tells the delegate that Google beacons discovery error occurred.
@@ -45,7 +44,7 @@ typedef NS_ENUM(NSInteger, ESTEddystoneManagerState)
  * @param manager The beacon manager object reporting the event.
  */
 - (void)eddystoneManagerDidFailDiscovery:(ESTEddystoneManager *)manager
-                               withError:(NSError * _Nullable)error;
+                               withError:(NSError *_Nullable)error;
 
 @end
 
@@ -59,7 +58,7 @@ typedef NS_ENUM(NSInteger, ESTEddystoneManagerState)
  * will call `eddystoneManager:didDiscoverEddystones:withFilter` callback for each filter
  * separately with corresponding filter provided.
  */
-
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @interface ESTEddystoneManager : NSObject
 
 /**
@@ -73,19 +72,19 @@ typedef NS_ENUM(NSInteger, ESTEddystoneManagerState)
 @property (nonatomic, strong, readonly) NSArray<ESTEddystoneFilter *> *filtersInDiscovery;
 
 /**
- * Starts Eddystone discovery process. Filter param is optional. 
+ * Starts Eddystone discovery process. Filter param is optional.
  * When not provided (nil) manager discovers all devices in range.
  * Optional filters are:
  * - UID identifier - consists of Namespace ID (10 bytes) and Instance ID (6 bytes).
  * - URL - URL address eg. 'http://go.esti.be'
  * - URL Domain - URL domain eg. 'esti.be'
  */
-- (void)startEddystoneDiscoveryWithFilter:(ESTEddystoneFilter * _Nullable)eddystoneFilter;
+- (void)startEddystoneDiscoveryWithFilter:(ESTEddystoneFilter *_Nullable)eddystoneFilter;
 
 /**
  * Stops discovery of Eddystones for particular filter.
  */
-- (void)stopEddystoneDiscoveryWithFilter:(ESTEddystoneFilter * _Nullable)eddystoneFilter;
+- (void)stopEddystoneDiscoveryWithFilter:(ESTEddystoneFilter *_Nullable)eddystoneFilter;
 
 @end
 

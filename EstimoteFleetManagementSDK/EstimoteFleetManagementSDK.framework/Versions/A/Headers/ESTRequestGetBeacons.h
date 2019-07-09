@@ -12,22 +12,21 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  Errors occurring for request.
  */
-typedef NS_ENUM(NSInteger, ESTRequestGetBeaconsError)
-{
+typedef NS_ENUM (NSInteger, ESTRequestGetBeaconsError) {
     /**
      *  Unknown request error.
      */
     ESTRequestGetBeaconsErrorUnknown
 };
 
-typedef void(^ESTRequestGetBeaconsBlock)(NSArray<ESTBeaconVO *> * _Nullable beaconVOs, NSError * _Nullable error);
+typedef void (^ESTRequestGetBeaconsBlock)(NSArray<ESTBeaconVO *> *_Nullable beaconVOs, NSError *_Nullable error);
 
 /**
- *  ESTRequestGetBeacons is used to fetch list of all beacons 
+ *  ESTRequestGetBeacons is used to fetch list of all beacons
  *  that belongs to currently authorised user. All details are provided
  *  including beacon's settings.
  */
-
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0. Please use ESTRequestGetDevices instead.")
 @interface ESTRequestGetBeacons : ESTRequestGetJSON
 
 /**

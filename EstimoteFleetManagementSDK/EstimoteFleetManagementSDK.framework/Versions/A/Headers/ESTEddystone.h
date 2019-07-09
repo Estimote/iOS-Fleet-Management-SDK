@@ -8,7 +8,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  Proximity zone where device was located.
  */
-typedef NS_ENUM(NSInteger, ESTEddystoneProximity) {
+typedef NS_ENUM (NSInteger, ESTEddystoneProximity) {
     /**
      *  Unknown proximity zone.
      */
@@ -27,12 +27,12 @@ typedef NS_ENUM(NSInteger, ESTEddystoneProximity) {
     ESTEddystoneProximityFar
 };
 
-
 /**
  *  Object of this class represents single Eddystone device, with all its available properties.
  *  `ESTEddystone` object should not be created manually. Instances are created by ESTEddystoneManager
  *  with discovery process and return in `eddystoneManager:didDiscoverEddystones:withFilter:` delegate method.
  */
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @interface ESTEddystone : NSObject <NSCopying>
 
 /**

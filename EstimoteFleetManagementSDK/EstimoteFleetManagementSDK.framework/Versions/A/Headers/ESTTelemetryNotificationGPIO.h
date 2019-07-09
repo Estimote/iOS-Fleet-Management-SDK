@@ -12,16 +12,16 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param gpio Info object with GPIO ports values.
  */
-typedef void(^ESTTelemetryNotificationGPIONotificationBlock)(ESTTelemetryInfoGPIO *gpio);
-
+typedef void (^ESTTelemetryNotificationGPIONotificationBlock)(ESTTelemetryInfoGPIO *gpio);
 
 /**
  *  ESTTelemetryNotificationGPIO allows to register for GPIO related telemetry information
- *  in `ESTUtilityManager` using `registerForTelemetryNotifications:` method. 
+ *  in `ESTUtilityManager` using `registerForTelemetryNotifications:` method.
  *
  *  As a result of registration each time telemetry packet is ranged provided notification
  *  block is fired providing `ESTTelemetryInfoGPIO` object with current GPIO ports values.
  */
+DEPRECATED_MSG_ATTRIBUTE("Deprecated since 4.31.0.")
 @interface ESTTelemetryNotificationGPIO : NSObject <ESTTelemetryNotificationProtocol>
 
 /**
