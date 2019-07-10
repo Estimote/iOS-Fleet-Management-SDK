@@ -951,7 +951,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Enums.html">Enums</a>
+            <a class="nav-group-name-link" href="../Enumerations.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums.html#/c:@E@ESTBeaconPower">ESTBeaconPower</a>
@@ -1539,9 +1539,14 @@
         <section class="section">
           <div class="section-content">
             <h1>ESTSimulatedNearableManager</h1>
+             <div class="aside aside-deprecated">
+               <p class="aside-title">Deprecated</p>
+               <p>Deprecated since 4.31.0.</p>
+
+             </div>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code>
+                  <pre class="highlight objective_c"><code>
 <span class="k">@interface</span> <span class="nc">ESTSimulatedNearableManager</span>
     <span class="p">:</span> <span class="nc"><a href="../Classes/ESTNearableManager.html">ESTNearableManager</a></span> <span class="o">&lt;</span><span class="n"><a href="../Protocols/ESTNearableManagerDelegate.html">ESTNearableManagerDelegate</a></span><span class="o">&gt;</span></code></pre>
 
@@ -1576,13 +1581,13 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
     <span class="n">NSMutableArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/ESTNearable.html">ESTNearable</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">nearables</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">nearables</span><span class="p">:</span> <span class="kt">NSMutableArray</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">nearables</span><span class="p">:</span> <span class="kt">NSMutableArray</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1609,13 +1614,13 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithDelegate</span><span class="p">:</span>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithDelegate</span><span class="p">:</span>
     <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/ESTNearableManagerDelegate.html">ESTNearableManagerDelegate</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">delegate</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="nf">init</span><span class="p">(</span><span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ESTNearableManagerDelegate.html">ESTNearableManagerDelegate</a></span><span class="p">?)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ESTNearableManagerDelegate.html">ESTNearableManagerDelegate</a></span><span class="p">?)</span></code></pre>
 
                         </div>
                       </div>
@@ -1632,7 +1637,6 @@
                               <td>
                                 <div>
                                   <p>Set delegate for ESTNearableManagerDelegate updates.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1642,7 +1646,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>Instance of this object.</p>
-
                       </div>
                     </section>
                   </div>
@@ -1672,14 +1675,14 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithDelegate</span><span class="p">:</span>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithDelegate</span><span class="p">:</span>
                             <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/ESTNearableManagerDelegate.html">ESTNearableManagerDelegate</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">delegate</span>
                              <span class="nf">pathForJSON</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">path</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="nf">init</span><span class="p">(</span><span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ESTNearableManagerDelegate.html">ESTNearableManagerDelegate</a></span><span class="p">?,</span> <span class="n">pathForJSON</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ESTNearableManagerDelegate.html">ESTNearableManagerDelegate</a></span><span class="p">?,</span> <span class="n">pathForJSON</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1696,7 +1699,6 @@
                               <td>
                                 <div>
                                   <p>Set delegate for ESTNearableManagerDelegate updates.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1709,7 +1711,6 @@
                               <td>
                                 <div>
                                   <p>Path for json file with description of nearables you want to simulate.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1719,7 +1720,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>Instance of this object.</p>
-
                       </div>
                     </section>
                   </div>
@@ -1756,7 +1756,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">addNearableToSimulation</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">identifier</span>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">addNearableToSimulation</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">identifier</span>
                        <span class="nf">withType</span><span class="p">:(</span><span class="n"><a href="../Enums.html#/c:@E@ESTNearableType">ESTNearableType</a></span><span class="p">)</span><span class="nv">type</span>
                            <span class="nf">zone</span><span class="p">:(</span><span class="n"><a href="../Enums.html#/c:@E@ESTNearableZone">ESTNearableZone</a></span><span class="p">)</span><span class="nv">zone</span>
                            <span class="nf">rssi</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">rssi</span><span class="p">;</span></code></pre>
@@ -1764,7 +1764,7 @@
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">addNearable</span><span class="p">(</span><span class="n">toSimulation</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">with</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Enums.html#/c:@E@ESTNearableType">ESTNearableType</a></span><span class="p">,</span> <span class="nv">zone</span><span class="p">:</span> <span class="kt"><a href="../Enums.html#/c:@E@ESTNearableZone">ESTNearableZone</a></span><span class="p">,</span> <span class="nv">rssi</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">addNearable</span><span class="p">(</span><span class="n">toSimulation</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">with</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Enums.html#/c:@E@ESTNearableType">ESTNearableType</a></span><span class="p">,</span> <span class="nv">zone</span><span class="p">:</span> <span class="kt"><a href="../Enums.html#/c:@E@ESTNearableZone">ESTNearableZone</a></span><span class="p">,</span> <span class="nv">rssi</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1781,7 +1781,6 @@
                               <td>
                                 <div>
                                   <p>Identifier for ESTNearable object.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1794,7 +1793,6 @@
                               <td>
                                 <div>
                                   <p>Nearable type</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1807,7 +1805,6 @@
                               <td>
                                 <div>
                                   <p>Nearable zone</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1820,7 +1817,6 @@
                               <td>
                                 <div>
                                   <p>Nearable rssi</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1852,12 +1848,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">addNearablesToSimulationWithPath</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">path</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">addNearablesToSimulationWithPath</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">path</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">addNearablesToSimulation</span><span class="p">(</span><span class="n">withPath</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">addNearablesToSimulation</span><span class="p">(</span><span class="n">withPath</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1874,7 +1870,6 @@
                               <td>
                                 <div>
                                   <p>Path for json file with description of nearables you want to simulate.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1915,13 +1910,13 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">simulateZone</span><span class="p">:(</span><span class="n"><a href="../Enums.html#/c:@E@ESTNearableZone">ESTNearableZone</a></span><span class="p">)</span><span class="nv">zone</span>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">simulateZone</span><span class="p">:(</span><span class="n"><a href="../Enums.html#/c:@E@ESTNearableZone">ESTNearableZone</a></span><span class="p">)</span><span class="nv">zone</span>
          <span class="nf">forNearable</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">identifier</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">simulateZone</span><span class="p">(</span><span class="n">_</span> <span class="nv">zone</span><span class="p">:</span> <span class="kt"><a href="../Enums.html#/c:@E@ESTNearableZone">ESTNearableZone</a></span><span class="p">,</span> <span class="n">forNearable</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">simulateZone</span><span class="p">(</span><span class="n">_</span> <span class="nv">zone</span><span class="p">:</span> <span class="kt"><a href="../Enums.html#/c:@E@ESTNearableZone">ESTNearableZone</a></span><span class="p">,</span> <span class="n">forNearable</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1938,7 +1933,6 @@
                               <td>
                                 <div>
                                   <p>ESTNearableZone to set.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1951,7 +1945,6 @@
                               <td>
                                 <div>
                                   <p>Identifier of ESTNearable you want to change.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1987,12 +1980,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">simulateDidEnterRegionForNearable</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/ESTNearable.html">ESTNearable</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">nearable</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">simulateDidEnterRegionForNearable</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/ESTNearable.html">ESTNearable</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">nearable</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">simulateDidEnterRegion</span><span class="p">(</span><span class="k">for</span> <span class="nv">nearable</span><span class="p">:</span> <span class="kt"><a href="../Classes/ESTNearable.html">ESTNearable</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">simulateDidEnterRegion</span><span class="p">(</span><span class="k">for</span> <span class="nv">nearable</span><span class="p">:</span> <span class="kt"><a href="../Classes/ESTNearable.html">ESTNearable</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2009,7 +2002,6 @@
                               <td>
                                 <div>
                                   <p>Nearable object for this event.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2045,12 +2037,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">simulateDidExitRegionForNearable</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/ESTNearable.html">ESTNearable</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">nearable</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">simulateDidExitRegionForNearable</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/ESTNearable.html">ESTNearable</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">nearable</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">simulateDidExitRegion</span><span class="p">(</span><span class="k">for</span> <span class="nv">nearable</span><span class="p">:</span> <span class="kt"><a href="../Classes/ESTNearable.html">ESTNearable</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">simulateDidExitRegion</span><span class="p">(</span><span class="k">for</span> <span class="nv">nearable</span><span class="p">:</span> <span class="kt"><a href="../Classes/ESTNearable.html">ESTNearable</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2067,7 +2059,6 @@
                               <td>
                                 <div>
                                   <p>Nearable object for this event.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2085,8 +2076,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2019-07-09)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2019 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2019-07-10)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

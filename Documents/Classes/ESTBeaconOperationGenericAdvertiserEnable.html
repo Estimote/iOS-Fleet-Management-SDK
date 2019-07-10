@@ -951,7 +951,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Enums.html">Enums</a>
+            <a class="nav-group-name-link" href="../Enumerations.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums.html#/c:@E@ESTBeaconPower">ESTBeaconPower</a>
@@ -1541,7 +1541,7 @@
             <h1>ESTBeaconOperationGenericAdvertiserEnable</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTBeaconOperationGenericAdvertiserEnable</span>
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">ESTBeaconOperationGenericAdvertiserEnable</span>
     <span class="p">:</span> <span class="nc"><a href="../Classes/ESTSettingOperation.html">ESTSettingOperation</a></span> <span class="o">&lt;</span><span class="n"><a href="../Protocols/ESTBeaconOperationProtocol.html">ESTBeaconOperationProtocol</a></span><span class="o">&gt;</span></code></pre>
 
                 </div>
@@ -1575,7 +1575,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span>
     <span class="nf">readOperationForAdvertiser</span><span class="p">:(</span><span class="n"><a href="../Enums/ESTGenericAdvertiserID.html">ESTGenericAdvertiserID</a></span><span class="p">)</span><span class="nv">advertiserID</span>
                     <span class="nf">completion</span><span class="p">:</span>
                         <span class="p">(</span><span class="n">nonnull</span>
@@ -1585,7 +1585,7 @@
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">readOperation</span><span class="p">(</span><span class="n">forAdvertiser</span> <span class="nv">advertiserID</span><span class="p">:</span> <span class="kt"><a href="../Enums/ESTGenericAdvertiserID.html">ESTGenericAdvertiserID</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Type Definitions.html#/c:ESTSettingGenericAdvertiserEnable.h@T@ESTSettingGenericAdvertiserEnableCompletionBlock">ESTSettingGenericAdvertiserEnableCompletionBlock</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">readOperation</span><span class="p">(</span><span class="n">forAdvertiser</span> <span class="nv">advertiserID</span><span class="p">:</span> <span class="kt"><a href="../Enums/ESTGenericAdvertiserID.html">ESTGenericAdvertiserID</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Type Definitions.html#/c:ESTSettingGenericAdvertiserEnable.h@T@ESTSettingGenericAdvertiserEnableCompletionBlock">ESTSettingGenericAdvertiserEnableCompletionBlock</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1602,7 +1602,6 @@
                               <td>
                                 <div>
                                   <p>Advertiser ID.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1615,7 +1614,6 @@
                               <td>
                                 <div>
                                   <p>Block invoked when the operation is complete.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1625,7 +1623,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>Initialized object.</p>
-
                       </div>
                     </section>
                   </div>
@@ -1650,7 +1647,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span>
     <span class="nf">writeOperationForAdvertiser</span><span class="p">:(</span><span class="n"><a href="../Enums/ESTGenericAdvertiserID.html">ESTGenericAdvertiserID</a></span><span class="p">)</span><span class="nv">advertiserID</span>
                         <span class="nf">setting</span><span class="p">:</span>
                             <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/ESTSettingGenericAdvertiserEnable.html">ESTSettingGenericAdvertiserEnable</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">setting</span>
@@ -1662,7 +1659,7 @@
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">writeOperation</span><span class="p">(</span><span class="n">forAdvertiser</span> <span class="nv">advertiserID</span><span class="p">:</span> <span class="kt"><a href="../Enums/ESTGenericAdvertiserID.html">ESTGenericAdvertiserID</a></span><span class="p">,</span> <span class="nv">setting</span><span class="p">:</span> <span class="kt"><a href="../Classes/ESTSettingGenericAdvertiserEnable.html">ESTSettingGenericAdvertiserEnable</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Type Definitions.html#/c:ESTSettingGenericAdvertiserEnable.h@T@ESTSettingGenericAdvertiserEnableCompletionBlock">ESTSettingGenericAdvertiserEnableCompletionBlock</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">writeOperation</span><span class="p">(</span><span class="n">forAdvertiser</span> <span class="nv">advertiserID</span><span class="p">:</span> <span class="kt"><a href="../Enums/ESTGenericAdvertiserID.html">ESTGenericAdvertiserID</a></span><span class="p">,</span> <span class="nv">setting</span><span class="p">:</span> <span class="kt"><a href="../Classes/ESTSettingGenericAdvertiserEnable.html">ESTSettingGenericAdvertiserEnable</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Type Definitions.html#/c:ESTSettingGenericAdvertiserEnable.h@T@ESTSettingGenericAdvertiserEnableCompletionBlock">ESTSettingGenericAdvertiserEnableCompletionBlock</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -1679,7 +1676,6 @@
                               <td>
                                 <div>
                                   <p>Advertiser ID.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1692,7 +1688,6 @@
                               <td>
                                 <div>
                                   <p>Setting to be written to a device.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1705,7 +1700,6 @@
                               <td>
                                 <div>
                                   <p>Block invoked when the operation is complete.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1715,7 +1709,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>Initialized object.</p>
-
                       </div>
                     </section>
                   </div>
@@ -1728,8 +1721,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2019-07-09)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2019 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2019-07-10)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

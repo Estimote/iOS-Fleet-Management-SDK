@@ -951,7 +951,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Enums.html">Enums</a>
+            <a class="nav-group-name-link" href="../Enumerations.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums.html#/c:@E@ESTBeaconPower">ESTBeaconPower</a>
@@ -1541,7 +1541,7 @@
             <h1>ESTSettingGPIOConfigPort0</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTSettingGPIOConfigPort0</span> <span class="p">:</span> <span class="nc"><a href="../Classes/ESTSettingReadWrite.html">ESTSettingReadWrite</a></span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="o">&gt;</span></code></pre>
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">ESTSettingGPIOConfigPort0</span> <span class="p">:</span> <span class="nc"><a href="../Classes/ESTSettingReadWrite.html">ESTSettingReadWrite</a></span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="o">&gt;</span></code></pre>
 
                 </div>
               </div>
@@ -1568,7 +1568,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Designated initializer. Validates provided value internally with +validationErrorForValue:.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <p>+[ESTSettingGPIOConfigPort0 validationErrorForValue:]</p>
@@ -1580,12 +1579,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithValue</span><span class="p">:(</span><span class="n"><a href="../Enums/ESTGPIOConfig.html">ESTGPIOConfig</a></span><span class="p">)</span><span class="nv">config</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithValue</span><span class="p">:(</span><span class="n"><a href="../Enums/ESTGPIOConfig.html">ESTGPIOConfig</a></span><span class="p">)</span><span class="nv">config</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="nf">init</span><span class="p">?(</span><span class="n">value</span> <span class="nv">config</span><span class="p">:</span> <span class="kt"><a href="../Enums/ESTGPIOConfig.html">ESTGPIOConfig</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">?(</span><span class="n">value</span> <span class="nv">config</span><span class="p">:</span> <span class="kt"><a href="../Enums/ESTGPIOConfig.html">ESTGPIOConfig</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1602,7 +1601,6 @@
                               <td>
                                 <div>
                                   <p>GPIO ConfigPort0 value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1612,7 +1610,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>Initialized object. Nil if validation fails.</p>
-
                       </div>
                     </section>
                   </div>
@@ -1637,19 +1634,18 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Enums/ESTGPIOConfig.html">ESTGPIOConfig</a></span><span class="p">)</span><span class="n">getValue</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n"><a href="../Enums/ESTGPIOConfig.html">ESTGPIOConfig</a></span><span class="p">)</span><span class="n">getValue</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">getValue</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Enums/ESTGPIOConfig.html">ESTGPIOConfig</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getValue</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Enums/ESTGPIOConfig.html">ESTGPIOConfig</a></span></code></pre>
 
                         </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
                         <p>GPIO ConfigPort0 value.</p>
-
                       </div>
                     </section>
                   </div>
@@ -1674,13 +1670,13 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">readValueWithCompletion</span><span class="p">:</span>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">readValueWithCompletion</span><span class="p">:</span>
     <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type Definitions.html#/c:ESTSettingGPIOConfigPort0.h@T@ESTSettingGPIOConfigPort0CompletionBlock">ESTSettingGPIOConfigPort0CompletionBlock</a></span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">readValue</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Type Definitions.html#/c:ESTSettingGPIOConfigPort0.h@T@ESTSettingGPIOConfigPort0CompletionBlock">ESTSettingGPIOConfigPort0CompletionBlock</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">readValue</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Type Definitions.html#/c:ESTSettingGPIOConfigPort0.h@T@ESTSettingGPIOConfigPort0CompletionBlock">ESTSettingGPIOConfigPort0CompletionBlock</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1697,7 +1693,6 @@
                               <td>
                                 <div>
                                   <p>Block to be invoked when operation is complete.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1728,13 +1723,13 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">writeValue</span><span class="p">:(</span><span class="n"><a href="../Enums/ESTGPIOConfig.html">ESTGPIOConfig</a></span><span class="p">)</span><span class="nv">config</span>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">writeValue</span><span class="p">:(</span><span class="n"><a href="../Enums/ESTGPIOConfig.html">ESTGPIOConfig</a></span><span class="p">)</span><span class="nv">config</span>
         <span class="nf">completion</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type Definitions.html#/c:ESTSettingGPIOConfigPort0.h@T@ESTSettingGPIOConfigPort0CompletionBlock">ESTSettingGPIOConfigPort0CompletionBlock</a></span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">writeValue</span><span class="p">(</span><span class="n">_</span> <span class="nv">config</span><span class="p">:</span> <span class="kt"><a href="../Enums/ESTGPIOConfig.html">ESTGPIOConfig</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Type Definitions.html#/c:ESTSettingGPIOConfigPort0.h@T@ESTSettingGPIOConfigPort0CompletionBlock">ESTSettingGPIOConfigPort0CompletionBlock</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">writeValue</span><span class="p">(</span><span class="n">_</span> <span class="nv">config</span><span class="p">:</span> <span class="kt"><a href="../Enums/ESTGPIOConfig.html">ESTGPIOConfig</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Type Definitions.html#/c:ESTSettingGPIOConfigPort0.h@T@ESTSettingGPIOConfigPort0CompletionBlock">ESTSettingGPIOConfigPort0CompletionBlock</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1751,7 +1746,6 @@
                               <td>
                                 <div>
                                   <p>ConfigPort0 value to be written to the device.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1764,7 +1758,6 @@
                               <td>
                                 <div>
                                   <p>Block to be invoked when operation is complete.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1794,12 +1787,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nf">validationErrorForValue</span><span class="p">:(</span><span class="n"><a href="../Enums/ESTGPIOConfig.html">ESTGPIOConfig</a></span><span class="p">)</span><span class="nv">config</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nf">validationErrorForValue</span><span class="p">:(</span><span class="n"><a href="../Enums/ESTGPIOConfig.html">ESTGPIOConfig</a></span><span class="p">)</span><span class="nv">config</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">validationError</span><span class="p">(</span><span class="n">forValue</span> <span class="nv">config</span><span class="p">:</span> <span class="kt"><a href="../Enums/ESTGPIOConfig.html">ESTGPIOConfig</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Error</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">validationError</span><span class="p">(</span><span class="n">forValue</span> <span class="nv">config</span><span class="p">:</span> <span class="kt"><a href="../Enums/ESTGPIOConfig.html">ESTGPIOConfig</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Error</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1816,7 +1809,6 @@
                               <td>
                                 <div>
                                   <p>ConfigPort0 value.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1826,7 +1818,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>Error object describing why validation failed. Nil if validation passes.</p>
-
                       </div>
                     </section>
                   </div>
@@ -1839,8 +1830,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2019-07-09)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2019 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2019-07-10)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>
