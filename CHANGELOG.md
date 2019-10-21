@@ -1,9 +1,6 @@
 ## 4.31.1 (October 21, 2019)
 ### Fixed
 - Failing to detect nearables on iOS 13 devices
-## 4.31.1 (October 21, 2019)
-### Fixed
-- Failing to detect nearables on iOS 13 devices
 
 ## 4.31.0 (July 5, 2019)
 
