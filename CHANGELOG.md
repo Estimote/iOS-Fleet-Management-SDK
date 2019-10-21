@@ -1,3 +1,10 @@
+## 4.31.1 (October 21, 2019)
+### Fixed
+- Failing to detect nearables on iOS 13 devices
+## 4.31.1 (October 21, 2019)
+### Fixed
+- Failing to detect nearables on iOS 13 devices
+
 ## 4.31.0 (July 5, 2019)
 
 Time for the final release of Estimote Fleet Management 4.x
@@ -17,6 +24,7 @@ Stay tuned for EFM 5.x! 🖖
 ### Important
 - Many requests were updated, and even more deprecated. Please read https://cloud.estimote.com/docs/ if you haven't so far for more information.
 - This is as well last version of Estimote Fleet Management _not using_ [`Estimote Bluetooth Scanning`](https://github.com/Estimote/iOS-Bluetooth-Scanning).
+
 ## 4.30.0 (May 22, 2019)
 
 ### Features

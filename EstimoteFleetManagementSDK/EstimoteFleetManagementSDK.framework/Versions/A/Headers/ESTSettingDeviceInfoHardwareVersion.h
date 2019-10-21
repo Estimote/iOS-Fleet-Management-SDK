@@ -9,8 +9,7 @@
 /**
  *  Describes hardware version validation error.
  */
-typedef NS_ENUM(NSUInteger, ESTSettingDeviceInfoHardwareVersionError)
-{
+typedef NS_ENUM(NSUInteger, ESTSettingDeviceInfoHardwareVersionError) {
     /**
      *  Provided hardware version value is equal to nil.
      */
@@ -31,8 +30,8 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param versionSetting HardwareVersion setting carrying value.
  *  @param error Operation error. No error means success.
  */
-typedef void(^ESTSettingDeviceInfoHardwareVersionCompletionBlock)(ESTSettingDeviceInfoHardwareVersion * _Nullable versionSetting, NSError * _Nullable error);
-
+typedef void (^ESTSettingDeviceInfoHardwareVersionCompletionBlock)(ESTSettingDeviceInfoHardwareVersion *_Nullable versionSetting,
+                                                                   NSError *_Nullable error);
 
 /**
  *  ESTSettingDeviceInfoHardwareVersion represents Device Hardware Version value.

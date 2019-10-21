@@ -950,7 +950,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="Enumerations.html">Enumerations</a>
+            <a class="nav-group-name-link" href="Enums.html">Enums</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums.html#/c:@E@ESTBeaconPower">ESTBeaconPower</a>
@@ -1538,8 +1538,8 @@
         <section class="section">
           <div class="section-content">
             
-            <h1 id='estimote-sdk-for-apple-ios' class='heading'>Estimote SDK for Apple iOS</h1>
-<h2 id='table-of-contents' class='heading'>Table of Contents</h2>
+            <a href='#estimote-sdk-for-apple-ios' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='estimote-sdk-for-apple-ios'>Estimote SDK for Apple iOS</h1>
+<a href='#table-of-contents' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='table-of-contents'>Table of Contents</h2>
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -1564,14 +1564,14 @@
 </ul>
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-<h2 id='introduction' class='heading'>Introduction</h2>
+<a href='#introduction' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='introduction'>Introduction</h2>
 
 <p>Our SDK provides a wide range of both utility and client-facing features that will save time and make iBeacon development easier than ever. It&rsquo;s built purely on Apple Core Location and Core Bluetooth technologies and is 100% iBeacon compatible.</p>
 
 <p>In addition to the Estimote SDK we&rsquo;ve included a lot of examples to show you how to use our SDK in real scenarios. You should also check our utility app that <a href="https://itunes.apple.com/en/app/estimote/id686915066?mt=8">can be found in the App Store</a>.</p>
 
 <p>To learn more, read the <a href="http://estimote.com/api/index.html#">API section on our website</a>. You can review the <a href="http://estimote.github.io/iOS-SDK/">SDK documentation</a> and check our <a href="http://developer.estimote.com">Developer Portal</a> to get the answers for the most common questions related to beacons and Estimote tools.</p>
-<h2 id='installation' class='heading'>Installation</h2>
+<a href='#installation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='installation'>Installation</h2>
 
 <p>Estimote SDK 4.0 comes to you as a <strong>framework</strong>. To setup, you only need to include a single <em>EstimoteSDK.framework</em> file in your project to get started:</p>
 
@@ -1581,10 +1581,10 @@
 <img src="img/build_phases.png" alt="Build Phases" width="840"></p></li>
 <li><p>That&rsquo;s it, congratulations and happy hacking!</p></li>
 </ol>
-<h2 id='technical-overview' class='heading'>Technical overview</h2>
+<a href='#technical-overview' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='technical-overview'>Technical overview</h2>
 
 <p>The SDK requires iOS 7+, as it depends on the CoreLocation&rsquo;s support for iBeacon which was first introduced in iOS 7. Features of Estimote SDK are divided into two parts: <em>Client</em> and <em>Utility</em>.</p>
-<h3 id='client' class='heading'>Client</h3>
+<a href='#client' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='client'>Client</h3>
 
 <p><strong>Client</strong> part is dedicated to be used inside your publicly distributed applications featuring Estimote Beacons or Nearables integration. It helps you work with Apple iBeacon objects, adding useful functionality like filtering, ranged object limitation, or combining beacons from few regions into one callback.</p>
 
@@ -1593,11 +1593,11 @@
 <ul>
 <li><code>ESTBeaconManager</code> - Simple wrapper around Core Location&rsquo;s CLLocationManager class. It exposes API to range and monitor iBeacon devices with some additional options like sorting or filtering. It works with pure CLBeacon objects.</li>
 <li><code>ESTSecureBeaconManager</code> - CLLocationManager wrapper dedicated to work with devices that are using Estimote Secure UUID. Similarily to ESTBeaconManager it allows to range and monitor secured devices as well as estimate their proximity.</li>
-<li><code><a href="Classes/ESTNearableManager.html">ESTNearableManager</a></code> - Entry point to work with nearables. It allows to range and monitor stickers with given type or identifier in the similar manner to how it&rsquo;s done with iBeacon.</li>
-<li><code><a href="Classes/ESTEddystoneManager.html">ESTEddystoneManager</a></code> - Entry point to work with <a href="https://github.com/google/eddystone">Eddystones</a>. Allows to discover Eddystone packets broadcasted by beacons.</li>
-<li><code><a href="Classes/ESTDeviceManager.html">ESTDeviceManager</a></code> - Use it to be up-to-date with current values of device&rsquo;s sensors (such as temperature) broadcasted in Estimote Telemetry packet.</li>
+<li><code>ESTNearableManager</code> - Entry point to work with nearables. It allows to range and monitor stickers with given type or identifier in the similar manner to how it&rsquo;s done with iBeacon.</li>
+<li><code>ESTEddystoneManager</code> - Entry point to work with <a href="https://github.com/google/eddystone">Eddystones</a>. Allows to discover Eddystone packets broadcasted by beacons.</li>
+<li><code>ESTDeviceManager</code> - Use it to be up-to-date with current values of device&rsquo;s sensors (such as temperature) broadcasted in Estimote Telemetry packet.</li>
 </ul>
-<h4 id='telemetry' class='heading'>Telemetry</h4>
+<a href='#telemetry' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='telemetry'>Telemetry</h4>
 
 <p>When <em>EstimoteTLM</em> packet is enabled (see <code>ESTSettingsEstimoteTLMEnable</code> class), beacons broadcast Estimote Telemetry packets. They contain information about current values read by beacon&rsquo;s sensors. Telemetry packet includes readings from:</p>
 
@@ -1624,34 +1624,31 @@
 <span class="n">deviceManager</span><span class="o">.</span><span class="nf">registerForTelemetryNotification</span><span class="p">(</span><span class="n">temperatureNotification</span><span class="p">)</span>
 </code></pre>
 
-<p>Make sure to check out the other <code>ESTTelemetryNotification</code> classes in the <a href="http://estimote.github.io/iOS-SDK/">SDK reference</a> (e.g., <a href="http://estimote.github.io/iOS-SDK/Classes/ESTTelemetryNotificationMotion.html"><code><a href="Classes/ESTTelemetryNotificationMotion.html">ESTTelemetryNotificationMotion</a></code></a>)</p>
-<h3 id='utility' class='heading'>Utility</h3>
+<p>Make sure to check out the other <code>ESTTelemetryNotification</code> classes in the <a href="http://estimote.github.io/iOS-SDK/">SDK reference</a> (e.g., <a href="http://estimote.github.io/iOS-SDK/Classes/ESTTelemetryNotificationMotion.html"><code>ESTTelemetryNotificationMotion</code></a>)</p>
+<a href='#utility' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='utility'>Utility</h3>
 
 <p><strong>Utility</strong> was created to support apps that manage Estimote Beacons and Nearables. It provides beacon connectivity and configuration methods, so you can easily change settings like Proximity UUID, Major, Minor, Power Modes and much more. It also allows you to easily perform Over The Air firmware update. It works mainly with Core Bluetooth framework.</p>
-<h4 id='connecting-to-devices-in-sdk-4' class='heading'>Connecting to devices in SDK 4</h4>
+<a href='#connecting-to-devices-in-sdk-4' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='connecting-to-devices-in-sdk-4'>Connecting to devices in SDK 4</h4>
 
 <p>Connecting to device lets you change its settings (broadcasting power, advertising interval etc.). You have to be the beacon&rsquo;s owner in Estimote Cloud; every attempt to connect with a device not linked to your Estimote account will fail.</p>
 
-<p>Connectivity packets are represented by <code><a href="Classes/ESTDeviceConnectable.html">ESTDeviceConnectable</a></code> subclasses:</p>
-
-<ul>
-<li><code><a href="Classes/ESTDeviceLocationBeacon.html">ESTDeviceLocationBeacon</a></code> represents Estimote Location Beacon (hardware revision <q>F</q>) and next-gen Proximity Beacon (hardware revision <q>G</q>) … yes, we know it&rsquo;s a bit weird to use <code><a href="Classes/ESTDeviceLocationBeacon.html">ESTDeviceLocationBeacon</a></code> to connect to your next-gen Proximity Beacons, but you do have to trust us on this one ^_^</li>
-<li><code><a href="Classes/ESTDeviceNearable.html">ESTDeviceNearable</a></code> represents Estimote Nearable.</li>
-</ul>
+<p>Connectivity packets are represented by <code>ESTDeviceConnectable</code> subclasses:
+- <code>ESTDeviceLocationBeacon</code> represents Estimote Location Beacon (hardware revision <q>F</q>) and next-gen Proximity Beacon (hardware revision <q>G</q>) … yes, we know it&rsquo;s a bit weird to use <code>ESTDeviceLocationBeacon</code> to connect to your next-gen Proximity Beacons, but you do have to trust us on this one ^_^
+- <code>ESTDeviceNearable</code> represents Estimote Nearable.</p>
 
 <p>Following steps are required to connect to a device:</p>
 
 <ol>
-<li><p>Create <code><a href="Classes/ESTDeviceManager.html">ESTDeviceManager</a></code>, make sure your class conforms to <code>ESTDeviceManagerDelegate</code> protocol.</p></li>
-<li><p>Start discovery by calling <code>startDiscoveryWithFilter:</code> with filter object. This can be either <code><a href="Classes/ESTDeviceFilterLocationBeacon.html">ESTDeviceFilterLocationBeacon</a></code> or <code><a href="Classes/ESTDeviceFilterNearable.html">ESTDeviceFilterNearable</a></code>.</p></li>
+<li><p>Create <code>ESTDeviceManager</code>, make sure your class conforms to <code>ESTDeviceManagerDelegate</code> protocol.</p></li>
+<li><p>Start discovery by calling <code>startDiscoveryWithFilter:</code> with filter object. This can be either <code>ESTDeviceFilterLocationBeacon</code> or <code>ESTDeviceFilterNearable</code>.</p></li>
 <li><p>Method <code>deviceManager:didDiscoverDevices:</code> provides discovered devices matching filter.</p></li>
-<li><p>Make sure your class conforms to <code><a href="Protocols/ESTDeviceConnectableDelegate.html">ESTDeviceConnectableDelegate</a></code> protocol and call <code>connect</code> on discovered <code><a href="Classes/ESTDeviceConnectable.html">ESTDeviceConnectable</a></code> object. Now, the SDK verifies if the device is linked to account specified by AppID + AppToken pair, authorizes user, connects on the Bluetooth level and synchronizes settings by fetching their values from Cloud and writing to the device.</p></li>
+<li><p>Make sure your class conforms to <code>ESTDeviceConnectableDelegate</code> protocol and call <code>connect</code> on discovered <code>ESTDeviceConnectable</code> object. Now, the SDK verifies if the device is linked to account specified by AppID + AppToken pair, authorizes user, connects on the Bluetooth level and synchronizes settings by fetching their values from Cloud and writing to the device.</p></li>
 </ol>
 
 <p>In order to connect to the first-generation Estimote Proximity Beacon (hardware revision <q>D</q>), use  the <a href="SDK_3_x_README.md">SDK 3 API</a>.</p>
-<h4 id='settings' class='heading'>Settings</h4>
+<a href='#settings' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='settings'>Settings</h4>
 
-<p>In SDK 4.0 each device setting is represented by an <code><a href="Classes/ESTSettingBase.html">ESTSettingBase</a></code> subclass. There are two ways of reading/writing settings - <a href="#convenience-api">Convenience API</a> and <a href="#advanced-api">Advanced API</a>.</p>
+<p>In SDK 4.0 each device setting is represented by an <code>ESTSettingBase</code> subclass. There are two ways of reading/writing settings - <a href="#convenience-api">Convenience API</a> and <a href="#advanced-api">Advanced API</a>.</p>
 
 <p>These classes are wrappers around basic types (both primitives and objects) such as <code>unsigned integer</code> or <code>NSString</code>,</p>
 
@@ -1659,11 +1656,12 @@
 <li><code>ESTSetting*</code> classes are wrappers around values providing validation.</li>
 <li><code>ESTBeaconOperation*</code> classes specify details used to read or write setting to the device.</li>
 </ul>
-<h4 id='convenience-api' class='heading'>Convenience API</h4>
+<a href='#convenience-api' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='convenience-api'>Convenience API</h4>
 
 <p>To simply change a device setting you can use the <strong>Conveniece API tree</strong>.
-Each device has one, here&rsquo;s an example of <code><a href="Classes/ESTDeviceLocationBeacon.html">ESTDeviceLocationBeacon</a></code> settings tree:</p>
-<pre class="highlight plaintext"><code>device
+Each device has one, here&rsquo;s an example of <code>ESTDeviceLocationBeacon</code> settings tree:
+<code>
+device
   |- settings
     |- iBeacon
       |- proximityUUID
@@ -1679,84 +1677,84 @@ Each device has one, here&rsquo;s an example of <code><a href="Classes/ESTDevice
       |- name
       ...
     ...
-</code></pre>
-
-<p>To read/write s device setting value call <code>readValueWithCompletion:</code> or <code>writeValue:completion:</code> method on one of the tree&rsquo;s leaf.</p>
-
-<p><strong>Usage example</strong></p>
-
-<p>I have an Estimote Location Beacon and I want to turn iBeacon packet on, change its Major value to 500, and read its Proximity UUID.</p>
-<pre class="highlight plaintext"><code>[device.settings.iBeacon.enable writeValue:YES completion:^(ESTSettingIBeaconEnable *enableSetting, NSError *error) {
-  NSLog(@"iBeacon packet enabled");
-}];
-
-[device.settings.iBeacon.major writeValue:500 completion:^(ESTSettingIBeaconMajor *majorSetting, NSError *error) {
-  NSLog(@"Major set to 500");
-}];
-
-[device.settings.iBeacon.proximityUUID readValueWithCompletion:^(ESTSettingIBeaconProximityUUID *uuidSetting, NSError *error) {
-  NSLog(@"Proximity UUID is %@", [uuidSetting getValue]);  
-}];
-</code></pre>
-<h4 id='advanced-api' class='heading'>Advanced API</h4>
-
-<p>To speed up interacting with multiple settings at once you can use the <strong>Advanced API</strong>. Each setting has its own setting and operation classes pair.</p>
-
-<ul>
-<li>Setting classes are subclasses of <code><a href="Classes/ESTSettingBase.html">ESTSettingBase</a></code> and have their names constructed by concatenating <code>ESTSetting</code> + SettingGroupName + SettingShortName (i.e. ESTSettingIBeaconMajor). They are wrappers around setting values (both primitive types and object types), they also provide value validation.</li>
-<li>Operation classes are subclasses of <code><a href="Classes/ESTSettingOperation.html">ESTSettingOperation</a></code> and have their name constructed by concatenating <code>ESTBeaconOperation</code> (if it&rsquo;s a setting stored in the device memory, such as iBeacon Major) or <code>ESTCloudOperation</code> (if it&rsquo;s a setting stored only in Cloud, such as DeviceInfo Name) + SettingGroupName + SettingShortName (i.e. ESTBeaconOperationIBeaconMajor or ESTCloudOperationDeviceInfoName).</li>
-</ul>
+</code>
+To read/write s device setting value call <code>readValueWithCompletion:</code> or <code>writeValue:completion:</code> method on one of the tree&rsquo;s leaf.</p>
 
 <p><strong>Usage example</strong></p>
 
-<p>I have an Estimote Location Beacon and I want to turn iBeacon packet on, change its Major value to 200, read its Proximity UUID, perform many other operations and want to do this as fast as possible.</p>
-<pre class="highlight plaintext"><code>ESTSettingIBeaconEnable *enableSetting = [[ESTSettingIBeaconEnable alloc] initWithValue:YES];
+<p>I have an Estimote Location Beacon and I want to turn iBeacon packet on, change its Major value to 500, and read its Proximity UUID.
+&ldquo;`objective-c
+[device.settings.iBeacon.enable writeValue:YES completion:^(ESTSettingIBeaconEnable *enableSetting, NSError *error) {
+  NSLog(@<q>iBeacon packet enabled</q>);
+}];</p>
+
+<p>[device.settings.iBeacon.major writeValue:500 completion:^(ESTSettingIBeaconMajor *majorSetting, NSError *error) {
+  NSLog(@<q>Major set to 500</q>);
+}];</p>
+
+<p>[device.settings.iBeacon.proximityUUID readValueWithCompletion:^(ESTSettingIBeaconProximityUUID *uuidSetting, NSError *error) {
+  NSLog(@<q>Proximity UUID is %@</q>, [uuidSetting getValue]);<br>
+}];
+&rdquo;`</p>
+<a href='#advanced-api' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='advanced-api'>Advanced API</h4>
+
+<p>To speed up interacting with multiple settings at once you can use the <strong>Advanced API</strong>. Each setting has its own setting and operation classes pair.
+* Setting classes are subclasses of <code>ESTSettingBase</code> and have their names constructed by concatenating <code>ESTSetting</code> + SettingGroupName + SettingShortName (i.e. ESTSettingIBeaconMajor). They are wrappers around setting values (both primitive types and object types), they also provide value validation.
+* Operation classes are subclasses of <code>ESTSettingOperation</code> and have their name constructed by concatenating <code>ESTBeaconOperation</code> (if it&rsquo;s a setting stored in the device memory, such as iBeacon Major) or <code>ESTCloudOperation</code> (if it&rsquo;s a setting stored only in Cloud, such as DeviceInfo Name) + SettingGroupName + SettingShortName (i.e. ESTBeaconOperationIBeaconMajor or ESTCloudOperationDeviceInfoName).</p>
+
+<p><strong>Usage example</strong></p>
+
+<p>I have an Estimote Location Beacon and I want to turn iBeacon packet on, change its Major value to 200, read its Proximity UUID, perform many other operations and want to do this as fast as possible.
+&ldquo;`objective-c
+ESTSettingIBeaconEnable *enableSetting = [[ESTSettingIBeaconEnable alloc] initWithValue:YES];
 ESTBeaconOperationIBeaconEnable *enableOperation = [ESTBeaconOperationIBeaconEnable writeOperationWithSetting:enableSetting completion:^(ESTSettingIBeaconEnable *setting, NSError *error)
-  NSLog(@"iBeacon packet enabled");
+  NSLog(@<q>iBeacon packet enabled</q>);
+}];</p>
+
+<p>unsigned short major = 200;
+ESTSettingIBeaconMajor *majorSetting = [[ESTSettingIBeaconMajor alloc] initWithValue:major];
+ESTBeaconOperationIBeaconMajor *majorOperation = [ESTBeaconOperationIBeaconMajor writeOperationWithSetting:majorSetting completion:^(ESTSettingIBeaconMajor *setting, NSError *error) {
+  NSLog(@<q>Major set to 200</q>);
+}];</p>
+
+<p>ESTBeaconOperationIBeaconProximityUUID *uuidOperation = [ESTBeaconOperationIBeaconProximityUUID readValueWithCompletion:^(ESTSettingIBeaconProximityUUID *setting, NSError *error) {
+  NSLog(@<q>Proximity UUID is %@</q>, [uuidSetting getValue]);
+}];</p>
+
+<p>&hellip;</p>
+
+<p>[device.settings performOperations:enableOperation, majorOperation, uuidOperation, &hellip;, nil];
+&rdquo;`</p>
+<a href='#bulk-updater' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='bulk-updater'>Bulk Updater</h4>
+
+<p>To perform bulk update operations on devices represented by <code>ESTDeviceLocationBeacon</code> class you should use the <code>ESTLocationBeaconBulkUpdater</code> class. Contrary to the <code>ESTBulkUpdater</code> it is not designed to be used as a singleton. <code>ESTLocationBeaconBulkUpdater</code> requires an array of of <code>ESTLocationBeaconBulkUpdaterConfiguration</code> objects to start. <code>ESTLocationBeaconBulkUpdaterConfiguration</code> consists of an identifier of the device which settings you want to modify and an array of <code>ESTSettingOperation</code> described in the <strong>Advanced API</strong> section. All bulk updater events will be delivered to the object assigned as it&rsquo;s delegate which should conform to <code>ESTLocationBeaconBulkUpdaterDelegate</code> protocol.</p>
+
+<p><strong>Usage example</strong></p>
+
+<p>I have an array of identifiers for my Location Beacons that should have their iBeacon packet on and major value set to 200.
+&ldquo;`objective-c
+NSMutableArray *bulkUpdateConfigurations = [NSMutableArray new];</p>
+
+<p>NSArray *identifiers = @[@<q>identifier1</q>, @<q>identifier2</q>, @<q>identifier3</q>];
+for (NSString *identifier in identifiers) {</p>
+<pre class="highlight plaintext"><code>ESTSettingIBeaconEnable *enableSetting = [[ESTSettingIBeaconEnable alloc] initWithValue:YES];
+ESTBeaconOperationIBeaconEnable *enableOperation = [ESTBeaconOperationIBeaconEnable writeOperationWithSetting:enableSetting completion:^(ESTSettingIBeaconEnable *iBeaconEnableSetting, NSError *error) {
 }];
 
 unsigned short major = 200;
 ESTSettingIBeaconMajor *majorSetting = [[ESTSettingIBeaconMajor alloc] initWithValue:major];
-ESTBeaconOperationIBeaconMajor *majorOperation = [ESTBeaconOperationIBeaconMajor writeOperationWithSetting:majorSetting completion:^(ESTSettingIBeaconMajor *setting, NSError *error) {
-  NSLog(@"Major set to 200");
+ESTBeaconOperationIBeaconMajor *majorOperation = [ESTBeaconOperationIBeaconMajor writeOperationWithSetting:majorSetting completion:^(ESTSettingIBeaconMajor *major, NSError *error) {
 }];
 
-ESTBeaconOperationIBeaconProximityUUID *uuidOperation = [ESTBeaconOperationIBeaconProximityUUID readValueWithCompletion:^(ESTSettingIBeaconProximityUUID *setting, NSError *error) {
-  NSLog(@"Proximity UUID is %@", [uuidSetting getValue]);
-}];
-
-...
-
-[device.settings performOperations:enableOperation, majorOperation, uuidOperation, ..., nil];
+ESTLocationBeaconBulkUpdateConfiguration *configuration = [[ESTLocationBeaconBulkUpdateConfiguration alloc] initWithDeviceIdentifier:identifier settingsOperations:@[enableOperation, majorOperation]];
+[bulkUpdateConfigurations addObject:configuration];
 </code></pre>
-<h4 id='bulk-updater' class='heading'>Bulk Updater</h4>
 
-<p>To perform bulk update operations on devices represented by <code><a href="Classes/ESTDeviceLocationBeacon.html">ESTDeviceLocationBeacon</a></code> class you should use the <code><a href="Classes/ESTLocationBeaconBulkUpdater.html">ESTLocationBeaconBulkUpdater</a></code> class. Contrary to the <code><a href="Classes/ESTBulkUpdater.html">ESTBulkUpdater</a></code> it is not designed to be used as a singleton. <code><a href="Classes/ESTLocationBeaconBulkUpdater.html">ESTLocationBeaconBulkUpdater</a></code> requires an array of of <code>ESTLocationBeaconBulkUpdaterConfiguration</code> objects to start. <code>ESTLocationBeaconBulkUpdaterConfiguration</code> consists of an identifier of the device which settings you want to modify and an array of <code><a href="Classes/ESTSettingOperation.html">ESTSettingOperation</a></code> described in the <strong>Advanced API</strong> section. All bulk updater events will be delivered to the object assigned as it&rsquo;s delegate which should conform to <code><a href="Protocols/ESTLocationBeaconBulkUpdaterDelegate.html">ESTLocationBeaconBulkUpdaterDelegate</a></code> protocol.</p>
+<p>}</p>
 
-<p><strong>Usage example</strong></p>
-
-<p>I have an array of identifiers for my Location Beacons that should have their iBeacon packet on and major value set to 200.</p>
-<pre class="highlight plaintext"><code>NSMutableArray *bulkUpdateConfigurations = [NSMutableArray new];
-
-NSArray *identifiers = @[@"identifier1", @"identifier2", @"identifier3"];
-for (NSString *identifier in identifiers) {
-
-    ESTSettingIBeaconEnable *enableSetting = [[ESTSettingIBeaconEnable alloc] initWithValue:YES];
-    ESTBeaconOperationIBeaconEnable *enableOperation = [ESTBeaconOperationIBeaconEnable writeOperationWithSetting:enableSetting completion:^(ESTSettingIBeaconEnable *iBeaconEnableSetting, NSError *error) {
-    }];
-
-    unsigned short major = 200;
-    ESTSettingIBeaconMajor *majorSetting = [[ESTSettingIBeaconMajor alloc] initWithValue:major];
-    ESTBeaconOperationIBeaconMajor *majorOperation = [ESTBeaconOperationIBeaconMajor writeOperationWithSetting:majorSetting completion:^(ESTSettingIBeaconMajor *major, NSError *error) {
-    }];
-
-    ESTLocationBeaconBulkUpdateConfiguration *configuration = [[ESTLocationBeaconBulkUpdateConfiguration alloc] initWithDeviceIdentifier:identifier settingsOperations:@[enableOperation, majorOperation]];
-    [bulkUpdateConfigurations addObject:configuration];
-}
-
-[self.bulkUpdater startWithUpdateConfigurations:[NSArray arrayWithArray:bulkUpdateConfigurations]];
-</code></pre>
-<h2 id='changelog' class='heading'>Changelog</h2>
+<p>[self.bulkUpdater startWithUpdateConfigurations:[NSArray arrayWithArray:bulkUpdateConfigurations]];
+&rdquo;`</p>
+<a href='#changelog' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='changelog'>Changelog</h2>
 
 <p>To see what has changed in recent versions of Estimote SDK, see the <a href="CHANGELOG.md">CHANGELOG</a>.</p>
 
@@ -1767,8 +1765,8 @@ for (NSString *identifier in identifiers) {
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2019-07-10)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2019 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2019-10-21)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

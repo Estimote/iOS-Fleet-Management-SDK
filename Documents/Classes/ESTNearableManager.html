@@ -951,7 +951,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Enumerations.html">Enumerations</a>
+            <a class="nav-group-name-link" href="../Enums.html">Enums</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums.html#/c:@E@ESTBeaconPower">ESTBeaconPower</a>
@@ -1539,14 +1539,9 @@
         <section class="section">
           <div class="section-content">
             <h1>ESTNearableManager</h1>
-             <div class="aside aside-deprecated">
-               <p class="aside-title">Deprecated</p>
-               <p>Deprecated since 4.31.0.</p>
-
-             </div>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight objective_c"><code>
+                  <pre class="highlight"><code>
 <span class="k">@interface</span> <span class="nc">ESTNearableManager</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
 
                 </div>
@@ -1583,6 +1578,7 @@
                         <p>Starts monitoring for nearable with specified identifier.</p>
 
 <p>Events are delivered to the <code>&lt;[ESTNearableManagerDelegate nearableManager:didEnterIdentifierRegion:]&gt;</code> and <code>&lt;[ESTNearableManagerDelegate nearableManager:didExitIdentifierRegion:]&gt;</code> methods of your <code>&lt;delegate&gt;</code>. If there is an error, the nearable manager calls the <code>&lt;[ESTNearableManagerDelegate nearableManager:monitoringFailedWithError:]&gt;</code> method of your <code>delegate</code> instead.</p>
+
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <p>nearableManager:stopMonitoringForIdentifier:</p>
@@ -1594,12 +1590,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">startMonitoringForIdentifier</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">identifier</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">startMonitoringForIdentifier</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">identifier</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">startMonitoring</span><span class="p">(</span><span class="n">forIdentifier</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">startMonitoring</span><span class="p">(</span><span class="n">forIdentifier</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1616,6 +1612,7 @@
                               <td>
                                 <div>
                                   <p>Nearable unique identifier that you want to monitor for. This parameter must not be <code>nil.</code></p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1641,6 +1638,7 @@
                         <p>Stops monitoring for nearable with specified identifier.</p>
 
 <p>If object with specified identifier is not currently being monitored, this method has no effect.</p>
+
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <p>nearableManager:startMonitoringForIdentifier:</p>
@@ -1652,12 +1650,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">stopMonitoringForIdentifier</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">identifier</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">stopMonitoringForIdentifier</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">identifier</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">stopMonitoring</span><span class="p">(</span><span class="n">forIdentifier</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">stopMonitoring</span><span class="p">(</span><span class="n">forIdentifier</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1674,6 +1672,7 @@
                               <td>
                                 <div>
                                   <p>The object&rsquo;s identifier currently being monitored. This parameter must not be <code>nil</code>.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1699,6 +1698,7 @@
                         <p>Starts monitoring for nearables with specified type.</p>
 
 <p>Events are delivered to the <code>&lt;[ESTNearableManagerDelegate nearableManager:didEnterTypeRegion:]&gt;</code> and <code>&lt;[ESTNearableManagerDelegate nearableManager:didExitTypeRegion:]&gt;</code> methods of your <code>&lt;delegate&gt;</code>. If there is an error, the nearable manager calls the <code>&lt;[ESTNearableManagerDelegate nearableManager:monitoringFailedWithError:]&gt;</code> method of your <code>delegate</code> instead.</p>
+
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <p>nearableManager:stopMonitoringForIdentifier:</p>
@@ -1710,12 +1710,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">startMonitoringForType</span><span class="p">:(</span><span class="n"><a href="../Enums.html#/c:@E@ESTNearableType">ESTNearableType</a></span><span class="p">)</span><span class="nv">type</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">startMonitoringForType</span><span class="p">:(</span><span class="n"><a href="../Enums.html#/c:@E@ESTNearableType">ESTNearableType</a></span><span class="p">)</span><span class="nv">type</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">startMonitoring</span><span class="p">(</span><span class="k">for</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Enums.html#/c:@E@ESTNearableType">ESTNearableType</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">startMonitoring</span><span class="p">(</span><span class="k">for</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Enums.html#/c:@E@ESTNearableType">ESTNearableType</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1732,6 +1732,7 @@
                               <td>
                                 <div>
                                   <p>Nearable type that you want to monitor for. This parameter must not be <code>nil.</code></p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1757,6 +1758,7 @@
                         <p>Stops monitoring for nearables with specified type.</p>
 
 <p>If objects with specified type are not currently being monitored, this method has no effect.</p>
+
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <p>nearableManager:startMonitoringForType:</p>
@@ -1768,12 +1770,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">stopMonitoringForType</span><span class="p">:(</span><span class="n"><a href="../Enums.html#/c:@E@ESTNearableType">ESTNearableType</a></span><span class="p">)</span><span class="nv">type</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">stopMonitoringForType</span><span class="p">:(</span><span class="n"><a href="../Enums.html#/c:@E@ESTNearableType">ESTNearableType</a></span><span class="p">)</span><span class="nv">type</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">stopMonitoring</span><span class="p">(</span><span class="k">for</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Enums.html#/c:@E@ESTNearableType">ESTNearableType</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">stopMonitoring</span><span class="p">(</span><span class="k">for</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Enums.html#/c:@E@ESTNearableType">ESTNearableType</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1790,6 +1792,7 @@
                               <td>
                                 <div>
                                   <p>The nearable type currently being monitored. This parameter must not be <code>nil</code>.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1815,11 +1818,13 @@
                         <p>Stops monitoring for all types and identifiers that were monitored.</p>
 
 <p>If there is nothing currently being monitored, this method has no effect.</p>
+
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     nearableManager:stopMonitoringForIdentifier:
 
 </div>
+
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     nearableManager:stopMonitoringForType:
@@ -1831,12 +1836,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">stopMonitoring</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">stopMonitoring</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">stopMonitoring</span><span class="p">()</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">stopMonitoring</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -1870,6 +1875,7 @@
                         <p>Starts the delivery of notifications for nearables with specified identifier.</p>
 
 <p>Once registered, the nearable manager reports any encountered nearable to its delegate by calling the <code>&lt;[ESTNearableManagerDelegate nearableManager:didRangeNearable:]&gt;</code> method. If there is an error registering the specified nearable type, the nearable manager calls its delegate&rsquo;s <code>&lt;[ESTNearableManagerDelegate nearableManager:rangingFailedWithError:]&gt;</code> method and provides the appropriate error information.</p>
+
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <p>stopRangingForType:</p>
@@ -1881,12 +1887,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">startRangingForIdentifier</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">identifier</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">startRangingForIdentifier</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">identifier</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">startRanging</span><span class="p">(</span><span class="n">forIdentifier</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">startRanging</span><span class="p">(</span><span class="n">forIdentifier</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1903,6 +1909,7 @@
                               <td>
                                 <div>
                                   <p>The identifier of nearables. This parameter must not be <code>nil</code></p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1926,6 +1933,7 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Stops the delivery of notifications for the specified nearable identifier.</p>
+
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <p>nearableManager:startRangingForType:</p>
@@ -1937,12 +1945,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">stopRangingForIdentifier</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">identifier</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">stopRangingForIdentifier</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">identifier</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">stopRanging</span><span class="p">(</span><span class="n">forIdentifier</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">stopRanging</span><span class="p">(</span><span class="n">forIdentifier</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1959,6 +1967,7 @@
                               <td>
                                 <div>
                                   <p>The identifier of nearables. This parameter must not be <code>nil</code></p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1984,6 +1993,7 @@
                         <p>Starts the delivery of notifications for nearables with specified type.</p>
 
 <p>Once registered, the nearable manager reports any encountered nearable to its delegate by calling the <code>&lt;[ESTNearableManagerDelegate nearableManager:didRangeNearables:withType:]&gt;</code> method. If there is an error registering the specified nearable type, the nearable manager calls its delegate&rsquo;s <code>&lt;[ESTNearableManagerDelegate nearableManager:rangingFailedWithError:]&gt;</code> method and provides the appropriate error information.</p>
+
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <p>stopRangingForType:</p>
@@ -1995,12 +2005,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">startRangingForType</span><span class="p">:(</span><span class="n"><a href="../Enums.html#/c:@E@ESTNearableType">ESTNearableType</a></span><span class="p">)</span><span class="nv">type</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">startRangingForType</span><span class="p">:(</span><span class="n"><a href="../Enums.html#/c:@E@ESTNearableType">ESTNearableType</a></span><span class="p">)</span><span class="nv">type</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">startRanging</span><span class="p">(</span><span class="k">for</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Enums.html#/c:@E@ESTNearableType">ESTNearableType</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">startRanging</span><span class="p">(</span><span class="k">for</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Enums.html#/c:@E@ESTNearableType">ESTNearableType</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2017,6 +2027,7 @@
                               <td>
                                 <div>
                                   <p>The type of nearables. This parameter must not be <code>nil</code></p>
+
                                 </div>
                               </td>
                             </tr>
@@ -2040,6 +2051,7 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Stops the delivery of notifications for the specified nearable type.</p>
+
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <p>startRangingForType:</p>
@@ -2051,12 +2063,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">stopRangingForType</span><span class="p">:(</span><span class="n"><a href="../Enums.html#/c:@E@ESTNearableType">ESTNearableType</a></span><span class="p">)</span><span class="nv">type</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">stopRangingForType</span><span class="p">:(</span><span class="n"><a href="../Enums.html#/c:@E@ESTNearableType">ESTNearableType</a></span><span class="p">)</span><span class="nv">type</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">stopRanging</span><span class="p">(</span><span class="k">for</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Enums.html#/c:@E@ESTNearableType">ESTNearableType</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">stopRanging</span><span class="p">(</span><span class="k">for</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Enums.html#/c:@E@ESTNearableType">ESTNearableType</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2073,6 +2085,7 @@
                               <td>
                                 <div>
                                   <p>The type of nearables. This parameter must not be <code>nil</code></p>
+
                                 </div>
                               </td>
                             </tr>
@@ -2098,11 +2111,13 @@
                         <p>Stops ranging all types and identifiers that were ranged.</p>
 
 <p>If there is nothing currently being ranged, this method has no effect.</p>
+
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     stopRangingForIdentifier:
 
 </div>
+
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     stopRangingForType:
@@ -2114,12 +2129,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">stopRanging</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">stopRanging</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">stopRanging</span><span class="p">()</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">stopRanging</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -2134,8 +2149,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2019-07-10)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2019 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2019-10-21)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

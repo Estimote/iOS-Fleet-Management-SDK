@@ -951,7 +951,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Enumerations.html">Enumerations</a>
+            <a class="nav-group-name-link" href="../Enums.html">Enums</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums.html#/c:@E@ESTBeaconPower">ESTBeaconPower</a>
@@ -1539,14 +1539,9 @@
         <section class="section">
           <div class="section-content">
             <h1>ESTRequestGetBeaconsDetails</h1>
-             <div class="aside aside-deprecated">
-               <p class="aside-title">Deprecated</p>
-               <p>Deprecated since 4.31.0. Please use ESTRequestGetDevices instead.</p>
-
-             </div>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight objective_c"><code>
+                  <pre class="highlight"><code>
 <span class="k">@interface</span> <span class="nc">ESTRequestGetBeaconsDetails</span> <span class="p">:</span> <span class="nc">ESTRequestGetJSON</span></code></pre>
 
                 </div>
@@ -1582,13 +1577,13 @@ Can be MAC addresses or Eddystone Identifiers or proximityUUID:major:minor strin
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span>
     <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">beaconIdentifiers</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">beaconIdentifiers</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">beaconIdentifiers</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1616,12 +1611,12 @@ Provided as NS_OPTIONS ESTBeaconDetailsFields.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">ESTBeaconDetailsFields</span> <span class="n">fields</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">ESTBeaconDetailsFields</span> <span class="n">fields</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">fields</span><span class="p">:</span> <span class="kt">ESTBeaconDetailsFields</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">fields</span><span class="p">:</span> <span class="kt">ESTBeaconDetailsFields</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1648,13 +1643,13 @@ Provided as NS_OPTIONS ESTBeaconDetailsFields.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithBeacons</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">CLBeacon</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">beacons</span>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithBeacons</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">CLBeacon</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">beacons</span>
                               <span class="nf">andFields</span><span class="p">:(</span><span class="n">ESTBeaconDetailsFields</span><span class="p">)</span><span class="nv">fields</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">beacons</span><span class="p">:</span> <span class="p">[</span><span class="kt">CLBeacon</span><span class="p">],</span> <span class="n">andFields</span> <span class="nv">fields</span><span class="p">:</span> <span class="kt">ESTBeaconDetailsFields</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="nf">init</span><span class="p">(</span><span class="nv">beacons</span><span class="p">:</span> <span class="p">[</span><span class="kt">CLBeacon</span><span class="p">],</span> <span class="n">andFields</span> <span class="nv">fields</span><span class="p">:</span> <span class="kt">ESTBeaconDetailsFields</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1671,6 +1666,7 @@ Provided as NS_OPTIONS ESTBeaconDetailsFields.</p>
                               <td>
                                 <div>
                                   <p>Array of CLBeacon objects</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1683,6 +1679,7 @@ Provided as NS_OPTIONS ESTBeaconDetailsFields.</p>
                               <td>
                                 <div>
                                   <p>A mask of fields indicating which beacon parameters you want to fetch</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1692,6 +1689,7 @@ Provided as NS_OPTIONS ESTBeaconDetailsFields.</p>
                       <div>
                         <h4>Return Value</h4>
                         <p>instance of request</p>
+
                       </div>
                     </section>
                   </div>
@@ -1716,14 +1714,14 @@ Provided as NS_OPTIONS ESTBeaconDetailsFields.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithMacAddresses</span><span class="p">:</span>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithMacAddresses</span><span class="p">:</span>
                             <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">macAddresses</span>
                                    <span class="nf">andFields</span><span class="p">:(</span><span class="n">ESTBeaconDetailsFields</span><span class="p">)</span><span class="nv">fields</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">macAddresses</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">],</span> <span class="n">andFields</span> <span class="nv">fields</span><span class="p">:</span> <span class="kt">ESTBeaconDetailsFields</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="nf">init</span><span class="p">(</span><span class="nv">macAddresses</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">],</span> <span class="n">andFields</span> <span class="nv">fields</span><span class="p">:</span> <span class="kt">ESTBeaconDetailsFields</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1740,6 +1738,7 @@ Provided as NS_OPTIONS ESTBeaconDetailsFields.</p>
                               <td>
                                 <div>
                                   <p>Array of MAC addresses as NSStrings</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1752,6 +1751,7 @@ Provided as NS_OPTIONS ESTBeaconDetailsFields.</p>
                               <td>
                                 <div>
                                   <p>A mask of fields indicating which beacon parameters you want to fetch</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1761,6 +1761,7 @@ Provided as NS_OPTIONS ESTBeaconDetailsFields.</p>
                       <div>
                         <h4>Return Value</h4>
                         <p>instance of request</p>
+
                       </div>
                     </section>
                   </div>
@@ -1785,13 +1786,13 @@ Provided as NS_OPTIONS ESTBeaconDetailsFields.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sendRequestWithCompletion</span><span class="p">:</span>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">sendRequestWithCompletion</span><span class="p">:</span>
     <span class="p">(</span><span class="n">nonnull</span> <span class="n">ESTRequestGetBeaconsDetailsBlock</span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">sendRequest</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">ESTRequestGetBeaconsDetailsBlock</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">sendRequest</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">ESTRequestGetBeaconsDetailsBlock</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1808,6 +1809,7 @@ Provided as NS_OPTIONS ESTBeaconDetailsFields.</p>
                               <td>
                                 <div>
                                   <p>Completion block with returned data (Array of beaconVO objects).</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1825,8 +1827,8 @@ Provided as NS_OPTIONS ESTBeaconDetailsFields.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2019-07-10)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2019 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2019-10-21)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

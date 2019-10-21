@@ -951,7 +951,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Enumerations.html">Enumerations</a>
+            <a class="nav-group-name-link" href="../Enums.html">Enums</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums.html#/c:@E@ESTBeaconPower">ESTBeaconPower</a>
@@ -1541,7 +1541,7 @@
             <h1>ESTDeviceSettingsCollection</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">ESTDeviceSettingsCollection</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="o">&gt;</span></code></pre>
+                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTDeviceSettingsCollection</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="o">&gt;</span></code></pre>
 
                 </div>
               </div>
@@ -1574,13 +1574,13 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithSettingsArray</span><span class="p">:</span>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithSettingsArray</span><span class="p">:</span>
     <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/ESTSettingBase.html">ESTSettingBase</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">settingsArray</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">settingsArray</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/ESTSettingBase.html">ESTSettingBase</a></span><span class="p">])</span></code></pre>
+                          <pre class="highlight"><code><span class="nf">init</span><span class="p">(</span><span class="nv">settingsArray</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/ESTSettingBase.html">ESTSettingBase</a></span><span class="p">])</span></code></pre>
 
                         </div>
                       </div>
@@ -1597,6 +1597,7 @@
                               <td>
                                 <div>
                                   <p>Array of settings.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1606,6 +1607,7 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>Initialized object.</p>
+
                       </div>
                     </section>
                   </div>
@@ -1632,12 +1634,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">addOrReplaceSetting</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/ESTSettingBase.html">ESTSettingBase</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">setting</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">addOrReplaceSetting</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/ESTSettingBase.html">ESTSettingBase</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">setting</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">addOrReplaceSetting</span><span class="p">(</span><span class="n">_</span> <span class="nv">setting</span><span class="p">:</span> <span class="kt"><a href="../Classes/ESTSettingBase.html">ESTSettingBase</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">addOrReplaceSetting</span><span class="p">(</span><span class="n">_</span> <span class="nv">setting</span><span class="p">:</span> <span class="kt"><a href="../Classes/ESTSettingBase.html">ESTSettingBase</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1654,6 +1656,7 @@
                               <td>
                                 <div>
                                   <p>Setting should be set.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1687,12 +1690,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">addOrReplaceSettings</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/ESTSettingBase.html">ESTSettingBase</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">settings</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">addOrReplaceSettings</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/ESTSettingBase.html">ESTSettingBase</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">settings</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">addOrReplaceSettings</span><span class="p">(</span><span class="n">_</span> <span class="nv">settings</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/ESTSettingBase.html">ESTSettingBase</a></span><span class="p">])</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">addOrReplaceSettings</span><span class="p">(</span><span class="n">_</span> <span class="nv">settings</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/ESTSettingBase.html">ESTSettingBase</a></span><span class="p">])</span></code></pre>
 
                         </div>
                       </div>
@@ -1709,6 +1712,7 @@
                               <td>
                                 <div>
                                   <p>Setting should be set.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1738,12 +1742,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">id</span><span class="p">)</span><span class="nf">getSettingForClass</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">Class</span><span class="p">)</span><span class="nv">targetedClass</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">id</span><span class="p">)</span><span class="nf">getSettingForClass</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">Class</span><span class="p">)</span><span class="nv">targetedClass</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getSettingFor</span><span class="p">(</span><span class="n">_</span> <span class="nv">targetedClass</span><span class="p">:</span> <span class="kt">AnyClass</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="p">?</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">getSettingFor</span><span class="p">(</span><span class="n">_</span> <span class="nv">targetedClass</span><span class="p">:</span> <span class="kt">AnyClass</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1760,6 +1764,7 @@
                               <td>
                                 <div>
                                   <p>Class of setting that should be get.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1769,6 +1774,7 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>Setting for class. Nil means no setting was set for this class or there are multiple settings avaialable.</p>
+
                       </div>
                     </section>
                   </div>
@@ -1793,13 +1799,13 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/ESTSettingBase.html">ESTSettingBase</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nf">getAllSettingsForClass</span><span class="p">:</span>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/ESTSettingBase.html">ESTSettingBase</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nf">getAllSettingsForClass</span><span class="p">:</span>
     <span class="p">(</span><span class="n">nonnull</span> <span class="n">Class</span><span class="p">)</span><span class="nv">targetedClass</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getAllSettings</span><span class="p">(</span><span class="k">for</span> <span class="nv">targetedClass</span><span class="p">:</span> <span class="kt">AnyClass</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Classes/ESTSettingBase.html">ESTSettingBase</a></span><span class="p">]?</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">getAllSettings</span><span class="p">(</span><span class="k">for</span> <span class="nv">targetedClass</span><span class="p">:</span> <span class="kt">AnyClass</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Classes/ESTSettingBase.html">ESTSettingBase</a></span><span class="p">]?</span></code></pre>
 
                         </div>
                       </div>
@@ -1816,6 +1822,7 @@
                               <td>
                                 <div>
                                   <p>Class of setting that should be get.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1825,6 +1832,7 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>Array of settings for class. Nil means no setting was set for this class.</p>
+
                       </div>
                     </section>
                   </div>
@@ -1849,18 +1857,19 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="n">getSettings</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="n">getSettings</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getSettings</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Any</span><span class="p">]</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">getSettings</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Any</span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
                         <p>Array of all set settings.</p>
+
                       </div>
                     </section>
                   </div>
@@ -1873,8 +1882,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2019-07-10)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2019 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2019-10-21)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

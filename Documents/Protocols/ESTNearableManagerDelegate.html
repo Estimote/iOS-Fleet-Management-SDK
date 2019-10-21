@@ -951,7 +951,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Enumerations.html">Enumerations</a>
+            <a class="nav-group-name-link" href="../Enums.html">Enums</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums.html#/c:@E@ESTBeaconPower">ESTBeaconPower</a>
@@ -1539,14 +1539,9 @@
         <section class="section">
           <div class="section-content">
             <h1>ESTNearableManagerDelegate</h1>
-             <div class="aside aside-deprecated">
-               <p class="aside-title">Deprecated</p>
-               <p>Deprecated since 4.31.0.</p>
-
-             </div>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">ESTNearableManagerDelegate</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                  <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">ESTNearableManagerDelegate</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
 
                 </div>
               </div>
@@ -1586,14 +1581,14 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">nearableManager</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/ESTNearableManager.html">ESTNearableManager</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">manager</span>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">nearableManager</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/ESTNearableManager.html">ESTNearableManager</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">manager</span>
       <span class="nf">didRangeNearables</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/ESTNearable.html">ESTNearable</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">nearables</span>
                <span class="nf">withType</span><span class="p">:(</span><span class="n"><a href="../Enums.html#/c:@E@ESTNearableType">ESTNearableType</a></span><span class="p">)</span><span class="nv">type</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">nearableManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt"><a href="../Classes/ESTNearableManager.html">ESTNearableManager</a></span><span class="p">,</span> <span class="n">didRangeNearables</span> <span class="nv">nearables</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/ESTNearable.html">ESTNearable</a></span><span class="p">],</span> <span class="n">with</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Enums.html#/c:@E@ESTNearableType">ESTNearableType</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">nearableManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt"><a href="../Classes/ESTNearableManager.html">ESTNearableManager</a></span><span class="p">,</span> <span class="n">didRangeNearables</span> <span class="nv">nearables</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/ESTNearable.html">ESTNearable</a></span><span class="p">],</span> <span class="n">with</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Enums.html#/c:@E@ESTNearableType">ESTNearableType</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1610,6 +1605,7 @@
                               <td>
                                 <div>
                                   <p>The nearable manager object reporting the event.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1621,7 +1617,13 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>An array of <code>&lt;ESTNearable&gt;</code> objects representing the nearables currently in range. You can use the information in these objects to determine the range of each nearables and its identifying information.</p>
+                                  <p>An array of `
+&lt;ESTNearable</p>
+
+<blockquote>
+<p>` objects representing the nearables currently in range. You can use the information in these objects to determine the range of each nearables and its identifying information.</p>
+</blockquote>
+
                                 </div>
                               </td>
                             </tr>
@@ -1634,6 +1636,7 @@
                               <td>
                                 <div>
                                   <p>The nearable type that was used to range the nearables.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1663,13 +1666,13 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">nearableManager</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/ESTNearableManager.html">ESTNearableManager</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">manager</span>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">nearableManager</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/ESTNearableManager.html">ESTNearableManager</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">manager</span>
        <span class="nf">didRangeNearable</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/ESTNearable.html">ESTNearable</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">nearable</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">nearableManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt"><a href="../Classes/ESTNearableManager.html">ESTNearableManager</a></span><span class="p">,</span> <span class="n">didRangeNearable</span> <span class="nv">nearable</span><span class="p">:</span> <span class="kt"><a href="../Classes/ESTNearable.html">ESTNearable</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">nearableManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt"><a href="../Classes/ESTNearableManager.html">ESTNearableManager</a></span><span class="p">,</span> <span class="n">didRangeNearable</span> <span class="nv">nearable</span><span class="p">:</span> <span class="kt"><a href="../Classes/ESTNearable.html">ESTNearable</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1686,6 +1689,7 @@
                               <td>
                                 <div>
                                   <p>The nearable manager object reporting the event.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1697,7 +1701,13 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>An <code>&lt;ESTNearable&gt;</code> object representing the nearable currently in range. You can use the information in these objects to determine the range of nearable and its identifying information.</p>
+                                  <p>An `
+&lt;ESTNearable</p>
+
+<blockquote>
+<p>` object representing the nearable currently in range. You can use the information in these objects to determine the range of nearable and its identifying information.</p>
+</blockquote>
+
                                 </div>
                               </td>
                             </tr>
@@ -1727,13 +1737,13 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">nearableManager</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/ESTNearableManager.html">ESTNearableManager</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">manager</span>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">nearableManager</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/ESTNearableManager.html">ESTNearableManager</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">manager</span>
     <span class="nf">rangingFailedWithError</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSError</span> <span class="o">*</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">nearableManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt"><a href="../Classes/ESTNearableManager.html">ESTNearableManager</a></span><span class="p">,</span> <span class="n">rangingFailedWithError</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">nearableManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt"><a href="../Classes/ESTNearableManager.html">ESTNearableManager</a></span><span class="p">,</span> <span class="n">rangingFailedWithError</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1750,6 +1760,7 @@
                               <td>
                                 <div>
                                   <p>The nearable manager object reporting the event.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1762,6 +1773,7 @@
                               <td>
                                 <div>
                                   <p>An error object describing why monitoring failed.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1802,13 +1814,13 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">nearableManager</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/ESTNearableManager.html">ESTNearableManager</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">manager</span>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">nearableManager</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/ESTNearableManager.html">ESTNearableManager</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">manager</span>
      <span class="nf">didEnterTypeRegion</span><span class="p">:(</span><span class="n"><a href="../Enums.html#/c:@E@ESTNearableType">ESTNearableType</a></span><span class="p">)</span><span class="nv">type</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">nearableManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt"><a href="../Classes/ESTNearableManager.html">ESTNearableManager</a></span><span class="p">,</span> <span class="n">didEnterTypeRegion</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Enums.html#/c:@E@ESTNearableType">ESTNearableType</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">nearableManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt"><a href="../Classes/ESTNearableManager.html">ESTNearableManager</a></span><span class="p">,</span> <span class="n">didEnterTypeRegion</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Enums.html#/c:@E@ESTNearableType">ESTNearableType</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1825,6 +1837,7 @@
                               <td>
                                 <div>
                                   <p>The nearable manager object reporting the event.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1837,6 +1850,7 @@
                               <td>
                                 <div>
                                   <p>The nearable type region that was entered.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1866,13 +1880,13 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">nearableManager</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/ESTNearableManager.html">ESTNearableManager</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">manager</span>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">nearableManager</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/ESTNearableManager.html">ESTNearableManager</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">manager</span>
       <span class="nf">didExitTypeRegion</span><span class="p">:(</span><span class="n"><a href="../Enums.html#/c:@E@ESTNearableType">ESTNearableType</a></span><span class="p">)</span><span class="nv">type</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">nearableManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt"><a href="../Classes/ESTNearableManager.html">ESTNearableManager</a></span><span class="p">,</span> <span class="n">didExitTypeRegion</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Enums.html#/c:@E@ESTNearableType">ESTNearableType</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">nearableManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt"><a href="../Classes/ESTNearableManager.html">ESTNearableManager</a></span><span class="p">,</span> <span class="n">didExitTypeRegion</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Enums.html#/c:@E@ESTNearableType">ESTNearableType</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1889,6 +1903,7 @@
                               <td>
                                 <div>
                                   <p>The nearable manager object reporting the event.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1901,6 +1916,7 @@
                               <td>
                                 <div>
                                   <p>The nearable type region that was exited.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1930,13 +1946,13 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">nearableManager</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/ESTNearableManager.html">ESTNearableManager</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">manager</span>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">nearableManager</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/ESTNearableManager.html">ESTNearableManager</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">manager</span>
     <span class="nf">didEnterIdentifierRegion</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">identifier</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">nearableManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt"><a href="../Classes/ESTNearableManager.html">ESTNearableManager</a></span><span class="p">,</span> <span class="n">didEnterIdentifierRegion</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">nearableManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt"><a href="../Classes/ESTNearableManager.html">ESTNearableManager</a></span><span class="p">,</span> <span class="n">didEnterIdentifierRegion</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1953,6 +1969,7 @@
                               <td>
                                 <div>
                                   <p>The nearable manager object reporting the event.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1965,6 +1982,7 @@
                               <td>
                                 <div>
                                   <p>The nearable identifier region that was entered.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1994,13 +2012,13 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">nearableManager</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/ESTNearableManager.html">ESTNearableManager</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">manager</span>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">nearableManager</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/ESTNearableManager.html">ESTNearableManager</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">manager</span>
     <span class="nf">didExitIdentifierRegion</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">identifier</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">nearableManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt"><a href="../Classes/ESTNearableManager.html">ESTNearableManager</a></span><span class="p">,</span> <span class="n">didExitIdentifierRegion</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">nearableManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt"><a href="../Classes/ESTNearableManager.html">ESTNearableManager</a></span><span class="p">,</span> <span class="n">didExitIdentifierRegion</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2017,6 +2035,7 @@
                               <td>
                                 <div>
                                   <p>The nearable manager object reporting the event.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -2029,6 +2048,7 @@
                               <td>
                                 <div>
                                   <p>The nearable identifier region that was exited.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -2058,13 +2078,13 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">nearableManager</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/ESTNearableManager.html">ESTNearableManager</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">manager</span>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">nearableManager</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/ESTNearableManager.html">ESTNearableManager</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">manager</span>
     <span class="nf">monitoringFailedWithError</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSError</span> <span class="o">*</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">nearableManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt"><a href="../Classes/ESTNearableManager.html">ESTNearableManager</a></span><span class="p">,</span> <span class="n">monitoringFailedWithError</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">optional</span> <span class="kd">func</span> <span class="nf">nearableManager</span><span class="p">(</span><span class="n">_</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt"><a href="../Classes/ESTNearableManager.html">ESTNearableManager</a></span><span class="p">,</span> <span class="n">monitoringFailedWithError</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2081,6 +2101,7 @@
                               <td>
                                 <div>
                                   <p>The beacon manager object reporting the event.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -2093,6 +2114,7 @@
                               <td>
                                 <div>
                                   <p>An error object describing why monitoring failed.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -2110,8 +2132,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2019-07-10)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2019 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2019-10-21)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>
