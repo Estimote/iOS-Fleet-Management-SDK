@@ -951,7 +951,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Enumerations.html">Enumerations</a>
+            <a class="nav-group-name-link" href="../Enums.html">Enums</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums.html#/c:@E@ESTBeaconPower">ESTBeaconPower</a>
@@ -1541,7 +1541,7 @@
             <h1>ESTPeripheralTypeUtilityDelegate</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight objective_c"><code><span class="k">@protocol</span> <span class="nc">ESTPeripheralTypeUtilityDelegate</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
+                  <pre class="highlight"><code><span class="k">@protocol</span> <span class="nc">ESTPeripheralTypeUtilityDelegate</span> <span class="o">&lt;</span><span class="n">NSObject</span><span class="o">&gt;</span></code></pre>
 
                 </div>
               </div>
@@ -1574,14 +1574,14 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">peripheral</span><span class="p">:(</span><span class="n">id</span><span class="o">&lt;</span><span class="n">ESTPeripheral</span><span class="o">&gt;</span><span class="p">)</span><span class="nv">peripheral</span>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">peripheral</span><span class="p">:(</span><span class="n">id</span><span class="o">&lt;</span><span class="n">ESTPeripheral</span><span class="o">&gt;</span><span class="p">)</span><span class="nv">peripheral</span>
     <span class="nf">didPerformOperation</span><span class="p">:(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/ESTBeaconOperationProtocol.html">ESTBeaconOperationProtocol</a></span><span class="o">&gt;</span><span class="p">)</span><span class="nv">operation</span>
         <span class="nf">andReceivedData</span><span class="p">:(</span><span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="nv">data</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">peripheral</span><span class="p">(</span><span class="n">_</span> <span class="nv">peripheral</span><span class="p">:</span> <span class="kt">ESTPeripheral</span><span class="o">!</span><span class="p">,</span> <span class="n">didPerformOperation</span> <span class="nv">operation</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ESTBeaconOperationProtocol.html">ESTBeaconOperationProtocol</a></span><span class="o">!</span><span class="p">,</span> <span class="n">andReceivedData</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="o">!</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">peripheral</span><span class="p">(</span><span class="n">_</span> <span class="nv">peripheral</span><span class="p">:</span> <span class="kt">ESTPeripheral</span><span class="o">!</span><span class="p">,</span> <span class="n">didPerformOperation</span> <span class="nv">operation</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ESTBeaconOperationProtocol.html">ESTBeaconOperationProtocol</a></span><span class="o">!</span><span class="p">,</span> <span class="n">andReceivedData</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="o">!</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1598,6 +1598,7 @@
                               <td>
                                 <div>
                                   <p>Peripheral object that performed operation.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1610,6 +1611,7 @@
                               <td>
                                 <div>
                                   <p>Operation that was performed.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1622,6 +1624,7 @@
                               <td>
                                 <div>
                                   <p>Data received from the device to be deserialized.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1651,14 +1654,14 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">peripheral</span><span class="p">:(</span><span class="n">id</span><span class="o">&lt;</span><span class="n">ESTPeripheral</span><span class="o">&gt;</span><span class="p">)</span><span class="nv">peripheral</span>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">peripheral</span><span class="p">:(</span><span class="n">id</span><span class="o">&lt;</span><span class="n">ESTPeripheral</span><span class="o">&gt;</span><span class="p">)</span><span class="nv">peripheral</span>
     <span class="nf">didFailOperation</span><span class="p">:(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/ESTBeaconOperationProtocol.html">ESTBeaconOperationProtocol</a></span><span class="o">&gt;</span><span class="p">)</span><span class="nv">operation</span>
            <span class="nf">withError</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">peripheral</span><span class="p">(</span><span class="n">_</span> <span class="nv">peripheral</span><span class="p">:</span> <span class="kt">ESTPeripheral</span><span class="o">!</span><span class="p">,</span> <span class="n">didFailOperation</span> <span class="nv">operation</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ESTBeaconOperationProtocol.html">ESTBeaconOperationProtocol</a></span><span class="o">!</span><span class="p">,</span> <span class="n">withError</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="o">!</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">peripheral</span><span class="p">(</span><span class="n">_</span> <span class="nv">peripheral</span><span class="p">:</span> <span class="kt">ESTPeripheral</span><span class="o">!</span><span class="p">,</span> <span class="n">didFailOperation</span> <span class="nv">operation</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ESTBeaconOperationProtocol.html">ESTBeaconOperationProtocol</a></span><span class="o">!</span><span class="p">,</span> <span class="n">withError</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="o">!</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1675,6 +1678,7 @@
                               <td>
                                 <div>
                                   <p>Peripheral object that tried to perform operation.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1687,6 +1691,7 @@
                               <td>
                                 <div>
                                   <p>Operation that was to be performed.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1699,6 +1704,7 @@
                               <td>
                                 <div>
                                   <p>Error explaining the failure reason.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1716,8 +1722,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2019-07-10)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2019 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2019-10-21)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

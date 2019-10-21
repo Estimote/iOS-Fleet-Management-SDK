@@ -951,7 +951,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Enumerations.html">Enumerations</a>
+            <a class="nav-group-name-link" href="../Enums.html">Enums</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums.html#/c:@E@ESTBeaconPower">ESTBeaconPower</a>
@@ -1541,7 +1541,7 @@
             <h1>ESTTime</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">ESTTime</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="o">&gt;</span></code></pre>
+                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTTime</span> <span class="p">:</span> <span class="nc">NSObject</span> <span class="o">&lt;</span><span class="n">NSCopying</span><span class="o">&gt;</span></code></pre>
 
                 </div>
               </div>
@@ -1576,12 +1576,12 @@ Useful for representing time relative to midnight.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSUInteger</span> <span class="n">secondsSinceMidnight</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSUInteger</span> <span class="n">secondsSinceMidnight</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">secondsSinceMidnight</span><span class="p">:</span> <span class="kt">UInt</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">secondsSinceMidnight</span><span class="p">:</span> <span class="kt">UInt</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1608,12 +1608,12 @@ Useful for representing time relative to midnight.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithSecondsSinceMidnight</span><span class="p">:(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">seconds</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithSecondsSinceMidnight</span><span class="p">:(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">seconds</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="n"><a href="../Classes/ESTTime.html#/c:objc(cs)ESTTime(py)secondsSinceMidnight">secondsSinceMidnight</a></span> <span class="nv">seconds</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="nf">init</span><span class="p">(</span><span class="n"><a href="../Classes/ESTTime.html#/c:objc(cs)ESTTime(py)secondsSinceMidnight">secondsSinceMidnight</a></span> <span class="nv">seconds</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1630,6 +1630,7 @@ Useful for representing time relative to midnight.</p>
                               <td>
                                 <div>
                                   <p>Seconds since midnight.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1639,6 +1640,7 @@ Useful for representing time relative to midnight.</p>
                       <div>
                         <h4>Return Value</h4>
                         <p>Initialized object.</p>
+
                       </div>
                     </section>
                   </div>
@@ -1663,14 +1665,14 @@ Useful for representing time relative to midnight.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithHours</span><span class="p">:(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">hours</span>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithHours</span><span class="p">:(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">hours</span>
                               <span class="nf">minutes</span><span class="p">:(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">minutes</span>
                               <span class="nf">seconds</span><span class="p">:(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">seconds</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">hours</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">,</span> <span class="nv">minutes</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">,</span> <span class="nv">seconds</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="nf">init</span><span class="p">(</span><span class="nv">hours</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">,</span> <span class="nv">minutes</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">,</span> <span class="nv">seconds</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1687,6 +1689,7 @@ Useful for representing time relative to midnight.</p>
                               <td>
                                 <div>
                                   <p>Integer hours since midnight for a given point in time.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1699,6 +1702,7 @@ Useful for representing time relative to midnight.</p>
                               <td>
                                 <div>
                                   <p>Integer minutes since midnight for a given point in time.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1711,6 +1715,7 @@ Useful for representing time relative to midnight.</p>
                               <td>
                                 <div>
                                   <p>Integer seconds since midnight for a given point in time.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1720,6 +1725,7 @@ Useful for representing time relative to midnight.</p>
                       <div>
                         <h4>Return Value</h4>
                         <p>Initialized object.</p>
+
                       </div>
                     </section>
                   </div>
@@ -1745,13 +1751,13 @@ Useful for representing time relative to midnight.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithHours</span><span class="p">:(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">hours</span>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithHours</span><span class="p">:(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">hours</span>
                               <span class="nf">minutes</span><span class="p">:(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">minutes</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">hours</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">,</span> <span class="nv">minutes</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="nf">init</span><span class="p">(</span><span class="nv">hours</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">,</span> <span class="nv">minutes</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1768,6 +1774,7 @@ Useful for representing time relative to midnight.</p>
                               <td>
                                 <div>
                                   <p>Integer hours since midnight for a given point in time.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1780,6 +1787,7 @@ Useful for representing time relative to midnight.</p>
                               <td>
                                 <div>
                                   <p>Integer minutes since midnight for a given point in time.</p>
+
                                 </div>
                               </td>
                             </tr>
@@ -1789,6 +1797,7 @@ Useful for representing time relative to midnight.</p>
                       <div>
                         <h4>Return Value</h4>
                         <p>Initialized object.</p>
+
                       </div>
                     </section>
                   </div>
@@ -1801,8 +1810,8 @@ Useful for representing time relative to midnight.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2019-07-10)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2019 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2019-10-21)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>
