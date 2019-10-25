@@ -1,4 +1,7 @@
-# Estimote SDK for Apple iOS
+
+# Estimote Fleet Management SDK for Apple iOS
+
+>If this name seems unfamiliar, please rest assured that everything is ok. With release of 4.29.0 we only changed the naming (https://github.com/Estimote/iOS-Fleet-Management-SDK/releases/tag/4.29.0)
 
 ## Table of Contents
 
@@ -30,34 +33,36 @@
 
 This iOS SDK can be used to update the settings of multiple Estimote beacons at once. You no longer need to connect to each beacon individually. Instead, you use Estimote Cloud to queue ‘pending settings’ on your beacons. Then, your iOS app equipped with this SDK ( see [Bulk Updater](#bulk-updater) section) can propagate those settings the moment it encounters the beacons. This also means that, once you deploy the beacons, users of your app can propagate the settings by simply being around the beacons.
 
+### Before diving in...
 If you simply need to change the settings (or apply ‘pending settings’) of the nearby Estimote beacons, get [Estimote iOS app](https://itunes.apple.com/us/app/estimote/id686915066?mt=8). For a single beacon or a few of them, this will be the fastest method.
 
 If you have more Estimote devices, [Estimote Deployment app](https://itunes.apple.com/us/app/estimote-deployment/id1109375679?mt=8) will be a better choice. It uses Bulk Updater to propagate settings to multiple beacons at once.
 
-All the proximity monitoring features of this SDK have been deprecated and are no longer supported. Instead, **we strongly recommend [Estimote Proximity SDK for iOS](https://github.com/Estimote/iOS-Proximity-SDK) powered by Estimote Monitoring.** This iOS SDK, on the other hand, should be used for beacon fleet management. Keep in mind that tags & attachments from Estimote Proximity SDK are updated instantly, without the need to propagate settings to beacons
+All the proximity monitoring features of this SDK have been deprecated and are no longer supported. Instead, **we strongly recommend [Estimote Proximity SDK for iOS](https://github.com/Estimote/iOS-Proximity-SDK) powered by Estimote Monitoring.** This iOS SDK, on the other hand, should be used for beacon fleet management (as new naming suggests right? :wink: ).
+> :bulb: Keep in mind that tags & attachments from Estimote Proximity SDK are updated instantly, without the need to propagate settings to beacons.
 
-To learn more about this iOS SDK, review the [SDK documentation](http://estimote.github.io/iOS-SDK/) and check the Developer Portal tutorial. Visit also [Estimote Cloud API docs](https://cloud.estimote.com/docs/).
+To learn more about Fleet Management SDK, review the [SDK documentation]([http://estimote.github.io/iOS-Fleet-Management-SDK/](http://estimote.github.io/iOS-Fleet-Management-SDK/)) and check the Developer Portal tutorial. Visit also [Estimote Cloud API docs](https://cloud.estimote.com/docs/).
 
 ## Installation
 
 ### CocoaPods 
 [CocoaPods](https://cocoapods.org/) is an easy way to add external libraries. To use it to fetch Estimote SDK:
-1. Add `pod 'EstimoteSDK'` to your Podfile
+1. Add `pod 'EstimoteFleetManagementSDK'` to your Podfile
 1. Run `pod install --repo-update`
-1. For Swift project: you will need a *bridging header*, so just add a new file with Objective-C, confirm you want to a create a bridging header and just remove the not needed Objective-C file. In the bridging header, add: `#import <EstimoteSDK/EstimoteSDK.h>`
-For Objective-c project: add to your code `#import <EstimoteSDK/EstimoteSDK.h>`
+1. For Swift project: you will need a *bridging header*, so just add a new file with Objective-C, confirm you want to a create a bridging header and just remove the not needed Objective-C file. In the bridging header, add: `#import <EstimoteFleetManagement/EstimoteFleetManagement.h>`
+For Objective-c project: add to your code `#import <EstimoteFleetManagement/EstimoteFleetManagement.h>`
 1. You're ready to rock!
 
 ### Manual
-Alternatively, include a single *EstimoteSDK.framework* file in your project to get started:
+Alternatively, include a single *EstimoteFleetManagement.framework* file in your project to get started:
 
-1. Drag and drop *EstimoteSDK.framework* file into your Xcode project. It will automatically show up in your project navigator and will be added to *Linked Frameworks and Libraries* section in project settings.
+1. Drag and drop *EstimoteFleetManagement.framework* file into your Xcode project. It will automatically show up in your project navigator and will be added to *Linked Frameworks and Libraries* section in project settings.
 1. That's it, congratulations and happy hacking!
 
 
 ## Requirements
 
-The SDK requires iOS 7+, as it depends on the CoreLocation's support for iBeacon which was first introduced in iOS 7. 
+This SDK is build with _Deployment Target_ being set to iOS 10.0.
 
 ## Fleet Management
 
@@ -69,11 +74,11 @@ With this feature you can:
 1. Modify the settings of individual beacons (e.g. increase the broadcasting power, decrease the advertising interval, modify Eddystone-URL’s link)
 1. Update Estimote beacon firmware
 
-To perform bulk update operations on devices represented by *ESTDeviceLocationBeacon* class you should use the *ESTLocationBeaconBulkUpdater* class. 
+To perform bulk update operations on devices represented by *ESTDeviceLocationBeacon* class (e.g. Location Beacons) you should use the *ESTLocationBeaconBulkUpdater* class. 
 
 > Contrary to the ESTBulkUpdater it is not designed to be used as a singleton.
 
-*ESTLocationBeaconBulkUpdater* requires an array of of *ESTLocationBeaconBulkUpdaterConfiguration* objects to start. *ESTLocationBeaconBulkUpdaterConfiguration* consists of an identifier of the device which settings you want to modify and an array of *ESTSettingOperation* described in the Advanced API section. All bulk updater events will be delivered to the object assigned as it's delegate which should conform to *ESTLocationBeaconBulkUpdaterDelegate* protocol.
+*ESTLocationBeaconBulkUpdater* requires an array of *ESTLocationBeaconBulkUpdaterConfiguration* objects to start. *ESTLocationBeaconBulkUpdaterConfiguration* consists of an identifier of the device which settings you want to modify and an array of *ESTSettingOperation* described in the [Advanced API](#advanced-api) section. All bulk updater events will be delivered to the object assigned as it's delegate which should conform to *ESTLocationBeaconBulkUpdaterDelegate* protocol.
 
 ### Usage example
 
@@ -114,7 +119,7 @@ Connectivity packets are represented by *ESTDeviceConnectable* subclasses, the m
 - Estimote Location Beacons (hardware revision “F”)
 - Estimote Proximity Beacons (hardware revisions “G” and “J”)
 
-If you have Estimote Nearables (Stickers), use *ESTDeviceNearable* instead. In order to connect to the first-generation Estimote Proximity Beacon (hardware revision "D"), use the [SDK 3 API](https://github.com/Estimote/iOS-SDK/blob/master/SDK_3_x_README.md#utility).
+If you have Estimote Nearables (Stickers), use *ESTDeviceNearable* instead. In order to connect to the first-generation Estimote Proximity Beacon (hardware revision "D"), use the [SDK 3 API](https://github.com/Estimote/iOS-Fleet-Management-SDK/blob/master/SDK_3_x_README.md#utility).
 
 
 **In this SDK, following steps are required to connect to a device:**
@@ -126,7 +131,7 @@ If you have Estimote Nearables (Stickers), use *ESTDeviceNearable* instead. In o
 
 ### Settings
 
-In this SDK, each device setting is represented by an *ESTSettingBase* subclass. There are two ways of reading/writing settings - [Convenience API](https://github.com/Estimote/iOS-SDK#convenience-api) and [Advanced API](https://github.com/Estimote/iOS-SDK#advanced-api).
+In this SDK, each device setting is represented by an *ESTSettingBase* subclass. There are two ways of reading/writing settings - [Convenience API](#convenience-api) and [Advanced API](#advanced-api).
 
 These classes are wrappers around basic types (both primitives and objects) such as *unsigned integer* or *NSString*,
 
