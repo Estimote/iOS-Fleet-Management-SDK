@@ -57,7 +57,9 @@ Alternatively, include a single *EstimoteSDK.framework* file in your project to 
 
 ## Requirements
 
-The SDK requires iOS 7+, as it depends on the CoreLocation's support for iBeacon which was first introduced in iOS 7. 
+- One or more Estimote Beacons.
+- An iOS device with Bluetooth Low Energy running iOS 9 or later. Using BLE with iOS Simulator isn't supported.
+- An [Estimote Cloud](https://cloud.estimote.com/) account.
 
 ## Fleet Management
 
