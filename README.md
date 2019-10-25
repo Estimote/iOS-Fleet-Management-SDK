@@ -62,7 +62,9 @@ Alternatively, include a single *EstimoteFleetManagement.framework* file in your
 
 ## Requirements
 
-This SDK is build with _Deployment Target_ being set to iOS 10.0.
+- One or more Estimote Beacons.
+- An iOS device with Bluetooth Low Energy running iOS 10 or later. Using BLE with iOS Simulator isn't supported.
+- An [Estimote Cloud](https://cloud.estimote.com/) account.
 
 ## Fleet Management
 
