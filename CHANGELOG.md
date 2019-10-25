@@ -1,6 +1,11 @@
+## 4.31.2 (October 21, 2019)
+### Fixed
+- Failing to connect with legacy beacons (with hardware revision D3.x)
+- Minor bugfixes
 ## 4.31.1 (October 21, 2019)
 ### Fixed
 - Failing to detect nearables on iOS 13 devices
+- Improved compatibility with iOS 13
 
 ## 4.31.0 (July 5, 2019)
 
