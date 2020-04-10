@@ -48,16 +48,16 @@ To learn more about Fleet Management SDK, review the [SDK documentation]([http:/
 ### CocoaPods 
 [CocoaPods](https://cocoapods.org/) is an easy way to add external libraries. To use it to fetch Estimote SDK:
 1. Add `pod 'EstimoteFleetManagementSDK'` to your Podfile
-1. Run `pod install --repo-update`
-1. For Swift project: you will need a *bridging header*, so just add a new file with Objective-C, confirm you want to a create a bridging header and just remove the not needed Objective-C file. In the bridging header, add: `#import <EstimoteFleetManagement/EstimoteFleetManagement.h>`
-For Objective-c project: add to your code `#import <EstimoteFleetManagement/EstimoteFleetManagement.h>`
-1. You're ready to rock!
+2. Run `pod install --repo-update`
+3. For Swift project: you will need a *bridging header*, so just add a new file with Objective-C, confirm you want to a create a bridging header and just remove the not needed Objective-C file. In the bridging header, add: `#import <EstimoteFleetManagement/EstimoteFleetManagement.h>`
+For Objective-c project: add to your code `#import <EstimoteFleetManagementSDK/EstimoteFleetManagementSDK.h>`
+4. You're ready to rock!
 
 ### Manual
 Alternatively, include a single *EstimoteFleetManagement.framework* file in your project to get started:
 
-1. Drag and drop *EstimoteFleetManagement.framework* file into your Xcode project. It will automatically show up in your project navigator and will be added to *Linked Frameworks and Libraries* section in project settings.
-1. That's it, congratulations and happy hacking!
+1. Drag and drop *EstimoteFleetManagementSDK.framework* file into your Xcode project. It will automatically show up in your project navigator and will be added to *Linked Frameworks and Libraries* section in project settings.
+2. That's it, congratulations and happy hacking!
 
 
 ## Requirements
