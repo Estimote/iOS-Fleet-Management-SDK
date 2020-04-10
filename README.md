@@ -38,7 +38,7 @@ If you simply need to change the settings (or apply ‘pending settings’) of t
 
 If you have more Estimote devices, [Estimote Deployment app](https://itunes.apple.com/us/app/estimote-deployment/id1109375679?mt=8) will be a better choice. It uses Bulk Updater to propagate settings to multiple beacons at once.
 
-All the proximity monitoring features of this SDK have been deprecated and are no longer supported. Instead, **we strongly recommend [Estimote Proximity SDK for iOS](https://github.com/Estimote/iOS-Proximity-SDK) powered by Estimote Monitoring.** This iOS SDK, on the other hand, should be used for beacon fleet management (as new naming suggests right? :wink: ).
+All the proximity monitoring features of this SDK have been deprecated and are no longer supported. Instead, **we strongly recommend [Estimote Proximity SDK for iOS](https://github.com/Estimote/iOS-Proximity-SDK) powered by Estimote Monitoring.** This Estimote Fleet Management SDK, on the other hand, should be used for beacon fleet management (as new naming suggests right? :wink: ).
 > :bulb: Keep in mind that tags & attachments from Estimote Proximity SDK are updated instantly, without the need to propagate settings to beacons.
 
 To learn more about Fleet Management SDK, review the [SDK documentation]([http://estimote.github.io/iOS-Fleet-Management-SDK/](http://estimote.github.io/iOS-Fleet-Management-SDK/)) and check the Developer Portal tutorial. Visit also [Estimote Cloud API docs](https://cloud.estimote.com/docs/).
@@ -46,15 +46,15 @@ To learn more about Fleet Management SDK, review the [SDK documentation]([http:/
 ## Installation
 
 ### CocoaPods 
-[CocoaPods](https://cocoapods.org/) is an easy way to add external libraries. To use it to fetch Estimote SDK:
+[CocoaPods](https://cocoapods.org/) is an easy way to add external libraries. To use it to fetch Estimote Fleet Management SDK:
 1. Add `pod 'EstimoteFleetManagementSDK'` to your Podfile
 2. Run `pod install --repo-update`
-3. For Swift project: you will need a *bridging header*, so just add a new file with Objective-C, confirm you want to a create a bridging header and just remove the not needed Objective-C file. In the bridging header, add: `#import <EstimoteFleetManagement/EstimoteFleetManagement.h>`
+3. For Swift project: you will need a *bridging header*, so just add a new file with Objective-C, confirm you want to a create a bridging header and just remove the not needed Objective-C file. In the bridging header, add: `#import <EstimoteFleetManagementSDK/EstimoteFleetManagementSDK.h>`
 For Objective-c project: add to your code `#import <EstimoteFleetManagementSDK/EstimoteFleetManagementSDK.h>`
 4. You're ready to rock!
 
 ### Manual
-Alternatively, include a single *EstimoteFleetManagement.framework* file in your project to get started:
+Alternatively, include a single *EstimoteFleetManagementSDK.framework* file in your project to get started:
 
 1. Drag and drop *EstimoteFleetManagementSDK.framework* file into your Xcode project. It will automatically show up in your project navigator and will be added to *Linked Frameworks and Libraries* section in project settings.
 2. That's it, congratulations and happy hacking!
