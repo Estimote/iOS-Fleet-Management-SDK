@@ -1,7 +1,9 @@
-## 4.31.2 (October 21, 2019)
+## 4.32.2 (April 24, 2020)
 ### Fixed
-- Failing to connect with legacy beacons (with hardware revision D3.x)
-- Minor bugfixes
+- `ESTNearableScanner` could from time to time trigger saving `unknown` values for nearable's firmware and/or hardware. Not anymore.
+- Nearable's firmware update.
+- Minor bugfixes.
+
 ## 4.31.1 (October 21, 2019)
 ### Fixed
 - Failing to detect nearables on iOS 13 devices
