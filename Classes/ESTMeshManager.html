@@ -951,7 +951,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Enums.html">Enums</a>
+            <a class="nav-group-name-link" href="../Enumerations.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums.html#/c:@E@ESTBeaconPower">ESTBeaconPower</a>
@@ -1541,7 +1541,7 @@
             <h1>ESTMeshManager</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">ESTMeshManager</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">ESTMeshManager</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
 
                 </div>
               </div>
@@ -1574,12 +1574,13 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols.html#/c:objc(pl)ESTMeshManagerDelegate">ESTMeshManagerDelegate</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span> <span class="n">delegate</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">weak</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">)</span>
+    <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols.html#/c:objc(pl)ESTMeshManagerDelegate">ESTMeshManagerDelegate</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span> <span class="n">delegate</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">weak</span> <span class="k">var</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols.html#/c:objc(pl)ESTMeshManagerDelegate">ESTMeshManagerDelegate</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">weak</span> <span class="k">var</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols.html#/c:objc(pl)ESTMeshManagerDelegate">ESTMeshManagerDelegate</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1606,12 +1607,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">isConfirmingMeshSettings</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">isConfirmingMeshSettings</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">isConfirmingMeshSettings</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isConfirmingMeshSettings</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1638,19 +1639,18 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="n">init</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="n">init</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">convenience</span> <span class="nf">init</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="n">convenience</span> <span class="nf">init</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
                         <p>Initialized object or nil if it couldn&rsquo;t be created.</p>
-
                       </div>
                     </section>
                   </div>
@@ -1675,13 +1675,13 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithDelegate</span><span class="p">:</span>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithDelegate</span><span class="p">:</span>
     <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols.html#/c:objc(pl)ESTMeshManagerDelegate">ESTMeshManagerDelegate</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">delegate</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols.html#/c:objc(pl)ESTMeshManagerDelegate">ESTMeshManagerDelegate</a></span><span class="p">?)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols.html#/c:objc(pl)ESTMeshManagerDelegate">ESTMeshManagerDelegate</a></span><span class="p">?)</span></code></pre>
 
                         </div>
                       </div>
@@ -1698,7 +1698,6 @@
                               <td>
                                 <div>
                                   <p>Delegate object.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1708,7 +1707,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>Initialized object or nil if it couldn&rsquo;t be created.</p>
-
                       </div>
                     </section>
                   </div>
@@ -1733,14 +1731,14 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithDelegate</span><span class="p">:</span>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithDelegate</span><span class="p">:</span>
                             <span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols.html#/c:objc(pl)ESTMeshManagerDelegate">ESTMeshManagerDelegate</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">)</span><span class="nv">delegate</span>
                    <span class="nf">cbCentralManagerQueue</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">dispatch_queue_t</span><span class="p">)</span><span class="nv">queue</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="nf">init</span><span class="p">(</span><span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols.html#/c:objc(pl)ESTMeshManagerDelegate">ESTMeshManagerDelegate</a></span><span class="p">?,</span> <span class="n">cbCentralManagerQueue</span> <span class="nv">queue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols.html#/c:objc(pl)ESTMeshManagerDelegate">ESTMeshManagerDelegate</a></span><span class="p">?,</span> <span class="n">cbCentralManagerQueue</span> <span class="nv">queue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1757,7 +1755,6 @@
                               <td>
                                 <div>
                                   <p>A queue used for dispatching events of a <code>CBCentralManager</code> instance used for device discovery.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1770,7 +1767,6 @@
                               <td>
                                 <div>
                                   <p>Delegate object.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1780,7 +1776,6 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>Initialized object or nil if it couldn&rsquo;t be created.</p>
-
                       </div>
                     </section>
                   </div>
@@ -1805,12 +1800,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">startConfirmingMeshSettings</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">startConfirmingMeshSettings</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">startConfirmingMeshSettings</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">startConfirmingMeshSettings</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -1837,12 +1832,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">stopConfirmingMeshSettings</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">stopConfirmingMeshSettings</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">stopConfirmingMeshSettings</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">stopConfirmingMeshSettings</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -1862,15 +1857,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Method allowing to create Mesh network in Cloud with provided details. Connection with Location Beacon is required to apply Mesh network&rsquo;s settings to the device.
-  - see: ESTDeviceLocationBeacon connect</p>
+                        <p>Method allowing to create Mesh network in Cloud with provided details. Connection with Location Beacon is required to apply Mesh network&rsquo;s settings to the device.</p>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <p>ESTDeviceLocationBeacon connect</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">createMeshFromDevices</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">devices</span>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">createMeshFromDevices</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">devices</span>
                   <span class="nf">networkName</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">name</span>
                   <span class="nf">networkType</span><span class="p">:(</span><span class="n">ESTMeshNetworkType</span><span class="p">)</span><span class="nv">type</span>
             <span class="nf">referenceSettings</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/ESTDeviceSettings.html">ESTDeviceSettings</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">settings</span>
@@ -1879,7 +1878,7 @@
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">createMesh</span><span class="p">(</span><span class="n">fromDevices</span> <span class="nv">devices</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">],</span> <span class="n">networkName</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">networkType</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">ESTMeshNetworkType</span><span class="p">,</span> <span class="n">referenceSettings</span> <span class="nv">settings</span><span class="p">:</span> <span class="kt"><a href="../Classes/ESTDeviceSettings.html">ESTDeviceSettings</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">ESTMeshCompletionBlock</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">createMesh</span><span class="p">(</span><span class="n">fromDevices</span> <span class="nv">devices</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">],</span> <span class="n">networkName</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">networkType</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">ESTMeshNetworkType</span><span class="p">,</span> <span class="n">referenceSettings</span> <span class="nv">settings</span><span class="p">:</span> <span class="kt"><a href="../Classes/ESTDeviceSettings.html">ESTDeviceSettings</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">ESTMeshCompletionBlock</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1896,7 +1895,6 @@
                               <td>
                                 <div>
                                   <p>Array of Location Beacon&rsquo;s identifiers to be included in Mesh network.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1909,7 +1907,6 @@
                               <td>
                                 <div>
                                   <p>Mesh network&rsquo;s name.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1921,8 +1918,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Type of Mesh network. </p>
-
+                                  <p>Type of Mesh network. - see: ESTMeshNetworkType</p>
                                 </div>
                               </td>
                             </tr>
@@ -1935,7 +1931,6 @@
                               <td>
                                 <div>
                                   <p>Reference settings to be used across Mesh network&rsquo;s devices.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1948,7 +1943,6 @@
                               <td>
                                 <div>
                                   <p>Completion block returning Mesh network object or error, if operation failed to succeed.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1978,13 +1972,13 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">fetchMeshListWithCompletion</span><span class="p">:</span>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">fetchMeshListWithCompletion</span><span class="p">:</span>
     <span class="p">(</span><span class="n">nonnull</span> <span class="n">ESTMeshArrayCompletionBlock</span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">fetchMeshList</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">ESTMeshArrayCompletionBlock</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">fetchMeshList</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">ESTMeshArrayCompletionBlock</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2001,7 +1995,6 @@
                               <td>
                                 <div>
                                   <p>Completion block returning list of Mesh network objects or error, if operation failed to succeed.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2031,14 +2024,14 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">fetchMeshDetailsWithIdentifier</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSNumber</span> <span class="o">*</span><span class="p">)</span><span class="nv">identifier</span>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">fetchMeshDetailsWithIdentifier</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSNumber</span> <span class="o">*</span><span class="p">)</span><span class="nv">identifier</span>
                             <span class="nf">completion</span><span class="p">:</span>
                                 <span class="p">(</span><span class="n">nonnull</span> <span class="n">ESTMeshCompletionBlock</span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">fetchMeshDetails</span><span class="p">(</span><span class="n">withIdentifier</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">NSNumber</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">ESTMeshCompletionBlock</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">fetchMeshDetails</span><span class="p">(</span><span class="n">withIdentifier</span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">NSNumber</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">ESTMeshCompletionBlock</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2055,7 +2048,6 @@
                               <td>
                                 <div>
                                   <p>Identifier of Mesh network.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2068,7 +2060,6 @@
                               <td>
                                 <div>
                                   <p>Completion block returning list of Mesh network objects or error, if operation failed to succeed.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2098,14 +2089,14 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">configureNetwork</span><span class="p">:(</span><span class="kt">uint32_t</span><span class="p">)</span><span class="nv">networkIdentifier</span>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">configureNetwork</span><span class="p">:(</span><span class="kt">uint32_t</span><span class="p">)</span><span class="nv">networkIdentifier</span>
                 <span class="nf">settings</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/ESTDeviceSettingsCollection.html">ESTDeviceSettingsCollection</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">deviceSettings</span>
               <span class="nf">completion</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">ESTCompletionBlock</span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">configureNetwork</span><span class="p">(</span><span class="n">_</span> <span class="nv">networkIdentifier</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">,</span> <span class="n">settings</span> <span class="nv">deviceSettings</span><span class="p">:</span> <span class="kt"><a href="../Classes/ESTDeviceSettingsCollection.html">ESTDeviceSettingsCollection</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">ESTCompletionBlock</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">configureNetwork</span><span class="p">(</span><span class="n">_</span> <span class="nv">networkIdentifier</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">,</span> <span class="n">settings</span> <span class="nv">deviceSettings</span><span class="p">:</span> <span class="kt"><a href="../Classes/ESTDeviceSettingsCollection.html">ESTDeviceSettingsCollection</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">ESTCompletionBlock</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2122,7 +2113,6 @@
                               <td>
                                 <div>
                                   <p>Identifier of mesh network.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2135,7 +2125,6 @@
                               <td>
                                 <div>
                                   <p>Group of settings that should be applied.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2148,7 +2137,6 @@
                               <td>
                                 <div>
                                   <p>Completion block with operation&rsquo;s error. Nil value means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2170,17 +2158,30 @@
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
+                       <div class="aside aside-deprecated">
+                         <p class="aside-title">Deprecated</p>
+                         <p>Deprecated since 4.31.0.</p>
+
+                       </div>
                       <div class="abstract">
-                        <p>Queues start UWB ranging command in the Cloud with a default timeout.
-- warning: The comand is synchronized upon device connection.
-- warning: The comamnd is executed upon device disconnection.</p>
+                        <p>Queues start UWB ranging command in the Cloud with a default timeout.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    The comand is synchronized upon device connection.
+
+</div>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>The comamnd is executed upon device disconnection.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">queueAutomappingCommandInCloudForNetworkIdentifier</span><span class="p">:</span>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">queueAutomappingCommandInCloudForNetworkIdentifier</span><span class="p">:</span>
             <span class="p">(</span><span class="kt">uint32_t</span><span class="p">)</span><span class="nv">networkIdentifier</span>
                                                 <span class="nf">completion</span><span class="p">:</span>
                                                     <span class="p">(</span><span class="n">nonnull</span> <span class="n">ESTCompletionBlock</span><span class="p">)</span>
@@ -2189,7 +2190,7 @@
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">queueAutomappingCommandInCloud</span><span class="p">(</span><span class="n">forNetworkIdentifier</span> <span class="nv">networkIdentifier</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">ESTCompletionBlock</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">queueAutomappingCommandInCloud</span><span class="p">(</span><span class="n">forNetworkIdentifier</span> <span class="nv">networkIdentifier</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">ESTCompletionBlock</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2206,7 +2207,6 @@
                               <td>
                                 <div>
                                   <p>Identifier of Mesh network, that automapping will be triggered for.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2219,7 +2219,6 @@
                               <td>
                                 <div>
                                   <p>Completion block with operation&rsquo;s error. Nil value means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2241,17 +2240,30 @@
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
+                       <div class="aside aside-deprecated">
+                         <p class="aside-title">Deprecated</p>
+                         <p>Deprecated since 4.31.0.</p>
+
+                       </div>
                       <div class="abstract">
-                        <p>Queues stop UWB ranging command in the Cloud.
-- warning: The comand is synchronized upon device connection.
-- warning: The comamnd is executed upon device disconnection.</p>
+                        <p>Queues stop UWB ranging command in the Cloud.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    The comand is synchronized upon device connection.
+
+</div>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>The comamnd is executed upon device disconnection.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span>
     <span class="nf">cancelAutomappingCommandInCloudForNetworkIdentifier</span><span class="p">:</span>
         <span class="p">(</span><span class="kt">uint32_t</span><span class="p">)</span><span class="nv">networkIdentifier</span>
                                              <span class="nf">completion</span><span class="p">:</span>
@@ -2261,7 +2273,7 @@
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">cancelAutomappingCommandInCloud</span><span class="p">(</span><span class="n">forNetworkIdentifier</span> <span class="nv">networkIdentifier</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">ESTCompletionBlock</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">cancelAutomappingCommandInCloud</span><span class="p">(</span><span class="n">forNetworkIdentifier</span> <span class="nv">networkIdentifier</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">ESTCompletionBlock</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2278,7 +2290,6 @@
                               <td>
                                 <div>
                                   <p>Identifier of Mesh network, that automapping will be canceled for.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2291,7 +2302,6 @@
                               <td>
                                 <div>
                                   <p>Completion block with operation&rsquo;s error. Nil value means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2313,23 +2323,32 @@
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
+                       <div class="aside aside-deprecated">
+                         <p class="aside-title">Deprecated</p>
+                         <p>Deprecated since 4.31.0.</p>
+
+                       </div>
                       <div class="abstract">
-                        <p>Sets a pending setting in the Cloud; this setting causes beacons in this mesh network to start scanning for nearables.
-- warning: The beacon synchronizes pending settings upon connection and executes them upon disconnection.</p>
+                        <p>Sets a pending setting in the Cloud; this setting causes beacons in this mesh network to start scanning for nearables.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>The beacon synchronizes pending settings upon connection and executes them upon disconnection.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">enableAssetTrackingForNetworkIdentifier</span><span class="p">:(</span><span class="kt">uint32_t</span><span class="p">)</span><span class="nv">networkIdentifier</span>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">enableAssetTrackingForNetworkIdentifier</span><span class="p">:(</span><span class="kt">uint32_t</span><span class="p">)</span><span class="nv">networkIdentifier</span>
                                      <span class="nf">completion</span><span class="p">:</span>
                                          <span class="p">(</span><span class="n">nonnull</span> <span class="n">ESTCompletionBlock</span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">enableAssetTracking</span><span class="p">(</span><span class="n">forNetworkIdentifier</span> <span class="nv">networkIdentifier</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">ESTCompletionBlock</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">enableAssetTracking</span><span class="p">(</span><span class="n">forNetworkIdentifier</span> <span class="nv">networkIdentifier</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">ESTCompletionBlock</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2346,7 +2365,6 @@
                               <td>
                                 <div>
                                   <p>Identifier of Mesh network, that tracking nearables will be enabled for.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2359,7 +2377,6 @@
                               <td>
                                 <div>
                                   <p>Completion block with operation&rsquo;s error. Nil value means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2381,21 +2398,23 @@
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
+                       <div class="aside aside-deprecated">
+                         <p class="aside-title">Deprecated</p>
+                         <p>Deprecated since 4.31.0.</p>
+
+                       </div>
                       <div class="abstract">
                         <p>Creates a pending command to prepare (merge) scan reports with nearables&rsquo; signal readings across the mesh network and queues this command in the Cloud.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     The comand is synchronized upon device connection.
 
 </div>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     The comamnd is executed upon device disconnection.
 
 </div>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>Only works if <code>enableAssetTrackingForNetworkIdentifier:completion:</code> was executed in advance.</p>
@@ -2407,7 +2426,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span>
     <span class="nf">prepareNearablesScanReportCommandForNetworkIdentifier</span><span class="p">:</span>
         <span class="p">(</span><span class="kt">uint32_t</span><span class="p">)</span><span class="nv">networkIdentifier</span>
                                                <span class="nf">completion</span><span class="p">:</span>
@@ -2417,7 +2436,7 @@
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">prepareNearablesScanReportCommand</span><span class="p">(</span><span class="n">forNetworkIdentifier</span> <span class="nv">networkIdentifier</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">ESTCompletionBlock</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">prepareNearablesScanReportCommand</span><span class="p">(</span><span class="n">forNetworkIdentifier</span> <span class="nv">networkIdentifier</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">ESTCompletionBlock</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -2434,7 +2453,6 @@
                               <td>
                                 <div>
                                   <p>Identifier of Mesh network, that reading scan reports will be triggered for.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2447,7 +2465,6 @@
                               <td>
                                 <div>
                                   <p>Completion block with operation&rsquo;s error. Nil value means success.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -2465,8 +2482,8 @@
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2019-10-25)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2020 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2020-04-24)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

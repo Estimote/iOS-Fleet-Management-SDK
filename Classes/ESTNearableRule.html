@@ -951,7 +951,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Enums.html">Enums</a>
+            <a class="nav-group-name-link" href="../Enumerations.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums.html#/c:@E@ESTBeaconPower">ESTBeaconPower</a>
@@ -1539,9 +1539,14 @@
         <section class="section">
           <div class="section-content">
             <h1>ESTNearableRule</h1>
+             <div class="aside aside-deprecated">
+               <p class="aside-title">Deprecated</p>
+               <p>Deprecated since 4.31.0.</p>
+
+             </div>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code>
+                  <pre class="highlight objective_c"><code>
 <span class="k">@interface</span> <span class="nc">ESTNearableRule</span> <span class="p">:</span> <span class="nc"><a href="../Classes/ESTRule.html">ESTRule</a></span></code></pre>
 
                 </div>
@@ -1576,12 +1581,12 @@ defining any conditions.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">nearableIdentifier</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">strong</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">nearableIdentifier</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">nearableIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">nearableIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1608,12 +1613,13 @@ defining any conditions.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Enums.html#/c:@E@ESTNearableType">ESTNearableType</a></span> <span class="n">nearableType</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">unsafe_unretained</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span>
+    <span class="n"><a href="../Enums.html#/c:@E@ESTNearableType">ESTNearableType</a></span> <span class="n">nearableType</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">nearableType</span><span class="p">:</span> <span class="kt"><a href="../Enums.html#/c:@E@ESTNearableType">ESTNearableType</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">nearableType</span><span class="p">:</span> <span class="kt"><a href="../Enums.html#/c:@E@ESTNearableType">ESTNearableType</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1640,13 +1646,13 @@ defining any conditions.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithNearableIdentifier</span><span class="p">:</span>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithNearableIdentifier</span><span class="p">:</span>
     <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">identifier</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="nf">init</span><span class="p">(</span><span class="n"><a href="../Classes/ESTNearableRule.html#/c:objc(cs)ESTNearableRule(py)nearableIdentifier">nearableIdentifier</a></span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="n"><a href="../Classes/ESTNearableRule.html#/c:objc(cs)ESTNearableRule(py)nearableIdentifier">nearableIdentifier</a></span> <span class="nv">identifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1663,7 +1669,6 @@ defining any conditions.</p>
                               <td>
                                 <div>
                                   <p>Estimote nearable identifier</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1673,7 +1678,6 @@ defining any conditions.</p>
                       <div>
                         <h4>Return Value</h4>
                         <p>created rule object</p>
-
                       </div>
                     </section>
                   </div>
@@ -1698,12 +1702,12 @@ defining any conditions.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithNearableType</span><span class="p">:(</span><span class="n"><a href="../Enums.html#/c:@E@ESTNearableType">ESTNearableType</a></span><span class="p">)</span><span class="nv">type</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithNearableType</span><span class="p">:(</span><span class="n"><a href="../Enums.html#/c:@E@ESTNearableType">ESTNearableType</a></span><span class="p">)</span><span class="nv">type</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="nf">init</span><span class="p">(</span><span class="n"><a href="../Classes/ESTNearableRule.html#/c:objc(cs)ESTNearableRule(py)nearableType">nearableType</a></span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Enums.html#/c:@E@ESTNearableType">ESTNearableType</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="n"><a href="../Classes/ESTNearableRule.html#/c:objc(cs)ESTNearableRule(py)nearableType">nearableType</a></span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Enums.html#/c:@E@ESTNearableType">ESTNearableType</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1720,7 +1724,6 @@ defining any conditions.</p>
                               <td>
                                 <div>
                                   <p>Estimote nearable type</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1730,7 +1733,6 @@ defining any conditions.</p>
                       <div>
                         <h4>Return Value</h4>
                         <p>created rule object</p>
-
                       </div>
                     </section>
                   </div>
@@ -1758,12 +1760,12 @@ defining any conditions.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">updateWithNearable</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/ESTNearable.html">ESTNearable</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">nearable</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">updateWithNearable</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/ESTNearable.html">ESTNearable</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">nearable</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">update</span><span class="p">(</span><span class="n">with</span> <span class="nv">nearable</span><span class="p">:</span> <span class="kt"><a href="../Classes/ESTNearable.html">ESTNearable</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">update</span><span class="p">(</span><span class="n">with</span> <span class="nv">nearable</span><span class="p">:</span> <span class="kt"><a href="../Classes/ESTNearable.html">ESTNearable</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1780,7 +1782,6 @@ defining any conditions.</p>
                               <td>
                                 <div>
                                   <p>Estimote nearable object with most recent settings</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1798,8 +1799,8 @@ defining any conditions.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2019-10-25)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2020 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2020-04-24)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>

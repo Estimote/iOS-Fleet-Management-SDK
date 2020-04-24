@@ -951,7 +951,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Enums.html">Enums</a>
+            <a class="nav-group-name-link" href="../Enumerations.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums.html#/c:@E@ESTBeaconPower">ESTBeaconPower</a>
@@ -1539,9 +1539,14 @@
         <section class="section">
           <div class="section-content">
             <h1>ESTFeaturesetEstimoteMonitoring</h1>
+             <div class="aside aside-deprecated">
+               <p class="aside-title">Deprecated</p>
+               <p>Deprecated since 4.31.0.</p>
+
+             </div>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code>
+                  <pre class="highlight objective_c"><code>
 <span class="k">@interface</span> <span class="nc">ESTFeaturesetEstimoteMonitoring</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
 
                 </div>
@@ -1577,13 +1582,13 @@ the settings are set properly.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithDevice</span><span class="p">:</span>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithDevice</span><span class="p">:</span>
     <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/ESTDeviceLocationBeacon.html">ESTDeviceLocationBeacon</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">device</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="nf">init</span><span class="p">(</span><span class="nv">device</span><span class="p">:</span> <span class="kt"><a href="../Classes/ESTDeviceLocationBeacon.html">ESTDeviceLocationBeacon</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">device</span><span class="p">:</span> <span class="kt"><a href="../Classes/ESTDeviceLocationBeacon.html">ESTDeviceLocationBeacon</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1600,7 +1605,6 @@ the settings are set properly.</p>
                               <td>
                                 <div>
                                   <p>Next Gen device the settings are to be applied to.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1638,13 +1642,13 @@ the settings are set properly.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">readSettingsWithCompletion</span><span class="p">:</span>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">readSettingsWithCompletion</span><span class="p">:</span>
     <span class="p">(</span><span class="n">nonnull</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">BOOL</span><span class="p">,</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSError</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">))</span><span class="nv">completion</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">readSettings</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Bool</span><span class="p">,</span> <span class="p">[</span><span class="kt">Error</span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">readSettings</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Bool</span><span class="p">,</span> <span class="p">[</span><span class="kt">Error</span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1661,7 +1665,6 @@ the settings are set properly.</p>
                               <td>
                                 <div>
                                   <p>Completion block invoked after all operations are done (either successfully or not).</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1698,14 +1701,14 @@ the settings are set properly.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">writeEnableSettings</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">enabled</span>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">writeEnableSettings</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">enabled</span>
              <span class="nf">withCompletion</span><span class="p">:</span>
                  <span class="p">(</span><span class="n">nonnull</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSError</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">))</span><span class="nv">completion</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">writeEnableSettings</span><span class="p">(</span><span class="n">_</span> <span class="nv">enabled</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">withCompletion</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">([</span><span class="kt">Error</span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">writeEnableSettings</span><span class="p">(</span><span class="n">_</span> <span class="nv">enabled</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">withCompletion</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">([</span><span class="kt">Error</span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1722,7 +1725,6 @@ the settings are set properly.</p>
                               <td>
                                 <div>
                                   <p>Completion block invoked after all operations are done (either successfully or not).</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1744,6 +1746,11 @@ the settings are set properly.</p>
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
+                       <div class="aside aside-deprecated">
+                         <p class="aside-title">Deprecated</p>
+                         <p>Use +classNamesToSettingsForDeviceIdentifier: instead</p>
+
+                       </div>
                       <div class="abstract">
                         <p>Settings that were written when executing this featureset, for Estimote SDK versions &lt;= 4.22.1.
   Calls +classNamesToSettingsForDeviceIdentifier: with nil.</p>
@@ -1753,19 +1760,18 @@ the settings are set properly.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n"><a href="../Classes/ESTSettingBase.html">ESTSettingBase</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="n">classNamesToSettings</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n"><a href="../Classes/ESTSettingBase.html">ESTSettingBase</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="n">classNamesToSettings</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">classNamesToSettings</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt"><a href="../Classes/ESTSettingBase.html">ESTSettingBase</a></span><span class="p">]</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">classNamesToSettings</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt"><a href="../Classes/ESTSettingBase.html">ESTSettingBase</a></span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
                         <p>Dictionary with setting class names as keys, setting objects as values.</p>
-
                       </div>
                     </section>
                   </div>
@@ -1793,14 +1799,14 @@ the settings are set properly.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n"><a href="../Classes/ESTSettingBase.html">ESTSettingBase</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n"><a href="../Classes/ESTSettingBase.html">ESTSettingBase</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span>
     <span class="nf">classNamesToSettingsForDeviceIdentifier</span><span class="p">:</span>
         <span class="p">(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">deviceIdentifier</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">classNamesToSettings</span><span class="p">(</span><span class="n">forDeviceIdentifier</span> <span class="nv">deviceIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt"><a href="../Classes/ESTSettingBase.html">ESTSettingBase</a></span><span class="p">]</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">classNamesToSettings</span><span class="p">(</span><span class="n">forDeviceIdentifier</span> <span class="nv">deviceIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt"><a href="../Classes/ESTSettingBase.html">ESTSettingBase</a></span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
@@ -1817,7 +1823,6 @@ the settings are set properly.</p>
                               <td>
                                 <div>
                                   <p>Identifier of the device that should have the settings applied.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1827,7 +1832,6 @@ the settings are set properly.</p>
                       <div>
                         <h4>Return Value</h4>
                         <p>Dictionary with setting class names as keys, setting objects as values.</p>
-
                       </div>
                     </section>
                   </div>
@@ -1844,6 +1848,11 @@ the settings are set properly.</p>
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
+                       <div class="aside aside-deprecated">
+                         <p class="aside-title">Deprecated</p>
+                         <p>Use +getWriteOperationsForDeviceIdentifier: instead</p>
+
+                       </div>
                       <div class="abstract">
                         <p>Write operations for this featureset, for Estimote SDK versions &lt;= 4.22.1.
 Calls +getWriteOperationsForDeviceIdentifier: with nil.</p>
@@ -1853,12 +1862,12 @@ Calls +getWriteOperationsForDeviceIdentifier: with nil.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/ESTBeaconOperationProtocol.html">ESTBeaconOperationProtocol</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="p">)</span><span class="n">getWriteOperations</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/ESTBeaconOperationProtocol.html">ESTBeaconOperationProtocol</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="p">)</span><span class="n">getWriteOperations</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">getWriteOperations</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Protocols/ESTBeaconOperationProtocol.html">ESTBeaconOperationProtocol</a></span><span class="p">]</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">getWriteOperations</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Protocols/ESTBeaconOperationProtocol.html">ESTBeaconOperationProtocol</a></span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
@@ -1888,13 +1897,13 @@ If a nil value is passed, MAC address in Generic Advertiser data setting is set 
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/ESTBeaconOperationProtocol.html">ESTBeaconOperationProtocol</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="p">)</span>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/ESTBeaconOperationProtocol.html">ESTBeaconOperationProtocol</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="p">)</span>
     <span class="nf">getWriteOperationsForDeviceIdentifier</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">deviceIdentifier</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">getWriteOperations</span><span class="p">(</span><span class="n">forDeviceIdentifier</span> <span class="nv">deviceIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Protocols/ESTBeaconOperationProtocol.html">ESTBeaconOperationProtocol</a></span><span class="p">]</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">getWriteOperations</span><span class="p">(</span><span class="n">forDeviceIdentifier</span> <span class="nv">deviceIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Protocols/ESTBeaconOperationProtocol.html">ESTBeaconOperationProtocol</a></span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
@@ -1927,14 +1936,14 @@ If a nil value is passed, MAC address in Generic Advertiser data setting is set 
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">featuresetEnabledForSettings</span><span class="p">:</span>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">featuresetEnabledForSettings</span><span class="p">:</span>
             <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/ESTSettingBase.html">ESTSettingBase</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">settingsToTest</span>
                  <span class="nf">forDeviceIdentifier</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">deviceIdentifier</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">featuresetEnabled</span><span class="p">(</span><span class="n">forSettings</span> <span class="nv">settingsToTest</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/ESTSettingBase.html">ESTSettingBase</a></span><span class="p">],</span> <span class="n">forDeviceIdentifier</span> <span class="nv">deviceIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">featuresetEnabled</span><span class="p">(</span><span class="n">forSettings</span> <span class="nv">settingsToTest</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/ESTSettingBase.html">ESTSettingBase</a></span><span class="p">],</span> <span class="n">forDeviceIdentifier</span> <span class="nv">deviceIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -1951,7 +1960,6 @@ If a nil value is passed, MAC address in Generic Advertiser data setting is set 
                               <td>
                                 <div>
                                   <p>Array with setting objects to check.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1964,7 +1972,6 @@ If a nil value is passed, MAC address in Generic Advertiser data setting is set 
                               <td>
                                 <div>
                                   <p>Identifier of the device that should have the settings applied.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1974,9 +1981,8 @@ If a nil value is passed, MAC address in Generic Advertiser data setting is set 
                       <div>
                         <h4>Return Value</h4>
                         <p>YES if the array contains all the settings required for Estimote Monitoring and the setting values
-         are correct for Estimote Monitoring. NO if the array doesn&rsquo;t contain all the settings required
-         for Estimote Monitoring or any of the setting values is incorrect Estimote Monitoring.</p>
-
+      are correct for Estimote Monitoring. NO if the array doesn&rsquo;t contain all the settings required
+      for Estimote Monitoring or any of the setting values is incorrect Estimote Monitoring.</p>
                       </div>
                     </section>
                   </div>
@@ -1989,8 +1995,8 @@ If a nil value is passed, MAC address in Generic Advertiser data setting is set 
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2019-10-25)</p>
-      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+      <p>&copy; 2020 <a class="link" href="http://estimote.com" target="_blank" rel="external">Estimote</a>. All rights reserved. (Last updated: 2020-04-24)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
 </div>
