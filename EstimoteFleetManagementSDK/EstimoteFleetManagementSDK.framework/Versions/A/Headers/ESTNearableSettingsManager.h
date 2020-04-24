@@ -8,12 +8,11 @@
 @class ESTPeripheralNearable;
 @class ESTDeviceSettingsCollection;
 @class ESTDeviceNearable;
-@class ESTDeviceDetails;
-@class ESTSemverString;
+@class ESTNearableVO;
 
 #define ESTNearableSettingsManagerErrorDomain @"ESTNearableSettingsManagerErrorDomain"
 
-typedef NS_ENUM (NSUInteger, ESTNearableSettingsManagerError) {
+typedef NS_ENUM(NSUInteger, ESTNearableSettingsManagerError) {
     /**
      *  Settings synchronization is already in progress for the device.
      */
@@ -53,7 +52,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  Flat key-value settings container.
  */
-@property (nonatomic, strong, readonly) ESTDeviceSettingsCollection *settingsCollection;
+@property(nonatomic, strong, readonly) ESTDeviceSettingsCollection *settingsCollection;
 
 /**
  *  Method executes provided Nearable Operation.
@@ -67,7 +66,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param operations Nearable Operations to be performed.
  */
-- (void)performOperationsFromArray:(NSArray<id<ESTNearableOperationProtocol> > *)operations;
+- (void)performOperationsFromArray:(NSArray<id<ESTNearableOperationProtocol>> *)operations;
 
 @end
 
@@ -90,7 +89,9 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param firmwareVersion Device firmware version used to ignore unsupported setting operations.
  *  @param completion      Synchronization completion block.
  */
-- (void)synchronizeUsingNearableVO:(ESTDeviceDetails *)nearableVO forFirmwareVersion:(ESTSemverString *)firmwareVersion completion:(void(^)(NSError *))completion;
+- (void)synchronizeUsingNearableVO:(ESTNearableVO *)nearableVO
+                forFirmwareVersion:(NSString *)firmwareVersion
+                        completion:(nonnull void (^)())syncCompletion;
 
 @end
 

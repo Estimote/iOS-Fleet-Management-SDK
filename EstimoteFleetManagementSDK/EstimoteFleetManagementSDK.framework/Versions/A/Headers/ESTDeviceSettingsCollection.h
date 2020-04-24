@@ -47,7 +47,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param targetedClass Class of setting that should be get.
  *
- *  @return Setting for class. Nil means no setting was set for this class or there are multiple settings avaialable.
+ *  @return Setting for class. Nil means no setting was set for this class or there are multiple settings available.
  */
 - (nullable id)getSettingForClass:(Class)targetedClass;
 

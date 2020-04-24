@@ -1,5 +1,5 @@
 //  Estimote Fleet Management SDK
-//  Version: 4.31.2
+//  Version: 4.32.2
 //  Copyright (c) 2016 Estimote. All rights reserved.
 
 /**
@@ -325,7 +325,9 @@
 #import "ESTFirmwareInfoV4VO.h"
 #import "ESTMesh.h"
 #import "ESTNearableFirmwareVO.h"
+#import "ESTNearableHardwareVO.h"
 #import "ESTNearableFirmwareUpdateVO.h"
+#import "ESTBeaconBatteryLifetimesVO.h"
 
 
 /**
@@ -388,6 +390,7 @@
 #import "ESTRequestBeaconColor.h"
 #import "ESTRequestBeaconMac.h"
 #import "ESTRequestAssignGPSLocation.h"
+#import "ESTRequestNearableDetails.h"
 
 #import "ESTRequestRegisterDevice.h"
 #import "ESTRequestGetPendingSettings.h"
@@ -402,6 +405,8 @@
 #import "ESTRequestV2GetDevices.h"
 #import "ESTRequestV2DevicesUpdate.h"
 #import "ESTRequestGetNearables.h"
+#import "ESTRequestGetBeaconOwnerEmailHint.h"
+#import "ESTRequestGetBeaconLifetimes.h"
 
 /**
  *  Analytics handling

@@ -1,6 +1,6 @@
 //
 //  ESTNearableFirmwareVO.h
-//  EstimoteSDK
+//  EstimoteFleetManagementSDK
 //
 //  Created by Marcin Klimek on 30/01/15.
 //  Copyright (c) 2015 Estimote. All rights reserved.

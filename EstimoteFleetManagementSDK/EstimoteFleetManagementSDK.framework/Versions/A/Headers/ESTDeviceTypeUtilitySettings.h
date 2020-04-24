@@ -1,6 +1,6 @@
 //
 //  ESTSettingsDeviceUtility.h
-//  EstimoteSDK
+//  EstimoteFleetManagementSDK
 //
 //  Copyright (c) 2015 Estimote. All rights reserved.
 //
